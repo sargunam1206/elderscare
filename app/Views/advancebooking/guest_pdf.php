@@ -34,6 +34,13 @@
 </head>
 <body>
 
+<?php
+// Format status
+$status = $guest['status'];
+if ($status === 'checked_out') {
+    $status = 'Checked out';
+}
+?>
 <table class="header" width="100%">
     <tr>
         <td class="header-content" style="text-align: left;">
@@ -42,6 +49,22 @@
                 <?= ucfirst(strtolower($guest['first_name'] ?? '')) ?>
                 <?= ucfirst(strtolower($guest['last_name'] ?? '')) ?>
             </h2>
+          <table style="width:100%; border-collapse:collapse; margin-top: 10px;">
+    <tr>
+        <td style="width:120px;"><strong>Booking No</strong></td>
+        <td><?= esc($guest['booking_no']) ?></td>
+    </tr>
+    <tr>
+        <td><strong>Room No</strong></td>
+        <td><?= esc($guest['room']) ?></td>
+    </tr>
+    <tr>
+        <td><strong>Room Status</strong></td>
+        <td><?= ucfirst(strtolower($status)) ?></td>
+    </tr>
+</table>
+
+
         </td>
         <td class="header-photo" style="text-align: right; width: 100px;">
             <?php if (!empty($guest['photo_upload'])): ?>
