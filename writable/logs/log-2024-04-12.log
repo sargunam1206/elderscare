@@ -1,0 +1,540 @@
+CRITICAL - 2024-04-12 04:33:09 --> Undefined variable $res3
+in APPPATH\Views\users\reports_table.php on line 198.
+ 1 APPPATH\Views\users\reports_table.php(198): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $res3', 'C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Views\\users\\reports_table.php', 198)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Views\\users\\reports_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 5 APPPATH\Controllers\BloodDonors.php(147): view('users/reports_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 05:15:26 --> Undefined variable $user3
+in APPPATH\Views\users\reports_table.php on line 168.
+ 1 APPPATH\Views\users\reports_table.php(168): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user3', 'C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Views\\users\\reports_table.php', 168)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Views\\users\\reports_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 5 APPPATH\Controllers\BloodDonors.php(147): view('users/reports_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 05:34:26 --> syntax error, unexpected token "elseif"
+in APPPATH\Views\users\reports_table.php on line 148.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(147): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 05:35:21 --> syntax error, unexpected token "elseif"
+in APPPATH\Views\users\reports_table.php on line 148.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(147): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 05:36:33 --> syntax error, unexpected token "elseif", expecting end of file
+in APPPATH\Views\users\reports_table.php on line 148.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(147): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 05:37:14 --> syntax error, unexpected token "elseif", expecting end of file
+in APPPATH\Views\users\reports_table.php on line 149.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(147): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 05:37:34 --> syntax error, unexpected token "elseif", expecting end of file
+in APPPATH\Views\users\reports_table.php on line 149.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(147): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 05:37:43 --> syntax error, unexpected token "elseif", expecting end of file
+in APPPATH\Views\users\reports_table.php on line 164.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(147): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 05:38:57 --> syntax error, unexpected token "elseif", expecting end of file
+in APPPATH\Views\users\reports_table.php on line 148.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(147): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 05:39:05 --> syntax error, unexpected token "elseif", expecting end of file
+in APPPATH\Views\users\reports_table.php on line 148.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(147): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 05:40:20 --> syntax error, unexpected token "elseif", expecting end of file
+in APPPATH\Views\users\reports_table.php on line 148.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(147): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 05:41:32 --> syntax error, unexpected token "elseif", expecting end of file
+in APPPATH\Views\users\reports_table.php on line 153.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(147): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 05:43:51 --> syntax error, unexpected token "elseif", expecting end of file
+in APPPATH\Views\users\reports_table.php on line 153.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(147): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 05:44:13 --> syntax error, unexpected token "elseif", expecting end of file
+in APPPATH\Views\users\reports_table.php on line 153.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(147): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 05:44:42 --> syntax error, unexpected token "elseif", expecting end of file
+in APPPATH\Views\users\reports_table.php on line 153.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(147): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 06:23:16 --> Undefined variable $usersModel
+in APPPATH\Controllers\BloodDonors.php on line 143.
+ 1 APPPATH\Controllers\BloodDonors.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usersModel', 'C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 06:23:28 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\users\reports_table.php on line 27.
+ 1 APPPATH\Views\users\reports_table.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Views\\users\\reports_table.php', 27)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Views\\users\\reports_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 5 APPPATH\Controllers\BloodDonors.php(164): view('users/reports_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 06:24:45 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\users\reports_table.php on line 27.
+ 1 APPPATH\Views\users\reports_table.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Views\\users\\reports_table.php', 27)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Views\\users\\reports_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 5 APPPATH\Controllers\BloodDonors.php(164): view('users/reports_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 06:25:09 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\users\reports_table.php on line 27.
+ 1 APPPATH\Views\users\reports_table.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Views\\users\\reports_table.php', 27)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Views\\users\\reports_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 5 APPPATH\Controllers\BloodDonors.php(164): view('users/reports_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 06:25:25 --> Undefined variable $allUsersData
+in APPPATH\Controllers\BloodDonors.php on line 165.
+ 1 APPPATH\Controllers\BloodDonors.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $allUsersData', 'C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php', 165)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 06:35:49 --> syntax error, unexpected token "&&"
+in APPPATH\Views\users\reports_table.php on line 110.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(151): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 06:39:46 --> Undefined variable $onlydate
+in APPPATH\Controllers\BloodDonors.php on line 161.
+ 1 APPPATH\Controllers\BloodDonors.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $onlydate', 'C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php', 161)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 06:41:52 --> Undefined variable $empty
+in APPPATH\Controllers\BloodDonors.php on line 151.
+ 1 APPPATH\Controllers\BloodDonors.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $empty', 'C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php', 151)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 06:56:54 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\users\reports_table.php on line 27.
+ 1 APPPATH\Views\users\reports_table.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Views\\users\\reports_table.php', 27)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Views\\users\\reports_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 5 APPPATH\Controllers\BloodDonors.php(172): view('users/reports_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 06:58:06 --> Cannot use object of type stdClass as array
+in APPPATH\Views\users\reports_table.php on line 121.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 4 APPPATH\Controllers\BloodDonors.php(173): view('users/reports_table', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 07:38:19 --> syntax error, unexpected token "<", expecting end of file
+in APPPATH\Views\users\reports_table.php on line 158.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(178): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 07:40:56 --> syntax error, unexpected token ":"
+in APPPATH\Views\users\reports_table.php on line 158.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(178): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 07:41:22 --> syntax error, unexpected token "else"
+in APPPATH\Views\users\reports_table.php on line 189.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(178): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 07:54:50 --> syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+in APPPATH\Views\users\reports_table.php on line 206.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(123): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->report_view()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 07:54:52 --> syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+in APPPATH\Views\users\reports_table.php on line 206.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(123): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->report_view()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 08:32:46 --> Cannot use object of type stdClass as array
+in APPPATH\Views\users\reports_table.php on line 189.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 4 APPPATH\Controllers\BloodDonors.php(178): view('users/reports_table', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 08:33:31 --> syntax error, unexpected token "elseif", expecting end of file
+in APPPATH\Views\users\reports_table.php on line 183.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('users/reports_table', [], true)
+ 3 APPPATH\Controllers\BloodDonors.php(178): view('users/reports_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->search()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:14:40 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:14:41 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:14:43 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:14:46 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:17:03 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:17:04 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:17:04 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:17:04 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:17:04 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:17:04 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:19:46 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:21:50 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:21:52 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:23:34 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 179.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:23:35 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 179.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:23:35 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 179.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:23:40 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 179.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:23:54 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 179.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:23:55 --> syntax error, unexpected token "."
+in APPPATH\Controllers\BloodDonors.php on line 179.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:51:46 --> Call to undefined method Mpdf\Mpdf::setPageOrientation()
+in FCPATH\vendor\mpdf\mpdf\src\Strict.php on line 15.
+ 1 APPPATH\Controllers\BloodDonors.php(204): Mpdf\Mpdf->__call('setPageOrientation', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->download('19')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 10:51:51 --> Call to undefined method Mpdf\Mpdf::setPageOrientation()
+in FCPATH\vendor\mpdf\mpdf\src\Strict.php on line 15.
+ 1 APPPATH\Controllers\BloodDonors.php(204): Mpdf\Mpdf->__call('setPageOrientation', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->download('23')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 11:01:37 --> file_get_contents(&lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?= base_url();?&gt;/public/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css&quot;&gt;): Failed to open stream: No such file or directory
+in APPPATH\Controllers\BloodDonors.php on line 180.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(&lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?= base_url();?&gt;/public/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css&quot;&gt;): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php', 180)
+ 2 APPPATH\Controllers\BloodDonors.php(180): file_get_contents('<link rel="stylesheet" href="<?= base_url();?>/public/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->download('16')
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 11:01:39 --> file_get_contents(&lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?= base_url();?&gt;/public/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css&quot;&gt;): Failed to open stream: No such file or directory
+in APPPATH\Controllers\BloodDonors.php on line 180.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(&lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?= base_url();?&gt;/public/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css&quot;&gt;): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php', 180)
+ 2 APPPATH\Controllers\BloodDonors.php(180): file_get_contents('<link rel="stylesheet" href="<?= base_url();?>/public/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->download('16')
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 11:02:26 --> file_get_contents(&lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?= base_url();?&gt;/public/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css&quot;&gt;): Failed to open stream: No such file or directory
+in APPPATH\Controllers\BloodDonors.php on line 180.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(&lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?= base_url();?&gt;/public/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css&quot;&gt;): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php', 180)
+ 2 APPPATH\Controllers\BloodDonors.php(180): file_get_contents('<link rel="stylesheet" href="<?= base_url();?>/public/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->download('16')
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 11:04:42 --> WriteHTML() requires $html be an integer, float, string, boolean or an object with the __toString() magic method.
+in FCPATH\vendor\mpdf\mpdf\src\Mpdf.php on line 13259.
+ 1 APPPATH\Controllers\BloodDonors.php(188): Mpdf\Mpdf->WriteHTML(null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->download('16')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 11:04:43 --> WriteHTML() requires $html be an integer, float, string, boolean or an object with the __toString() magic method.
+in FCPATH\vendor\mpdf\mpdf\src\Mpdf.php on line 13259.
+ 1 APPPATH\Controllers\BloodDonors.php(188): Mpdf\Mpdf->WriteHTML(null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->download('16')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 11:04:46 --> WriteHTML() requires $html be an integer, float, string, boolean or an object with the __toString() magic method.
+in FCPATH\vendor\mpdf\mpdf\src\Mpdf.php on line 13259.
+ 1 APPPATH\Controllers\BloodDonors.php(188): Mpdf\Mpdf->WriteHTML(null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->download('22')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 11:04:57 --> WriteHTML() requires $html be an integer, float, string, boolean or an object with the __toString() magic method.
+in FCPATH\vendor\mpdf\mpdf\src\Mpdf.php on line 13259.
+ 1 APPPATH\Controllers\BloodDonors.php(188): Mpdf\Mpdf->WriteHTML(null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->download('22')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-12 11:35:50 --> syntax error, unexpected token "<"
+in APPPATH\Controllers\BloodDonors.php on line 196.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bloodbank_ci4\\app\\Controllers\\BloodDonors.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BloodDonors')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BloodDonors')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\BloodDonors', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

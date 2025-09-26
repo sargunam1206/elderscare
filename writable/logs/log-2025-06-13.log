@@ -1,0 +1,61 @@
+CRITICAL - 2025-06-13 05:54:31 --> syntax error, unexpected token "endforeach"
+in APPPATH/Views/assettype/view.php on line 1950.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 3 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-13 05:55:14 --> Call to undefined function is_empty()
+in APPPATH/Views/assettype/view.php on line 1935.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 4 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-13 07:49:34 --> Array to string conversion
+in APPPATH/Views/assettype/view.php on line 1922.
+ 1 APPPATH/Views/assettype/view.php(1922): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php', 1922)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 5 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-13 07:50:10 --> Array to string conversion
+in APPPATH/Views/assettype/view.php on line 1923.
+ 1 APPPATH/Views/assettype/view.php(1923): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php', 1923)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 5 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-13 07:50:24 --> Array to string conversion
+in APPPATH/Views/assettype/view.php on line 1923.
+ 1 APPPATH/Views/assettype/view.php(1923): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php', 1923)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 5 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-13 07:52:21 --> syntax error, unexpected token "/"
+in APPPATH/Views/assettype/view.php on line 1937.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 3 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

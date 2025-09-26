@@ -1,0 +1,640 @@
+CRITICAL - 2025-08-23 05:21:41 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-23 05:23:39 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-23 05:27:11 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-23 05:41:09 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-23 11:41:45 --> Undefined array key "room_no"
+in APPPATH/Views/wallet/view.php on line 1627.
+ 1 APPPATH/Views/wallet/view.php(1627): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "room_no"', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Views/wallet/view.php', 1627)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Views/wallet/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('wallet/view.php', [], true)
+ 5 APPPATH/Controllers/Wallet.php(74): view('wallet/view.php', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('4')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-23 11:54:45 --> Undefined variable $room
+in APPPATH/Views/wallet/view.php on line 1626.
+ 1 APPPATH/Views/wallet/view.php(1626): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $room', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Views/wallet/view.php', 1626)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Views/wallet/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('wallet/view.php', [], true)
+ 5 APPPATH/Controllers/Wallet.php(82): view('wallet/view.php', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-23 11:55:37 --> mysqli_sql_exception: Not unique table/alias: 'advance_bookings' in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `rooms`....', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rooms`....')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rooms`....')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`....', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php(68): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('19')
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-23 11:55:37 --> Not unique table/alias: 'advance_bookings'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`.*, `guests_personal`.*, `advance_bookings`.*
+FROM `rooms`
+JOIN `advance_bookings` ON `advance_bookings`.`room` = `rooms`.`room_no`
+JOIN `advance_bookings` ON `advance_bookings`.`id` = `booking_guests`.`booking_id`
+JOIN `booking_guests` ON `booking_guests`.`guest_id` = `guests_personal`.`guest_id`
+WHERE `booking_guests`.`guest_id` = :booking_guests.guest_id:
+AND `deleted_on` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Wallet.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('19')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-23 11:58:57 --> mysqli_sql_exception: Unknown table 'neuralarcteam_elders_care.guests_personal' in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `rooms`....', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rooms`....')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rooms`....')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`....', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php(68): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('19')
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-23 11:58:57 --> Unknown table 'neuralarcteam_elders_care.guests_personal'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`.*, `guests_personal`.*, `advance_bookings`.*
+FROM `rooms`
+JOIN `advance_bookings` ON `advance_bookings`.`id` = `booking_guests`.`booking_id`
+JOIN `booking_guests` ON `booking_guests`.`guest_id` = `guests_personal`.`guest_id`
+WHERE `booking_guests`.`guest_id` = :booking_guests.guest_id:
+AND `deleted_on` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Wallet.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('19')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-23 12:08:40 --> mysqli_sql_exception: Unknown table 'neuralarcteam_elders_care.guests_personal' in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `rooms`....', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rooms`....')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rooms`....')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`....', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php(68): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('19')
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-23 12:08:40 --> Unknown table 'neuralarcteam_elders_care.guests_personal'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`.*, `guests_personal`.*, `advance_bookings`.*
+FROM `rooms`
+JOIN `advance_bookings` ON `advance_bookings`.`id` = `booking_guests`.`booking_id`
+JOIN `booking_guests` ON `booking_guests`.`guest_id` = `guests_personal`.`guest_id`
+WHERE `booking_guests`.`guest_id` = :booking_guests.guest_id:
+AND `advance_bookings`.`deleted_on` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Wallet.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('19')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-23 12:09:14 --> mysqli_sql_exception: Unknown table 'neuralarcteam_elders_care.guests_personal' in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `rooms`....', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rooms`....')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rooms`....')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`....', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php(68): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('19')
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-23 12:09:14 --> Unknown table 'neuralarcteam_elders_care.guests_personal'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`.*, `guests_personal`.*, `advance_bookings`.*
+FROM `rooms`
+JOIN `advance_bookings` ON `advance_bookings`.`id` = `booking_guests`.`booking_id`
+JOIN `booking_guests` ON `booking_guests`.`guest_id` = `guests_personal`.`guest_id`
+WHERE `booking_guests`.`guest_id` = :booking_guests.guest_id:
+AND `advance_bookings`.`deleted_on` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Wallet.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('19')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-23 12:09:15 --> mysqli_sql_exception: Unknown table 'neuralarcteam_elders_care.guests_personal' in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `rooms`....', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rooms`....')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rooms`....')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`....', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php(68): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('19')
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-23 12:09:15 --> Unknown table 'neuralarcteam_elders_care.guests_personal'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`.*, `guests_personal`.*, `advance_bookings`.*
+FROM `rooms`
+JOIN `advance_bookings` ON `advance_bookings`.`id` = `booking_guests`.`booking_id`
+JOIN `booking_guests` ON `booking_guests`.`guest_id` = `guests_personal`.`guest_id`
+WHERE `booking_guests`.`guest_id` = :booking_guests.guest_id:
+AND `advance_bookings`.`deleted_on` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Wallet.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('19')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-23 12:12:42 --> mysqli_sql_exception: Unknown column 'booking_guests.room_id' in 'ON' in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `rooms`....', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rooms`....')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rooms`....')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`....', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php(67): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('19')
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-23 12:12:42 --> Unknown column 'booking_guests.room_id' in 'ON'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`.*, `guests_personal`.*, `advance_bookings`.*
+FROM `rooms`
+JOIN `booking_guests` ON `booking_guests`.`room_id` = `rooms`.`id`
+JOIN `guests_personal` ON `guests_personal`.`guest_id` = `booking_guests`.`guest_id`
+JOIN `advance_bookings` ON `advance_bookings`.`id` = `booking_guests`.`booking_id`
+WHERE `booking_guests`.`guest_id` = :booking_guests.guest_id:
+AND `advance_bookings`.`deleted_on` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Wallet.php(67): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('19')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-23 12:13:36 --> mysqli_sql_exception: Unknown column 'booking_guests.room_no' in 'ON' in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `rooms`....', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rooms`....')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rooms`....')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`....', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php(67): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('19')
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-23 12:13:36 --> Unknown column 'booking_guests.room_no' in 'ON'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`.*, `guests_personal`.*, `advance_bookings`.*
+FROM `rooms`
+JOIN `booking_guests` ON `booking_guests`.`room_no` = `rooms`.`room_no`
+JOIN `guests_personal` ON `guests_personal`.`guest_id` = `booking_guests`.`guest_id`
+JOIN `advance_bookings` ON `advance_bookings`.`id` = `booking_guests`.`booking_id`
+WHERE `booking_guests`.`guest_id` = :booking_guests.guest_id:
+AND `advance_bookings`.`deleted_on` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Wallet.php(67): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('19')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-23 12:17:02 --> Undefined variable $room
+in APPPATH/Views/wallet/view.php on line 1626.
+ 1 APPPATH/Views/wallet/view.php(1626): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $room', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Views/wallet/view.php', 1626)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Views/wallet/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('wallet/view.php', [], true)
+ 5 APPPATH/Controllers/Wallet.php(82): view('wallet/view.php', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-23 12:20:55 --> mysqli_sql_exception: Unknown table 'neuralarcteam_elders_care.guests_personal' in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `rooms`....', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rooms`....')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rooms`....')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`....', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php(89): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read()
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-23 12:20:55 --> Unknown table 'neuralarcteam_elders_care.guests_personal'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`.*, `guests_personal`.*, `advance_bookings`.*
+FROM `rooms`
+JOIN `advance_bookings` ON `advance_bookings`.`room` =  `rooms`.`room_no`
+WHERE `advance_bookings`.`deleted_on` IS NULL', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Wallet.php(89): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-23 12:22:25 --> Undefined array key "room"
+in APPPATH/Controllers/Wallet.php on line 93.
+ 1 APPPATH/Controllers/Wallet.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "room"', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php', 93)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-23 12:45:58 --> Undefined variable $guest
+in APPPATH/Views/wallet/view.php on line 1621.
+ 1 APPPATH/Views/wallet/view.php(1621): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $guest', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Views/wallet/view.php', 1621)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Views/wallet/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('wallet/view.php', [], true)
+ 5 APPPATH/Controllers/Wallet.php(96): view('wallet/view.php', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('4')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-23 12:54:14 --> Undefined array key "balance"
+in APPPATH/Views/wallet/view.php on line 1662.
+ 1 APPPATH/Views/wallet/view.php(1662): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "balance"', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Views/wallet/view.php', 1662)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Views/wallet/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('wallet/view.php', [], true)
+ 5 APPPATH/Controllers/Wallet.php(96): view('wallet/view.php', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('4')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-23 12:54:49 --> Undefined array key "balance"
+in APPPATH/Views/wallet/view.php on line 1662.
+ 1 APPPATH/Views/wallet/view.php(1662): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "balance"', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Views/wallet/view.php', 1662)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Views/wallet/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('wallet/view.php', [], true)
+ 5 APPPATH/Controllers/Wallet.php(96): view('wallet/view.php', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('4')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-23 12:54:52 --> Undefined array key "balance"
+in APPPATH/Views/wallet/view.php on line 1662.
+ 1 APPPATH/Views/wallet/view.php(1662): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "balance"', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Views/wallet/view.php', 1662)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Views/wallet/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('wallet/view.php', [], true)
+ 5 APPPATH/Controllers/Wallet.php(96): view('wallet/view.php', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('4')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-23 12:56:45 --> Undefined array key "balance"
+in APPPATH/Views/wallet/view.php on line 1662.
+ 1 APPPATH/Views/wallet/view.php(1662): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "balance"', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Views/wallet/view.php', 1662)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Views/wallet/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('wallet/view.php', [], true)
+ 5 APPPATH/Controllers/Wallet.php(96): view('wallet/view.php', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('4')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-23 13:17:45 --> Undefined variable $guest
+in APPPATH/Views/wallet/view.php on line 1612.
+ 1 APPPATH/Views/wallet/view.php(1612): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $guest', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Views/wallet/view.php', 1612)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Views/wallet/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('wallet/view.php', [], true)
+ 5 APPPATH/Controllers/Wallet.php(99): view('wallet/view.php', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->wallet_read('4')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-23 09:27:39 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-23 09:27:43 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-23 18:27:16 --> mysqli_sql_exception: Unknown table 'neuralarcteam_elders_care.guests_personal' in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `rooms`....', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rooms`....')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rooms`....')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`....', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php(130): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Wallet->room_guest('101')
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-23 18:27:16 --> Unknown table 'neuralarcteam_elders_care.guests_personal'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`.*, `guests_personal`.*
+FROM `rooms`
+JOIN `advance_bookings` ON `advance_bookings`.`room` = `rooms`.`room_no`
+WHERE `rooms`.`room_no` = :rooms.room_no:
+AND `rooms`.`deleted_on` IS NULL
+ORDER BY `guests_personal`.`guest_id` ASC', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Wallet.php(130): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->room_guest('101')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-23 18:28:53 --> mysqli_sql_exception: Unknown table 'neuralarcteam_elders_care.guests_personal' in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `rooms`....', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rooms`....')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rooms`....')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`....', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php(130): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Wallet->room_guest('101')
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-23 18:28:53 --> Unknown table 'neuralarcteam_elders_care.guests_personal'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`.*, `guests_personal`.*
+FROM `rooms`
+JOIN `advance_bookings` ON `advance_bookings`.`room` = `rooms`.`room_no`
+WHERE `rooms`.`room_no` = :rooms.room_no:
+AND `rooms`.`deleted_on` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Wallet.php(130): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->room_guest('101')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-23 18:29:22 --> mysqli_sql_exception: Unknown table 'neuralarcteam_elders_care.guests_personal' in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `rooms`....', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rooms`....')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rooms`....')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`....', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php(130): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Wallet->room_guest('101')
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-23 18:29:22 --> Unknown table 'neuralarcteam_elders_care.guests_personal'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`.*, `guests_personal`.*
+FROM `rooms`
+JOIN `advance_bookings` ON `advance_bookings`.`room` = `rooms`.`room_no`
+WHERE `rooms`.`room_no` = :rooms.room_no:
+AND `rooms`.`deleted_on` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Wallet.php(130): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->room_guest('101')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-23 18:29:32 --> mysqli_sql_exception: Unknown table 'neuralarcteam_elders_care.guests_personal' in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `rooms`....', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rooms`....')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rooms`....')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`....', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php(130): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Wallet->room_guest('101')
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-23 18:29:32 --> Unknown table 'neuralarcteam_elders_care.guests_personal'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`.*, `guests_personal`.*
+FROM `rooms`
+JOIN `advance_bookings` ON `advance_bookings`.`room` = `rooms`.`room_no`
+WHERE `rooms`.`room_no` = :rooms.room_no:
+AND `rooms`.`deleted_on` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Wallet.php(130): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->room_guest('101')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-23 18:29:32 --> mysqli_sql_exception: Unknown table 'neuralarcteam_elders_care.guests_personal' in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `rooms`....', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rooms`....')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rooms`....')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`....', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php(130): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Wallet->room_guest('101')
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-23 18:29:32 --> Unknown table 'neuralarcteam_elders_care.guests_personal'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`.*, `guests_personal`.*
+FROM `rooms`
+JOIN `advance_bookings` ON `advance_bookings`.`room` = `rooms`.`room_no`
+WHERE `rooms`.`room_no` = :rooms.room_no:
+AND `rooms`.`deleted_on` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Wallet.php(130): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->room_guest('101')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-23 18:34:46 --> mysqli_sql_exception: Unknown table 'neuralarcteam_elders_care.guests_personal' in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `rooms`....', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rooms`....')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rooms`....')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`....', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php(130): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Wallet->room_guest('101')
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-23 18:34:46 --> Unknown table 'neuralarcteam_elders_care.guests_personal'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`.*, `guests_personal`.*
+FROM `rooms`
+JOIN `advance_bookings` ON `advance_bookings`.`room` = `rooms`.`room_no`
+WHERE `rooms`.`room_no` = :rooms.room_no:
+AND `rooms`.`deleted_on` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Wallet.php(130): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->room_guest('101')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-23 18:55:08 --> mysqli_sql_exception: Not unique table/alias: 'advance_bookings' in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `rooms`....', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rooms`....')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rooms`....')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`....', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php(132): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Wallet->room_guest('101')
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-23 18:55:08 --> Not unique table/alias: 'advance_bookings'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`.*
+FROM `rooms`
+JOIN `advance_bookings` ON `advance_bookings`.`room` = `rooms`.`room_no`
+JOIN `advance_bookings` ON `advance_bookings`.`status` = `rooms`.`occupied`
+WHERE `advance_bookings`.`status` = :advance_bookings.status:
+AND `rooms`.`room_no` = :rooms.room_no:
+AND `rooms`.`deleted_on` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Wallet.php(132): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->room_guest('101')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-23 18:55:38 --> mysqli_sql_exception: Not unique table/alias: 'advance_bookings' in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `rooms`....', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rooms`....')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rooms`....')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`....', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php(132): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Wallet->room_guest('101')
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-23 18:55:38 --> Not unique table/alias: 'advance_bookings'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`.*
+FROM `rooms`
+JOIN `advance_bookings` ON `advance_bookings`.`room` = `rooms`.`room_no`
+JOIN `advance_bookings` ON `advance_bookings`.`status` = `rooms`.`occupied`
+WHERE `advance_bookings`.`status` = :advance_bookings.status:
+AND `rooms`.`room_no` = :rooms.room_no:
+AND `rooms`.`deleted_on` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Wallet.php(132): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->room_guest('101')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-23 18:56:09 --> mysqli_sql_exception: Not unique table/alias: 'advance_bookings' in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `rooms`....', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rooms`....')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rooms`....')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`....', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php(132): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Wallet->room_guest('101')
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-23 18:56:09 --> Not unique table/alias: 'advance_bookings'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `rooms`.*
+FROM `rooms`
+JOIN `advance_bookings` ON `advance_bookings`.`room` = `rooms`.`room_no`
+JOIN `advance_bookings` ON `advance_bookings`.`status` = `rooms`.`occupied`
+WHERE `advance_bookings`.`status` = :advance_bookings.status:
+AND `rooms`.`room_no` = :rooms.room_no:
+AND `rooms`.`deleted_on` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Wallet.php(132): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->room_guest('101')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,56 @@
+CRITICAL - 2024-09-03 17:08:53 --> Undefined variable $data
+in APPPATH/Views/assetsvalue/edit.php on line 1798.
+ 1 APPPATH/Views/assetsvalue/edit.php(1798): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/edit.php', 1798)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/edit', [], true)
+ 5 APPPATH/Controllers/Assetsvalue.php(175): view('assetsvalue/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assetsvalue->edit('VDBFOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assetsvalue))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-03 17:09:01 --> Undefined variable $data
+in APPPATH/Views/assetsvalue/edit.php on line 1798.
+ 1 APPPATH/Views/assetsvalue/edit.php(1798): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/edit.php', 1798)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/edit', [], true)
+ 5 APPPATH/Controllers/Assetsvalue.php(175): view('assetsvalue/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assetsvalue->edit('VGxFOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assetsvalue))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-03 17:09:30 --> Undefined variable $data
+in APPPATH/Views/assetsvalue/edit.php on line 1799.
+ 1 APPPATH/Views/assetsvalue/edit.php(1799): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/edit.php', 1799)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/edit', [], true)
+ 5 APPPATH/Controllers/Assetsvalue.php(175): view('assetsvalue/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assetsvalue->edit('VGxFOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assetsvalue))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-03 17:10:12 --> include(file_with_errors.php): Failed to open stream: No such file or directory
+in APPPATH/Views/assetsvalue/edit.php on line 4.
+ 1 APPPATH/Views/assetsvalue/edit.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(file_with_errors.php): Failed to open stream: No such file or directory', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/edit.php', 4)
+ 2 APPPATH/Views/assetsvalue/edit.php(4): include()
+ 3 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/edit.php')
+ 4 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/edit', [], true)
+ 6 APPPATH/Controllers/Assetsvalue.php(175): view('assetsvalue/edit', [...])
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assetsvalue->edit('VGxFOVBRPT0=')
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assetsvalue))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-03 17:10:24 --> Undefined variable $data
+in APPPATH/Views/assetsvalue/edit.php on line 1806.
+ 1 APPPATH/Views/assetsvalue/edit.php(1806): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/edit.php', 1806)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/edit', [], true)
+ 5 APPPATH/Controllers/Assetsvalue.php(175): view('assetsvalue/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assetsvalue->edit('VGxFOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assetsvalue))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

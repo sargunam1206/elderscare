@@ -1,0 +1,473 @@
+CRITICAL - 2024-12-06 05:43:27 --> Class "App\Models\AssetTypeModel" not found
+in APPPATH\Controllers\AssetType.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\AssetType->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 05:43:45 --> Class "App\Models\AssetTypeModel" not found
+in APPPATH\Controllers\AssetType.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\AssetType->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 05:43:47 --> Class "App\Models\AssetTypeModel" not found
+in APPPATH\Controllers\AssetType.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\AssetType->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 05:47:10 --> Class "App\Models\AssetTypeModel" not found
+in APPPATH\Controllers\AssetType.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\AssetType->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 05:47:11 --> Class "App\Models\AssetTypeModel" not found
+in APPPATH\Controllers\AssetType.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\AssetType->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 05:47:12 --> Class "App\Models\AssetTypeModel" not found
+in APPPATH\Controllers\AssetType.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\AssetType->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 05:47:12 --> Class "App\Models\AssetTypeModel" not found
+in APPPATH\Controllers\AssetType.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\AssetType->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 05:47:27 --> Class "App\Models\AssetTypeModel" not found
+in APPPATH\Controllers\AssetType.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\AssetType->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 06:02:51 --> Invalid file: "assettype/create.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('assettype/create.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assettype/create', [], true)
+ 3 APPPATH\Controllers\AssetType.php(26): view('assettype/create')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetType->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 06:02:52 --> Invalid file: "assettype/create.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('assettype/create.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assettype/create', [], true)
+ 3 APPPATH\Controllers\AssetType.php(26): view('assettype/create')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetType->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 06:02:52 --> Invalid file: "assettype/create.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('assettype/create.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assettype/create', [], true)
+ 3 APPPATH\Controllers\AssetType.php(26): view('assettype/create')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetType->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 06:02:53 --> Invalid file: "assettype/create.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('assettype/create.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assettype/create', [], true)
+ 3 APPPATH\Controllers\AssetType.php(26): view('assettype/create')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetType->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 06:28:33 --> Unmatched '}'
+in APPPATH\Controllers\AssetType.php on line 112.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\AssetType.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AssetType')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AssetType')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\AssetType', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 12:05:33 --> Undefined property: App\Controllers\AssetType::$AssetTypeModel
+in APPPATH\Controllers\AssetType.php on line 34.
+ 1 APPPATH\Controllers\AssetType.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AssetType::$AssetTypeModel', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\AssetType.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetType->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 06:44:35 --> Invalid file: "assettype.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('assettype.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assettype', [], true)
+ 3 APPPATH\Controllers\AssetType.php(50): view('assettype')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetType->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 07:08:04 --> Undefined variable $base
+in APPPATH\Views\assettype\view.php on line 1789.
+ 1 APPPATH\Views\assettype\view.php(1789): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\assettype\\view.php', 1789)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\assettype\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 5 APPPATH\Controllers\AssetType.php(61): view('assettype/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 07:21:12 --> Undefined variable $asset
+in APPPATH\Views\assettype\edit.php on line 1746.
+ 1 APPPATH\Views\assettype\edit.php(1746): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\assettype\\edit.php', 1746)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\assettype\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assettype/edit', [], true)
+ 5 APPPATH\Controllers\AssetType.php(72): view('assettype/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetType->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 07:21:25 --> Undefined variable $asset
+in APPPATH\Views\assettype\edit.php on line 1746.
+ 1 APPPATH\Views\assettype\edit.php(1746): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\assettype\\edit.php', 1746)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\assettype\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assettype/edit', [], true)
+ 5 APPPATH\Controllers\AssetType.php(75): view('assettype/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetType->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 07:23:03 --> Undefined variable $data
+in APPPATH\Views\assettype\edit.php on line 1746.
+ 1 APPPATH\Views\assettype\edit.php(1746): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\assettype\\edit.php', 1746)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\assettype\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assettype/edit', [], true)
+ 5 APPPATH\Controllers\AssetType.php(75): view('assettype/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetType->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 07:23:14 --> Undefined variable $asset
+in APPPATH\Views\assettype\edit.php on line 1774.
+ 1 APPPATH\Views\assettype\edit.php(1774): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\assettype\\edit.php', 1774)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\assettype\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assettype/edit', [], true)
+ 5 APPPATH\Controllers\AssetType.php(75): view('assettype/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetType->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 07:23:29 --> Undefined variable $assetTypes
+in APPPATH\Views\assettype\edit.php on line 1781.
+ 1 APPPATH\Views\assettype\edit.php(1781): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assetTypes', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\assettype\\edit.php', 1781)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\assettype\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assettype/edit', [], true)
+ 5 APPPATH\Controllers\AssetType.php(75): view('assettype/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetType->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 07:28:31 --> Undefined array key "id"
+in APPPATH\Views\assettype\view.php on line 1789.
+ 1 APPPATH\Views\assettype\view.php(1789): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\assettype\\view.php', 1789)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\assettype\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 5 APPPATH\Controllers\AssetType.php(61): view('assettype/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 07:31:20 --> Undefined variable $asset
+in APPPATH\Views\assettype\edit.php on line 1803.
+ 1 APPPATH\Views\assettype\edit.php(1803): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\assettype\\edit.php', 1803)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\assettype\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assettype/edit', [], true)
+ 5 APPPATH\Controllers\AssetType.php(75): view('assettype/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetType->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 07:46:21 --> Class "App\Models\AssetMakeModel" not found
+in APPPATH\Controllers\AssetMake.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\AssetMake->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 07:46:50 --> Class "App\Models\AssetMakeModel" not found
+in APPPATH\Controllers\AssetMake.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\AssetMake->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 07:46:51 --> Class "App\Models\AssetMakeModel" not found
+in APPPATH\Controllers\AssetMake.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\AssetMake->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 07:46:53 --> Class "App\Models\AssetMakeModel" not found
+in APPPATH\Controllers\AssetMake.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\AssetMake->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 07:47:26 --> Class "App\Models\AssetMakeModel" not found
+in APPPATH\Controllers\AssetMake.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\AssetMake->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 13:27:03 --> Invalid file: "viewassetmake.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('viewassetmake.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('viewassetmake', [], true)
+ 3 APPPATH\Controllers\AssetMake.php(42): view('viewassetmake')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetMake->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetMake))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 13:27:33 --> Invalid file: "viewassetmake.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('viewassetmake.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('viewassetmake', [], true)
+ 3 APPPATH\Controllers\AssetMake.php(42): view('viewassetmake')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetMake->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetMake))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 13:27:40 --> Invalid file: "viewassetmake.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('viewassetmake.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('viewassetmake', [], true)
+ 3 APPPATH\Controllers\AssetMake.php(42): view('viewassetmake')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetMake->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetMake))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 07:58:26 --> Invalid file: "assetmakee/view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('assetmakee/view.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assetmakee/view', [], true)
+ 3 APPPATH\Controllers\AssetMake.php(53): view('assetmakee/view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetMake->view()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetMake))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 07:58:40 --> Undefined variable $assettypes
+in APPPATH\Views\assetmake\view.php on line 1783.
+ 1 APPPATH\Views\assetmake\view.php(1783): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assettypes', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\assetmake\\view.php', 1783)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\assetmake\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assetmake/view', [], true)
+ 5 APPPATH\Controllers\AssetMake.php(53): view('assetmake/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetMake->view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetMake))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 08:44:40 --> Undefined property: App\Controllers\AssetMake::$assetTypeModel
+in APPPATH\Controllers\AssetMake.php on line 62.
+ 1 APPPATH\Controllers\AssetMake.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AssetMake::$assetTypeModel', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\AssetMake.php', 62)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetMake->edit('3')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetMake))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 08:44:56 --> Undefined variable $assetmakess
+in APPPATH\Views\assetmake\edit.php on line 1746.
+ 1 APPPATH\Views\assetmake\edit.php(1746): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assetmakess', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\assetmake\\edit.php', 1746)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\assetmake\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assetmake/edit', [], true)
+ 5 APPPATH\Controllers\AssetMake.php(68): view('assetmake/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetMake->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetMake))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 08:45:04 --> Undefined variable $assettypes
+in APPPATH\Views\assetmake\edit.php on line 1803.
+ 1 APPPATH\Views\assetmake\edit.php(1803): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assettypes', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\assetmake\\edit.php', 1803)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\assetmake\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assetmake/edit', [], true)
+ 5 APPPATH\Controllers\AssetMake.php(68): view('assetmake/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetMake->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetMake))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 14:51:39 --> Undefined property: App\Controllers\AssetMake::$session
+in APPPATH\Controllers\AssetMake.php on line 128.
+ 1 APPPATH\Controllers\AssetMake.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AssetMake::$session', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\AssetMake.php', 128)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetMake->delete_assetmakes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetMake))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 14:52:21 --> Undefined property: App\Controllers\AssetMake::$session
+in APPPATH\Controllers\AssetMake.php on line 128.
+ 1 APPPATH\Controllers\AssetMake.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AssetMake::$session', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\AssetMake.php', 128)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetMake->delete_assetmakes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetMake))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 14:57:13 --> Undefined property: App\Controllers\AssetMake::$session
+in APPPATH\Controllers\AssetMake.php on line 132.
+ 1 APPPATH\Controllers\AssetMake.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AssetMake::$session', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\AssetMake.php', 132)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetMake->delete_assetmakes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetMake))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 14:59:15 --> Undefined property: App\Controllers\AssetMake::$session
+in APPPATH\Controllers\AssetMake.php on line 132.
+ 1 APPPATH\Controllers\AssetMake.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AssetMake::$session', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\AssetMake.php', 132)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetMake->delete_assetmakes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetMake))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 15:00:27 --> Undefined property: App\Controllers\AssetMake::$session
+in APPPATH\Controllers\AssetMake.php on line 132.
+ 1 APPPATH\Controllers\AssetMake.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AssetMake::$session', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\AssetMake.php', 132)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetMake->delete_assetmakes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetMake))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 15:01:09 --> Undefined property: App\Controllers\AssetMake::$session
+in APPPATH\Controllers\AssetMake.php on line 132.
+ 1 APPPATH\Controllers\AssetMake.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AssetMake::$session', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\AssetMake.php', 132)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetMake->delete_assetmakes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetMake))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 15:03:26 --> Undefined property: App\Controllers\AssetMake::$session
+in APPPATH\Controllers\AssetMake.php on line 132.
+ 1 APPPATH\Controllers\AssetMake.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AssetMake::$session', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\AssetMake.php', 132)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetMake->delete_assetmakes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetMake))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 15:04:09 --> Undefined property: App\Controllers\AssetMake::$session
+in APPPATH\Controllers\AssetMake.php on line 132.
+ 1 APPPATH\Controllers\AssetMake.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AssetMake::$session', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\AssetMake.php', 132)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetMake->delete_assetmakes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetMake))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 15:08:03 --> Undefined property: App\Controllers\AssetMake::$session
+in APPPATH\Controllers\AssetMake.php on line 125.
+ 1 APPPATH\Controllers\AssetMake.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AssetMake::$session', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\AssetMake.php', 125)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetMake->delete_assetmakes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetMake))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 10:10:45 --> Undefined variable $assetmakes
+in APPPATH\Views\dealer\edit.php on line 1803.
+ 1 APPPATH\Views\dealer\edit.php(1803): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assetmakes', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\dealer\\edit.php', 1803)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\dealer\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('dealer/edit', [], true)
+ 5 APPPATH\Controllers\Dealers.php(70): view('dealer/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Dealers->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dealers))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 15:46:40 --> Undefined property: App\Controllers\AssetMake::$session
+in APPPATH\Controllers\AssetMake.php on line 125.
+ 1 APPPATH\Controllers\AssetMake.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AssetMake::$session', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\AssetMake.php', 125)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetMake->delete_assetmakes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetMake))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 15:49:41 --> Undefined property: App\Controllers\Dealers::$session
+in APPPATH\Controllers\Dealers.php on line 127.
+ 1 APPPATH\Controllers\Dealers.php(127): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Dealers::$session', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Dealers.php', 127)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Dealers->delete_dealers()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dealers))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 10:24:19 --> Call to undefined method CodeIgniter\Router\RouteCollection::grt()
+in APPPATH\Config\Routes.php on line 55.
+ 1 SYSTEMPATH\Router\RouteCollection.php(344): require()
+ 2 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 10:24:20 --> Call to undefined method CodeIgniter\Router\RouteCollection::grt()
+in APPPATH\Config\Routes.php on line 55.
+ 1 SYSTEMPATH\Router\RouteCollection.php(344): require()
+ 2 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 11:04:14 --> Undefined variable $dealer
+in APPPATH\Views\uom\view.php on line 1789.
+ 1 APPPATH\Views\uom\view.php(1789): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dealer', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\view.php', 1789)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('uom/view', [], true)
+ 5 APPPATH\Controllers\Uom.php(55): view('uom/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Uom->view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uom))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 11:09:40 --> Invalid file: "uom/edit.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('uom/edit.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('uom/edit', [], true)
+ 3 APPPATH\Controllers\Uom.php(70): view('uom/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Uom->edit('2')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uom))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 11:13:17 --> Undefined variable $dealer
+in APPPATH\Views\uom\edit.php on line 1806.
+ 1 APPPATH\Views\uom\edit.php(1806): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dealer', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\edit.php', 1806)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('uom/edit', [], true)
+ 5 APPPATH\Controllers\Uom.php(70): view('uom/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Uom->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uom))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 16:48:15 --> Class "App\Controllers\DealerModel" not found
+in APPPATH\Controllers\Uom.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Uom->delete_uom()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uom))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 16:48:22 --> Class "App\Controllers\DealerModel" not found
+in APPPATH\Controllers\Uom.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Uom->delete_uom()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uom))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 16:48:58 --> Undefined property: App\Controllers\Uom::$session
+in APPPATH\Controllers\Uom.php on line 126.
+ 1 APPPATH\Controllers\Uom.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Uom::$session', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Uom.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Uom->delete_uom()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uom))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 17:01:40 --> Class "App\Controllers\UomModel" not found
+in APPPATH\Controllers\AssetType.php on line 109.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetType->delete_assettypes()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 17:01:58 --> Class "App\Controllers\UomModel" not found
+in APPPATH\Controllers\AssetType.php on line 109.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetType->delete_assettypes()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-06 17:02:33 --> Class "App\Controllers\UomModel" not found
+in APPPATH\Controllers\AssetType.php on line 109.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssetType->delete_assettypes()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

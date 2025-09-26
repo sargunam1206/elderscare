@@ -1,0 +1,33 @@
+CRITICAL - 2024-06-14 06:41:07 --> view(): Argument #2 ($data) must be of type array, null given, called in /home/freelance/public_html/digitalflow/app/Controllers/AllReports.php on line 388
+in SYSTEMPATH/Common.php on line 1178.
+ 1 APPPATH/Controllers/AllReports.php(388): view('allreports/reports', null)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AllReports->reportsdefault()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AllReports))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-14 13:35:14 --> mysqli_sql_exception: Unknown column 'id' in 'order clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(191): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->new_user()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-06-14 13:35:14 --> Unknown column 'id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+ORDER BY `id` DESC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/UserInfo.php(191): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->new_user()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

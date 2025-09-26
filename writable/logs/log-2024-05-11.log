@@ -1,0 +1,24 @@
+CRITICAL - 2024-05-11 05:40:00 --> Undefined variable $page
+in APPPATH/Views/layout/users_view.php on line 156.
+ 1 APPPATH/Views/layout/users_view.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', '/home/freelance/public_html/digitalflow/app/Views/layout/users_view.php', 156)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/layout/users_view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(244): CodeIgniter\View\View->render('layout/users_view', [], true)
+ 5 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('experienceinfo/index', [], true)
+ 6 APPPATH/Controllers/ExperienceInfo.php(113): view('experienceinfo/index', [...])
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-11 05:41:15 --> Undefined variable $page
+in APPPATH/Views/layout/users_view.php on line 156.
+ 1 APPPATH/Views/layout/users_view.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', '/home/freelance/public_html/digitalflow/app/Views/layout/users_view.php', 156)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/layout/users_view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(244): CodeIgniter\View\View->render('layout/users_view', [], true)
+ 5 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('experienceinfo/index', [], true)
+ 6 APPPATH/Controllers/ExperienceInfo.php(116): view('experienceinfo/index', [...])
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,284 @@
+CRITICAL - 2024-05-31 06:28:58 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VGtFOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:01 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VGtFOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:02 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VGtFOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:08 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VGtFOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:08 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VGtFOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:09 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VGxFOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:09 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VGxFOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:10 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VG1jOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:10 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VG1jOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:11 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VGxFOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:11 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VGxFOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:12 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VG5jOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:12 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VG5jOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:12 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VFZSSlBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:13 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VFZSSlBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:13 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VG1jOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:13 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VG1jOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:13 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VGxFOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:13 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VGxFOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:14 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VGtFOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:15 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VGxFOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:15 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VGxFOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:16 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VG1jOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:16 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VG1jOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:17 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VG5jOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:29:18 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VG5jOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:33:10 --> view(): Argument #2 ($data) must be of type array, null given, called in /home/freelance/public_html/digitalflow/app/Controllers/AllReports.php on line 217
+in SYSTEMPATH/Common.php on line 1178.
+ 1 APPPATH/Controllers/AllReports.php(217): view('allreports/reports', null)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AllReports->reportsdefault()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AllReports))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:33:10 --> view(): Argument #2 ($data) must be of type array, null given, called in /home/freelance/public_html/digitalflow/app/Controllers/AllReports.php on line 217
+in SYSTEMPATH/Common.php on line 1178.
+ 1 APPPATH/Controllers/AllReports.php(217): view('allreports/reports', null)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AllReports->reportsdefault()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AllReports))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:33:14 --> view(): Argument #2 ($data) must be of type array, null given, called in /home/freelance/public_html/digitalflow/app/Controllers/AllReports.php on line 217
+in SYSTEMPATH/Common.php on line 1178.
+ 1 APPPATH/Controllers/AllReports.php(217): view('allreports/reports', null)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AllReports->reportsdefault()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AllReports))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:33:14 --> view(): Argument #2 ($data) must be of type array, null given, called in /home/freelance/public_html/digitalflow/app/Controllers/AllReports.php on line 217
+in SYSTEMPATH/Common.php on line 1178.
+ 1 APPPATH/Controllers/AllReports.php(217): view('allreports/reports', null)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AllReports->reportsdefault()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AllReports))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:41:01 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 493.
+ 1 APPPATH/Controllers/UserInfo.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 493)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('VGtFOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:44:51 --> Undefined variable $info
+in APPPATH/Views/personalinfo/view.php on line 117.
+ 1 APPPATH/Views/personalinfo/view.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', '/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php', 117)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/view', [], true)
+ 5 APPPATH/Controllers/PersonalInfo.php(217): view('personalinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:44:58 --> Undefined variable $info
+in APPPATH/Views/personalinfo/view.php on line 117.
+ 1 APPPATH/Views/personalinfo/view.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', '/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php', 117)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/view', [], true)
+ 5 APPPATH/Controllers/PersonalInfo.php(217): view('personalinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:45:01 --> Undefined variable $users
+in APPPATH/Views/experienceinfo/view.php on line 77.
+ 1 APPPATH/Views/experienceinfo/view.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/experienceinfo/view.php', 77)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/experienceinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('experienceinfo/view', [], true)
+ 5 APPPATH/Controllers/ExperienceInfo.php(167): view('experienceinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:45:05 --> Undefined variable $users
+in APPPATH/Views/employmentinfo/view.php on line 74.
+ 1 APPPATH/Views/employmentinfo/view.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/employmentinfo/view.php', 74)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/employmentinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('employmentinfo/view', [], true)
+ 5 APPPATH/Controllers/EmploymentInfo.php(151): view('employmentinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\EmploymentInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmploymentInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 06:45:09 --> Undefined variable $users
+in APPPATH/Views/companyresigninfo/view.php on line 70.
+ 1 APPPATH/Views/companyresigninfo/view.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/companyresigninfo/view.php', 70)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyresigninfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyresigninfo/view', [], true)
+ 5 APPPATH/Controllers/CompanyResignInfo.php(142): view('companyresigninfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyResignInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyResignInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-31 18:02:55 --> Undefined variable $page
+in APPPATH/Views/layout/users_view.php on line 189.
+ 1 APPPATH/Views/layout/users_view.php(189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', '/home/freelance/public_html/digitalflow/app/Views/layout/users_view.php', 189)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/layout/users_view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(244): CodeIgniter\View\View->render('layout/users_view', [], true)
+ 5 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('recruitmentinfo/contacts.php', [], true)
+ 6 APPPATH/Controllers/RecruitmentInfo.php(242): view('recruitmentinfo/contacts.php')
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RecruitmentInfo->candidates()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecruitmentInfo))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

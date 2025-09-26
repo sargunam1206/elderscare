@@ -1,0 +1,429 @@
+ERROR - 2024-05-20 10:26:30 --> mysqli_sql_exception: Unknown column 'experience_id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('UPDATE `educati...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `educati...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `educati...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `educati...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(949): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /home/freelance/public_html/digitalflow/system/Model.php(776): CodeIgniter\BaseModel->update(Array, Array)
+#7 /home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php(204): CodeIgniter\Model->update('1', Array)
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\ExperienceInfo->update()
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+#10 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-05-20 10:26:30 --> Unknown column 'experience_id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `educational_info` SET `emp_id` = :emp_id:
+WHERE `experience_id` = :experience_id:
+AND `educational_info`.`edu_id` IN :educational_info.edu_id:', [...], false)
+ 2 SYSTEMPATH/Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(949): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH/Controllers/ExperienceInfo.php(204): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->update()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-20 10:35:35 --> mysqli_sql_exception: Unknown column 'edu_deleted_on' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php(211): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\ExperienceInfo->update()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-05-20 10:35:35 --> Unknown column 'edu_deleted_on' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `experience_info`
+WHERE `edu_deleted_on` IS NULL
+ORDER BY `edu_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/ExperienceInfo.php(211): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->update()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-20 10:37:43 --> mysqli_sql_exception: Unknown column 'edu_id' in 'order clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php(211): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\ExperienceInfo->update()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-05-20 10:37:43 --> Unknown column 'edu_id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `experience_info`
+WHERE `experience_deleted_on` IS NULL
+ORDER BY `edu_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/ExperienceInfo.php(211): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->update()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 10:38:04 --> Invalid file: "experience/view.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('experience/view.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('experience/view', [], true)
+ 3 APPPATH/Controllers/ExperienceInfo.php(213): view('experience/view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->update()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 11:01:06 --> syntax error, unexpected token "<"
+in APPPATH/Views/experienceinfo/view.php on line 86.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('experienceinfo/view', [], true)
+ 3 APPPATH/Controllers/ExperienceInfo.php(213): view('experienceinfo/view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->update()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:41:48 --> "trim" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('trim')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('experience_deleted_on', 'experience_deleted_on', null, [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/ExperienceInfo.php(51): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:56:46 --> "is_empty" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('is_empty')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('emp_id', 'emp_id', '1234test', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/ExperienceInfo.php(51): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:57:36 --> "permit_empty" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('permit_empty')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('emp_id', 'emp_id', '1234test', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/ExperienceInfo.php(51): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:59:49 --> "valid_datetime" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('valid_datetime')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('emp_id', 'emp_id', '1234test', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/ExperienceInfo.php(51): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 07:29:09 --> "" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('emp_id', 'emp_id', '1234test', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/ExperienceInfo.php(54): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 07:29:44 --> "" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('emp_id', 'emp_id', '1234test', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/ExperienceInfo.php(54): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 07:30:00 --> "" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('emp_id', 'emp_id', '1234test', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/ExperienceInfo.php(54): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 07:30:10 --> "" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('emp_id', 'emp_id', '1234test', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/ExperienceInfo.php(54): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 07:59:06 --> "" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('emp_id', 'emp_id', '1234test', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/ExperienceInfo.php(54): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 07:59:11 --> "" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('emp_id', 'emp_id', '1234test', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/ExperienceInfo.php(54): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 07:59:21 --> "" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('emp_id', 'emp_id', '1234test', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/ExperienceInfo.php(54): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 08:02:23 --> "" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('emp_id', 'emp_id', '1234test', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/ExperienceInfo.php(54): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 08:03:06 --> "" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('emp_id', 'emp_id', '1234test', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/ExperienceInfo.php(54): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 08:03:30 --> "" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('emp_id', 'emp_id', '123', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/ExperienceInfo.php(54): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 08:03:55 --> "" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('emp_id', 'emp_id', '123', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/ExperienceInfo.php(54): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 08:04:07 --> "" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('emp_id', 'emp_id', '123', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/ExperienceInfo.php(54): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 08:04:45 --> "" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('emp_id', 'emp_id', '123', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/ExperienceInfo.php(54): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 08:05:37 --> "" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('emp_id', 'emp_id', '1478', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/ExperienceInfo.php(54): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 08:11:48 --> Undefined constant "App\Controllers\experience_info"
+in APPPATH/Controllers/ExperienceInfo.php on line 46.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:47:45 --> Cannot use object of type App\Models\ExperienceInfoModel as array
+in APPPATH/Controllers/ExperienceInfo.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:53:03 --> Undefined array key "experience_deleted_on"
+in APPPATH/Controllers/ExperienceInfo.php on line 46.
+ 1 APPPATH/Controllers/ExperienceInfo.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "experience_deleted_on"', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 46)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:54:10 --> Undefined array key "experience_deleted_on"
+in APPPATH/Controllers/ExperienceInfo.php on line 46.
+ 1 APPPATH/Controllers/ExperienceInfo.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "experience_deleted_on"', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 46)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:54:19 --> Undefined array key "experience_deleted_on"
+in APPPATH/Controllers/ExperienceInfo.php on line 46.
+ 1 APPPATH/Controllers/ExperienceInfo.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "experience_deleted_on"', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 46)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:54:39 --> Undefined variable $rules
+in APPPATH/Controllers/ExperienceInfo.php on line 64.
+ 1 APPPATH/Controllers/ExperienceInfo.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rules', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 64)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:55:16 --> syntax error, unexpected token "public"
+in APPPATH/Controllers/ExperienceInfo.php on line 117.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ExperienceInfo')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ExperienceInfo')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\ExperienceInfo', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:55:20 --> syntax error, unexpected token "public"
+in APPPATH/Controllers/ExperienceInfo.php on line 117.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ExperienceInfo')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ExperienceInfo')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\ExperienceInfo', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:56:07 --> Undefined array key "experience_deleted_on"
+in APPPATH/Controllers/ExperienceInfo.php on line 45.
+ 1 APPPATH/Controllers/ExperienceInfo.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "experience_deleted_on"', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 45)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 10:00:44 --> Undefined array key "experence_deleted_on"
+in APPPATH/Controllers/ExperienceInfo.php on line 45.
+ 1 APPPATH/Controllers/ExperienceInfo.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "experence_deleted_on"', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 45)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 10:01:10 --> Attempt to read property "experence_deleted_on" on array
+in APPPATH/Controllers/ExperienceInfo.php on line 45.
+ 1 APPPATH/Controllers/ExperienceInfo.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "experence_deleted_on" on array', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 45)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 10:01:25 --> Attempt to read property "experience_deleted_on" on array
+in APPPATH/Controllers/ExperienceInfo.php on line 45.
+ 1 APPPATH/Controllers/ExperienceInfo.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "experience_deleted_on" on array', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 45)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 10:01:46 --> Undefined array key "experience_deleted_on"
+in APPPATH/Controllers/ExperienceInfo.php on line 45.
+ 1 APPPATH/Controllers/ExperienceInfo.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "experience_deleted_on"', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 45)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 10:07:17 --> Undefined variable $empty
+in APPPATH/Controllers/ExperienceInfo.php on line 53.
+ 1 APPPATH/Controllers/ExperienceInfo.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $empty', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 53)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 10:56:12 --> Undefined array key "emp_id"
+in APPPATH/Controllers/ExperienceInfo.php on line 48.
+ 1 APPPATH/Controllers/ExperienceInfo.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "emp_id"', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 48)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 10:59:03 --> Undefined array key 0
+in APPPATH/Controllers/ExperienceInfo.php on line 49.
+ 1 APPPATH/Controllers/ExperienceInfo.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 49)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 10:59:43 --> Undefined array key 0
+in APPPATH/Controllers/ExperienceInfo.php on line 50.
+ 1 APPPATH/Controllers/ExperienceInfo.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 50)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 11:00:32 --> Undefined array key 0
+in APPPATH/Controllers/ExperienceInfo.php on line 48.
+ 1 APPPATH/Controllers/ExperienceInfo.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 48)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 11:01:34 --> Undefined array key 0
+in APPPATH/Controllers/ExperienceInfo.php on line 50.
+ 1 APPPATH/Controllers/ExperienceInfo.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 50)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 11:03:11 --> Undefined array key 0
+in APPPATH/Controllers/ExperienceInfo.php on line 50.
+ 1 APPPATH/Controllers/ExperienceInfo.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 50)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 11:07:54 --> Undefined variable $rules
+in APPPATH/Controllers/ExperienceInfo.php on line 81.
+ 1 APPPATH/Controllers/ExperienceInfo.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rules', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 81)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

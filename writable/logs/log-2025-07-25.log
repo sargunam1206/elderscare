@@ -1,0 +1,81 @@
+ERROR - 2025-07-25 09:33:13 --> mysqli_sql_exception: Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '=' in /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Controllers/UserInfo.php(141): CodeIgniter\BaseModel->first()
+#7 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\UserInfo->login_viyoma()
+#8 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-07-25 09:33:13 --> Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+WHERE `user_contactno` = :user_contactno:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Controllers/UserInfo.php(141): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->login_viyoma()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-07-25 09:33:16 --> mysqli_sql_exception: Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '=' in /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Controllers/UserInfo.php(141): CodeIgniter\BaseModel->first()
+#7 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\UserInfo->login_viyoma()
+#8 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-07-25 09:33:16 --> Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+WHERE `user_contactno` = :user_contactno:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Controllers/UserInfo.php(141): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->login_viyoma()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-07-25 09:33:17 --> mysqli_sql_exception: Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '=' in /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Controllers/UserInfo.php(141): CodeIgniter\BaseModel->first()
+#7 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\UserInfo->login_viyoma()
+#8 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-07-25 09:33:17 --> Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+WHERE `user_contactno` = :user_contactno:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Controllers/UserInfo.php(141): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->login_viyoma()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

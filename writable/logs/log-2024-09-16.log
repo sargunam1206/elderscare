@@ -1,0 +1,245 @@
+CRITICAL - 2024-09-16 06:18:22 --> Undefined array key 2
+in APPPATH/Views/return_info/view.php on line 2000.
+ 1 APPPATH/Views/return_info/view.php(2000): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', '/home/freelance/public_html/viyoma/app/Views/return_info/view.php', 2000)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(178): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSSmVrNUVXVEZPZWxFeVRuYzlQUT09')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 06:18:40 --> Undefined array key 4
+in APPPATH/Views/return_info/view.php on line 2000.
+ 1 APPPATH/Views/return_info/view.php(2000): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', '/home/freelance/public_html/viyoma/app/Views/return_info/view.php', 2000)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(178): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSSmVrNUVXVEZPZWxFeVRuYzlQUT09')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 06:18:42 --> Undefined array key 4
+in APPPATH/Views/return_info/view.php on line 2000.
+ 1 APPPATH/Views/return_info/view.php(2000): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', '/home/freelance/public_html/viyoma/app/Views/return_info/view.php', 2000)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(178): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSSmVrNUVXVEZPZWxFeVRuYzlQUT09')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 06:19:33 --> Undefined array key 4
+in APPPATH/Views/return_info/view.php on line 2000.
+ 1 APPPATH/Views/return_info/view.php(2000): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', '/home/freelance/public_html/viyoma/app/Views/return_info/view.php', 2000)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(178): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSSmVrNUVXVEZPZWxFeVRuYzlQUT09')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 06:19:35 --> Undefined array key 4
+in APPPATH/Views/return_info/view.php on line 2000.
+ 1 APPPATH/Views/return_info/view.php(2000): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', '/home/freelance/public_html/viyoma/app/Views/return_info/view.php', 2000)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(178): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSSmVrNUVXVEZPZWxFeVRuYzlQUT09')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 06:22:07 --> Undefined array key 3
+in APPPATH/Views/return_info/view.php on line 2000.
+ 1 APPPATH/Views/return_info/view.php(2000): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 3', '/home/freelance/public_html/viyoma/app/Views/return_info/view.php', 2000)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(178): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSSmVrNUVXVEZPZWxFeVRuYzlQUT09')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 06:22:32 --> Undefined array key 3
+in APPPATH/Views/return_info/view.php on line 2000.
+ 1 APPPATH/Views/return_info/view.php(2000): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 3', '/home/freelance/public_html/viyoma/app/Views/return_info/view.php', 2000)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(178): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSSmVrNUVXVEZPZWxFeVRuYzlQUT09')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 06:26:29 --> Unclosed '{' on line 1982
+in APPPATH/Views/return_info/view.php on line 2305.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 3 APPPATH/Controllers/ReturnInfo.php(178): view('return_info/view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSSmVrNUVXVEZPZWxFeVRuYzlQUT09')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 07:14:02 --> Undefined variable $assigned_assets_retureddate
+in APPPATH/Views/assignedassets/edit.php on line 1864.
+ 1 APPPATH/Views/assignedassets/edit.php(1864): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assigned_assets_retureddate', '/home/freelance/public_html/viyoma/app/Views/assignedassets/edit.php', 1864)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/edit', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(295): view('assignedassets/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VFZSVlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 07:20:11 --> Undefined variable $assigned_assets_retureddate
+in APPPATH/Views/assignedassets/view.php on line 1889.
+ 1 APPPATH/Views/assignedassets/view.php(1889): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assigned_assets_retureddate', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1889)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(176): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 08:05:51 --> Call to undefined method App\Models\PurchaseInfoModel::group_by
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Purchase.php(156): CodeIgniter\Model->__call('group_by', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Purchase->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Purchase))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 08:06:13 --> Call to undefined method App\Models\PurchaseInfoModel::group_by
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Purchase.php(157): CodeIgniter\Model->__call('group_by', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Purchase->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Purchase))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 08:06:15 --> Call to undefined method App\Models\PurchaseInfoModel::group_by
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Purchase.php(157): CodeIgniter\Model->__call('group_by', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Purchase->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Purchase))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 08:06:44 --> Call to undefined method App\Models\PurchaseInfoModel::group_by
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Purchase.php(161): CodeIgniter\Model->__call('group_by', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Purchase->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Purchase))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 08:07:47 --> Call to undefined method App\Models\PurchaseInfoModel::group_by
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Purchase.php(161): CodeIgniter\Model->__call('group_by', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Purchase->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Purchase))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 08:11:04 --> Call to undefined method App\Models\PurchaseInfoModel::group_by
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Purchase.php(161): CodeIgniter\Model->__call('group_by', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Purchase->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Purchase))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 08:11:22 --> Undefined array key "purchase_vendor"
+in APPPATH/Views/purchase/view.php on line 1823.
+ 1 APPPATH/Views/purchase/view.php(1823): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "purchase_vendor"', '/home/freelance/public_html/viyoma/app/Views/purchase/view.php', 1823)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/purchase/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('purchase/view', [], true)
+ 5 APPPATH/Controllers/Purchase.php(171): view('purchase/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Purchase->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Purchase))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 13:49:23 --> Undefined variable $purchase_vendor
+in APPPATH/Views/purchase/view.php on line 1829.
+ 1 APPPATH/Views/purchase/view.php(1829): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $purchase_vendor', '/home/freelance/public_html/viyoma/app/Views/purchase/view.php', 1829)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/purchase/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('purchase/view', [], true)
+ 5 APPPATH/Controllers/Purchase.php(179): view('purchase/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Purchase->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Purchase))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 13:55:37 --> Undefined variable $allvalues
+in APPPATH/Views/purchase/view.php on line 1826.
+ 1 APPPATH/Views/purchase/view.php(1826): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $allvalues', '/home/freelance/public_html/viyoma/app/Views/purchase/view.php', 1826)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/purchase/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('purchase/view', [], true)
+ 5 APPPATH/Controllers/Purchase.php(182): view('purchase/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Purchase->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Purchase))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 13:55:45 --> Undefined variable $allvalues
+in APPPATH/Views/purchase/view.php on line 1826.
+ 1 APPPATH/Views/purchase/view.php(1826): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $allvalues', '/home/freelance/public_html/viyoma/app/Views/purchase/view.php', 1826)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/purchase/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('purchase/view', [], true)
+ 5 APPPATH/Controllers/Purchase.php(182): view('purchase/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Purchase->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Purchase))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 10:09:07 --> array_diff(): Argument #2 must be of type array, null given
+in APPPATH/Views/return_info/view.php on line 1998.
+ 1 APPPATH/Views/return_info/view.php(1998): array_diff([...], null)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(183): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSSmVrNUVXVEZPZWxFeVRucG5lQT09')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 11:53:22 --> array_diff(): Argument #2 must be of type array, null given
+in APPPATH/Views/return_info/view.php on line 1998.
+ 1 APPPATH/Views/return_info/view.php(1998): array_diff([...], null)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(183): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSSmVrNUVXVEZPZWxFeVRucG5lQT09')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 11:58:21 --> array_diff(): Argument #2 must be of type array, null given
+in APPPATH/Views/return_info/view.php on line 1998.
+ 1 APPPATH/Views/return_info/view.php(1998): array_diff([...], null)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(183): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSSmVrNUVXVEZPZWxFeVRucG5lQT09')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 11:59:26 --> Undefined variable $not_retured
+in APPPATH/Views/return_info/view.php on line 2003.
+ 1 APPPATH/Views/return_info/view.php(2003): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $not_retured', '/home/freelance/public_html/viyoma/app/Views/return_info/view.php', 2003)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(183): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSSmVrNUVXVEZPZWxFeVRuYzlQUT09')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 12:00:36 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 287.
+ 1 APPPATH/Controllers/AssignedAssets.php(287): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 287)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VFZSUlBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

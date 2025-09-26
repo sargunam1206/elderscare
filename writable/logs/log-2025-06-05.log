@@ -1,0 +1,71 @@
+CRITICAL - 2025-06-05 06:46:39 --> Trying to access array offset on value of type null
+in APPPATH/Views/purchase/edit.php on line 165.
+ 1 APPPATH/Views/purchase/edit.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/purchase/edit.php', 165)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/purchase/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('purchase/edit', [], true)
+ 5 APPPATH/Controllers/Purchase.php(293): view('purchase/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Purchase->edit('1')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Purchase))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-05 13:12:51 --> Undefined variable $grn
+in APPPATH/Controllers/AddPurchase.php on line 547.
+ 1 APPPATH/Controllers/AddPurchase.php(547): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $grn', '/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Controllers/AddPurchase.php', 547)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AddPurchase->update()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AddPurchase))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-05 10:21:08 --> Undefined variable $input_field
+in APPPATH/Views/assettype/create.php on line 1916.
+ 1 APPPATH/Views/assettype/create.php(1916): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $input_field', '/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/create.php', 1916)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/create.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/create', [], true)
+ 5 APPPATH/Controllers/AssetType.php(53): view('assettype/create', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-05 10:28:04 --> Undefined variable $input_field
+in APPPATH/Views/assettype/create.php on line 1916.
+ 1 APPPATH/Views/assettype/create.php(1916): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $input_field', '/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/create.php', 1916)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/create.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/create', [], true)
+ 5 APPPATH/Controllers/AssetType.php(53): view('assettype/create', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-05 10:33:05 --> Undefined variable $input_field
+in APPPATH/Views/assettype/create.php on line 2.
+ 1 APPPATH/Views/assettype/create.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $input_field', '/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/create.php', 2)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/create.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/create', [], true)
+ 5 APPPATH/Controllers/AssetType.php(54): view('assettype/create', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-05 11:07:40 --> Undefined constant "App\Controllers\fields"
+in APPPATH/Controllers/AssetType.php on line 29.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-05 11:07:57 --> Undefined variable $fields
+in APPPATH/Controllers/AssetType.php on line 29.
+ 1 APPPATH/Controllers/AssetType.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fields', '/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Controllers/AssetType.php', 29)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-05 14:07:35 --> Undefined array key "asset"
+in APPPATH/Controllers/AssetType.php on line 161.
+ 1 APPPATH/Controllers/AssetType.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "asset"', '/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Controllers/AssetType.php', 161)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->assetfields('tesno')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

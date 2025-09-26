@@ -1,0 +1,14 @@
+CRITICAL - 2025-09-12 10:26:27 --> Undefined array key "first_name"
+in APPPATH/Controllers/GuestInfo.php on line 201.
+ 1 APPPATH/Controllers/GuestInfo.php(201): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "first_name"', '/home/neuralarcteam/public_html/advaya.neuralarc.com/app/Controllers/GuestInfo.php', 201)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\GuestInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuestInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-12 10:27:25 --> Undefined array key "first_name"
+in APPPATH/Controllers/GuestInfo.php on line 201.
+ 1 APPPATH/Controllers/GuestInfo.php(201): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "first_name"', '/home/neuralarcteam/public_html/advaya.neuralarc.com/app/Controllers/GuestInfo.php', 201)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\GuestInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuestInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

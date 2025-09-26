@@ -1,0 +1,497 @@
+ERROR - 2024-11-21 04:11:44 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Assets.php(167): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Assets->view()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\viyoma\app\Controllers\Assets.php(167): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Assets->view()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-11-21 04:11:44 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assets`
+WHERE `assets_deleted_on` IS NULL
+ORDER BY `assets_id` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Assets.php(167): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Assets->view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-21 04:11:53 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\AssignedAssets.php(79): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\AssignedAssets->index()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\viyoma\app\Controllers\AssignedAssets.php(79): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\AssignedAssets->index()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-11-21 04:11:53 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assets`
+WHERE `assets_deleted_on` IS NULL
+ORDER BY `assets_id` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\AssignedAssets.php(79): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssignedAssets->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-21 04:12:00 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\AssignedAssets.php(115): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\viyoma\app\Controllers\AssignedAssets.php(115): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-11-21 04:12:00 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assigned_assets`
+WHERE `assigned_assets_deleted_on` IS NULL
+ORDER BY `assigned_assets_id` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\AssignedAssets.php(115): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-21 04:22:43 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Assets.php(167): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Assets->view()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\viyoma\app\Controllers\Assets.php(167): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Assets->view()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-11-21 04:22:43 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assets`
+WHERE `assets_deleted_on` IS NULL
+ORDER BY `assets_id` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Assets.php(167): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Assets->view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-21 04:22:51 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(207): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(207): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-11-21 04:22:51 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Asset.php(207): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-21 04:23:32 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(212): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(212): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-11-21 04:23:32 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Asset.php(212): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 04:30:54 --> Undefined variable $base
+in APPPATH\Views\newasset\view.php on line 66.
+ 1 APPPATH\Views\newasset\view.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php', 66)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/view', [], true)
+ 5 APPPATH\Controllers\Asset.php(213): view('newasset/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 04:30:57 --> Undefined variable $base
+in APPPATH\Views\newasset\view.php on line 66.
+ 1 APPPATH\Views\newasset\view.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php', 66)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/view', [], true)
+ 5 APPPATH\Controllers\Asset.php(213): view('newasset/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 10:36:47 --> Call to undefined method App\Controllers\Asset::generateUniqueFileName()
+in APPPATH\Controllers\Asset.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 05:15:51 --> Undefined variable $full
+in APPPATH\Views\newasset\view.php on line 70.
+ 1 APPPATH\Views\newasset\view.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php', 70)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/view', [], true)
+ 5 APPPATH\Controllers\Asset.php(222): view('newasset/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 05:16:10 --> Undefined variable $full
+in APPPATH\Views\newasset\view.php on line 75.
+ 1 APPPATH\Views\newasset\view.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php', 75)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/view', [], true)
+ 5 APPPATH\Controllers\Asset.php(222): view('newasset/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 05:16:33 --> Undefined variable $data
+in APPPATH\Views\newasset\view.php on line 71.
+ 1 APPPATH\Views\newasset\view.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php', 71)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/view', [], true)
+ 5 APPPATH\Controllers\Asset.php(222): view('newasset/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 05:49:36 --> Undefined variable $requests
+in APPPATH\Views\newasset\view.php on line 1836.
+ 1 APPPATH\Views\newasset\view.php(1836): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $requests', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php', 1836)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/view', [], true)
+ 5 APPPATH\Controllers\Asset.php(222): view('newasset/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 05:50:11 --> Undefined variable $data
+in APPPATH\Views\newasset\view.php on line 1839.
+ 1 APPPATH\Views\newasset\view.php(1839): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php', 1839)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/view', [], true)
+ 5 APPPATH\Controllers\Asset.php(222): view('newasset/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 06:25:52 --> Undefined variable $base
+in APPPATH\Views\newasset\view.php on line 1868.
+ 1 APPPATH\Views\newasset\view.php(1868): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php', 1868)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/view', [], true)
+ 5 APPPATH\Controllers\Asset.php(222): view('newasset/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 06:26:29 --> Array to string conversion
+in APPPATH\Views\newasset\view.php on line 1868.
+ 1 APPPATH\Views\newasset\view.php(1868): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php', 1868)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/view', [], true)
+ 5 APPPATH\Controllers\Asset.php(222): view('newasset/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 06:26:47 --> Undefined variable $base
+in APPPATH\Views\newasset\view.php on line 1868.
+ 1 APPPATH\Views\newasset\view.php(1868): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php', 1868)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/view', [], true)
+ 5 APPPATH\Controllers\Asset.php(222): view('newasset/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 06:44:20 --> Undefined variable $asset
+in APPPATH\Views\newasset\edit.php on line 66.
+ 1 APPPATH\Views\newasset\edit.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\edit.php', 66)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/edit', [], true)
+ 5 APPPATH\Controllers\Asset.php(233): view('newasset/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 06:44:44 --> Undefined variable $asset
+in APPPATH\Views\newasset\edit.php on line 66.
+ 1 APPPATH\Views\newasset\edit.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\edit.php', 66)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/edit', [], true)
+ 5 APPPATH\Controllers\Asset.php(237): view('newasset/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 06:58:31 --> Too few arguments to function App\Controllers\Asset::update(), 0 passed in C:\xampp\htdocs\viyoma\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Asset.php on line 243.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->update()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 06:59:13 --> Too few arguments to function App\Controllers\Asset::update(), 0 passed in C:\xampp\htdocs\viyoma\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Asset.php on line 243.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->update()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 06:59:16 --> Too few arguments to function App\Controllers\Asset::update(), 0 passed in C:\xampp\htdocs\viyoma\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Asset.php on line 243.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->update()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 06:59:28 --> Too few arguments to function App\Controllers\Asset::update(), 0 passed in C:\xampp\htdocs\viyoma\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Asset.php on line 243.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->update()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 07:01:09 --> Too few arguments to function App\Controllers\Asset::update(), 0 passed in C:\xampp\htdocs\viyoma\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Asset.php on line 243.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->update()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-21 07:23:33 --> mysqli_sql_exception: Unknown column 'is_deleted' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(221): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-21 07:23:33 --> Unknown column 'is_deleted' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `is_deleted` = :is_deleted:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(221): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 07:24:06 --> Undefined variable $assets_type
+in APPPATH\Views\assets\view.php on line 1847.
+ 1 APPPATH\Views\assets\view.php(1847): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_type', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\assets\\view.php', 1847)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\assets\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 5 APPPATH\Controllers\Asset.php(223): view('assets/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 07:24:54 --> Undefined variable $assets_type
+in APPPATH\Views\assets\view.php on line 1847.
+ 1 APPPATH\Views\assets\view.php(1847): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_type', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\assets\\view.php', 1847)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\assets\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 5 APPPATH\Controllers\Asset.php(223): view('assets/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 07:25:50 --> Invalid file: "asset/view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('asset/view.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('asset/view', [], true)
+ 3 APPPATH\Controllers\Asset.php(223): view('asset/view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 12:30:02 --> syntax error, unexpected token "return", expecting "function" or "const"
+in APPPATH\Controllers\Asset.php on line 294.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Asset')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Asset')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Asset', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-21 12:30:02 --> syntax error, unexpected token "return", expecting "function" or "const"
+in APPPATH\Controllers\Asset.php on line 294.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Asset')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Asset')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Asset', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

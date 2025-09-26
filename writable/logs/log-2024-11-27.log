@@ -1,0 +1,393 @@
+ERROR - 2024-11-27 04:59:35 --> mysqli_sql_exception: MySQL server has gone away in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(304): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-27 04:59:35 --> MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `deleted_on` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(304): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-27 05:02:26 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(304): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(304): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-11-27 05:02:26 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `deleted_on` IS NULL', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Asset.php(304): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:32:05 --> Undefined variable $hospitals
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hospitals', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(56): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:33:03 --> Undefined variable $assets
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(56): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:33:04 --> Undefined variable $assets
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(56): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:39:15 --> Undefined variable $full
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(56): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:39:17 --> Undefined variable $full
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(56): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:39:17 --> Undefined variable $full
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(56): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:39:17 --> Undefined variable $full
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(56): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:39:17 --> Undefined variable $full
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(56): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:39:17 --> Undefined variable $full
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(56): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:39:18 --> Undefined variable $full
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(56): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:39:18 --> Undefined variable $full
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(56): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:39:18 --> Undefined variable $full
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(56): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:39:18 --> Undefined variable $full
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(56): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:41:58 --> Undefined variable $full
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(60): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:42:01 --> Undefined variable $full
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(60): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:42:02 --> Undefined variable $full
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(60): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:42:03 --> Undefined variable $full
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(60): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:42:03 --> Undefined variable $full
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(60): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:42:03 --> Undefined variable $full
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(60): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:42:03 --> Undefined variable $full
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(60): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 07:42:16 --> Undefined variable $assets
+in APPPATH\Views\newasset\index.php on line 1776.
+ 1 APPPATH\Views\newasset\index.php(1776): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 1776)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(60): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-27 16:43:22 --> mysqli_sql_exception: Column 'asset_image' cannot be null in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ad...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ad...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ad...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ad...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\viyoma\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\viyoma\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\viyoma\app\Controllers\AddPurchase.php(49): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\AddPurchase->index()
+#10 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AddPurchase))
+#11 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-11-27 16:43:22 --> Column 'asset_image' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `add_purchase` (`supplier_name`, `asset_type`, `asset_make`, `specification`, `unit_price`, `discount`, `quantity`, `part_name`, `part_number`, `customer_name`, `invoice_number`, `invoice_date`, `tax`, `purchase_status`, `purchase_reason`, `created_on`, `asset_image`) VALUES (:supplier_name:, :asset_type:, :asset_make:, :specification:, :unit_price:, :discount:, :quantity:, :part_name:, :part_number:, :customer_name:, :invoice_number:, :invoice_date:, :tax:, :purchase_status:, :purchase_reason:, :created_on:, :asset_image:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\AddPurchase.php(49): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddPurchase->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AddPurchase))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 11:22:16 --> Undefined variable $asset
+in APPPATH\Controllers\Asset.php on line 94.
+ 1 APPPATH\Controllers\Asset.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 94)
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Asset')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Asset')
+ 6 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Asset', true)
+ 7 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 11:22:18 --> Undefined variable $asset
+in APPPATH\Controllers\Asset.php on line 94.
+ 1 APPPATH\Controllers\Asset.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 94)
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Asset')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Asset')
+ 6 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Asset', true)
+ 7 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 11:22:19 --> Undefined variable $asset
+in APPPATH\Controllers\Asset.php on line 94.
+ 1 APPPATH\Controllers\Asset.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 94)
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Asset')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Asset')
+ 6 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Asset', true)
+ 7 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 11:22:21 --> Undefined variable $asset
+in APPPATH\Controllers\Asset.php on line 94.
+ 1 APPPATH\Controllers\Asset.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 94)
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Asset')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Asset')
+ 6 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Asset', true)
+ 7 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 11:22:41 --> Undefined variable $asset
+in APPPATH\Controllers\Asset.php on line 94.
+ 1 APPPATH\Controllers\Asset.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 94)
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Asset')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Asset')
+ 6 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Asset', true)
+ 7 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 11:28:36 --> Undefined variable $base
+in APPPATH\Views\addpurchase\edit.php on line 2117.
+ 1 APPPATH\Views\addpurchase\edit.php(2117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\addpurchase\\edit.php', 2117)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\addpurchase\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('addpurchase/edit', [], true)
+ 5 APPPATH\Controllers\AddPurchase.php(261): view('addpurchase/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddPurchase->edit('VGtSVlBRPT0=')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AddPurchase))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

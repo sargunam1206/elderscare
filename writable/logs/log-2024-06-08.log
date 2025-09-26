@@ -1,0 +1,88 @@
+CRITICAL - 2024-06-08 10:06:10 --> Trying to access array offset on value of type null
+in APPPATH/Views/experienceinfo/edit.php on line 26.
+ 1 APPPATH/Views/experienceinfo/edit.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Views/experienceinfo/edit.php', 26)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/experienceinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('experienceinfo/edit', [], true)
+ 5 APPPATH/Controllers/ExperienceInfo.php(214): view('experienceinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->edit('VFdwSmVVMXFTWGxOYWtsNVRXcEplVTFxU1hsTmFrbDVUV3BKZVUxcVNYbE5ha2w1VFdwSmVVMXFTWGxOYWtsNVRXcEplVTFxU1hsTmFrbDVUV3BKZVUxcVNYbE5ha2w1VFdwSmVVMXFTWGxOYWtsNVRXcEplVTFxU1hsTlp6MDk=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-08 10:06:33 --> Trying to access array offset on value of type null
+in APPPATH/Views/experienceinfo/edit.php on line 26.
+ 1 APPPATH/Views/experienceinfo/edit.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Views/experienceinfo/edit.php', 26)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/experienceinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('experienceinfo/edit', [], true)
+ 5 APPPATH/Controllers/ExperienceInfo.php(214): view('experienceinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->edit('VFdwSmVVMXFTWGxOYWtsNVRXcEplVTFxU1hsTmFrbDVUV3BKZVUxcVNYbE5ha2w1VFdwSmVVMXFTWGxOYWtsNVRXcEplVTFxU1hsTmFrbDVUV3BKZVUxcVNYbE5ha2w1VFdwSmVVMXFTWGxOYWtsNVRXcEplVTFxU1hsTlp6MDk=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-08 10:07:03 --> Trying to access array offset on value of type null
+in APPPATH/Views/experienceinfo/edit.php on line 26.
+ 1 APPPATH/Views/experienceinfo/edit.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Views/experienceinfo/edit.php', 26)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/experienceinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('experienceinfo/edit', [], true)
+ 5 APPPATH/Controllers/ExperienceInfo.php(214): view('experienceinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->edit('VFZSSmVrNUlVbXhqTTFFOQ==')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-08 10:11:02 --> Trying to access array offset on value of type null
+in APPPATH/Views/experienceinfo/edit.php on line 26.
+ 1 APPPATH/Views/experienceinfo/edit.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Views/experienceinfo/edit.php', 26)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/experienceinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('experienceinfo/edit', [], true)
+ 5 APPPATH/Controllers/ExperienceInfo.php(214): view('experienceinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->edit('VFZSSmVrNUlVbXhqTTFFOQ==')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-08 10:12:05 --> Trying to access array offset on value of type null
+in APPPATH/Views/experienceinfo/edit.php on line 26.
+ 1 APPPATH/Views/experienceinfo/edit.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Views/experienceinfo/edit.php', 26)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/experienceinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('experienceinfo/edit', [], true)
+ 5 APPPATH/Controllers/ExperienceInfo.php(214): view('experienceinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->edit('VFdwSmVVMXFTWGxOYWtsNVRXcEplVTFxU1hsTmFrbDVUV3BKZVUxcVNYbE5ha2w1VFdwSmVVMXFTWGxOYWtsNVRXcEplVTFxU1hsTmFrbDVUV3BKZVUxcVNYbE5ha2w1VFdwSmVVMXFTWGxOYWtsNVRXcEplVTFxU1hsTlp6MDk=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-08 10:13:02 --> Trying to access array offset on value of type null
+in APPPATH/Views/experienceinfo/edit.php on line 26.
+ 1 APPPATH/Views/experienceinfo/edit.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Views/experienceinfo/edit.php', 26)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/experienceinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('experienceinfo/edit', [], true)
+ 5 APPPATH/Controllers/ExperienceInfo.php(214): view('experienceinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->edit('VFdwSmVVMXFTWGxOYWtsNVRXcEplVTFxU1hsTmFrbDVUV3BKZVUxcVNYbE5ha2w1VFdwSmVVMXFTWGxOYWtsNVRXcEplVTFxU1hsTmFrbDVUV3BKZVUxcVNYbE5ha2w1VFdwSmVVMXFTWGxOYWtsNVRXcEplVTFxU1hsTlp6MDk=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-08 10:16:39 --> Trying to access array offset on value of type null
+in APPPATH/Views/experienceinfo/edit.php on line 26.
+ 1 APPPATH/Views/experienceinfo/edit.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Views/experienceinfo/edit.php', 26)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/experienceinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('experienceinfo/edit', [], true)
+ 5 APPPATH/Controllers/ExperienceInfo.php(214): view('experienceinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->edit('VFZSSmVnPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-08 10:17:34 --> Trying to access array offset on value of type null
+in APPPATH/Views/experienceinfo/edit.php on line 26.
+ 1 APPPATH/Views/experienceinfo/edit.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Views/experienceinfo/edit.php', 26)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/experienceinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('experienceinfo/edit', [], true)
+ 5 APPPATH/Controllers/ExperienceInfo.php(214): view('experienceinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->edit('VFZSSmVnPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

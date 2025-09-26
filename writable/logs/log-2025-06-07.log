@@ -1,0 +1,181 @@
+CRITICAL - 2025-06-07 05:07:42 --> foreach() argument must be of type array|object, null given
+in APPPATH/Views/assettype/edit.php on line 1926.
+ 1 APPPATH/Views/assettype/edit.php(1926): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', '/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/edit.php', 1926)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/edit', [], true)
+ 5 APPPATH/Controllers/AssetType.php(85): view('assettype/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->edit('32')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-07 06:07:43 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssetType.php on line 166.
+ 1 APPPATH/Controllers/AssetType.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Controllers/AssetType.php', 166)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->assetfields('THREAD MILL')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-07 06:12:32 --> Array to string conversion
+in APPPATH/Views/assettype/view.php on line 1901.
+ 1 APPPATH/Views/assettype/view.php(1901): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php', 1901)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 5 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-07 06:14:10 --> Array to string conversion
+in APPPATH/Views/assettype/view.php on line 1904.
+ 1 APPPATH/Views/assettype/view.php(1904): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php', 1904)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 5 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-07 06:14:27 --> json_decode(): Argument #2 ($associative) must be of type ?bool, array given
+in APPPATH/Views/assettype/view.php on line 1903.
+ 1 APPPATH/Views/assettype/view.php(1903): json_decode(',', [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 5 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-07 07:13:08 --> implode(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Views/assettype/view.php on line 1903.
+ 1 APPPATH/Views/assettype/view.php(1903): implode(',', null)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 5 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-07 07:13:30 --> implode(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Views/assettype/view.php on line 1903.
+ 1 APPPATH/Views/assettype/view.php(1903): implode(',', null)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 5 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-07 07:14:02 --> implode(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Views/assettype/view.php on line 1903.
+ 1 APPPATH/Views/assettype/view.php(1903): implode(',', null)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 5 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-07 07:14:17 --> implode(): Argument #2 ($array) must be of type ?array, string given
+in APPPATH/Views/assettype/view.php on line 1903.
+ 1 APPPATH/Views/assettype/view.php(1903): implode(',', 'null')
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 5 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-07 07:17:23 --> implode(): Argument #2 ($array) must be of type ?array, string given
+in APPPATH/Views/assettype/view.php on line 1903.
+ 1 APPPATH/Views/assettype/view.php(1903): implode(',', 'null')
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 5 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-07 07:18:09 --> implode(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Views/assettype/view.php on line 1903.
+ 1 APPPATH/Views/assettype/view.php(1903): implode(',', null)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 5 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-07 07:18:27 --> implode(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Views/assettype/view.php on line 1903.
+ 1 APPPATH/Views/assettype/view.php(1903): implode(',', null)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 5 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-07 07:18:35 --> implode(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Views/assettype/view.php on line 1903.
+ 1 APPPATH/Views/assettype/view.php(1903): implode(',', null)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 5 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-07 07:18:52 --> implode(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Views/assettype/view.php on line 1903.
+ 1 APPPATH/Views/assettype/view.php(1903): implode(', ', null)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 5 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-07 07:24:56 --> implode(): Argument #1 ($array) must be of type array, string given
+in APPPATH/Views/assettype/view.php on line 1903.
+ 1 APPPATH/Views/assettype/view.php(1903): implode(', ', null)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Views/assettype/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assettype/view', [], true)
+ 5 APPPATH/Controllers/AssetType.php(67): view('assettype/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->viewAssetType()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-07 10:21:12 --> Too few arguments to function App\Controllers\Asset::download(), 0 passed in /home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/system/CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH/Controllers/Asset.php on line 588.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Asset->download()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-07 11:53:55 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssetType.php on line 166.
+ 1 APPPATH/Controllers/AssetType.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Controllers/AssetType.php', 166)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->assetfields('TAPS')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-07 11:57:32 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssetType.php on line 166.
+ 1 APPPATH/Controllers/AssetType.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/viyoma.neuralarc.com/viyoma/app/Controllers/AssetType.php', 166)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssetType->assetfields('TAPS')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssetType))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

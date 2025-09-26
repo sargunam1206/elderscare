@@ -1,0 +1,1548 @@
+CRITICAL - 2024-04-17 06:01:16 --> Class "App\Models\BloodBankModel" not found
+in APPPATH/Controllers/UserInfo.php on line 83.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 06:02:06 --> There is no data to insert.
+in SYSTEMPATH/BaseModel.php on line 768.
+ 1 SYSTEMPATH/BaseModel.php(768): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert([], false)
+ 3 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(98): CodeIgniter\BaseModel->save([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 06:02:25 --> There is no data to insert.
+in SYSTEMPATH/BaseModel.php on line 768.
+ 1 SYSTEMPATH/BaseModel.php(768): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert([], false)
+ 3 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(98): CodeIgniter\BaseModel->save([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 06:05:11 --> mysqli_sql_exception: Table 'convertdigitalflow.donors' doesn't exist in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `blood_g...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `blood_g...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `blood_g...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `blood_g...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/app/Models/BloodBankDonorsModel.php(18): CodeIgniter\Model->__call('get', Array)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(101): App\Models\BloodBankDonorsModel->getNumRows()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 06:05:11 --> Table 'convertdigitalflow.donors' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `blood_group`, SUM(donated_count) as total
+FROM `donors`
+GROUP BY `blood_group`', [], false)
+ 2 SYSTEMPATH/Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Models/BloodBankDonorsModel.php(18): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH/Controllers/UserInfo.php(101): App\Models\BloodBankDonorsModel->getNumRows()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 06:23:51 --> mysqli_sql_exception: Table 'convertdigitalflow.donors' doesn't exist in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `blood_g...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `blood_g...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `blood_g...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `blood_g...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/app/Models/BloodBankDonorsModel.php(18): CodeIgniter\Model->__call('get', Array)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(101): App\Models\BloodBankDonorsModel->getNumRows()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 06:23:51 --> Table 'convertdigitalflow.donors' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `blood_group`, SUM(donated_count) as total
+FROM `donors`
+GROUP BY `blood_group`', [], false)
+ 2 SYSTEMPATH/Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Models/BloodBankDonorsModel.php(18): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH/Controllers/UserInfo.php(101): App\Models\BloodBankDonorsModel->getNumRows()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 12:32:22 --> Invalid file: "users/register.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('users/register.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/register', [], true)
+ 3 APPPATH/Controllers/UserInfo.php(134): view('users/register')
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 12:33:00 --> Invalid file: "register.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('register.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('register', [], true)
+ 3 APPPATH/Controllers/UserInfo.php(134): view('register')
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 07:14:54 --> "" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('user_email', 'user_email', 'pushpa.g@neuralarc.com', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/UserInfo.php(81): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 07:15:11 --> mysqli_sql_exception: Table 'convertdigitalflow.userInfo' doesn't exist in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Validation/StrictRules/Rules.php(212): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/Validation/Validation.php(311): CodeIgniter\Validation\StrictRules\Rules->is_unique('pushpa.g@neural...', 'user_email', Array, NULL, 'user_email')
+#6 /home/freelance/public_html/digitalflow/system/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('user_email', 'user_email', 'pushpa.g@neural...', Array, Array)
+#7 /home/freelance/public_html/digitalflow/system/Controller.php(152): CodeIgniter\Validation\Validation->run()
+#8 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(81): CodeIgniter\Controller->validate(Array)
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+#10 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#11 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-04-17 07:15:11 --> Table 'convertdigitalflow.userInfo' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `userInfo`
+WHERE `user_email` = :user_email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH/Validation/StrictRules/Rules.php(212): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/Validation/Validation.php(311): CodeIgniter\Validation\StrictRules\Rules->is_unique('pushpa.g@neuralarc.com', 'user_email', [...], null, 'user_email')
+ 4 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('user_email', 'user_email', 'pushpa.g@neuralarc.com', [...], [...])
+ 5 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH/Controllers/UserInfo.php(81): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 07:15:34 --> mysqli_sql_exception: Table 'convertdigitalflow.UserInfo' doesn't exist in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Validation/StrictRules/Rules.php(212): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/Validation/Validation.php(311): CodeIgniter\Validation\StrictRules\Rules->is_unique('pushpa.g@neural...', 'user_email', Array, NULL, 'user_email')
+#6 /home/freelance/public_html/digitalflow/system/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('user_email', 'user_email', 'pushpa.g@neural...', Array, Array)
+#7 /home/freelance/public_html/digitalflow/system/Controller.php(152): CodeIgniter\Validation\Validation->run()
+#8 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(81): CodeIgniter\Controller->validate(Array)
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+#10 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#11 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-04-17 07:15:34 --> Table 'convertdigitalflow.UserInfo' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `UserInfo`
+WHERE `user_email` = :user_email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH/Validation/StrictRules/Rules.php(212): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/Validation/Validation.php(311): CodeIgniter\Validation\StrictRules\Rules->is_unique('pushpa.g@neuralarc.com', 'user_email', [...], null, 'user_email')
+ 4 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('user_email', 'user_email', 'pushpa.g@neuralarc.com', [...], [...])
+ 5 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH/Controllers/UserInfo.php(81): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 07:21:30 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, array given, called in /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php on line 132
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 34.
+ 1 APPPATH/Controllers/UserInfo.php(132): CodeIgniter\HTTP\RedirectResponse->to('register', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 07:23:48 --> Undefined variable $session
+in APPPATH/Controllers/UserInfo.php on line 132.
+ 1 APPPATH/Controllers/UserInfo.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 132)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 07:24:10 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, array given, called in /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php on line 134
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 34.
+ 1 APPPATH/Controllers/UserInfo.php(134): CodeIgniter\HTTP\RedirectResponse->to('register', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 07:24:18 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, array given, called in /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php on line 134
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 34.
+ 1 APPPATH/Controllers/UserInfo.php(134): CodeIgniter\HTTP\RedirectResponse->to('register', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 07:26:04 --> Invalid file: "UserInfo/index.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('UserInfo/index.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('UserInfo/index', [], true)
+ 3 APPPATH/Controllers/UserInfo.php(132): view('UserInfo/index', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 07:26:48 --> Invalid file: "register.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('register.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('register', [], true)
+ 3 APPPATH/Controllers/UserInfo.php(132): view('register', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->store()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 07:45:17 --> Class "App\Controllers\BloodBankModel" not found
+in APPPATH/Controllers/UserInfo.php on line 184.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->login()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 07:45:39 --> mysqli_sql_exception: Unknown column 'email_id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(189): CodeIgniter\BaseModel->first()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->login()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 07:45:39 --> Unknown column 'email_id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+WHERE `email_id` = :email_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Controllers/UserInfo.php(189): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->login()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 07:45:55 --> mysqli_sql_exception: Unknown column 'email_id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(189): CodeIgniter\BaseModel->first()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->login()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 07:45:55 --> Unknown column 'email_id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+WHERE `email_id` = :email_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Controllers/UserInfo.php(189): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->login()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 08:04:29 --> Undefined variable $bloodDonatedCount
+in APPPATH/Views/users/welcome.php on line 25.
+ 1 APPPATH/Views/users/welcome.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bloodDonatedCount', '/home/freelance/public_html/digitalflow/app/Views/users/welcome.php', 25)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/welcome.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(194): view('users/welcome')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->login()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 08:06:44 --> Undefined variable $bloodDonorsCount
+in APPPATH/Views/users/welcome.php on line 325.
+ 1 APPPATH/Views/users/welcome.php(325): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bloodDonorsCount', '/home/freelance/public_html/digitalflow/app/Views/users/welcome.php', 325)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/welcome.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(194): view('users/welcome')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->login()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 08:07:00 --> Undefined variable $today_donated
+in APPPATH/Views/users/welcome.php on line 342.
+ 1 APPPATH/Views/users/welcome.php(342): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $today_donated', '/home/freelance/public_html/digitalflow/app/Views/users/welcome.php', 342)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/welcome.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(194): view('users/welcome')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->login()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 09:14:20 --> Class "App\Controllers\BloodBankModel" not found
+in APPPATH/Controllers/UserInfo.php on line 240.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 09:14:28 --> Class "App\Controllers\BloodBankModel" not found
+in APPPATH/Controllers/UserInfo.php on line 240.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:15:38 --> mysqli_sql_exception: Unknown column 'id' in 'order clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:15:38 --> Unknown column 'id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+ORDER BY `id` DESC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:15:40 --> mysqli_sql_exception: Unknown column 'id' in 'order clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:15:40 --> Unknown column 'id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+ORDER BY `id` DESC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:15:45 --> mysqli_sql_exception: Unknown column 'id' in 'order clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:15:45 --> Unknown column 'id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+ORDER BY `id` DESC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:16:51 --> mysqli_sql_exception: Unknown column 'id' in 'order clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:16:51 --> Unknown column 'id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+ORDER BY `id` DESC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:17:38 --> mysqli_sql_exception: Unknown column 'id' in 'order clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:17:38 --> Unknown column 'id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+ORDER BY `id` DESC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:17:42 --> mysqli_sql_exception: Unknown column 'id' in 'order clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:17:42 --> Unknown column 'id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+ORDER BY `id` DESC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:17:47 --> mysqli_sql_exception: Unknown column 'id' in 'order clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:17:47 --> Unknown column 'id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+ORDER BY `id` DESC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:19:53 --> mysqli_sql_exception: Unknown column 'id' in 'order clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:19:53 --> Unknown column 'id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+ORDER BY `id` DESC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:19:58 --> mysqli_sql_exception: Unknown column 'id' in 'order clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:19:58 --> Unknown column 'id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+ORDER BY `id` DESC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:20:16 --> mysqli_sql_exception: Unknown column 'id' in 'order clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:20:16 --> Unknown column 'id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+ORDER BY `id` DESC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:21:05 --> mysqli_sql_exception: Unknown column 'id' in 'order clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:21:05 --> Unknown column 'id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+ORDER BY `id` DESC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/UserInfo.php(242): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:22:31 --> mysqli_sql_exception: Unknown column 'id' in 'order clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(244): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:22:31 --> Unknown column 'id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+ORDER BY `id` DESC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/UserInfo.php(244): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 09:22:51 --> Undefined array key "user_updeted_on"
+in APPPATH/Views/users/users_table.php on line 50.
+ 1 APPPATH/Views/users/users_table.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_updeted_on"', '/home/freelance/public_html/digitalflow/app/Views/users/users_table.php', 50)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/users_table.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/users_table', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(245): view('users/users_table', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 09:23:08 --> Undefined array key "id"
+in APPPATH/Views/users/users_table.php on line 53.
+ 1 APPPATH/Views/users/users_table.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', '/home/freelance/public_html/digitalflow/app/Views/users/users_table.php', 53)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/users_table.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/users_table', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(245): view('users/users_table', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 09:23:10 --> Undefined array key "id"
+in APPPATH/Views/users/users_table.php on line 53.
+ 1 APPPATH/Views/users/users_table.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', '/home/freelance/public_html/digitalflow/app/Views/users/users_table.php', 53)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/users_table.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/users_table', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(245): view('users/users_table', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->users_view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 09:26:41 --> Class "App\Controllers\BloodBankModel" not found
+in APPPATH/Controllers/UserInfo.php on line 299.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 09:26:45 --> Class "App\Controllers\BloodBankModel" not found
+in APPPATH/Controllers/UserInfo.php on line 299.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:27:08 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(300): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:27:08 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(300): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:27:11 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(300): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:27:11 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(300): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:27:43 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(300): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:27:43 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(300): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:28:03 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:28:03 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:31:20 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:31:20 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:31:58 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:31:58 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:32:28 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:32:28 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:35:37 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:35:37 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:35:46 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:35:46 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:36:08 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:36:08 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:36:12 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('3')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:36:12 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('3')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:36:59 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:36:59 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:37:15 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:37:15 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 09:46:05 --> Undefined variable $id
+in APPPATH/Controllers/UserInfo.php on line 304.
+ 1 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 304)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 09:46:52 --> Undefined variable $id
+in APPPATH/Controllers/UserInfo.php on line 304.
+ 1 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 304)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 09:46:55 --> Undefined variable $id
+in APPPATH/Controllers/UserInfo.php on line 304.
+ 1 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 304)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:47:27 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:47:27 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:47:31 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:47:31 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:47:34 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:47:34 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:47:59 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:47:59 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:48:02 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:48:02 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:48:05 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('3')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:48:05 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('3')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:48:20 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('3')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:48:20 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('3')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:48:23 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('4')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:48:23 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('4')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 09:48:59 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `us...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-17 09:48:59 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user_info`
+WHERE `user_id` = :user_id:
+AND `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/UserInfo.php(304): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->delete('1')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 09:51:09 --> Class "App\Controllers\BloodBankModel" not found
+in APPPATH/Controllers/UserInfo.php on line 257.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->edit('1')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 09:51:27 --> Undefined array key "id"
+in APPPATH/Views/users/edit_user.php on line 29.
+ 1 APPPATH/Views/users/edit_user.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', '/home/freelance/public_html/digitalflow/app/Views/users/edit_user.php', 29)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/edit_user.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/edit_user', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(260): view('users/edit_user', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->edit('1')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 10:15:30 --> Class "App\Controllers\BloodBankModel" not found
+in APPPATH/Controllers/UserInfo.php on line 271.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->update()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 15:45:50 --> mysqli_sql_exception: Unknown column 'user_info.id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('UPDATE `user_in...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_in...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_in...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `user_in...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(949): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /home/freelance/public_html/digitalflow/system/Model.php(776): CodeIgniter\BaseModel->update(Array, Array)
+#7 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(287): CodeIgniter\Model->update('1', Array)
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->update()
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#10 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-04-17 15:45:50 --> Unknown column 'user_info.id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `user_info` SET `user_name` = :user_name:, `user_email` = :user_email:, `user_officename` = :user_officename:, `user_role` = :user_role:, `user_updated_on` = :user_updated_on:
+WHERE `user_id` = :user_id:
+AND `user_info`.`id` IN :user_info.id:', [...], false)
+ 2 SYSTEMPATH/Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(949): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH/Controllers/UserInfo.php(287): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->update()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 15:46:31 --> mysqli_sql_exception: Unknown column 'user_info.id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('UPDATE `user_in...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_in...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_in...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `user_in...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(949): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /home/freelance/public_html/digitalflow/system/Model.php(776): CodeIgniter\BaseModel->update(Array, Array)
+#7 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(287): CodeIgniter\Model->update('1', Array)
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->update()
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#10 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-04-17 15:46:31 --> Unknown column 'user_info.id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `user_info` SET `user_name` = :user_name:, `user_email` = :user_email:, `user_officename` = :user_officename:, `user_role` = :user_role:, `user_updated_on` = :user_updated_on:
+WHERE `user_id` = :user_id:
+AND `user_info`.`id` IN :user_info.id:', [...], false)
+ 2 SYSTEMPATH/Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(949): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH/Controllers/UserInfo.php(287): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->update()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 15:48:26 --> mysqli_sql_exception: Unknown column 'user_info.id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('UPDATE `user_in...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_in...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_in...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `user_in...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(949): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /home/freelance/public_html/digitalflow/system/Model.php(776): CodeIgniter\BaseModel->update(Array, Array)
+#7 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(287): CodeIgniter\Model->update('1', Array)
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->update()
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#10 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-04-17 15:48:26 --> Unknown column 'user_info.id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `user_info` SET `user_name` = :user_name:, `user_email` = :user_email:, `user_contactno` = :user_contactno:, `user_officename` = :user_officename:, `user_role` = :user_role:, `user_updated_on` = :user_updated_on:
+WHERE `user_id` = :user_id:
+AND `user_info`.`id` IN :user_info.id:', [...], false)
+ 2 SYSTEMPATH/Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(949): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH/Controllers/UserInfo.php(287): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->update()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 15:50:08 --> mysqli_sql_exception: Unknown column 'user_info.id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('UPDATE `user_in...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_in...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_in...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `user_in...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(949): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /home/freelance/public_html/digitalflow/system/Model.php(776): CodeIgniter\BaseModel->update(Array, Array)
+#7 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(287): CodeIgniter\Model->update('1', Array)
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->update()
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#10 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-04-17 15:50:08 --> Unknown column 'user_info.id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `user_info` SET `user_name` = :user_name:, `user_email` = :user_email:, `user_contactno` = :user_contactno:, `user_officename` = :user_officename:, `user_role` = :user_role:, `user_updated_on` = :user_updated_on:
+WHERE `user_id` = :user_id:
+AND `user_info`.`id` IN :user_info.id:', [...], false)
+ 2 SYSTEMPATH/Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(949): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH/Controllers/UserInfo.php(287): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->update()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 15:51:02 --> mysqli_sql_exception: Unknown column 'user_info.id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('UPDATE `user_in...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_in...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_in...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `user_in...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(949): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /home/freelance/public_html/digitalflow/system/Model.php(776): CodeIgniter\BaseModel->update(Array, Array)
+#7 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(287): CodeIgniter\Model->update('1', Array)
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->update()
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#10 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-04-17 15:51:02 --> Unknown column 'user_info.id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `user_info` SET `user_name` = :user_name:, `user_email` = :user_email:, `user_contactno` = :user_contactno:, `user_officename` = :user_officename:, `user_role` = :user_role:, `user_updated_on` = :user_updated_on:
+WHERE `user_id` = :user_id:
+AND `user_info`.`id` IN :user_info.id:', [...], false)
+ 2 SYSTEMPATH/Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(949): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH/Controllers/UserInfo.php(287): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->update()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 15:53:11 --> mysqli_sql_exception: Unknown column 'user_info.id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('UPDATE `user_in...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_in...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_in...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `user_in...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(949): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /home/freelance/public_html/digitalflow/system/Model.php(776): CodeIgniter\BaseModel->update(Array, Array)
+#7 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(287): CodeIgniter\Model->update('1', Array)
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->update()
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#10 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-04-17 15:53:11 --> Unknown column 'user_info.id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `user_info` SET `user_name` = :user_name:, `user_email` = :user_email:, `user_contactno` = :user_contactno:, `user_officename` = :user_officename:, `user_role` = :user_role:, `user_updated_on` = :user_updated_on:
+WHERE `user_id` = :user_id:
+AND `user_info`.`id` IN :user_info.id:', [...], false)
+ 2 SYSTEMPATH/Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(949): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH/Controllers/UserInfo.php(287): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->update()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 15:54:03 --> mysqli_sql_exception: Unknown column 'user_info.id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('UPDATE `user_in...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user_in...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user_in...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `user_in...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(949): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /home/freelance/public_html/digitalflow/system/Model.php(776): CodeIgniter\BaseModel->update(Array, Array)
+#7 /home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php(287): CodeIgniter\Model->update('1', Array)
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\UserInfo->update()
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#10 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-04-17 15:54:03 --> Unknown column 'user_info.id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `user_info` SET `user_name` = :user_name:, `user_email` = :user_email:, `user_contactno` = :user_contactno:, `user_officename` = :user_officename:, `user_role` = :user_role:, `user_updated_on` = :user_updated_on:
+WHERE `user_id` = :user_id:
+AND `user_info`.`id` IN :user_info.id:', [...], false)
+ 2 SYSTEMPATH/Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(949): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH/Controllers/UserInfo.php(287): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->update()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 13:28:01 --> Undefined variable $value
+in APPPATH/Controllers/UserInfo.php on line 256.
+ 1 APPPATH/Controllers/UserInfo.php(256): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 256)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->edit('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 13:30:32 --> Trying to access array offset on value of type null
+in APPPATH/Views/users/edit_user.php on line 29.
+ 1 APPPATH/Views/users/edit_user.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Views/users/edit_user.php', 29)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/edit_user.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/edit_user', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(261): view('users/edit_user', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->edit('2')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 13:32:11 --> Trying to access array offset on value of type null
+in APPPATH/Views/users/edit_user.php on line 29.
+ 1 APPPATH/Views/users/edit_user.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Views/users/edit_user.php', 29)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/edit_user.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/edit_user', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(261): view('users/edit_user', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->edit('VFZSQlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 13:33:32 --> Trying to access array offset on value of type null
+in APPPATH/Views/users/edit_user.php on line 29.
+ 1 APPPATH/Views/users/edit_user.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Views/users/edit_user.php', 29)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/edit_user.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/edit_user', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(260): view('users/edit_user', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->edit('VFZSRlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 14:00:21 --> Undefined variable $users
+in APPPATH/Views/users/users_table.php on line 39.
+ 1 APPPATH/Views/users/users_table.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/users/users_table.php', 39)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/users_table.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/users_table', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(182): view('users/users_table', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->new_user()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 14:13:40 --> Invalid file: "users/adduser.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('users/adduser.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/adduser', [], true)
+ 3 APPPATH/Controllers/UserInfo.php(187): view('users/adduser', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->new_user()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

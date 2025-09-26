@@ -1,0 +1,42 @@
+CRITICAL - 2025-09-16 07:38:18 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-16 07:42:30 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('3')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-16 07:42:32 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-16 09:46:02 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-16 09:54:51 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-16 13:03:37 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

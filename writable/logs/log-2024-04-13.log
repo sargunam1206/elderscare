@@ -1,0 +1,580 @@
+ERROR - 2024-04-13 05:23:05 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(112): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:23:05 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(112): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:27:49 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(112): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:27:49 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(112): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:27:52 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(112): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:27:52 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(112): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:27:52 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(112): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:27:52 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(112): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:27:53 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(112): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:27:53 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(112): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:28:11 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(112): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:28:11 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(112): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:31:08 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(116): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:31:08 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(116): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:38:56 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(116): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:38:56 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(116): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:38:58 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(116): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:38:58 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(116): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:38:59 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(116): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:38:59 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(116): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:39:00 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(116): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:39:00 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(116): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:39:02 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(116): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:39:02 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(116): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:39:05 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(116): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:39:05 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(116): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:39:07 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(116): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:39:07 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(116): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:39:26 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(117): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:39:26 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(117): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:39:27 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(117): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:39:27 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(117): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:42:22 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(117): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:42:22 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(117): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:42:25 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(117): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:42:25 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(117): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:42:26 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(117): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:42:26 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(117): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-13 05:42:34 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`)) in /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/bloodbank_ci4/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 /home/freelance/public_html/bloodbank_ci4/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 /home/freelance/public_html/bloodbank_ci4/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /home/freelance/public_html/bloodbank_ci4/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodDonors.php(117): CodeIgniter\BaseModel->delete(Array)
+#7 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+#8 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+#9 /home/freelance/public_html/bloodbank_ci4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/bloodbank_ci4/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-13 05:42:34 --> Cannot delete or update a parent row: a foreign key constraint fails (`bloodbank`.`request_history`, CONSTRAINT `request_history_ibfk_1` FOREIGN KEY (`donors_id`) REFERENCES `donors` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `donors`
+WHERE `id` = :id:
+AND `id` IN :id.1:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/BloodDonors.php(117): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDonors->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-13 06:03:01 --> Undefined array key "O-"
+in APPPATH/Views/users/welcome.php on line 139.
+ 1 APPPATH/Views/users/welcome.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "O-"', '/home/freelance/public_html/bloodbank_ci4/app/Views/users/welcome.php', 139)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/bloodbank_ci4/app/Views/users/welcome.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 5 APPPATH/Controllers/BloodBank.php(44): view('users/welcome', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodBank->home_page()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodBank))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-13 06:21:15 --> Undefined array key "O-"
+in APPPATH/Views/users/welcome.php on line 139.
+ 1 APPPATH/Views/users/welcome.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "O-"', '/home/freelance/public_html/bloodbank_ci4/app/Views/users/welcome.php', 139)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/bloodbank_ci4/app/Views/users/welcome.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 5 APPPATH/Controllers/BloodBank.php(44): view('users/welcome', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodBank->home_page()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodBank))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-13 06:47:23 --> Undefined array key "O-"
+in APPPATH/Views/users/welcome.php on line 139.
+ 1 APPPATH/Views/users/welcome.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "O-"', '/home/freelance/public_html/bloodbank_ci4/app/Views/users/welcome.php', 139)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/bloodbank_ci4/app/Views/users/welcome.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 5 APPPATH/Controllers/BloodBank.php(44): view('users/welcome', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodBank->home_page()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodBank))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-13 09:57:37 --> Class "App\Controllers\SMTP" not found
+in APPPATH/Controllers/BloodBank.php on line 324.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodBank->send_mail('49')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodBank))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-13 10:05:52 --> Undefined array key "name"
+in APPPATH/Controllers/BloodBank.php on line 318.
+ 1 APPPATH/Controllers/BloodBank.php(318): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', '/home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodBank.php', 318)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodBank->send_mail('49')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodBank))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-13 10:05:54 --> Undefined array key "name"
+in APPPATH/Controllers/BloodBank.php on line 318.
+ 1 APPPATH/Controllers/BloodBank.php(318): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', '/home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodBank.php', 318)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodBank->send_mail('49')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodBank))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-13 10:21:57 --> Undefined array key "name"
+in APPPATH/Controllers/BloodBank.php on line 318.
+ 1 APPPATH/Controllers/BloodBank.php(318): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', '/home/freelance/public_html/bloodbank_ci4/app/Controllers/BloodBank.php', 318)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodBank->send_mail('49')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodBank))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

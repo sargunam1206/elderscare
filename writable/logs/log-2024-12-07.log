@@ -1,0 +1,584 @@
+CRITICAL - 2024-12-07 05:27:52 --> Undefined variable $assettypes
+in APPPATH\Views\newasset\index.php on line 97.
+ 1 APPPATH\Views\newasset\index.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assettypes', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 97)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(56): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-07 05:30:20 --> Undefined variable $assettypes
+in APPPATH\Views\newasset\view.php on line 99.
+ 1 APPPATH\Views\newasset\view.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assettypes', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php', 99)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/view', [], true)
+ 5 APPPATH\Controllers\Asset.php(314): view('newasset/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->viewAsset()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 09:36:17 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 09:36:17 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 09:36:18 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 09:36:18 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 09:36:34 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 09:36:34 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 09:36:42 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 09:36:42 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-07 09:37:09 --> Undefined variable $assettypes
+in APPPATH\Views\newasset\edit.php on line 96.
+ 1 APPPATH\Views\newasset\edit.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assettypes', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\edit.php', 96)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/edit', [], true)
+ 5 APPPATH\Controllers\Asset.php(472): view('newasset/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->edit('VGtSalBRPT0=')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-07 09:38:32 --> Undefined variable $assettypes
+in APPPATH\Views\newasset\edit.php on line 96.
+ 1 APPPATH\Views\newasset\edit.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assettypes', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\edit.php', 96)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/edit', [], true)
+ 5 APPPATH\Controllers\Asset.php(472): view('newasset/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->edit('VGtSalBRPT0=')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 09:40:07 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 09:40:07 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 09:50:24 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 09:50:24 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 09:51:56 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 09:51:56 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 09:54:25 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 09:54:25 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 09:55:48 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 09:55:49 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 09:56:23 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 09:56:23 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 10:34:48 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 10:34:48 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 10:54:44 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 10:54:44 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 10:56:11 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 10:56:11 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 10:56:47 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 10:56:47 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 10:59:17 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 10:59:17 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 11:00:35 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 11:00:35 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 11:01:17 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 11:01:17 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 11:04:48 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 11:04:48 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 11:05:06 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 11:05:06 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-07 11:05:35 --> mysqli_sql_exception: Unknown column 'purpose_name' in 'field list' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `purpose...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purpose...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purpose...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-12-07 11:05:35 --> Unknown column 'purpose_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `purpose_name`
+FROM `newasset`
+WHERE `deleted_on` IS NULL
+GROUP BY `purpose_name`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(327): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->all_purposes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

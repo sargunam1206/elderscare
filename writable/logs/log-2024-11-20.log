@@ -1,0 +1,924 @@
+ERROR - 2024-11-20 04:09:34 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Assets.php(167): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Assets->view()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\viyoma\app\Controllers\Assets.php(167): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Assets->view()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-11-20 04:09:34 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assets`
+WHERE `assets_deleted_on` IS NULL
+ORDER BY `assets_id` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Assets.php(167): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Assets->view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 04:09:51 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\ReturnInfo.php(147): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\ReturnInfo->view()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\viyoma\app\Controllers\ReturnInfo.php(147): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\ReturnInfo->view()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-11-20 04:09:51 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `return_info`
+WHERE `return_deleted_on` IS NULL
+ORDER BY `return_id` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ReturnInfo.php(147): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ReturnInfo->view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 04:40:56 --> session_start(): Failed to decode session object. Session has been destroyed
+in SYSTEMPATH\Session\Session.php on line 919.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'session_start(): Failed to decode session object. Session has been destroyed', 'C:\\xampp\\htdocs\\viyoma\\system\\Session\\Session.php', 919)
+ 2 SYSTEMPATH\Session\Session.php(919): session_start()
+ 3 SYSTEMPATH\Session\Session.php(241): CodeIgniter\Session\Session->startSession()
+ 4 SYSTEMPATH\Config\Services.php(693): CodeIgniter\Session\Session->start()
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 6 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 9 APPPATH\Views\newasset\index.php(46): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+11 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+13 APPPATH\Controllers\Asset.php(22): view('newasset/index')
+14 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+15 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+16 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 04:58:47 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Assets.php(167): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Assets->view()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\viyoma\app\Controllers\Assets.php(167): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Assets->view()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-11-20 04:58:47 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assets`
+WHERE `assets_deleted_on` IS NULL
+ORDER BY `assets_id` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Assets.php(167): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Assets->view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 05:16:31 --> Undefined variable $assets_info
+in APPPATH\Views\newasset\index.php on line 74.
+ 1 APPPATH\Views\newasset\index.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_info', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php', 74)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\newasset\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/index', [], true)
+ 5 APPPATH\Controllers\Asset.php(22): view('newasset/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:36:28 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'inventory' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\viyoma\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\viyoma\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(49): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->index()
+#10 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#11 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'inventory' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#3 C:\xampp\htdocs\viyoma\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\xampp\htdocs\viyoma\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#5 C:\xampp\htdocs\viyoma\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#6 C:\xampp\htdocs\viyoma\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#7 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(49): CodeIgniter\BaseModel->save(Array)
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->index()
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#10 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-11-20 12:36:28 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'inventory'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `newasset` (`asset_name`, `asset_make`, `supplier_name`, `specification`, `part_name`, `part_number`, `quantity`, `reorder_level`, `location`, `room`) VALUES (:asset_name:, :asset_make:, :supplier_name:, :specification:, :part_name:, :part_number:, :quantity:, :reorder_level:, :location:, :room:)', [...], false)
+ 3 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH\Controllers\Asset.php(49): CodeIgniter\BaseModel->save([...])
+ 8 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 08:08:02 --> Undefined property: App\Controllers\Asset::$AssetModel
+in APPPATH\Controllers\Asset.php on line 53.
+ 1 APPPATH\Controllers\Asset.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Asset::$AssetModel', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getSupplierSuggestions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 08:08:03 --> Undefined property: App\Controllers\Asset::$AssetModel
+in APPPATH\Controllers\Asset.php on line 53.
+ 1 APPPATH\Controllers\Asset.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Asset::$AssetModel', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getSupplierSuggestions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 08:08:04 --> Undefined property: App\Controllers\Asset::$AssetModel
+in APPPATH\Controllers\Asset.php on line 53.
+ 1 APPPATH\Controllers\Asset.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Asset::$AssetModel', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getSupplierSuggestions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 08:08:04 --> Undefined property: App\Controllers\Asset::$AssetModel
+in APPPATH\Controllers\Asset.php on line 53.
+ 1 APPPATH\Controllers\Asset.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Asset::$AssetModel', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getSupplierSuggestions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 08:09:43 --> Undefined property: App\Controllers\Asset::$AssetModel
+in APPPATH\Controllers\Asset.php on line 53.
+ 1 APPPATH\Controllers\Asset.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Asset::$AssetModel', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getSupplierSuggestions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 08:09:43 --> Undefined property: App\Controllers\Asset::$AssetModel
+in APPPATH\Controllers\Asset.php on line 53.
+ 1 APPPATH\Controllers\Asset.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Asset::$AssetModel', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getSupplierSuggestions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 08:09:44 --> Undefined property: App\Controllers\Asset::$AssetModel
+in APPPATH\Controllers\Asset.php on line 53.
+ 1 APPPATH\Controllers\Asset.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Asset::$AssetModel', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getSupplierSuggestions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 08:09:54 --> Undefined property: App\Controllers\Asset::$AssetModel
+in APPPATH\Controllers\Asset.php on line 53.
+ 1 APPPATH\Controllers\Asset.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Asset::$AssetModel', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getSupplierSuggestions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 08:09:57 --> Undefined property: App\Controllers\Asset::$AssetModel
+in APPPATH\Controllers\Asset.php on line 53.
+ 1 APPPATH\Controllers\Asset.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Asset::$AssetModel', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getSupplierSuggestions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 08:09:57 --> Undefined property: App\Controllers\Asset::$AssetModel
+in APPPATH\Controllers\Asset.php on line 53.
+ 1 APPPATH\Controllers\Asset.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Asset::$AssetModel', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getSupplierSuggestions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 08:10:00 --> Undefined property: App\Controllers\Asset::$AssetModel
+in APPPATH\Controllers\Asset.php on line 53.
+ 1 APPPATH\Controllers\Asset.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Asset::$AssetModel', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getSupplierSuggestions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 08:10:00 --> Undefined property: App\Controllers\Asset::$AssetModel
+in APPPATH\Controllers\Asset.php on line 53.
+ 1 APPPATH\Controllers\Asset.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Asset::$AssetModel', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getSupplierSuggestions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 08:10:00 --> Undefined property: App\Controllers\Asset::$AssetModel
+in APPPATH\Controllers\Asset.php on line 53.
+ 1 APPPATH\Controllers\Asset.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Asset::$AssetModel', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getSupplierSuggestions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 08:10:46 --> Undefined property: App\Controllers\Asset::$AssetModel
+in APPPATH\Controllers\Asset.php on line 53.
+ 1 APPPATH\Controllers\Asset.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Asset::$AssetModel', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getSupplierSuggestions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 08:10:46 --> Undefined property: App\Controllers\Asset::$AssetModel
+in APPPATH\Controllers\Asset.php on line 53.
+ 1 APPPATH\Controllers\Asset.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Asset::$AssetModel', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getSupplierSuggestions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 08:10:46 --> Undefined property: App\Controllers\Asset::$AssetModel
+in APPPATH\Controllers\Asset.php on line 53.
+ 1 APPPATH\Controllers\Asset.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Asset::$AssetModel', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getSupplierSuggestions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:57:11 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:57:11 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:57:14 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:57:14 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:57:48 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:57:48 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:57:48 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:57:48 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:57:49 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:57:49 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:57:49 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:57:49 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:57:50 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:57:50 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:57:50 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:57:50 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:57:50 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:57:50 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:57:50 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:57:50 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:58:02 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:58:02 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:58:04 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:58:04 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:58:05 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:58:05 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:58:06 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:58:06 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:58:06 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:58:06 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:58:08 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:58:08 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:58:08 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:58:08 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:58:09 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:58:09 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:58:09 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:58:09 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:58:09 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:58:09 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:58:20 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:58:20 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-20 12:58:21 --> mysqli_sql_exception: Unknown column 'mcustomer_name' in 'where clause' in C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\viyoma\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\viyoma\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\viyoma\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\viyoma\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\viyoma\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\viyoma\app\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+#8 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+#9 C:\xampp\htdocs\viyoma\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\viyoma\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-20 12:58:21 --> Unknown column 'mcustomer_name' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `newasset`
+WHERE `mcustomer_name` LIKE :mcustomer_name: ESCAPE \'!\'', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Asset.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 12:58:49 --> Undefined variable $customerData
+in APPPATH\Controllers\Asset.php on line 115.
+ 1 APPPATH\Controllers\Asset.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $customerData', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 115)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 12:58:50 --> Undefined variable $customerData
+in APPPATH\Controllers\Asset.php on line 115.
+ 1 APPPATH\Controllers\Asset.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $customerData', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 115)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 12:58:54 --> Undefined variable $customerData
+in APPPATH\Controllers\Asset.php on line 115.
+ 1 APPPATH\Controllers\Asset.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $customerData', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 115)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 12:59:44 --> Undefined variable $customerData
+in APPPATH\Controllers\Asset.php on line 115.
+ 1 APPPATH\Controllers\Asset.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $customerData', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 115)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-20 12:59:45 --> Undefined variable $customerData
+in APPPATH\Controllers\Asset.php on line 115.
+ 1 APPPATH\Controllers\Asset.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $customerData', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Asset.php', 115)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->getCustomerName()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

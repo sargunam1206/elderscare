@@ -1,0 +1,318 @@
+CRITICAL - 2024-06-30 06:50:35 --> Undefined variable $data
+in APPPATH/Controllers/ManpowerInfo.php on line 194.
+ 1 APPPATH/Controllers/ManpowerInfo.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/home/freelance/public_html/digitalflow/app/Controllers/ManpowerInfo.php', 194)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 06:50:42 --> Undefined variable $data
+in APPPATH/Controllers/ManpowerInfo.php on line 194.
+ 1 APPPATH/Controllers/ManpowerInfo.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/home/freelance/public_html/digitalflow/app/Controllers/ManpowerInfo.php', 194)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 06:51:05 --> Undefined variable $data
+in APPPATH/Controllers/ManpowerInfo.php on line 194.
+ 1 APPPATH/Controllers/ManpowerInfo.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/home/freelance/public_html/digitalflow/app/Controllers/ManpowerInfo.php', 194)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 06:51:08 --> Undefined variable $data
+in APPPATH/Controllers/ManpowerInfo.php on line 194.
+ 1 APPPATH/Controllers/ManpowerInfo.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/home/freelance/public_html/digitalflow/app/Controllers/ManpowerInfo.php', 194)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 06:52:27 --> Undefined variable $data
+in APPPATH/Controllers/ManpowerInfo.php on line 194.
+ 1 APPPATH/Controllers/ManpowerInfo.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/home/freelance/public_html/digitalflow/app/Controllers/ManpowerInfo.php', 194)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 07:05:33 --> Call to a member function orderBy() on null
+in APPPATH/Controllers/ManpowerInfo.php on line 334.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 07:07:02 --> Call to a member function orderBy() on null
+in APPPATH/Controllers/ManpowerInfo.php on line 334.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 07:11:34 --> Call to a member function orderBy() on null
+in APPPATH/Controllers/ManpowerInfo.php on line 334.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 07:11:49 --> Call to a member function orderBy() on null
+in APPPATH/Controllers/ManpowerInfo.php on line 334.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 07:12:32 --> Call to a member function orderBy() on null
+in APPPATH/Controllers/ManpowerInfo.php on line 334.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 07:13:48 --> Call to a member function orderBy() on null
+in APPPATH/Controllers/ManpowerInfo.php on line 334.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 07:14:18 --> Call to a member function orderBy() on null
+in APPPATH/Controllers/ManpowerInfo.php on line 334.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 07:14:22 --> Call to a member function orderBy() on null
+in APPPATH/Controllers/ManpowerInfo.php on line 334.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 07:14:56 --> Call to a member function orderBy() on null
+in APPPATH/Controllers/ManpowerInfo.php on line 334.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 07:15:02 --> Call to a member function orderBy() on null
+in APPPATH/Controllers/ManpowerInfo.php on line 334.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 07:15:43 --> Call to a member function orderBy() on null
+in APPPATH/Controllers/ManpowerInfo.php on line 334.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 07:15:49 --> Call to a member function orderBy() on null
+in APPPATH/Controllers/ManpowerInfo.php on line 334.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 07:21:06 --> Call to a member function where() on null
+in APPPATH/Controllers/ManpowerInfo.php on line 336.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 07:56:54 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH/Views/manpowerinfo/reports.php on line 52.
+ 1 APPPATH/Views/manpowerinfo/reports.php(52): date('d-m-Y', '2024-06-30 13:25:04')
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/manpowerinfo/reports.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('manpowerinfo/reports', [], true)
+ 5 APPPATH/Controllers/ManpowerInfo.php(344): view('manpowerinfo/reports', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->reportsdefault()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 09:22:01 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/RecruitmentInfo.php on line 432.
+ 1 APPPATH/Controllers/RecruitmentInfo.php(432): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/RecruitmentInfo.php', 432)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RecruitmentInfo->designation('All Department')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecruitmentInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 09:59:08 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/RecruitmentInfo.php on line 432.
+ 1 APPPATH/Controllers/RecruitmentInfo.php(432): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/RecruitmentInfo.php', 432)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RecruitmentInfo->designation('All Department')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecruitmentInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 10:00:04 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/RecruitmentInfo.php on line 432.
+ 1 APPPATH/Controllers/RecruitmentInfo.php(432): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/RecruitmentInfo.php', 432)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RecruitmentInfo->designation('All Department')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecruitmentInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 11:03:35 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/SeniorityInfo.php on line 182.
+ 1 APPPATH/Controllers/SeniorityInfo.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/SeniorityInfo.php', 182)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->personaldata('1234test')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 11:03:50 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/SeniorityInfo.php on line 182.
+ 1 APPPATH/Controllers/SeniorityInfo.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/SeniorityInfo.php', 182)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->personaldata('1234test')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 11:36:08 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/SeniorityInfo.php on line 182.
+ 1 APPPATH/Controllers/SeniorityInfo.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/SeniorityInfo.php', 182)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->personaldata('1234test')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 17:12:57 --> Class "App\Controllers\DateTime" not found
+in APPPATH/Controllers/SeniorityInfo.php on line 190.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->personaldata('123')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 17:13:01 --> Class "App\Controllers\DateTime" not found
+in APPPATH/Controllers/SeniorityInfo.php on line 190.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->personaldata('1')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 17:13:05 --> Class "App\Controllers\DateTime" not found
+in APPPATH/Controllers/SeniorityInfo.php on line 190.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->personaldata('1')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 17:13:32 --> Class "App\Controllers\DateTime" not found
+in APPPATH/Controllers/SeniorityInfo.php on line 190.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->personaldata('1')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 18:18:05 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/SeniorityInfo.php on line 251.
+ 1 APPPATH/Controllers/SeniorityInfo.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/SeniorityInfo.php', 251)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->edit('VGtFOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 18:19:20 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/SeniorityInfo.php on line 251.
+ 1 APPPATH/Controllers/SeniorityInfo.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/SeniorityInfo.php', 251)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->edit('VFZSSlBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 18:19:24 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/SeniorityInfo.php on line 251.
+ 1 APPPATH/Controllers/SeniorityInfo.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/SeniorityInfo.php', 251)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->edit('VG1jOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 18:19:27 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/SeniorityInfo.php on line 251.
+ 1 APPPATH/Controllers/SeniorityInfo.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/SeniorityInfo.php', 251)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->edit('VGtFOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 18:21:04 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/SeniorityInfo.php on line 251.
+ 1 APPPATH/Controllers/SeniorityInfo.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/SeniorityInfo.php', 251)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->edit('VG1jOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 18:22:42 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/SeniorityInfo.php on line 251.
+ 1 APPPATH/Controllers/SeniorityInfo.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/SeniorityInfo.php', 251)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->edit('VG1jOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 18:22:43 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/SeniorityInfo.php on line 251.
+ 1 APPPATH/Controllers/SeniorityInfo.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/SeniorityInfo.php', 251)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->edit('VG1jOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 18:22:49 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/SeniorityInfo.php on line 251.
+ 1 APPPATH/Controllers/SeniorityInfo.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/SeniorityInfo.php', 251)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->edit('VG1jOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 18:23:37 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/SeniorityInfo.php on line 251.
+ 1 APPPATH/Controllers/SeniorityInfo.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/SeniorityInfo.php', 251)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->edit('VG1jOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 18:24:22 --> Undefined variable $qualification
+in APPPATH/Views/seniorityinfo/edit.php on line 53.
+ 1 APPPATH/Views/seniorityinfo/edit.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $qualification', '/home/freelance/public_html/digitalflow/app/Views/seniorityinfo/edit.php', 53)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/seniorityinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('seniorityinfo/edit', [], true)
+ 5 APPPATH/Controllers/SeniorityInfo.php(262): view('seniorityinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->edit('VG1jOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 19:15:40 --> Undefined variable $users
+in APPPATH/Views/seniorityinfo/view.php on line 77.
+ 1 APPPATH/Views/seniorityinfo/view.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/seniorityinfo/view.php', 77)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/seniorityinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('seniorityinfo/view', [], true)
+ 5 APPPATH/Controllers/SeniorityInfo.php(170): view('seniorityinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 19:15:50 --> Undefined variable $users
+in APPPATH/Views/seniorityinfo/view.php on line 77.
+ 1 APPPATH/Views/seniorityinfo/view.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/seniorityinfo/view.php', 77)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/seniorityinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('seniorityinfo/view', [], true)
+ 5 APPPATH/Controllers/SeniorityInfo.php(170): view('seniorityinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 19:17:04 --> Undefined variable $users
+in APPPATH/Views/seniorityinfo/view.php on line 77.
+ 1 APPPATH/Views/seniorityinfo/view.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/seniorityinfo/view.php', 77)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/seniorityinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('seniorityinfo/view', [], true)
+ 5 APPPATH/Controllers/SeniorityInfo.php(170): view('seniorityinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 19:18:14 --> Undefined variable $users
+in APPPATH/Views/seniorityinfo/view.php on line 77.
+ 1 APPPATH/Views/seniorityinfo/view.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/seniorityinfo/view.php', 77)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/seniorityinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('seniorityinfo/view', [], true)
+ 5 APPPATH/Controllers/SeniorityInfo.php(170): view('seniorityinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 19:26:21 --> Cannot access offset of type string on string
+in APPPATH/Views/seniorityinfo/view.php on line 90.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('seniorityinfo/view', [], true)
+ 4 APPPATH/Controllers/SeniorityInfo.php(170): view('seniorityinfo/view', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\SeniorityInfo->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SeniorityInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

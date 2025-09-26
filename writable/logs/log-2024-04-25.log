@@ -1,0 +1,217 @@
+CRITICAL - 2024-04-25 05:19:42 --> Class "App\Controllers\BankAccountInfoModel" not found
+in APPPATH/Controllers/Reports.php on line 42.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-25 05:20:26 --> Class "App\Controllers\BankAccountInfoModel" not found
+in APPPATH/Controllers/Reports.php on line 42.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-25 05:20:30 --> Class "App\Controllers\BankAccountInfoModel" not found
+in APPPATH/Controllers/Reports.php on line 42.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-25 11:36:59 --> Undefined array key "file_aadhar"
+in APPPATH/Controllers/PersonalInfo.php on line 282.
+ 1 APPPATH/Controllers/PersonalInfo.php(282): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "file_aadhar"', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 282)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->update()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-25 06:27:40 --> Class "App\Controllers\CompanyWorkInfoModel" not found
+in APPPATH/Controllers/Reports.php on line 55.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-25 06:29:59 --> Class "App\Controllers\CompanyWorkInfoModel" not found
+in APPPATH/Controllers/Reports.php on line 55.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-25 06:30:08 --> Class "App\Controllers\CompanyWorkInfoModel" not found
+in APPPATH/Controllers/Reports.php on line 55.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-25 06:55:47 --> mysqli_sql_exception: Unknown column 'employment_deleted_on' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(563): CodeIgniter\Model->doFind(false, NULL)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/Reports.php(73): CodeIgniter\BaseModel->find()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-25 06:55:47 --> Unknown column 'employment_deleted_on' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `companywork_info`
+WHERE `employment_deleted_on` IS NULL
+AND `emp_id` = :emp_id:
+ORDER BY `emp_id` ASC', [...], false)
+ 2 SYSTEMPATH/Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(563): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH/Controllers/Reports.php(73): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-25 06:56:59 --> mysqli_sql_exception: Unknown column 'employment_deleted_on' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(563): CodeIgniter\Model->doFind(false, NULL)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/Reports.php(73): CodeIgniter\BaseModel->find()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-25 06:56:59 --> Unknown column 'employment_deleted_on' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `companywork_info`
+WHERE `employment_deleted_on` IS NULL
+AND `emp_id` = :emp_id:
+ORDER BY `emp_id` ASC', [...], false)
+ 2 SYSTEMPATH/Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(563): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH/Controllers/Reports.php(73): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-25 06:57:04 --> mysqli_sql_exception: Unknown column 'employment_deleted_on' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(563): CodeIgniter\Model->doFind(false, NULL)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/Reports.php(73): CodeIgniter\BaseModel->find()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-25 06:57:04 --> Unknown column 'employment_deleted_on' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `companywork_info`
+WHERE `employment_deleted_on` IS NULL
+AND `emp_id` = :emp_id:
+ORDER BY `emp_id` ASC', [...], false)
+ 2 SYSTEMPATH/Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(563): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH/Controllers/Reports.php(73): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-25 06:57:16 --> mysqli_sql_exception: Unknown column 'employment_deleted_on' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(563): CodeIgniter\Model->doFind(false, NULL)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/Reports.php(73): CodeIgniter\BaseModel->find()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-25 06:57:16 --> Unknown column 'employment_deleted_on' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `companywork_info`
+WHERE `employment_deleted_on` IS NULL
+AND `emp_id` = :emp_id:
+ORDER BY `emp_id` ASC', [...], false)
+ 2 SYSTEMPATH/Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(563): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH/Controllers/Reports.php(73): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-25 06:58:24 --> Class "App\Controllers\EmploymentInfoModel" not found
+in APPPATH/Controllers/Reports.php on line 68.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-25 07:10:52 --> mysqli_sql_exception: Unknown column 'companyresign_deleted_on' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(563): CodeIgniter\Model->doFind(false, NULL)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/Reports.php(87): CodeIgniter\BaseModel->find()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-25 07:10:52 --> Unknown column 'companyresign_deleted_on' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `company_resign_info`
+WHERE `companyresign_deleted_on` IS NULL
+AND `emp_id` = :emp_id:
+ORDER BY `emp_id` ASC', [...], false)
+ 2 SYSTEMPATH/Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(563): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH/Controllers/Reports.php(87): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-25 07:14:10 --> mysqli_sql_exception: Unknown column 'companyresign_deleted_on' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(563): CodeIgniter\Model->doFind(false, NULL)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/Reports.php(87): CodeIgniter\BaseModel->find()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-25 07:14:10 --> Unknown column 'companyresign_deleted_on' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `company_resign_info`
+WHERE `companyresign_deleted_on` IS NULL
+AND `emp_id` = :emp_id:
+ORDER BY `emp_id` ASC', [...], false)
+ 2 SYSTEMPATH/Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(563): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH/Controllers/Reports.php(87): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

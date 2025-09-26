@@ -1,0 +1,827 @@
+CRITICAL - 2024-04-23 00:00:31 --> Class "App\Controllers\UserInfoModel" not found
+in APPPATH/Controllers/PersonalInfo.php on line 327.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->delete('VFdwVlBRPT0=')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 00:01:35 --> There is no data to update.
+in SYSTEMPATH/BaseModel.php on line 930.
+ 1 SYSTEMPATH/BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH/Controllers/PersonalInfo.php(328): CodeIgniter\Model->update('25', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->delete('VFdwVlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 00:01:46 --> There is no data to update.
+in SYSTEMPATH/BaseModel.php on line 930.
+ 1 SYSTEMPATH/BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH/Controllers/PersonalInfo.php(328): CodeIgniter\Model->update('25', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->delete('VFdwVlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 00:02:09 --> There is no data to update.
+in SYSTEMPATH/BaseModel.php on line 930.
+ 1 SYSTEMPATH/BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH/Controllers/PersonalInfo.php(328): CodeIgniter\Model->update('25', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->delete('VFdwVlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 00:02:17 --> There is no data to update.
+in SYSTEMPATH/BaseModel.php on line 930.
+ 1 SYSTEMPATH/BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH/Controllers/PersonalInfo.php(328): CodeIgniter\Model->update('25', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->delete('VFdwVlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 00:02:52 --> There is no data to update.
+in SYSTEMPATH/BaseModel.php on line 930.
+ 1 SYSTEMPATH/BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH/Controllers/PersonalInfo.php(328): CodeIgniter\Model->update('25', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->delete('VFdwVlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 00:03:01 --> There is no data to update.
+in SYSTEMPATH/BaseModel.php on line 930.
+ 1 SYSTEMPATH/BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH/Controllers/PersonalInfo.php(328): CodeIgniter\Model->update('25', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->delete('VFdwVlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 00:04:26 --> There is no data to update.
+in SYSTEMPATH/BaseModel.php on line 930.
+ 1 SYSTEMPATH/BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH/Controllers/PersonalInfo.php(327): CodeIgniter\Model->update('25', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->delete('VFdwVlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 00:04:34 --> There is no data to update.
+in SYSTEMPATH/BaseModel.php on line 930.
+ 1 SYSTEMPATH/BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH/Controllers/PersonalInfo.php(327): CodeIgniter\Model->update('25', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->delete('VFdwVlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 00:06:06 --> There is no data to update.
+in SYSTEMPATH/BaseModel.php on line 930.
+ 1 SYSTEMPATH/BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH/Controllers/PersonalInfo.php(327): CodeIgniter\Model->update('25', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->delete('VFdwVlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 00:06:16 --> There is no data to update.
+in SYSTEMPATH/BaseModel.php on line 930.
+ 1 SYSTEMPATH/BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH/Controllers/PersonalInfo.php(327): CodeIgniter\Model->update('25', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->delete('VFdwVlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 00:08:27 --> There is no data to update.
+in SYSTEMPATH/BaseModel.php on line 930.
+ 1 SYSTEMPATH/BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH/Controllers/PersonalInfo.php(327): CodeIgniter\Model->update('22', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->delete('VFdwSlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 00:09:32 --> Undefined variable $info
+in APPPATH/Views/personalinfo/view.php on line 114.
+ 1 APPPATH/Views/personalinfo/view.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', '/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php', 114)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/view', [], true)
+ 5 APPPATH/Controllers/PersonalInfo.php(333): view('personalinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->delete('VFdwSlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-23 00:56:26 --> mysqli_sql_exception: Column 'bankaccount_passbookcheck_filename' cannot be null in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `ba...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 /home/freelance/public_html/digitalflow/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 /home/freelance/public_html/digitalflow/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 /home/freelance/public_html/digitalflow/app/Controllers/BankAccountInfo.php(54): CodeIgniter\BaseModel->save(Array)
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+#10 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+#11 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-04-23 00:56:26 --> Column 'bankaccount_passbookcheck_filename' cannot be null
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bankaccount_info` (`bankaccount_name_as_per_bank`, `bankaccount_accountno`, `bankaccount_ifscno`, `bankaccount_bankname`, `bankaccount_branchname`, `bankaccount_passbookcheck_filename`, `bankaccount_created_on`) VALUES (:bankaccount_name_as_per_bank:, :bankaccount_accountno:, :bankaccount_ifscno:, :bankaccount_bankname:, :bankaccount_branchname:, :bankaccount_passbookcheck_filename:, :bankaccount_created_on:)', [...], false)
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH/Controllers/BankAccountInfo.php(54): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 00:58:48 --> Undefined variable $users
+in APPPATH/Views/bankaccountinfo/view.php on line 67.
+ 1 APPPATH/Views/bankaccountinfo/view.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php', 67)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('bankaccountinfo/view', [], true)
+ 5 APPPATH/Controllers/BankAccountInfo.php(59): view('bankaccountinfo/view')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 01:08:41 --> Undefined variable $users
+in APPPATH/Views/bankaccountinfo/view.php on line 67.
+ 1 APPPATH/Views/bankaccountinfo/view.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php', 67)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('bankaccountinfo/view', [], true)
+ 5 APPPATH/Controllers/BankAccountInfo.php(59): view('bankaccountinfo/view')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 01:10:02 --> Undefined variable $users
+in APPPATH/Views/bankaccountinfo/view.php on line 67.
+ 1 APPPATH/Views/bankaccountinfo/view.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php', 67)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('bankaccountinfo/view', [], true)
+ 5 APPPATH/Controllers/BankAccountInfo.php(59): view('bankaccountinfo/view')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 01:10:51 --> Undefined variable $users
+in APPPATH/Views/bankaccountinfo/view.php on line 67.
+ 1 APPPATH/Views/bankaccountinfo/view.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php', 67)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('bankaccountinfo/view', [], true)
+ 5 APPPATH/Controllers/BankAccountInfo.php(59): view('bankaccountinfo/view')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 01:11:04 --> Undefined variable $users
+in APPPATH/Views/bankaccountinfo/view.php on line 67.
+ 1 APPPATH/Views/bankaccountinfo/view.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php', 67)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('bankaccountinfo/view', [], true)
+ 5 APPPATH/Controllers/BankAccountInfo.php(59): view('bankaccountinfo/view')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 01:14:32 --> Undefined variable $users
+in APPPATH/Views/bankaccountinfo/view.php on line 67.
+ 1 APPPATH/Views/bankaccountinfo/view.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php', 67)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('bankaccountinfo/view', [], true)
+ 5 APPPATH/Controllers/BankAccountInfo.php(59): view('bankaccountinfo/view')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 01:14:39 --> Undefined variable $users
+in APPPATH/Views/bankaccountinfo/view.php on line 67.
+ 1 APPPATH/Views/bankaccountinfo/view.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php', 67)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('bankaccountinfo/view', [], true)
+ 5 APPPATH/Controllers/BankAccountInfo.php(59): view('bankaccountinfo/view')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 01:15:54 --> Undefined variable $users
+in APPPATH/Views/bankaccountinfo/view.php on line 67.
+ 1 APPPATH/Views/bankaccountinfo/view.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php', 67)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('bankaccountinfo/view', [], true)
+ 5 APPPATH/Controllers/BankAccountInfo.php(59): view('bankaccountinfo/view')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 01:36:46 --> Undefined variable $img_bank
+in APPPATH/Controllers/BankAccountInfo.php on line 44.
+ 1 APPPATH/Controllers/BankAccountInfo.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $img_bank', '/home/freelance/public_html/digitalflow/app/Controllers/BankAccountInfo.php', 44)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 01:37:17 --> Undefined variable $bank
+in APPPATH/Controllers/BankAccountInfo.php on line 45.
+ 1 APPPATH/Controllers/BankAccountInfo.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bank', '/home/freelance/public_html/digitalflow/app/Controllers/BankAccountInfo.php', 45)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 01:37:56 --> Undefined variable $bank
+in APPPATH/Controllers/BankAccountInfo.php on line 45.
+ 1 APPPATH/Controllers/BankAccountInfo.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bank', '/home/freelance/public_html/digitalflow/app/Controllers/BankAccountInfo.php', 45)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 01:38:30 --> Undefined variable $users
+in APPPATH/Controllers/BankAccountInfo.php on line 64.
+ 1 APPPATH/Controllers/BankAccountInfo.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Controllers/BankAccountInfo.php', 64)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 01:38:48 --> Call to undefined method App\Models\BankAccountInfoModel::move
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/BankAccountInfo.php(45): CodeIgniter\Model->__call('move', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 01:40:18 --> Call to undefined method App\Models\BankAccountInfoModel::move
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/BankAccountInfo.php(45): CodeIgniter\Model->__call('move', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 01:43:02 --> Call to undefined method App\Models\BankAccountInfoModel::move
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/BankAccountInfo.php(45): CodeIgniter\Model->__call('move', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 01:43:14 --> Undefined variable $users
+in APPPATH/Controllers/BankAccountInfo.php on line 64.
+ 1 APPPATH/Controllers/BankAccountInfo.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Controllers/BankAccountInfo.php', 64)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 01:44:33 --> Undefined variable $filepath_bank
+in APPPATH/Controllers/BankAccountInfo.php on line 58.
+ 1 APPPATH/Controllers/BankAccountInfo.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filepath_bank', '/home/freelance/public_html/digitalflow/app/Controllers/BankAccountInfo.php', 58)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 01:47:23 --> Undefined variable $bank
+in APPPATH/Controllers/BankAccountInfo.php on line 45.
+ 1 APPPATH/Controllers/BankAccountInfo.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bank', '/home/freelance/public_html/digitalflow/app/Controllers/BankAccountInfo.php', 45)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-23 10:40:03 --> mysqli_sql_exception: Unknown column 'bankaccount_info.emp_id' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('UPDATE `bankacc...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `bankacc...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `bankacc...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `bankacc...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(949): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /home/freelance/public_html/digitalflow/system/Model.php(776): CodeIgniter\BaseModel->update(Array, Array)
+#7 /home/freelance/public_html/digitalflow/app/Controllers/BankAccountInfo.php(132): CodeIgniter\Model->update('1', Array)
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\BankAccountInfo->update()
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+#10 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-04-23 10:40:03 --> Unknown column 'bankaccount_info.emp_id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `bankaccount_info` SET `bankaccount_name_as_per_bank` = :bankaccount_name_as_per_bank:, `bankaccount_accountno` = :bankaccount_accountno:, `bankaccount_ifscno` = :bankaccount_ifscno:, `bankaccount_bankname` = :bankaccount_bankname:, `bankaccount_branchname` = :bankaccount_branchname:, `bankaccount_passbookcheck_filename` = :bankaccount_passbookcheck_filename:, `bankaccount_updated_on` = :bankaccount_updated_on:
+WHERE `bankaccount_id` = :bankaccount_id:
+AND `bankaccount_info`.`emp_id` IN :bankaccount_info.emp_id:', [...], false)
+ 2 SYSTEMPATH/Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH/BaseModel.php(949): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH/Controllers/BankAccountInfo.php(132): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->update()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 05:24:00 --> Undefined variable $filepath_bank
+in APPPATH/Controllers/BankAccountInfo.php on line 125.
+ 1 APPPATH/Controllers/BankAccountInfo.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filepath_bank', '/home/freelance/public_html/digitalflow/app/Controllers/BankAccountInfo.php', 125)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->update()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 05:25:43 --> Undefined variable $filepath_bank
+in APPPATH/Controllers/BankAccountInfo.php on line 125.
+ 1 APPPATH/Controllers/BankAccountInfo.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filepath_bank', '/home/freelance/public_html/digitalflow/app/Controllers/BankAccountInfo.php', 125)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->update()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 11:03:44 --> Class "App\Controllers\UserInfoModel" not found
+in APPPATH/Controllers/BankAccountInfo.php on line 175.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->delete('VFhjOVBRPT0=')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 07:43:49 --> Undefined variable $users
+in APPPATH/Views/companyworkinfo/view.php on line 67.
+ 1 APPPATH/Views/companyworkinfo/view.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/view.php', 67)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyworkinfo/view', [], true)
+ 5 APPPATH/Controllers/CompanyWorkInfo.php(174): view('companyworkinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyWorkInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyWorkInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 07:44:36 --> Undefined array key "user_name"
+in APPPATH/Views/companyworkinfo/view.php on line 72.
+ 1 APPPATH/Views/companyworkinfo/view.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_name"', '/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/view.php', 72)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyworkinfo/view', [], true)
+ 5 APPPATH/Controllers/CompanyWorkInfo.php(102): view('companyworkinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyWorkInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyWorkInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 07:47:33 --> Undefined array key "user_name"
+in APPPATH/Views/companyworkinfo/view.php on line 72.
+ 1 APPPATH/Views/companyworkinfo/view.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_name"', '/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/view.php', 72)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyworkinfo/view', [], true)
+ 5 APPPATH/Controllers/CompanyWorkInfo.php(102): view('companyworkinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyWorkInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyWorkInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 07:48:45 --> Undefined array key "user_name"
+in APPPATH/Views/companyworkinfo/view.php on line 72.
+ 1 APPPATH/Views/companyworkinfo/view.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_name"', '/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/view.php', 72)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyworkinfo/view', [], true)
+ 5 APPPATH/Controllers/CompanyWorkInfo.php(102): view('companyworkinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyWorkInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyWorkInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 07:48:46 --> Undefined array key "user_name"
+in APPPATH/Views/companyworkinfo/view.php on line 72.
+ 1 APPPATH/Views/companyworkinfo/view.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_name"', '/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/view.php', 72)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyworkinfo/view', [], true)
+ 5 APPPATH/Controllers/CompanyWorkInfo.php(102): view('companyworkinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyWorkInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyWorkInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 07:49:49 --> Undefined array key "user_name"
+in APPPATH/Views/companyworkinfo/view.php on line 72.
+ 1 APPPATH/Views/companyworkinfo/view.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_name"', '/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/view.php', 72)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyworkinfo/view', [], true)
+ 5 APPPATH/Controllers/CompanyWorkInfo.php(102): view('companyworkinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyWorkInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyWorkInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 07:50:12 --> Undefined array key "user_id"
+in APPPATH/Views/companyworkinfo/view.php on line 95.
+ 1 APPPATH/Views/companyworkinfo/view.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', '/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/view.php', 95)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyworkinfo/view', [], true)
+ 5 APPPATH/Controllers/CompanyWorkInfo.php(102): view('companyworkinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyWorkInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyWorkInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 13:29:22 --> Undefined variable $users
+in APPPATH/Views/companyworkinfo/view.php on line 72.
+ 1 APPPATH/Views/companyworkinfo/view.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/view.php', 72)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyworkinfo/view', [], true)
+ 5 APPPATH/Controllers/CompanyWorkInfo.php(195): view('companyworkinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyWorkInfo->delete('VFdjOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyWorkInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 08:01:26 --> Undefined array key "user_id"
+in APPPATH/Views/companyworkinfo/edit.php on line 29.
+ 1 APPPATH/Views/companyworkinfo/edit.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', '/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/edit.php', 29)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyworkinfo/edit', [], true)
+ 5 APPPATH/Controllers/CompanyWorkInfo.php(116): view('companyworkinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyWorkInfo->edit('VFZFOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyWorkInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 08:21:55 --> Trying to access array offset on value of type null
+in APPPATH/Views/companyworkinfo/edit.php on line 28.
+ 1 APPPATH/Views/companyworkinfo/edit.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/edit.php', 28)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyworkinfo/edit', [], true)
+ 5 APPPATH/Controllers/CompanyWorkInfo.php(116): view('companyworkinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyWorkInfo->edit('VFZFOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyWorkInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 13:55:45 --> Undefined variable $users
+in APPPATH/Views/companyworkinfo/view.php on line 72.
+ 1 APPPATH/Views/companyworkinfo/view.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/view.php', 72)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyworkinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyworkinfo/view', [], true)
+ 5 APPPATH/Controllers/CompanyWorkInfo.php(164): view('companyworkinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyWorkInfo->update()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyWorkInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 09:41:35 --> Undefined array key "user_name"
+in APPPATH/Views/employmentinfo/view.php on line 72.
+ 1 APPPATH/Views/employmentinfo/view.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_name"', '/home/freelance/public_html/digitalflow/app/Views/employmentinfo/view.php', 72)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/employmentinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('employmentinfo/view', [], true)
+ 5 APPPATH/Controllers/EmploymentInfo.php(103): view('employmentinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\EmploymentInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmploymentInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 09:45:25 --> Undefined array key "user_created_on"
+in APPPATH/Views/employmentinfo/view.php on line 81.
+ 1 APPPATH/Views/employmentinfo/view.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_created_on"', '/home/freelance/public_html/digitalflow/app/Views/employmentinfo/view.php', 81)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/employmentinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('employmentinfo/view', [], true)
+ 5 APPPATH/Controllers/EmploymentInfo.php(103): view('employmentinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\EmploymentInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmploymentInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 09:48:16 --> Undefined array key "user_id"
+in APPPATH/Views/employmentinfo/edit.php on line 29.
+ 1 APPPATH/Views/employmentinfo/edit.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', '/home/freelance/public_html/digitalflow/app/Views/employmentinfo/edit.php', 29)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/employmentinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('employmentinfo/edit', [], true)
+ 5 APPPATH/Controllers/EmploymentInfo.php(117): view('employmentinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\EmploymentInfo->edit('VFZFOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmploymentInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 09:51:37 --> Undefined array key "user_id"
+in APPPATH/Views/employmentinfo/edit.php on line 29.
+ 1 APPPATH/Views/employmentinfo/edit.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', '/home/freelance/public_html/digitalflow/app/Views/employmentinfo/edit.php', 29)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/employmentinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('employmentinfo/edit', [], true)
+ 5 APPPATH/Controllers/EmploymentInfo.php(117): view('employmentinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\EmploymentInfo->edit('VFZFOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmploymentInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 10:55:30 --> Undefined array key "user_name"
+in APPPATH/Views/companyresigninfo/view.php on line 72.
+ 1 APPPATH/Views/companyresigninfo/view.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_name"', '/home/freelance/public_html/digitalflow/app/Views/companyresigninfo/view.php', 72)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyresigninfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyresigninfo/view', [], true)
+ 5 APPPATH/Controllers/CompanyResignInfo.php(97): view('companyresigninfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyResignInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyResignInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 11:02:49 --> Undefined array key "company_resign_final_sett_bank"
+in APPPATH/Views/companyresigninfo/view.php on line 77.
+ 1 APPPATH/Views/companyresigninfo/view.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "company_resign_final_sett_bank"', '/home/freelance/public_html/digitalflow/app/Views/companyresigninfo/view.php', 77)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyresigninfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyresigninfo/view', [], true)
+ 5 APPPATH/Controllers/CompanyResignInfo.php(97): view('companyresigninfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyResignInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyResignInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 11:05:17 --> Undefined array key "user_created_on"
+in APPPATH/Views/companyresigninfo/view.php on line 81.
+ 1 APPPATH/Views/companyresigninfo/view.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_created_on"', '/home/freelance/public_html/digitalflow/app/Views/companyresigninfo/view.php', 81)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyresigninfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyresigninfo/view', [], true)
+ 5 APPPATH/Controllers/CompanyResignInfo.php(97): view('companyresigninfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyResignInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyResignInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 11:05:34 --> Undefined array key "company_resign_on"
+in APPPATH/Views/companyresigninfo/view.php on line 81.
+ 1 APPPATH/Views/companyresigninfo/view.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "company_resign_on"', '/home/freelance/public_html/digitalflow/app/Views/companyresigninfo/view.php', 81)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyresigninfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyresigninfo/view', [], true)
+ 5 APPPATH/Controllers/CompanyResignInfo.php(97): view('companyresigninfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyResignInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyResignInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 11:05:51 --> Undefined array key "user_id"
+in APPPATH/Views/companyresigninfo/view.php on line 87.
+ 1 APPPATH/Views/companyresigninfo/view.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', '/home/freelance/public_html/digitalflow/app/Views/companyresigninfo/view.php', 87)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyresigninfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyresigninfo/view', [], true)
+ 5 APPPATH/Controllers/CompanyResignInfo.php(97): view('companyresigninfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyResignInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyResignInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 11:06:22 --> Undefined array key "company_resign__id"
+in APPPATH/Views/companyresigninfo/view.php on line 87.
+ 1 APPPATH/Views/companyresigninfo/view.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "company_resign__id"', '/home/freelance/public_html/digitalflow/app/Views/companyresigninfo/view.php', 87)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyresigninfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyresigninfo/view', [], true)
+ 5 APPPATH/Controllers/CompanyResignInfo.php(97): view('companyresigninfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyResignInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyResignInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 11:06:38 --> Undefined array key "user_id"
+in APPPATH/Views/companyresigninfo/edit.php on line 29.
+ 1 APPPATH/Views/companyresigninfo/edit.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', '/home/freelance/public_html/digitalflow/app/Views/companyresigninfo/edit.php', 29)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/companyresigninfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('companyresigninfo/edit', [], true)
+ 5 APPPATH/Controllers/CompanyResignInfo.php(111): view('companyresigninfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CompanyResignInfo->edit('VFZFOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyResignInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 11:49:53 --> Undefined array key "user_created_on"
+in APPPATH/Views/leaveinfo/view.php on line 75.
+ 1 APPPATH/Views/leaveinfo/view.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_created_on"', '/home/freelance/public_html/digitalflow/app/Views/leaveinfo/view.php', 75)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/leaveinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('leaveinfo/view', [], true)
+ 5 APPPATH/Controllers/LeaveInfo.php(90): view('leaveinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\LeaveInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LeaveInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 11:50:09 --> Undefined array key "user_id"
+in APPPATH/Views/leaveinfo/view.php on line 81.
+ 1 APPPATH/Views/leaveinfo/view.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', '/home/freelance/public_html/digitalflow/app/Views/leaveinfo/view.php', 81)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/leaveinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('leaveinfo/view', [], true)
+ 5 APPPATH/Controllers/LeaveInfo.php(90): view('leaveinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\LeaveInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LeaveInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 11:50:43 --> Undefined array key "user_id"
+in APPPATH/Views/leaveinfo/edit.php on line 29.
+ 1 APPPATH/Views/leaveinfo/edit.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', '/home/freelance/public_html/digitalflow/app/Views/leaveinfo/edit.php', 29)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/leaveinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('leaveinfo/edit', [], true)
+ 5 APPPATH/Controllers/LeaveInfo.php(104): view('leaveinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\LeaveInfo->edit('VFZFOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LeaveInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 13:45:07 --> Undefined variable $fetch_glass
+in APPPATH/Views/leaveinfo/edit.php on line 34.
+ 1 APPPATH/Views/leaveinfo/edit.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fetch_glass', '/home/freelance/public_html/digitalflow/app/Views/leaveinfo/edit.php', 34)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/leaveinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('leaveinfo/edit', [], true)
+ 5 APPPATH/Controllers/LeaveInfo.php(104): view('leaveinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\LeaveInfo->edit('VFZFOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LeaveInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 13:53:18 --> Class "App\Controllers\PersonalInfoModel" not found
+in APPPATH/Controllers/LeaveInfo.php on line 74.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\LeaveInfo->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LeaveInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 13:53:40 --> Undefined variable $info
+in APPPATH/Controllers/LeaveInfo.php on line 76.
+ 1 APPPATH/Controllers/LeaveInfo.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', '/home/freelance/public_html/digitalflow/app/Controllers/LeaveInfo.php', 76)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\LeaveInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LeaveInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 13:54:02 --> Array to string conversion
+in APPPATH/Views/leaveinfo/index.php on line 64.
+ 1 APPPATH/Views/leaveinfo/index.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/home/freelance/public_html/digitalflow/app/Views/leaveinfo/index.php', 64)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/leaveinfo/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('leaveinfo/index', [], true)
+ 5 APPPATH/Controllers/LeaveInfo.php(78): view('leaveinfo/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\LeaveInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LeaveInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 13:54:30 --> Attempt to read property "emp_id" on array
+in APPPATH/Views/leaveinfo/index.php on line 64.
+ 1 APPPATH/Views/leaveinfo/index.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "emp_id" on array', '/home/freelance/public_html/digitalflow/app/Views/leaveinfo/index.php', 64)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/leaveinfo/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('leaveinfo/index', [], true)
+ 5 APPPATH/Controllers/LeaveInfo.php(78): view('leaveinfo/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\LeaveInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LeaveInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 23:14:39 --> Undefined variable $emp_id
+in APPPATH/Views/leaveinfo/index.php on line 63.
+ 1 APPPATH/Views/leaveinfo/index.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $emp_id', '/home/freelance/public_html/digitalflow/app/Views/leaveinfo/index.php', 63)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/leaveinfo/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('leaveinfo/index', [], true)
+ 5 APPPATH/Controllers/LeaveInfo.php(65): view('leaveinfo/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\LeaveInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LeaveInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 23:17:08 --> Undefined variable $emp_id
+in APPPATH/Views/leaveinfo/index.php on line 63.
+ 1 APPPATH/Views/leaveinfo/index.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $emp_id', '/home/freelance/public_html/digitalflow/app/Views/leaveinfo/index.php', 63)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/leaveinfo/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('leaveinfo/index', [], true)
+ 5 APPPATH/Controllers/LeaveInfo.php(65): view('leaveinfo/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\LeaveInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LeaveInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 23:18:25 --> Undefined variable $emp_id
+in APPPATH/Views/leaveinfo/index.php on line 63.
+ 1 APPPATH/Views/leaveinfo/index.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $emp_id', '/home/freelance/public_html/digitalflow/app/Views/leaveinfo/index.php', 63)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/leaveinfo/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('leaveinfo/index', [], true)
+ 5 APPPATH/Controllers/LeaveInfo.php(65): view('leaveinfo/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\LeaveInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LeaveInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 23:20:15 --> Undefined variable $emp_id
+in APPPATH/Views/leaveinfo/index.php on line 63.
+ 1 APPPATH/Views/leaveinfo/index.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $emp_id', '/home/freelance/public_html/digitalflow/app/Views/leaveinfo/index.php', 63)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/leaveinfo/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('leaveinfo/index', [], true)
+ 5 APPPATH/Controllers/LeaveInfo.php(70): view('leaveinfo/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\LeaveInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LeaveInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 23:20:22 --> Undefined variable $emp_id
+in APPPATH/Views/leaveinfo/index.php on line 63.
+ 1 APPPATH/Views/leaveinfo/index.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $emp_id', '/home/freelance/public_html/digitalflow/app/Views/leaveinfo/index.php', 63)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/leaveinfo/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('leaveinfo/index', [], true)
+ 5 APPPATH/Controllers/LeaveInfo.php(70): view('leaveinfo/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\LeaveInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LeaveInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 18:00:10 --> Undefined variable $empid
+in APPPATH/Views/leaveinfo/edit.php on line 29.
+ 1 APPPATH/Views/leaveinfo/edit.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $empid', '/home/freelance/public_html/digitalflow/app/Views/leaveinfo/edit.php', 29)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/leaveinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('leaveinfo/edit', [], true)
+ 5 APPPATH/Controllers/LeaveInfo.php(122): view('leaveinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\LeaveInfo->edit('VFZSQlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LeaveInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 18:00:49 --> Undefined variable $empid
+in APPPATH/Views/leaveinfo/edit.php on line 29.
+ 1 APPPATH/Views/leaveinfo/edit.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $empid', '/home/freelance/public_html/digitalflow/app/Views/leaveinfo/edit.php', 29)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/leaveinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('leaveinfo/edit', [], true)
+ 5 APPPATH/Controllers/LeaveInfo.php(122): view('leaveinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\LeaveInfo->edit('VFZSQlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LeaveInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 19:13:05 --> Undefined variable $emp_id
+in APPPATH/Views/bankaccountinfo/edit.php on line 31.
+ 1 APPPATH/Views/bankaccountinfo/edit.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $emp_id', '/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/edit.php', 31)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('bankaccountinfo/edit', [], true)
+ 5 APPPATH/Controllers/BankAccountInfo.php(124): view('bankaccountinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->edit('VFdwQlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 20:02:44 --> Undefined variable $emp_id
+in APPPATH/Views/employmentinfo/index.php on line 62.
+ 1 APPPATH/Views/employmentinfo/index.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $emp_id', '/home/freelance/public_html/digitalflow/app/Views/employmentinfo/index.php', 62)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/employmentinfo/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('employmentinfo/index', [], true)
+ 5 APPPATH/Controllers/EmploymentInfo.php(97): view('employmentinfo/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\EmploymentInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmploymentInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 20:05:59 --> Undefined variable $emp_id
+in APPPATH/Views/employmentinfo/index.php on line 62.
+ 1 APPPATH/Views/employmentinfo/index.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $emp_id', '/home/freelance/public_html/digitalflow/app/Views/employmentinfo/index.php', 62)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/employmentinfo/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('employmentinfo/index', [], true)
+ 5 APPPATH/Controllers/EmploymentInfo.php(97): view('employmentinfo/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\EmploymentInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmploymentInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 20:06:04 --> Undefined variable $emp_id
+in APPPATH/Views/employmentinfo/index.php on line 62.
+ 1 APPPATH/Views/employmentinfo/index.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $emp_id', '/home/freelance/public_html/digitalflow/app/Views/employmentinfo/index.php', 62)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/employmentinfo/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('employmentinfo/index', [], true)
+ 5 APPPATH/Controllers/EmploymentInfo.php(97): view('employmentinfo/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\EmploymentInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmploymentInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 20:38:02 --> Undefined property: App\Controllers\Reports::$load
+in APPPATH/Controllers/Reports.php on line 23.
+ 1 APPPATH/Controllers/Reports.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Reports::$load', '/home/freelance/public_html/digitalflow/app/Controllers/Reports.php', 23)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 20:40:20 --> Undefined property: App\Controllers\Reports::$load
+in APPPATH/Controllers/Reports.php on line 28.
+ 1 APPPATH/Controllers/Reports.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Reports::$load', '/home/freelance/public_html/digitalflow/app/Controllers/Reports.php', 28)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 20:46:11 --> Undefined property: App\Controllers\Reports::$load
+in APPPATH/Controllers/Reports.php on line 33.
+ 1 APPPATH/Controllers/Reports.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Reports::$load', '/home/freelance/public_html/digitalflow/app/Controllers/Reports.php', 33)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 20:48:54 --> Undefined property: App\Controllers\Reports::$load
+in APPPATH/Controllers/Reports.php on line 33.
+ 1 APPPATH/Controllers/Reports.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Reports::$load', '/home/freelance/public_html/digitalflow/app/Controllers/Reports.php', 33)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-23 20:50:31 --> Undefined property: App\Controllers\Reports::$load
+in APPPATH/Controllers/Reports.php on line 33.
+ 1 APPPATH/Controllers/Reports.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Reports::$load', '/home/freelance/public_html/digitalflow/app/Controllers/Reports.php', 33)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Reports->reportsdefault()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

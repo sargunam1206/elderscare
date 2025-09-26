@@ -1,0 +1,14 @@
+CRITICAL - 2024-07-05 08:49:31 --> Undefined variable $data
+in APPPATH/Controllers/ManpowerInfo.php on line 194.
+ 1 APPPATH/Controllers/ManpowerInfo.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/home/freelance/public_html/digitalflow/app/Controllers/ManpowerInfo.php', 194)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-05 09:29:26 --> Undefined variable $data
+in APPPATH/Controllers/ManpowerInfo.php on line 194.
+ 1 APPPATH/Controllers/ManpowerInfo.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/home/freelance/public_html/digitalflow/app/Controllers/ManpowerInfo.php', 194)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ManpowerInfo->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManpowerInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

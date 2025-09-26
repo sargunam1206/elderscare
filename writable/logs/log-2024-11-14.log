@@ -1,0 +1,187 @@
+CRITICAL - 2024-11-14 07:24:18 --> Undefined variable $assets_info
+in APPPATH\Views\service\index.php on line 1767.
+ 1 APPPATH\Views\service\index.php(1767): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_info', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\service\\index.php', 1767)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\service\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('service/index', [], true)
+ 5 APPPATH\Controllers\Service.php(26): view('service/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 07:25:00 --> Unmatched '}'
+in APPPATH\Views\service\index.php on line 1769.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('service/index', [], true)
+ 3 APPPATH\Controllers\Service.php(26): view('service/index')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 08:10:27 --> Undefined variable $data
+in APPPATH\Controllers\Service.php on line 52.
+ 1 APPPATH\Controllers\Service.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\Service.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 08:57:05 --> Undefined variable $assets_type
+in APPPATH\Views\service\view.php on line 1850.
+ 1 APPPATH\Views\service\view.php(1850): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_type', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\service\\view.php', 1850)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\service\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('service/view', [], true)
+ 5 APPPATH\Controllers\Service.php(63): view('service/view')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 09:24:50 --> Undefined variable $requests
+in APPPATH\Views\service\view.php on line 1816.
+ 1 APPPATH\Views\service\view.php(1816): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $requests', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\service\\view.php', 1816)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\service\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('service/view', [], true)
+ 5 APPPATH\Controllers\Service.php(64): view('service/view')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 09:25:15 --> Undefined variable $requests
+in APPPATH\Views\service\view.php on line 1816.
+ 1 APPPATH\Views\service\view.php(1816): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $requests', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\service\\view.php', 1816)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\service\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('service/view', [], true)
+ 5 APPPATH\Controllers\Service.php(68): view('service/view')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 09:26:01 --> Undefined variable $base
+in APPPATH\Views\service\view.php on line 1829.
+ 1 APPPATH\Views\service\view.php(1829): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\service\\view.php', 1829)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\service\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('service/view', [], true)
+ 5 APPPATH\Controllers\Service.php(68): view('service/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 10:13:22 --> Undefined variable $alldata
+in APPPATH\Views\service\edit.php on line 200.
+ 1 APPPATH\Views\service\edit.php(200): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\service\\edit.php', 200)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\service\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('service/edit', [], true)
+ 5 APPPATH\Controllers\Service.php(79): view('service/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 10:15:31 --> Undefined variable $base
+in APPPATH\Views\service\edit.php on line 1877.
+ 1 APPPATH\Views\service\edit.php(1877): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\service\\edit.php', 1877)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\service\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('service/edit', [], true)
+ 5 APPPATH\Controllers\Service.php(79): view('service/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 10:18:05 --> Too few arguments to function App\Controllers\Service::update(), 0 passed in C:\xampp\htdocs\viyoma\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Service.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->update()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 10:18:29 --> Too few arguments to function App\Controllers\Service::update(), 0 passed in C:\xampp\htdocs\viyoma\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Service.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->update()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 10:18:33 --> Too few arguments to function App\Controllers\Service::update(), 0 passed in C:\xampp\htdocs\viyoma\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Service.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->update()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 10:20:16 --> Too few arguments to function App\Controllers\Service::update(), 0 passed in C:\xampp\htdocs\viyoma\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Service.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->update()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 10:20:24 --> Too few arguments to function App\Controllers\Service::update(), 0 passed in C:\xampp\htdocs\viyoma\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Service.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->update()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 10:24:58 --> Undefined variable $data
+in APPPATH\Views\service\edit.php on line 216.
+ 1 APPPATH\Views\service\edit.php(216): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\service\\edit.php', 216)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\service\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('service/edit', [], true)
+ 5 APPPATH\Controllers\Service.php(79): view('service/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 10:25:12 --> Undefined variable $base
+in APPPATH\Views\service\edit.php on line 1897.
+ 1 APPPATH\Views\service\edit.php(1897): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\service\\edit.php', 1897)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\service\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('service/edit', [], true)
+ 5 APPPATH\Controllers\Service.php(79): view('service/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 10:26:32 --> Too few arguments to function App\Controllers\Service::update(), 0 passed in C:\xampp\htdocs\viyoma\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Service.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->update()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 10:33:13 --> Too few arguments to function App\Controllers\Service::update(), 0 passed in C:\xampp\htdocs\viyoma\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Service.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->update()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 10:40:02 --> Too few arguments to function App\Controllers\Service::update(), 0 passed in C:\xampp\htdocs\viyoma\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Service.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->update()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 10:42:37 --> Too few arguments to function App\Controllers\Service::update(), 0 passed in C:\xampp\htdocs\viyoma\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Service.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->update()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 10:42:43 --> Too few arguments to function App\Controllers\Service::update(), 0 passed in C:\xampp\htdocs\viyoma\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Service.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->update()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 10:42:46 --> Too few arguments to function App\Controllers\Service::update(), 0 passed in C:\xampp\htdocs\viyoma\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Service.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->update()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-14 10:42:57 --> Too few arguments to function App\Controllers\Service::update(), 0 passed in C:\xampp\htdocs\viyoma\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\Service.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Service->update()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Service))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

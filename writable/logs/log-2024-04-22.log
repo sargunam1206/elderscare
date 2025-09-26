@@ -1,0 +1,878 @@
+CRITICAL - 2024-04-22 04:55:01 --> View themes, no current section.
+in SYSTEMPATH/View/View.php on line 425.
+ 1 APPPATH/Views/personalinfo/index.php(236): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/index', [], true)
+ 5 APPPATH/Controllers/PersonalInfo.php(17): view('personalinfo/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 07:31:23 --> "" is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 319.
+ 1 SYSTEMPATH/Validation/Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+ 2 SYSTEMPATH/Validation/Validation.php(197): CodeIgniter\Validation\Validation->processRules('emp_name', 'emp_name', '', [...], [...])
+ 3 SYSTEMPATH/Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/PersonalInfo.php(71): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->store()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 07:32:04 --> Class "App\Controllers\UserInfoModel" not found
+in APPPATH/Controllers/PersonalInfo.php on line 73.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->store()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 13:02:29 --> The original file is not a valid file.
+in SYSTEMPATH/HTTP/Files/UploadedFile.php on line 146.
+ 1 SYSTEMPATH/HTTP/Files/UploadedFile.php(146): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 SYSTEMPATH/HTTP/Files/UploadedFile.php(359): CodeIgniter\HTTP\Files\UploadedFile->move('/home/freelance/public_html/digitalflow/writable/uploads/20240422/', '1713771149_fe63ae5db74af7ba0668')
+ 3 APPPATH/Controllers/PersonalInfo.php(82): CodeIgniter\HTTP\Files\UploadedFile->store()
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->store()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 13:02:33 --> The original file is not a valid file.
+in SYSTEMPATH/HTTP/Files/UploadedFile.php on line 146.
+ 1 SYSTEMPATH/HTTP/Files/UploadedFile.php(146): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 SYSTEMPATH/HTTP/Files/UploadedFile.php(359): CodeIgniter\HTTP\Files\UploadedFile->move('/home/freelance/public_html/digitalflow/writable/uploads/20240422/', '1713771153_07eb357ec245b2e4461b')
+ 3 APPPATH/Controllers/PersonalInfo.php(82): CodeIgniter\HTTP\Files\UploadedFile->store()
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->store()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 07:36:52 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:36:55 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:36:59 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:37:51 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:38:11 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:38:14 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:39:21 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:39:22 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:39:25 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:40:19 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:40:53 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:41:31 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:41:35 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:42:20 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:42:23 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:42:53 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 84.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:42:56 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 84.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:48:22 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:48:24 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:48:27 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:49:22 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:49:24 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:50:34 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:50:39 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:51:03 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 07:51:06 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 13:33:36 --> Undefined variable $data
+in APPPATH/Controllers/PersonalInfo.php on line 123.
+ 1 APPPATH/Controllers/PersonalInfo.php(123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 123)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->store()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 08:04:44 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 84.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 08:05:14 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 84.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 08:05:16 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 84.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 08:05:21 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 84.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 08:05:49 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 84.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 08:05:54 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 84.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 08:06:32 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 84.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 08:06:48 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 84.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 08:06:53 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/PersonalInfo.php on line 84.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 13:37:25 --> Undefined variable $filepath_aadhar
+in APPPATH/Controllers/PersonalInfo.php on line 87.
+ 1 APPPATH/Controllers/PersonalInfo.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filepath_aadhar', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 87)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->store()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 13:37:46 --> The original file is not a valid file.
+in SYSTEMPATH/HTTP/Files/UploadedFile.php on line 146.
+ 1 SYSTEMPATH/HTTP/Files/UploadedFile.php(146): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 SYSTEMPATH/HTTP/Files/UploadedFile.php(359): CodeIgniter\HTTP\Files\UploadedFile->move('/home/freelance/public_html/digitalflow/writable/uploads/20240422/', '1713773266_21510e30e14089e360b0')
+ 3 APPPATH/Controllers/PersonalInfo.php(86): CodeIgniter\HTTP\Files\UploadedFile->store()
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->store()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 13:38:09 --> The original file is not a valid file.
+in SYSTEMPATH/HTTP/Files/UploadedFile.php on line 146.
+ 1 SYSTEMPATH/HTTP/Files/UploadedFile.php(146): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 SYSTEMPATH/HTTP/Files/UploadedFile.php(359): CodeIgniter\HTTP\Files\UploadedFile->move('/home/freelance/public_html/digitalflow/writable/uploads/20240422/', '1713773289_198d9d8d73ad8fdfd247')
+ 3 APPPATH/Controllers/PersonalInfo.php(86): CodeIgniter\HTTP\Files\UploadedFile->store()
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->store()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 13:38:14 --> The original file is not a valid file.
+in SYSTEMPATH/HTTP/Files/UploadedFile.php on line 146.
+ 1 SYSTEMPATH/HTTP/Files/UploadedFile.php(146): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 SYSTEMPATH/HTTP/Files/UploadedFile.php(359): CodeIgniter\HTTP\Files\UploadedFile->move('/home/freelance/public_html/digitalflow/writable/uploads/20240422/', '1713773294_f0f23dbe84e930e2f42d')
+ 3 APPPATH/Controllers/PersonalInfo.php(86): CodeIgniter\HTTP\Files\UploadedFile->store()
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->store()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 13:41:24 --> Undefined array key "file_photo"
+in APPPATH/Controllers/PersonalInfo.php on line 133.
+ 1 APPPATH/Controllers/PersonalInfo.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "file_photo"', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 133)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->store()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 13:42:55 --> Undefined array key "file_aadhar"
+in APPPATH/Controllers/PersonalInfo.php on line 134.
+ 1 APPPATH/Controllers/PersonalInfo.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "file_aadhar"', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 134)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->store()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-22 13:43:34 --> mysqli_sql_exception: Column 'emp_photo_filename' cannot be null in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `pe...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 /home/freelance/public_html/digitalflow/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 /home/freelance/public_html/digitalflow/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 /home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php(142): CodeIgniter\BaseModel->save(Array)
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\PersonalInfo->store()
+#10 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+#11 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-04-22 13:43:34 --> Column 'emp_photo_filename' cannot be null
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personal_info` (`emp_company_ref_id`, `emp_name`, `emp_dob`, `emp_mobile_no`, `emp_personal_emailid`, `emp_aadharno`, `emp_name_asper_aadhar`, `emp_panno`, `emp_father_name`, `emp_present_address_1`, `emp_present_address_2`, `emp_present_address_3`, `emp_present_address_4`, `emp_permanent_address_1`, `emp_permanent_address_2`, `emp_permanent_address_3`, `emp_permanent_address_4`, `emp_martial_status`, `emp_marriage_date`, `emp_blood_group`, `emp_photo_filename`, `emp_aadhar_filename`, `emp_pan_filename`) VALUES (:emp_company_ref_id:, :emp_name:, :emp_dob:, :emp_mobile_no:, :emp_personal_emailid:, :emp_aadharno:, :emp_name_asper_aadhar:, :emp_panno:, :emp_father_name:, :emp_present_address_1:, :emp_present_address_2:, :emp_present_address_3:, :emp_present_address_4:, :emp_permanent_address_1:, :emp_permanent_address_2:, :emp_permanent_address_3:, :emp_permanent_address_4:, :emp_martial_status:, :emp_marriage_date:, :emp_blood_group:, :emp_photo_filename:, :emp_aadhar_filename:, :emp_pan_filename:)', [...], false)
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH/Controllers/PersonalInfo.php(142): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->store()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 09:28:48 --> Invalid file: "users/view.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('users/view.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/view', [], true)
+ 3 APPPATH/Controllers/PersonalInfo.php(168): view('users/view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->view()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 09:29:37 --> Undefined variable $users
+in APPPATH/Views/personalinfo/view.php on line 67.
+ 1 APPPATH/Views/personalinfo/view.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php', 67)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/view', [], true)
+ 5 APPPATH/Controllers/PersonalInfo.php(168): view('personalinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 09:49:55 --> Undefined variable $purchase_data
+in APPPATH/Views/personalinfo/view.php on line 113.
+ 1 APPPATH/Views/personalinfo/view.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $purchase_data', '/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php', 113)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/view', [], true)
+ 5 APPPATH/Controllers/PersonalInfo.php(168): view('personalinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 09:50:30 --> Undefined array key "user_created_on"
+in APPPATH/Views/personalinfo/view.php on line 116.
+ 1 APPPATH/Views/personalinfo/view.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_created_on"', '/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php', 116)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/view', [], true)
+ 5 APPPATH/Controllers/PersonalInfo.php(168): view('personalinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 09:50:53 --> Undefined array key "emp_updated_on"
+in APPPATH/Views/personalinfo/view.php on line 117.
+ 1 APPPATH/Views/personalinfo/view.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "emp_updated_on"', '/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php', 117)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/view', [], true)
+ 5 APPPATH/Controllers/PersonalInfo.php(168): view('personalinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 09:51:56 --> Undefined array key "user_id"
+in APPPATH/Views/personalinfo/view.php on line 122.
+ 1 APPPATH/Views/personalinfo/view.php(122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', '/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php', 122)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/view', [], true)
+ 5 APPPATH/Controllers/PersonalInfo.php(168): view('personalinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 09:59:15 --> Class "App\Controllers\File" not found
+in APPPATH/Controllers/PersonalInfo.php on line 255.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:00:00 --> Class "App\Controllers\File" not found
+in APPPATH/Controllers/PersonalInfo.php on line 255.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:01:56 --> syntax error, unexpected identifier "emp_pan_filename", expecting ")"
+in APPPATH/Views/personalinfo/view.php on line 129.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/view', [], true)
+ 3 APPPATH/Controllers/PersonalInfo.php(168): view('personalinfo/view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->view()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:02:14 --> CodeIgniter\HTTP\SiteURI::stringifyRelativePath(): Return value must be of type string, null returned
+in SYSTEMPATH/HTTP/SiteURI.php on line 403.
+ 1 SYSTEMPATH/HTTP/SiteURI.php(415): CodeIgniter\HTTP\SiteURI->stringifyRelativePath(null)
+ 2 SYSTEMPATH/Helpers/url_helper.php(36): CodeIgniter\HTTP\SiteURI->siteUrl(null, null, null)
+ 3 APPPATH/Views/personalinfo/view.php(127): site_url(null)
+ 4 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php')
+ 5 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/view', [], true)
+ 7 APPPATH/Controllers/PersonalInfo.php(168): view('personalinfo/view', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->view()
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:02:25 --> CodeIgniter\HTTP\SiteURI::stringifyRelativePath(): Return value must be of type string, null returned
+in SYSTEMPATH/HTTP/SiteURI.php on line 403.
+ 1 SYSTEMPATH/HTTP/SiteURI.php(415): CodeIgniter\HTTP\SiteURI->stringifyRelativePath(null)
+ 2 SYSTEMPATH/Helpers/url_helper.php(36): CodeIgniter\HTTP\SiteURI->siteUrl(null, null, null)
+ 3 APPPATH/Views/personalinfo/view.php(127): site_url(null)
+ 4 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php')
+ 5 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/view', [], true)
+ 7 APPPATH/Controllers/PersonalInfo.php(168): view('personalinfo/view', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->view()
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:02:59 --> CodeIgniter\HTTP\SiteURI::stringifyRelativePath(): Return value must be of type string, null returned
+in SYSTEMPATH/HTTP/SiteURI.php on line 403.
+ 1 SYSTEMPATH/HTTP/SiteURI.php(415): CodeIgniter\HTTP\SiteURI->stringifyRelativePath(null)
+ 2 SYSTEMPATH/Helpers/url_helper.php(36): CodeIgniter\HTTP\SiteURI->siteUrl(null, null, null)
+ 3 APPPATH/Views/personalinfo/view.php(127): site_url(null)
+ 4 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php')
+ 5 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/view', [], true)
+ 7 APPPATH/Controllers/PersonalInfo.php(168): view('personalinfo/view', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->view()
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:04:52 --> Class "App\Controllers\File" not found
+in APPPATH/Controllers/PersonalInfo.php on line 255.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:05:42 --> Class "App\Controllers\File" not found
+in APPPATH/Controllers/PersonalInfo.php on line 258.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:06:30 --> Class "App\Controllers\File\BaseController" not found
+in APPPATH/Controllers/PersonalInfo.php on line 8.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\PersonalInfo')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\PersonalInfo')
+ 5 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\PersonalInfo', true)
+ 6 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:26:53 --> file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory
+in APPPATH/Controllers/PersonalInfo.php on line 265.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 265)
+ 2 APPPATH/Controllers/PersonalInfo.php(265): file_get_contents('/home/freelance/public_html/digitalflow/writable/')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:40:17 --> file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory
+in APPPATH/Controllers/PersonalInfo.php on line 265.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 265)
+ 2 APPPATH/Controllers/PersonalInfo.php(265): file_get_contents('/home/freelance/public_html/digitalflow/writable/')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:41:44 --> file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory
+in APPPATH/Controllers/PersonalInfo.php on line 265.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 265)
+ 2 APPPATH/Controllers/PersonalInfo.php(265): file_get_contents('/home/freelance/public_html/digitalflow/writable/')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:41:45 --> file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory
+in APPPATH/Controllers/PersonalInfo.php on line 265.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 265)
+ 2 APPPATH/Controllers/PersonalInfo.php(265): file_get_contents('/home/freelance/public_html/digitalflow/writable/')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:41:53 --> file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory
+in APPPATH/Controllers/PersonalInfo.php on line 265.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 265)
+ 2 APPPATH/Controllers/PersonalInfo.php(265): file_get_contents('/home/freelance/public_html/digitalflow/writable/')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:42:38 --> file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory
+in APPPATH/Controllers/PersonalInfo.php on line 265.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 265)
+ 2 APPPATH/Controllers/PersonalInfo.php(265): file_get_contents('/home/freelance/public_html/digitalflow/writable/')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:42:45 --> file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory
+in APPPATH/Controllers/PersonalInfo.php on line 265.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 265)
+ 2 APPPATH/Controllers/PersonalInfo.php(265): file_get_contents('/home/freelance/public_html/digitalflow/writable/')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:43:50 --> file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory
+in APPPATH/Controllers/PersonalInfo.php on line 266.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 266)
+ 2 APPPATH/Controllers/PersonalInfo.php(266): file_get_contents('/home/freelance/public_html/digitalflow/writable/')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 10:43:55 --> file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory
+in APPPATH/Controllers/PersonalInfo.php on line 266.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 266)
+ 2 APPPATH/Controllers/PersonalInfo.php(266): file_get_contents('/home/freelance/public_html/digitalflow/writable/')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 11:02:38 --> file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory
+in APPPATH/Controllers/PersonalInfo.php on line 267.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 267)
+ 2 APPPATH/Controllers/PersonalInfo.php(267): file_get_contents('/home/freelance/public_html/digitalflow/writable/')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 11:08:46 --> file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory
+in APPPATH/Controllers/PersonalInfo.php on line 268.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 268)
+ 2 APPPATH/Controllers/PersonalInfo.php(268): file_get_contents('/home/freelance/public_html/digitalflow/writable/')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 11:09:14 --> file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory
+in APPPATH/Controllers/PersonalInfo.php on line 268.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 268)
+ 2 APPPATH/Controllers/PersonalInfo.php(268): file_get_contents('/home/freelance/public_html/digitalflow/writable/')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 11:09:35 --> file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory
+in APPPATH/Controllers/PersonalInfo.php on line 268.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 268)
+ 2 APPPATH/Controllers/PersonalInfo.php(268): file_get_contents('/home/freelance/public_html/digitalflow/writable/')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 11:10:17 --> file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory
+in APPPATH/Controllers/PersonalInfo.php on line 268.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 268)
+ 2 APPPATH/Controllers/PersonalInfo.php(268): file_get_contents('/home/freelance/public_html/digitalflow/writable/')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 11:10:25 --> file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory
+in APPPATH/Controllers/PersonalInfo.php on line 268.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'file_get_contents(): Read of 8192 bytes failed with errno=21 Is a directory', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 268)
+ 2 APPPATH/Controllers/PersonalInfo.php(268): file_get_contents('/home/freelance/public_html/digitalflow/writable/')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 11:11:20 --> Undefined variable $fileContents
+in APPPATH/Controllers/PersonalInfo.php on line 282.
+ 1 APPPATH/Controllers/PersonalInfo.php(282): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fileContents', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 282)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->pdf()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 11:24:49 --> Trying to access array offset on value of type null
+in APPPATH/Views/users/edit_user.php on line 29.
+ 1 APPPATH/Views/users/edit_user.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Views/users/edit_user.php', 29)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/edit_user.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/edit_user', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(274): view('users/edit_user', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->edit('VFZFOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 11:32:09 --> Trying to access array offset on value of type null
+in APPPATH/Views/users/edit_user.php on line 29.
+ 1 APPPATH/Views/users/edit_user.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Views/users/edit_user.php', 29)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/edit_user.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/edit_user', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(274): view('users/edit_user', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->edit('VFZFOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 11:32:33 --> Trying to access array offset on value of type null
+in APPPATH/Views/users/edit_user.php on line 29.
+ 1 APPPATH/Views/users/edit_user.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Views/users/edit_user.php', 29)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/edit_user.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/edit_user', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(274): view('users/edit_user', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->edit('VFZSclBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 11:41:04 --> Undefined variable $user
+in APPPATH/Views/personalinfo/edit.php on line 29.
+ 1 APPPATH/Views/personalinfo/edit.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', '/home/freelance/public_html/digitalflow/app/Views/personalinfo/edit.php', 29)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/edit', [], true)
+ 5 APPPATH/Controllers/PersonalInfo.php(185): view('personalinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->edit('VFZSTlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 12:25:39 --> Trying to access array offset on value of type null
+in APPPATH/Views/users/edit_user.php on line 29.
+ 1 APPPATH/Views/users/edit_user.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Views/users/edit_user.php', 29)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/edit_user.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/edit_user', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(274): view('users/edit_user', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->edit('VFZSQlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 12:26:19 --> Undefined variable $user
+in APPPATH/Views/personalinfo/edit.php on line 76.
+ 1 APPPATH/Views/personalinfo/edit.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', '/home/freelance/public_html/digitalflow/app/Views/personalinfo/edit.php', 76)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/edit', [], true)
+ 5 APPPATH/Controllers/PersonalInfo.php(185): view('personalinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->edit('VFZSTlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 12:27:05 --> Undefined variable $user
+in APPPATH/Views/personalinfo/edit.php on line 76.
+ 1 APPPATH/Views/personalinfo/edit.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', '/home/freelance/public_html/digitalflow/app/Views/personalinfo/edit.php', 76)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/edit', [], true)
+ 5 APPPATH/Controllers/PersonalInfo.php(185): view('personalinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->edit('VFZSTlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 12:27:44 --> Undefined variable $user
+in APPPATH/Views/personalinfo/edit.php on line 76.
+ 1 APPPATH/Views/personalinfo/edit.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', '/home/freelance/public_html/digitalflow/app/Views/personalinfo/edit.php', 76)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/edit', [], true)
+ 5 APPPATH/Controllers/PersonalInfo.php(185): view('personalinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->edit('VFZSTlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 12:28:17 --> Undefined variable $value
+in APPPATH/Views/personalinfo/edit.php on line 284.
+ 1 APPPATH/Views/personalinfo/edit.php(284): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', '/home/freelance/public_html/digitalflow/app/Views/personalinfo/edit.php', 284)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/edit', [], true)
+ 5 APPPATH/Controllers/PersonalInfo.php(185): view('personalinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->edit('VFZSTlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 12:30:13 --> Undefined variable $baseurl
+in APPPATH/Views/personalinfo/edit.php on line 284.
+ 1 APPPATH/Views/personalinfo/edit.php(284): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baseurl', '/home/freelance/public_html/digitalflow/app/Views/personalinfo/edit.php', 284)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/edit', [], true)
+ 5 APPPATH/Controllers/PersonalInfo.php(185): view('personalinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->edit('VFZSSlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 12:30:51 --> Undefined variable $base
+in APPPATH/Views/personalinfo/edit.php on line 284.
+ 1 APPPATH/Views/personalinfo/edit.php(284): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base', '/home/freelance/public_html/digitalflow/app/Views/personalinfo/edit.php', 284)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/edit', [], true)
+ 5 APPPATH/Controllers/PersonalInfo.php(185): view('personalinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->edit('VFZSSlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 12:30:52 --> Undefined variable $base
+in APPPATH/Views/personalinfo/edit.php on line 284.
+ 1 APPPATH/Views/personalinfo/edit.php(284): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base', '/home/freelance/public_html/digitalflow/app/Views/personalinfo/edit.php', 284)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/edit', [], true)
+ 5 APPPATH/Controllers/PersonalInfo.php(185): view('personalinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->edit('VFZSSlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 18:19:32 --> Undefined variable $info
+in APPPATH/Views/personalinfo/view.php on line 112.
+ 1 APPPATH/Views/personalinfo/view.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', '/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php', 112)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/view', [], true)
+ 5 APPPATH/Controllers/PersonalInfo.php(263): view('personalinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->update()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 19:26:08 --> Cannot use object of type CodeIgniter\HTTP\Files\UploadedFile as array
+in APPPATH/Controllers/PersonalInfo.php on line 90.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->store()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 14:01:30 --> CodeIgniter\HTTP\SiteURI::stringifyRelativePath(): Return value must be of type string, null returned
+in SYSTEMPATH/HTTP/SiteURI.php on line 403.
+ 1 SYSTEMPATH/HTTP/SiteURI.php(415): CodeIgniter\HTTP\SiteURI->stringifyRelativePath(null)
+ 2 SYSTEMPATH/Helpers/url_helper.php(36): CodeIgniter\HTTP\SiteURI->siteUrl(null, null, null)
+ 3 APPPATH/Views/personalinfo/edit.php(274): site_url(null)
+ 4 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/edit.php')
+ 5 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/edit', [], true)
+ 7 APPPATH/Controllers/PersonalInfo.php(186): view('personalinfo/edit', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->edit('VFdwVlBRPT0=')
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 14:02:03 --> CodeIgniter\HTTP\SiteURI::stringifyRelativePath(): Return value must be of type string, null returned
+in SYSTEMPATH/HTTP/SiteURI.php on line 403.
+ 1 SYSTEMPATH/HTTP/SiteURI.php(415): CodeIgniter\HTTP\SiteURI->stringifyRelativePath(null)
+ 2 SYSTEMPATH/Helpers/url_helper.php(36): CodeIgniter\HTTP\SiteURI->siteUrl(null, null, null)
+ 3 APPPATH/Views/personalinfo/edit.php(274): site_url(null)
+ 4 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/personalinfo/edit.php')
+ 5 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('personalinfo/edit', [], true)
+ 7 APPPATH/Controllers/PersonalInfo.php(186): view('personalinfo/edit', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->edit('VFdwVlBRPT0=')
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 19:48:50 --> Undefined variable $data
+in APPPATH/Controllers/PersonalInfo.php on line 260.
+ 1 APPPATH/Controllers/PersonalInfo.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 260)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->update()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 22:14:50 --> Object of class App\Models\PersonalInfoModel could not be converted to string
+in APPPATH/Controllers/PersonalInfo.php on line 285.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->update()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 22:53:19 --> Undefined array key "file_aadhar"
+in APPPATH/Controllers/PersonalInfo.php on line 266.
+ 1 APPPATH/Controllers/PersonalInfo.php(266): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "file_aadhar"', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 266)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->update()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 17:29:10 --> syntax error, unexpected token "*"
+in APPPATH/Controllers/PersonalInfo.php on line 290.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\PersonalInfo')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\PersonalInfo')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\PersonalInfo', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 23:01:35 --> Attempt to assign property "emp_photo_filename" on array
+in APPPATH/Controllers/PersonalInfo.php on line 273.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->update()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 23:04:12 --> Attempt to assign property "emp_photo_filename" on array
+in APPPATH/Controllers/PersonalInfo.php on line 224.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->update()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 23:05:37 --> Attempt to assign property "emp_photo_filename" on array
+in APPPATH/Controllers/PersonalInfo.php on line 225.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->update()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 17:40:10 --> Can't use method return value in write context
+in APPPATH/Controllers/PersonalInfo.php on line 272.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-22 23:10:29 --> Attempt to assign property "emp_photo_filename" on array
+in APPPATH/Controllers/PersonalInfo.php on line 225.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->update()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 23:10:52 --> Attempt to modify property "emp_photo_filename" on array
+in APPPATH/Controllers/PersonalInfo.php on line 272.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->update()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 23:16:22 --> There is no data to update.
+in SYSTEMPATH/BaseModel.php on line 930.
+ 1 SYSTEMPATH/BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH/Controllers/PersonalInfo.php(294): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->update()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 23:19:49 --> Undefined array key "file_photo"
+in APPPATH/Controllers/PersonalInfo.php on line 272.
+ 1 APPPATH/Controllers/PersonalInfo.php(272): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "file_photo"', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 272)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->update()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 23:20:26 --> Undefined array key "file_photo"
+in APPPATH/Controllers/PersonalInfo.php on line 272.
+ 1 APPPATH/Controllers/PersonalInfo.php(272): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "file_photo"', '/home/freelance/public_html/digitalflow/app/Controllers/PersonalInfo.php', 272)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\PersonalInfo->update()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 19:25:39 --> Class "App\Controllers\BankAccountInfoModel" not found
+in APPPATH/Controllers/BankAccountInfo.php on line 38.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->store()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 19:45:12 --> syntax error, unexpected token "public"
+in APPPATH/Controllers/BankAccountInfo.php on line 66.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/home/freelance/public_html/digitalflow/app/Controllers/BankAccountInfo.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BankAccountInfo')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BankAccountInfo')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\BankAccountInfo', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 19:45:19 --> syntax error, unexpected token "public"
+in APPPATH/Controllers/BankAccountInfo.php on line 66.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/home/freelance/public_html/digitalflow/app/Controllers/BankAccountInfo.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BankAccountInfo')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BankAccountInfo')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\BankAccountInfo', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 19:48:47 --> Undefined variable $users
+in APPPATH/Views/bankaccountinfo/view.php on line 67.
+ 1 APPPATH/Views/bankaccountinfo/view.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php', 67)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('bankaccountinfo/view', [], true)
+ 5 APPPATH/Controllers/BankAccountInfo.php(79): view('bankaccountinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 19:49:40 --> Undefined variable $users
+in APPPATH/Views/bankaccountinfo/view.php on line 67.
+ 1 APPPATH/Views/bankaccountinfo/view.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php', 67)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('bankaccountinfo/view', [], true)
+ 5 APPPATH/Controllers/BankAccountInfo.php(79): view('bankaccountinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 19:50:06 --> Undefined array key "user_created_on"
+in APPPATH/Views/bankaccountinfo/view.php on line 78.
+ 1 APPPATH/Views/bankaccountinfo/view.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_created_on"', '/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php', 78)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('bankaccountinfo/view', [], true)
+ 5 APPPATH/Controllers/BankAccountInfo.php(79): view('bankaccountinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 19:50:37 --> Undefined array key "user_id"
+in APPPATH/Views/bankaccountinfo/view.php on line 84.
+ 1 APPPATH/Views/bankaccountinfo/view.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', '/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php', 84)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('bankaccountinfo/view', [], true)
+ 5 APPPATH/Controllers/BankAccountInfo.php(79): view('bankaccountinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 19:52:05 --> Undefined array key "user_id"
+in APPPATH/Views/bankaccountinfo/view.php on line 84.
+ 1 APPPATH/Views/bankaccountinfo/view.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', '/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php', 84)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/bankaccountinfo/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('bankaccountinfo/view', [], true)
+ 5 APPPATH/Controllers/BankAccountInfo.php(79): view('bankaccountinfo/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-22 20:22:39 --> Class "App\Controllers\PersonalInfoModel" not found
+in APPPATH/Controllers/BankAccountInfo.php on line 212.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->pdf()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-22 20:24:25 --> mysqli_sql_exception: Unknown column 'emp_deleted_on' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/BankAccountInfo.php(214): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\BankAccountInfo->pdf()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-22 20:24:25 --> Unknown column 'emp_deleted_on' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `bankaccount_info`
+WHERE `emp_deleted_on` IS NULL
+ORDER BY `bankaccount_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/BankAccountInfo.php(214): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BankAccountInfo->pdf()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BankAccountInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

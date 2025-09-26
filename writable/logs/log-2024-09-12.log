@@ -1,0 +1,375 @@
+CRITICAL - 2024-09-12 05:01:07 --> Undefined variable $data
+in APPPATH/Controllers/Assets.php on line 146.
+ 1 APPPATH/Controllers/Assets.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/home/freelance/public_html/viyoma/app/Controllers/Assets.php', 146)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 11:09:53 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, array given, called in /home/freelance/public_html/viyoma/app/Controllers/Assets.php on line 78
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 34.
+ 1 APPPATH/Controllers/Assets.php(78): CodeIgniter\HTTP\RedirectResponse->to('assets', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 11:10:56 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, array given, called in /home/freelance/public_html/viyoma/app/Controllers/Assets.php on line 81
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 34.
+ 1 APPPATH/Controllers/Assets.php(81): CodeIgniter\HTTP\RedirectResponse->to('assets', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 05:48:15 --> Undefined array key "assets_deleted_on"
+in APPPATH/Views/assets/view.php on line 1814.
+ 1 APPPATH/Views/assets/view.php(1814): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "assets_deleted_on"', '/home/freelance/public_html/viyoma/app/Views/assets/view.php', 1814)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 5 APPPATH/Controllers/Assets.php(159): view('assets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 05:48:49 --> Undefined array key "assets_deleted_on"
+in APPPATH/Views/assets/view.php on line 1820.
+ 1 APPPATH/Views/assets/view.php(1820): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "assets_deleted_on"', '/home/freelance/public_html/viyoma/app/Views/assets/view.php', 1820)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 5 APPPATH/Controllers/Assets.php(157): view('assets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 06:01:13 --> Undefined array key "assets_deleted_on"
+in APPPATH/Views/assets/view.php on line 1820.
+ 1 APPPATH/Views/assets/view.php(1820): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "assets_deleted_on"', '/home/freelance/public_html/viyoma/app/Views/assets/view.php', 1820)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 5 APPPATH/Controllers/Assets.php(157): view('assets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 06:01:16 --> Undefined array key "assets_deleted_on"
+in APPPATH/Views/assets/view.php on line 1820.
+ 1 APPPATH/Views/assets/view.php(1820): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "assets_deleted_on"', '/home/freelance/public_html/viyoma/app/Views/assets/view.php', 1820)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 5 APPPATH/Controllers/Assets.php(157): view('assets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 06:05:09 --> Undefined variable $assets_type
+in APPPATH/Views/assets/view.php on line 1820.
+ 1 APPPATH/Views/assets/view.php(1820): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_type', '/home/freelance/public_html/viyoma/app/Views/assets/view.php', 1820)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 5 APPPATH/Controllers/Assets.php(158): view('assets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 06:05:21 --> Undefined variable $assets_type
+in APPPATH/Views/assets/view.php on line 1820.
+ 1 APPPATH/Views/assets/view.php(1820): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_type', '/home/freelance/public_html/viyoma/app/Views/assets/view.php', 1820)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 5 APPPATH/Controllers/Assets.php(158): view('assets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 06:23:07 --> Unclosed '{' on line 1883
+in APPPATH/Views/assets/view.php on line 2177.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 3 APPPATH/Controllers/Assets.php(158): view('assets/view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 06:23:23 --> Unclosed '{' on line 1883
+in APPPATH/Views/assets/view.php on line 2177.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 3 APPPATH/Controllers/Assets.php(158): view('assets/view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 06:24:41 --> Unclosed '{' on line 1883
+in APPPATH/Views/assets/view.php on line 2177.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 3 APPPATH/Controllers/Assets.php(161): view('assets/view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 06:24:41 --> Unclosed '{' on line 1883
+in APPPATH/Views/assets/view.php on line 2177.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 3 APPPATH/Controllers/Assets.php(161): view('assets/view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 06:24:42 --> Unclosed '{' on line 1883
+in APPPATH/Views/assets/view.php on line 2177.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 3 APPPATH/Controllers/Assets.php(161): view('assets/view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 06:24:44 --> Unclosed '{' on line 1883
+in APPPATH/Views/assets/view.php on line 2177.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 3 APPPATH/Controllers/Assets.php(161): view('assets/view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 06:25:02 --> Unclosed '{' on line 1883
+in APPPATH/Views/assets/view.php on line 2177.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 3 APPPATH/Controllers/Assets.php(159): view('assets/view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 06:28:44 --> Unclosed '{' on line 1883
+in APPPATH/Views/assets/view.php on line 2177.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 3 APPPATH/Controllers/Assets.php(159): view('assets/view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 06:28:45 --> Unclosed '{' on line 1883
+in APPPATH/Views/assets/view.php on line 2177.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 3 APPPATH/Controllers/Assets.php(159): view('assets/view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-09-12 06:31:22 --> mysqli_sql_exception: Unknown column 'VIY' in 'where clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/Assets.php(158): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\Assets->view()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-09-12 06:31:22 --> Unknown column 'VIY' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assets`
+WHERE `assets_grn_no` in (555555555,VIY-PROD-INS-004,VIY-PROD-INS-003,VIY-PROD-DRILL-006)
+AND `assets_deleted_on` IS NULL
+ORDER BY `assets_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Assets.php(158): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-09-12 06:34:11 --> mysqli_sql_exception: Unknown column 'VIY' in 'where clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/Assets.php(158): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\Assets->view()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-09-12 06:34:11 --> Unknown column 'VIY' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assets`
+WHERE `assets_grn_no` not in (555555555,VIY-PROD-INS-004,VIY-PROD-INS-003,VIY-PROD-DRILL-006)
+AND `assets_deleted_on` IS NULL
+ORDER BY `assets_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Assets.php(158): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-09-12 06:36:06 --> mysqli_sql_exception: Unknown column 'VIY' in 'where clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/Assets.php(161): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\Assets->view()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-09-12 06:36:06 --> Unknown column 'VIY' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assets`
+WHERE `assets_grn_no` not in (555555555,VIY-PROD-INS-004,VIY-PROD-INS-003,VIY-PROD-DRILL-006)
+AND `assets_deleted_on` IS NULL
+ORDER BY `assets_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Assets.php(161): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-09-12 06:37:12 --> mysqli_sql_exception: Unknown column 'VIY' in 'where clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/Assets.php(162): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\Assets->view()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-09-12 06:37:12 --> Unknown column 'VIY' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assets`
+WHERE `assets_grn_no` not in (555555555,VIY-PROD-INS-004,VIY-PROD-INS-003,VIY-PROD-DRILL-006)
+AND `assets_deleted_on` IS NULL
+ORDER BY `assets_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Assets.php(162): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-09-12 06:37:29 --> mysqli_sql_exception: Unknown column 'VIY' in 'where clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/Assets.php(162): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\Assets->view()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-09-12 06:37:29 --> Unknown column 'VIY' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assets`
+WHERE `assets_grn_no` not in (555555555,VIY-PROD-INS-004,VIY-PROD-INS-003,VIY-PROD-DRILL-006)
+AND `assets_deleted_on` IS NULL
+ORDER BY `assets_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Assets.php(162): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 06:39:37 --> Undefined variable $assets_type
+in APPPATH/Views/assets/view.php on line 1820.
+ 1 APPPATH/Views/assets/view.php(1820): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_type', '/home/freelance/public_html/viyoma/app/Views/assets/view.php', 1820)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 5 APPPATH/Controllers/Assets.php(163): view('assets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 06:43:53 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/Assets.php on line 163.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-09-12 06:44:31 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/Assets.php on line 163.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-09-12 06:44:50 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/Assets.php on line 163.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-09-12 06:44:52 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/Assets.php on line 163.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-09-12 07:09:01 --> Undefined variable $assets_type
+in APPPATH/Views/assets/view.php on line 1820.
+ 1 APPPATH/Views/assets/view.php(1820): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_type', '/home/freelance/public_html/viyoma/app/Views/assets/view.php', 1820)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/view', [], true)
+ 5 APPPATH/Controllers/Assets.php(173): view('assets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-12 18:35:38 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/Assetsvalue.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-09-12 18:35:38 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/Assetsvalue.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-09-12 18:36:45 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/Assetsvalue.php on line 86.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-09-12 18:36:46 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/Assetsvalue.php on line 86.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-09-12 18:37:16 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/Assetsvalue.php on line 86.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-09-12 18:37:33 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/Assetsvalue.php on line 86.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-09-12 18:37:34 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/Assetsvalue.php on line 86.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-09-12 18:37:35 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/Assetsvalue.php on line 86.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-09-12 18:37:35 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/Assetsvalue.php on line 86.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-09-12 18:37:35 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/Assetsvalue.php on line 86.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-09-12 18:39:44 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH/Controllers/Assetsvalue.php on line 86.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

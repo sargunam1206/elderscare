@@ -1,0 +1,442 @@
+CRITICAL - 2025-08-22 05:43:30 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 05:45:52 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 05:45:54 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 05:45:55 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 05:45:55 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 05:46:30 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 05:46:35 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('207')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 05:46:53 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 05:48:40 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 06:02:38 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 06:26:54 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 11:57:35 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Wallet.php on line 506.
+ 1 APPPATH/Controllers/Wallet.php(506): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Wallet.php', 506)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Wallet->paymentrecd()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 06:27:45 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 06:31:55 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 06:51:38 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 06:52:11 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 07:36:38 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 07:41:21 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 07:41:59 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 09:51:22 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 10:00:08 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 10:21:54 --> Call to undefined method App\Models\PrescriptionFileModel::joins
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Prescription.php(250): CodeIgniter\Model->__call('joins', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Prescription->edit('22')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 10:23:04 --> Call to undefined method App\Models\PrescriptionModel::joins
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Prescription.php(244): CodeIgniter\Model->__call('joins', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Prescription->edit('22')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 10:23:05 --> Call to undefined method App\Models\PrescriptionModel::joins
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Prescription.php(244): CodeIgniter\Model->__call('joins', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Prescription->edit('22')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 10:24:10 --> syntax error, unexpected token "->", expecting identifier or variable or "{" or "$"
+in APPPATH/Controllers/Prescription.php on line 245.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Prescription.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Prescription')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Prescription')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\Prescription', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 10:24:11 --> syntax error, unexpected token "->", expecting identifier or variable or "{" or "$"
+in APPPATH/Controllers/Prescription.php on line 245.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Prescription.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Prescription')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Prescription')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\Prescription', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 10:24:37 --> Call to undefined method App\Models\PrescriptionModel::joins
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Prescription.php(244): CodeIgniter\Model->__call('joins', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Prescription->edit('22')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 10:24:38 --> Call to undefined method App\Models\PrescriptionModel::joins
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Prescription.php(244): CodeIgniter\Model->__call('joins', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Prescription->edit('22')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 10:26:14 --> Call to undefined method App\Models\PrescriptionModel::joins
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Prescription.php(244): CodeIgniter\Model->__call('joins', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Prescription->edit('22')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 10:26:14 --> Call to undefined method App\Models\PrescriptionModel::joins
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Prescription.php(244): CodeIgniter\Model->__call('joins', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Prescription->edit('22')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 10:26:59 --> Call to undefined method App\Models\PrescriptionModel::joins
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Prescription.php(244): CodeIgniter\Model->__call('joins', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Prescription->edit('22')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 10:26:59 --> Call to undefined method App\Models\PrescriptionModel::joins
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Prescription.php(244): CodeIgniter\Model->__call('joins', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Prescription->edit('22')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 10:27:51 --> Call to undefined method App\Models\PrescriptionModel::joins
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Prescription.php(247): CodeIgniter\Model->__call('joins', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Prescription->edit('22')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 10:29:54 --> Object of class App\Models\PrescriptionModel could not be converted to string
+in APPPATH/Controllers/Prescription.php on line 250.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Prescription->edit('22')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-22 10:31:16 --> mysqli_sql_exception: Unknown column 'prescriptions.prescription_id' in 'WHERE' in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `prescri...', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `prescri...')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `prescri...')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `prescri...', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Prescription.php(248): CodeIgniter\BaseModel->first()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Prescription->edit('22')
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-22 10:31:16 --> Unknown column 'prescriptions.prescription_id' in 'WHERE'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `prescriptions`.*, `guests_personal`.*
+FROM `prescriptions`
+JOIN `guests_personal` ON `guests_personal`.`guest_id` = `prescriptions`.`guest_id`
+WHERE `prescriptions`.`prescription_id` = :prescriptions.prescription_id:
+AND `prescriptions`.`deleted_on` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Controllers/Prescription.php(248): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Prescription->edit('22')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-22 10:44:14 --> mysqli_sql_exception: Column 'deleted_on' in WHERE is ambiguous in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `prescri...', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `prescri...')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `prescri...')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `prescri...', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Prescription.php(35): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Prescription->index()
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-22 10:44:14 --> Column 'deleted_on' in WHERE is ambiguous
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `prescriptions`.*, `guests_personal`.*
+FROM `prescriptions`
+JOIN `guests_personal` ON `guests_personal`.`guest_id` = `prescriptions`.`guest_id`
+WHERE `deleted_on` IS NULL
+AND `prescriptions`.`deleted_on` IS NULL
+ORDER BY `created_on` DESC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Prescription.php(35): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Prescription->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-22 10:44:57 --> mysqli_sql_exception: Column 'deleted_on' in WHERE is ambiguous in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `prescri...', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `prescri...')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `prescri...')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `prescri...', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Prescription.php(37): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Prescription->index()
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-22 10:44:57 --> Column 'deleted_on' in WHERE is ambiguous
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `prescriptions`.*, `guests_personal`.*
+FROM `prescriptions`
+JOIN `guests_personal` ON `guests_personal`.`guest_id` = `prescriptions`.`guest_id`
+WHERE `deleted_on` IS NULL
+AND `prescriptions`.`deleted_on` IS NULL
+ORDER BY `created_on` DESC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Prescription.php(37): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Prescription->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-22 10:46:19 --> mysqli_sql_exception: Column 'guest_id' in WHERE is ambiguous in /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `prescri...', 0)
+#1 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `prescri...')
+#2 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `prescri...')
+#3 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `prescri...', Array, false)
+#4 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Prescription.php(58): CodeIgniter\BaseModel->findAll()
+#7 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(942): App\Controllers\Prescription->index('22')
+#8 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+#9 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-08-22 10:46:19 --> Column 'guest_id' in WHERE is ambiguous
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `prescriptions`.*, `guests_personal`.*
+FROM `prescriptions`
+JOIN `guests_personal` ON `guests_personal`.`guest_id` = `prescriptions`.`guest_id`
+WHERE `prescriptions`.`deleted_on` IS NULL
+AND `guest_id` = :guest_id:
+AND `prescriptions`.`deleted_on` IS NULL
+ORDER BY `prescriptions`.`created_on` DESC, `created_on` DESC', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Prescription.php(58): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Prescription->index('22')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prescription))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 11:34:15 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 11:38:06 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 12:11:17 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 12:36:56 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 12:41:02 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 12:44:19 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 12:44:29 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 12:46:09 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 12:46:20 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 12:50:55 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 12:52:03 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-22 12:52:27 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('101')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

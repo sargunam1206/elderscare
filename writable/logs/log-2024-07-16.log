@@ -1,0 +1,1063 @@
+CRITICAL - 2024-07-16 07:31:22 --> Undefined array key "assets_band"
+in APPPATH/Views/assignedassets/index.php on line 1740.
+ 1 APPPATH/Views/assignedassets/index.php(1740): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "assets_band"', '/home/freelance/public_html/viyoma/app/Views/assignedassets/index.php', 1740)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/index', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(73): view('assignedassets/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 07:33:38 --> Undefined array key "assets_grn"
+in APPPATH/Views/assignedassets/index.php on line 1717.
+ 1 APPPATH/Views/assignedassets/index.php(1717): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "assets_grn"', '/home/freelance/public_html/viyoma/app/Views/assignedassets/index.php', 1717)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/index', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(73): view('assignedassets/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 07:33:40 --> Undefined array key "assets_grn"
+in APPPATH/Views/assignedassets/index.php on line 1717.
+ 1 APPPATH/Views/assignedassets/index.php(1717): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "assets_grn"', '/home/freelance/public_html/viyoma/app/Views/assignedassets/index.php', 1717)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/index', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(73): view('assignedassets/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 07:33:43 --> Undefined array key "assets_grn"
+in APPPATH/Views/assignedassets/index.php on line 1717.
+ 1 APPPATH/Views/assignedassets/index.php(1717): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "assets_grn"', '/home/freelance/public_html/viyoma/app/Views/assignedassets/index.php', 1717)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/index', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(73): view('assignedassets/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 07:36:05 --> Undefined array key "assets_grn"
+in APPPATH/Views/assignedassets/index.php on line 1717.
+ 1 APPPATH/Views/assignedassets/index.php(1717): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "assets_grn"', '/home/freelance/public_html/viyoma/app/Views/assignedassets/index.php', 1717)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/index', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(73): view('assignedassets/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-16 08:12:30 --> mysqli_sql_exception: Unknown column 'assets_id' in 'where clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php(240): CodeIgniter\BaseModel->first()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\AssignedAssets->assetsdata()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-07-16 08:12:30 --> Unknown column 'assets_id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assetsvalue`
+WHERE `assets_id` = :assets_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Controllers/AssignedAssets.php(240): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->assetsdata()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 08:13:07 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 249.
+ 1 APPPATH/Controllers/AssignedAssets.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 249)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->assetsdata()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 08:28:38 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 246.
+ 1 APPPATH/Controllers/AssignedAssets.php(246): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 246)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->assetsdata('12346  57467')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 08:28:43 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 249.
+ 1 APPPATH/Controllers/AssignedAssets.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 249)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->assetsdata('hgghhhh')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 08:30:20 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 246.
+ 1 APPPATH/Controllers/AssignedAssets.php(246): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 246)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->assetsdata('12346  57467')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 08:30:26 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 249.
+ 1 APPPATH/Controllers/AssignedAssets.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 249)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->assetsdata('555555555')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 08:36:54 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 249.
+ 1 APPPATH/Controllers/AssignedAssets.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 249)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->assetsdata('hgghhhh')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 08:37:02 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 246.
+ 1 APPPATH/Controllers/AssignedAssets.php(246): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 246)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->assetsdata('12346  57467')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 08:37:10 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 249.
+ 1 APPPATH/Controllers/AssignedAssets.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 249)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->assetsdata('hgghhhh')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 08:37:13 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 249.
+ 1 APPPATH/Controllers/AssignedAssets.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 249)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->assetsdata('555555555')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 08:37:25 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 249.
+ 1 APPPATH/Controllers/AssignedAssets.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 249)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->assetsdata('555555555')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 08:38:03 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 249.
+ 1 APPPATH/Controllers/AssignedAssets.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 249)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->assetsdata('hgghhhh5555')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 08:40:28 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 246.
+ 1 APPPATH/Controllers/AssignedAssets.php(246): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 246)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->assetsdata('12346  57467')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 08:40:42 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 246.
+ 1 APPPATH/Controllers/AssignedAssets.php(246): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 246)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->assetsdata('12346  57467')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 08:41:39 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 246.
+ 1 APPPATH/Controllers/AssignedAssets.php(246): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 246)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->assetsdata('12346  57467')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 08:49:07 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 246.
+ 1 APPPATH/Controllers/AssignedAssets.php(246): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 246)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->assetsdata('12346  57467')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 08:50:54 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 246.
+ 1 APPPATH/Controllers/AssignedAssets.php(246): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 246)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->assetsdata('12346  57467')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-16 14:37:05 --> mysqli_sql_exception: Column 'assets_vendor' cannot be null in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `as...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `as...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `as...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `as...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 /home/freelance/public_html/viyoma/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 /home/freelance/public_html/viyoma/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 /home/freelance/public_html/viyoma/app/Controllers/Assets.php(57): CodeIgniter\BaseModel->save(Array)
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\Assets->index()
+#10 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+#11 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-07-16 14:37:05 --> Column 'assets_vendor' cannot be null
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `assets` (`assets_grn_no`, `assets_name`, `assets_brand`, `assets_vendor`, `assets_customer_name`, `assets_party_name`, `assets_qty_avl`, `assets_rec_level`, `assets_location`, `assets_room`, `assets_created_on`, `assets_updated_on`) VALUES (:assets_grn_no:, :assets_name:, :assets_brand:, :assets_vendor:, :assets_customer_name:, :assets_party_name:, :assets_qty_avl:, :assets_rec_level:, :assets_location:, :assets_room:, :assets_created_on:, :assets_updated_on:)', [...], false)
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH/Controllers/Assets.php(57): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->index()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-16 09:35:44 --> mysqli_sql_exception: Unknown column 'assetsvalue_deleted_on' in 'where clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php(91): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-07-16 09:35:44 --> Unknown column 'assetsvalue_deleted_on' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assigned_assets`
+WHERE `assetsvalue_deleted_on` IS NULL
+ORDER BY `assetsvalue_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/AssignedAssets.php(91): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-16 09:35:46 --> mysqli_sql_exception: Unknown column 'assetsvalue_deleted_on' in 'where clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php(91): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-07-16 09:35:46 --> Unknown column 'assetsvalue_deleted_on' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assigned_assets`
+WHERE `assetsvalue_deleted_on` IS NULL
+ORDER BY `assetsvalue_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/AssignedAssets.php(91): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-16 09:35:47 --> mysqli_sql_exception: Unknown column 'assetsvalue_deleted_on' in 'where clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php(91): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-07-16 09:35:47 --> Unknown column 'assetsvalue_deleted_on' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assigned_assets`
+WHERE `assetsvalue_deleted_on` IS NULL
+ORDER BY `assetsvalue_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/AssignedAssets.php(91): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-16 10:20:05 --> mysqli_sql_exception: Unknown column 'assetsvalue_deleted_on' in 'where clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php(91): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-07-16 10:20:05 --> Unknown column 'assetsvalue_deleted_on' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assigned_assets`
+WHERE `assetsvalue_deleted_on` IS NULL
+ORDER BY `assetsvalue_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/AssignedAssets.php(91): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-16 10:20:07 --> mysqli_sql_exception: Unknown column 'assetsvalue_deleted_on' in 'where clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php(91): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-07-16 10:20:07 --> Unknown column 'assetsvalue_deleted_on' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assigned_assets`
+WHERE `assetsvalue_deleted_on` IS NULL
+ORDER BY `assetsvalue_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/AssignedAssets.php(91): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-16 10:22:14 --> mysqli_sql_exception: Unknown column 'assetsvalue_deleted_on' in 'where clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php(91): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-07-16 10:22:14 --> Unknown column 'assetsvalue_deleted_on' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assigned_assets`
+WHERE `assetsvalue_deleted_on` IS NULL
+ORDER BY `assetsvalue_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/AssignedAssets.php(91): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-16 10:22:42 --> mysqli_sql_exception: Unknown column 'assetsvalue_id' in 'order clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php(91): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-07-16 10:22:42 --> Unknown column 'assetsvalue_id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assigned_assets`
+WHERE `assigned_assets_deleted_on` IS NULL
+ORDER BY `assetsvalue_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/AssignedAssets.php(91): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-16 10:22:44 --> mysqli_sql_exception: Unknown column 'assetsvalue_id' in 'order clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php(91): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-07-16 10:22:44 --> Unknown column 'assetsvalue_id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assigned_assets`
+WHERE `assigned_assets_deleted_on` IS NULL
+ORDER BY `assetsvalue_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/AssignedAssets.php(91): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-16 10:22:45 --> mysqli_sql_exception: Unknown column 'assetsvalue_id' in 'order clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php(91): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-07-16 10:22:45 --> Unknown column 'assetsvalue_id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `assigned_assets`
+WHERE `assigned_assets_deleted_on` IS NULL
+ORDER BY `assetsvalue_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/AssignedAssets.php(91): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 11:13:44 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 102.
+ 1 APPPATH/Controllers/AssignedAssets.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 102)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 11:15:19 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 102.
+ 1 APPPATH/Controllers/AssignedAssets.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 102)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 11:15:21 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 102.
+ 1 APPPATH/Controllers/AssignedAssets.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 102)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 11:15:22 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 102.
+ 1 APPPATH/Controllers/AssignedAssets.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 102)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 11:19:09 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 102.
+ 1 APPPATH/Controllers/AssignedAssets.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 102)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 11:20:43 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 107.
+ 1 APPPATH/Controllers/AssignedAssets.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 107)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 11:28:02 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 107.
+ 1 APPPATH/Controllers/AssignedAssets.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 107)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 11:29:49 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 102.
+ 1 APPPATH/Controllers/AssignedAssets.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 102)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 11:36:11 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/view.php on line 1733.
+ 1 APPPATH/Views/assetsvalue/view.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assetsvalue/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 11:36:21 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/view.php on line 1733.
+ 1 APPPATH/Views/assetsvalue/view.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assetsvalue/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 11:36:23 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/view.php on line 1733.
+ 1 APPPATH/Views/assetsvalue/view.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assetsvalue/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 11:36:42 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/view.php on line 1733.
+ 1 APPPATH/Views/assetsvalue/view.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assetsvalue/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 11:48:42 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/view.php on line 1733.
+ 1 APPPATH/Views/assetsvalue/view.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assetsvalue/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 11:54:23 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/view.php on line 1733.
+ 1 APPPATH/Views/assetsvalue/view.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assetsvalue/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:34:40 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/view.php on line 1733.
+ 1 APPPATH/Views/assetsvalue/view.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assetsvalue/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:34:46 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/view.php on line 1733.
+ 1 APPPATH/Views/assetsvalue/view.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assetsvalue/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:35:21 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/view.php on line 1733.
+ 1 APPPATH/Views/assetsvalue/view.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assetsvalue/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:35:23 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/view.php on line 1733.
+ 1 APPPATH/Views/assetsvalue/view.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assetsvalue/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:35:25 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/view.php on line 1733.
+ 1 APPPATH/Views/assetsvalue/view.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assetsvalue/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:37:12 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/view.php on line 1733.
+ 1 APPPATH/Views/assetsvalue/view.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assetsvalue/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:37:14 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/view.php on line 1733.
+ 1 APPPATH/Views/assetsvalue/view.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assetsvalue/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:38:41 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/view.php on line 1733.
+ 1 APPPATH/Views/assetsvalue/view.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assetsvalue/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:38:43 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/view.php on line 1733.
+ 1 APPPATH/Views/assetsvalue/view.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assetsvalue/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:38:45 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/view.php on line 1733.
+ 1 APPPATH/Views/assetsvalue/view.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assetsvalue/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:38:59 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/view.php on line 1733.
+ 1 APPPATH/Views/assetsvalue/view.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assetsvalue/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:39:01 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/view.php on line 1733.
+ 1 APPPATH/Views/assetsvalue/view.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assetsvalue/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:41:11 --> Undefined variable $base
+in APPPATH/Views/assignedassets/view.php on line 1758.
+ 1 APPPATH/Views/assignedassets/view.php(1758): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1758)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:42:22 --> Undefined variable $assests_grn_no
+in APPPATH/Views/assignedassets/view.php on line 1745.
+ 1 APPPATH/Views/assignedassets/view.php(1745): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assests_grn_no', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1745)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:44:25 --> Undefined variable $assests_grn_no
+in APPPATH/Views/assignedassets/view.php on line 1747.
+ 1 APPPATH/Views/assignedassets/view.php(1747): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assests_grn_no', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1747)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:44:27 --> Undefined variable $assests_grn_no
+in APPPATH/Views/assignedassets/view.php on line 1747.
+ 1 APPPATH/Views/assignedassets/view.php(1747): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assests_grn_no', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1747)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:44:49 --> Undefined array key 2
+in APPPATH/Views/assignedassets/view.php on line 1747.
+ 1 APPPATH/Views/assignedassets/view.php(1747): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1747)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:44:51 --> Undefined array key 2
+in APPPATH/Views/assignedassets/view.php on line 1747.
+ 1 APPPATH/Views/assignedassets/view.php(1747): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1747)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:44:52 --> Undefined array key 2
+in APPPATH/Views/assignedassets/view.php on line 1747.
+ 1 APPPATH/Views/assignedassets/view.php(1747): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1747)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:46:05 --> Undefined array key 2
+in APPPATH/Views/assignedassets/view.php on line 1747.
+ 1 APPPATH/Views/assignedassets/view.php(1747): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1747)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 12:46:16 --> Undefined array key 2
+in APPPATH/Views/assignedassets/view.php on line 1747.
+ 1 APPPATH/Views/assignedassets/view.php(1747): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1747)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(125): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:26:18 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 212.
+ 1 APPPATH/Controllers/AssignedAssets.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 212)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:26:39 --> Undefined variable $assets
+in APPPATH/Controllers/AssignedAssets.php on line 99.
+ 1 APPPATH/Controllers/AssignedAssets.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 99)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:26:43 --> Undefined variable $assets
+in APPPATH/Controllers/AssignedAssets.php on line 99.
+ 1 APPPATH/Controllers/AssignedAssets.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 99)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:26:45 --> Undefined variable $assets
+in APPPATH/Controllers/AssignedAssets.php on line 99.
+ 1 APPPATH/Controllers/AssignedAssets.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 99)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:27:29 --> Undefined variable $assets
+in APPPATH/Controllers/AssignedAssets.php on line 99.
+ 1 APPPATH/Controllers/AssignedAssets.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 99)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:30:53 --> count(): Argument #1 ($value) must be of type Countable|array, string given
+in APPPATH/Views/assignedassets/view.php on line 1756.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 4 APPPATH/Controllers/AssignedAssets.php(237): view('assignedassets/view', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:31:09 --> Undefined variable $assets_info
+in APPPATH/Views/assignedassets/edit.php on line 1734.
+ 1 APPPATH/Views/assignedassets/edit.php(1734): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_info', '/home/freelance/public_html/viyoma/app/Views/assignedassets/edit.php', 1734)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/edit', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(237): view('assignedassets/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:31:41 --> Invalid file: "editassignedassets/edit.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('editassignedassets/edit.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editassignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(237): view('editassignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:32:48 --> Invalid file: "editassignedassets/edit.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('editassignedassets/edit.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editassignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(237): view('editassignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:32:50 --> Invalid file: "editassignedassets/edit.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('editassignedassets/edit.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editassignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(237): view('editassignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:35:12 --> Invalid file: "editassignedassets/edit.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('editassignedassets/edit.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editassignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(242): view('editassignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:35:21 --> Invalid file: "editassignedassets/edit.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('editassignedassets/edit.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editassignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(242): view('editassignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:36:31 --> Invalid file: "editassignedassets/edit.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('editassignedassets/edit.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editassignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(242): view('editassignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:39:12 --> Invalid file: "editassignedassets/edit.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('editassignedassets/edit.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editassignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(242): view('editassignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:39:17 --> Invalid file: "editassignedassets/edit.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('editassignedassets/edit.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editassignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(242): view('editassignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:39:20 --> Invalid file: "editassignedassets/edit.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('editassignedassets/edit.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editassignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(242): view('editassignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:40:56 --> Invalid file: "editassignedassets/edit.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('editassignedassets/edit.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editassignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(242): view('editassignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:40:58 --> Invalid file: "editassignedassets/edit.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('editassignedassets/edit.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editassignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(242): view('editassignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:41:51 --> Invalid file: "editassignedassets/edit.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('editassignedassets/edit.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editassignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(242): view('editassignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:41:54 --> Invalid file: "editassignedassets/edit.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('editassignedassets/edit.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editassignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(242): view('editassignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:43:22 --> Invalid file: "editassignedassets/edit.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('editassignedassets/edit.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editassignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(242): view('editassignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:43:23 --> Invalid file: "editassignedassets/edit.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('editassignedassets/edit.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editassignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(242): view('editassignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:43:25 --> Invalid file: "editassignedassets/edit.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('editassignedassets/edit.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editassignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(242): view('editassignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:43:34 --> Invalid file: "editassignedassets/edit.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('editassignedassets/edit.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editassignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(242): view('editassignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:49:30 --> syntax error, unexpected token ";", expecting ")"
+in APPPATH/Views/assignedassets/edit.php on line 135.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(242): view('assignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:49:32 --> syntax error, unexpected token ";", expecting ")"
+in APPPATH/Views/assignedassets/edit.php on line 135.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(242): view('assignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 13:58:55 --> Undefined variable $info
+in APPPATH/Views/assignedassets/edit.php on line 1733.
+ 1 APPPATH/Views/assignedassets/edit.php(1733): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', '/home/freelance/public_html/viyoma/app/Views/assignedassets/edit.php', 1733)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/edit', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(242): view('assignedassets/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VGxFOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 19:43:10 --> Undefined variable $users
+in APPPATH/Controllers/AssignedAssets.php on line 163.
+ 1 APPPATH/Controllers/AssignedAssets.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 163)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->update()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

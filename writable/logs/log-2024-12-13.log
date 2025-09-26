@@ -1,0 +1,113 @@
+CRITICAL - 2024-12-13 05:27:19 --> Undefined variable $full
+in APPPATH\Controllers\AddPurchase.php on line 129.
+ 1 APPPATH\Controllers\AddPurchase.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\AddPurchase.php', 129)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddPurchase->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AddPurchase))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-13 11:19:57 --> Array to string conversion
+in APPPATH\Controllers\AddPurchase.php on line 125.
+ 1 APPPATH\Controllers\AddPurchase.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\viyoma\\app\\Controllers\\AddPurchase.php', 125)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddPurchase->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AddPurchase))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-13 08:51:11 --> Undefined variable $asset
+in APPPATH\Views\uom\create.php on line 176.
+ 1 APPPATH\Views\uom\create.php(176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\create.php', 176)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('uom/create', [], true)
+ 5 APPPATH\Controllers\Uom.php(45): view('uom/create')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Uom->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uom))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-13 08:51:34 --> Undefined variable $asset
+in APPPATH\Views\uom\create.php on line 176.
+ 1 APPPATH\Views\uom\create.php(176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\create.php', 176)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('uom/create', [], true)
+ 5 APPPATH\Controllers\Uom.php(45): view('uom/create')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Uom->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uom))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-13 08:52:16 --> Undefined variable $asset
+in APPPATH\Views\uom\edit.php on line 235.
+ 1 APPPATH\Views\uom\edit.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\edit.php', 235)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('uom/edit', [], true)
+ 5 APPPATH\Controllers\Uom.php(71): view('uom/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Uom->edit('10')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uom))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-13 08:52:30 --> Undefined variable $asset
+in APPPATH\Views\uom\edit.php on line 235.
+ 1 APPPATH\Views\uom\edit.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\edit.php', 235)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('uom/edit', [], true)
+ 5 APPPATH\Controllers\Uom.php(71): view('uom/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Uom->edit('10')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uom))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-13 08:52:31 --> Undefined variable $asset
+in APPPATH\Views\uom\edit.php on line 235.
+ 1 APPPATH\Views\uom\edit.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\edit.php', 235)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('uom/edit', [], true)
+ 5 APPPATH\Controllers\Uom.php(71): view('uom/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Uom->edit('10')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uom))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-13 08:54:20 --> Undefined variable $asset
+in APPPATH\Views\uom\edit.php on line 235.
+ 1 APPPATH\Views\uom\edit.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\edit.php', 235)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('uom/edit', [], true)
+ 5 APPPATH\Controllers\Uom.php(71): view('uom/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Uom->edit('10')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uom))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-13 08:57:38 --> Undefined variable $asset
+in APPPATH\Views\uom\edit.php on line 235.
+ 1 APPPATH\Views\uom\edit.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\edit.php', 235)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('uom/edit', [], true)
+ 5 APPPATH\Controllers\Uom.php(71): view('uom/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Uom->edit('10')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uom))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-13 08:58:04 --> Undefined variable $asset
+in APPPATH\Views\uom\edit.php on line 235.
+ 1 APPPATH\Views\uom\edit.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asset', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\edit.php', 235)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('uom/edit', [], true)
+ 5 APPPATH\Controllers\Uom.php(71): view('uom/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Uom->edit('10')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uom))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-13 09:00:35 --> Undefined array key "id"
+in APPPATH\Views\uom\view.php on line 1954.
+ 1 APPPATH\Views\uom\view.php(1954): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\view.php', 1954)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\viyoma\\app\\Views\\uom\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('uom/view', [], true)
+ 5 APPPATH\Controllers\Uom.php(56): view('uom/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Uom->view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uom))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

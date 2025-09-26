@@ -1,0 +1,135 @@
+CRITICAL - 2024-06-23 09:28:46 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/RecruitmentInfo.php on line 400.
+ 1 APPPATH/Controllers/RecruitmentInfo.php(400): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/RecruitmentInfo.php', 400)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RecruitmentInfo->designation('All Department')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecruitmentInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 10:12:13 --> syntax error, unexpected token "public"
+in APPPATH/Controllers/RecruitmentInfo.php on line 411.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/home/freelance/public_html/digitalflow/app/Controllers/RecruitmentInfo.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\RecruitmentInfo')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\RecruitmentInfo')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\RecruitmentInfo', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 10:13:20 --> syntax error, unexpected token "public"
+in APPPATH/Controllers/RecruitmentInfo.php on line 411.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/home/freelance/public_html/digitalflow/app/Controllers/RecruitmentInfo.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\RecruitmentInfo')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\RecruitmentInfo')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\RecruitmentInfo', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 10:13:25 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/RecruitmentInfo.php on line 419.
+ 1 APPPATH/Controllers/RecruitmentInfo.php(419): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/RecruitmentInfo.php', 419)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RecruitmentInfo->designation('All Department')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecruitmentInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-23 10:13:29 --> mysqli_sql_exception: Unknown column 'candidate_status' in 'where clause' in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/RecruitmentInfo.php(347): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\RecruitmentInfo->candidates()
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecruitmentInfo))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-06-23 10:13:29 --> Unknown column 'candidate_status' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `recruitment_info`
+WHERE `deleted_on` IS NULL
+AND `candidate_status` = :candidate_status:
+ORDER BY `id` ASC', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/RecruitmentInfo.php(347): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RecruitmentInfo->candidates()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecruitmentInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 10:15:02 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/RecruitmentInfo.php on line 419.
+ 1 APPPATH/Controllers/RecruitmentInfo.php(419): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/RecruitmentInfo.php', 419)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RecruitmentInfo->designation('All Department')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecruitmentInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 10:15:17 --> Undefined variable $users
+in APPPATH/Views/recruitmentinfo/contacts.php on line 108.
+ 1 APPPATH/Views/recruitmentinfo/contacts.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/recruitmentinfo/contacts.php', 108)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/recruitmentinfo/contacts.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('recruitmentinfo/contacts', [], true)
+ 5 APPPATH/Controllers/RecruitmentInfo.php(407): view('recruitmentinfo/contacts', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RecruitmentInfo->candidates()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecruitmentInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 10:15:34 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/RecruitmentInfo.php on line 419.
+ 1 APPPATH/Controllers/RecruitmentInfo.php(419): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/RecruitmentInfo.php', 419)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RecruitmentInfo->designation('All Department')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecruitmentInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 10:15:38 --> Undefined variable $users
+in APPPATH/Views/recruitmentinfo/contacts.php on line 108.
+ 1 APPPATH/Views/recruitmentinfo/contacts.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/recruitmentinfo/contacts.php', 108)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/recruitmentinfo/contacts.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('recruitmentinfo/contacts', [], true)
+ 5 APPPATH/Controllers/RecruitmentInfo.php(407): view('recruitmentinfo/contacts', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RecruitmentInfo->candidates()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecruitmentInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 10:17:05 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/RecruitmentInfo.php on line 431.
+ 1 APPPATH/Controllers/RecruitmentInfo.php(431): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/RecruitmentInfo.php', 431)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RecruitmentInfo->designation('All Department')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecruitmentInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 10:17:10 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/RecruitmentInfo.php on line 431.
+ 1 APPPATH/Controllers/RecruitmentInfo.php(431): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/RecruitmentInfo.php', 431)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RecruitmentInfo->designation('All Department')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecruitmentInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 10:17:14 --> Undefined variable $users
+in APPPATH/Views/recruitmentinfo/contacts.php on line 108.
+ 1 APPPATH/Views/recruitmentinfo/contacts.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/recruitmentinfo/contacts.php', 108)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/recruitmentinfo/contacts.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('recruitmentinfo/contacts', [], true)
+ 5 APPPATH/Controllers/RecruitmentInfo.php(419): view('recruitmentinfo/contacts', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RecruitmentInfo->candidates()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecruitmentInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 10:17:34 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/RecruitmentInfo.php on line 431.
+ 1 APPPATH/Controllers/RecruitmentInfo.php(431): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/RecruitmentInfo.php', 431)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RecruitmentInfo->designation('All Department')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecruitmentInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-23 10:17:39 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/RecruitmentInfo.php on line 431.
+ 1 APPPATH/Controllers/RecruitmentInfo.php(431): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/RecruitmentInfo.php', 431)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\RecruitmentInfo->designation('All Department')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecruitmentInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

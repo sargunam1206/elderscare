@@ -1,0 +1,8 @@
+{
+    "require": {
+        "twilio/sdk": "^7.16",
+        "phpmailer/phpmailer": "^6.9",
+        "mpdf/mpdf": "^8.2",
+        "phpoffice/phpspreadsheet": "^3.6"
+    }
+}

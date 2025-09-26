@@ -1,0 +1,422 @@
+CRITICAL - 2024-07-19 00:50:22 --> Undefined variable $data
+in APPPATH/Controllers/Purchase.php on line 115.
+ 1 APPPATH/Controllers/Purchase.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/home/freelance/public_html/viyoma/app/Controllers/Purchase.php', 115)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Purchase->view()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Purchase))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-19 00:51:10 --> mysqli_sql_exception: Unknown column 'purchase_date' in 'where clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/Purchase.php(109): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\Purchase->view()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Purchase))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-07-19 00:51:10 --> Unknown column 'purchase_date' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `purchase`
+WHERE `purchase_date` >= :purchase_date:
+AND `purchase_date` <= :purchase_date.1:
+AND `purchase_deleted_on` IS NULL
+ORDER BY `purchase_id` ASC', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Purchase.php(109): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Purchase->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Purchase))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 02:35:28 --> Class "App\Controllers\AssetsInfoModel" not found
+in APPPATH/Controllers/Depreciation.php on line 84.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Depreciation->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Depreciation))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 02:36:11 --> Class "App\Controllers\AssetsInfoModel" not found
+in APPPATH/Controllers/Depreciation.php on line 86.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Depreciation->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Depreciation))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 03:01:33 --> Class "App\Controllers\PurchaseInfoModel" not found
+in APPPATH/Controllers/Depreciation.php on line 38.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Depreciation->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Depreciation))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 03:01:57 --> Class "App\Models\DepriciaionInfoModel" not found
+in APPPATH/Controllers/Depreciation.php on line 38.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Depreciation->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Depreciation))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 03:02:50 --> Class "App\Models\DepreciaionInfoModel" not found
+in APPPATH/Controllers/Depreciation.php on line 38.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Depreciation->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Depreciation))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 03:03:33 --> Class "App\Controllers\DepreciationInfoModel" not found
+in APPPATH/Controllers/Depreciation.php on line 38.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Depreciation->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Depreciation))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 03:03:52 --> Class "App\Controllers\DepreciationInfoModel" not found
+in APPPATH/Controllers/Depreciation.php on line 38.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Depreciation->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Depreciation))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 03:04:00 --> Class "App\Controllers\DepreciationInfoModel" not found
+in APPPATH/Controllers/Depreciation.php on line 38.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Depreciation->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Depreciation))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 04:07:40 --> Undefined variable $assets_info
+in APPPATH/Views/depreciation/edit.php on line 1717.
+ 1 APPPATH/Views/depreciation/edit.php(1717): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_info', '/home/freelance/public_html/viyoma/app/Views/depreciation/edit.php', 1717)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/depreciation/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('depreciation/edit', [], true)
+ 5 APPPATH/Controllers/Depreciation.php(219): view('depreciation/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Depreciation->edit('VFZFOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Depreciation))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 04:09:09 --> Undefined variable $assets_info
+in APPPATH/Views/depreciation/edit.php on line 1725.
+ 1 APPPATH/Views/depreciation/edit.php(1725): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_info', '/home/freelance/public_html/viyoma/app/Views/depreciation/edit.php', 1725)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/depreciation/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('depreciation/edit', [], true)
+ 5 APPPATH/Controllers/Depreciation.php(219): view('depreciation/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Depreciation->edit('VFZFOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Depreciation))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 04:09:56 --> Undefined array key "life_in_years"
+in APPPATH/Views/depreciation/edit.php on line 1788.
+ 1 APPPATH/Views/depreciation/edit.php(1788): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "life_in_years"', '/home/freelance/public_html/viyoma/app/Views/depreciation/edit.php', 1788)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/depreciation/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('depreciation/edit', [], true)
+ 5 APPPATH/Controllers/Depreciation.php(221): view('depreciation/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Depreciation->edit('VFZFOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Depreciation))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-19 10:17:53 --> mysqli_sql_exception: Unknown column 'purchase_id' in 'order clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/Depreciation.php(106): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\Depreciation->view()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Depreciation))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-07-19 10:17:53 --> Unknown column 'purchase_id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `depreciation`
+WHERE `depreciation_created_date` >= :depreciation_created_date:
+AND `depreciation_created_date` <= :depreciation_created_date.1:
+AND `depreciation_deleted_on` IS NULL
+ORDER BY `purchase_id` ASC', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Depreciation.php(106): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Depreciation->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Depreciation))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 05:32:09 --> Invalid file: "return/index.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('return/index.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return/index', [], true)
+ 3 APPPATH/Controllers/ReturnInfo.php(71): view('return/index')
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 05:34:44 --> Invalid file: "return/index.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('return/index.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return/index', [], true)
+ 3 APPPATH/Controllers/ReturnInfo.php(71): view('return/index')
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 05:34:45 --> Invalid file: "return/index.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('return/index.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return/index', [], true)
+ 3 APPPATH/Controllers/ReturnInfo.php(71): view('return/index')
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 05:35:27 --> Invalid file: "return/index.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('return/index.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return/index', [], true)
+ 3 APPPATH/Controllers/ReturnInfo.php(73): view('return/index')
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 05:36:27 --> syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+in APPPATH/Views/return_info/index.php on line 1965.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/index', [], true)
+ 3 APPPATH/Controllers/ReturnInfo.php(73): view('return_info/index')
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 05:37:32 --> Undefined variable $assets_info
+in APPPATH/Views/return_info/index.php on line 1714.
+ 1 APPPATH/Views/return_info/index.php(1714): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_info', '/home/freelance/public_html/viyoma/app/Views/return_info/index.php', 1714)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/index', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(73): view('return_info/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 05:38:04 --> Undefined variable $assets_info
+in APPPATH/Views/return_info/index.php on line 1714.
+ 1 APPPATH/Views/return_info/index.php(1714): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_info', '/home/freelance/public_html/viyoma/app/Views/return_info/index.php', 1714)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/index', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(73): view('return_info/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 05:38:05 --> Undefined variable $assets_info
+in APPPATH/Views/return_info/index.php on line 1714.
+ 1 APPPATH/Views/return_info/index.php(1714): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_info', '/home/freelance/public_html/viyoma/app/Views/return_info/index.php', 1714)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/index', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(73): view('return_info/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 05:38:22 --> Undefined variable $assets_info
+in APPPATH/Views/return_info/index.php on line 1714.
+ 1 APPPATH/Views/return_info/index.php(1714): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_info', '/home/freelance/public_html/viyoma/app/Views/return_info/index.php', 1714)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/index', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(73): view('return_info/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 05:38:23 --> Undefined variable $assets_info
+in APPPATH/Views/return_info/index.php on line 1714.
+ 1 APPPATH/Views/return_info/index.php(1714): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_info', '/home/freelance/public_html/viyoma/app/Views/return_info/index.php', 1714)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/index', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(73): view('return_info/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 05:38:25 --> Undefined variable $assets_info
+in APPPATH/Views/return_info/index.php on line 1714.
+ 1 APPPATH/Views/return_info/index.php(1714): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_info', '/home/freelance/public_html/viyoma/app/Views/return_info/index.php', 1714)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/index', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(73): view('return_info/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 05:39:45 --> Undefined variable $assets_info
+in APPPATH/Views/return_info/index.php on line 1715.
+ 1 APPPATH/Views/return_info/index.php(1715): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_info', '/home/freelance/public_html/viyoma/app/Views/return_info/index.php', 1715)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/index', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(76): view('return_info/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 05:39:47 --> Undefined variable $assets_info
+in APPPATH/Views/return_info/index.php on line 1715.
+ 1 APPPATH/Views/return_info/index.php(1715): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_info', '/home/freelance/public_html/viyoma/app/Views/return_info/index.php', 1715)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/index', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(76): view('return_info/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 05:39:48 --> Undefined variable $assets_info
+in APPPATH/Views/return_info/index.php on line 1715.
+ 1 APPPATH/Views/return_info/index.php(1715): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_info', '/home/freelance/public_html/viyoma/app/Views/return_info/index.php', 1715)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/index', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(76): view('return_info/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 05:47:17 --> Undefined variable $assets_info
+in APPPATH/Views/return_info/index.php on line 1715.
+ 1 APPPATH/Views/return_info/index.php(1715): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_info', '/home/freelance/public_html/viyoma/app/Views/return_info/index.php', 1715)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/index', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(76): view('return_info/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-19 11:19:37 --> mysqli_sql_exception: Table 'inventory.return' doesn't exist in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 /home/freelance/public_html/viyoma/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 /home/freelance/public_html/viyoma/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 /home/freelance/public_html/viyoma/app/Controllers/ReturnInfo.php(59): CodeIgniter\BaseModel->save(Array)
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+#10 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+#11 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-07-19 11:19:37 --> Table 'inventory.return' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `return` (`assets_grn_no`, `returned_date`, `returned_by`, `approved_by`, `return_qty`, `return_created_date`, `return_created_on`, `return_updated_on`) VALUES (:assets_grn_no:, :returned_date:, :returned_by:, :approved_by:, :return_qty:, :return_created_date:, :return_created_on:, :return_updated_on:)', [...], false)
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH/Controllers/ReturnInfo.php(59): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-19 05:53:57 --> mysqli_sql_exception: Unknown column 'purchase_deleted_on' in 'where clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/ReturnInfo.php(107): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\ReturnInfo->view()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-07-19 05:53:57 --> Unknown column 'purchase_deleted_on' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `return_info`
+WHERE `purchase_deleted_on` IS NULL
+ORDER BY `purchase_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/ReturnInfo.php(107): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 06:31:49 --> Undefined variable $assets_info
+in APPPATH/Views/return_info/edit.php on line 1717.
+ 1 APPPATH/Views/return_info/edit.php(1717): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_info', '/home/freelance/public_html/viyoma/app/Views/return_info/edit.php', 1717)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/edit', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(198): view('return_info/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->edit('VFdjOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 06:35:07 --> Undefined variable $assets_info
+in APPPATH/Views/return_info/edit.php on line 1717.
+ 1 APPPATH/Views/return_info/edit.php(1717): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_info', '/home/freelance/public_html/viyoma/app/Views/return_info/edit.php', 1717)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/edit', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(198): view('return_info/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->edit('VFdjOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 06:35:35 --> Undefined variable $assets_info
+in APPPATH/Views/return_info/edit.php on line 1726.
+ 1 APPPATH/Views/return_info/edit.php(1726): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assets_info', '/home/freelance/public_html/viyoma/app/Views/return_info/edit.php', 1726)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/edit', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(198): view('return_info/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->edit('VFdjOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 07:13:48 --> Undefined variable $alldata
+in APPPATH/Views/purchase/index.php on line 171.
+ 1 APPPATH/Views/purchase/index.php(171): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/purchase/index.php', 171)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/purchase/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('purchase/index', [], true)
+ 5 APPPATH/Controllers/Purchase.php(83): view('purchase/index')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Purchase->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Purchase))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 07:22:05 --> Undefined array key "return_id"
+in APPPATH/Views/depreciation/view.php on line 196.
+ 1 APPPATH/Views/depreciation/view.php(196): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "return_id"', '/home/freelance/public_html/viyoma/app/Views/depreciation/view.php', 196)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/depreciation/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('depreciation/view', [], true)
+ 5 APPPATH/Controllers/Depreciation.php(114): view('depreciation/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Depreciation->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Depreciation))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 07:30:29 --> Undefined variable $alldata
+in APPPATH/Views/assetsvalue/index.php on line 191.
+ 1 APPPATH/Views/assetsvalue/index.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alldata', '/home/freelance/public_html/viyoma/app/Views/assetsvalue/index.php', 191)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assetsvalue/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assetsvalue/index', [], true)
+ 5 APPPATH/Controllers/Assetsvalue.php(70): view('assetsvalue/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assetsvalue->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assetsvalue))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

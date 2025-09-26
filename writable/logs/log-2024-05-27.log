@@ -1,0 +1,222 @@
+CRITICAL - 2024-05-27 10:45:20 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 485.
+ 1 APPPATH/Controllers/UserInfo.php(485): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 485)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('143')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 11:26:33 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 485.
+ 1 APPPATH/Controllers/UserInfo.php(485): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 485)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('1234')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 11:32:59 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 485.
+ 1 APPPATH/Controllers/UserInfo.php(485): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 485)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('456')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 11:54:20 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/UserInfo.php on line 485.
+ 1 APPPATH/Controllers/UserInfo.php(485): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 485)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->list('2121321')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 13:09:07 --> Undefined variable $base
+in APPPATH/Controllers/UserInfo.php on line 540.
+ 1 APPPATH/Controllers/UserInfo.php(540): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base', '/home/freelance/public_html/digitalflow/app/Controllers/UserInfo.php', 540)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 13:09:34 --> Class "App\Controllers\DepartmentInfoModel" not found
+in APPPATH/Controllers/UserInfo.php on line 543.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 13:09:35 --> Class "App\Controllers\DepartmentInfoModel" not found
+in APPPATH/Controllers/UserInfo.php on line 543.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 13:24:29 --> Undefined variable $page
+in APPPATH/Views/layout/users_view.php on line 172.
+ 1 APPPATH/Views/layout/users_view.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', '/home/freelance/public_html/digitalflow/app/Views/layout/users_view.php', 172)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/layout/users_view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(244): CodeIgniter\View\View->render('layout/users_view', [], true)
+ 5 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 6 APPPATH/Controllers/UserInfo.php(546): view('users/welcome')
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 13:25:31 --> Undefined variable $page
+in APPPATH/Views/layout/users_view.php on line 172.
+ 1 APPPATH/Views/layout/users_view.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', '/home/freelance/public_html/digitalflow/app/Views/layout/users_view.php', 172)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/layout/users_view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(244): CodeIgniter\View\View->render('layout/users_view', [], true)
+ 5 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 6 APPPATH/Controllers/UserInfo.php(546): view('users/welcome')
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 13:36:17 --> Trying to access array offset on value of type int
+in APPPATH/Views/users/welcome.php on line 40.
+ 1 APPPATH/Views/users/welcome.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', '/home/freelance/public_html/digitalflow/app/Views/users/welcome.php', 40)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/welcome.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(546): view('users/welcome')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 13:36:41 --> Trying to access array offset on value of type int
+in APPPATH/Views/users/welcome.php on line 40.
+ 1 APPPATH/Views/users/welcome.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', '/home/freelance/public_html/digitalflow/app/Views/users/welcome.php', 40)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/welcome.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(546): view('users/welcome')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 13:36:57 --> Undefined array key 4
+in APPPATH/Views/users/welcome.php on line 40.
+ 1 APPPATH/Views/users/welcome.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', '/home/freelance/public_html/digitalflow/app/Views/users/welcome.php', 40)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/welcome.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(546): view('users/welcome')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 13:36:58 --> Undefined array key 4
+in APPPATH/Views/users/welcome.php on line 40.
+ 1 APPPATH/Views/users/welcome.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', '/home/freelance/public_html/digitalflow/app/Views/users/welcome.php', 40)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/welcome.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(546): view('users/welcome')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 14:08:00 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/users/welcome.php on line 30.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 4 APPPATH/Controllers/UserInfo.php(546): view('users/welcome')
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 14:08:32 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/users/welcome.php on line 30.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 4 APPPATH/Controllers/UserInfo.php(546): view('users/welcome')
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 14:09:36 --> Undefined variable $department
+in APPPATH/Views/users/welcome.php on line 30.
+ 1 APPPATH/Views/users/welcome.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $department', '/home/freelance/public_html/digitalflow/app/Views/users/welcome.php', 30)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/welcome.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(546): view('users/welcome')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 14:09:37 --> Undefined variable $department
+in APPPATH/Views/users/welcome.php on line 30.
+ 1 APPPATH/Views/users/welcome.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $department', '/home/freelance/public_html/digitalflow/app/Views/users/welcome.php', 30)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/welcome.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(546): view('users/welcome')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 14:09:55 --> Call to undefined function json()
+in APPPATH/Views/users/welcome.php on line 30.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 4 APPPATH/Controllers/UserInfo.php(546): view('users/welcome')
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 14:10:09 --> Undefined variable $department
+in APPPATH/Views/users/welcome.php on line 30.
+ 1 APPPATH/Views/users/welcome.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $department', '/home/freelance/public_html/digitalflow/app/Views/users/welcome.php', 30)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/welcome.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(546): view('users/welcome')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 14:10:36 --> Undefined variable $department
+in APPPATH/Views/users/welcome.php on line 30.
+ 1 APPPATH/Views/users/welcome.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $department', '/home/freelance/public_html/digitalflow/app/Views/users/welcome.php', 30)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/welcome.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(546): view('users/welcome')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 14:10:57 --> Undefined variable $department
+in APPPATH/Views/users/welcome.php on line 30.
+ 1 APPPATH/Views/users/welcome.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $department', '/home/freelance/public_html/digitalflow/app/Views/users/welcome.php', 30)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/welcome.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(546): view('users/welcome')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 14:11:54 --> Undefined variable $department
+in APPPATH/Views/users/welcome.php on line 30.
+ 1 APPPATH/Views/users/welcome.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $department', '/home/freelance/public_html/digitalflow/app/Views/users/welcome.php', 30)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/welcome.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(546): view('users/welcome')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-27 14:13:07 --> Undefined variable $department
+in APPPATH/Views/users/welcome.php on line 30.
+ 1 APPPATH/Views/users/welcome.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $department', '/home/freelance/public_html/digitalflow/app/Views/users/welcome.php', 30)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/users/welcome.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('users/welcome', [], true)
+ 5 APPPATH/Controllers/UserInfo.php(546): view('users/welcome')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\UserInfo->welcome()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

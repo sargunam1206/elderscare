@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1713338953;_ci_previous_url|s:51:"http://freelance.neuralarc.com/digitalflow/register";failed|a:1:{s:10:"validation";a:2:{s:10:"user_email";s:49:"The user_email field must contain a unique value.";s:20:"user_confirmpassword";s:70:"The user_confirmpassword field does not match the user_password field.";}}__ci_vars|a:1:{s:6:"failed";s:3:"new";}

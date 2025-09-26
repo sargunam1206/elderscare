@@ -1,0 +1,98 @@
+CRITICAL - 2025-08-27 04:39:50 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('207')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-27 04:40:24 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-27 04:40:28 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('207')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-27 04:40:30 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-27 06:29:43 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-27 06:29:44 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-27 06:29:46 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-27 06:29:46 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('207')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-27 06:29:53 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('207')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-27 06:29:59 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-27 06:30:00 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-27 06:30:04 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('207')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-27 06:30:05 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Inhouseguest.php on line 43.
+ 1 APPPATH/Controllers/Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/neuralarcteam/public_html/advaya.neuralarc.com/viyoma/app/Controllers/Inhouseguest.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('207')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-27 06:30:30 --> array_unique(): Argument #1 ($array) must be of type array, null given
+in APPPATH/Controllers/Landingpage.php on line 133.
+ 1 APPPATH/Controllers/Landingpage.php(133): array_unique(null)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Landingpage->service_category('sdfsff')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Landingpage))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

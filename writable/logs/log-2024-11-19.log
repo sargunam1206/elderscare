@@ -1,0 +1,45 @@
+CRITICAL - 2024-11-19 11:30:04 --> Invalid file: "newasset/default.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('newasset/default.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/default', [], true)
+ 3 APPPATH\Controllers\Asset.php(21): view('newasset/default')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 11:30:19 --> Invalid file: "newasset/default.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('newasset/default.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/default', [], true)
+ 3 APPPATH\Controllers\Asset.php(21): view('newasset/default')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 11:30:20 --> Invalid file: "newasset/default.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('newasset/default.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/default', [], true)
+ 3 APPPATH\Controllers\Asset.php(21): view('newasset/default')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 11:30:20 --> Invalid file: "newasset/default.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('newasset/default.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/default', [], true)
+ 3 APPPATH\Controllers\Asset.php(21): view('newasset/default')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 11:30:24 --> Invalid file: "newasset/default.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('newasset/default.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('newasset/default', [], true)
+ 3 APPPATH\Controllers\Asset.php(24): view('newasset/default')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Asset->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asset))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

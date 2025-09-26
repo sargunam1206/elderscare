@@ -1,0 +1,22 @@
+CRITICAL - 2024-05-21 07:43:10 --> Undefined variable $users
+in APPPATH/Views/nomineeinfo/index.php on line 77.
+ 1 APPPATH/Views/nomineeinfo/index.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/nomineeinfo/index.php', 77)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/nomineeinfo/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('nomineeinfo/index', [], true)
+ 5 APPPATH/Controllers/NomineeInfo.php(113): view('nomineeinfo/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\NomineeInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NomineeInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 07:43:10 --> Undefined variable $users
+in APPPATH/Views/nomineeinfo/index.php on line 77.
+ 1 APPPATH/Views/nomineeinfo/index.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/home/freelance/public_html/digitalflow/app/Views/nomineeinfo/index.php', 77)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/nomineeinfo/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('nomineeinfo/index', [], true)
+ 5 APPPATH/Controllers/NomineeInfo.php(113): view('nomineeinfo/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\NomineeInfo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NomineeInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,824 @@
+CRITICAL - 2024-09-15 05:23:44 --> Undefined variable $i
+in APPPATH/Views/assignedassets/view.php on line 1859.
+ 1 APPPATH/Views/assignedassets/view.php(1859): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $i', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1859)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(163): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:24:47 --> Undefined variable $base
+in APPPATH/Views/assignedassets/view.php on line 1860.
+ 1 APPPATH/Views/assignedassets/view.php(1860): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1860)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(163): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:25:37 --> Undefined variable $assigned_assets_childpart
+in APPPATH/Views/assignedassets/view.php on line 1897.
+ 1 APPPATH/Views/assignedassets/view.php(1897): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assigned_assets_childpart', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1897)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(163): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:30:13 --> Invalid file: "assignedassets/childpart.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('assignedassets/childpart.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/childpart', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(406): view('assignedassets/childpart', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->childpart('VFZSSlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:36:06 --> Invalid file: "assignedassets/childpart.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('assignedassets/childpart.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/childpart', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(442): view('assignedassets/childpart', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->childpart('VFZSSlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:36:08 --> Invalid file: "assignedassets/childpart.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('assignedassets/childpart.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/childpart', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(442): view('assignedassets/childpart', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->childpart('VFZSSlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:36:09 --> Invalid file: "assignedassets/childpart.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('assignedassets/childpart.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/childpart', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(442): view('assignedassets/childpart', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->childpart('VFZSSlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:36:14 --> Invalid file: "assignedassets/childpart.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('assignedassets/childpart.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/childpart', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(442): view('assignedassets/childpart', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->childpart('VFZSTlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:37:08 --> Invalid file: "assignedassets/childpart.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('assignedassets/childpart.php')
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/childpart', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(446): view('assignedassets/childpart', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->childpart('VFZSTlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:53:02 --> Undefined variable $id
+in APPPATH/Controllers/AssignedAssets.php on line 159.
+ 1 APPPATH/Controllers/AssignedAssets.php(159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 159)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view('VFZSSlBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:54:02 --> foreach() argument must be of type array|object, null given
+in APPPATH/Views/assignedassets/view.php on line 1912.
+ 1 APPPATH/Views/assignedassets/view.php(1912): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1912)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(169): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view('VFZSSlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:54:30 --> Undefined variable $assigned_assets_childpart
+in APPPATH/Views/assignedassets/view.php on line 1912.
+ 1 APPPATH/Views/assignedassets/view.php(1912): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assigned_assets_childpart', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1912)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(169): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:54:36 --> Undefined variable $assigned_assets_childpart
+in APPPATH/Views/assignedassets/view.php on line 1912.
+ 1 APPPATH/Views/assignedassets/view.php(1912): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assigned_assets_childpart', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1912)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(169): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:55:12 --> foreach() argument must be of type array|object, string given
+in APPPATH/Views/assignedassets/view.php on line 1912.
+ 1 APPPATH/Views/assignedassets/view.php(1912): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1912)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(169): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view('VFZSUlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:56:30 --> foreach() argument must be of type array|object, string given
+in APPPATH/Views/assignedassets/view.php on line 1912.
+ 1 APPPATH/Views/assignedassets/view.php(1912): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1912)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(169): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view('VFZSUlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:58:09 --> Call to undefined function josn_encode()
+in APPPATH/Views/assignedassets/view.php on line 1913.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 4 APPPATH/Controllers/AssignedAssets.php(170): view('assignedassets/view', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view('VFZSUlBRPT0=')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:58:24 --> Call to undefined function josn_encode()
+in APPPATH/Views/assignedassets/view.php on line 1913.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 4 APPPATH/Controllers/AssignedAssets.php(170): view('assignedassets/view', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view('VFZSUlBRPT0=')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:58:27 --> foreach() argument must be of type array|object, string given
+in APPPATH/Views/assignedassets/view.php on line 1914.
+ 1 APPPATH/Views/assignedassets/view.php(1914): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1914)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(170): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view('VFZSUlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:58:28 --> foreach() argument must be of type array|object, string given
+in APPPATH/Views/assignedassets/view.php on line 1914.
+ 1 APPPATH/Views/assignedassets/view.php(1914): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1914)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(170): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view('VFZSUlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:58:32 --> foreach() argument must be of type array|object, string given
+in APPPATH/Views/assignedassets/view.php on line 1914.
+ 1 APPPATH/Views/assignedassets/view.php(1914): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1914)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(170): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view('VFZSUlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:58:34 --> foreach() argument must be of type array|object, string given
+in APPPATH/Views/assignedassets/view.php on line 1914.
+ 1 APPPATH/Views/assignedassets/view.php(1914): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1914)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(170): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view('VFZSUlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:58:35 --> foreach() argument must be of type array|object, string given
+in APPPATH/Views/assignedassets/view.php on line 1914.
+ 1 APPPATH/Views/assignedassets/view.php(1914): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1914)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(170): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view('VFZSUlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 05:59:50 --> foreach() argument must be of type array|object, null given
+in APPPATH/Views/assignedassets/view.php on line 1914.
+ 1 APPPATH/Views/assignedassets/view.php(1914): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1914)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(170): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view('VFZSTlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 06:16:25 --> Unclosed '{' on line 1937
+in APPPATH/Views/assignedassets/view.php on line 2220.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(170): view('assignedassets/view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view('VFZSSlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 06:33:15 --> Unmatched ')'
+in APPPATH/Views/assignedassets/view.php on line 100.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(170): view('assignedassets/view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view('VFZSSlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 06:33:25 --> Undefined variable $assigned_assets_idchild
+in APPPATH/Views/assignedassets/view.php on line 100.
+ 1 APPPATH/Views/assignedassets/view.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assigned_assets_idchild', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 100)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(170): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view('VFZSSlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 07:40:01 --> Undefined variable $assigned_assets_idchild
+in APPPATH/Views/assignedassets/view.php on line 146.
+ 1 APPPATH/Views/assignedassets/view.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assigned_assets_idchild', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 146)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(170): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 07:49:29 --> Undefined variable $assigned_assets_idchild
+in APPPATH/Views/assignedassets/view.php on line 146.
+ 1 APPPATH/Views/assignedassets/view.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assigned_assets_idchild', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 146)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(170): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 07:57:28 --> Undefined variable $base
+in APPPATH/Views/assignedassets/view.php on line 1901.
+ 1 APPPATH/Views/assignedassets/view.php(1901): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1901)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(170): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view('VFZSUlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 07:58:39 --> Undefined variable $assigned_assets_idchild
+in APPPATH/Views/assignedassets/view.php on line 1868.
+ 1 APPPATH/Views/assignedassets/view.php(1868): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assigned_assets_idchild', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1868)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(170): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 08:13:57 --> Undefined variable $assigned_assets_childpart
+in APPPATH/Views/assignedassets/view.php on line 1945.
+ 1 APPPATH/Views/assignedassets/view.php(1945): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assigned_assets_childpart', '/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php', 1945)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/view', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(170): view('assignedassets/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 09:34:47 --> Undefined variable $assigned_assets_idchild
+in APPPATH/Views/assignedassets/edit.php on line 1858.
+ 1 APPPATH/Views/assignedassets/edit.php(1858): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assigned_assets_idchild', '/home/freelance/public_html/viyoma/app/Views/assignedassets/edit.php', 1858)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/edit', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(283): view('assignedassets/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VFZSUlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 09:34:56 --> Undefined variable $assigned_assets_idchild
+in APPPATH/Views/assignedassets/edit.php on line 1858.
+ 1 APPPATH/Views/assignedassets/edit.php(1858): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assigned_assets_idchild', '/home/freelance/public_html/viyoma/app/Views/assignedassets/edit.php', 1858)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/edit', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(283): view('assignedassets/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VFZSUlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 09:35:42 --> Undefined array key "assigned_assets_idchild"
+in APPPATH/Controllers/AssignedAssets.php on line 257.
+ 1 APPPATH/Controllers/AssignedAssets.php(257): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "assigned_assets_idchild"', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 257)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VFZSUlBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 09:35:48 --> Undefined array key "assigned_assets_idchild"
+in APPPATH/Controllers/AssignedAssets.php on line 257.
+ 1 APPPATH/Controllers/AssignedAssets.php(257): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "assigned_assets_idchild"', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 257)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VFZSUlBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 09:36:24 --> Undefined array key "assigned_assets_idchild"
+in APPPATH/Controllers/AssignedAssets.php on line 257.
+ 1 APPPATH/Controllers/AssignedAssets.php(257): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "assigned_assets_idchild"', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 257)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VFZSUlBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 09:38:05 --> Undefined array key "assigned_assets_idchild"
+in APPPATH/Controllers/AssignedAssets.php on line 259.
+ 1 APPPATH/Controllers/AssignedAssets.php(259): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "assigned_assets_idchild"', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 259)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VFZSUlBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 09:38:40 --> Undefined variable $assigned_assets_idchild
+in APPPATH/Views/assignedassets/edit.php on line 1859.
+ 1 APPPATH/Views/assignedassets/edit.php(1859): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $assigned_assets_idchild', '/home/freelance/public_html/viyoma/app/Views/assignedassets/edit.php', 1859)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/edit', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(287): view('assignedassets/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VFZSUlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 09:41:12 --> foreach() argument must be of type array|object, string given
+in APPPATH/Views/assignedassets/edit.php on line 1874.
+ 1 APPPATH/Views/assignedassets/edit.php(1874): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', '/home/freelance/public_html/viyoma/app/Views/assignedassets/edit.php', 1874)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/edit', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(287): view('assignedassets/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VFZSUlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 09:41:38 --> Unsupported operand types: string * int
+in APPPATH/Views/assignedassets/edit.php on line 1878.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/edit', [], true)
+ 4 APPPATH/Controllers/AssignedAssets.php(287): view('assignedassets/edit', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VFZSUlBRPT0=')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 09:48:31 --> Unclosed '{' on line 1877
+in APPPATH/Views/assignedassets/edit.php on line 2046.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(287): view('assignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VFZSUlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 09:48:48 --> Unclosed '{' on line 1877
+in APPPATH/Views/assignedassets/edit.php on line 2046.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/edit', [], true)
+ 3 APPPATH/Controllers/AssignedAssets.php(287): view('assignedassets/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VFZSUlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 10:03:55 --> foreach() argument must be of type array|object, null given
+in APPPATH/Views/assignedassets/edit.php on line 1877.
+ 1 APPPATH/Views/assignedassets/edit.php(1877): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', '/home/freelance/public_html/viyoma/app/Views/assignedassets/edit.php', 1877)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/edit', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(287): view('assignedassets/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VFZSTlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 10:16:09 --> Undefined variable $onebyone
+in APPPATH/Views/assignedassets/edit.php on line 1902.
+ 1 APPPATH/Views/assignedassets/edit.php(1902): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $onebyone', '/home/freelance/public_html/viyoma/app/Views/assignedassets/edit.php', 1902)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/assignedassets/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assignedassets/edit', [], true)
+ 5 APPPATH/Controllers/AssignedAssets.php(287): view('assignedassets/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->edit('VFZSTlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 10:48:20 --> Undefined array key "assets_grn_no"
+in APPPATH/Controllers/ReturnInfo.php on line 79.
+ 1 APPPATH/Controllers/ReturnInfo.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "assets_grn_no"', '/home/freelance/public_html/viyoma/app/Controllers/ReturnInfo.php', 79)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 10:49:00 --> Attempt to read property "assets_grn_no" on array
+in APPPATH/Controllers/ReturnInfo.php on line 79.
+ 1 APPPATH/Controllers/ReturnInfo.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "assets_grn_no" on array', '/home/freelance/public_html/viyoma/app/Controllers/ReturnInfo.php', 79)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 10:49:22 --> Undefined variable $data
+in APPPATH/Controllers/ReturnInfo.php on line 81.
+ 1 APPPATH/Controllers/ReturnInfo.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/home/freelance/public_html/viyoma/app/Controllers/ReturnInfo.php', 81)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 10:50:40 --> json_decode(): Argument #1 ($json) must be of type string, array given
+in APPPATH/Controllers/ReturnInfo.php on line 79.
+ 1 APPPATH/Controllers/ReturnInfo.php(79): json_decode([...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-09-15 10:56:55 --> mysqli_sql_exception: Unknown column 'assigned_assets_grn_no' in 'field list' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `assigne...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `assigne...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `assigne...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `assigne...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/ReturnInfo.php(80): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-09-15 10:56:55 --> Unknown column 'assigned_assets_grn_no' in 'field list'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `assigned_assets_grn_no`
+FROM `assetsvalue`
+WHERE `assigned_assets_deleted_on` IS NULL
+ORDER BY `assets_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/ReturnInfo.php(80): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-09-15 10:57:12 --> mysqli_sql_exception: Unknown column 'assigned_assets_deleted_on' in 'where clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `assets_...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `assets_...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `assets_...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `assets_...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/ReturnInfo.php(80): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-09-15 10:57:12 --> Unknown column 'assigned_assets_deleted_on' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `assets_grn_no`
+FROM `assetsvalue`
+WHERE `assigned_assets_deleted_on` IS NULL
+ORDER BY `assets_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/ReturnInfo.php(80): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-09-15 10:59:21 --> mysqli_sql_exception: Unknown column 'assets_id' in 'order clause' in /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/viyoma/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `assets_...', 0)
+#1 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `assets_...')
+#2 /home/freelance/public_html/viyoma/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `assets_...')
+#3 /home/freelance/public_html/viyoma/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `assets_...', Array, false)
+#4 /home/freelance/public_html/viyoma/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/viyoma/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/viyoma/app/Controllers/ReturnInfo.php(80): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/viyoma/system/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+#8 /home/freelance/public_html/viyoma/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+#9 /home/freelance/public_html/viyoma/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/viyoma/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-09-15 10:59:21 --> Unknown column 'assets_id' in 'order clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `assets_grn_no`
+FROM `assigned_assets`
+WHERE `assigned_assets_deleted_on` IS NULL
+ORDER BY `assets_id` ASC', [], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/ReturnInfo.php(80): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 11:00:05 --> Undefined array key "assets_grn_no"
+in APPPATH/Controllers/ReturnInfo.php on line 82.
+ 1 APPPATH/Controllers/ReturnInfo.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "assets_grn_no"', '/home/freelance/public_html/viyoma/app/Controllers/ReturnInfo.php', 82)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 11:00:32 --> Cannot use [] for reading
+in APPPATH/Controllers/ReturnInfo.php on line 82.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 11:27:30 --> Too few arguments to function App\Controllers\Assets::download(), 0 passed in /home/freelance/public_html/viyoma/system/CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH/Controllers/Assets.php on line 361.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->download()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 11:34:50 --> Cannot access offset of type string on string
+in APPPATH/Views/assets/download.php on line 90.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/download', [], true)
+ 4 APPPATH/Controllers/Assets.php(371): view('assets/download', [...])
+ 5 APPPATH/Controllers/Assets.php(172): App\Controllers\Assets->download([...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 11:35:00 --> Cannot access offset of type string on string
+in APPPATH/Views/assets/download.php on line 90.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/download', [], true)
+ 4 APPPATH/Controllers/Assets.php(371): view('assets/download', [...])
+ 5 APPPATH/Controllers/Assets.php(172): App\Controllers\Assets->download([...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 11:39:57 --> Cannot access offset of type string on string
+in APPPATH/Views/assets/download.php on line 90.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/download', [], true)
+ 4 APPPATH/Controllers/Assets.php(371): view('assets/download', [...])
+ 5 APPPATH/Controllers/Assets.php(172): App\Controllers\Assets->download([...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 11:46:34 --> Cannot access offset of type string on string
+in APPPATH/Views/assets/download.php on line 89.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('assets/download', [], true)
+ 4 APPPATH/Controllers/Assets.php(370): view('assets/download', [...])
+ 5 APPPATH/Controllers/Assets.php(172): App\Controllers\Assets->download([...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Assets->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Assets))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 13:54:59 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/AssignedAssets.php on line 392.
+ 1 APPPATH/Controllers/AssignedAssets.php(392): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/AssignedAssets.php', 392)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AssignedAssets->childpart('123465746781')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssignedAssets))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 19:34:02 --> Unclosed '{' on line 85
+in APPPATH/Views/purchase/download.php on line 123.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('purchase/download', [], true)
+ 3 APPPATH/Controllers/Purchase.php(281): view('purchase/download', [...])
+ 4 APPPATH/Controllers/Purchase.php(160): App\Controllers\Purchase->download([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Purchase->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Purchase))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 19:34:06 --> Unclosed '{' on line 85
+in APPPATH/Views/purchase/download.php on line 123.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('purchase/download', [], true)
+ 3 APPPATH/Controllers/Purchase.php(281): view('purchase/download', [...])
+ 4 APPPATH/Controllers/Purchase.php(160): App\Controllers\Purchase->download([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Purchase->view()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Purchase))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 20:12:32 --> Array to string conversion
+in APPPATH/Controllers/ReturnInfo.php on line 43.
+ 1 APPPATH/Controllers/ReturnInfo.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/home/freelance/public_html/viyoma/app/Controllers/ReturnInfo.php', 43)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 15:18:58 --> Undefined variable $base
+in APPPATH/Views/return_info/view.php on line 1815.
+ 1 APPPATH/Views/return_info/view.php(1815): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base', '/home/freelance/public_html/viyoma/app/Views/return_info/view.php', 1815)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(145): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 15:36:38 --> Undefined variable $base
+in APPPATH/Views/return_info/view.php on line 1815.
+ 1 APPPATH/Views/return_info/view.php(1815): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base', '/home/freelance/public_html/viyoma/app/Views/return_info/view.php', 1815)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(156): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 15:41:31 --> Undefined variable $base
+in APPPATH/Views/return_info/view.php on line 1822.
+ 1 APPPATH/Views/return_info/view.php(1822): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base', '/home/freelance/public_html/viyoma/app/Views/return_info/view.php', 1822)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(157): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 15:44:33 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/ReturnInfo.php on line 153.
+ 1 APPPATH/Controllers/ReturnInfo.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/ReturnInfo.php', 153)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFdjOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 15:45:02 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/ReturnInfo.php on line 156.
+ 1 APPPATH/Controllers/ReturnInfo.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/ReturnInfo.php', 156)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFdjOVBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 15:45:54 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/ReturnInfo.php on line 155.
+ 1 APPPATH/Controllers/ReturnInfo.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/ReturnInfo.php', 155)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSRlBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 15:48:09 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/ReturnInfo.php on line 155.
+ 1 APPPATH/Controllers/ReturnInfo.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/ReturnInfo.php', 155)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSRlBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 15:48:54 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/ReturnInfo.php on line 156.
+ 1 APPPATH/Controllers/ReturnInfo.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/ReturnInfo.php', 156)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSRlBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 18:13:11 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/ReturnInfo.php on line 155.
+ 1 APPPATH/Controllers/ReturnInfo.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/ReturnInfo.php', 155)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('WVVka2JtRkhhRzloUVQwOQ==')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 18:14:03 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/ReturnInfo.php on line 158.
+ 1 APPPATH/Controllers/ReturnInfo.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/ReturnInfo.php', 158)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('WVVka2JtRkhhRzloUVQwOQ==')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 18:14:55 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/ReturnInfo.php on line 162.
+ 1 APPPATH/Controllers/ReturnInfo.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/viyoma/app/Controllers/ReturnInfo.php', 162)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('WVVka2JtRkhhRzloUVQwOQ==')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 18:40:01 --> foreach() argument must be of type array|object, string given
+in APPPATH/Views/return_info/edit.php on line 1835.
+ 1 APPPATH/Views/return_info/edit.php(1835): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', '/home/freelance/public_html/viyoma/app/Views/return_info/edit.php', 1835)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/edit', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(258): view('return_info/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->edit('VFZSRlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 18:40:33 --> foreach() argument must be of type array|object, string given
+in APPPATH/Views/return_info/edit.php on line 1835.
+ 1 APPPATH/Views/return_info/edit.php(1835): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', '/home/freelance/public_html/viyoma/app/Views/return_info/edit.php', 1835)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/edit', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(258): view('return_info/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->edit('VFZSRlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 18:41:33 --> foreach() argument must be of type array|object, null given
+in APPPATH/Views/return_info/view.php on line 1991.
+ 1 APPPATH/Views/return_info/view.php(1991): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', '/home/freelance/public_html/viyoma/app/Views/return_info/view.php', 1991)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(167): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSSmVrNUVXVEZPZWxFeVRucG5lQT09')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 18:44:58 --> foreach() argument must be of type array|object, null given
+in APPPATH/Views/return_info/view.php on line 1991.
+ 1 APPPATH/Views/return_info/view.php(1991): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', '/home/freelance/public_html/viyoma/app/Views/return_info/view.php', 1991)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(167): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSSmVrNUVXVEZPZWxFeVRucG5lQT09')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 18:45:02 --> foreach() argument must be of type array|object, null given
+in APPPATH/Views/return_info/view.php on line 1991.
+ 1 APPPATH/Views/return_info/view.php(1991): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', '/home/freelance/public_html/viyoma/app/Views/return_info/view.php', 1991)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(167): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSSmVrNUVXVEZPZWxFeVRucG5lQT09')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 18:45:55 --> foreach() argument must be of type array|object, null given
+in APPPATH/Views/return_info/view.php on line 1991.
+ 1 APPPATH/Views/return_info/view.php(1991): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', '/home/freelance/public_html/viyoma/app/Views/return_info/view.php', 1991)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(167): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSSmVrNUVXVEZPZWxFeVRucG5lQT09')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 18:45:56 --> foreach() argument must be of type array|object, null given
+in APPPATH/Views/return_info/view.php on line 1991.
+ 1 APPPATH/Views/return_info/view.php(1991): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', '/home/freelance/public_html/viyoma/app/Views/return_info/view.php', 1991)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/view.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/view', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(167): view('return_info/view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->view('VFZSSmVrNUVXVEZPZWxFeVRucG5lQT09')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-15 18:47:06 --> foreach() argument must be of type array|object, null given
+in APPPATH/Views/return_info/edit.php on line 1835.
+ 1 APPPATH/Views/return_info/edit.php(1835): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', '/home/freelance/public_html/viyoma/app/Views/return_info/edit.php', 1835)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/viyoma/app/Views/return_info/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('return_info/edit', [], true)
+ 5 APPPATH/Controllers/ReturnInfo.php(258): view('return_info/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReturnInfo->edit('VFZSRlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

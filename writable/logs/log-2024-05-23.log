@@ -1,0 +1,176 @@
+ERROR - 2024-05-23 04:32:03 --> mysqli_sql_exception: Table 'convertdigitalflow.donors' doesn't exist in /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/freelance/public_html/digitalflow/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/freelance/public_html/digitalflow/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/freelance/public_html/digitalflow/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/freelance/public_html/digitalflow/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/freelance/public_html/digitalflow/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/freelance/public_html/digitalflow/app/Controllers/BloodDetails.php(102): CodeIgniter\BaseModel->findAll()
+#7 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(942): App\Controllers\BloodDetails->Opos('Opos')
+#8 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDetails))
+#9 /home/freelance/public_html/digitalflow/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/freelance/public_html/digitalflow/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-05-23 04:32:03 --> Table 'convertdigitalflow.donors' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `donors`
+WHERE `blood_group` = :blood_group:', [...], false)
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/BloodDetails.php(102): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\BloodDetails->Opos('Opos')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDetails))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-23 07:27:56 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/ExperienceInfo.php on line 146.
+ 1 APPPATH/Controllers/ExperienceInfo.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 146)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->list('VFZSQlBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-23 07:28:51 --> count(): Argument #1 ($value) must be of type Countable|array, string given
+in APPPATH/Views/nomineeinfo/edit.php on line 115.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('nomineeinfo/edit', [], true)
+ 4 APPPATH/Controllers/NomineeInfo.php(211): view('nomineeinfo/edit', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\NomineeInfo->edit('VFZSQlBRPT0=')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NomineeInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-23 07:32:07 --> Unclosed '{' on line 126
+in APPPATH/Views/nomineeinfo/edit.php on line 226.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('nomineeinfo/edit', [], true)
+ 3 APPPATH/Controllers/NomineeInfo.php(211): view('nomineeinfo/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\NomineeInfo->edit('VFZSQlBRPT0=')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NomineeInfo))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-23 07:33:02 --> Undefined array key "nominee_info_name"
+in APPPATH/Views/nomineeinfo/edit.php on line 130.
+ 1 APPPATH/Views/nomineeinfo/edit.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nominee_info_name"', '/home/freelance/public_html/digitalflow/app/Views/nomineeinfo/edit.php', 130)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/nomineeinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('nomineeinfo/edit', [], true)
+ 5 APPPATH/Controllers/NomineeInfo.php(211): view('nomineeinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\NomineeInfo->edit('VFZSQlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NomineeInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-23 07:34:05 --> Cannot access offset of type string on string
+in APPPATH/Views/nomineeinfo/edit.php on line 121.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('nomineeinfo/edit', [], true)
+ 4 APPPATH/Controllers/NomineeInfo.php(211): view('nomineeinfo/edit', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\NomineeInfo->edit('VFZSQlBRPT0=')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NomineeInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-23 07:34:49 --> Cannot access offset of type string on string
+in APPPATH/Views/nomineeinfo/edit.php on line 121.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('nomineeinfo/edit', [], true)
+ 4 APPPATH/Controllers/NomineeInfo.php(211): view('nomineeinfo/edit', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\NomineeInfo->edit('VFZSQlBRPT0=')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NomineeInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-23 07:34:53 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/nomineeinfo/edit.php on line 115.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('nomineeinfo/edit', [], true)
+ 4 APPPATH/Controllers/NomineeInfo.php(211): view('nomineeinfo/edit', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\NomineeInfo->edit('VFZSRlBRPT0=')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NomineeInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-23 07:34:56 --> Cannot access offset of type string on string
+in APPPATH/Views/nomineeinfo/edit.php on line 121.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('nomineeinfo/edit', [], true)
+ 4 APPPATH/Controllers/NomineeInfo.php(211): view('nomineeinfo/edit', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\NomineeInfo->edit('VFZSSlBRPT0=')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NomineeInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-23 07:35:31 --> Cannot access offset of type string on string
+in APPPATH/Views/nomineeinfo/edit.php on line 121.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('nomineeinfo/edit', [], true)
+ 4 APPPATH/Controllers/NomineeInfo.php(211): view('nomineeinfo/edit', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\NomineeInfo->edit('VFZSSlBRPT0=')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NomineeInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-23 07:35:35 --> Cannot access offset of type string on string
+in APPPATH/Views/nomineeinfo/edit.php on line 121.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('nomineeinfo/edit', [], true)
+ 4 APPPATH/Controllers/NomineeInfo.php(211): view('nomineeinfo/edit', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\NomineeInfo->edit('VFZSSlBRPT0=')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NomineeInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-23 07:36:39 --> Cannot access offset of type string on string
+in APPPATH/Views/nomineeinfo/edit.php on line 121.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('nomineeinfo/edit', [], true)
+ 4 APPPATH/Controllers/NomineeInfo.php(211): view('nomineeinfo/edit', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\NomineeInfo->edit('VFZSTlBRPT0=')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NomineeInfo))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-23 07:39:14 --> Undefined array key "address"
+in APPPATH/Views/nomineeinfo/edit.php on line 121.
+ 1 APPPATH/Views/nomineeinfo/edit.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "address"', '/home/freelance/public_html/digitalflow/app/Views/nomineeinfo/edit.php', 121)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/nomineeinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('nomineeinfo/edit', [], true)
+ 5 APPPATH/Controllers/NomineeInfo.php(211): view('nomineeinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\NomineeInfo->edit('VFZSSlBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NomineeInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-23 09:34:28 --> count(): Argument #1 ($value) must be of type Countable|array, string given
+in APPPATH/Controllers/NomineeInfo.php on line 180.
+ 1 APPPATH/Controllers/NomineeInfo.php(180): count('["pushpa","tesa"]')
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\NomineeInfo->list('VFZSTlBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NomineeInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-23 10:26:00 --> Trying to access array offset on value of type null
+in APPPATH/Views/experienceinfo/edit.php on line 26.
+ 1 APPPATH/Views/experienceinfo/edit.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Views/experienceinfo/edit.php', 26)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/freelance/public_html/digitalflow/app/Views/experienceinfo/edit.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('experienceinfo/edit', [], true)
+ 5 APPPATH/Controllers/ExperienceInfo.php(175): view('experienceinfo/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->edit('VFdjOVBRPT0=')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-23 10:31:46 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/ExperienceInfo.php on line 146.
+ 1 APPPATH/Controllers/ExperienceInfo.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/freelance/public_html/digitalflow/app/Controllers/ExperienceInfo.php', 146)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ExperienceInfo->list('VFZSTlBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExperienceInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-23 10:37:14 --> Undefined array key 1
+in APPPATH/Controllers/NomineeInfo.php on line 192.
+ 1 APPPATH/Controllers/NomineeInfo.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', '/home/freelance/public_html/digitalflow/app/Controllers/NomineeInfo.php', 192)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\NomineeInfo->list('VFZSSlBRPT0=')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NomineeInfo))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

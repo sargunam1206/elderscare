@@ -1,0 +1,12 @@
+CRITICAL - 2024-04-06 03:09:36 --> SSL certificate problem: unable to get local issuer certificate
+in FCPATH\vendor\twilio\sdk\src\Twilio\Http\CurlClient.php on line 41.
+ 1 FCPATH\vendor\twilio\sdk\src\Twilio\Base\BaseClient.php(165): Twilio\Http\CurlClient->request('POST', 'https://api.twilio.com/2010-04-01/Accounts/AC189029f38a7d5a20a521dc291c03e9c0/Messages.json', [], [...], [...], 'AC189029f38a7d5a20a521dc291c03e9c0', 'e04e65a327839660b154fc63ff2de524', null)
+ 2 FCPATH\vendor\twilio\sdk\src\Twilio\Domain.php(64): Twilio\Base\BaseClient->request('POST', 'https://api.twilio.com/2010-04-01/Accounts/AC189029f38a7d5a20a521dc291c03e9c0/Messages.json', [], [...], [...], 'AC189029f38a7d5a20a521dc291c03e9c0', 'e04e65a327839660b154fc63ff2de524', null)
+ 3 FCPATH\vendor\twilio\sdk\src\Twilio\Version.php(57): Twilio\Domain->request('POST', '2010-04-01/Accounts/AC189029f38a7d5a20a521dc291c03e9c0/Messages.json', [], [...], [], null, null, null)
+ 4 FCPATH\vendor\twilio\sdk\src\Twilio\Version.php(212): Twilio\Version->request('POST', '2010-04-01/Accounts/AC189029f38a7d5a20a521dc291c03e9c0/Messages.json', [], [...], [], null, null, null)
+ 5 FCPATH\vendor\twilio\sdk\src\Twilio\Rest\Api\V2010\Account\MessageList.php(115): Twilio\Version->create('POST', '/Accounts/AC189029f38a7d5a20a521dc291c03e9c0/Messages.json', [], [...])
+ 6 APPPATH\Controllers\BloodDonors.php(133): Twilio\Rest\Api\V2010\Account\MessageList->create('+918438585475', Object(Twilio\Values))
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\BloodDonors->request('4')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BloodDonors))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
