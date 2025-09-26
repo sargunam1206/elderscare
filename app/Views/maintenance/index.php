@@ -625,11 +625,11 @@
 
       <div class="row g-4">
         <div class="col-md-12">
-          <div class="p-4 h-100 d-flex flex-column">
+          <div class="px-3 py-2 h-100 d-flex flex-column">
             <div class="d-flex justify-content-between align-items-center mb-3">
-              <h5 class="fs-7"><i class="bi bi-tools me-2 text-success"></i>Maintenance Requests</h5>
+              <h4 class="" style="font-size:18px;"><i class="bi bi-tools me-2 text-success"></i>Maintenance Requests</h4>
               <div>
-                <span class="badge bg-light text-success border border-success me-2">
+                <span class="badge bg-light text-success border border-success me-2 fs-1">
                   <?= count($requests) ?> requests
                 </span>
                 <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#maintenanceModal" onclick="resetForm()">

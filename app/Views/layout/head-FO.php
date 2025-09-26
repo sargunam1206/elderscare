@@ -28,11 +28,16 @@ $activePage = strtolower($uri->getSegment(1));
     align-items: center;
 }
 
+
 .navbar-brand img {
-    max-height: 40px; /* smaller height */
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-
+.navbar-brand span {
+    font-size: 20px; /* default text size */
+}
 /* ==== General Navbar Links ==== */
 .navbar-nav .nav-link {
     position: relative;
@@ -60,6 +65,11 @@ $activePage = strtolower($uri->getSegment(1));
 
 .navbar .dropdown-item {
     color: #FFFFFF;
+}
+
+.custom-spacing {
+    word-spacing: 5px; /* adjust value as needed */
+    color: red;
 }
 
 .navbar .dropdown-item:hover {

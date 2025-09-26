@@ -29,9 +29,20 @@ $activePage = strtolower($uri->getSegment(1));
 }
 
 .navbar-brand img {
-    max-height: 40px; /* smaller height */
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
+.navbar-brand span {
+    font-size:20px; /* default text size */
+}
+
+
+.custom-spacing {
+    word-spacing: 5px; /* adjust value as needed */
+    color: red;
+}
 
 /* ==== General Navbar Links ==== */
 .navbar-nav .nav-link {
@@ -172,14 +183,14 @@ $activePage = strtolower($uri->getSegment(1));
           <li class="nav-item">
             <a class="nav-link text-white fw-semibold <?= ($activePage == 'rooms') ? 'active' : '' ?>" 
                href="<?= base_url('rooms'); ?>">
-              <i class="bi bi-building me-2 fs-5"></i> Room
+              <i class="bi bi-building me-1 fs-5"></i> Room
             </a>
           </li>
      <!-- Services Dropdown -->
 <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle text-white fw-semibold <?= in_array($activePage, ['servicetype','category','servicemodes']) ? 'active' : '' ?>" 
      href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    <i class="bi bi-collection fs-5 me-2"></i> Services
+    <i class="bi bi-collection fs-5 me-1"></i> Services
   </a>
   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="servicesDropdown">
     <li>

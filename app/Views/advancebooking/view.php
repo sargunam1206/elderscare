@@ -368,10 +368,7 @@ body {
 }
 
 /* Badge styling */
-.badge {
-  font-size: 0.9rem !important;
-  padding: 2px 10px;
-}
+
 
 </style>
 <style>   
@@ -796,7 +793,7 @@ body {
 
     <!-- <div id="reservationForm"> -->
       <!-- Header -->
-       <div class="p-3" style="background-color:#EDF7EE;">
+       <div class="" style="background-color:#EDF7EE;">
       <!-- <div class="header mt-3 mb-0">View Advance Booking</div> -->
 
 
@@ -812,7 +809,7 @@ body {
                     <!-- end Row selection (multiple rows) -->
                     <!-- start Form Inputs -->
                     
-                    <div class="card-body">
+                    <div class="px-3 py-2">
 
                       <!-- <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-account" role="tabpanel" aria-labelledby="pills-account-tab" tabindex="0">
@@ -836,10 +833,10 @@ body {
                         </div>
                       <?php endif; ?>
 
-                      <div class="d-flex justify-content-between align-items-center mb-3">
-              <h5 class="fs-7"><i class="bi bi-list-check me-2 text-success"></i>Booking List</h5>
+                      <div class="d-flex justify-content-between align-items-center mb-3 ">
+              <h4 class=""  style="font-size:18px;"><i class="bi bi-list-check me-2 text-success"></i>Booking List</h4>
               <div>
-                <span class="badge bg-light text-success border border-success m-2 ">
+                <span class="badge bg-light text-success border border-success m-2 fs-1">
                  <?= count($adv) ?> bookings
                 </span>
                  <a href="<?= base_url('advancebooking'); ?>" class="btn btn-primary btn-sm"><i class="bi bi-plus-circle me-1"></i> New Booking</a>

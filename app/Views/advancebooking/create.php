@@ -640,7 +640,7 @@ body {
 
   <div class="" >
 
-    <div id="reservationForm" >
+    <div id="reservationForm " class="" >
       <?php
         $session = \Config\Services::session();
         $successMessage = $session->getFlashdata('success');
@@ -658,11 +658,11 @@ body {
       <?php endif; ?>
 
       <form action="<?= base_url('advancebooking') ?>" method="post" enctype="multipart/form-data" id="bookingForm" class="needs-validation" novalidate>
-        <div class="form-section card-border p-4 mb-4">
+        <div class="form-section card-border  mb-4">
 
           <div class="row mb-3">
             <div class="col-md-6">
-                <h5 class="mb-0 fs-7"><i class="ti ti-calendar-check text-success me-1"></i>Add Booking Info</h5>
+                <h4 class="mb-0 "  style="font-size:18px;"><i class="ti ti-calendar-check text-success me-1"></i>Add Booking</h4>
             </div>
             <div class="col-md-6 text-end">
                 <a href="<?= base_url('viewadvancebooking'); ?>" class="btn btn-primary">

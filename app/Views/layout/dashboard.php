@@ -333,8 +333,8 @@ h5.fs-7 {
 
 
     <!-- Charts Section -->
-     <div class="dashboard-container">
-              <h4 class="p-2"> <i class="ti ti-building card-icons text-success"></i> Front Office
+     <div class="px-3">
+              <h4 class="p-2"  style="font-size:18px;"> <i class="ti ti-building card-icons text-success"></i> Front Office
 </h4>
 
 <div class="container-fluid px-4">
