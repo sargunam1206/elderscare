@@ -16,7 +16,7 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    public string $baseURL = 'http://localhost/advaya/';
+    public string $baseURL = 'http://localhost/advaya/elderscare/';
    
 
     // $config['composer_autoload'] = TRUE;
