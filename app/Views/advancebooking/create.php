@@ -662,7 +662,7 @@ body {
 
           <div class="row mb-3">
             <div class="col-md-6">
-                <h5 class="mb-0 fs-7"><i class="ti ti-calendar-check text-success me-1"></i>Booking</h5>
+                <h5 class="mb-0 fs-7"><i class="ti ti-calendar-check text-success me-1"></i>Add Booking</h5>
             </div>
             <div class="col-md-6 text-end">
                 <a href="<?= base_url('viewadvancebooking'); ?>" class="btn btn-primary">
