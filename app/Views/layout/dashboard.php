@@ -366,6 +366,15 @@ h5.fs-7 {
       </div></a> 
     </div>
   </div>
+    <div class="col-md-3">
+    <div class="card shadow-sm border-0 text-center h-100">
+     <a href="<?=base_url("roomstatus");?>">
+<div class="card-body">
+        <i class="bi bi-building me-2 fs-5 text-success"></i> 
+        <h6 class="text-primary">Room Status</h6>
+      </div></a> 
+    </div>
+  </div>
 
   <!-- Maintenance -->
   <div class="col-md-3">
