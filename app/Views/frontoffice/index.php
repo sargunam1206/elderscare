@@ -222,7 +222,7 @@
 
     <!-- Main Content -->
    <div class="p-3">
-  <h2 class="section-title mb-3" style="font-size:1.1rem;">Home</h2>
+  <h2 class="section-title mb-3" style="font-size:2.1rem;">Home Page</h2>
   
 <div class="grid-container" 
     >
