@@ -193,6 +193,12 @@ $activePage = strtolower($uri->getSegment(1));
               <i class="ti ti-calendar-check me-1 fs-5"></i> Booking
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold <?= ($activePage == 'roomstatus') ? 'active' : '' ?>" 
+               href="<?= base_url('roomstatus'); ?>">
+              <i class="bi bi-building me-1 fs-5"></i> Room
+            </a>
+          </li>
 
           <!-- Guest Info -->
           <!--<li class="nav-item ms-lg-3">-->

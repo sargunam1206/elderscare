@@ -427,10 +427,47 @@ h6 { font-size: 13px; font-weight: 600; }
   border-color: #198754;
 }
 </style>
+<style>
+  /* Make wrapper relative */
+.room-wrapper {
+  position: relative;
+}
+
+/* Floating menu styling */
+.room-menu {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0; /* no padding for ul */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  list-style: none;
+}
+
+.room-menu li {
+  padding: 5px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.room-menu li:last-child { border-bottom: none; }
+
+.room-menu li:hover {
+  background-color: #e8f9f0;
+  color: #198754;
+}
+
+
+
+</style>
 </head>
 
 <body style="background-color:#EDF7EE;">
-    <?= view('layout/head-Admin') ?>
+    <?= view('layout/head-FO') ?>
 
   <!-- Preloader -->
 
@@ -466,11 +503,10 @@ h6 { font-size: 13px; font-weight: 600; }
     <?php endif; ?>
     
 
-
 <div class="container-fluid">
   <div class="row">
     <!-- Left Side (Room Info) -->
-    <div class="col-md-6">
+    <div class="col-md-8">
       <div class="card shadow-md rounded-3">
         <div class="card-body" id="room-info">
           <h4 class="text-center text-muted">Select a Room</h4>
@@ -479,8 +515,8 @@ h6 { font-size: 13px; font-weight: 600; }
       </div>
     </div>
 
-    <!-- Right Side (Room Grid + Legend + Counts) -->
-    <div class="col-md-6">
+    <!-- Right Side (Rooms + Legend + Counts) -->
+    <div class="col-md-4">
       <div class="card text-dark shadow-sm border-0">
         <div class="p-3">
           <!-- Legend with counts -->
@@ -513,7 +549,7 @@ h6 { font-size: 13px; font-weight: 600; }
                 $status = $statuses[array_rand($statuses)];
                 $color = ($status == 'Vacant') ? '#2e7d32' : (($status == 'Occupied') ? '#d32f2f' : (($status == 'Reserved') ? 'goldenrod' : 'brown'));
             ?>
-              <div class="col-3">
+              <div class="col-3 room-wrapper">
                 <button 
                   class="btn w-100 text-white fw-semibold room-btn" 
                   style="background-color: <?= $color ?>;"
@@ -522,6 +558,8 @@ h6 { font-size: 13px; font-weight: 600; }
                 >
                   <?= $i ?>
                 </button>
+                <!-- Dynamic menu placeholder -->
+                <div class="room-menu mt-2 d-none text-center"></div>
               </div>
             <?php endfor; ?>
           </div>
@@ -531,9 +569,8 @@ h6 { font-size: 13px; font-weight: 600; }
   </div>
 </div>
 
-<!-- JS -->
 <script>
-  // Function to update legend counts
+  // Update legend counts
   function updateCounts() {
     let vacant = 0, occupied = 0, reserved = 0, dirty = 0;
     document.querySelectorAll(".room-btn").forEach(btn => {
@@ -543,68 +580,68 @@ h6 { font-size: 13px; font-weight: 600; }
       else if (status === "Reserved") reserved++;
       else if (status === "Dirty") dirty++;
     });
-
     document.getElementById("count-vacant").textContent = vacant;
     document.getElementById("count-occupied").textContent = occupied;
     document.getElementById("count-reserved").textContent = reserved;
     document.getElementById("count-dirty").textContent = dirty;
   }
-
-  // Run count update on page load
   updateCounts();
 
-  // Room button click handler
+  // Handle room click
   document.querySelectorAll(".room-btn").forEach(btn => {
     btn.addEventListener("click", function() {
-      // Remove highlight from all
-      document.querySelectorAll(".room-btn").forEach(b => b.classList.remove("border", "border-dark", "shadow"));
+      const wrapper = this.closest(".room-wrapper");
+      const menu = wrapper.querySelector(".room-menu");
 
-      // Highlight selected
-      this.classList.add("border", "border-dark", "shadow");
+      // Hide other menus
+      document.querySelectorAll(".room-menu").forEach(m => m.classList.add("d-none"));
+
+      // Show current menu
+      menu.classList.remove("d-none");
+      menu.innerHTML = `
+       <ul class="room-menu-list mb-0">
+    <li class="guest-info-item">Guest Info</li>
+    <li class="room-info-item">Room Info</li>
+  </ul>
+      `;
 
       const roomNo = this.getAttribute("data-room-no");
       const status = this.getAttribute("data-room-status");
 
-      let infoHtml = `
-        <h4 class="fw-bold mb-3">Room ${roomNo}</h4>
-        <p>Status: <span class="fw-semibold">${status}</span></p>
-      `;
-
-      if(status === "Vacant") {
-        infoHtml += `<p class="text-success">✅ Ready for new check-in.</p>
-          <button class="btn btn-primary btn-sm">New Booking</button>`;
-      } 
-      else if(status === "Occupied") {
-        infoHtml += `
-          <p class="text-danger">❌ Currently in use by a guest.</p>
-          <ul class="list-group mb-3">
-            <li class="list-group-item"><strong>Guest:</strong> John Doe</li>
-            <li class="list-group-item"><strong>Check-in:</strong> 25 Sept 2025</li>
-            <li class="list-group-item"><strong>Check-out:</strong> 28 Sept 2025</li>
-          </ul>
-          <button class="btn btn-success btn-sm me-2">Check-out</button>
-          <button class="btn btn-warning btn-sm">Extend Stay</button>
+      // Attach menu button events
+      menu.querySelector(".guest-info-btn").addEventListener("click", () => {
+        document.getElementById("room-info").innerHTML = `
+          <h4 class="fw-bold">Room ${roomNo} - Guest Info</h4>
+          ${
+            status === "Occupied" ? `
+              <ul class="list-group">
+                <li class="list-group-item"><strong>Guest:</strong> John Doe</li>
+                <li class="list-group-item"><strong>Check-in:</strong> 25 Sept 2025</li>
+                <li class="list-group-item"><strong>Check-out:</strong> 28 Sept 2025</li>
+              </ul>
+            ` : `
+              <p class="text-muted">No guest information available (Room is ${status}).</p>
+            `
+          }
         `;
-      } 
-      else if(status === "Reserved") {
-        infoHtml += `
-          <p class="text-warning">⚠ Reserved for a future guest.</p>
-          <ul class="list-group mb-3">
-            <li class="list-group-item"><strong>Guest:</strong> Jane Smith</li>
-            <li class="list-group-item"><strong>Check-in:</strong> 30 Sept 2025</li>
-          </ul>
-          <button class="btn btn-danger btn-sm">Cancel Reservation</button>
-        `;
-      } 
-      else if(status === "Dirty") {
-        infoHtml += `<p class="text-brown">🧹 Needs cleaning before use.</p>
-          <button class="btn btn-secondary btn-sm">Mark as Cleaned</button>`;
-      }
+      });
 
-      document.getElementById("room-info").innerHTML = infoHtml;
+      menu.querySelector(".room-info-btn").addEventListener("click", () => {
+        document.getElementById("room-info").innerHTML = `
+          <h4 class="fw-bold">Room ${roomNo} - Room Info</h4>
+          <p><strong>Status:</strong> ${status}</p>
+          ${
+            status === "Vacant" ? `<p class="text-success">✅ Ready for check-in.</p>` :
+            status === "Dirty" ? `<p class="text-danger">🧹 Needs cleaning.</p>` :
+            status === "Reserved" ? `<p class="text-warning">⚠ Reserved for future use.</p>` :
+            `<p class="text-danger">❌ Currently occupied.</p>`
+          }
+        `;
+      });
     });
   });
 </script>
+
 
 
 
