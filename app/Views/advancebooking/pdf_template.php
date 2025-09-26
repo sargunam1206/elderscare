@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <title>Advance Bookings Report</title>
     <style>
+        
         body { font-family: Arial; margin: 20px; }
-        .report-header { text-align: center; margin-bottom: 20px; }
-        .filters { background: #f5f5f5; padding: 10px; margin-bottom: 15px; border-radius: 5px; }
         table { width: 100%; border-collapse: collapse; }
         th { background: #343a40; color: white; padding: 10px; }
         td { padding: 8px; border-bottom: 1px solid #ddd; }
@@ -14,12 +13,35 @@
     </style>
 </head>
 <body>
-    <div class="report-header">
+    <!-- Header with logo + address - Fixed vertical alignment -->
+ <!-- Header with logo (left) and address (right) -->
+<table width="100%" style="margin-bottom:20px;">
+    <tr>
+        <!-- Logo -->
+        <td width="20%" style="vertical-align: middle;">
+            <img src="<?= base_url('./public/Logo-Elders_home.png'); ?>" 
+                 style="height:80px; width:60px;" alt="Logo">
+        </td>
+        
+        <!-- Address -->
+        <td width="80%" style="text-align: right; font-size: 14px; line-height: 1.5; vertical-align: middle;">
+            <div><strong>Elders Home</strong></div>
+            <div>123 Main Street, City, State - ZIP</div>
+            <div>Phone: +91-9876543210</div>
+            <div>Email: info@eldershome.com</div>
+        </td>
+    </tr>
+</table>
+
+
+
+
+    <!-- Report Title -->
+    <div style="text-align: center; margin-bottom: 20px;">
         <h2>Advance Bookings Report</h2>
     </div>
-    
-   
 
+    <!-- Table -->
     <table>
         <thead>
             <tr>
@@ -44,7 +66,10 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-
-   
+    
+    <!-- Footer -->
+    <div class="footer">
+        <!-- Report generated on <?= date('Y-m-d H:i:s') ?> -->
+    </div>
 </body>
 </html>
