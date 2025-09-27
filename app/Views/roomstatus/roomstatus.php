@@ -212,7 +212,7 @@ body {
 /* Badge styling */
 .badge {
   font-size: 0.7rem !important;
-  padding: 4px 10px;
+ 
 }
 
 </style>
@@ -521,25 +521,47 @@ h6 { font-size: 13px; font-weight: 600; }
         <div class="p-3">
           <!-- Legend with counts -->
           <div class="mb-3">
-            <div class="d-flex flex-wrap gap-4 align-items-center" id="legend">
-              <span class="badge d-flex align-items-center fw-semibold text-success">
-                <span class="rounded-circle me-2" style="width: 12px; height: 12px; background-color: #2e7d32;"></span>
-                Vacant (<span id="count-vacant">0</span>)
-              </span>
-              <span class="badge d-flex align-items-center fw-semibold text-danger">
-                <span class="rounded-circle me-2" style="width: 12px; height: 12px; background-color: #d32f2f;"></span>
-                Occupied (<span id="count-occupied">0</span>)
-              </span>
-              <span class="badge d-flex align-items-center fw-semibold" style="color: goldenrod;">
-                <span class="rounded-circle me-2" style="width: 12px; height: 12px; background-color: goldenrod;"></span>
-                Reserved (<span id="count-reserved">0</span>)
-              </span>
-              <span class="badge d-flex align-items-center fw-semibold" style="color: brown;">
-                <span class="rounded-circle me-2" style="width: 12px; height: 12px; background-color: brown;"></span>
-                Dirty (<span id="count-dirty">0</span>)
-              </span>
-            </div>
-          </div>
+ 
+    <div class="row fw-semibold" id="legend">
+      
+      <!-- Row 1 -->
+      <div class="col-6 mb-2">
+        <span class="badge d-flex align-items-start justify-content-start text-success w-100">
+          <span class="rounded-circle me-2" 
+                style="width: 12px; height: 12px; background-color: #2e7d32;"></span>
+          Vacant (<span id="count-vacant">0</span>)
+        </span>
+      </div>
+
+      <div class="col-6 mb-2">
+        <span class="badge d-flex align-items-start justify-content-start text-danger w-100">
+          <span class="rounded-circle me-2" 
+                style="width: 12px; height: 12px; background-color: #d32f2f;"></span>
+          Occupied (<span id="count-occupied">0</span>)
+        </span>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="col-6 mb-2">
+        <span class="badge d-flex align-items-start justify-content-start" style="color: goldenrod;">
+          <span class="rounded-circle me-2" 
+                style="width: 12px; height: 12px; background-color: goldenrod;"></span>
+          Reserved (<span id="count-reserved">0</span>)
+        </span>
+      </div>
+
+      <div class="col-6 mb-2">
+        <span class="badge d-flex align-items-start justify-content-start" style="color: brown;">
+          <span class="rounded-circle me-2" 
+                style="width: 12px; height: 12px; background-color: brown;"></span>
+          Dirty (<span id="count-dirty">0</span>)
+        </span>
+      </div>
+
+    </div>
+ 
+</div>
+
 
           <!-- Rooms Grid -->
           <div class="row g-2" id="room-grid">
@@ -599,9 +621,9 @@ h6 { font-size: 13px; font-weight: 600; }
       // Show current menu
       menu.classList.remove("d-none");
       menu.innerHTML = `
-       <ul class="room-menu-list mb-0">
-    <li class="guest-info-item">Guest Info</li>
-    <li class="room-info-item">Room Info</li>
+      <ul class="room-menu-list mb-0">
+    <li class="guest-info-btn">Guest Info</li>
+    <li class="room-info-btn">Room Info</li>
   </ul>
       `;
 

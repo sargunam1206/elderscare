@@ -353,6 +353,7 @@ h5.fs-7 {
    </a>
     </div>
   </div>
+  
 
   <!-- Bookings -->
   <div class="col-md-3">

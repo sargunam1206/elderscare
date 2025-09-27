@@ -135,7 +135,7 @@ $boardingPages = ['boarding', 'act', 'not'];
 $activePage = strtolower($uri->getSegment(1));
 ?>
 
-<header class="app-header shadow-sm" style="background-color:#419045;">
+<header class="app-header shadow-sm position-sticky top-0 " style="background-color:#419045;">
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#419045;">
     <div class="container-fluid d-flex align-items-center">
 
