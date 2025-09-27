@@ -28,11 +28,16 @@ $activePage = strtolower($uri->getSegment(1));
     align-items: center;
 }
 
+
 .navbar-brand img {
-    max-height: 40px; /* smaller height */
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-
+.navbar-brand span {
+    font-size: 20px; /* default text size */
+}
 /* ==== General Navbar Links ==== */
 .navbar-nav .nav-link {
     position: relative;
@@ -60,6 +65,11 @@ $activePage = strtolower($uri->getSegment(1));
 
 .navbar .dropdown-item {
     color: #FFFFFF;
+}
+
+.custom-spacing {
+    word-spacing: 5px; /* adjust value as needed */
+    color: red;
 }
 
 .navbar .dropdown-item:hover {
@@ -125,7 +135,7 @@ $boardingPages = ['boarding', 'act', 'not'];
 $activePage = strtolower($uri->getSegment(1));
 ?>
 
-<header class="app-header shadow-sm" style="background-color:#419045;">
+<header class="app-header shadow-sm position-sticky top-0 " style="background-color:#419045;">
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#419045;">
     <div class="container-fluid d-flex align-items-center">
 
@@ -181,6 +191,12 @@ $activePage = strtolower($uri->getSegment(1));
             <a class="nav-link text-white fw-semibold <?= ($activePage == 'viewadvancebooking' || $activePage == 'advancebooking' || $activePage == 'editadvancebooking') ? 'active' : '' ?>" 
                href="<?= base_url('viewadvancebooking'); ?>">
               <i class="ti ti-calendar-check me-1 fs-5"></i> Booking
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold <?= ($activePage == 'roomstatus') ? 'active' : '' ?>" 
+               href="<?= base_url('roomstatus'); ?>">
+              <i class="bi bi-building me-1 fs-5"></i> Room
             </a>
           </li>
 

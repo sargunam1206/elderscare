@@ -333,8 +333,8 @@ h5.fs-7 {
 
 
     <!-- Charts Section -->
-     <div class="dashboard-container">
-              <h4 class="p-2"> <i class="ti ti-building card-icons text-success"></i> Front Office
+     <div class="px-3">
+              <h4 class="p-2"  style="font-size:18px;"> <i class="ti ti-building card-icons text-success"></i> Front Office
 </h4>
 
 <div class="container-fluid px-4">
@@ -353,6 +353,7 @@ h5.fs-7 {
    </a>
     </div>
   </div>
+  
 
   <!-- Bookings -->
   <div class="col-md-3">
@@ -363,6 +364,15 @@ h5.fs-7 {
         <h6 class="text-primary">Bookings</h6>
         <h2 class="fw-bold"><?= $BookingsCount; ?></h2>
         <p class="text-muted small">Confirmed bookings this month</p>
+      </div></a> 
+    </div>
+  </div>
+    <div class="col-md-3">
+    <div class="card shadow-sm border-0 text-center h-100">
+     <a href="<?=base_url("roomstatus");?>">
+<div class="card-body">
+        <i class="bi bi-building me-2 fs-5 text-success"></i> 
+        <h6 class="text-primary">Room Status</h6>
       </div></a> 
     </div>
   </div>

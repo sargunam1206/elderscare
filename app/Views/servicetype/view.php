@@ -19,7 +19,6 @@
   <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-  <title>MatDash Bootstrap Admin</title>
   <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
 
 
@@ -642,7 +641,7 @@ body {
         
           
 
-          <div class=" p-3" style="background-color:#EDF7EE;">
+          <div class="px-3 py-2" style="background-color:#EDF7EE;">
            <!-- <ul class="nav nav-pills user-profile-tab" id="pills-tab" role="tablist">
               <li class="nav-item" role="presentation">
                 <button class="nav-link position-relative rounded-0 active d-flex align-items-center justify-content-center bg-transparent fs-3 py-3" id="pills-account-tab" data-bs-toggle="pill" data-bs-target="#pills-account" type="button" role="tab" aria-controls="pills-account" aria-selected="true">
@@ -803,7 +802,7 @@ body {
             <!-- end Row selection (multiple rows) -->
             <!-- start Form Inputs -->
             <!-- <div class="card"> -->
-              <div class="card-body">
+              <div class="">
                 
               <!-- <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-account" role="tabpanel" aria-labelledby="pills-account-tab" tabindex="0">
@@ -830,9 +829,9 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
                   <form method="post"  action="<?= base_url('addservicetype'); ?>">
                     
  
- <div class="d-flex justify-content-between align-items-center mb-3">
-              <h5 class="fs-7"><i class="bi bi-tags text-success"></i>
-Service Type</h5>
+ <div class="d-flex justify-content-between align-items-center">
+              <h4 class=""  style="font-size:18px;"><i class="bi bi-tags text-success me-1"></i>
+Service Type</h4>
               <div>
                 
                  <button type="button" 

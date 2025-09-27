@@ -105,7 +105,7 @@
     }
     
     .section-title {
-      font-size: 1.5rem;
+      font-size: 18px;
       font-weight: 600;
       color: #2c3e50;
       margin-bottom: 1.5rem;
@@ -154,7 +154,20 @@
   border-top: 1px solid rgba(255,255,255,0.3);
 }
 
+.navbar-brand img {
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
+.navbar-brand span {
+    font-size: 20px; /* default text size */
+}
+
+.custom-spacing {
+    word-spacing: 5px; /* adjust value as needed */
+    color: red;
+}
   </style>
  
 
@@ -222,7 +235,7 @@
 
     <!-- Main Content -->
    <div class="p-3">
-  <h2 class="section-title mb-3" style="font-size:2.1rem;">Home Page</h2>
+  <h2 class="section-title mb-3" >Home</h2>
   
 <div class="grid-container" 
     >

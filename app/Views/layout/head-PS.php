@@ -28,11 +28,21 @@ $activePage = strtolower($uri->getSegment(1));
     align-items: center;
 }
 
+
 .navbar-brand img {
-    max-height: 40px; /* smaller height */
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
+.navbar-brand span {
+    font-size:20px; /* default text size */
+}
 
+.custom-spacing {
+    word-spacing: 5px; /* adjust value as needed */
+    color: red;
+}
 /* ==== General Navbar Links ==== */
 .navbar-nav .nav-link {
     position: relative;
@@ -178,7 +188,7 @@ $activePage = strtolower($uri->getSegment(1));
           <li class="nav-item">
             <a class="nav-link text-white fw-semibold <?= ($activePage == 'addproduct') ? 'active' : '' ?>" 
                href="<?= base_url('addproduct'); ?>">
-              <i class="bi bi-wallet2"></i> Charges
+              <i class="bi bi-wallet2 me-1 fs-5"></i> Charges
             </a>
           </li>
            <!-- Reports Dropdown -->

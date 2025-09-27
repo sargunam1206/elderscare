@@ -10,7 +10,6 @@
 <link rel="icon" type="image/png" sizes="180x180"  href="<?= base_url('public/Logo-Elders_home.png'); ?>" >
 <title>Nivasan Udayana</title>
 <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/css/styles.css" />
-  <title>User Management</title>
   <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   
@@ -802,11 +801,11 @@ body {
       
       <div class="row g-4">
         <div class="col-md-12">
-          <div class=" p-3 h-100 d-flex flex-column">
+          <div class=" px-3 py-2 h-100 d-flex flex-column">
             <div class="d-flex justify-content-between align-items-center mb-3">
-              <h5 class="fs-6"><i class="bi bi-people me-2 text-success"></i>User Management</h5>
+              <h4 class=""  style="font-size:18px;"><i class="bi bi-people me-2 text-success"></i>User Management</h4>
               <div>
-                <span class="badge bg-light text-success border border-success me-2">
+                <span class="badge bg-light text-success border border-success me-2 fs-1">
                   <?= count($users) ?> users
                 </span>
                 <?php if(!empty($allowedUserTypes)): ?>

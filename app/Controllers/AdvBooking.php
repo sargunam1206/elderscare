@@ -1056,7 +1056,7 @@ public function delete($id)
     }
 
 
-    public function generate_pdf($guestId)
+    public function generate_pdf1($guestId)
 {
     error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -1108,5 +1108,71 @@ ini_set('display_errors', 1);
         return redirect()->back()->with('error', 'Guest not found');
     }
 }
+
+public function generate_pdf($guestId)
+{
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+
+    // Get guest data
+    $guest = $this->GuestPersonalModel
+        ->where('guest_id', $guestId)
+        ->where('deleted_on', null)
+        ->first();
+        
+    if ($guest) {
+        // Get booking info where guest is either guest1 or guest2
+        $booking = $this->AdvanceBookingModel
+            ->groupStart()
+                ->where('guest1_id', $guestId)
+                ->orWhere('guest2_id', $guestId)
+            ->groupEnd()
+            ->where('deleted_on', null)
+            ->first();
+
+        if ($booking) {
+            $guest['booking_no'] = $booking['booking_no'];
+            $guest['room']       = $booking['room'];
+            $guest['status']     = $booking['status'];
+        } else {
+            $guest['booking_no'] = 'N/A';
+            $guest['room']       = 'N/A';
+            $guest['status']     = 'N/A';
+        }
+
+        // Attach other guest-related info
+        $guest['guardians'] = $this->GuestGuardianModel
+            ->where('guest_id', $guestId)
+            ->findAll();
+            
+        $guest['medical'] = $this->GuestMedicalHistoryModel
+            ->where('guest_id', $guestId)
+            ->first();
+            
+        $guest['preferences'] = $this->GuestLikesDisModel
+            ->where('guest_id', $guestId)
+            ->first();
+
+        // Load mPDF library
+        $mpdf = new \Mpdf\Mpdf([
+            'defaultLinkTarget' => '_blank'
+        ]);
+
+        // Pass all guest data (with booking info) to view
+        $html = view('advancebooking/guest_pdf', ['guest' => $guest]);
+        
+        $mpdf->WriteHTML($html);
+
+        // Clear any previous output
+        ob_clean();
+        
+        // Output PDF for preview with proper headers
+        $mpdf->Output("guest-info-{$guestId}.pdf", 'I');
+        exit;
+    } else {
+        return redirect()->back()->with('error', 'Guest not found');
+    }
+}
+
      
 }

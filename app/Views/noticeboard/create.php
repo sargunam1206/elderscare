@@ -15,7 +15,6 @@
   <!-- Core Css -->
   <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/css/styles.css" />
 
-  <title>Notice Management</title>
   <!-- DataTables CSS -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
@@ -670,11 +669,11 @@
 
       <div class="row g-4">
         <div class="col-md-12">
-          <div class=" p-3 h-100 d-flex flex-column">
+          <div class=" px-3 py-2 h-100 d-flex flex-column">
             <div class="d-flex justify-content-between align-items-center mb-3">
-              <h5 class="fs-5"><i class="bi bi-megaphone me-2 text-success"></i>Notice Board</h5>
+              <h4 class=""  style="font-size:18px;"><i class="bi bi-megaphone me-2 text-success"></i>Notice Board</h4>
               <div>
-                <span class="badge bg-light text-success border border-success me-2">
+                <span class="badge bg-light text-success border border-success me-2 fs-1">
                   <?= count($notices) ?> notices
                 </span>
                 <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#noticeModal" onclick="resetForm()">

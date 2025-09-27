@@ -142,4 +142,20 @@ public function getRoomsForModal()
     return $this->response->setJSON($rooms);
 }
 
+
+ public function roomstatus()
+    {
+         ini_set('display_errors', '1');
+    ini_set('display_startup_errors', '1');
+    error_reporting(E_ALL);
+       
+        // if (!session()->get('logged_in')) {
+        //     return redirect()->to(base_url());
+
+            //return redirect()->to('/');
+       // }
+        return view('roomstatus/roomstatus');
+       
+    }
+
 }

@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/css/globel.css">
 
 
-  <title>test1</title>
   <!-- Owl Carousel  -->
   <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/libs/owl.carousel/dist/assets/owl.carousel.min.css" />
 
@@ -334,9 +333,9 @@ h5.fs-7 {
 
 
     <!-- Charts Section -->
-     <div class="dashboard-container">
-              <h5 class="p-2 fs-5 mt-2"> <i class="ti ti-building card-icons text-success"></i> Admin Dashboard
-</h5>
+     <div class="dashboard-container px-3 py-2">
+              <h4 class=""  style="font-size:18px;"> <i class="ti ti-building card-icons text-success"></i> Admin Dashboard
+</h4>
 
 <div class="container-fluid px-4">
   <div class="row g-4 justify-content-center">

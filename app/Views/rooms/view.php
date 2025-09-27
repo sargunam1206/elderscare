@@ -715,7 +715,7 @@ body {
          
          
 
-          <div class=" p-3">
+          <div class=" px-3 py-2">
            <!-- <ul class="nav nav-pills user-profile-tab" id="pills-tab" role="tablist">
               <li class="nav-item" role="presentation">
                 <button class="nav-link position-relative rounded-0 active d-flex align-items-center justify-content-center bg-transparent fs-3 py-3" id="pills-account-tab" data-bs-toggle="pill" data-bs-target="#pills-account" type="button" role="tab" aria-controls="pills-account" aria-selected="true">
@@ -888,7 +888,7 @@ body {
             <!-- end Row selection (multiple rows) -->
             <!-- start Form Inputs -->
             <!-- <div class="card"> -->
-              <div class="card-body">
+              <div class="">
                 
               <!-- <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-account" role="tabpanel" aria-labelledby="pills-account-tab" tabindex="0">
@@ -917,8 +917,8 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
 
 
  <div class="d-flex justify-content-between align-items-center mb-3">
-              <h5 class="fs-7"><i class="bi bi-building text-success px-2"></i>
-Rooms</h5>
+              <h4 class=""  style="font-size:18px;"><i class="bi bi-building text-success me-1"></i>
+Rooms</h4>
               <div>
                
                  <button type="button" 
