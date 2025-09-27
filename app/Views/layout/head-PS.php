@@ -116,12 +116,17 @@ $activePage = strtolower($uri->getSegment(1));
         margin-left: 1rem;
         display: none; /* hidden by default */
     }
+    .navbar-brand{
+      display: flex;
+      flex-direction: column;
+    }
 }
 
 .dropdown-menu .dropdown-item.active {
   background-color: #2E7D32; /* same hover green */
   font-weight: 600;
 }
+
 
 
 </style>

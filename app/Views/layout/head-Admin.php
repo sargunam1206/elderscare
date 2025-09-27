@@ -119,6 +119,21 @@ $activePage = strtolower($uri->getSegment(1));
     }
 }
 
+@media (max-width: 991px) {
+    .dropdown-submenu > .dropdown-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-top: 0;
+        margin-left: 1rem;
+        display: none; /* hidden by default */
+    }
+    .navbar-brand{
+      display: flex;
+      flex-direction: column;
+    }
+}
+
 </style>
 
 

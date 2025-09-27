@@ -207,11 +207,15 @@ body {
   .table thead th, .table tbody td {
     padding: 8px 10px;
   }
+  .main-wrapper{
+    margin-top: 120px;
+  }
 }
 
 /* Badge styling */
 .badge {
   font-size: 0.7rem !important;
+  
  
 }
 
@@ -377,6 +381,9 @@ h6 { font-size: 13px; font-weight: 600; }
     flex-direction: column;
     align-items: stretch;
   }
+  .main-wrapper{
+    margin-top: 70px;
+  }
 
  
   
@@ -464,10 +471,76 @@ h6 { font-size: 13px; font-weight: 600; }
 
 
 </style>
+<style>
+  /* Fix for overlapping room menus */
+  .room-wrapper {
+    position: relative;
+    margin-bottom: 10px; /* Add spacing between room buttons */
+  }
+
+  /* Enhanced room menu styling to prevent overlap */
+  .room-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Higher z-index to ensure it appears above other elements */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    list-style: none;
+    margin-top: 5px; /* Space between button and menu */
+  }
+
+  .room-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    font-size: 12px;
+    transition: all 0.2s ease;
+  }
+
+  .room-menu li:last-child { 
+    border-bottom: none; 
+  }
+
+  .room-menu li:hover {
+    background-color: var(--primary-green);
+    color: white;
+  }
+
+  /* Ensure room buttons have proper spacing */
+  #room-grid {
+    margin-top: 15px;
+  }
+
+  /* Enhanced legend styling for equal columns */
+  #legend .col-6 {
+    display: flex;
+    justify-content: center;
+  }
+
+  #legend .badge {
+    width: 100%;
+    max-width: 140px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+  }
+
+  /* Fix for legend alignment */
+  .badge span.rounded-circle {
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+</style>
 </head>
 
 <body style="background-color:#EDF7EE;">
-    <?= view('layout/head-FO') ?>
+  <?= view('layout/head-FO') ?>
 
   <!-- Preloader -->
 
@@ -483,8 +556,9 @@ h6 { font-size: 13px; font-weight: 600; }
 
   <!--  Header End -->
 
-  <div class="px-3">
-    <div class="">
+  <div class="main-wrapper overflow-hidden" style="margin-top:80px;">
+
+    <div class="main-wrapper overflow-hidden">
       <h5 class=" fs-7"><i class="bi bi-house-door text-success"></i>
         Inhouse Guest</h5>
     </div>
@@ -589,6 +663,8 @@ h6 { font-size: 13px; font-weight: 600; }
       </div>
     </div>
   </div>
+</div>
+
 </div>
 
 <script>
