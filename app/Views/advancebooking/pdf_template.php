@@ -7,7 +7,7 @@
         
         body { font-family: Arial; margin: 20px; }
         table { width: 100%; border-collapse: collapse; }
-        th { background: #343a40; color: white; padding: 10px; }
+        th { background: #66BB6A; color: white; padding: 10px; }
         td { padding: 8px; border-bottom: 1px solid #ddd; }
         .footer { margin-top: 20px; text-align: right; font-size: 0.9em; }
     </style>
