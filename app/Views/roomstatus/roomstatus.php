@@ -483,10 +483,10 @@ h6 { font-size: 13px; font-weight: 600; }
 
   <!--  Header End -->
 
-  <div class="px-3">
+  <div class="px-3 mt-5">
     <div class="">
-      <h5 class=" fs-7"><i class="bi bi-house-door text-success"></i>
-        Inhouse Guest</h5>
+      <!-- <h5 class=" fs-7"><i class="bi bi-house-door text-success"></i>
+        Inhouse Guest</h5> -->
     </div>
 
     <!-- start Basic Area Chart -->
@@ -521,70 +521,94 @@ h6 { font-size: 13px; font-weight: 600; }
         <div class="p-3">
           <!-- Legend with counts -->
           <div class="mb-3">
- 
-    <div class="row fw-semibold" id="legend">
-      
-      <!-- Row 1 -->
-      <div class="col-6 mb-2">
-        <span class="badge d-flex align-items-start justify-content-start text-success w-100">
-          <span class="rounded-circle me-2" 
-                style="width: 12px; height: 12px; background-color: #2e7d32;"></span>
-          Vacant (<span id="count-vacant">0</span>)
-        </span>
-      </div>
+            <div class="row fw-semibold" id="legend">
+              <!-- Row 1 -->
+              <div class="col-6 mb-2">
+                <span class="badge d-flex align-items-start justify-content-start text-success w-100">
+                  <span class="rounded-circle me-2" 
+                        style="width: 12px; height: 12px; background-color: #2e7d32;"></span>
+                  Vacant (<span id="count-vacant"><?= $counts['vacant'] ?? 0 ?></span>)
+                </span>
+              </div>
 
-      <div class="col-6 mb-2">
-        <span class="badge d-flex align-items-start justify-content-start text-danger w-100">
-          <span class="rounded-circle me-2" 
-                style="width: 12px; height: 12px; background-color: #d32f2f;"></span>
-          Occupied (<span id="count-occupied">0</span>)
-        </span>
-      </div>
+              <div class="col-6 mb-2">
+                <span class="badge d-flex align-items-start justify-content-start text-danger w-100">
+                  <span class="rounded-circle me-2" 
+                        style="width: 12px; height: 12px; background-color: #d32f2f;"></span>
+                  Occupied (<span id="count-occupied"><?= $counts['occupied'] ?? 0 ?></span>)
+                </span>
+              </div>
 
-      <!-- Row 2 -->
-      <div class="col-6 mb-2">
-        <span class="badge d-flex align-items-start justify-content-start" style="color: goldenrod;">
-          <span class="rounded-circle me-2" 
-                style="width: 12px; height: 12px; background-color: goldenrod;"></span>
-          Reserved (<span id="count-reserved">0</span>)
-        </span>
-      </div>
+              <!-- Row 2 -->
+              <div class="col-6 mb-2">
+                <span class="badge d-flex align-items-start justify-content-start" style="color: goldenrod;">
+                  <span class="rounded-circle me-2" 
+                        style="width: 12px; height: 12px; background-color: goldenrod;"></span>
+                  Reserved (<span id="count-reserved"><?= $counts['reserved'] ?? 0 ?></span>)
+                </span>
+              </div>
 
-      <div class="col-6 mb-2">
-        <span class="badge d-flex align-items-start justify-content-start" style="color: brown;">
-          <span class="rounded-circle me-2" 
-                style="width: 12px; height: 12px; background-color: brown;"></span>
-          Dirty (<span id="count-dirty">0</span>)
-        </span>
-      </div>
-
-    </div>
- 
-</div>
-
+              <div class="col-6 mb-2">
+                <span class="badge d-flex align-items-start justify-content-start" style="color: brown;">
+                  <span class="rounded-circle me-2" 
+                        style="width: 12px; height: 12px; background-color: brown;"></span>
+                  Dirty (<span id="count-dirty">0</span>)
+                </span>
+              </div>
+            </div>
+          </div>
 
           <!-- Rooms Grid -->
-          <div class="row g-2" id="room-grid">
-            <?php 
-              $statuses = ['Vacant', 'Occupied', 'Reserved', 'Dirty'];
-              for ($i = 1; $i <= 50; $i++): 
-                $status = $statuses[array_rand($statuses)];
-                $color = ($status == 'Vacant') ? '#2e7d32' : (($status == 'Occupied') ? '#d32f2f' : (($status == 'Reserved') ? 'goldenrod' : 'brown'));
-            ?>
-              <div class="col-3 room-wrapper">
-                <button 
-                  class="btn w-100 text-white fw-semibold room-btn" 
-                  style="background-color: <?= $color ?>;"
-                  data-room-no="<?= $i ?>" 
-                  data-room-status="<?= $status ?>"
-                >
-                  <?= $i ?>
-                </button>
-                <!-- Dynamic menu placeholder -->
-                <div class="room-menu mt-2 d-none text-center"></div>
-              </div>
-            <?php endfor; ?>
-          </div>
+          <!-- Rooms Grid -->
+<div class="row g-2" id="room-grid">
+    <?php 
+    if (!empty($rooms)): 
+        foreach ($rooms as $room): 
+            $roomNo = $room['room_no'];
+            $status = $room['room_status'];
+            $roomType = $room['room_type'] ?? 'Not specified'; // Get room type
+            $color = '';
+            
+            switch($status) {
+                case 'Vacant':
+                    $color = '#2e7d32';
+                    break;
+                case 'Occupied':
+                    $color = '#d32f2f';
+                    break;
+                case 'Reserved':
+                    $color = 'goldenrod';
+                    break;
+                case 'Dirty':
+                    $color = 'brown';
+                    break;
+                default:
+                    $color = '#6c757d'; // default gray
+            }
+    ?>
+        <div class="col-3 room-wrapper">
+            <button 
+                class="btn w-100 text-white fw-semibold room-btn" 
+                style="background-color: <?= $color ?>;"
+                data-room-no="<?= $roomNo ?>" 
+                data-room-status="<?= $status ?>"
+                data-room-id="<?= $room['room_id'] ?>"
+                data-room-type="<?= $roomType ?>"
+            >
+                <?= $roomNo ?>
+            </button>
+            <!-- Dynamic menu placeholder -->
+            <div class="room-menu mt-2 d-none text-center"></div>
+        </div>
+    <?php 
+        endforeach; 
+    else: 
+    ?>
+        <div class="col-12">
+            <p class="text-center text-muted">No rooms found.</p>
+        </div>
+    <?php endif; ?>
+</div>
         </div>
       </div>
     </div>
@@ -592,82 +616,143 @@ h6 { font-size: 13px; font-weight: 600; }
 </div>
 
 <script>
-  // Update legend counts
-  function updateCounts() {
-    let vacant = 0, occupied = 0, reserved = 0, dirty = 0;
-    document.querySelectorAll(".room-btn").forEach(btn => {
-      const status = btn.getAttribute("data-room-status");
-      if (status === "Vacant") vacant++;
-      else if (status === "Occupied") occupied++;
-      else if (status === "Reserved") reserved++;
-      else if (status === "Dirty") dirty++;
-    });
-    document.getElementById("count-vacant").textContent = vacant;
-    document.getElementById("count-occupied").textContent = occupied;
-    document.getElementById("count-reserved").textContent = reserved;
-    document.getElementById("count-dirty").textContent = dirty;
-  }
-  updateCounts();
+// ====== Helper functions ======
+const guestInfoMap = <?= json_encode($guestInfoMap) ?>;
 
-  // Handle room click
-  document.querySelectorAll(".room-btn").forEach(btn => {
+function getGuestName(guestInfo) {
+    if (!guestInfo) return 'N/A';
+    let guestName = '';
+    if (guestInfo.guest1_firstname || guestInfo.guest1_lastname) {
+        guestName = `${guestInfo.guest1_title || ''} ${guestInfo.guest1_firstname || ''} ${guestInfo.guest1_lastname || ''}`.trim();
+    }
+    if (guestInfo.guest2_firstname || guestInfo.guest2_lastname) {
+        const guest2Name = `${guestInfo.guest2_title || ''} ${guestInfo.guest2_firstname || ''} ${guestInfo.guest2_lastname || ''}`.trim();
+        guestName += guestName ? ` & ${guest2Name}` : guest2Name;
+    }
+    return guestName || 'Name not specified';
+}
+
+function formatDate(dateString) {
+    if (!dateString) return 'N/A';
+    return new Date(dateString).toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'});
+}
+
+function formatTime(timeString) {
+    return timeString || 'N/A';
+}
+
+// ====== Room button click ======
+document.querySelectorAll(".room-btn").forEach(btn => {
     btn.addEventListener("click", function() {
-      const wrapper = this.closest(".room-wrapper");
-      const menu = wrapper.querySelector(".room-menu");
+        const wrapper = this.closest(".room-wrapper");
+        const menu = wrapper.querySelector(".room-menu");
+        document.querySelectorAll(".room-menu").forEach(m => m.classList.add("d-none"));
+        menu.classList.remove("d-none");
 
-      // Hide other menus
-      document.querySelectorAll(".room-menu").forEach(m => m.classList.add("d-none"));
+        const roomNo = this.dataset.roomNo;
+        const status = this.dataset.roomStatus;
+        const roomId = this.dataset.roomId;
+        const roomType = this.dataset.roomType;
 
-      // Show current menu
-      menu.classList.remove("d-none");
-      menu.innerHTML = `
-      <ul class="room-menu-list mb-0">
-    <li class="guest-info-btn">Guest Info</li>
-    <li class="room-info-btn">Room Info</li>
-  </ul>
-      `;
+        menu.innerHTML = `
+            <ul class="room-menu-list mb-0">
+                <li class="guest-info-btn">Guest Info</li>
+                <!--<li class="room-info-btn">Room Info</li>-->
+            </ul>
+        `;
+menu.querySelector(".guest-info-btn").addEventListener("click", () => {
+    const guestInfo = guestInfoMap[roomId];
 
-      const roomNo = this.getAttribute("data-room-no");
-      const status = this.getAttribute("data-room-status");
+    // 🔹 Debug info
+    console.log("Room ID:", roomId);
+    console.log("Status:", status);
+    console.log("Guest Info:", guestInfo);
 
-      // Attach menu button events
-      menu.querySelector(".guest-info-btn").addEventListener("click", () => {
-        document.getElementById("room-info").innerHTML = `
-          <h4 class="fw-bold">Room ${roomNo} - Guest Info</h4>
-          ${
-            status === "Occupied" ? `
-              <ul class="list-group">
-                <li class="list-group-item"><strong>Guest:</strong> John Doe</li>
-                <li class="list-group-item"><strong>Check-in:</strong> 25 Sept 2025</li>
-                <li class="list-group-item"><strong>Check-out:</strong> 28 Sept 2025</li>
-              </ul>
+    // Normalize status
+    let normalizedStatus = (status || '').toLowerCase();
+    if (normalizedStatus === 'reserved') normalizedStatus = 'confirmed';
+
+    const showGuestCards = (normalizedStatus === "occupied" || normalizedStatus === "confirmed") && guestInfo;
+    const showPdf = normalizedStatus === "occupied"; // PDF only for occupied
+
+    document.getElementById("room-info").innerHTML = `
+        <div class="guest-details">
+            <h4 class="fw-bold mb-3">Room ${roomNo} - Guest Information</h4>
+            <p><strong>Room Type:</strong> ${roomType}</p>
+
+            ${showGuestCards ? `
+                <div class="row">
+                    <!-- Guest 1 Card -->
+                    <div class="col-md-6">
+                        <div class="card mb-3">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0">Guest 1</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Name:</strong> ${guestInfo.guest1_title || ''} ${guestInfo.guest1_firstname || ''} ${guestInfo.guest1_lastname || 'N/A'}</p>
+                                <p><strong>Check-in:</strong> ${formatDate(guestInfo.arrival_date)} at ${formatTime(guestInfo.arrival_time)}</p>
+                                <p><strong>Check-out:</strong> ${formatDate(guestInfo.depart_date)} at ${formatTime(guestInfo.depart_time)}</p>
+                                ${showPdf && guestInfo.guest1_id ? `<button class="btn btn-sm btn-outline-success generate-pdf" data-guest-id="${guestInfo.guest1_id}"><i class="bi bi-file-earmark-pdf"></i> Guest 1 Info</button>` : ``}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Guest 2 Card -->
+                    ${guestInfo.guest2_firstname || guestInfo.guest2_lastname ? `
+                    <div class="col-md-6">
+                        <div class="card mb-3">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0">Guest 2</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Name:</strong> ${guestInfo.guest2_title || ''} ${guestInfo.guest2_firstname || ''} ${guestInfo.guest2_lastname || 'N/A'}</p>
+                                <p><strong>Check-in:</strong> ${formatDate(guestInfo.arrival_date)} at ${formatTime(guestInfo.arrival_time)}</p>
+                                <p><strong>Check-out:</strong> ${formatDate(guestInfo.depart_date)} at ${formatTime(guestInfo.depart_time)}</p>
+                                ${showPdf && guestInfo.guest2_id ? `<button class="btn btn-sm btn-outline-success generate-pdf" data-guest-id="${guestInfo.guest2_id}"><i class="bi bi-file-earmark-pdf"></i> Guest 2 Info</button>` : ``}
+                            </div>
+                        </div>
+                    </div>` : ``}
+                </div>
             ` : `
-              <p class="text-muted">No guest information available (Room is ${status}).</p>
-            `
-          }
-        `;
-      });
+                <div class="alert alert-danger mt-3">
+                    <i class="fas fa-info-circle"></i> 
+                    ${status === "Occupied" ? "No guest information found for this room." : `No guest information available (Room is ${status}).`}
+                </div>
+            `}
+        </div>
+    `;
+});
 
-      menu.querySelector(".room-info-btn").addEventListener("click", () => {
-        document.getElementById("room-info").innerHTML = `
-          <h4 class="fw-bold">Room ${roomNo} - Room Info</h4>
-          <p><strong>Status:</strong> ${status}</p>
-          ${
-            status === "Vacant" ? `<p class="text-success">✅ Ready for check-in.</p>` :
-            status === "Dirty" ? `<p class="text-danger">🧹 Needs cleaning.</p>` :
-            status === "Reserved" ? `<p class="text-warning">⚠ Reserved for future use.</p>` :
-            `<p class="text-danger">❌ Currently occupied.</p>`
-          }
-        `;
-      });
+
+
+        // === Room Info ===
+        menu.querySelector(".room-info-btn").addEventListener("click", () => {
+            document.getElementById("room-info").innerHTML = `
+                <div class="room-details">
+                    <h4 class="fw-bold">Room ${roomNo} - Room Info</h4>
+                    <p><strong>Room Number:</strong> ${roomNo}</p>
+                    <p><strong>Room Type:</strong> ${roomType}</p>
+                    <p><strong>Status:</strong> <span class="badge ${
+                        status === 'Vacant' ? 'bg-success' :
+                        status === 'Occupied' ? 'bg-danger' :
+                        status === 'Reserved' ? 'bg-warning' : 'bg-secondary'
+                    }">${status}</span></p>
+                </div>
+            `;
+        });
     });
-  });
+});
+
+
+// ====== PDF Generation Handler ======
+document.addEventListener('click', function(e) {
+    if (e.target.closest('.generate-pdf')) {
+        const guestId = e.target.closest('.generate-pdf').getAttribute('data-guest-id');
+        window.open('<?= base_url('guestinfo/generate_pdf/') ?>' + guestId, '_blank');
+    }
+});
+
 </script>
-
-
-
-
-
    
 
 

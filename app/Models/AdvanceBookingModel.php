@@ -77,4 +77,12 @@ public function getRecentBookings($limit = 5)
     {
         return $this->where('status', 'checked_in')->where('deleted_on', null)->countAllResults();
     }
+
+     public function getGuestInfoByRoomId($roomId)
+    {
+        return $this->where('room_id', $roomId)
+                   ->where('deleted_on', null)
+                   ->orderBy('created_on', 'DESC')
+                   ->first();
+    }
 }

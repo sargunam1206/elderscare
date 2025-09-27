@@ -476,7 +476,7 @@ h5.fs-7 {
 
         <?php endforeach; ?>
       <?php else: ?>
-        <p class="text-muted">No pending requests 🎉</p>
+        <p class="text-muted">No pending requests </p>
       <?php endif; ?>
     </div>
   </div>

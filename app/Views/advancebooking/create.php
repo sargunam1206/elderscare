@@ -1908,6 +1908,8 @@ body {
     let selectedRoomType = null;
 
     function loadRoomsModal() {
+      
+        // let url = '/advaya/elderscare/getrooms';
         let url = '/getrooms';
         if (selectedRoomType) {
             url += `?type=${encodeURIComponent(selectedRoomType)}`;
