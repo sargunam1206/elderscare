@@ -16,7 +16,7 @@ $routes->get('login', 'Login::index');
 $routes->post('login/process', 'Login::process');
 $routes->get('logout', 'Login::logout');
 
-$routes->group('', ['filter' => 'auth'], function($routes) {
+// $routes->group('', ['filter' => 'auth'], function($routes) {
 
 
 //advance booking
@@ -72,6 +72,12 @@ $routes->get('deleterooms/(:any)', 'Rooms::delete/$1');
 $routes->get('getrooms', 'Rooms::getRoomsForModal');
 $routes->get('roomstatus', 'Rooms::roomstatus');
 
+
+// room blocked
+$routes->get('roomblocked', 'RoomBlocked::view');
+$routes->post('addroomblocked', 'RoomBlocked::add');
+$routes->post('updateroomblocked/(:any)', 'RoomBlocked::update/$1');
+$routes->get('deleteroomblocked/(:any)', 'RoomBlocked::delete/$1');
 
 
 //noticeboard
@@ -227,7 +233,7 @@ $routes->get('guest_charge/(:any)', 'Charges::guest_charge/$1');
 $routes->post('chargepay', 'Charges::chargepay');
 $routes->post('chargepay_store', 'Charges::chargepay_store');
 $routes->post('charge_filter', 'Charges::charge_filter');
-});
+// });
 
 
 // $routes->get('rooms', 'Rooms::view');
