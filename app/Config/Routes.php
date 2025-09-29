@@ -71,6 +71,7 @@ $routes->post('updaterooms/(:any)', 'Rooms::update/$1');
 $routes->get('deleterooms/(:any)', 'Rooms::delete/$1');
 $routes->get('getrooms', 'Rooms::getRoomsForModal');
 $routes->get('roomstatus', 'Rooms::roomstatus');
+$routes->get('blockroomform', 'Rooms::blockRoomForm');
 
 
 // room blocked

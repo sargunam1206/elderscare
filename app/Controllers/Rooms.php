@@ -195,5 +195,17 @@ public function roomstatus()
 }
 
 
+public function blockRoomForm()
+{
+    $roomsModel = new RoomsInfoModel();
+
+    // Fetch all rooms that are not deleted
+    $rooms = $roomsModel->where('deleted_on', null)->findAll();
+
+    // Return JSON response for AJAX
+    return $this->response->setJSON($rooms);
+}
+
+
 
 }
