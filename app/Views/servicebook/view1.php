@@ -31,11 +31,12 @@
     }
   </style>
   <style>
-  .modal-dialog-scrollable .modal-body {
-    height: 60vh;
+.modal-dialog-scrollable .modal-body {
+    height: auto !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+}
 
-    overflow-y: auto;
-  }
 </style>
 <style>
   /* ========== Global Theme Colors ========== */
@@ -469,12 +470,6 @@ body {
       border-radius: 0;
       font-weight: 600;
     }
-
-    .dropdown-item:hover,
-    .dropdown-item.active {
-      background-color: #198754;
-      color: #fff;
-    }
   </style>
   <style>   
 /* Top controls: Show entries + Search (single line, left-right) */
@@ -672,7 +667,34 @@ body {
 
  <div class="table-responsive mt-3">
   
+  <table id="form_inputs_1" class="table table-striped w-100 table-bordered display text-nowrap align-middle">
+  <thead>
+        <tr>
+        <!-- <th><input type="checkbox" id="select_all"></th>  -->
+          <th>S.No</th>
+        <th>Category</th>
+        <th>Service Mode</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Total</th>
+      <!-- Increased width -->
+   
+         <!-- Decreased width -->
+        </tr>
+    </thead>
+    <tbody id="cartBody">
+  
+      
  
+          
+               
+              
+            </tr>
+
+      
+       
+    </tbody>
+  </table>
 </div>
 </div>
 
@@ -759,7 +781,7 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
                     
 
            <div class="d-flex justify-content-between align-items-center mb-3">
-              <h5 class="fs-7"><i class="bi bi-list-check me-2 text-success"></i>Charges List</h5>
+              <h5 class="fs-7"><i class="bi bi-list-check me-2 text-success"></i>Service List</h5>
               <div>
                 
   <a href="<?= base_url('addproduct'); ?>" class="btn btn-primary">View Charges</a> 
@@ -767,25 +789,61 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
               </div>
             </div>
 
+<!-- In your view file -->
+<form method="get" action="<?= current_url() ?>" class="mb-4">
+  <div class="row g-3 align-items-end">
 
-            <form method="get" action="<?= current_url() ?>" class="mb-4">
-    <div class="row g-3 align-items-end">
-        
-        <!-- Month Year Range -->
-        <div class="col-md-2">
-            <label class="form-label">From Month</label>
-            <input type="month" class="form-control" name="from_month" 
-                   value="<?= !empty($filter_from_month) ? esc($filter_from_month) : '' ?>">
-        </div>
-        
-        <div class="col-md-2">
-            <label class="form-label">To Month</label>
-            <input type="month" class="form-control" name="to_month" 
-                   value="<?= !empty($filter_to_month) ? esc($filter_to_month) : '' ?>">
-        </div>
+    <!-- Date Range -->
+    <div class="col-md-2">
+      <label class="form-label">From Date</label>
+      <input type="date" class="form-control" name="from_date" id="fromDate" 
+             value="<?= !empty($filter_from_date) ? esc($filter_from_date) : '' ?>">
+    </div>
 
-        <!-- Room No Dropdown (similar to your existing room filter) -->
-          <!-- Room Number Dropdown (for admin/super_admin only) -->
+    <div class="col-md-2">
+      <label class="form-label">To Date</label>
+      <input type="date" class="form-control" name="to_date" id="toDate" 
+             value="<?= !empty($filter_to_date) ? esc($filter_to_date) : '' ?>">
+    </div>
+
+    <!-- Service Type Dynamic Dropdown -->
+    <div class="col-md-2">
+      <label class="form-label">Service Type</label>
+      <div class="dropdown">
+        <input type="text" class="form-control dropdown-toggle w-100"
+          name="serviceTypeDisplay"
+          id="serviceTypeFilterDisplay"
+          placeholder="Select Service Type"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          autocomplete="off"
+          readonly
+          value="<?= !empty($selected_service_type_name) ? esc($selected_service_type_name) : '' ?>" />
+
+        <!-- Hidden input to store the actual value -->
+        <input type="hidden" name="service_type" id="serviceTypeFilter" 
+              value="<?= !empty($filter_service_type) ? esc($filter_service_type) : '' ?>">
+
+        <ul class="dropdown-menu p-2 w-100" aria-labelledby="serviceTypeFilterDisplay"
+            style="max-height: 150px; overflow-y: auto;">
+          <div id="serviceTypeLists" style="width: 100%;">
+            <div class="dropdown-item" data-value="all">All Service Types</div>
+            <?php if (!empty($serviceTypes)): ?>
+              <?php foreach ($serviceTypes as $serviceType): ?>
+                <div class="dropdown-item" data-value="<?= esc($serviceType['name']) ?>">
+                  <?= esc($serviceType['name']) ?>
+                </div>
+              <?php endforeach; ?>
+            <?php else: ?>
+              <div class="dropdown-item text-muted">No service types available</div>
+            <?php endif; ?>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Room Number Dropdown (for admin/super_admin only) -->
+   <!-- Room Number Dropdown (for admin/super_admin only) -->
 <?php if (session()->get('user_type') === 'admin' || session()->get('user_type') === 'super_admin'): ?>
 <div class="col-md-1">
   <label class="form-label">Room No</label>
@@ -824,8 +882,8 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
 <?php endif; ?>
 
 
-        <!-- Guest Name Dropdown (similar to your existing guest filter) -->
-       <?php if (session()->get('user_type') === 'admin' || session()->get('user_type') === 'super_admin'): ?>
+<!-- Guest Dropdown (for admin/super_admin only) -->
+<?php if (session()->get('user_type') === 'admin' || session()->get('user_type') === 'super_admin'): ?>
 <div class="col-md-2">
   <label class="form-label">Guest</label>
   <div class="dropdown">
@@ -875,17 +933,16 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
 </div>
 <?php endif; ?>
 
-        <!-- Action Buttons -->
-        <div class="col-md-2 d-flex gap-2">
-            <button type="submit" class="btn btn-success">Filter</button>
-             <button type="submit" name="pdf" value="1" class="btn btn-primary" formtarget="_blank">PDF</button>
-      <button type="submit" name="excel" value="1" class="btn btn-primary">Excel</button>
-            <a href="<?= current_url() ?>" class="btn btn-secondary">Reset</a>
-        </div>
-    </div>
-</form>
 
-<!-- In your view file -->
+    <!-- Action Buttons -->
+    <div class="col-md-2 d-flex gap-2">
+      <button type="submit" class="btn btn-success flex-grow-1">Filter</button>
+      <button type="submit" name="pdf" value="1" class="btn btn-primary" formtarget="_blank">PDF</button>
+      <button type="submit" name="excel" value="1" class="btn btn-primary">Excel</button>
+      <a href="<?= current_url() ?>" class="btn btn-secondary">Reset</a>
+    </div>
+  </div>
+</form>
 
               
                   <!-- <td class="p-1">
@@ -897,184 +954,82 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
 
                    <div class="table-responsive mt-3">
   
-
-
-<?php
-
-// $grouped = [];
-// foreach ($serviceTypes as $row) {
-//     $cid = $row['charge_id'];
-//     if (!isset($grouped[$cid])) {
-//         $grouped[$cid] = [
-//             'charge_id'   => $cid,
-//             'created_on'  => $row['created_on'],
-//             'charge_monthyear'  => $row['charge_monthyear'],
-//             'total_paid'  => 0,
-//             'items'       => []
-//         ];
-//     }
-//     $grouped[$cid]['total_paid'] += (float)$row['paid_amount'];
-//     $grouped[$cid]['items'][] = [
-//         'charge_info'   => $row['charge_info'],
-//         'payment_mode'  => $row['payment_mode'],
-//         'paid_amount'   => $row['paid_amount']
-//     ];
-// }
-?>
-
-<?php
-// Group rows by charge_id with safety checks
-$grouped = [];
-foreach ($serviceTypes as $row) {
-    $cid = $row['charge_id'];
-    if (!isset($grouped[$cid])) {
-        $grouped[$cid] = [
-            'charge_id'   => $cid,
-            'created_on'  => $row['created_on'] ?? '',
-            'charge_monthyear'  => $row['charge_monthyear'] ?? '',
-            'room_no'     => $row['room_no'] ?? 'N/A',
-            'first_name'  => $row['first_name'] ?? 'N/A',
-            'last_name'   => $row['last_name'] ?? 'N/A',
-            'total_paid'  => 0,
-            'items'       => []
-        ];
-    }
-    $grouped[$cid]['total_paid'] += (float)($row['paid_amount'] ?? 0);
-    $grouped[$cid]['items'][] = [
-        'charge_info'   => $row['charge_info'] ?? '',
-        'payment_mode'  => $row['payment_mode'] ?? '',
-        'paid_amount'   => $row['paid_amount'] ?? 0
-    ];
-}
-?>
-
-<!-- MAIN TABLE -->
-<table id="form_inputs" class="table table-striped w-100 table-bordered display text-nowrap align-middle">
+  <table id="form_inputs" class="table table-striped w-100 table-bordered display text-nowrap align-middle">
   <thead>
         <tr>
+        <!-- <th><input type="checkbox" id="select_all"></th>  -->
            <th>S.No</th>
            <th>Date Time</th>
             <th>Room No</th>
-             <th>Guest Name</th>
-           <th>Month of Charge</th>
-           <th>Total Paid Amount</th>
-           <th>Charge Info</th>
+            <th>Guest Name</th>
+       <th>Service Type</th>
+    <th>Service Info</th>
+    <th>Payment Status</th>
+     <th>Action</th>
+      <!-- Increased width -->
+   
+         <!-- Decreased width -->
         </tr>
-  </thead>
-  <tbody>
-        <?php $i = 1; foreach ($grouped as $asset): ?>
+    </thead>
+    <tbody>
+  
+        <?php $i = 1; foreach ($servicebook as $asset):
+          // $base=base64_encode(base64_encode(base64_encode($asset['id'])));
+            ?>
             <tr>
-                <td><?= $i++; ?></td>
+              
+              
+                <td><?= $i++; ?> </td>
                 <td><?= $asset['created_on']; ?></td>
                 <td><?= $asset['room_no']; ?></td>
                 <td><?= $asset['first_name'] . ' ' . $asset['last_name']; ?></td>
-                  <td><?= $asset['charge_monthyear']; ?></td>
-                <td><?= $asset['total_paid']; ?></td>
-                <td>
-                  <button type="button"
-                          class="btn btn-success"
-                          data-bs-toggle="modal"
-                          data-bs-target="#chargeInfoModal"
-                          onclick='showChargeInfo(<?= json_encode($asset["items"]); ?>)'>
-                          Info
-                  </button>
-                </td>
+                <td><?= $asset['service_type']; ?></td>
+                <td> <button type="button"
+        class="btn btn-success" 
+        data-bs-toggle="modal"
+        data-bs-target="#vertical-center-scroll-modal"
+        onclick='editAsset(JSON.parse(this.getAttribute("data-asset")))'
+        data-asset='<?= json_encode($asset) ?>' >Info
+ 
+   
+</button></td>
+<td><?= $asset['payment_status']; ?></td>
+ <td><a href="" class="btn" style="color:blue">
+    <i class="bi bi-pencil-square"></i></td>
+
+              
             </tr>
-        <?php endforeach; ?>
-  </tbody>
-</table>
-</div>
-        </form>                  
-                </div>
-              </div>
-                </div>             
-                </div>
-              </div>
-            </div>       
-<!-- MODAL -->
-<div class="modal fade" id="chargeInfoModal" tabindex="-1" aria-labelledby="chargeInfoLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal fade" id="deleteConfirmationModal<?= $asset['id']; ?>" tabindex="-1" aria-labelledby="deleteModalTitle<?= $asset['id']; ?>" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="chargeInfoLabel">Charge Details</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      <div class="modal-header d-flex align-items-center">
+        <h5 class="modal-title" id="deleteModalTitle<?= $asset['id']; ?>">Are you sure you want to delete?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-
-        <div class="table-responsive mt-3">
-          <table id="form_inputs_1" class="table table-striped w-100 table-bordered display text-nowrap align-middle">
-            <thead>
-              <tr>
-                <th>S.No</th>
-                <th>Charges Type</th>
-                <th>Paid Amount</th>
-              </tr>
-            </thead>
-            <tbody id="chargeInfoBody">
-              <!-- Filled dynamically -->
-            </tbody>
-          </table>
-        </div>
-
+      <div class="modal-footer d-flex gap-3 justify-content-end">
+        <!-- Confirm Delete Button -->
+        <a href="<?= base_url('deleterooms/' . $asset['id']); ?>" class="btn btn-danger">Yes</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
       </div>
     </div>
   </div>
 </div>
-<!-- SCRIPT -->
-<!-- <script>
-  
-function showChargeInfo(items) {
-    
-    let tbody = document.getElementById('chargeInfoBody');
-    tbody.innerHTML = '';
-    items.forEach((item, index) => {
-        tbody.innerHTML += `
-          <tr>
-            <td>${index + 1}</td>
-            <td>${item.charge_info}</td>
-            <td>${item.paid_amount}</td>
-          </tr>`;
-    });
-}
+        <?php endforeach; ?>
+    </tbody>
+  </table>
+</div>
 
- // Second table -> no pagination, only sorting/search
-  $('#form_inputs_1').DataTable({
-    paging: true,
-    searching: true, // keep false if you don’t need search box
-    info: true
-  });
-</script> -->
+        </form>
+                   
+                </div>
+              </div>
+                </div>
 
-<script>
-function showChargeInfo(items) {
-    // Initialize or get existing DataTable
-    let table = $('#form_inputs_1').DataTable();
-    table.clear(); // clear old rows
-
-    let i = 1;
-    items.forEach(item => {
-        table.row.add([
-            i++,
-            item.charge_info,
-            item.paid_amount
-        ]);
-    });
-
-    table.draw();
-}
-
-// Init DataTable on page load
-$(document).ready(function () {
-    $('#form_inputs_1').DataTable({
-        paging: true,
-        searching: true, // set false if you don’t want a search box
-        info: true
-    });
-});
-</script>
-
-
- 
+                   
+                </div>
+              </div>
+            </div>
 
 
 
@@ -1143,7 +1098,70 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+<script>
+function editAsset(asset) {
+  
+ 
+  document.getElementById('myLargeModalLabel').textContent = "Service List";
 
+  // Update form action to update URL
+  const form = document.getElementById("assetForm");
+
+  console.log(asset);
+  form.action = "<?= base_url('updaterooms') ?>/" + asset.id ;
+  
+  // Set all input values
+  let cartData =JSON.parse(asset.services_info); /*[
+    {"item":"Salvar","type":"Steam Press","price":39,"qty":2},
+    {"item":"Salvar","type":"Steam Press","price":39,"qty":2}
+  ];*/
+
+let table = $('#form_inputs_1').DataTable();
+table.clear(); // clear old rows
+  const tbody = document.getElementById("cartBody");
+  let i = 1;
+
+  cartData.forEach(row => {
+    let tr = document.createElement("tr");
+    let total = row.price * row.qty;
+
+    table.row.add([
+        i++,
+        row.item,
+        row.type,
+        row.price,
+        row.qty,
+        total
+    ]).draw();
+
+    tbody.appendChild(tr);
+  });
+
+
+
+}
+
+// Reset modal form when closed
+document.getElementById('vertical-center-scroll-modal').addEventListener('hidden.bs.modal', function () {
+    document.getElementById('myLargeModalLabel').textContent = "Add Rooms";
+  const form = document.getElementById('assetForm');
+  form.reset();
+  document.getElementById('addaccessory-container').innerHTML = '';
+  form.action = "<?= base_url('assign'); ?>"; // Reset to "Add" mode
+ 
+}); 
+
+$(document).ready(function () {
+
+
+  // Second table -> no pagination, only sorting/search
+  $('#form_inputs_1').DataTable({
+    paging: true,
+    searching: true, // keep false if you don’t need search box
+    info: true
+  });
+});
+</script>
 </body>
 
 

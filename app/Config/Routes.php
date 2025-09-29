@@ -206,9 +206,13 @@ $routes->post('servicepay', 'Wallet::servicepay');
 $routes->post('paymentrecd', 'Wallet::paymentrecd');
 $routes->post('payrecord', 'Wallet::payrecord');
 
+
+$routes->get('servicebook/view', 'Servicebook::view');
+$routes->get('servicebook/view/(:any)', 'Servicebook::view/$1');
 $routes->get('servicerept', 'Servicebook::view');
 $routes->get('servicerept/(:any)', 'Servicebook::view/$1');
-
+$routes->get('updateservicebooking', 'Servicebook::updateServiceBooking');
+$routes->post('updateservicebooking', 'Servicebook::updateServiceBooking');
 //charges
 $routes->get('charges', 'Charges::index');
 $routes->post('charges/store', 'Charges::store');
