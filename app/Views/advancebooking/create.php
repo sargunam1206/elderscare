@@ -534,6 +534,7 @@ body {
         font-size: 11px;
         padding: 3px 6px;
       }
+
     }
 
     /* ===== Global Compact Styles ===== */
@@ -638,9 +639,9 @@ body {
       class="lds-ripple img-fluid" />
   </div>
 
-  <div class="" >
+  <div class=" main-wrapper"  style="margin-top: 80px;" >
 
-    <div id="reservationForm " class="" >
+    <div id="reservationForm " class=" main-wrapper" >
       <?php
         $session = \Config\Services::session();
         $successMessage = $session->getFlashdata('success');

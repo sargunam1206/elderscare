@@ -257,11 +257,25 @@ h5.fs-7 {
     font-size: 0.9rem;
     padding: 8px 12px;
   }
+
 }
 
 
 /* end Enauiry page,Booking page,Maintanaace page */
 
+
+</style>
+<style>
+  /* Hide navbar title on mobile */
+@media (max-width: 991px) {
+  .navbar-brand span {
+    display: none !important; /* hide text */
+  }
+
+  .navbar-brand img {
+    height: 45px; /* keep logo visible */
+  }
+}
 
 </style>
 </head>
@@ -281,7 +295,7 @@ h5.fs-7 {
 
 
 
-  <div class="main-wrapper overflow-hidden">
+  <div class="main-wrapper overflow-hidden" style="margin-top:80px;">
     <!-- Stats Cards -->
    
   <!-- Navbar / Header -->
@@ -334,7 +348,7 @@ h5.fs-7 {
 
   
     <!-- Charts Section -->
-    <div class="dashboard-container px-3 py-2">
+    <div class="dashboard-container px-3 py-2 main-wrapper">
       <h4 class=""  style="font-size:18px;"> <i class="ti ti-building card-icons text-success"></i> Point Of Sale
       </h4>
 

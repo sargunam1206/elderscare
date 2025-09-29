@@ -14,7 +14,6 @@
   <!-- Core Css -->
   <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/css/styles.css" />
 
-  <title>MatDash Bootstrap Admin</title>
   <!-- Owl Carousel  -->
   <link rel="stylesheet"
     href="<?= base_url(); ?>/public/dist/assets/libs/owl.carousel/dist/assets/owl.carousel.min.css" />
@@ -429,6 +428,7 @@ body {
    #form_inputs_wrapper > .dataTables_length {
     display: none !important;
   }
+
 }
 
 
@@ -789,11 +789,11 @@ body {
   <!-- Responsive Header End -->
   <!-- ------------------------------------- -->
 
-  <div class="main-wrapper">
+  <div class="main-wrapper" style="margin-top: 80px;">
 
     <!-- <div id="reservationForm"> -->
       <!-- Header -->
-       <div class="" style="background-color:#EDF7EE;">
+       <div class=" main-wrapper" style="background-color:#EDF7EE;">
       <!-- <div class="header mt-3 mb-0">View Advance Booking</div> -->
 
 
@@ -809,7 +809,7 @@ body {
                     <!-- end Row selection (multiple rows) -->
                     <!-- start Form Inputs -->
                     
-                    <div class="px-3 py-2">
+                    <div class="px-3 py-2 main-wrapper">
 
                       <!-- <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-account" role="tabpanel" aria-labelledby="pills-account-tab" tabindex="0">

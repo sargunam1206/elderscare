@@ -589,10 +589,10 @@
       class="lds-ripple img-fluid" />
   </div>
 
-  <div class="main-wrapper overflow-hidden">
+  <div class="main-wrapper overflow-hidden" style="margin-top: 80px;" >
     <!-- Add baseUrl hidden input -->
     <input type="hidden" id="baseUrl" data-url="<?= base_url() ?>/">
-      <div class="" style="background-color:#EDF7EE;">
+      <div class="" style="background-color:#EDF7EE; margin-top:80px;">
     <!-- <div class="container-fluid py-4"> -->
       <!-- Display success/error messages -->
       <div class="flash-messages mt-3">
@@ -612,7 +612,7 @@
 </div>
 
 
-      <div class="row g-4">
+      <div class="row g-4" >
         <div class="col-md-12">
           <div class=" px-3  h-100 d-flex flex-column">
             <div class="d-flex justify-content-between align-items-center mb-3">

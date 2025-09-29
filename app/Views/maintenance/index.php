@@ -603,11 +603,11 @@
     <img src="<?= base_url(); ?>/public/dist/assets/images/logos/favicon.png" alt="loader" class="lds-ripple img-fluid" />
   </div>
 
-  <div class="main-wrapper overflow-hidden">
+  <div class="main-wrapper overflow-hidden" style="margin-top: 80px;">
     <!-- Add baseUrl hidden input -->
     <input type="hidden" id="baseUrl" data-url="<?= base_url() ?>/">
     
-     <div class="" style="background-color:#EDF7EE;">
+     <div class="main-wrapper" style="background-color:#EDF7EE;">
       <!-- Display success/error messages -->
       <?php if(session()->getFlashdata('message')): ?>
         <div class="alert alert-success alert-dismissible fade show">
