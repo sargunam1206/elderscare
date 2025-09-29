@@ -207,9 +207,7 @@ body {
   .table thead th, .table tbody td {
     padding: 8px 10px;
   }
-  .main-wrapper{
-    margin-top: 120px;
-  }
+ 
 }
 
 /* Badge styling */
@@ -381,9 +379,7 @@ h6 { font-size: 13px; font-weight: 600; }
     flex-direction: column;
     align-items: stretch;
   }
-  .main-wrapper{
-    margin-top: 70px;
-  }
+
 
  
   

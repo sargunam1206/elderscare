@@ -251,6 +251,7 @@
       .table tbody td {
         padding: 8px 10px;
       }
+    
     }
 
     /* Badge styling */
@@ -574,6 +575,7 @@
       #form_inputs_wrapper>.dataTables_length {
         display: none !important;
       }
+      
     }
   </style>
 </head>
@@ -595,8 +597,8 @@
 
   <!--  Header End -->
 
-  <div class="main-wrapper px-3 py-2">
-    <div class="">
+  <div class="main-wrapper px-3 py-2" style="margin-top: 80px;">
+    <div class="main-wrepper">
       <h4 class=" "  style="font-size:18px;"><i class="bi bi-house-door text-success"></i>
         Inhouse Guest</h5>
     </div>
@@ -613,19 +615,12 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     <?php endif; ?>
-    <div class="row">
+    <div class="row main-wrapper">
       <!-- Enhanced Submenu CSS -->
 
 
       <!-- Guest Cards Section -->
-      <div class="col-md-12">
-
-
-
-
-        <!-- Your Performance Card -->
-
-      </div>
+      
 
       <!-- end Basic Area Chart -->
 

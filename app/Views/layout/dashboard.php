@@ -62,9 +62,7 @@
         margin-left: 0; /* remove left margin */
         margin-top: 5px; /* space below logo */
     }
-    .main-wrapper{
-      margin-top:70px;
-    }
+   
 }
 .custom-spacing {
     word-spacing: 5px; /* adjust value as needed */
@@ -269,6 +267,19 @@ h5.fs-7 {
 
 /* end Enauiry page,Booking page,Maintanaace page */
 
+
+</style>
+<style>
+  /* Hide navbar title on mobile */
+@media (max-width: 991px) {
+  .navbar-brand span {
+    display: none !important; /* hide text */
+  }
+
+  .navbar-brand img {
+    height: 45px; /* keep logo visible */
+  }
+}
 
 </style>
 </head>

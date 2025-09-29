@@ -269,6 +269,7 @@ body {
   .table thead th, .table tbody td {
     padding: 8px 10px;
   }
+ 
 }
 
 /* Make checkbox green when checked */
@@ -535,9 +536,9 @@ body {
   <!-- Mobile Menu -->
  
 
-  <div class="main-wrapper">
+  <div class="main-wrapper" style="margin-top: 80px;">
 
-    <div id="reservationForm">
+    <div id="reservationForm" class="main-wrapper">
       <form action="<?= base_url('updateadvancebooking/' . $booking['id']) ?>" method="post" enctype="multipart/form-data" id="bookingForm">
         <div class="form-section card-body p-4 mb-4">
             <div class="row mb-3">

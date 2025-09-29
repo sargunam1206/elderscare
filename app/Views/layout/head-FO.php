@@ -124,6 +124,19 @@ $activePage = strtolower($uri->getSegment(1));
 }
 
 </style>
+<style>
+  /* Hide navbar title on mobile */
+@media (max-width: 991px) {
+  .navbar-brand span {
+    display: none !important; /* hide text */
+  }
+
+  .navbar-brand img {
+    height: 45px; /* keep logo visible */
+  }
+}
+
+</style>
 
 
 

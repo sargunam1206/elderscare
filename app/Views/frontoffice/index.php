@@ -48,9 +48,9 @@
   .navbar-brand span {
     font-size: 16px; /* slightly smaller text on mobile */
   }
-  #main-wrapper{
+  /* #main-wrapper{
     margin-top:30px;
-  }
+  } */
 }
 
 
@@ -200,6 +200,19 @@
 }
 
   </style>
+  <style>
+  /* Hide navbar title on mobile */
+@media (max-width: 991px) {
+  .navbar-brand span {
+    display: none !important; /* hide text */
+  }
+
+  .navbar-brand img {
+    height: 45px; /* keep logo visible */
+  }
+}
+
+</style>
  
 
 

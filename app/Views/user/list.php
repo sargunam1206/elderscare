@@ -781,7 +781,7 @@ body {
     </div>
   </div> -->
 
-  <div class="main-wrapper overflow-hidden">
+  <div class="main-wrapper overflow-hidden" style="margin-top:80px">
    
 <?php if(session()->getFlashdata('success')): ?>
     <div class="alert alert-success alert-dismissible fade show">
