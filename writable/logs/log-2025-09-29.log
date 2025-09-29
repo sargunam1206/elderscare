@@ -44,3 +44,43 @@ ORDER BY `created_on` DESC
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
  8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-29 08:59:55 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Views\advancebooking\create.php on line 678.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('advancebooking/create', [], true)
+ 4 APPPATH\Controllers\AdvBooking.php(161): view('advancebooking/create', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AdvBooking->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdvBooking))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-29 09:02:01 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Views\advancebooking\edit.php on line 558.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('advancebooking/edit', [], true)
+ 4 APPPATH\Controllers\AdvBooking.php(580): view('advancebooking/edit', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AdvBooking->edit('12')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdvBooking))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-29 09:05:48 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Views\activity\create.php on line 656.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('activity/create', [], true)
+ 4 APPPATH\Controllers\Activity.php(69): view('activity/create', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Activity->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activity))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-29 09:06:07 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Views\activity\create.php on line 656.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('activity/create', [], true)
+ 4 APPPATH\Controllers\Activity.php(69): view('activity/create', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Activity->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activity))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

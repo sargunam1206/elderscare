@@ -661,7 +661,7 @@ body {
       <form action="<?= base_url('advancebooking') ?>" method="post" enctype="multipart/form-data" id="bookingForm" class="needs-validation" novalidate>
         <div class="form-section card-border  mb-4">
 
-          <div class="row mb-3">
+          <!-- <div class="row mb-3">
             <div class="col-md-6">
                 <h4 class="mb-0 "  style="font-size:18px;"><i class="ti ti-calendar-check text-success me-1"></i>Add Booking</h4>
             </div>
@@ -670,7 +670,16 @@ body {
                     <i class="bi bi-list-ul"></i> Booking List
                 </a>
             </div>
-          </div>
+          </div> -->
+                  <div class="d-flex justify-content-between align-items-center mb-3 ">
+                <h4 class="mb-0 "  style="font-size:18px;"><i class="ti ti-calendar-check text-success me-1"></i>Add Booking</h4>
+              <div>
+                
+ <a href="<?= base_url('viewadvancebooking'); ?>" class="btn btn-primary">
+                    <i class="bi bi-list-ul"></i> Booking List
+                </a>                
+              </div>
+            </div>
 
           <div class="row mb-3">
             <div class="col-md-2">

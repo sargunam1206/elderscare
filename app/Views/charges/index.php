@@ -380,7 +380,7 @@
 }
 
 </style>
- <style>
+<style>
     /* ===== Compact Global Adjustments ===== */
     body {
       font-family: 'Poppins', 'Inter', 'Segoe UI', sans-serif;
@@ -589,7 +589,7 @@
       class="lds-ripple img-fluid" />
   </div>
 
-  <div class="main-wrapper overflow-hidden" style="margin-top: 80px;" >
+  <div class="main-wrapper overflow-hidden"  >
     <!-- Add baseUrl hidden input -->
     <input type="hidden" id="baseUrl" data-url="<?= base_url() ?>/">
       <div class="" style="background-color:#EDF7EE; margin-top:80px;">

@@ -431,41 +431,87 @@ h6 { font-size: 13px; font-weight: 600; }
 }
 </style>
 <style>
-  /* Make wrapper relative */
+/* Fix for room menu overflow */
 .room-wrapper {
   position: relative;
+  margin-bottom: 10px;
 }
 
-/* Floating menu styling */
+/* Enhanced room menu styling with upward expansion when needed */
 .room-menu {
   position: absolute;
-  top: 105%;
-  left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 1000;
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 0; /* no padding for ul */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  padding: 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   list-style: none;
+  margin-top: 5px;
+}
+
+/* Default position - opens downward */
+.room-menu.downward {
+  top: 100%;
+  bottom: auto;
+}
+
+/* Alternative position - opens upward when near bottom */
+.room-menu.upward {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .room-menu li {
-  padding: 5px 10px;
+  padding: 8px 12px;
   cursor: pointer;
   border-bottom: 1px solid #eee;
+  font-size: 12px;
+  transition: all 0.2s ease;
 }
 
-.room-menu li:last-child { border-bottom: none; }
+.room-menu li:last-child { 
+  border-bottom: none; 
+}
 
 .room-menu li:hover {
-  background-color: #e8f9f0;
-  color: #198754;
+  background-color: var(--primary-green);
+  color: white;
 }
 
+/* Ensure the card container can accommodate the menus */
+.card {
+  position: relative;
+  overflow: visible !important; /* Override any overflow hidden */
+}
 
+/* Specifically target the rooms card */
+.card.text-dark.shadow-sm.border-0 {
+  overflow: visible !important;
+}
 
+/* Ensure room grid doesn't clip menus */
+#room-grid {
+  margin-top: 15px;
+  position: relative;
+  overflow: visible;
+}
+
+/* Container fix */
+.container-fluid {
+  overflow: visible;
+}
+
+.row {
+  overflow: visible;
+}
+
+.col-md-4 {
+  overflow: visible;
+}
 </style>
 <style>
   /* Fix for overlapping room menus */
@@ -523,7 +569,7 @@ h6 { font-size: 13px; font-weight: 600; }
     max-width: 140px;
     padding: 8px 12px;
     border-radius: 6px;
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
     border: 1px solid #e9ecef;
   }
 
@@ -532,7 +578,11 @@ h6 { font-size: 13px; font-weight: 600; }
     flex-shrink: 0;
     margin-top: 2px;
   }
+
+
+  
 </style>
+
 </head>
 
 <body style="background-color:#EDF7EE;">
@@ -576,6 +626,113 @@ h6 { font-size: 13px; font-weight: 600; }
 
 <div class="container-fluid">
   <div class="row">
+   <div class="col-md-4">
+  <div class="card text-dark shadow-sm border-0">
+    <div class="p-3">
+      <!-- Legend with counts -->
+      <div class="mb-3">
+        <div class="row fw-semibold" id="legend">
+          <!-- Row 1 -->
+          <div class="col-6 mb-2">
+            <span class="badge d-flex align-items-start justify-content-start text-success w-100">
+              <span class="rounded-circle me-2" 
+                    style="width: 12px; height: 12px; background-color: #2e7d32;"></span>
+              Vacant (<span id="count-vacant"><?= $counts['vacant'] ?? 0 ?></span>)
+            </span>
+          </div>
+
+          <div class="col-6 mb-2">
+            <span class="badge d-flex align-items-start justify-content-start text-danger w-100">
+              <span class="rounded-circle me-2" 
+                    style="width: 12px; height: 12px; background-color: #d32f2f;"></span>
+              Occupied (<span id="count-occupied"><?= $counts['occupied'] ?? 0 ?></span>)
+            </span>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="col-6 mb-2">
+            <span class="badge d-flex align-items-start justify-content-start" style="color: goldenrod;">
+              <span class="rounded-circle me-2" 
+                    style="width: 12px; height: 12px; background-color: goldenrod;"></span>
+              Reserved (<span id="count-reserved"><?= $counts['reserved'] ?? 0 ?></span>)
+            </span>
+          </div>
+
+          <div class="col-6 mb-2">
+            <span class="badge d-flex align-items-start justify-content-start" style="color: brown;">
+              <span class="rounded-circle me-2" 
+                    style="width: 12px; height: 12px; background-color: brown;"></span>
+              Dirty (<span id="count-dirty"><?= $counts['dirty'] ?? 0 ?></span>)
+            </span>
+          </div>
+
+          <!-- Row 3: New Status -->
+          <div class="col-6 mb-2">
+            <span class="badge d-flex align-items-start justify-content-start" style="color: #2596be;">
+              <span class="rounded-circle me-2" 
+                    style="width: 12px; height: 12px; background-color:#2596be;"></span>
+              Block(<span id="count-maintenance"><?= $counts['maintenance'] ?? 0 ?></span>)
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rooms Grid -->
+      <div class="row g-2" id="room-grid">
+          <?php 
+          if (!empty($rooms)): 
+              foreach ($rooms as $room): 
+                  $roomNo = $room['room_no'];
+                  $status = $room['room_status'];
+                  $roomType = $room['room_type'] ?? 'Not specified';
+                  $color = '';
+                  
+                  switch($status) {
+                      case 'Vacant':
+                          $color = '#2e7d32';
+                          break;
+                      case 'Occupied':
+                          $color = '#d32f2f';
+                          break;
+                      case 'Reserved':
+                          $color = 'goldenrod';
+                          break;
+                      case 'Dirty':
+                          $color = 'brown';
+                          break;
+                      case 'block': // New status
+                          $color = '#2596be';
+                          break;
+                      default:
+                          $color = '#6c757d';
+                  }
+          ?>
+              <div class="col-3 room-wrapper">
+                  <button 
+                      class="btn w-100 text-white fw-semibold room-btn" 
+                      style="background-color: <?= $color ?>;"
+                      data-room-no="<?= $roomNo ?>" 
+                      data-room-status="<?= $status ?>"
+                      data-room-id="<?= $room['room_id'] ?>"
+                      data-room-type="<?= $roomType ?>"
+                  >
+                      <?= $roomNo ?>
+                  </button>
+                  <div class="room-menu mt-2 d-none text-center"></div>
+              </div>
+          <?php 
+              endforeach; 
+          else: 
+          ?>
+              <div class="col-12">
+                  <p class="text-center text-muted">No rooms found.</p>
+              </div>
+          <?php endif; ?>
+      </div>
+    </div>
+  </div>
+</div>
+
     <!-- Left Side (Room Info) -->
     <div class="col-md-8">
       <div class="card shadow-md rounded-3">
@@ -587,102 +744,7 @@ h6 { font-size: 13px; font-weight: 600; }
     </div>
 
     <!-- Right Side (Rooms + Legend + Counts) -->
-    <div class="col-md-4">
-      <div class="card text-dark shadow-sm border-0">
-        <div class="p-3">
-          <!-- Legend with counts -->
-          <div class="mb-3">
-            <div class="row fw-semibold" id="legend">
-              <!-- Row 1 -->
-              <div class="col-6 mb-2">
-                <span class="badge d-flex align-items-start justify-content-start text-success w-100">
-                  <span class="rounded-circle me-2" 
-                        style="width: 12px; height: 12px; background-color: #2e7d32;"></span>
-                  Vacant (<span id="count-vacant"><?= $counts['vacant'] ?? 0 ?></span>)
-                </span>
-              </div>
-
-              <div class="col-6 mb-2">
-                <span class="badge d-flex align-items-start justify-content-start text-danger w-100">
-                  <span class="rounded-circle me-2" 
-                        style="width: 12px; height: 12px; background-color: #d32f2f;"></span>
-                  Occupied (<span id="count-occupied"><?= $counts['occupied'] ?? 0 ?></span>)
-                </span>
-              </div>
-
-              <!-- Row 2 -->
-              <div class="col-6 mb-2">
-                <span class="badge d-flex align-items-start justify-content-start" style="color: goldenrod;">
-                  <span class="rounded-circle me-2" 
-                        style="width: 12px; height: 12px; background-color: goldenrod;"></span>
-                  Reserved (<span id="count-reserved"><?= $counts['reserved'] ?? 0 ?></span>)
-                </span>
-              </div>
-
-              <div class="col-6 mb-2">
-                <span class="badge d-flex align-items-start justify-content-start" style="color: brown;">
-                  <span class="rounded-circle me-2" 
-                        style="width: 12px; height: 12px; background-color: brown;"></span>
-                  Dirty (<span id="count-dirty">0</span>)
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Rooms Grid -->
-          <!-- Rooms Grid -->
-<div class="row g-2" id="room-grid">
-    <?php 
-    if (!empty($rooms)): 
-        foreach ($rooms as $room): 
-            $roomNo = $room['room_no'];
-            $status = $room['room_status'];
-            $roomType = $room['room_type'] ?? 'Not specified'; // Get room type
-            $color = '';
-            
-            switch($status) {
-                case 'Vacant':
-                    $color = '#2e7d32';
-                    break;
-                case 'Occupied':
-                    $color = '#d32f2f';
-                    break;
-                case 'Reserved':
-                    $color = 'goldenrod';
-                    break;
-                case 'Dirty':
-                    $color = 'brown';
-                    break;
-                default:
-                    $color = '#6c757d'; // default gray
-            }
-    ?>
-        <div class="col-3 room-wrapper">
-            <button 
-                class="btn w-100 text-white fw-semibold room-btn" 
-                style="background-color: <?= $color ?>;"
-                data-room-no="<?= $roomNo ?>" 
-                data-room-status="<?= $status ?>"
-                data-room-id="<?= $room['room_id'] ?>"
-                data-room-type="<?= $roomType ?>"
-            >
-                <?= $roomNo ?>
-            </button>
-            <!-- Dynamic menu placeholder -->
-            <div class="room-menu mt-2 d-none text-center"></div>
-        </div>
-    <?php 
-        endforeach; 
-    else: 
-    ?>
-        <div class="col-12">
-            <p class="text-center text-muted">No rooms found.</p>
-        </div>
-    <?php endif; ?>
-</div>
-        </div>
-      </div>
-    </div>
+    
   </div>
 </div>
 
@@ -714,108 +776,176 @@ function formatTime(timeString) {
     return timeString || 'N/A';
 }
 
+// Function to check if menu will fit below, otherwise show above
+function adjustMenuPosition(button, menu) {
+    const buttonRect = button.getBoundingClientRect();
+    const menuHeight = 120; // Approximate menu height
+    const spaceBelow = window.innerHeight - buttonRect.bottom;
+    const spaceAbove = buttonRect.top;
+    
+    // Remove previous position classes
+    menu.classList.remove('downward', 'upward');
+    
+    // If not enough space below but enough space above, show menu upward
+    if (spaceBelow < menuHeight && spaceAbove > menuHeight) {
+        menu.classList.add('upward');
+    } else {
+        menu.classList.add('downward');
+    }
+}
+
+// ====== Global click handler to close menus when clicking outside ======
+document.addEventListener('click', function(e) {
+    // Close all menus if clicking outside room buttons or menus
+    if (!e.target.closest('.room-btn') && !e.target.closest('.room-menu')) {
+        document.querySelectorAll('.room-menu').forEach(menu => {
+            menu.classList.add('d-none');
+        });
+    }
+});
+
 // ====== Room button click ======
 document.querySelectorAll(".room-btn").forEach(btn => {
-    btn.addEventListener("click", function() {
+    btn.addEventListener("click", function(e) {
+        e.stopPropagation(); // Prevent the global click handler from closing immediately
+        
         const wrapper = this.closest(".room-wrapper");
         const menu = wrapper.querySelector(".room-menu");
-        document.querySelectorAll(".room-menu").forEach(m => m.classList.add("d-none"));
-        menu.classList.remove("d-none");
+        
+        // Close all other menus first
+        document.querySelectorAll(".room-menu").forEach(m => {
+            if (m !== menu) m.classList.add("d-none");
+        });
+        
+        // Toggle current menu
+        const isShowing = !menu.classList.contains('d-none');
+        menu.classList.toggle("d-none");
 
         const roomNo = this.dataset.roomNo;
         const status = this.dataset.roomStatus;
         const roomId = this.dataset.roomId;
         const roomType = this.dataset.roomType;
 
-        menu.innerHTML = `
-            <ul class="room-menu-list mb-0">
-                <li class="guest-info-btn">Guest Info</li>
-                <!--<li class="room-info-btn">Room Info</li>-->
-            </ul>
-        `;
-menu.querySelector(".guest-info-btn").addEventListener("click", () => {
-    const guestInfo = guestInfoMap[roomId];
-
-    // 🔹 Debug info
-    console.log("Room ID:", roomId);
-    console.log("Status:", status);
-    console.log("Guest Info:", guestInfo);
-
-    // Normalize status
-    let normalizedStatus = (status || '').toLowerCase();
-    if (normalizedStatus === 'reserved') normalizedStatus = 'confirmed';
-
-    const showGuestCards = (normalizedStatus === "occupied" || normalizedStatus === "confirmed") && guestInfo;
-    const showPdf = normalizedStatus === "occupied"; // PDF only for occupied
-
-    document.getElementById("room-info").innerHTML = `
-        <div class="guest-details">
-            <h4 class="fw-bold mb-3">Room ${roomNo} - Guest Information</h4>
-            <p><strong>Room Type:</strong> ${roomType}</p>
-
-            ${showGuestCards ? `
-                <div class="row">
-                    <!-- Guest 1 Card -->
-                    <div class="col-md-6">
-                        <div class="card mb-3">
-                            <div class="card-header bg-success text-white">
-                                <h5 class="mb-0">Guest 1</h5>
-                            </div>
-                            <div class="card-body">
-                                <p><strong>Name:</strong> ${guestInfo.guest1_title || ''} ${guestInfo.guest1_firstname || ''} ${guestInfo.guest1_lastname || 'N/A'}</p>
-                                <p><strong>Check-in:</strong> ${formatDate(guestInfo.arrival_date)} at ${formatTime(guestInfo.arrival_time)}</p>
-                                <p><strong>Check-out:</strong> ${formatDate(guestInfo.depart_date)} at ${formatTime(guestInfo.depart_time)}</p>
-                                ${showPdf && guestInfo.guest1_id ? `<button class="btn btn-sm btn-outline-success generate-pdf" data-guest-id="${guestInfo.guest1_id}"><i class="bi bi-file-earmark-pdf"></i> Guest 1 Info</button>` : ``}
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Guest 2 Card -->
-                    ${guestInfo.guest2_firstname || guestInfo.guest2_lastname ? `
-                    <div class="col-md-6">
-                        <div class="card mb-3">
-                            <div class="card-header bg-success text-white">
-                                <h5 class="mb-0">Guest 2</h5>
-                            </div>
-                            <div class="card-body">
-                                <p><strong>Name:</strong> ${guestInfo.guest2_title || ''} ${guestInfo.guest2_firstname || ''} ${guestInfo.guest2_lastname || 'N/A'}</p>
-                                <p><strong>Check-in:</strong> ${formatDate(guestInfo.arrival_date)} at ${formatTime(guestInfo.arrival_time)}</p>
-                                <p><strong>Check-out:</strong> ${formatDate(guestInfo.depart_date)} at ${formatTime(guestInfo.depart_time)}</p>
-                                ${showPdf && guestInfo.guest2_id ? `<button class="btn btn-sm btn-outline-success generate-pdf" data-guest-id="${guestInfo.guest2_id}"><i class="bi bi-file-earmark-pdf"></i> Guest 2 Info</button>` : ``}
-                            </div>
-                        </div>
-                    </div>` : ``}
-                </div>
-            ` : `
-                <div class="alert alert-danger mt-3">
-                    <i class="fas fa-info-circle"></i> 
-                    ${status === "Occupied" ? "No guest information found for this room." : `No guest information available (Room is ${status}).`}
-                </div>
-            `}
-        </div>
-    `;
-});
-
-
-
-        // === Room Info ===
-        menu.querySelector(".room-info-btn").addEventListener("click", () => {
-            document.getElementById("room-info").innerHTML = `
-                <div class="room-details">
-                    <h4 class="fw-bold">Room ${roomNo} - Room Info</h4>
-                    <p><strong>Room Number:</strong> ${roomNo}</p>
-                    <p><strong>Room Type:</strong> ${roomType}</p>
-                    <p><strong>Status:</strong> <span class="badge ${
-                        status === 'Vacant' ? 'bg-success' :
-                        status === 'Occupied' ? 'bg-danger' :
-                        status === 'Reserved' ? 'bg-warning' : 'bg-secondary'
-                    }">${status}</span></p>
-                </div>
+        // Only create menu content if it's being shown
+        if (!menu.classList.contains('d-none')) {
+            // Adjust menu position before showing
+            adjustMenuPosition(this, menu);
+            
+            menu.innerHTML = `
+                <ul class="room-menu-list mb-0">
+                    <li class="guest-info-btn">Guest Info</li>
+                    <li class="maintenance-btn btn-menu-item">Maintenance</li>
+                    <li class="pos-btn btn-menu-item">POS</li>
+                </ul>
             `;
-        });
+
+            // ====== Menu item click handlers ======
+            const handleMenuClick = (action) => {
+                // Hide the menu after selection
+                menu.classList.add('d-none');
+                
+                // Execute the selected action
+                action();
+            };
+
+            // Guest Info handler
+            menu.querySelector(".guest-info-btn").addEventListener("click", (e) => {
+                e.stopPropagation();
+                handleMenuClick(() => {
+                    const guestInfo = guestInfoMap[roomId];
+
+                    console.log("Room ID:", roomId);
+                    console.log("Status:", status);
+                    console.log("Guest Info:", guestInfo);
+
+                    let normalizedStatus = (status || '').toLowerCase();
+                    if (normalizedStatus === 'reserved') normalizedStatus = 'confirmed';
+
+                    const showGuestCards = (normalizedStatus === "occupied" || normalizedStatus === "confirmed") && guestInfo;
+                    const showPdf = normalizedStatus === "occupied";
+
+                    document.getElementById("room-info").innerHTML = `
+                        <div class="guest-details">
+                            <h4 class="fw-bold mb-3">Room ${roomNo} - Guest Information</h4>
+                            <p><strong>Room Type:</strong> ${roomType}</p>
+
+                            ${showGuestCards ? `
+                                <div class="row">
+                                    <!-- Guest 1 Card -->
+                                    <div class="col-md-6">
+                                        <div class="card mb-3">
+                                            <div class="card-header bg-success text-white">
+                                                <h5 class="mb-0">Guest 1</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p><strong>Name:</strong> ${guestInfo.guest1_title || ''} ${guestInfo.guest1_firstname || ''} ${guestInfo.guest1_lastname || 'N/A'}</p>
+                                                <p><strong>Check-in:</strong> ${formatDate(guestInfo.arrival_date)} at ${formatTime(guestInfo.arrival_time)}</p>
+                                                <p><strong>Check-out:</strong> ${formatDate(guestInfo.depart_date)} at ${formatTime(guestInfo.depart_time)}</p>
+                                                ${showPdf && guestInfo.guest1_id ? `<button class="btn btn-sm btn-outline-success generate-pdf" data-guest-id="${guestInfo.guest1_id}"><i class="bi bi-file-earmark-pdf"></i> Guest 1 Info</button>` : ``}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Guest 2 Card -->
+                                    ${guestInfo.guest2_firstname || guestInfo.guest2_lastname ? `
+                                    <div class="col-md-6">
+                                        <div class="card mb-3">
+                                            <div class="card-header bg-success text-white">
+                                                <h5 class="mb-0">Guest 2</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p><strong>Name:</strong> ${guestInfo.guest2_title || ''} ${guestInfo.guest2_firstname || ''} ${guestInfo.guest2_lastname || 'N/A'}</p>
+                                                <p><strong>Check-in:</strong> ${formatDate(guestInfo.arrival_date)} at ${formatTime(guestInfo.arrival_time)}</p>
+                                                <p><strong>Check-out:</strong> ${formatDate(guestInfo.depart_date)} at ${formatTime(guestInfo.depart_time)}</p>
+                                                ${showPdf && guestInfo.guest2_id ? `<button class="btn btn-sm btn-outline-success generate-pdf" data-guest-id="${guestInfo.guest2_id}"><i class="bi bi-file-earmark-pdf"></i> Guest 2 Info</button>` : ``}
+                                            </div>
+                                        </div>
+                                    </div>` : ``}
+                                </div>
+                            ` : `
+                                <div class="alert alert-danger mt-3">
+                                    <i class="fas fa-info-circle"></i> 
+                                    ${status === "Occupied" ? "No guest information found for this room." : `No guest information available (Room is ${status}).`}
+                                </div>
+                            `}
+                        </div>
+                    `;
+                });
+            });
+
+            // Maintenance handler
+            menu.querySelector(".maintenance-btn").addEventListener("click", (e) => {
+                e.stopPropagation();
+                handleMenuClick(() => {
+                    document.getElementById("room-info").innerHTML = `
+                        <div class="maintenance-section">
+                            <h4 class="fw-bold mb-3">Room ${roomNo} - Maintenance</h4>
+                            <p>Here you can show maintenance details or actions for this room.</p>
+                        </div>
+                    `;
+                });
+            });
+
+            // POS handler
+            menu.querySelector(".pos-btn").addEventListener("click", (e) => {
+                e.stopPropagation();
+                handleMenuClick(() => {
+                    document.getElementById("room-info").innerHTML = `
+                        <div class="pos-section">
+                            <h4 class="fw-bold mb-3">Room ${roomNo} - POS</h4>
+                            <p>Here you can show POS (billing / charges) details for this room.</p>
+                        </div>
+                    `;
+                });
+            });
+
+            // Prevent menu clicks from closing the menu immediately
+            menu.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        }
     });
 });
-
 
 // ====== PDF Generation Handler ======
 document.addEventListener('click', function(e) {
@@ -825,24 +955,15 @@ document.addEventListener('click', function(e) {
     }
 });
 
+// Recalculate menu positions on window resize
+window.addEventListener('resize', function() {
+    document.querySelectorAll('.room-menu:not(.d-none)').forEach(menu => {
+        const button = menu.closest('.room-wrapper').querySelector('.room-btn');
+        adjustMenuPosition(button, menu);
+    });
+});
 </script>
    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <!-- DataTables -->

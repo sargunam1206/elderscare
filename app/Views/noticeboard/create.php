@@ -647,7 +647,7 @@
       class="lds-ripple img-fluid" />
   </div>
 
-  <div class="main-wrapper overflow-hidden">
+  <div class="main-wrapper overflow-hidden" style="margin-top:80px;">
     <!-- Add baseUrl hidden input -->
     <input type="hidden" id="baseUrl" data-url="<?= base_url() ?>/">
     

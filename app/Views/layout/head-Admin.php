@@ -244,7 +244,7 @@ $activePage = strtolower($uri->getSegment(1));
 
 <!-- Onboarding Dropdown -->
 <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle text-white fw-semibold <?= in_array($activePage, ['act','not','charges']) ? 'active' : '' ?>" 
+  <a class="nav-link dropdown-toggle text-white fw-semibold <?= in_array($activePage, ['act','not','charges','wallet']) ? 'active' : '' ?>" 
      href="#" id="onboardingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <i class="bi bi-clipboard-check fs-5 me-1"></i> Onboarding
   </a>
@@ -262,6 +262,11 @@ $activePage = strtolower($uri->getSegment(1));
     <li>
       <a class="dropdown-item <?= ($activePage == '') ? 'active' : '' ?>" href="<?= base_url('charges'); ?>">
         Add Charges
+      </a>
+    </li>
+     <li>
+      <a class="dropdown-item <?= ($activePage == '') ? 'active' : '' ?>" href="<?= base_url('wallet'); ?>">
+        Wallet
       </a>
     </li>
   </ul>
