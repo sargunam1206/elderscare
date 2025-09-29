@@ -1,0 +1,46 @@
+ERROR - 2025-09-29 06:52:00 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp1\htdocs\advaya\elderscare\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp1\htdocs\advaya\elderscare\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'elders_care', 3307, '', 0)
+#1 C:\xampp1\htdocs\advaya\elderscare\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp1\htdocs\advaya\elderscare\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp1\htdocs\advaya\elderscare\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp1\htdocs\advaya\elderscare\system\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp1\htdocs\advaya\elderscare\app\Models\EnquiryModel.php(81): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp1\htdocs\advaya\elderscare\app\Controllers\UserInfo.php(101): App\Models\EnquiryModel->getRecentEnquiries()
+#7 C:\xampp1\htdocs\advaya\elderscare\system\CodeIgniter.php(942): App\Controllers\UserInfo->dashboard()
+#8 C:\xampp1\htdocs\advaya\elderscare\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#9 C:\xampp1\htdocs\advaya\elderscare\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp1\htdocs\advaya\elderscare\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp1\htdocs\advaya\elderscare\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp1\htdocs\advaya\elderscare\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp1\htdocs\advaya\elderscare\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp1\htdocs\advaya\elderscare\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp1\htdocs\advaya\elderscare\system\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp1\htdocs\advaya\elderscare\app\Models\EnquiryModel.php(81): CodeIgniter\Model->__call('get', Array)
+#5 C:\xampp1\htdocs\advaya\elderscare\app\Controllers\UserInfo.php(101): App\Models\EnquiryModel->getRecentEnquiries()
+#6 C:\xampp1\htdocs\advaya\elderscare\system\CodeIgniter.php(942): App\Controllers\UserInfo->dashboard()
+#7 C:\xampp1\htdocs\advaya\elderscare\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+#8 C:\xampp1\htdocs\advaya\elderscare\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp1\htdocs\advaya\elderscare\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-09-29 06:52:00 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `enquiries`
+WHERE `deleted_on` IS NULL
+AND MONTH(created_on) = :MONTH(created_on):
+AND YEAR(created_on) = :YEAR(created_on):
+ORDER BY `created_on` DESC
+ LIMIT 5', [...], false)
+ 3 SYSTEMPATH\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Models\EnquiryModel.php(81): CodeIgniter\Model->__call('get', [])
+ 5 APPPATH\Controllers\UserInfo.php(101): App\Models\EnquiryModel->getRecentEnquiries()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserInfo->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
