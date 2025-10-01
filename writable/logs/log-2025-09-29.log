@@ -1,0 +1,28 @@
+CRITICAL - 2025-09-29 06:43:05 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Inhouseguest.php on line 43.
+ 1 APPPATH\Controllers\Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\advaya\\app\\Controllers\\Inhouseguest.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('3')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-29 06:43:07 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Inhouseguest.php on line 43.
+ 1 APPPATH\Controllers\Inhouseguest.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\advaya\\app\\Controllers\\Inhouseguest.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Inhouseguest->room_guest('3')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inhouseguest))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-29 10:24:39 --> Undefined variable $full
+in APPPATH\Controllers\Servicebook.php on line 264.
+ 1 APPPATH\Controllers\Servicebook.php(264): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\advaya\\app\\Controllers\\Servicebook.php', 264)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Servicebook->updateServiceBooking()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicebook))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-29 10:25:15 --> Undefined variable $full
+in APPPATH\Controllers\Servicebook.php on line 269.
+ 1 APPPATH\Controllers\Servicebook.php(269): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $full', 'C:\\xampp\\htdocs\\advaya\\app\\Controllers\\Servicebook.php', 269)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Servicebook->updateServiceBooking()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicebook))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

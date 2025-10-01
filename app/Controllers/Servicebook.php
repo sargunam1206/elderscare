@@ -87,9 +87,10 @@ if (session()->get('user_type') === 'admin' || session()->get('user_type') === '
     $servicebookQuery = $this->servicebook
         ->select('service_bookings.*, guests_personal.first_name, guests_personal.last_name')
         ->join('guests_personal', 'guests_personal.guest_id = service_bookings.guest_id', 'inner') // ✅ inner join
-        ->where('service_bookings.deleted_on', null);
+        ->where('service_bookings.deleted_on', null)
+        ->orderBy('id', 'DESC');
 } else {
-    $servicebookQuery = $this->servicebook->where('deleted_on', null);
+    $servicebookQuery = $this->servicebook->where('deleted_on', null)->orderBy('charge_info', 'DESC');
 }
 
     
@@ -234,6 +235,75 @@ private function generateExcel($servicebook, $data)
 
     $writer->save('php://output');
     exit;
+}
+
+// public function updateServiceBooking()
+// {
+
+//             ini_set('display_errors', '1');
+//         ini_set('display_startup_errors', '1');
+//         error_reporting(E_ALL);
+
+//     $bookingId = $this->request->getPost('booking_id');
+//     $serviceInfo = $this->request->getPost('service_info');
+//     $totalAmount = $this->request->getPost('amount_data');
+//     $paymentMode = $this->request->getPost('payment_mode');
+//     $paymentStatus = $this->request->getPost('payment_status');
+    
+//     // Update the service booking
+//     $data = [
+//         'services_info' => $serviceInfo,
+//         'total_amount' => $totalAmount,
+//         'payment_mode' => $paymentMode,
+//         'payment_status' => $paymentStatus,
+//         'updated_on' => date('Y-m-d H:i:s')
+//     ];
+    
+//     $this->servicebook->update($bookingId, $data);
+    
+//     // Set success message
+//     $this->session->setFlashdata('success', 'Service booking updated successfully!');
+    
+//     // Redirect back to the service bookings page
+//     //return redirect()->to('/servicebook/view');
+//      return redirect()->to('servicerept/'.$full['guest_id']);
+// }
+
+
+public function updateServiceBooking()
+{
+    ini_set('display_errors', '1');
+    ini_set('display_startup_errors', '1');
+    error_reporting(E_ALL);
+    
+    $bookingId = $this->request->getPost('booking_id');
+    $serviceInfo = $this->request->getPost('service_info');
+    $totalAmount = $this->request->getPost('amount_data');
+    $paymentMode = $this->request->getPost('payment_mode');
+    $paymentStatus = $this->request->getPost('payment_status');
+    
+    // Update the service booking
+    $data = [
+        'services_info' => $serviceInfo,
+        'total_amount' => $totalAmount,
+        'payment_mode' => $paymentMode,
+        'payment_status' => $paymentStatus,
+        'updated_on' => date('Y-m-d H:i:s')
+    ];
+    
+    $this->servicebook->update($bookingId, $data);
+
+    // Fetch the booking again to get guest_id
+    $booking = $this->servicebook->find($bookingId);
+
+    // Set success message
+    $this->session->setFlashdata('success', 'Service booking updated successfully!');
+
+    if ($booking && !empty($booking['guest_id'])) {
+        return redirect()->to('servicerept/' . $booking['guest_id']);
+    } else {
+        return redirect()->to('/servicebook/view'); // fallback
+    }
 }
 
 }

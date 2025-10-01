@@ -453,8 +453,95 @@ public function verify()
         }
     }
 
+public function paymentrecd()
+{
+    $full = $this->request->getPost();
+    
+    // Map field names
+    $full['room_no'] = $full['room_no_data'];
+    unset($full['room_no_data']);
+    
+    $full['guest_id'] = $full['guest_id_data'];
+    unset($full['guest_id_data']);
 
-    public function paymentrecd()
+    $full['total_amount'] = $full['amount_data'];
+    unset($full['amount_data']);
+    
+    $service_info = json_decode($full['service_info']); 
+    unset($full['service_info']);
+    
+    $full['services_info'] = json_encode($service_info);
+    
+    date_default_timezone_set('Asia/Kolkata');
+    $date = date("Y-m-d H:i:s");
+    
+    $guest = $this->guestpersonal->where('guest_id', $full['guest_id'])->first();
+    
+    // Handle payment status and mode based on the request
+    if (isset($full['payment_status']) && $full['payment_status'] === 'pending') {
+        // This is the "Proceed Without Payment" scenario
+        $full['payment_status'] = "pending";
+        $full['payment_mode'] = ""; // Empty payment mode
+        $full['reference_id'] = ''; // No reference ID
+        
+        $session = \Config\Services::session();
+        $session->setFlashdata('success', 'Service registered successfully (Payment Pending)');
+    } else {
+        // This is the regular payment scenario
+        $full['payment_status'] = "success";
+        
+        // Handle payment method specific logic
+        if (!empty($full['bill_no'])) {
+            $full['reference_id'] = $full['bill_no'];   
+            $full['payment_mode'] = "Cash";
+            unset($full['bill_no']);
+        } 
+        elseif (!empty($full['upi_trans'])) {
+            $full['reference_id'] = $full['upi_trans'];  
+            $full['payment_mode'] = "UPI";
+            unset($full['upi_trans']);
+        }
+        elseif (!empty($full['card_trans'])) {
+            $full['reference_id'] = $full['card_trans'];      
+            $full['payment_mode'] = "Card";
+            unset($full['card_trans']);
+        } 
+        else {
+            $full['reference_id'] = '';     
+            $full['payment_mode'] = "Wallet";  
+            
+            // Update wallet by guest_id only for wallet payments
+            $guest_id = $full['guest_id'];
+            $this->db->table('wallets')
+                     ->where('guest_id', $guest_id)
+                     ->set('balance', 'balance - ' . (int)$full['total_amount'], false)
+                     ->update();
+                     
+            $session = \Config\Services::session();
+            $session->setFlashdata('success', 'Wallet Amount Deducted successfully');
+        }
+    }
+    
+    // Add timestamp
+    $full['created_at'] = $date;
+
+    // Save the data to the database
+    if ($this->servicebook->save($full)) {
+        $serviceid = $this->servicebook->getInsertID();
+        
+        // Set appropriate success message if not already set
+        if (!isset($session)) {
+            $session = \Config\Services::session();
+            $session->setFlashdata('success', 'Service Registered successfully');
+        }
+    } else {
+        echo "Failed to save service booking.";
+        print_r($this->servicebook->errors()); // Optional: shows validation errors if any
+    }
+             
+    return redirect()->to('servicerept/'.$full['guest_id']);
+}
+    public function paymentrecd3()
 {
     $full = $this->request->getPost();
     

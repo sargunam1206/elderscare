@@ -66,9 +66,10 @@ public function view($id = '')
         $chargesQuery = $this->ChargesInfoModel
             ->select('charge_info.*, guests_personal.first_name, guests_personal.last_name')
             ->join('guests_personal', 'guests_personal.guest_id = charge_info.guest_id', 'inner')
-            ->where('charge_info.deleted_on', null);
+            ->where('charge_info.deleted_on', null)
+            ->orderBy('charge_info', 'DESC');
     } else {
-        $chargesQuery = $this->ChargesInfoModel->where('deleted_on', null);
+        $chargesQuery = $this->ChargesInfoModel->where('deleted_on', null)->orderBy('charge_info', 'DESC');
     }
 
     // Apply guest ID filter if passed via URL
