@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
-
 <head>
   <!-- Required meta tags -->
   <meta charset="UTF-8" />
@@ -430,157 +429,71 @@ h6 { font-size: 13px; font-weight: 600; }
   border-color: #198754;
 }
 </style>
+
+
 <style>
-/* Fix for room menu overflow */
-.room-wrapper {
-  position: relative;
-  margin-bottom: 10px;
-}
-
-/* Enhanced room menu styling with upward expansion when needed */
-.room-menu {
-  position: absolute;
-  width: 100%;
-  z-index: 1000;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 0;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  list-style: none;
-  margin-top: 5px;
-}
-
-/* Default position - opens downward */
-.room-menu.downward {
-  top: 100%;
-  bottom: auto;
-}
-
-/* Alternative position - opens upward when near bottom */
-.room-menu.upward {
-  top: auto;
-  bottom: 100%;
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-
-.room-menu li {
-  padding: 8px 12px;
-  cursor: pointer;
-  border-bottom: 1px solid #eee;
-  font-size: 12px;
-  transition: all 0.2s ease;
-}
-
-.room-menu li:last-child { 
-  border-bottom: none; 
-}
-
-.room-menu li:hover {
-  background-color: var(--primary-green);
-  color: white;
-}
-
-/* Ensure the card container can accommodate the menus */
-.card {
-  position: relative;
-  overflow: visible !important; /* Override any overflow hidden */
-}
-
-/* Specifically target the rooms card */
-.card.text-dark.shadow-sm.border-0 {
-  overflow: visible !important;
-}
-
-/* Ensure room grid doesn't clip menus */
-#room-grid {
-  margin-top: 15px;
-  position: relative;
-  overflow: visible;
-}
-
-/* Container fix */
-.container-fluid {
-  overflow: visible;
-}
-
-.row {
-  overflow: visible;
-}
-
-.col-md-4 {
-  overflow: visible;
-}
-</style>
-<style>
-  /* Fix for overlapping room menus */
   .room-wrapper {
-    position: relative;
-    margin-bottom: 10px; /* Add spacing between room buttons */
-  }
+    position: relative; /* required for absolute positioning inside */
+}
 
-  /* Enhanced room menu styling to prevent overlap */
-  .room-menu {
+.room-menu {
     position: absolute;
-    top: 100%;
+    /* top: 100%; remove this */
     left: 0;
-    width: 100%;
-    z-index: 1000; /* Higher z-index to ensure it appears above other elements */
-    background: #fff;
+    z-index: 999;
+    min-width: 150px;
+    background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    list-style: none;
-    margin-top: 5px; /* Space between button and menu */
-  }
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding: 5px 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
 
-  .room-menu li {
+.room-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.room-menu li {
     padding: 8px 12px;
     cursor: pointer;
-    border-bottom: 1px solid #eee;
-    font-size: 12px;
-    transition: all 0.2s ease;
+}
+.room-menu li:hover {
+    background-color: #f0f0f0;
+}
+.room-menu {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Ensure room-wrapper allows absolutely positioned menu to overflow */
+.room-wrapper {
+    position: relative; /* keep for absolute positioning */
+    overflow: visible;  /* allow menu to overflow */
+}
+
+/* Ensure column allows overflow too */
+.col-3 {
+    overflow: visible; /* allow menu to overflow outside the column */
+}
+
+/* Ensure all parent cards allow overflow */
+.card,
+.card .p-3 {
+    overflow: visible;
+}
+@media (min-width: 992px) { /* Desktop and up */
+  .room-wrapper,
+  .col-3,
+  .card,
+  .card .p-3 {
+      overflow: visible !important; /* allow menu to escape parent bounds */
   }
-
-  .room-menu li:last-child { 
-    border-bottom: none; 
-  }
-
-  .room-menu li:hover {
-    background-color: var(--primary-green);
-    color: white;
-  }
-
-  /* Ensure room buttons have proper spacing */
-  #room-grid {
-    margin-top: 15px;
-  }
-
-  /* Enhanced legend styling for equal columns */
-  #legend .col-6 {
-    display: flex;
-    justify-content: center;
-  }
-
-  #legend .badge {
-    width: 100%;
-    max-width: 140px;
-    padding: 8px 12px;
-    border-radius: 6px;
-    /* background-color: #f8f9fa; */
-    border: 1px solid #e9ecef;
-  }
-
-  /* Fix for legend alignment */
-  .badge span.rounded-circle {
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
+}
 
 
-  
 </style>
 
 </head>
@@ -589,11 +502,7 @@ h6 { font-size: 13px; font-weight: 600; }
   <?= view('layout/head-FO') ?>
 
   <!-- Preloader -->
-
-
-
-
-
+   
   <!-- Sidebar Start -->
 
   <!--  Sidebar End -->
@@ -778,20 +687,27 @@ function formatTime(timeString) {
 
 // Function to check if menu will fit below, otherwise show above
 function adjustMenuPosition(button, menu) {
-    const buttonRect = button.getBoundingClientRect();
-    const menuHeight = 120; // Approximate menu height
-    const spaceBelow = window.innerHeight - buttonRect.bottom;
-    const spaceAbove = buttonRect.top;
-    
-    // Remove previous position classes
-    menu.classList.remove('downward', 'upward');
-    
-    // If not enough space below but enough space above, show menu upward
-    if (spaceBelow < menuHeight && spaceAbove > menuHeight) {
-        menu.classList.add('upward');
-    } else {
-        menu.classList.add('downward');
+    const rect = button.getBoundingClientRect();
+    const menuHeight = menu.scrollHeight;
+    const menuWidth = menu.offsetWidth;
+    const viewportHeight = window.innerHeight;
+    const viewportWidth = window.innerWidth;
+
+    let top = button.offsetTop + button.offsetHeight; // default below
+    let left = button.offsetLeft;
+
+    // If menu overflows bottom, show above button
+    if (rect.bottom + menuHeight > viewportHeight) {
+        top = button.offsetTop - menuHeight;
     }
+
+    // If menu overflows right, align to right edge of button
+    if (rect.left + menuWidth > viewportWidth) {
+        left = button.offsetLeft + button.offsetWidth - menuWidth;
+    }
+
+    menu.style.top = `${top}px`;
+    menu.style.left = `${left}px`;
 }
 
 // ====== Global click handler to close menus when clicking outside ======
