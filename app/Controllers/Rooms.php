@@ -163,6 +163,7 @@ public function roomstatus()
         'occupied' => 0,
         'reserved' => 0,
         'dirty' => 0,
+        'blocked' => 0
     ];
 
     // Pre-fetch guest information for Occupied and Confirmed rooms

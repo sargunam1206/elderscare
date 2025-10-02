@@ -552,9 +552,10 @@ h6 { font-size: 13px; font-weight: 600; }
                 <span class="badge d-flex align-items-start justify-content-start" style="color: brown;">
                   <span class="rounded-circle me-2" 
                         style="width: 12px; height: 12px; background-color: brown;"></span>
-                  Dirty (<span id="count-dirty">0</span>)
+                  Dirty (<span id="count-dirty"><?= $counts['dirty'] ?? 0 ?></span>)
                 </span>
               </div>
+              
             </div>
           </div>
 
