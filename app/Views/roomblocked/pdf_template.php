@@ -2,14 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" sizes="180x180"  href="<?= base_url('public/Logo-Elders_home.png'); ?>" >
-    <title>Nivasan Udayana</title>
+    <title>Blocked Rooms Report</title>
     <style>
-        body { font-family: Arial; margin: 20px; }
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .report-header { text-align: center; margin-bottom: 20px; }
         table { width: 100%; border-collapse: collapse; }
         th { background: #66BB6A; color: white; padding: 10px; text-align: left; }
         td { padding: 8px; border-bottom: 1px solid #ddd; }
-        .footer { margin-top: 20px; text-align: right; font-size: 0.9em; }
         
     </style>
 </head>
@@ -43,41 +42,34 @@
     <div class="logo-address-line"></div>
 
     <div class="report-header">
-        <h2>Maintenance Requests Report</h2>
-        <!-- <p>Generated on: <?= date('M d, Y H:i:s') ?></p> -->
+        <h2>Blocked Rooms Report</h2>
     </div>
 
     <table>
         <thead>
             <tr>
                 <th>S.No</th>
-                <th>Maintenance Area</th>
-                <th>Requested By</th>
-                <th>Type</th>
-                <th>Request Date</th>
-                <th>Expected Arrest Date</th>
+                <th>Room No</th>
+                <th>Room Status</th>
+                <th>Reason</th>
+                <th>Start Date</th>
+                <th>End Date</th>
                 <th>Status</th>
-                <th>Assigned To</th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($requests as $i => $request): ?>
+            <?php foreach ($rooms as $i => $row): ?>
             <tr>
                 <td><?= $i+1 ?></td>
-                <td><?= $request['maintenance_area'] ?></td>
-                <td><?= $request['requested_by'] ?></td>
-                <td><?= $request['type'] ?></td>
-                <td><?= date('M d, Y', strtotime($request['request_date'])) ?></td>
-                <td><?= $request['expected_arrest_date'] ? date('M d, Y', strtotime($request['expected_arrest_date'])) : 'Not set' ?></td>
-                <td><?= $request['status'] ?></td>
-                <td><?= $request['assigned_to'] ?? 'Not assigned' ?></td>
+                <td><?= $row['room_no'] ?></td>
+                <td><?= $row['room_status'] ?></td>
+                <td><?= $row['reason'] ?></td>
+                <td><?= $row['start_date'] ?></td>
+                <td><?= $row['end_date'] ?></td>
+                <td><?= $row['status'] ?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
-
-    <div class="footer">
-        <!-- <p>Total Requests: <?= count($requests) ?></p> -->
-    </div>
 </body>
 </html>

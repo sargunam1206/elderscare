@@ -32,628 +32,576 @@
         }
     </style>
     <style>
-        .modal-dialog-scrollable .modal-body {
-            height: auto !important;
-            max-height: none !important;
-            overflow-y: visible !important;
-        }
-    </style>
-
-
-    <style>
-        /* ========== Global Theme Colors ========== */
-        :root {
-            /* --primary-green: #1B5E20; */
-            /* --primary-green: #1B5E20; */
-            --primary-green: #66BB6A;
-            --primary-green-hover: #2E7D32;
-            --secondary-green: #66BB6A;
-            --table-header-text: #242424;
-            --light-green: #A5D6A7;
-            --light-green-hover: #81C784;
-            --destructive-red: #E53935;
-            --destructive-red-hover: #C62828;
-            --dark-gray: #333333;
-            --light-gray: #f4f6f9;
-            --border-color: #dee2e6;
-            --white: #FFFFFF;
-        }
-
-        /* Keep brand color on click/focus */
-        .btn-primary:focus,
-        .btn-primary:active,
-        .btn-primary:focus:active {
-            background-color: #1B5E20 !important;
-            color: #FFFFFF !important;
-            box-shadow: none !important;
-            border-color: #1B5E20 !important;
-        }
-
-
-        /* ========== Base Styles ========== */
-        body {
-            font-family: 'Poppins', 'Inter', 'Segoe UI', sans-serif;
-            background-color: var(--light-gray);
-            color: var(--dark-gray);
-        }
-
-        /* Active navbar link underline */
-        .navbar-nav .nav-link {
-            position: relative;
-            padding-bottom: 4px;
-            /* space for underline */
-        }
-
-        .navbar-nav .nav-link.active::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 3px;
-            background-color: #FFFFFF;
-            /* white underline */
-            border-radius: 2px;
-        }
-
-        /* ========== Typography ========== */
-        .page-title {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--primary-green);
-        }
-
-        .section-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--secondary-green);
-        }
-
-        .label-text {
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--dark-gray);
-        }
-
-        /* ========== Form Elements ========== */
-        .form-control,
-        .form-select {
-            font-size: 14px;
-            font-weight: 400;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 8px 12px;
-            background-color: var(--white);
-        }
-
-        .form-control:focus,
-        .form-select:focus {
-            border-color: var(--secondary-green);
-            box-shadow: 0 0 0 0.25rem rgba(102, 187, 106, 0.25);
-        }
-
-        .dropdown-menu {
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-        }
-
-        .dropdown-item:hover,
-        .dropdown-item:focus {
-            background-color: var(--light-green);
-            color: var(--primary-green);
-        }
-
-        /* ========== Tables ========== */
-        .table {
-            background-color: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-        }
-
-        .table thead th {
-            background-color: var(--primary-green);
-            color: var(--table-header-text);
-            font-weight: 600;
-            padding: 12px 15px;
-        }
-
-        .table tbody td {
-            padding: 10px 15px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .table-striped tbody tr:nth-of-type(odd) {
-            background-color: rgba(165, 214, 167, 0.1);
-        }
-
-        .table-hover tbody tr:hover {
-            background-color: rgba(165, 214, 167, 0.3);
-        }
-
-        /* ========== Buttons ========== */
-        .btn {
-            font-size: 14px;
-            font-weight: 600;
-            border-radius: 8px;
-            padding: 8px 16px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-green);
-            border-color: var(--primary-green);
-            color: var(--table-header-text);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--primary-green-hover);
-            border-color: var(--primary-green-hover);
-        }
-
-        .btn-secondary {
-            background-color: var(--light-green);
-            border-color: var(--light-green);
-            color: var(--primary-green);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--light-green-hover);
-            border-color: var(--light-green-hover);
-        }
-
-        .btn-danger {
-            background-color: var(--destructive-red);
-            border-color: var(--destructive-red);
-            color: var(--white);
-        }
-
-        .btn-danger:hover {
-            background-color: var(--destructive-red-hover);
-            border-color: var(--destructive-red-hover);
-        }
-
-        /* ========== Cards ========== */
-        .card {
-            border: none;
-            border-radius: 8px;
-            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-            background-color: var(--white);
-        }
-
-        .card-header {
-            background-color: var(--light-gray);
-            border-bottom: 1px solid var(--border-color);
-            font-weight: 600;
-            color: var(--secondary-green);
-            padding: 12px 20px;
-        }
-
-        /* ========== Modals ========== */
-        .modal-content {
-            border-radius: 8px;
-            border: none;
-        }
-
-        .modal-header {
-            background-color: var(--light-gray);
-            border-bottom: 1px solid var(--border-color);
-            padding: 16px 20px;
-        }
-
-        .modal-title {
-            color: var(--primary-green);
-            font-weight: 600;
-        }
-
-        .modal-footer {
-            border-top: 1px solid var(--border-color);
-            padding: 16px 20px;
-        }
-
-        /* ========== Status Badges ========== */
-        .btn-warning {
-            background-color: #FFA000;
-            color: var(--white);
-        }
-
-        .btn-info {
-            background-color: #0288D1;
-            color: var(--white);
-        }
-
-        /* ========== Responsive Adjustments ========== */
-        @media (max-width: 768px) {
-            .page-title {
-                font-size: 20px;
-            }
-
-            .section-title {
-                font-size: 16px;
-            }
-
-            .form-control,
-            .form-select,
-            .btn {
-                font-size: 13px;
-            }
-
-            .table thead th,
-            .table tbody td {
-                padding: 8px 10px;
-            }
-        }
-
-        /* Make checkbox green when checked */
-        .form-check-input:checked {
-            background-color: var(--primary-green) !important;
-            border-color: var(--primary-green) !important;
-        }
-
-        /* Optional: remove Bootstrap focus blue shadow on click */
-        .form-check-input:focus {
-            box-shadow: 0 0 0 0.25rem rgba(102, 187, 106, 0.25) !important;
-        }
-    </style>
-    <style>
-        body {
-            background-color: #f4f6f9;
-            font-size: 14px;
-        }
-
-        .form-label {
-            font-weight: bold;
-        }
-
-        .modal-lg-custom {
-            max-width: 800px;
-        }
-
-        .modal-content {
-            border-radius: 10px;
-        }
-
-        .modal-header {
-            border-bottom: 1px solid #dee2e6;
-        }
-
-        .modal-footer {
-            border-top: 1px solid #dee2e6;
-        }
-
-        #usersTable tr td:last-child {
-            white-space: nowrap;
-        }
-
-        .badge-super_admin {
-            background-color: #6610f2;
-            color: white;
-        }
-
-        .badge-admin {
-            background-color: #fd7e14;
-            color: white;
-        }
-
-        .badge-guest {
-            background-color: #20c997;
-            color: white;
-        }
-
-        .permission-badge {
-            font-size: 0.75rem;
-            margin-left: 5px;
-        }
-
-        .current-user-badge {
-            background-color: #0d6efd;
-            color: white;
-        }
-    </style>
-    <style>
-        :root {
-            --primary: #1B5E20;
-            --secondary: #66BB6A;
-            --accent: #A5D6A7;
-            --light-bg: #F9F9F9;
-        }
-
-        /* Main dropdown style */
-        .navbar .dropdown-menu {
-            background-color: #1B5E20;
-            border: none;
-            border-radius: 8px;
-        }
-
-        .navbar .dropdown-item {
-            color: #FFFFFF;
-        }
-
-        .navbar .dropdown-item:hover {
-            background-color: #2E7D32;
-        }
-
-        /* Desktop submenu positioning */
-        @media (min-width: 992px) {
-            .dropdown-submenu {
-                position: relative;
-            }
-
-            .dropdown-submenu>.dropdown-menu {
-                top: 0;
-                left: 100%;
-                margin-top: -1px;
-                border-radius: 8px;
-                background-color: #1B5E20;
-            }
-
-            /* Show submenu on hover for desktop */
-            .dropdown-submenu:hover>.dropdown-menu {
-                display: block;
-            }
-
-            /* Remove collapse behavior on desktop */
-            .dropdown-submenu>.dropdown-menu.collapse {
-                display: none;
-            }
-        }
-
-        /* Arrow indicator */
-        .dropdown-submenu>.dropdown-toggle::after {
-            content: "▶";
-            float: right;
-            margin-left: .5rem;
-            font-size: 12px;
-        }
-
-        @media (max-width: 991px) {
-
-            /* Down arrow for mobile */
-            .dropdown-submenu>.dropdown-toggle::after {
-                content: "▼";
-            }
-        }
-
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--light-bg);
-        }
-
-        .card-title {
-            color: var(--primary);
-            font-weight: 600;
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            border-color: var(--primary);
-            border-radius: 8px;
-        }
-
-        .btn-primary:hover {
-            background-color: #2E7D32;
-            border-color: #2E7D32;
-        }
-
-        .btn-secondary {
-            background-color: var(--accent);
-            color: var(--primary);
-            border-color: var(--accent);
-            border-radius: 8px;
-        }
-
-        .btn-secondary:hover {
-            background-color: #81C784;
-            border-color: #81C784;
-        }
-
-        .legend-indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            display: inline-block;
-        }
-    </style>
-    <style>
-        /* ===== Compact Global Adjustments ===== */
-        body {
-            font-family: 'Poppins', 'Inter', 'Segoe UI', sans-serif;
-            font-size: 13px;
-            /* reduced global font */
-            background-color: var(--light-gray);
-            color: var(--dark-gray);
-            line-height: 1.4;
-        }
-
-        /* Headings smaller */
-        h5,
-        .modal-title {
-            font-size: 15px;
-            font-weight: 600;
-        }
-
-        h6 {
-            font-size: 13px;
-            font-weight: 600;
-        }
-
-        /* Labels smaller */
-        .form-label {
-            font-size: 12px;
-            margin-bottom: 2px;
-        }
-
-        /* Form controls compact */
-        .form-control,
-        .form-select {
-            font-size: 12px;
-            padding: 4px 8px;
-            border-radius: 6px;
-        }
-
-        .form-control-sm,
-        .form-select-sm {
-            font-size: 12px;
-            padding: 3px 6px;
-        }
-
-        /* Buttons compact */
-        .btn {
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 6px;
-        }
-
-        .btn-sm {
-            font-size: 12px;
-            padding: 3px 8px;
-        }
-
-        /* Table compact mode */
-        .table thead th,
-        .table tbody td {
-            padding: 6px 8px !important;
-            font-size: 12px;
-        }
-
-        .table thead th {
-            font-weight: 600;
-        }
-
-        .table {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Card compact */
-        .card,
-        .form-section {
-            padding: 10px !important;
-            border-radius: 6px;
-        }
-
-        /* Modal compact */
-        .modal-header,
-        .modal-footer {
-            padding: 8px 12px;
-        }
-
-        .modal-body {
-            padding: 8px 12px;
-        }
-
-        .modal-title {
-            font-size: 14px;
-        }
-
-        /* Validation messages smaller */
-        .validation-message {
-            font-size: 11px;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            body {
-                font-size: 12px;
-            }
-
-            .btn,
-            .form-control,
-            .form-select {
-                font-size: 11px;
-                padding: 3px 6px;
-            }
-        }
-
-        /* ===== Global Compact Styles ===== */
-
-        /* Reduce body padding + global font size */
-        body {
-            font-size: 13px;
-            line-height: 1.3;
-        }
-
-        /* Compact form fields */
-        .form-control,
-        .form-select {
-            font-size: 12px !important;
-            padding: 4px 8px !important;
-            height: auto !important;
-            border-radius: 5px;
-            margin-bottom: 4px;
-            /* tighter vertical spacing */
-        }
-
-        /* Labels */
-        .form-label {
-            font-size: 12px;
-            margin-bottom: 2px;
-        }
-
-        /* Compact buttons */
-        .btn {
-            font-size: 12px !important;
-            padding: 4px 10px !important;
-            border-radius: 5px;
-        }
-
-        /* Table compact */
-        .table th,
-        .table td {
-            padding: 6px 8px !important;
-            font-size: 12px;
-        }
-
-        /* Section headings smaller */
-        h5,
-        h6 {
-            font-size: 13px !important;
-            margin-bottom: 6px;
-        }
-
-        /* Card / section padding reduced */
-        .card,
-        .form-section {
-            padding: 10px !important;
-            margin-bottom: 10px !important;
-            border-radius: 6px;
-        }
-
-        /* Modal compact */
-        .modal-body {
-            padding: 8px 12px !important;
-            font-size: 12px;
-        }
-
-        .modal-header,
-        .modal-footer {
-            padding: 6px 10px !important;
-        }
-
-        .modal-title {
-            font-size: 13px;
-        }
-
-        /* Input groups (e.g. icons/buttons inside inputs) */
-        .input-group-text {
-            font-size: 12px;
-            padding: 2px;
-        }
-
-        .nav-pills .nav-link.active {
-            background-color: var(--bs-primary) !important;
-            color: #fff !important;
-        }
-
-        .nav-pills .nav-link.active {
-            background-color: transparent !important;
-            color: var(--primary-green-hover) !important;
-            border-bottom: 3px solid var(--primary-green-hover);
-            border-radius: 0;
-            font-weight: 600;
-        }
-    </style>
+    /* ========== Global Theme Colors ========== */
+    :root {
+      --primary-green:#66BB6A;
+      --primary-green-hover: #2E7D32;
+      --secondary-green: #66BB6A;
+      --table-header-text: #242424;
+      --light-green: #A5D6A7;
+      --light-green-hover: #81C784;
+      --destructive-red: #E53935;
+      --destructive-red-hover: #C62828;
+      --dark-gray: #333333;
+      --light-gray: #f4f6f9;
+      --border-color: #dee2e6;
+      --white: #FFFFFF;
+    }
+
+    /* ========== Base Styles ========== */
+    body {
+      font-family: 'Poppins', 'Inter', 'Segoe UI', sans-serif;
+      background-color: var(--light-gray);
+      color: var(--dark-gray);
+    }
+
+    /* ========== Typography ========== */
+    .page-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--primary-green);
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--secondary-green);
+    }
+
+    .label-text {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--dark-gray);
+    }
+
+    /* ========== Form Elements ========== */
+    .form-control, .form-select {
+      font-size: 14px;
+      font-weight: 400;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 8px 12px;
+      background-color: var(--white);
+    }
+
+    .form-control:focus, .form-select:focus {
+      border-color: var(--secondary-green);
+      box-shadow: 0 0 0 0.25rem rgba(102, 187, 106, 0.25);
+    }
+
+    /* ========== Tables ========== */
+    .table {
+      background-color: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    }
+
+    .table thead th {
+      background-color: var(--primary-green);
+
+      color: var( --white);
+      font-weight: 600;
+      padding: 12px 15px;
+    }
+
+    .table tbody td {
+      padding: 10px 15px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    /* Address column with text wrapping */
+    .table tbody td:nth-child(5) {
+      max-width: 200px;
+      word-wrap: break-word;
+      white-space: normal;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+      background-color: rgba(165, 214, 167, 0.1);
+    }
+
+    .table-hover tbody tr:hover {
+      background-color: rgba(165, 214, 167, 0.3);
+    }
+
+    /* ========== Buttons ========== */
+    .btn {
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 8px;
+      padding: 8px 16px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--primary-green);
+      border-color: var(--primary-green);
+      color: var( --table-header-text);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-green-hover);
+      border-color: var(--primary-green-hover);
+    }
+
+    .btn-secondary {
+      background-color: var(--light-green);
+      border-color: var(--light-green);
+      color: var(--primary-green);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--light-green-hover);
+      border-color: var(--light-green-hover);
+    }
+
+    .btn-danger {
+      background-color: var(--destructive-red);
+      border-color: var(--destructive-red);
+      color: var(--white);
+    }
+
+    .btn-danger:hover {
+      background-color: var(--destructive-red-hover);
+      border-color: var(--destructive-red-hover);
+    }
+
+    /* ========== Cards ========== */
+    .card {
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+      background-color: var(--white);
+    }
+
+    .card-header {
+      background-color: var(--light-gray);
+      border-bottom: 1px solid var(--border-color);
+      font-weight: 600;
+      color: var(--secondary-green);
+      padding: 12px 20px;
+    }
+
+    /* ========== Modals ========== */
+    .modal-content {
+      border-radius: 8px;
+      border: none;
+    }
+
+    .modal-header {
+      background-color: var(--light-gray);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 20px;
+    }
+
+    .modal-title {
+      color: var(--primary-green);
+      font-weight: 600;
+    }
+
+    .modal-footer {
+      border-top: 1px solid var(--border-color);
+      padding: 16px 20px;
+    }
+
+    /* ========== Status Badges ========== */
+    .badge-pending {
+      background-color: #FFF3CD;
+      color: #856404;
+    }
+    
+    .badge-in-progress {
+      background-color: #D1ECF1;
+      color: #0C5460;
+    }
+    
+    .badge-completed {
+      background-color: #D4EDDA;
+      color: #155724;
+    }
+    
+    .badge-cancelled {
+      background-color: #F8D7DA;
+      color: #721C24;
+    }
+
+    /* ========== Upload Box ========== */
+    .upload-box {
+      border: 2px dashed #ccc;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      margin-bottom: 15px;
+    }
+    
+    .upload-box:hover {
+      background-color: #f8f9fa;
+      border-color: var(--primary-green);
+    }
+    
+    .upload-box i {
+      font-size: 2rem;
+      color: var(--primary-green);
+      margin-bottom: 10px;
+    }
+    
+    .file-input {
+      display: none;
+    }
+    
+    .file-list {
+      margin-top: 15px;
+    }
+    
+    .file-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      background: #f8f9fa;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      border: 1px solid #dee2e6;
+    }
+    
+    .file-item button {
+      background: none;
+      border: none;
+      color: #dc3545;
+      cursor: pointer;
+      padding: 0;
+      margin-left: 10px;
+    }
+
+    /* ========== Validation Styles ========== */
+    label.required::after {
+      content: " *";
+      color: red;
+      font-weight: bold;
+    }
+    
+    .is-invalid {
+      border-color: #dc3545 !important;
+    }
+    
+    .invalid-feedback {
+      display: none;
+      width: 100%;
+      margin-top: 0.25rem;
+      font-size: 0.875em;
+      color: #dc3545;
+    }
+    
+    .was-validated .form-control:invalid ~ .invalid-feedback,
+    .was-validated .form-control:invalid ~ .invalid-tooltip,
+    .form-control.is-invalid ~ .invalid-feedback,
+    .form-control.is-invalid ~ .invalid-tooltip,
+    .dropdown.is-invalid ~ .invalid-feedback {
+      display: block;
+    }
+    
+    .dropdown.is-invalid .form-control {
+      border-color: #dc3545 !important;
+    }
+
+    /* ========== Responsive Adjustments ========== */
+    @media (max-width: 768px) {
+      .page-title {
+        font-size: 20px;
+      }
+      
+      .section-title {
+        font-size: 16px;
+      }
+      
+      .form-control, .form-select, .btn {
+        font-size: 13px;
+      }
+      
+      .table thead th, .table tbody td {
+        padding: 8px 10px;
+      }
+    }
+
+    /* Add to your existing CSS */
+#roomTypeDropdown.is-invalid .form-control {
+  border-color: #dc3545 !important;
+}
+
+#roomTypeDropdown.is-invalid .invalid-feedback {
+  display: block;
+}
+    /* Top controls: Show entries + Search (single line, left-right) */
+    #enquiries_wrapper > .dataTables_length,
+    #enquiries_wrapper > .dataTables_filter {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 10px;
+    }
+
+    #enquiries_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Push search input to the right */
+    #enquiries_wrapper .dataTables_filter {
+      margin-left: auto;
+    }
+
+    /* Bottom controls: Showing info + Pagination */
+    #enquiries_wrapper > .dataTables_info,
+    #enquiries_wrapper > .dataTables_paginate {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      #enquiries_wrapper {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      #enquiries_wrapper > .dataTables_info,
+      #enquiries_wrapper > .dataTables_paginate {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+      }
+
+      /* Search box aligned to the right */
+      #enquiries_wrapper > .dataTables_filter {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin: 5px 0;
+      }
+
+      #enquiries_wrapper .dataTables_filter {
+        margin-left: 0;
+      }
+      
+      #enquiries_wrapper > .dataTables_length {
+        display: none !important;
+      }
+    }
+    
+    /* File link styling */
+    .file-link {
+      color: var(--primary-green);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .file-link:hover {
+      text-decoration: underline;
+      color: var(--primary-green-hover);
+    }
+  </style>
+  <style>
+    /* ===== Compact Global Adjustments ===== */
+    body {
+      font-family: 'Poppins', 'Inter', 'Segoe UI', sans-serif;
+      font-size: 13px;
+      /* reduced global font */
+      /* background-color: var(--light-gray); */
+      color: var(--dark-gray);
+      line-height: 1.4;
+    }
+
+    /* Headings smaller */
+    h5,
+    .modal-title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    h6 {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* Labels smaller */
+    .form-label {
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+    /* Form controls compact */
+    .form-control,
+    .form-select {
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    .form-control-sm,
+    .form-select-sm {
+      font-size: 12px;
+      padding: 3px 6px;
+    }
+
+    /* Buttons compact */
+    .btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .btn-sm {
+      font-size: 12px;
+      padding: 3px 8px;
+    }
+
+    /* Table compact mode */
+    .table thead th,
+    .table tbody td {
+      padding: 6px 8px !important;
+      font-size: 12px;
+    }
+
+    .table thead th {
+      font-weight: 600;
+    }
+
+    .table {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Card compact */
+    .card,
+    .form-section {
+      padding: 10px !important;
+      border-radius: 6px;
+    }
+
+    /* Modal compact */
+    .modal-header,
+    .modal-footer {
+      padding: 8px 12px;
+    }
+
+    .modal-body {
+      padding: 8px 12px;
+    }
+
+    .modal-title {
+      font-size: 14px;
+    }
+
+    /* Validation messages smaller */
+    .validation-message {
+      font-size: 11px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      body {
+        font-size: 12px;
+      }
+
+      .btn,
+      .form-control,
+      .form-select {
+        font-size: 11px;
+        padding: 3px 6px;
+      }
+    }
+
+    /* ===== Global Compact Styles ===== */
+
+    /* Reduce body padding + global font size */
+    body {
+      font-size: 13px;
+      line-height: 1.3;
+    }
+
+    /* Compact form fields */
+    .form-control,
+    .form-select {
+      font-size: 12px !important;
+      padding: 4px 8px !important;
+      height: auto !important;
+      border-radius: 5px;
+      margin-bottom: 4px;
+      /* tighter vertical spacing */
+    }
+
+    /* Labels */
+    .form-label {
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+    /* Compact buttons */
+    .btn {
+      font-size: 12px !important;
+      padding: 4px 10px !important;
+      border-radius: 5px;
+    }
+
+    /* Table compact */
+    .table th,
+    .table td {
+      padding: 6px 8px !important;
+      font-size: 12px;
+    }
+
+    /* Section headings smaller */
+    h5,
+    h6 {
+      font-size: 13px !important;
+      margin-bottom: 6px;
+    }
+
+    /* Card / section padding reduced */
+    .card,
+    .form-section {
+      padding: 10px !important;
+      margin-bottom: 10px !important;
+      border-radius: 6px;
+    }
+
+    /* Modal compact */
+    .modal-body {
+      padding: 8px 12px !important;
+      font-size: 12px;
+    }
+
+    .modal-header,
+    .modal-footer {
+      padding: 6px 10px !important;
+    }
+
+    .modal-title {
+      font-size: 13px;
+    }
+
+    /* Input groups (e.g. icons/buttons inside inputs) */
+    .input-group-text {
+      font-size: 12px;
+      padding: 2px;
+    }
+
+    .nav-pills .nav-link.active {
+      background-color: var(--bs-primary) !important;
+      color: #fff !important;
+    }
+
+    .nav-pills .nav-link.active {
+      background-color: transparent !important;
+      color: var(--primary-green-hover) !important;
+      border-bottom: 3px solid var(--primary-green-hover);
+      border-radius: 0;
+      font-weight: 600;
+    }
+  </style>
     <style>
         /* Top controls: Show entries + Search (single line, left-right) */
         #form_inputs_wrapper>.dataTables_length,
@@ -720,7 +668,7 @@
 
 <body style="background-color:#EDF7EE;">
 
-    <?= view('layout/head-Admin') ?>
+    <?= view('layout/head-FO') ?>
 
     <!-- Preloader -->
     <div class="preloader">
@@ -968,7 +916,7 @@
                                 </div>
                             <?php endif; ?>
 
-                            <form method="post" action="<?= base_url('viewassettype'); ?>">
+                            <!-- <form method="post" action="<?= base_url('viewassettype'); ?>"> -->
 
 
 
@@ -985,6 +933,98 @@
                                         </button>
                                     </div>
                                 </div>
+
+
+                                <form method="get" action="<?= current_url() ?>" class="mb-4">
+  <div class="row g-3 align-items-end">
+
+    <!-- From Date -->
+    <div class="col-md-2">
+      <label class="form-label">From Date</label>
+      <input type="date" class="form-control" name="from_date" 
+             value="<?= $filter_from_date ?? '' ?>">
+    </div>
+
+    <!-- To Date -->
+    <div class="col-md-2">
+      <label class="form-label">To Date</label>
+      <input type="date" class="form-control" name="to_date" 
+             value="<?= $filter_to_date ?? '' ?>">
+    </div>
+
+  <!-- Room No -->
+<div class="col-md-2">
+  <label class="form-label">Room No</label>
+  <div class="dropdown">
+    <input type="text" class="form-control dropdown-toggle w-100"
+           name="roomNoDisplay"
+           id="roomNoFilterDisplay"
+           placeholder="Select Room No"
+           data-bs-toggle="dropdown"
+           aria-expanded="false"
+           autocomplete="off"
+           readonly
+           value="<?= $filter_room_no ?: 'All' ?>" />
+
+    <!-- Hidden input to store actual room_no -->
+    <input type="hidden" name="room_no" id="roomNoFilter" value="<?= $filter_room_no ?: 'all' ?>">
+
+    <ul class="dropdown-menu p-2 w-100" aria-labelledby="roomNoFilterDisplay"
+        style="max-height: 150px; overflow-y: auto;">
+      <div id="roomNoLists" style="width: 100%;">
+        <div class="dropdown-item" data-value="all">All</div>
+        <?php foreach ($room_nos as $r): ?>
+          <div class="dropdown-item" data-value="<?= $r['room_no'] ?>">
+            <?= $r['room_no'] ?>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </ul>
+  </div>
+</div>
+
+
+
+   <!-- Status -->
+<div class="col-md-2">
+  <label class="form-label">Status</label>
+  <div class="dropdown">
+    <input type="text" class="form-control dropdown-toggle w-100"
+           name="statusDisplay"
+           id="statusFilterDisplay"
+           placeholder="Select Status"
+           data-bs-toggle="dropdown"
+           aria-expanded="false"
+           autocomplete="off"
+           readonly
+           value="<?= $filter_status ?: 'All' ?>" />
+
+    <!-- Hidden input to store actual status -->
+    <input type="hidden" name="status" id="statusFilter" value="<?= $filter_status ?: 'all' ?>">
+
+    <ul class="dropdown-menu p-2 w-100" aria-labelledby="statusFilterDisplay"
+        style="max-height: 150px; overflow-y: auto;">
+      <div id="statusLists" style="width: 100%;">
+        <div class="dropdown-item" data-value="all">All</div>
+        <div class="dropdown-item" data-value="Pending">Pending</div>
+        <div class="dropdown-item" data-value="Resolved">Resolved</div>
+      </div>
+    </ul>
+  </div>
+</div>
+
+
+    <!-- Buttons -->
+     <div class="col-md-3 d-flex gap-2">
+                  <button type="submit"  class="btn btn-primary" >Filter</button>
+                  <button type="submit" class="btn btn-success"  name="pdf" value="1" formtarget="_blank">PDF</button>
+                  <button type="submit" name="excel" value="1" class="btn btn-primary">Excel</button>
+                  <a href="<?= current_url() ?>" class="btn btn-secondary">Reset</a>
+                 
+                </div>
+    
+  </div>
+</form>
 
 
 
@@ -1508,7 +1548,22 @@ document.getElementById('blockRoomForm').addEventListener('submit', function(e){
 
 </script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  // Generic dropdown handler
+  document.querySelectorAll(".dropdown-menu .dropdown-item").forEach(function (item) {
+    item.addEventListener("click", function () {
+      let value = this.getAttribute("data-value");
+      let displayInput = this.closest(".dropdown").querySelector("input.dropdown-toggle");
+      let hiddenInput = this.closest(".dropdown").querySelector("input[type=hidden]");
+      
+      displayInput.value = this.textContent.trim();
+      hiddenInput.value = value;
+    });
+  });
+});
 
+</script>
 
 
 

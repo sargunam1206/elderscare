@@ -216,6 +216,15 @@ $activePage = strtolower($uri->getSegment(1));
             </a>
           </li>
 
+
+           <!-- Maintenance -->
+          <li class="nav-item ">
+            <a class="nav-link text-white fw-semibold <?= ($activePage == 'roomblocked') ? 'active' : '' ?>" 
+               href="<?= base_url('roomblocked'); ?>"><i class="bi bi-slash-circle me-1 fs-5"></i>
+               Blocked Rooms
+            </a>
+          </li>
+
           <!-- User Dropdown -->
           <li class="nav-item dropdown ms-lg-4">
             <a class="d-flex align-items-center nav-link dropdown-toggle text-white fw-semibold" href="#" 

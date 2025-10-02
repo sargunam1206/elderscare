@@ -7,6 +7,8 @@ use App\Models\AssignedAssetsInfoModel;
 use App\Models\RoomsInfoModel;
 use App\Models\RoomBlockedModel;
 use App\Models\AdvanceBookingModel;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class RoomBlocked extends BaseController
 {
@@ -67,19 +69,116 @@ public function add()
        
 
     
-    public function view()
-    {
-        ini_set('display_errors', '1');
-        ini_set('display_startup_errors', '1');
-        error_reporting(E_ALL);
+public function view()
+{
+    ini_set('display_errors', '1');
+    ini_set('display_startup_errors', '1');
+    error_reporting(E_ALL);
 
-    
+    $from_date = $this->request->getGet('from_date');
+    $to_date   = $this->request->getGet('to_date');
+    $room_no   = $this->request->getGet('room_no');
+    $status    = $this->request->getGet('status');
 
-       $data['rooms'] = $this->rooms->where('deleted_on', null)->findAll();
+    $query = $this->rooms->where('deleted_on', null);
 
-      
-      return view('roomblocked/view',$data);
+    if (!empty($from_date)) {
+        $query->where('created_on >=', $from_date);
     }
+    if (!empty($to_date)) {
+        $query->where('created_on <=', $to_date);
+    }
+    if (!empty($room_no) && $room_no != 'all') {
+        $query->where('room_no', $room_no);
+    }
+    if (!empty($status) && $status != 'all') {
+        $query->where('status', $status);
+    }
+
+    $rooms = $query->findAll();
+
+    // Handle PDF export
+    if ($this->request->getGet('pdf')) {
+        return $this->exportPDF($rooms);
+    }
+
+    // Handle Excel export
+    if ($this->request->getGet('excel')) {
+        return $this->exportExcel($rooms);
+    }
+
+    $data = [
+        'rooms'           => $rooms,
+        'filter_from_date'=> $from_date,
+        'filter_to_date'  => $to_date,
+        'filter_room_no'  => $room_no,
+        'filter_status'   => $status,
+        'room_nos'        => $this->rooms->select('DISTINCT(room_no) as room_no')->findAll()
+    ];
+
+    return view('roomblocked/view', $data);
+}
+
+private function exportPDF($rooms)
+{
+    $mpdf = new \Mpdf\Mpdf();
+
+    // Load template view with data
+    $html = view('roomblocked/pdf_template', ['rooms' => $rooms]);
+
+    $mpdf->WriteHTML($html);
+
+    // Get PDF as string
+    $pdfContent = $mpdf->Output('', 'S');
+
+    // Prepare response (inline view in browser)
+    $response = \Config\Services::response();
+    $response->setHeader('Content-Type', 'application/pdf');
+    $response->setHeader('Content-Disposition', 'inline; filename="blocked_rooms.pdf"');
+
+    return $response->setBody($pdfContent);
+}
+
+
+
+private function exportExcel($rooms)
+{
+    $spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
+    $sheet = $spreadsheet->getActiveSheet();
+
+    // Headers
+    $headers = ['S.No', 'Room No', 'Room Status', 'Reason', 'Start Date', 'End Date', 'Status'];
+    $col = 'A';
+    foreach ($headers as $header) {
+        $sheet->setCellValue($col.'1', $header);
+        $col++;
+    }
+
+    // Data
+    $rowNum = 2;
+    $i = 1;
+    foreach ($rooms as $row) {
+        $sheet->setCellValue('A'.$rowNum, $i);
+        $sheet->setCellValue('B'.$rowNum, $row['room_no']);
+        $sheet->setCellValue('C'.$rowNum, $row['room_status']);
+        $sheet->setCellValue('D'.$rowNum, $row['reason']);
+        $sheet->setCellValue('E'.$rowNum, $row['start_date']);
+        $sheet->setCellValue('F'.$rowNum, $row['end_date']);
+        $sheet->setCellValue('G'.$rowNum, $row['status']);
+        $i++;
+        $rowNum++;
+    }
+
+    $writer = new \PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
+    $filename = 'blocked_rooms.xlsx';
+
+    header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+    header("Content-Disposition: attachment; filename=\"$filename\"");
+    $writer->save('php://output');
+    exit;
+}
+
+
 
 
  public function update($id)
