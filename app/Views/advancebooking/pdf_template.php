@@ -13,15 +13,32 @@
     </style>
 </head>
 <body>
+  
     <!-- Header with logo + address - Fixed vertical alignment -->
  <!-- Header with logo (left) and address (right) -->
 <table width="100%" style="margin-bottom:20px;">
     <tr>
         <!-- Logo -->
+<<<<<<< HEAD
         <td width="20%" style="vertical-align: middle;border-radius:20px">
             <img src="<?= base_url('./public/logo.png'); ?>" 
                  style="height:90px; width:200px; " alt="Logo">
+=======
+        <td width="20%" style="vertical-align: middle;">
+           
+            <img src="C:\xampp1\htdocs\advaya\elderscare\public\neuralArc-logo-white.png" 
+                 style="height:80px; width:60px;" alt="Logo">
+>>>>>>> nirosh
         </td>
+
+        <!-- <td width="20%" style="vertical-align: middle;">
+           <?php 
+$logo = base64_encode(file_get_contents(FCPATH.'public/Elders-home-logo.png'));
+?>
+<img src="data:image/png;base64,<?= $logo ?>" style="height:80px; width:60px;" alt="Logo">
+
+
+        </td> -->
         
         <!-- Address -->
      <td  style="padding-left: 36%; font-size: 14px; line-height: 1.5; ">

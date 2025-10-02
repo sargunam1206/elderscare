@@ -119,6 +119,34 @@ $activePage = strtolower($uri->getSegment(1));
     }
 }
 
+@media (max-width: 991px) {
+    .dropdown-submenu > .dropdown-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-top: 0;
+        margin-left: 1rem;
+        display: none; /* hidden by default */
+    }
+    .navbar-brand{
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+</style>
+<style>
+  /* Hide navbar title on mobile */
+@media (max-width: 991px) {
+  .navbar-brand span {
+    display: none !important; /* hide text */
+  }
+
+  .navbar-brand img {
+    height: 45px; /* keep logo visible */
+  }
+}
+
 </style>
 
 
@@ -136,7 +164,7 @@ $boardingPages = ['boarding', 'act', 'not'];
 $activePage = strtolower($uri->getSegment(1));
 ?>
 
-<header class="app-header shadow-sm" style="background-color:#419045;">
+<header class="app-header shadow-sm fixed-top" style="background-color:#419045;">
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#419045;">
     <div class="container-fluid d-flex align-items-center">
 
@@ -216,7 +244,7 @@ $activePage = strtolower($uri->getSegment(1));
 
 <!-- Onboarding Dropdown -->
 <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle text-white fw-semibold <?= in_array($activePage, ['act','not','charges']) ? 'active' : '' ?>" 
+  <a class="nav-link dropdown-toggle text-white fw-semibold <?= in_array($activePage, ['act','not','charges','wallet']) ? 'active' : '' ?>" 
      href="#" id="onboardingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <i class="bi bi-clipboard-check fs-5 me-1"></i> Onboarding
   </a>
@@ -234,6 +262,11 @@ $activePage = strtolower($uri->getSegment(1));
     <li>
       <a class="dropdown-item <?= ($activePage == '') ? 'active' : '' ?>" href="<?= base_url('charges'); ?>">
         Add Charges
+      </a>
+    </li>
+     <li>
+      <a class="dropdown-item <?= ($activePage == '') ? 'active' : '' ?>" href="<?= base_url('wallet'); ?>">
+        Wallet
       </a>
     </li>
   </ul>

@@ -116,6 +116,10 @@ $activePage = strtolower($uri->getSegment(1));
         margin-left: 1rem;
         display: none; /* hidden by default */
     }
+    .navbar-brand{
+      display: flex;
+      flex-direction: column;
+    }
 }
 
 .dropdown-menu .dropdown-item.active {
@@ -123,6 +127,20 @@ $activePage = strtolower($uri->getSegment(1));
   font-weight: 600;
 }
 
+
+
+</style>
+<style>
+  /* Hide navbar title on mobile */
+@media (max-width: 991px) {
+  .navbar-brand span {
+    display: none !important; /* hide text */
+  }
+
+  .navbar-brand img {
+    height: 45px; /* keep logo visible */
+  }
+}
 
 </style>
 
@@ -141,7 +159,7 @@ $boardingPages = ['boarding', 'act', 'not'];
 $activePage = strtolower($uri->getSegment(1));
 ?>
 
-<header class="app-header shadow-sm" style="background-color:#419045;">
+<header class="app-header shadow-sm  fixed-top" style="background-color:#419045;">
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#419045;">
     <div class="container-fluid d-flex align-items-center">
 

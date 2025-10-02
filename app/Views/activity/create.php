@@ -617,7 +617,7 @@ body {
       class="lds-ripple img-fluid" />
   </div>
 
-  <div class="main-wrapper overflow-hidden">
+  <div class="main-wrapper overflow-hidden" style="margin-top:80px;">
     <div class="">
       <!-- Display success/error messages -->
       <?php if(session()->getFlashdata('message')): ?>
@@ -638,7 +638,7 @@ body {
         <div class="col-md-12">
           <div class=" px-3 py-2 h-100 d-flex flex-column">
             <div class="d-flex justify-content-between align-items-center mb-3">
-              <h4 class=""  style="font-size:18px;"><i class="bi bi-calendar-event me-2 text-success"></i>Scheduled Activities</h4>
+              <h4 class=""  style="font-size:18px;"><i class="bi bi-calendar-event me-2 text-success"></i>Activities</h4>
               <div>
                 <span class="badge bg-light text-success border border-success me-2 fs-1">
                   <?= count($activities) ?> activities
@@ -648,6 +648,8 @@ body {
                 </button>
               </div>
             </div>
+
+            
 
             <!-- Filter Controls -->
             <form method="get" action="<?= current_url() ?>" class="mb-4">

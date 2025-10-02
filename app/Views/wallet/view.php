@@ -18,7 +18,6 @@
   <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-  <title>MatDash Bootstrap Admin</title>
   <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/ccc/wallet.css">
 
@@ -297,11 +296,209 @@
       border-color: #dc3545 !important;
     }
   </style>
+  <style>
+    /* ===== Compact Global Adjustments ===== */
+    body {
+      font-family: 'Poppins', 'Inter', 'Segoe UI', sans-serif;
+      font-size: 13px;
+      /* reduced global font */
+      background-color: var(--light-gray);
+      color: var(--dark-gray);
+      line-height: 1.4;
+    }
+
+    /* Headings smaller */
+    h5,
+    .modal-title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    h6 {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* Labels smaller */
+    .form-label {
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+    /* Form controls compact */
+    .form-control,
+    .form-select {
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    .form-control-sm,
+    .form-select-sm {
+      font-size: 12px;
+      padding: 3px 6px;
+    }
+
+    /* Buttons compact */
+    .btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .btn-sm {
+      font-size: 12px;
+      padding: 3px 8px;
+    }
+
+    /* Table compact mode */
+    .table thead th,
+    .table tbody td {
+      padding: 6px 8px !important;
+      font-size: 12px;
+    }
+
+    .table thead th {
+      font-weight: 600;
+    }
+
+    .table {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Card compact */
+    .card,
+    .form-section {
+      padding: 10px !important;
+      border-radius: 6px;
+    }
+
+    /* Modal compact */
+    .modal-header,
+    .modal-footer {
+      padding: 8px 12px;
+    }
+
+    .modal-body {
+      padding: 8px 12px;
+    }
+
+    .modal-title {
+      font-size: 14px;
+    }
+
+    /* Validation messages smaller */
+    .validation-message {
+      font-size: 11px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      body {
+        font-size: 12px;
+      }
+
+      .btn,
+      .form-control,
+      .form-select {
+        font-size: 11px;
+        padding: 3px 6px;
+      }
+    }
+
+    /* ===== Global Compact Styles ===== */
+
+    /* Reduce body padding + global font size */
+    body {
+      font-size: 13px;
+      line-height: 1.3;
+    }
+
+    /* Compact form fields */
+    .form-control,
+    .form-select {
+      font-size: 12px !important;
+      padding: 4px 8px !important;
+      height: auto !important;
+      border-radius: 5px;
+      margin-bottom: 4px;
+      /* tighter vertical spacing */
+    }
+
+    /* Labels */
+    .form-label {
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+    /* Compact buttons */
+    .btn {
+      font-size: 12px !important;
+      padding: 4px 10px !important;
+      border-radius: 5px;
+    }
+
+    /* Table compact */
+    .table th,
+    .table td {
+      padding: 6px 8px !important;
+      font-size: 12px;
+    }
+
+    /* Section headings smaller */
+    h5,
+    h6 {
+      font-size: 13px !important;
+      margin-bottom: 6px;
+    }
+
+    /* Card / section padding reduced */
+    .card,
+    .form-section {
+      padding: 10px !important;
+      margin-bottom: 10px !important;
+      border-radius: 6px;
+    }
+
+    /* Modal compact */
+    .modal-body {
+      padding: 8px 12px !important;
+      font-size: 12px;
+    }
+
+    .modal-header,
+    .modal-footer {
+      padding: 6px 10px !important;
+    }
+
+    .modal-title {
+      font-size: 13px;
+    }
+
+    /* Input groups (e.g. icons/buttons inside inputs) */
+    .input-group-text {
+      font-size: 12px;
+      padding: 2px;
+    }
+
+    .nav-pills .nav-link.active {
+      background-color: var(--bs-primary) !important;
+      color: #fff !important;
+    }
+
+    .nav-pills .nav-link.active {
+      background-color: transparent !important;
+      color: var(--primary-green-hover) !important;
+      border-bottom: 3px solid var(--primary-green-hover);
+      border-radius: 0;
+      font-weight: 600;
+    }
+  </style>
 
 </head>
 
-<body>
-    <?= view('layout/head') ?>
+<body style="background-color:#EDF7EE;">
+    <?= view('layout/head-Admin') ?>
 
   <!-- Preloader -->
   <div class="preloader">
@@ -313,7 +510,7 @@
 <div class="">
         
 
-          <div class="card">
+          <div class="px-3 py-2" style="background-color:#EDF7EE;margin-top:80px" >
            <!-- <ul class="nav nav-pills user-profile-tab" id="pills-tab" role="tablist">
               <li class="nav-item" role="presentation">
                 <button class="nav-link position-relative rounded-0 active d-flex align-items-center justify-content-center bg-transparent fs-3 py-3" id="pills-account-tab" data-bs-toggle="pill" data-bs-target="#pills-account" type="button" role="tab" aria-controls="pills-account" aria-selected="true">
