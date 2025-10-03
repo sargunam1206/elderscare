@@ -9,8 +9,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="refresh" content="900;url=http://viyoma.neuralarc.com/viyoma/logout"  />
 
+<link rel="icon" type="image/png" sizes="180x180" href="<?= base_url('public/Logo-Elders_home.png'); ?>">
+    <title>Nivasan Udayana</title>
+
   <!-- Favicon icon-->
-  <link rel="shortcut icon" type="image/png" href="<?= base_url(); ?>/public/dist/assets/images/logos/favicon.png" />
+  <!-- <link rel="shortcut icon" type="image/png" href="<?= base_url(); ?>/public/dist/assets/images/logos/favicon.png" /> -->
 
   <!-- Core Css -->
   <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/css/styles.css" />
@@ -37,6 +40,70 @@
     overflow-y: auto;
   }
 </style>
+<style>   
+/* Top controls: Show entries + Search (single line, left-right) */
+#form_inputs_wrapper > .dataTables_length,
+#form_inputs_wrapper > .dataTables_filter {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+
+#form_inputs_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Push search input to the right */
+#form_inputs_wrapper .dataTables_filter {
+  margin-left: auto;
+}
+
+/* Bottom controls: Showing info + Pagination */
+#form_inputs_wrapper > .dataTables_info,
+#form_inputs_wrapper > .dataTables_paginate {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  #form_inputs_wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+ 
+  
+  #form_inputs_wrapper > .dataTables_info,
+  #form_inputs_wrapper > .dataTables_paginate {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+
+   /* Search box aligned to the right */
+  #form_inputs_wrapper > .dataTables_filter {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px 0;
+  }
+
+  #form_inputs_wrapper .dataTables_filter {
+    margin-left: 0;
+  }
+   #form_inputs_wrapper > .dataTables_length {
+    display: none !important;
+  }
+
+}
+
+
+
+  </style> 
 <style>
     /* ========== Global Theme Colors ========== */
     :root {

@@ -79,7 +79,7 @@ $routes->get('roomblocked', 'RoomBlocked::view');
 $routes->post('addroomblocked', 'RoomBlocked::add');
 $routes->post('updateroomblocked/(:any)', 'RoomBlocked::update/$1');
 $routes->get('deleteroomblocked/(:any)', 'RoomBlocked::delete/$1');
-
+$routes->get('maint', 'RoomBlocked::maint');
 
 //noticeboard
 $routes->get('not', 'Notice::index');

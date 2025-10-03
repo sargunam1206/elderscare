@@ -261,6 +261,27 @@ public function getRoomsForModal()
 
 
 
+  public function maint()
+{
+    $blockedModel = new RoomBlockedModel();
+
+    // Fetch all blocked/maintenance room data
+    $blockedData = $blockedModel->select('room_id, reason, status')->findAll();
+
+    // Map blocked data by room_id for easy JS access
+    $roomBlockedMap = [];
+    foreach ($blockedData as $row) {
+        $roomBlockedMap[$row['room_id']] = $row;
+    }
+
+    // Return JSON response
+    return $this->response->setJSON([
+        'roomBlockedMap' => $roomBlockedMap
+    ]);
+}
+
+
+
 
 
 }

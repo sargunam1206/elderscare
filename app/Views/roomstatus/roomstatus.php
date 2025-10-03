@@ -567,7 +567,7 @@ h6 { font-size: 13px; font-weight: 600; }
   #legend .badge {
     width: 100%;
     max-width: 140px;
-    padding: 8px 12px;
+    /* padding: 8px 12px; */
     border-radius: 6px;
     /* background-color: #f8f9fa; */
     border: 1px solid #e9ecef;
@@ -576,7 +576,7 @@ h6 { font-size: 13px; font-weight: 600; }
   /* Fix for legend alignment */
   .badge span.rounded-circle {
     flex-shrink: 0;
-    margin-top: 2px;
+    /* margin-top: 2px; */
   }
 
 
@@ -626,37 +626,37 @@ h6 { font-size: 13px; font-weight: 600; }
 
 <div class="container-fluid">
   <div class="row">
-   <div class="col-md-4">
-  <div class="card text-dark shadow-sm border-0">
-    <div class="p-3">
-      <!-- Legend with counts -->
-      <div class="mb-3">
-        <div class="row fw-semibold" id="legend">
-          <!-- Row 1 -->
-          <div class="col-6 mb-2">
-            <span class="badge d-flex align-items-start justify-content-start text-success w-100">
-              <span class="rounded-circle me-2" 
-                    style="width: 12px; height: 12px; background-color: #2e7d32;"></span>
-              Vacant (<span id="count-vacant"><?= $counts['vacant'] ?? 0 ?></span>)
-            </span>
-          </div>
+    <div class="col-md-4">
+      <div class="card text-dark shadow-sm border-avoid h-2xl">
+        <div class="p-3">
+          <!-- Legend with counts - Fixed at top -->
+          <div class="mb-3">
+            <div class="row fw-semibold" id="legend">
+              <!-- Row 1 -->
+              <div class="col-6 mb-2">
+                <span class="badge d-flex align-items-start justify-content-start text-success w-100">
+                  <span class="rounded-circle me-2" 
+                        style="width: 12px; height: 12px; background-color: #2e7d32;"></span>
+                  Vacant (<span id="count-vacant"><?= $counts['vacant'] ?? 0 ?></span>)
+                </span>
+              </div>
 
-          <div class="col-6 mb-2">
-            <span class="badge d-flex align-items-start justify-content-start text-danger w-100">
-              <span class="rounded-circle me-2" 
-                    style="width: 12px; height: 12px; background-color: #d32f2f;"></span>
-              Occupied (<span id="count-occupied"><?= $counts['occupied'] ?? 0 ?></span>)
-            </span>
-          </div>
+              <div class="col-6 mb-2">
+                <span class="badge d-flex align-items-start justify-content-start text-danger w-100">
+                  <span class="rounded-circle me-2" 
+                        style="width: 12px; height: 12px; background-color: #d32f2f;"></span>
+                  Occupied (<span id="count-occupied"><?= $counts['occupied'] ?? 0 ?></span>)
+                </span>
+              </div>
 
-          <!-- Row 2 -->
-          <div class="col-6 mb-2">
-            <span class="badge d-flex align-items-start justify-content-start" style="color: goldenrod;">
-              <span class="rounded-circle me-2" 
-                    style="width: 12px; height: 12px; background-color: goldenrod;"></span>
-              Reserved (<span id="count-reserved"><?= $counts['reserved'] ?? 0 ?></span>)
-            </span>
-          </div>
+              <!-- Row 2 -->
+              <div class="col-6 mb-2">
+                <span class="badge d-flex align-items-start justify-content-start" style="color: goldenrod;">
+                  <span class="rounded-circle me-2" 
+                        style="width: 12px; height: 12px; background-color: goldenrod;"></span>
+                  Reserved (<span id="count-reserved"><?= $counts['reserved'] ?? 0 ?></span>)
+                </span>
+              </div>
 
               <div class="col-6 mb-2">
                 <span class="badge d-flex align-items-start justify-content-start" style="color: brown;">
@@ -666,64 +666,74 @@ h6 { font-size: 13px; font-weight: 600; }
                 </span>
               </div>
               
+              <div class="col-6 mb-2">
+                <span class="badge d-flex align-items-start justify-content-start" style="color:#2596be;">
+                  <span class="rounded-circle me-2" 
+                        style="width: 12px; height: 12px; background-color: #2596be;"></span>
+                  Blocked (<span id="count-blocked"><?= $counts['blocked'] ?? 0 ?></span>)
+                </span>
+              </div>
             </div>
           </div>
 
-      <!-- Rooms Grid -->
-      <div class="row g-2" id="room-grid">
-          <?php 
-          if (!empty($rooms)): 
-              foreach ($rooms as $room): 
-                  $roomNo = $room['room_no'];
-                  $status = $room['room_status'];
-                  $roomType = $room['room_type'] ?? 'Not specified';
-                  $color = '';
-                  
-                  switch($status) {
-                      case 'Vacant':
-                          $color = '#2e7d32';
-                          break;
-                      case 'Occupied':
-                          $color = '#d32f2f';
-                          break;
-                      case 'Reserved':
-                          $color = 'goldenrod';
-                          break;
-                      case 'Dirty':
-                          $color = 'brown';
-                          break;
-                      case 'block': // New status
-                          $color = '#2596be';
-                          break;
-                      default:
-                          $color = '#6c757d';
-                  }
-          ?>
-              <div class="col-3 room-wrapper">
-                  <button 
-                      class="btn w-100 text-white fw-semibold room-btn" 
-                      style="background-color: <?= $color ?>;"
-                      data-room-no="<?= $roomNo ?>" 
-                      data-room-status="<?= $status ?>"
-                      data-room-id="<?= $room['room_id'] ?>"
-                      data-room-type="<?= $roomType ?>"
-                  >
-                      <?= $roomNo ?>
-                  </button>
-                  <div class="room-menu mt-2 d-none text-center"></div>
-              </div>
-          <?php 
-              endforeach; 
-          else: 
-          ?>
-              <div class="col-12">
-                  <p class="text-center text-muted">No rooms found.</p>
-              </div>
-          <?php endif; ?>
+          <!-- Scrollable Rooms Grid Container -->
+          <div class="room-grid-container" style="max-height: 400px; overflow-y: auto;">
+            <!-- Rooms Grid -->
+            <div class="row g-2" id="room-grid">
+                <?php 
+                if (!empty($rooms)): 
+                    foreach ($rooms as $room): 
+                        $roomNo = $room['room_no'];
+                        $status = $room['room_status'];
+                        $roomType = $room['room_type'] ?? 'Not specified';
+                        $color = '';
+                        
+                        switch($status) {
+                            case 'Vacant':
+                                $color = '#2e7d32';
+                                break;
+                            case 'Occupied':
+                                $color = '#d32f2f';
+                                break;
+                            case 'Reserved':
+                                $color = 'goldenrod';
+                                break;
+                            case 'Dirty':
+                                $color = 'brown';
+                                break;
+                            case 'Blocked':
+                                $color = '#2596be';
+                                break;
+                            default:
+                                $color = '#6c757d';
+                        }
+                ?>
+                    <div class="col-3 room-wrapper">
+                        <button 
+                            class="btn w-100 text-white fw-semibold room-btn" 
+                            style="background-color: <?= $color ?>;"
+                            data-room-no="<?= $roomNo ?>" 
+                            data-room-status="<?= $status ?>"
+                            data-room-id="<?= $room['room_id'] ?>"
+                            data-room-type="<?= $roomType ?>"
+                        >
+                            <?= $roomNo ?>
+                        </button>
+                        <div class="room-menu mt-2 d-none text-center"></div>
+                    </div>
+                <?php 
+                    endforeach; 
+                else: 
+                ?>
+                    <div class="col-12">
+                        <p class="text-center text-muted">No rooms found.</p>
+                    </div>
+                <?php endif; ?>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
     <!-- Left Side (Room Info) -->
     <div class="col-md-8">
@@ -734,13 +744,13 @@ h6 { font-size: 13px; font-weight: 600; }
         </div>
       </div>
     </div>
-
-    <!-- Right Side (Rooms + Legend + Counts) -->
-    
   </div>
 </div>
 
 </div>
+
+
+
 
 <script>
 // ====== Helper functions ======
@@ -796,6 +806,19 @@ document.addEventListener('click', function(e) {
     }
 });
 
+
+// Initialize empty map
+let roomBlockedMap = {};
+
+// Fetch maintenance data once on page load
+fetch('<?= base_url('maint') ?>')
+    .then(response => response.json())
+    .then(data => {
+        roomBlockedMap = data.roomBlockedMap || {};
+        console.log("Loaded roomBlockedMap:", roomBlockedMap);
+    })
+    .catch(err => console.error("Error fetching maintenance data:", err));
+
 // ====== Room button click ======
 document.querySelectorAll(".room-btn").forEach(btn => {
     btn.addEventListener("click", function(e) {
@@ -826,7 +849,7 @@ document.querySelectorAll(".room-btn").forEach(btn => {
             menu.innerHTML = `
                 <ul class="room-menu-list mb-0">
                     <li class="guest-info-btn">Guest Info</li>
-                    <li class="maintenance-btn btn-menu-item">Maintenance</li>
+                    <li class="maintenance-btn btn-menu-item">Maint.</li>
                     <li class="pos-btn btn-menu-item">POS</li>
                 </ul>
             `;
@@ -906,14 +929,28 @@ document.querySelectorAll(".room-btn").forEach(btn => {
             });
 
             // Maintenance handler
-            menu.querySelector(".maintenance-btn").addEventListener("click", (e) => {
+             menu.querySelector(".maintenance-btn").addEventListener("click", (e) => {
                 e.stopPropagation();
                 handleMenuClick(() => {
+                    const blockedInfo = roomBlockedMap[roomId]; // Get info for clicked room
+                    const reason = blockedInfo?.reason || 'N/A';
+                    const roomStatus = blockedInfo?.status || 'N/A';
+
                     document.getElementById("room-info").innerHTML = `
-                        <div class="maintenance-section">
-                            <h4 class="fw-bold mb-3">Room ${roomNo} - Maintenance</h4>
-                            <p>Here you can show maintenance details or actions for this room.</p>
-                        </div>
+          <div class="maintenance-section">
+    <h4 class="fw-bold mb-3">Room ${roomNo} - Maintenance</h4>
+    <div class="card shadow-sm p-3" style="background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;">
+        <div class="mb-2 d-flex align-items-center">
+            <span class="fw-semibold me-2">Reason:</span>
+            <span class="text-dark">${reason}</span>
+        </div>
+        <div class="mb-0 d-flex align-items-center">
+            <span class="fw-semibold me-2">Status:</span>
+            <span class="badge bg-danger text-white">${roomStatus}</span>
+        </div>
+    </div>
+</div>
+
                     `;
                 });
             });
