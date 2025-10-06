@@ -4,6 +4,7 @@ namespace App\Controllers;
 use CodeIgniter\Files\File;
 use App\Models\MaintenanceModel;
 use App\Models\MaintenanceFileModel;
+use App\Models\RoomsInfoModel;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
@@ -18,6 +19,7 @@ class Maintenance extends BaseController
         $this->db = db_connect();
         $this->maintenanceModel = new MaintenanceModel();
         $this->fileModel = new MaintenanceFileModel();
+        $this->rooms = new RoomsInfoModel();
     }
 
     // public function index()
@@ -72,6 +74,10 @@ class Maintenance extends BaseController
 
     public function index()
 {
+     helper(['url']);
+    ini_set('display_errors', '1');
+    ini_set('display_startup_errors', '1');
+    error_reporting(E_ALL);
     helper(['url', 'form']);
 
     // Get filter parameters from GET request
@@ -111,6 +117,9 @@ class Maintenance extends BaseController
         return $this->generateExcel($requests);
     }
 
+    $rooms = $this->rooms->where('deleted_on', null)->findAll();
+    $data['rooms'] = $rooms; // Adjust method name as per your setup
+
     $data['requests'] = $requests;
     $data['filter_from_date'] = $fromDate;
     $data['filter_to_date'] = $toDate;
@@ -144,7 +153,7 @@ private function generateExcel($requests)
     
     // Headers
     $sheet->setCellValue('A1', 'S.No')
-          ->setCellValue('B1', 'Maintenance Area')
+          ->setCellValue('B1', 'Maintenance Area/Room No')
           ->setCellValue('C1', 'Requested By')
           ->setCellValue('D1', 'Type')
           ->setCellValue('E1', 'Request Date')
@@ -156,7 +165,8 @@ private function generateExcel($requests)
     $row = 2;
     foreach ($requests as $index => $request) {
         $sheet->setCellValue('A' . $row, $index + 1);
-        $sheet->setCellValue('B' . $row, $request['maintenance_area']);
+        $sheet->setCellValue('B' . $row, !empty($request['maintenance_area']) ? $request['maintenance_area'] : $request['room_no']);
+
         $sheet->setCellValue('C' . $row, $request['requested_by']);
         $sheet->setCellValue('D' . $row, $request['type']);
         $sheet->setCellValue('E' . $row, $request['request_date']);
@@ -209,62 +219,76 @@ private function generateExcel($requests)
     return $builder->get()->getResultArray();
 }
 
-    public function store()
-    {
-        helper(['url', 'form', 'text']);
-        
-        $rules = [
-            'maintenance_area' => 'required|min_length[3]|max_length[255]',
-            'requested_by' => 'required|min_length[3]|max_length[255]',
-            'type' => 'required|in_list[Cleaning,Plumbing,Electrical,Carpentry,HVAC,Other]',
-            'request_date' => 'required|valid_date',
-            'expected_arrest_date' => 'permit_empty|valid_date',
-            'arrest_date' => 'permit_empty|valid_date',
-            'problem_description' => 'required',
-            'assigned_to' => 'permit_empty',
-            'approved_by' => 'permit_empty|max_length[255]',
-            'status' => 'required|in_list[Pending,In Progress,Completed,Cancelled]',
-            'amount' => 'permit_empty|decimal',
-            'resolution_notes' => 'permit_empty',
-            'problem_photos' => 'permit_empty|uploaded[problem_photos]|max_size[problem_photos,5120]|is_image[problem_photos]',
-            'clearance_photos' => 'permit_empty|uploaded[clearance_photos]|max_size[clearance_photos,5120]|is_image[clearance_photos]',
-            'payment_bill' => 'permit_empty|uploaded[payment_bill]|max_size[payment_bill,5120]|ext_in[payment_bill,pdf,jpg,jpeg,png]'
-        ];
+public function store()
+{
+    // Set timezone to Asia/Kolkata
+    date_default_timezone_set('Asia/Kolkata');
 
-        if (!$this->validate($rules)) {
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-        }
+    helper(['url', 'form', 'text']);
+    ini_set('display_errors', '1');
+    ini_set('display_startup_errors', '1');
+    error_reporting(E_ALL);
 
-        $data = [
-            'maintenance_area' => $this->request->getPost('maintenance_area'),
-            'requested_by' => $this->request->getPost('requested_by'),
-            'type' => $this->request->getPost('type'),
-            'request_date' => $this->request->getPost('request_date'),
-            'expected_arrest_date' => $this->request->getPost('expected_arrest_date') ?: null,
-            'arrest_date' => $this->request->getPost('arrest_date') ?: null,
-            'problem_description' => $this->request->getPost('problem_description'),
-            'assigned_to' => $this->request->getPost('assigned_to') ?: null,
-            'approved_by' => $this->request->getPost('approved_by') ?: null,
-            'status' => $this->request->getPost('status'),
-            'amount' => $this->request->getPost('amount') ?: null,
-            'resolution_notes' => $this->request->getPost('resolution_notes') ?: null
-        ];
+    $rules = [
+         'maintenance_area' => 'permit_empty|min_length[3]|max_length[255]',
+        'requested_by'     => 'required|min_length[3]|max_length[255]',
+        'type'             => 'required|in_list[Cleaning,Plumbing,Electrical,Carpentry,HVAC,Other]',
+        'request_date'     => 'required|valid_date',
+        'expected_arrest_date' => 'permit_empty|valid_date',
+        'arrest_date'      => 'permit_empty|valid_date',
+        'problem_description' => 'required',
+         'room_id'          => 'permit_empty|integer',
+    'room_no'          => 'permit_empty',
+        'status'           => 'required|in_list[Pending,In Progress,Completed,Cancelled]',
+    ];
 
-        try {
-            $this->db->transStart();
-            
-            $maintenanceId = $this->maintenanceModel->insert($data);
-            
-            // Handle file uploads
-            $this->handleFileUploads($maintenanceId);
-            
-            $this->db->transComplete();
-            return redirect()->to('/maintenance')->with('message', 'Maintenance request added successfully!');
-        } catch (\Exception $e) {
-            $this->db->transRollback();
-            return redirect()->back()->withInput()->with('error', 'Failed to save maintenance request: ' . $e->getMessage());
-        }
+    if (!$this->validate($rules)) {
+        return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
     }
+
+    $data = [
+        
+        'maintenance_area'     => $this->request->getPost('maintenance_area'),
+        'requested_by'         => $this->request->getPost('requested_by'),
+        'type'                 => $this->request->getPost('type'),
+        'room_id'              => $this->request->getPost('room_id'),
+        'room_no'              => $this->request->getPost('room_no'),
+        'request_date'         => $this->request->getPost('request_date'),
+        'expected_arrest_date' => $this->request->getPost('expected_arrest_date') ?: null,
+        'arrest_date'          => $this->request->getPost('arrest_date') ?: null,
+        'problem_description'  => $this->request->getPost('problem_description'),
+        'assigned_to'          => $this->request->getPost('assigned_to') ?: null,
+        'approved_by'          => $this->request->getPost('approved_by') ?: null,
+        'status'               => $this->request->getPost('status'),
+        'amount'               => $this->request->getPost('amount') ?: null,
+        'resolution_notes'     => $this->request->getPost('resolution_notes') ?: null,
+        'created_on'           => date('Y-m-d H:i:s'), // Add created timestamp
+        'updated_on'           => date('Y-m-d H:i:s')
+    ];
+
+    try {
+        // Insert maintenance request
+        $maintenanceId = $this->maintenanceModel->insert($data);
+
+        // Handle file uploads
+        $this->handleFileUploads($maintenanceId);
+
+        // Update room status if type is Cleaning and status is Pending
+        if ($data['type'] === 'Cleaning' && $data['status'] === 'Pending' && !empty($data['room_id'])) {
+            $this->db->table('rooms')
+                     ->where('room_id', $data['room_id'])
+                     ->update([
+                         'room_status' => 'Dirty',
+                         'updated_on'  => date('Y-m-d H:i:s')
+                     ]);
+        }
+
+        return redirect()->to('/maintenance')->with('message', 'Maintenance request added successfully!');
+    } catch (\Exception $e) {
+        return redirect()->back()->withInput()->with('error', 'Failed to save maintenance request: ' . $e->getMessage());
+    }
+}
+
 
     public function download($fileId)
     {
@@ -305,63 +329,72 @@ private function generateExcel($requests)
         return $this->response->setJSON($request);
     }
 
-    public function update($id)
-    {
-        helper(['url', 'form', 'text']);
-        
-        $rules = [
-            'maintenance_area' => 'required|min_length[3]|max_length[255]',
-            'requested_by' => 'required|min_length[3]|max_length[255]',
-            'type' => 'required|in_list[Cleaning,Plumbing,Electrical,Carpentry,HVAC,Other]',
-            'request_date' => 'required|valid_date',
-            'expected_arrest_date' => 'permit_empty|valid_date',
-            'arrest_date' => 'permit_empty|valid_date',
-            'problem_description' => 'required',
-            'assigned_to' => 'permit_empty',
-            'approved_by' => 'permit_empty|max_length[255]',
-            'status' => 'required|in_list[Pending,In Progress,Completed,Cancelled]',
-            'amount' => 'permit_empty|decimal',
-            'resolution_notes' => 'permit_empty',
-            'problem_photos' => 'permit_empty|uploaded[problem_photos]|max_size[problem_photos,5120]|is_image[problem_photos]',
-            'clearance_photos' => 'permit_empty|uploaded[clearance_photos]|max_size[clearance_photos,5120]|is_image[clearance_photos]',
-            'payment_bill' => 'permit_empty|uploaded[payment_bill]|max_size[payment_bill,5120]|ext_in[payment_bill,pdf,jpg,jpeg,png]'
-        ];
+public function update($id)
+{
+    // Set timezone to Asia/Kolkata
+    date_default_timezone_set('Asia/Kolkata');
 
-        if (!$this->validate($rules)) {
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-        }
+    helper(['url', 'form', 'text']);
 
-        try {
-            $this->db->transStart();
-            
-            $data = [
-                'maintenance_area' => $this->request->getPost('maintenance_area'),
-                'requested_by' => $this->request->getPost('requested_by'),
-                'type' => $this->request->getPost('type'),
-                'request_date' => $this->request->getPost('request_date'),
-                'expected_arrest_date' => $this->request->getPost('expected_arrest_date') ?: null,
-                'arrest_date' => $this->request->getPost('arrest_date') ?: null,
-                'problem_description' => $this->request->getPost('problem_description'),
-                'assigned_to' => $this->request->getPost('assigned_to') ?: null,
-                'approved_by' => $this->request->getPost('approved_by') ?: null,
-                'status' => $this->request->getPost('status'),
-                'amount' => $this->request->getPost('amount') ?: null,
-                'resolution_notes' => $this->request->getPost('resolution_notes') ?: null,
-                'updated_on' => date('Y-m-d H:i:s')
-            ];
+    $rules = [
+         'maintenance_area' => 'permit_empty|min_length[3]|max_length[255]',
+        'requested_by'     => 'required|min_length[3]|max_length[255]',
+        'type'             => 'required|in_list[Cleaning,Plumbing,Electrical,Carpentry,HVAC,Other]',
+        'request_date'     => 'required|valid_date',
+        'expected_arrest_date' => 'permit_empty|valid_date',
+        'arrest_date'      => 'permit_empty|valid_date',
+        'problem_description' => 'required',
+         'room_id'          => 'permit_empty|integer',
+    'room_no'          => 'permit_empty',
+        'status'           => 'required|in_list[Pending,In Progress,Completed,Cancelled]',
+    ];
 
-            $this->maintenanceModel->update($id, $data);
-            
-            // Handle file uploads
-            $this->handleFileUploads($id, true);
-            
-            $this->db->transComplete();
-            return redirect()->to('/maintenance')->with('message', 'Maintenance request updated successfully!');
-        } catch (\Exception $e) {
-            $this->db->transRollback();
-            return redirect()->back()->withInput()->with('error', 'Failed to update maintenance request: ' . $e->getMessage());
-        }
+    if (!$this->validate($rules)) {
+        return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
     }
+
+    $data = [
+        'maintenance_area'     => $this->request->getPost('maintenance_area'),
+        'requested_by'         => $this->request->getPost('requested_by'),
+        'type'                 => $this->request->getPost('type'),
+        'room_id'              => $this->request->getPost('room_id'),
+        'room_no'              => $this->request->getPost('room_no'),
+        'request_date'         => $this->request->getPost('request_date'),
+        'expected_arrest_date' => $this->request->getPost('expected_arrest_date') ?: null,
+        'arrest_date'          => $this->request->getPost('arrest_date') ?: null,
+        'problem_description'  => $this->request->getPost('problem_description'),
+        'assigned_to'          => $this->request->getPost('assigned_to') ?: null,
+        'approved_by'          => $this->request->getPost('approved_by') ?: null,
+        'status'               => $this->request->getPost('status'),
+        'amount'               => $this->request->getPost('amount') ?: null,
+        'resolution_notes'     => $this->request->getPost('resolution_notes') ?: null,
+        'updated_on'           => date('Y-m-d H:i:s')
+    ];
+
+    try {
+        // Update maintenance request
+        $this->maintenanceModel->update($id, $data);
+
+        // Handle file uploads
+        $this->handleFileUploads($id, true);
+
+        // ✅ Update room status if type is Cleaning, status is Completed, and room_id exists
+        if (!empty($data['room_id']) && $data['type'] === 'Cleaning' && $data['status'] === 'Completed') {
+            $this->db->table('rooms')
+                     ->where('room_id', $data['room_id'])
+                     ->update([
+                         'room_status' => 'Vacant',
+                         'updated_on'  => date('Y-m-d H:i:s')
+                     ]);
+        }
+
+        return redirect()->to('/maintenance')->with('message', 'Maintenance request updated successfully!');
+    } catch (\Exception $e) {
+        return redirect()->back()->withInput()->with('error', 'Failed to update maintenance request: ' . $e->getMessage());
+    }
+}
+
+
 protected function handleFileUploads($maintenanceId, $isUpdate = false)
 {
     $basePath = ROOTPATH . 'public/uploads/maintenance/';
@@ -583,4 +616,27 @@ protected function handleFileUploads($maintenanceId, $isUpdate = false)
             return redirect()->back()->with('error', 'Failed to delete maintenance request: ' . $e->getMessage());
         }
     }
+
+    public function getMaintenanceData()
+{
+
+     helper(['url']);
+    ini_set('display_errors', '1');
+    ini_set('display_startup_errors', '1');
+    error_reporting(E_ALL);
+    $builder = $this->db->table('maintenance_requests');
+    $builder->select('room_id, problem_description, status');
+    $builder->where('deleted_on', null); // Only active requests
+    $query = $builder->get();
+
+    $maintenanceMap = [];
+    foreach ($query->getResultArray() as $row) {
+        $maintenanceMap[$row['room_id']] = [
+            'problem_description' => $row['problem_description'],
+            'status' => $row['status']
+        ];
+    }
+
+    return $this->response->setJSON(['maintenanceMap' => $maintenanceMap]);
+}
 }

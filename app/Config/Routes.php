@@ -71,6 +71,7 @@ $routes->post('updaterooms/(:any)', 'Rooms::update/$1');
 $routes->get('deleterooms/(:any)', 'Rooms::delete/$1');
 $routes->get('getrooms', 'Rooms::getRoomsForModal');
 $routes->get('roomstatus', 'Rooms::roomstatus');
+$routes->get('blockroomform', 'Rooms::blockRoomForm');
 
 
 // room blocked
@@ -78,7 +79,8 @@ $routes->get('roomblocked', 'RoomBlocked::view');
 $routes->post('addroomblocked', 'RoomBlocked::add');
 $routes->post('updateroomblocked/(:any)', 'RoomBlocked::update/$1');
 $routes->get('deleteroomblocked/(:any)', 'RoomBlocked::delete/$1');
-
+$routes->get('maint', 'RoomBlocked::maint');
+$routes->get('maintenance/data', 'Maintenance::getMaintenanceData');
 
 //noticeboard
 $routes->get('not', 'Notice::index');

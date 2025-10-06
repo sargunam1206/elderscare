@@ -163,6 +163,7 @@ public function roomstatus()
         'occupied' => 0,
         'reserved' => 0,
         'dirty' => 0,
+        'blocked' => 0
     ];
 
     // Pre-fetch guest information for Occupied and Confirmed rooms
@@ -192,6 +193,18 @@ public function roomstatus()
     ];
 
     return view('roomstatus/roomstatus', $data);
+}
+
+
+public function blockRoomForm()
+{
+    $roomsModel = new RoomsInfoModel();
+
+    // Fetch all rooms that are not deleted
+    $rooms = $roomsModel->where('deleted_on', null)->findAll();
+
+    // Return JSON response for AJAX
+    return $this->response->setJSON($rooms);
 }
 
 

@@ -7,7 +7,7 @@
         
         body { font-family: Arial; margin: 20px; }
         table { width: 100%; border-collapse: collapse; }
-        th { background: #66BB6A; color: white; padding: 10px; }
+        th { background: #66BB6A; color: white; padding: 10px; text-align: left; }
         td { padding: 8px; border-bottom: 1px solid #ddd; }
         .footer { margin-top: 20px; text-align: right; font-size: 0.9em; }
     </style>
@@ -19,28 +19,37 @@
 <table width="100%" style="margin-bottom:20px;">
     <tr>
         <!-- Logo -->
-        <td width="20%" style="vertical-align: middle;">
-           
-            <img src="C:\xampp1\htdocs\advaya\elderscare\public\neuralArc-logo-white.png" 
-                 style="height:80px; width:60px;" alt="Logo">
+        <td width="20%" style="vertical-align: middle;border-radius:20px">
+            <img src="<?= base_url('./public/logo.png'); ?>" 
+                 style="height:90px; width:200px; " alt="Logo">
         </td>
 
-        <!-- <td width="20%" style="vertical-align: middle;">
-           <?php 
-$logo = base64_encode(file_get_contents(FCPATH.'public/Elders-home-logo.png'));
-?>
-<img src="data:image/png;base64,<?= $logo ?>" style="height:80px; width:60px;" alt="Logo">
-
-
-        </td> -->
+        
         
         <!-- Address -->
-        <td width="80%" style="text-align: right; font-size: 14px; line-height: 1.5; vertical-align: middle;">
-            <div><strong>Elders Home</strong></div>
-            <div>123 Main Street, City, State - ZIP</div>
-            <div>Phone: +91-9876543210</div>
-            <div>Email: info@eldershome.com</div>
+     <td  style="padding-left: 36%; font-size: 14px; line-height: 1.5; ">
+            <div style="  max-width: 400px;">
+                <strong>ADVAYA COLIVING</strong><br>
+                Old No.1514, New No. 252,
+                
+            </div>
+              <div >
+                
+               
+                Avinashi Road,Opp Varadaraja Textiles
+               
+            </div>
+             <div>
+                
+               
+                Peelamedu, Coimbatore, Tamil Nadu 641004.
+               
+            </div>
         </td>
+
+         
+
+
     </tr>
 </table>
 

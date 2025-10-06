@@ -484,14 +484,81 @@ h6 { font-size: 13px; font-weight: 600; }
 .card .p-3 {
     overflow: visible;
 }
-@media (min-width: 992px) { /* Desktop and up */
-  .room-wrapper,
-  .col-3,
-  .card,
-  .card .p-3 {
-      overflow: visible !important; /* allow menu to escape parent bounds */
-  }
+
+.row {
+  overflow: visible;
 }
+
+.col-md-4 {
+  overflow: visible;
+}
+</style>
+<style>
+  /* Fix for overlapping room menus */
+  .room-wrapper {
+    position: relative;
+    margin-bottom: 10px; /* Add spacing between room buttons */
+  }
+
+  /* Enhanced room menu styling to prevent overlap */
+  .room-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Higher z-index to ensure it appears above other elements */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    list-style: none;
+    margin-top: 5px; /* Space between button and menu */
+  }
+
+  .room-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    font-size: 12px;
+    transition: all 0.2s ease;
+  }
+
+  .room-menu li:last-child { 
+    border-bottom: none; 
+  }
+
+  .room-menu li:hover {
+    background-color: var(--primary-green);
+    color: white;
+  }
+
+  /* Ensure room buttons have proper spacing */
+  #room-grid {
+    margin-top: 15px;
+  }
+
+  /* Enhanced legend styling for equal columns */
+  #legend .col-6 {
+    display: flex;
+    justify-content: center;
+  }
+
+  #legend .badge {
+    width: 100%;
+    max-width: 140px;
+    /* padding: 8px 12px; */
+    border-radius: 6px;
+    /* background-color: #f8f9fa; */
+    border: 1px solid #e9ecef;
+  }
+
+  /* Fix for legend alignment */
+  .badge span.rounded-circle {
+    flex-shrink: 0;
+    /* margin-top: 2px; */
+  }
+
 
 
 </style>
@@ -535,112 +602,114 @@ h6 { font-size: 13px; font-weight: 600; }
 
 <div class="container-fluid">
   <div class="row">
-   <div class="col-md-4">
-  <div class="card text-dark shadow-sm border-0">
-    <div class="p-3">
-      <!-- Legend with counts -->
-      <div class="mb-3">
-        <div class="row fw-semibold" id="legend">
-          <!-- Row 1 -->
-          <div class="col-6 mb-2">
-            <span class="badge d-flex align-items-start justify-content-start text-success w-100">
-              <span class="rounded-circle me-2" 
-                    style="width: 12px; height: 12px; background-color: #2e7d32;"></span>
-              Vacant (<span id="count-vacant"><?= $counts['vacant'] ?? 0 ?></span>)
-            </span>
+    <div class="col-md-4">
+      <div class="card text-dark shadow-sm border-avoid h-2xl">
+        <div class="p-3">
+          <!-- Legend with counts - Fixed at top -->
+          <div class="mb-3">
+            <div class="row fw-semibold" id="legend">
+              <!-- Row 1 -->
+              <div class="col-6 mb-2">
+                <span class="badge d-flex align-items-start justify-content-start text-success w-100">
+                  <span class="rounded-circle me-2" 
+                        style="width: 12px; height: 12px; background-color: #2e7d32;"></span>
+                  Vacant (<span id="count-vacant"><?= $counts['vacant'] ?? 0 ?></span>)
+                </span>
+              </div>
+
+              <div class="col-6 mb-2">
+                <span class="badge d-flex align-items-start justify-content-start text-danger w-100">
+                  <span class="rounded-circle me-2" 
+                        style="width: 12px; height: 12px; background-color: #d32f2f;"></span>
+                  Occupied (<span id="count-occupied"><?= $counts['occupied'] ?? 0 ?></span>)
+                </span>
+              </div>
+
+              <!-- Row 2 -->
+              <div class="col-6 mb-2">
+                <span class="badge d-flex align-items-start justify-content-start" style="color: goldenrod;">
+                  <span class="rounded-circle me-2" 
+                        style="width: 12px; height: 12px; background-color: goldenrod;"></span>
+                  Reserved (<span id="count-reserved"><?= $counts['reserved'] ?? 0 ?></span>)
+                </span>
+              </div>
+
+              <div class="col-6 mb-2">
+                <span class="badge d-flex align-items-start justify-content-start" style="color: brown;">
+                  <span class="rounded-circle me-2" 
+                        style="width: 12px; height: 12px; background-color: brown;"></span>
+                  Dirty (<span id="count-dirty"><?= $counts['dirty'] ?? 0 ?></span>)
+                </span>
+              </div>
+              
+              <div class="col-6 mb-2">
+                <span class="badge d-flex align-items-start justify-content-start" style="color:#2596be;">
+                  <span class="rounded-circle me-2" 
+                        style="width: 12px; height: 12px; background-color: #2596be;"></span>
+                  Blocked (<span id="count-blocked"><?= $counts['blocked'] ?? 0 ?></span>)
+                </span>
+              </div>
+            </div>
           </div>
 
-          <div class="col-6 mb-2">
-            <span class="badge d-flex align-items-start justify-content-start text-danger w-100">
-              <span class="rounded-circle me-2" 
-                    style="width: 12px; height: 12px; background-color: #d32f2f;"></span>
-              Occupied (<span id="count-occupied"><?= $counts['occupied'] ?? 0 ?></span>)
-            </span>
-          </div>
-
-          <!-- Row 2 -->
-          <div class="col-6 mb-2">
-            <span class="badge d-flex align-items-start justify-content-start" style="color: goldenrod;">
-              <span class="rounded-circle me-2" 
-                    style="width: 12px; height: 12px; background-color: goldenrod;"></span>
-              Reserved (<span id="count-reserved"><?= $counts['reserved'] ?? 0 ?></span>)
-            </span>
-          </div>
-
-          <div class="col-6 mb-2">
-            <span class="badge d-flex align-items-start justify-content-start" style="color: brown;">
-              <span class="rounded-circle me-2" 
-                    style="width: 12px; height: 12px; background-color: brown;"></span>
-              Dirty (<span id="count-dirty"><?= $counts['dirty'] ?? 0 ?></span>)
-            </span>
-          </div>
-
-          <!-- Row 3: New Status -->
-          <div class="col-6 mb-2">
-            <span class="badge d-flex align-items-start justify-content-start" style="color: #2596be;">
-              <span class="rounded-circle me-2" 
-                    style="width: 12px; height: 12px; background-color:#2596be;"></span>
-              Block(<span id="count-maintenance"><?= $counts['maintenance'] ?? 0 ?></span>)
-            </span>
+          <!-- Scrollable Rooms Grid Container -->
+          <div class="room-grid-container" style="max-height: 400px; overflow-y: auto;">
+            <!-- Rooms Grid -->
+            <div class="row g-2" id="room-grid">
+                <?php 
+                if (!empty($rooms)): 
+                    foreach ($rooms as $room): 
+                        $roomNo = $room['room_no'];
+                        $status = $room['room_status'];
+                        $roomType = $room['room_type'] ?? 'Not specified';
+                        $color = '';
+                        
+                        switch($status) {
+                            case 'Vacant':
+                                $color = '#2e7d32';
+                                break;
+                            case 'Occupied':
+                                $color = '#d32f2f';
+                                break;
+                            case 'Reserved':
+                                $color = 'goldenrod';
+                                break;
+                            case 'Dirty':
+                                $color = 'brown';
+                                break;
+                            case 'Blocked':
+                                $color = '#2596be';
+                                break;
+                            default:
+                                $color = '#6c757d';
+                        }
+                ?>
+                    <div class="col-3 room-wrapper">
+                        <button 
+                            class="btn w-100 text-white fw-semibold room-btn" 
+                            style="background-color: <?= $color ?>;"
+                            data-room-no="<?= $roomNo ?>" 
+                            data-room-status="<?= $status ?>"
+                            data-room-id="<?= $room['room_id'] ?>"
+                            data-room-type="<?= $roomType ?>"
+                        >
+                            <?= $roomNo ?>
+                        </button>
+                        <div class="room-menu mt-2 d-none text-center"></div>
+                    </div>
+                <?php 
+                    endforeach; 
+                else: 
+                ?>
+                    <div class="col-12">
+                        <p class="text-center text-muted">No rooms found.</p>
+                    </div>
+                <?php endif; ?>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Rooms Grid -->
-      <div class="row g-2" id="room-grid">
-          <?php 
-          if (!empty($rooms)): 
-              foreach ($rooms as $room): 
-                  $roomNo = $room['room_no'];
-                  $status = $room['room_status'];
-                  $roomType = $room['room_type'] ?? 'Not specified';
-                  $color = '';
-                  
-                  switch($status) {
-                      case 'Vacant':
-                          $color = '#2e7d32';
-                          break;
-                      case 'Occupied':
-                          $color = '#d32f2f';
-                          break;
-                      case 'Reserved':
-                          $color = 'goldenrod';
-                          break;
-                      case 'Dirty':
-                          $color = 'brown';
-                          break;
-                      case 'block': // New status
-                          $color = '#2596be';
-                          break;
-                      default:
-                          $color = '#6c757d';
-                  }
-          ?>
-              <div class="col-3 room-wrapper">
-                  <button 
-                      class="btn w-100 text-white fw-semibold room-btn" 
-                      style="background-color: <?= $color ?>;"
-                      data-room-no="<?= $roomNo ?>" 
-                      data-room-status="<?= $status ?>"
-                      data-room-id="<?= $room['room_id'] ?>"
-                      data-room-type="<?= $roomType ?>"
-                  >
-                      <?= $roomNo ?>
-                  </button>
-                  <div class="room-menu mt-2 d-none text-center"></div>
-              </div>
-          <?php 
-              endforeach; 
-          else: 
-          ?>
-              <div class="col-12">
-                  <p class="text-center text-muted">No rooms found.</p>
-              </div>
-          <?php endif; ?>
-      </div>
     </div>
-  </div>
-</div>
 
     <!-- Left Side (Room Info) -->
     <div class="col-md-8">
@@ -651,15 +720,26 @@ h6 { font-size: 13px; font-weight: 600; }
         </div>
       </div>
     </div>
-
-    <!-- Right Side (Rooms + Legend + Counts) -->
-    
   </div>
 </div>
 
 </div>
 
+
+
+
 <script>
+
+  let maintenanceMap = {};
+
+fetch('<?= base_url('maintenance/data') ?>')
+    .then(res => res.json())
+    .then(data => {
+        maintenanceMap = data.maintenanceMap || {};
+        console.log("Maintenance Map:", maintenanceMap);
+    })
+    .catch(err => console.error(err));
+
 // ====== Helper functions ======
 const guestInfoMap = <?= json_encode($guestInfoMap) ?>;
 
@@ -720,21 +800,31 @@ document.addEventListener('click', function(e) {
     }
 });
 
+
+// Initialize empty map
+let roomBlockedMap = {};
+
+// Fetch maintenance data once on page load
+fetch('<?= base_url('maint') ?>')
+    .then(response => response.json())
+    .then(data => {
+        roomBlockedMap = data.roomBlockedMap || {};
+        console.log("Loaded roomBlockedMap:", roomBlockedMap);
+    })
+    .catch(err => console.error("Error fetching maintenance data:", err));
 // ====== Room button click ======
 document.querySelectorAll(".room-btn").forEach(btn => {
     btn.addEventListener("click", function(e) {
-        e.stopPropagation(); // Prevent the global click handler from closing immediately
-        
+        e.stopPropagation();
+
         const wrapper = this.closest(".room-wrapper");
         const menu = wrapper.querySelector(".room-menu");
-        
-        // Close all other menus first
+
+        // Close other menus
         document.querySelectorAll(".room-menu").forEach(m => {
             if (m !== menu) m.classList.add("d-none");
         });
-        
-        // Toggle current menu
-        const isShowing = !menu.classList.contains('d-none');
+
         menu.classList.toggle("d-none");
 
         const roomNo = this.dataset.roomNo;
@@ -742,41 +832,29 @@ document.querySelectorAll(".room-btn").forEach(btn => {
         const roomId = this.dataset.roomId;
         const roomType = this.dataset.roomType;
 
-        // Only create menu content if it's being shown
         if (!menu.classList.contains('d-none')) {
-            // Adjust menu position before showing
             adjustMenuPosition(this, menu);
-            
+
             menu.innerHTML = `
                 <ul class="room-menu-list mb-0">
                     <li class="guest-info-btn">Guest Info</li>
-                    <li class="maintenance-btn btn-menu-item">Maintenance</li>
+                    <li class="maintenance-btn btn-menu-item">Maint.</li>
                     <li class="pos-btn btn-menu-item">POS</li>
                 </ul>
             `;
 
-            // ====== Menu item click handlers ======
             const handleMenuClick = (action) => {
-                // Hide the menu after selection
                 menu.classList.add('d-none');
-                
-                // Execute the selected action
                 action();
             };
 
-            // Guest Info handler
+            // ===== Guest Info Handler =====
             menu.querySelector(".guest-info-btn").addEventListener("click", (e) => {
                 e.stopPropagation();
                 handleMenuClick(() => {
                     const guestInfo = guestInfoMap[roomId];
-
-                    console.log("Room ID:", roomId);
-                    console.log("Status:", status);
-                    console.log("Guest Info:", guestInfo);
-
                     let normalizedStatus = (status || '').toLowerCase();
                     if (normalizedStatus === 'reserved') normalizedStatus = 'confirmed';
-
                     const showGuestCards = (normalizedStatus === "occupied" || normalizedStatus === "confirmed") && guestInfo;
                     const showPdf = normalizedStatus === "occupied";
 
@@ -784,10 +862,9 @@ document.querySelectorAll(".room-btn").forEach(btn => {
                         <div class="guest-details">
                             <h4 class="fw-bold mb-3">Room ${roomNo} - Guest Information</h4>
                             <p><strong>Room Type:</strong> ${roomType}</p>
-
                             ${showGuestCards ? `
                                 <div class="row">
-                                    <!-- Guest 1 Card -->
+                                    <!-- Guest 1 -->
                                     <div class="col-md-6">
                                         <div class="card mb-3">
                                             <div class="card-header bg-success text-white">
@@ -801,8 +878,7 @@ document.querySelectorAll(".room-btn").forEach(btn => {
                                             </div>
                                         </div>
                                     </div>
-
-                                    <!-- Guest 2 Card -->
+                                    <!-- Guest 2 -->
                                     ${guestInfo.guest2_firstname || guestInfo.guest2_lastname ? `
                                     <div class="col-md-6">
                                         <div class="card mb-3">
@@ -818,31 +894,60 @@ document.querySelectorAll(".room-btn").forEach(btn => {
                                         </div>
                                     </div>` : ``}
                                 </div>
-                            ` : `
-                                <div class="alert alert-danger mt-3">
-                                    <i class="fas fa-info-circle"></i> 
-                                    ${status === "Occupied" ? "No guest information found for this room." : `No guest information available (Room is ${status}).`}
-                                </div>
-                            `}
+                            ` : `<div class="alert alert-danger mt-3"><i class="fas fa-info-circle"></i> No guest information available (Room is ${status}).</div>`}
                         </div>
                     `;
                 });
             });
 
-            // Maintenance handler
+            // ===== Maintenance Handler =====
             menu.querySelector(".maintenance-btn").addEventListener("click", (e) => {
                 e.stopPropagation();
                 handleMenuClick(() => {
-                    document.getElementById("room-info").innerHTML = `
-                        <div class="maintenance-section">
-                            <h4 class="fw-bold mb-3">Room ${roomNo} - Maintenance</h4>
-                            <p>Here you can show maintenance details or actions for this room.</p>
-                        </div>
-                    `;
+                    let maintenanceHtml = '';
+                    const blockedStatuses = ['Blocked'];
+
+                    if (blockedStatuses.includes(status)) {
+                        // Show blocked room info
+                        const blockedInfo = roomBlockedMap[roomId] || {};
+                        const reason = blockedInfo.reason || 'N/A';
+                        const roomStatus = blockedInfo.status || 'N/A';
+                        maintenanceHtml = `
+                            <div class="maintenance-section">
+                                <h4 class="fw-bold mb-3">Room ${roomNo} - Maintenance</h4>
+                                <div class="card shadow-sm p-3" style="background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;">
+                                    <p><strong>Reason:</strong> ${reason}</p>
+                                    <p><strong>Status:</strong> <span class="badge bg-warning text-dark">${roomStatus}</span></p>
+                                </div>
+                            </div>
+                        `;
+                    } else if (maintenanceMap[roomId]) {
+                        // Show active maintenance requests
+                        const m = maintenanceMap[roomId];
+                        maintenanceHtml = `
+                            <div class="maintenance-section">
+                                <h4 class="fw-bold mb-3">Room ${roomNo} - Maintenance</h4>
+                                <div class="card shadow-sm p-3" style="background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;">
+                                    <p><strong>Reason:</strong> ${m.problem_description || 'N/A'}</p>
+                                    <p><strong>Status:</strong> <span class="badge bg-warning text-dark">${m.status}</span></p>
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        maintenanceHtml = `
+                        <h4 class="fw-bold mb-3">Room ${roomNo} - Maintenance</h4>
+                            <div class="alert alert-danger mt-3">
+                              
+                                No maintenance records found for this room.
+                            </div>
+                        `;
+                    }
+
+                    document.getElementById("room-info").innerHTML = maintenanceHtml;
                 });
             });
 
-            // POS handler
+            // ===== POS Handler =====
             menu.querySelector(".pos-btn").addEventListener("click", (e) => {
                 e.stopPropagation();
                 handleMenuClick(() => {
@@ -855,13 +960,12 @@ document.querySelectorAll(".room-btn").forEach(btn => {
                 });
             });
 
-            // Prevent menu clicks from closing the menu immediately
-            menu.addEventListener('click', (e) => {
-                e.stopPropagation();
-            });
+            // Prevent menu clicks from closing menu
+            menu.addEventListener('click', (e) => e.stopPropagation());
         }
     });
 });
+
 
 // ====== PDF Generation Handler ======
 document.addEventListener('click', function(e) {
