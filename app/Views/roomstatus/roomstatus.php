@@ -753,6 +753,17 @@ h6 { font-size: 13px; font-weight: 600; }
 
 
 <script>
+
+  let maintenanceMap = {};
+
+fetch('<?= base_url('maintenance/data') ?>')
+    .then(res => res.json())
+    .then(data => {
+        maintenanceMap = data.maintenanceMap || {};
+        console.log("Maintenance Map:", maintenanceMap);
+    })
+    .catch(err => console.error(err));
+
 // ====== Helper functions ======
 const guestInfoMap = <?= json_encode($guestInfoMap) ?>;
 
@@ -818,22 +829,19 @@ fetch('<?= base_url('maint') ?>')
         console.log("Loaded roomBlockedMap:", roomBlockedMap);
     })
     .catch(err => console.error("Error fetching maintenance data:", err));
-
 // ====== Room button click ======
 document.querySelectorAll(".room-btn").forEach(btn => {
     btn.addEventListener("click", function(e) {
-        e.stopPropagation(); // Prevent the global click handler from closing immediately
-        
+        e.stopPropagation();
+
         const wrapper = this.closest(".room-wrapper");
         const menu = wrapper.querySelector(".room-menu");
-        
-        // Close all other menus first
+
+        // Close other menus
         document.querySelectorAll(".room-menu").forEach(m => {
             if (m !== menu) m.classList.add("d-none");
         });
-        
-        // Toggle current menu
-        const isShowing = !menu.classList.contains('d-none');
+
         menu.classList.toggle("d-none");
 
         const roomNo = this.dataset.roomNo;
@@ -841,11 +849,9 @@ document.querySelectorAll(".room-btn").forEach(btn => {
         const roomId = this.dataset.roomId;
         const roomType = this.dataset.roomType;
 
-        // Only create menu content if it's being shown
         if (!menu.classList.contains('d-none')) {
-            // Adjust menu position before showing
             adjustMenuPosition(this, menu);
-            
+
             menu.innerHTML = `
                 <ul class="room-menu-list mb-0">
                     <li class="guest-info-btn">Guest Info</li>
@@ -854,28 +860,18 @@ document.querySelectorAll(".room-btn").forEach(btn => {
                 </ul>
             `;
 
-            // ====== Menu item click handlers ======
             const handleMenuClick = (action) => {
-                // Hide the menu after selection
                 menu.classList.add('d-none');
-                
-                // Execute the selected action
                 action();
             };
 
-            // Guest Info handler
+            // ===== Guest Info Handler =====
             menu.querySelector(".guest-info-btn").addEventListener("click", (e) => {
                 e.stopPropagation();
                 handleMenuClick(() => {
                     const guestInfo = guestInfoMap[roomId];
-
-                    console.log("Room ID:", roomId);
-                    console.log("Status:", status);
-                    console.log("Guest Info:", guestInfo);
-
                     let normalizedStatus = (status || '').toLowerCase();
                     if (normalizedStatus === 'reserved') normalizedStatus = 'confirmed';
-
                     const showGuestCards = (normalizedStatus === "occupied" || normalizedStatus === "confirmed") && guestInfo;
                     const showPdf = normalizedStatus === "occupied";
 
@@ -883,10 +879,9 @@ document.querySelectorAll(".room-btn").forEach(btn => {
                         <div class="guest-details">
                             <h4 class="fw-bold mb-3">Room ${roomNo} - Guest Information</h4>
                             <p><strong>Room Type:</strong> ${roomType}</p>
-
                             ${showGuestCards ? `
                                 <div class="row">
-                                    <!-- Guest 1 Card -->
+                                    <!-- Guest 1 -->
                                     <div class="col-md-6">
                                         <div class="card mb-3">
                                             <div class="card-header bg-success text-white">
@@ -900,8 +895,7 @@ document.querySelectorAll(".room-btn").forEach(btn => {
                                             </div>
                                         </div>
                                     </div>
-
-                                    <!-- Guest 2 Card -->
+                                    <!-- Guest 2 -->
                                     ${guestInfo.guest2_firstname || guestInfo.guest2_lastname ? `
                                     <div class="col-md-6">
                                         <div class="card mb-3">
@@ -917,45 +911,60 @@ document.querySelectorAll(".room-btn").forEach(btn => {
                                         </div>
                                     </div>` : ``}
                                 </div>
-                            ` : `
-                                <div class="alert alert-danger mt-3">
-                                    <i class="fas fa-info-circle"></i> 
-                                    ${status === "Occupied" ? "No guest information found for this room." : `No guest information available (Room is ${status}).`}
-                                </div>
-                            `}
+                            ` : `<div class="alert alert-danger mt-3"><i class="fas fa-info-circle"></i> No guest information available (Room is ${status}).</div>`}
                         </div>
                     `;
                 });
             });
 
-            // Maintenance handler
-             menu.querySelector(".maintenance-btn").addEventListener("click", (e) => {
+            // ===== Maintenance Handler =====
+            menu.querySelector(".maintenance-btn").addEventListener("click", (e) => {
                 e.stopPropagation();
                 handleMenuClick(() => {
-                    const blockedInfo = roomBlockedMap[roomId]; // Get info for clicked room
-                    const reason = blockedInfo?.reason || 'N/A';
-                    const roomStatus = blockedInfo?.status || 'N/A';
+                    let maintenanceHtml = '';
+                    const blockedStatuses = ['Blocked'];
 
-                    document.getElementById("room-info").innerHTML = `
-          <div class="maintenance-section">
-    <h4 class="fw-bold mb-3">Room ${roomNo} - Maintenance</h4>
-    <div class="card shadow-sm p-3" style="background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;">
-        <div class="mb-2 d-flex align-items-center">
-            <span class="fw-semibold me-2">Reason:</span>
-            <span class="text-dark">${reason}</span>
-        </div>
-        <div class="mb-0 d-flex align-items-center">
-            <span class="fw-semibold me-2">Status:</span>
-            <span class="badge bg-danger text-white">${roomStatus}</span>
-        </div>
-    </div>
-</div>
+                    if (blockedStatuses.includes(status)) {
+                        // Show blocked room info
+                        const blockedInfo = roomBlockedMap[roomId] || {};
+                        const reason = blockedInfo.reason || 'N/A';
+                        const roomStatus = blockedInfo.status || 'N/A';
+                        maintenanceHtml = `
+                            <div class="maintenance-section">
+                                <h4 class="fw-bold mb-3">Room ${roomNo} - Maintenance</h4>
+                                <div class="card shadow-sm p-3" style="background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;">
+                                    <p><strong>Reason:</strong> ${reason}</p>
+                                    <p><strong>Status:</strong> <span class="badge bg-warning text-dark">${roomStatus}</span></p>
+                                </div>
+                            </div>
+                        `;
+                    } else if (maintenanceMap[roomId]) {
+                        // Show active maintenance requests
+                        const m = maintenanceMap[roomId];
+                        maintenanceHtml = `
+                            <div class="maintenance-section">
+                                <h4 class="fw-bold mb-3">Room ${roomNo} - Maintenance</h4>
+                                <div class="card shadow-sm p-3" style="background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;">
+                                    <p><strong>Reason:</strong> ${m.problem_description || 'N/A'}</p>
+                                    <p><strong>Status:</strong> <span class="badge bg-warning text-dark">${m.status}</span></p>
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        maintenanceHtml = `
+                        <h4 class="fw-bold mb-3">Room ${roomNo} - Maintenance</h4>
+                            <div class="alert alert-danger mt-3">
+                              
+                                No maintenance records found for this room.
+                            </div>
+                        `;
+                    }
 
-                    `;
+                    document.getElementById("room-info").innerHTML = maintenanceHtml;
                 });
             });
 
-            // POS handler
+            // ===== POS Handler =====
             menu.querySelector(".pos-btn").addEventListener("click", (e) => {
                 e.stopPropagation();
                 handleMenuClick(() => {
@@ -968,13 +977,12 @@ document.querySelectorAll(".room-btn").forEach(btn => {
                 });
             });
 
-            // Prevent menu clicks from closing the menu immediately
-            menu.addEventListener('click', (e) => {
-                e.stopPropagation();
-            });
+            // Prevent menu clicks from closing menu
+            menu.addEventListener('click', (e) => e.stopPropagation());
         }
     });
 });
+
 
 // ====== PDF Generation Handler ======
 document.addEventListener('click', function(e) {
