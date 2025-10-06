@@ -808,42 +808,38 @@
                   <!-- <div class="invalid-feedback">Please enter maintenance area</div> -->
                 </div>
 
-          <!-- Room Number Dropdown -->
-<div class="col-md-6">
-  <label class="form-label ">Room Number</label>
-  <div class="dropdown w-100" id="roomTypeDropdown">
-    <input type="text" class="form-control dropdown-toggle" 
-          name="room_no_display" id="roomInput"
-          placeholder="Select Room"
-          data-bs-toggle="dropdown" aria-expanded="false" 
-          autocomplete="off" readonly  />
-    
-    <!-- ✅ Hidden input to keep room_id -->
-    <input type="hidden" name="room_id" id="roomId" >
-    <input type="hidden" name="room_no" id="roomNo">
-    
-    <ul class="dropdown-menu p-2 w-100" aria-labelledby="roomInput" style="max-height: 200px; overflow-y: auto;">
-      <div id="roomLists" style="width: 100%;">
-        <?php if(isset($rooms) && !empty($rooms)): ?>
-          <?php foreach($rooms as $room): ?>
-            <!-- Keep room_id in data-id, show room_no -->
-            <div class="dropdown-item" 
-                 data-id="<?= $room['room_id'] ?>" 
-                 data-value="<?= $room['room_no'] ?>">
-              <?= esc($room['room_no']) ?>
+                <!-- Room Number Dropdown -->
+            <div class="col-md-6">
+              <label class="form-label required">Room Number</label>
+              <div class="dropdown w-100" id="roomTypeDropdown">
+                <input type="text" class="form-control dropdown-toggle" 
+                      name="room_no_display" id="roomInput"
+                      placeholder="Select Room"
+                      data-bs-toggle="dropdown" aria-expanded="false" 
+                      autocomplete="off" readonly required />
+                <input type="hidden" name="room_no" id="roomNo" required>
+                <ul class="dropdown-menu p-2 w-100" aria-labelledby="roomInput" style="max-height: 200px; overflow-y: auto;">
+                  <div id="roomLists" style="width: 100%;">
+                    <?php if(isset($rooms) && !empty($rooms)): ?>
+                      <?php foreach($rooms as $room): ?>
+                        <div class="dropdown-item" data-value="<?= $room['room_no'] ?>">
+                          <?= esc($room['room_no']) ?>
+                        </div>
+                      <?php endforeach; ?>
+                    <?php else: ?>
+                      <div class="dropdown-item disabled">No rooms available</div>
+                    <?php endif; ?>
+                  </div>
+                </ul>
+              </div>
+              <div class="invalid-feedback">Please select a room</div>
             </div>
-          <?php endforeach; ?>
-        <?php else: ?>
-          <div class="dropdown-item disabled">No rooms available</div>
-        <?php endif; ?>
-      </div>
-    </ul>
-  </div>
-  <!-- <div class="invalid-feedback">Please select a room</div> -->
-</div>
-
                 
-               
+                <div class="col-md-6">
+                  <label class="form-label required">Requested By</label>
+                  <input type="text" class="form-control" name="requested_by" id="requested_by" placeholder="Enter your name" required>
+                  <div class="invalid-feedback">Please enter requester name</div>
+                </div>
               </div>
               
               <!-- Type and Dates -->
@@ -1330,14 +1326,14 @@ function setupFormValidation() {
         const roomNo = document.getElementById('roomNo');
         const roomDropdown = document.getElementById('roomTypeDropdown');
         
-        // if (!roomNo.value) {
-        //     roomDropdown.classList.add('is-invalid');
-        //     roomNo.setCustomValidity('Please select a room');
-        //     event.preventDefault();
-        // } else {
-        //     roomDropdown.classList.remove('is-invalid');
-        //     roomNo.setCustomValidity('');
-        // }
+        if (!roomNo.value) {
+            roomDropdown.classList.add('is-invalid');
+            roomNo.setCustomValidity('Please select a room');
+            event.preventDefault();
+        } else {
+            roomDropdown.classList.remove('is-invalid');
+            roomNo.setCustomValidity('');
+        }
         
         // Validate other dropdowns (existing code)
         const typeFilter = document.getElementById('modalTypeFilter');
@@ -1420,11 +1416,6 @@ function setupFormValidation() {
                 document.getElementById('roomInput').value = data.room_no;
                 document.getElementById('roomNo').value = data.room_no;
             }
-
-if (data.room_id) {
-    document.getElementById('roomId').value = data.room_id;    // hidden room_id
-}
-
     document.getElementById('maintenance_area').value = data.maintenance_area;
     document.getElementById('requested_by').value = data.requested_by;
     document.getElementById('modalTypeFilterDisplay').value = data.type; // Changed
@@ -1685,39 +1676,23 @@ function setupFilterDropdown(displayId, hiddenId, listId) {
 
 // Initialize room dropdown
 function initRoomDropdown() {
-    const roomInput   = document.getElementById('roomInput');
-    const roomIdInput = document.getElementById('roomId');
-    const roomNoInput = document.getElementById('roomNo');
+    const roomInput = document.getElementById('roomInput');
+    const roomItems = document.querySelectorAll('#roomLists .dropdown-item');
+    const roomNo = document.getElementById('roomNo');
     const roomDropdown = document.getElementById('roomTypeDropdown');
-    const roomItems   = document.querySelectorAll('#roomLists .dropdown-item');
 
     roomItems.forEach(item => {
         item.addEventListener('click', function() {
-            const roomNo = this.getAttribute('data-value'); // Room number (display)
-            const roomId = this.getAttribute('data-id');    // Room ID (hidden)
-
-            // Display room number in visible input
-            roomInput.value = roomNo;
-
-            // Save both in hidden inputs
-            if (roomNoInput) {
-                roomNoInput.value = roomNo;
-                roomNoInput.setCustomValidity('');
+            const value = this.getAttribute('data-value');
+            roomInput.value = value;
+            if (roomNo) {
+                roomNo.value = value;
+                roomNo.setCustomValidity('');
             }
-            if (roomIdInput) {
-                roomIdInput.value = roomId;
-                roomIdInput.setCustomValidity('');
-            }
-
-            // Remove invalid highlight if any
             roomDropdown.classList.remove('is-invalid');
         });
     });
 }
-
-// Call on page load
-document.addEventListener('DOMContentLoaded', initRoomDropdown);
-
 
   </script>
 </body>

@@ -19,6 +19,7 @@
   <!-- Core Css -->
   <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/css/styles.css" />
 
+  <!-- <title>MatDash Bootstrap Admin</title> -->
   <style>
     /* ========== Global Theme Colors ========== */
     :root {
@@ -575,8 +576,30 @@
       #form_inputs_wrapper>.dataTables_length {
         display: none !important;
       }
-      
     }
+/* Add smooth transitions for error messages */
+.alert {
+    transition: all 0.3s ease;
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+    /* Add this to your CSS */
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #bb2d3b;
+    border-color: #b02a37;
+}
   </style>
 </head>
 
@@ -848,177 +871,235 @@
 
 
     <!-- Laundry Modal -->
-    <!-- Laundry Modal -->
-    <div class="modal fade" id="laundryModal" tabindex="-1" aria-labelledby="laundryModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <form method="post" id="laundryForm"class="needs-validation" novalidate>
+   <!-- Laundry Modal -->
+<div class="modal fade" id="laundryModal" tabindex="-1" aria-labelledby="laundryModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <form method="post" id="laundryForm" class="needs-validation" novalidate>
 
-          <!-- Stepper Navigation -->
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <ul class="nav nav-pills flex-grow-1 justify-content-between" id="laundry-pills-tab" role="tablist">
-              <li class="nav-item flex-fill text-center">
-                <button class="nav-link active w-100" id="laundry-step1-tab" data-bs-toggle="pill"
-                  data-bs-target="#laundry-step1" type="button">
-                  Services
-                </button>
-              </li>
-              <li class="nav-item flex-fill text-center">
-                <button class="nav-link w-100" id="laundry-step2-tab" data-bs-toggle="pill"
-                  data-bs-target="#laundry-step2" type="button">
-                  Summary & Payment
-                </button>
-              </li>
-              <!-- <li class="nav-item flex-fill text-center">
-                <button class="nav-link w-100" id="laundry-step3-tab" data-bs-toggle="pill"
-                  data-bs-target="#laundry-step3" type="button">
-                  Success
-                </button>
-              </li> -->
-            </ul>
-            <button type="button" class="btn-close m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Stepper Navigation -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <ul class="nav nav-pills flex-grow-1 justify-content-between" id="laundry-pills-tab" role="tablist">
+            <li class="nav-item flex-fill text-center">
+              <button class="nav-link active w-100" id="laundry-step1-tab" data-bs-toggle="pill"
+                data-bs-target="#laundry-step1" type="button">
+                Services
+              </button>
+            </li>
+            <li class="nav-item flex-fill text-center">
+              <button class="nav-link w-100" id="laundry-step2-tab" data-bs-toggle="pill"
+                data-bs-target="#laundry-step2" type="button">
+                Preview
+              </button>
+            </li>
+            <li class="nav-item flex-fill text-center">
+              <button class="nav-link w-100" id="laundry-step3-tab" data-bs-toggle="pill"
+                data-bs-target="#laundry-step3" type="button">
+                Payment
+              </button>
+            </li>
+          </ul>
+          <button type="button" class="btn-close m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+
+          <!-- STEP 1: Laundry Service Selection -->
+          <div class="tab-pane fade show active p-2" id="laundry-step1">
+            <div class="modal-body">
+              <div class="table-responsive">
+                <table id="laundryTable"
+                  class="table table-bordered table-striped table-hover text-center align-middle">
+                  <thead class="table-success">
+                    <tr>
+                      <th>S.No</th>
+                      <th>Category</th>
+                      <th>Item</th>
+                      <th>Count</th>
+                      <th>Total</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="laundry-table-body">
+                    <!-- Dynamic rows will be added here -->
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="4" class="text-end fw-bold">Grand Total:</td>
+                      <td colspan="2" class="fw-bold text-primary" id="grand-total">₹0</td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+            <div class="modal-footer border-top justify-content-end">
+              <button type="button" class="btn btn-primary" onclick="goLaundryStep(2)">Next →</button>
+            </div>
           </div>
 
-          <!-- Tab Content -->
-          <div class="tab-content">
+          <!-- STEP 2: Preview -->
+          <div class="tab-pane fade p-2" id="laundry-step2">
+            <div class="modal-body">
+              <!-- Preview Table -->
+              <div class="table-responsive mb-4">
+                <table class="table table-bordered align-middle" id="laundry-preview-table">
+                  <thead class="table-light">
+                    <tr>
+                      <th>S.No</th>
+                      <th>Category</th>
+                      <th>Item</th>
+                      <th>Count</th>
+                      <th>Unit Price</th>
+                      <th>Total</th>
+                    </tr>
+                  </thead>
+                  <tbody id="laundry-preview-body"></tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="5" class="text-end fw-bold">Grand Total:</td>
+                      <td class="fw-bold text-primary" id="preview-grand-total">₹0</td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
 
-            <!-- STEP 1: Laundry Service Selection -->
-            <div class="tab-pane fade show active p-2" id="laundry-step1">
-              <div class="modal-body">
-                <div class="table-responsive">
-                  <table id="laundryTable"
-                    class="table table-bordered table-striped table-hover text-center align-middle">
-                    <thead class="table-success">
-                      <tr>
-                        <th>S.No</th>
-                        <th>Category</th>
-                        <th>Item</th>
-                        <th>Count</th>
-                        <th>Total</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody id="laundry-table-body">
-                      <!-- Dynamic rows will be added here -->
-                    </tbody>
-                    <tfoot>
-                      <tr>
-                        <td colspan="4" class="text-end fw-bold">Grand Total:</td>
-                        <td colspan="2" class="fw-bold text-primary" id="grand-total">₹0</td>
-                      </tr>
-                    </tfoot>
-                  </table>
-                </div>
-              </div>
-              <div class="modal-footer border-top justify-content-end">
-                <button type="button" class="btn btn-primary" onclick="goLaundryStep(2)">Next →</button>
-              </div>
+              <!-- Confirm Button -->
+               <!-- <div class="text-center mt-4">
+                <button type="button" class="btn btn-success btn-lg" onclick="confirmOrder()">
+                  <i class="fas fa-check-circle me-2"></i> Confirm Order
+                </button>
+              </div> -->
+
+                          <div class="alert alert-info">
+                <i class="fas fa-info-circle me-2"></i>
+                Please review the charges above before proceeding.
             </div>
-
-
-
-            <!-- STEP 2: Summary + Payment -->
-            <div class="tab-pane fade p-2" id="laundry-step2">
-              <div class="modal-body">
-                <!-- Summary Table -->
-
-                <div class="table-responsive mb-4">
-                  <table class="table table-bordered align-middle" id="laundry-summary-table">
-                    <thead class="table-light">
-                      <tr>
-                        <th>Service</th>
-                        <th class="text-end">Amount</th>
-                      </tr>
-                    </thead>
-                    <tbody id="laundry-summary-body"></tbody>
-                  </table>
-                </div>
-
-                <!-- Payment Methods -->
-                <h5 class="mb-3">Select Payment Method</h5>
-                <div class="row g-3 mb-4">
-                  <div class="col-md-6">
-                    <div class="card payment-method-card p-3" data-method="cash">
-                      💵 Cash Payment <br><small class="text-muted">Pay at reception</small>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="card payment-method-card p-3" data-method="upi">
-                      📱 UPI Payment <br><small class="text-muted">Pay via UPI apps</small>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="card payment-method-card p-3" data-method="card">
-                      💳 Card Payment <br><small class="text-muted">Credit/Debit Card</small>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="card payment-method-card p-3" data-method="wallet">
-                      🏨 Wallet <br><small class="text-muted">Use credits</small>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Payment Forms -->
-                <div id="laundry-payment-forms">
-                  <div id="laundry-cash-form" class="payment-form" style="display:none">
-                    <div class="mb-3">
-                      <label class="form-label">Bill No <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control" name="bill_no" placeholder="Enter Bill No" required>
-                      <div class="invalid-feedback">Please enter a bill number.</div>
-                    </div>
-                  </div>
-                  <div id="laundry-upi-form" class="payment-form" style="display:none">
-                    <div class="mb-3">
-                      <label class="form-label">Transaction ID <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control" name="upi_trans" placeholder="yourname@upi" required>
-                      <div class="invalid-feedback">Please enter a UPI transaction ID.</div>
-                    </div>
-                  </div>
-                  <div id="laundry-card-form" class="payment-form" style="display:none">
-                    <div class="mb-3">
-                      <label class="form-label">Transaction ID <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control" name="card_trans" placeholder="Enter Transaction ID" required>
-                      <div class="invalid-feedback">Please enter a card transaction ID.</div>
-                    </div>
-                  </div>
-                  <div id="laundry-wallet-form" class="payment-form" style="display:none">
-                    <div class="alert alert-info">
-                      <i class="fas fa-info-circle me-2"></i>
-                      Current balance: <strong id="laundry-balance">₹0</strong>
-                    </div>
-                    <!-- Wallet doesn't need additional input validation -->
-                  </div>
-                </div>
-
-                <!-- Stepper Navigation -->
-                <div class="d-flex justify-content-between mt-5">
-                  <button type="button" class="btn btn-secondary" onclick="goLaundryStep(1)">
-                    <i class="fas fa-arrow-left me-2"></i> Back
+                <div class="d-flex justify-content-center mt-4">
+                  <button type="button" class="btn btn-success btn-lg" onclick="confirmOrder()">
+                    <i class="fas fa-check-circle me-2"></i> Confirm Order
                   </button>
-                  <button type="button" class="btn btn-success" onclick="goLaundryStep(3)">
-                    <i class="fas fa-check-circle me-2"></i> Submit
+                </div>
+
+
+              <!-- Payment Options (Initially Hidden) -->
+              <div id="payment-options" class="mt-4" style="display: none;">
+                <h5 class="mb-3">Select Payment Option</h5>
+                <div class="d-flex justify-content-center gap-3">
+                  <button type="button" class="btn btn-primary" onclick="goLaundryStep(3)">
+                    <i class="fas fa-credit-card me-2"></i> Proceed with Payment
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary" onclick="submitWithoutPayment()">
+                    <i class="fas fa-file-invoice me-2"></i> Proceed Without Payment
                   </button>
                 </div>
               </div>
-            </div>
 
-            <!-- STEP 3: Payment Success -->
-            <div class="tab-pane fade text-center" id="laundry-step3">
-              <div class="p-4">
-                <i class="bi bi-check-circle text-success" style="font-size: 3rem;"></i>
-                <h4 class="mt-3">Payment Successful!</h4>
-                <p>Your laundry charges have been submitted successfully.</p>
+              <!-- Stepper Navigation -->
+              <!-- <div class="d-flex justify-content-between mt-5">
+                <button type="button" class="btn btn-secondary" onclick="goLaundryStep(1)">
+                  <i class="fas fa-arrow-left me-2"></i> Back
+                </button>
+              </div> -->
+
+              <!-- Back Button -->
+              <div class="d-flex justify-content-center mt-3">
+                <button type="button" class="btn btn-secondary" onclick="goLaundryStep(1)">
+                  <i class="fas fa-arrow-left me-2"></i> Back
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- STEP 3: Payment -->
+          <div class="tab-pane fade p-2" id="laundry-step3">
+            <div class="modal-body">
+              <!-- Summary Table -->
+              <!-- <div class="table-responsive mb-4">
+                <table class="table table-bordered align-middle" id="laundry-summary-table">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Service</th>
+                      <th class="text-end">Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody id="laundry-summary-body"></tbody>
+                </table>
+              </div> -->
+
+              <!-- Payment Methods -->
+              <h5 class="mb-3">Select Payment Method</h5>
+              <div class="row g-3 mb-4">
+                <div class="col-md-4">
+                  <div class="card payment-method-card p-3" data-method="cash">
+                    💵 Cash Payment <br><small class="text-muted">Pay at reception</small>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card payment-method-card p-3" data-method="upi">
+                    📱 UPI Payment <br><small class="text-muted">Pay via UPI apps</small>
+                  </div>
+                </div>
+                <!-- <div class="col-md-6">
+                  <div class="card payment-method-card p-3" data-method="card">
+                    💳 Card Payment <br><small class="text-muted">Credit/Debit Card</small>
+                  </div>
+                </div> -->
+                <div class="col-md-4">
+                  <div class="card payment-method-card p-3" data-method="wallet">
+                    🏨 Wallet <br><small class="text-muted">Use credits</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Payment Forms -->
+              <div id="laundry-payment-forms">
+                <!-- <div id="laundry-cash-form" class="payment-form" style="display:none">
+                  <div class="mb-3">
+                    <label class="form-label">Bill No <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="bill_no" placeholder="Enter Bill No" required>
+                    <div class="invalid-feedback">Please enter a bill number.</div>
+                  </div> -->
+                </div>
+                <div id="laundry-upi-form" class="payment-form" style="display:none">
+                  <div class="mb-3">
+                    <label class="form-label">Transaction ID <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="upi_trans" placeholder="yourname@upi" required>
+                    <div class="invalid-feedback">Please enter a UPI transaction ID.</div>
+                  </div>
+                </div>
+                <div id="laundry-card-form" class="payment-form" style="display:none">
+                  <div class="mb-3">
+                    <label class="form-label">Transaction ID <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="card_trans" placeholder="Enter Transaction ID" required>
+                    <div class="invalid-feedback">Please enter a card transaction ID.</div>
+                  </div>
+                </div>
+                <div id="laundry-wallet-form" class="payment-form" style="display:none">
+                  <div class="alert alert-info">
+                    <i class="fas fa-info-circle me-2"></i>
+                    Current balance: <strong id="laundry-balance">₹0</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Stepper Navigation -->
+              <div class="d-flex justify-content-between mt-5">
+                <button type="button" class="btn btn-secondary" onclick="goLaundryStep(2)">
+                  <i class="fas fa-arrow-left me-2"></i> Back
+                </button>
+                <button type="button" class="btn btn-success" onclick="saveLaundryOrder()">
+                  <i class="fas fa-check-circle me-2"></i> Submit
+                </button>
               </div>
             </div>
-
-          </div><!-- end tab-content -->
-
-          </form>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
-
+  </div>
+</div>
 
     <script>
       let rowCount = 0;
@@ -1120,293 +1201,8 @@
       // When you add a new row dynamically, call this:
       // activateDropdowns(newRow);
     </script>
-
-
-    <!-- Maintenance Service Modal -->
-    <!-- <div class="modal fade" id="maintenanceModal" tabindex="-1" aria-labelledby="maintenanceModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="maintenanceModalLabel">Maintenance Charges</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form id="maintenanceForm">
-          <div class="mb-3 row">
-            <label for="maintenanceDescription" class="col-sm-4 col-form-label">Description</label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" id="maintenanceDescription" required>
-            </div>
-          </div>
-          <div class="mb-3 row">
-            <label for="maintenanceAmount" class="col-sm-4 col-form-label">Amount (₹)</label>
-            <div class="col-sm-8">
-              <input type="number" class="form-control" id="maintenanceAmount" required>
-            </div>
-          </div>
-          <button type="button" class="btn btn-success" onclick="addMaintenanceCharge()">Add Charge</button>
-        </form>
-
-        <hr>
-
-        <h6>Maintenance Charges Summary:</h6>
-        <table class="table table-bordered table-sm">
-          <thead>
-            <tr>
-              <th>Description</th>
-              <th class="text-end">Amount (₹)</th>
-              <th class="text-center">Action</th>
-            </tr>
-          </thead>
-          <tbody id="maintenanceTableBody"></tbody>
-          <tfoot>
-            <tr>
-              <td><strong>Total</strong></td>
-              <td class="text-end"><strong id="maintenanceTotal">₹0.00</strong></td>
-              <td></td>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button class="btn btn-primary" onclick="saveMaintenanceAndPay()">Save & Pay</button>
-      </div>
-    </div>
-  </div>
-</div>> -->
-
-    <!-- <script>
-  const maintenanceItems = {
-    Electrical: [
-      { name: "Fan Repair", rate: 150 },
-      { name: "Light Replacement", rate: 100 }
-    ],
-    Plumbing: [
-      { name: "Tap Fixing", rate: 120 },
-      { name: "Pipe Leakage", rate: 200 }
-    ],
-    Carpentry: [
-      { name: "Door Repair", rate: 180 },
-      { name: "Shelf Fixing", rate: 220 }
-    ]
-  };
-
-  let maintenanceCart = [];
-
-  function openMaintenanceModal() {
-    const modal = new bootstrap.Modal(document.getElementById('maintenanceModal'));
-    modal.show();
-  }
-
-  function updateMaintenanceItems(category) {
-    const itemSelect = document.getElementById('maintenanceItem');
-    itemSelect.innerHTML = `<option value="">-- Select Item --</option>`;
-
-    if (maintenanceItems[category]) {
-      maintenanceItems[category].forEach(item => {
-        const option = document.createElement('option');
-        option.value = item.name;
-        option.text = `${item.name} (₹${item.rate})`;
-        itemSelect.appendChild(option);
-      });
-    }
-  }
-
-  function addToMaintenanceCart() {
-    const category = document.getElementById('maintenanceCategory').value;
-    const item = document.getElementById('maintenanceItem').value;
-    const qty = parseInt(document.getElementById('maintenanceQty').value);
-
-    if (!category || !item || qty < 1) {
-      alert("Please select category, item, and quantity");
-      return;
-    }
-
-    const rate = maintenanceItems[category].find(i => i.name === item).rate;
-    maintenanceCart.push({ item, rate, qty, amount: rate * qty });
-    renderMaintenanceCart();
-  }
-
-  function removeMaintenanceItem(index) {
-    maintenanceCart.splice(index, 1);
-    renderMaintenanceCart();
-  }
-
-  function renderMaintenanceCart() {
-    const tbody = document.querySelector("#maintenanceCartTable tbody");
-    tbody.innerHTML = "";
-    maintenanceCart.forEach((entry, i) => {
-      tbody.innerHTML += `
-        <tr>
-          <td>${entry.item}</td>
-          <td>₹${entry.rate}</td>
-          <td>${entry.qty}</td>
-          <td>₹${entry.amount}</td>
-          <td><button class="btn btn-sm btn-danger" onclick="removeMaintenanceItem(${i})">Delete</button></td>
-        </tr>
-      `;
-    });
-  }
-
-  function saveMaintenanceCart() {
-    const total = maintenanceCart.reduce((sum, item) => sum + item.amount, 0);
-    alert(`Total Maintenance Charges: ₹${total}`);
-    // Save logic here...
-    maintenanceCart = [];
-    renderMaintenanceCart();
-    bootstrap.Modal.getInstance(document.getElementById('maintenanceModal')).hide();
-  }
-</script> -->
-    <!-- <script>
-  let maintenanceCharges = [];
-
-  function addMaintenanceCharge() {
-    const desc = document.getElementById("maintenanceDescription").value.trim();
-    const amt = parseFloat(document.getElementById("maintenanceAmount").value.trim());
-
-    if (!desc || isNaN(amt)) {
-      alert("Please fill both fields properly.");
-      return;
-    }
-
-    maintenanceCharges.push({ desc, amt });
-    updateMaintenanceTable();
-
-    // Clear form
-    document.getElementById("maintenanceForm").reset();
-  }
-
-  function updateMaintenanceTable() {
-    const tbody = document.getElementById("maintenanceTableBody");
-    tbody.innerHTML = "";
-
-    let total = 0;
-    maintenanceCharges.forEach((item, index) => {
-      total += item.amt;
-
-      const row = `<tr>
-        <td>${item.desc}</td>
-        <td class="text-end">₹${item.amt.toFixed(2)}</td>
-        <td class="text-center">
-          <button class="btn btn-sm btn-danger" onclick="removeMaintenanceCharge(${index})">Remove</button>
-        </td>
-      </tr>`;
-      tbody.innerHTML += row;
-    });
-
-    document.getElementById("maintenanceTotal").innerText = `₹${total.toFixed(2)}`;
-  }
-
-  function removeMaintenanceCharge(index) {
-    maintenanceCharges.splice(index, 1);
-    updateMaintenanceTable();
-  }
-
-  function saveMaintenanceAndPay() {
-    const total = maintenanceCharges.reduce((sum, item) => sum + item.amt, 0);
-    const modal = bootstrap.Modal.getInstance(document.getElementById("maintenanceModal"));
-    modal.hide(); // Close the modal
-    showPaymentFromLaundry(total); // Redirect to payment
-  }
-</script> -->
-
-    <!-- Maintenance Charges Module UI -->
-    <!-- <div class="modal fade" id="maintenanceModal" tabindex="-1" aria-labelledby="maintenanceModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="card shadow-sm border-0">
-              <div class="card-body">
-                <h5 class="mb-3"><i class="bi bi-scissors"></i> Maintenance Charges</h5>
-                <p class="mb-3">Select Maintenance Services</p>
-
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <button class="btn btn-outline-secondary w-100"
-                      onclick="addMaintenanceItem('Room Charge', 500)">Room Charge <span
-                        class="float-end">₹500</span></button>
-                  </div>
-                  <div class="col-md-6">
-                    <button class="btn btn-outline-secondary w-100"
-                      onclick="addMaintenanceItem('Room Service', 1200)">Room Service <span
-                        class="float-end">₹1200</span></button>
-                  </div>
-                  <div class="col-md-6">
-                    <button class="btn btn-outline-secondary w-100" onclick="addMaintenanceItem('EB Bill', 1500)">EB
-                      Bill <span class="float-end">₹1500</span></button>
-                  </div>
-                  <div class="col-md-6">
-                    <button class="btn btn-outline-secondary w-100"
-                      onclick="addMaintenanceItem('Maintenance Charges', 600)">Maintenance Charges <span
-                        class="float-end">₹600</span></button>
-                  </div>
-                </div>
-
-               
-                <div class="mt-4 border p-3 rounded">
-                  <label class="form-label">Other Service</label>
-                  <input type="text" id="customServiceName" class="form-control mb-2"
-                    placeholder="Custom maintenance service">
-                  <input type="number" id="customServiceAmount" class="form-control mb-2" placeholder="Amount">
-                  <button class="btn btn-sm btn-success" onclick="addCustomService()">Add</button>
-                </div>
-
-               
-                <div id="maintenance-cart" class="mt-4 d-none">
-                  <h6>Selected Services</h6>
-                  <div id="maintenance-items" class="mb-2"></div>
-                  <div class="d-flex justify-content-between border-top pt-2">
-                    <strong>Total</strong>
-                    <strong id="maintenance-total">₹0</strong>
-                  </div>
-                </div>
-
-                <div class="mt-4 d-flex justify-content-between">
-                  <button class="btn btn-outline-secondary" data-bs-dismiss="modal">&larr; Back</button>
-                  <button class="btn btn-primary" onclick="saveMaintenanceOrder()">Save & Pay</button>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-   
-
-
-
-
     <script>
-      /* const laundryData = {
-         'A': ['Apron', 'Abaya'],
-         'B': ['Bedsheet', 'Blanket'],
-         'C': ['Curtain', 'Coat'],
-         'D': ['Dress', 'Dupatta'],
-         'J': ['Jeans', 'Jacket'],
-         'P': ['Pant', 'Pillow Cover'],
-         'S': ['Shirt', 'Saree'],
-         'T': ['T-shirt', 'Towel'],
-         'U': ['Uniform', 'Undergarments']
-       };
-   
-       const itemDetails = {
-         'Shirt': { types: ['Dry Wash', 'Steam Press'], prices: [25, 15], unit: 'per pc' },
-         'T-shirt': { types: ['Dry Wash', 'Steam Press'], prices: [20, 12], unit: 'per pc' },
-         'Jeans': { types: ['Dry Wash', 'Steam Press'], prices: [35, 20], unit: 'per pc' },
-         'Bedsheet': { types: ['Dry Wash'], prices: [40], unit: 'per pc' },
-         'Saree': { types: ['Dry Wash', 'Steam Press', 'Dry Clean'], prices: [50, 30, 80], unit: 'per pc' }
-       };
-   */
-
-
-
-
-
+    
       //based on category selection 
 
       function selectAlphabet(letter) {
@@ -1438,8 +1234,6 @@
 
 
       }
-
-
 
 
       function selectItem(item) {
@@ -1538,85 +1332,6 @@
         });
         document.getElementById('total-price').textContent = `₹${total}`;
       }
-
-      // Save laundry order and redirect to payment 
-      // function saveLaundryOrder1() {
-      //   const total = document.getElementById('total-price').textContent;
-      //   const room_no = document.getElementById('selected-room-no').innerHTML;
-      //   const guest = document.getElementById('testNo').value;
-      //   const service_type = document.getElementById('service_type').innerHTML;
-      //   if (total === '₹0') return alert('Cart is empty');
-
-      //   // Save the complete cart data
-      //   const cartData = {
-      //     items: document.getElementById('cart-items').innerHTML,
-      //     total: total,
-      //     guest: guest,//currentGuestLabel || 'Guest 1',
-      //     room: 'room_no' // You can make this dynamic if needed
-      //   };
-
-      //   //alert(document.getElementById('cart-items').innerHTML);
-      //   // Store as JSON string
-      //   sessionStorage.setItem('laundryCartData', JSON.stringify(cartData));
-
-
-
-
-      //   //assign the value on form
-
-      //   /*document.getElementById('amount_data').value=total;
-      //   document.getElementById('room_no_data').value=room_no;
-      //   document.getElementById('guest_id_data').value=guest;*/
-
-      //   // Redirect to payment page with amount parameter
-      //   /*window.location.href = `payment/amount=${total.replace('₹', '')}/room_no=${room_no}/guest=${guest}`;*/
-      //   console.log(cart_arr);
-      //   let form = document.createElement("form");
-      //   form.method = "POST";          // or "GET"
-      //   form.action = "paymentrecd";   // URL to send data
-
-      //   // Create input fields
-      //   let input1 = document.createElement("input");
-      //   input1.type = "hidden";
-      //   input1.name = "amount_data";
-      //   input1.value = total.replace('₹', '');
-
-      //   let input2 = document.createElement("input");
-      //   input2.type = "hidden";
-      //   input2.name = "room_no_data";
-      //   input2.value = room_no;
-
-      //   let input3 = document.createElement("input");
-      //   input3.type = "hidden";
-      //   input3.name = "guest_id_data";
-      //   input3.value = guest;
-
-      //   let input4 = document.createElement("input");
-      //   input4.type = "hidden";
-      //   input4.name = "service_info";
-      //   input4.value = JSON.stringify(cart_arr);
-
-      //   let input5 = document.createElement("input");
-      //   input5.type = "hidden";
-      //   input5.name = "service_type";
-      //   input5.value = service_type;
-
-      //   // Append inputs to form
-      //   form.appendChild(input1);
-      //   form.appendChild(input2);
-      //   form.appendChild(input3);
-      //   form.appendChild(input4);
-      //   form.appendChild(input5);
-      //   // Append form to body (required for submission)
-      //   document.body.appendChild(form);
-
-      //   // Submit the form
-      //   form.submit();
-
-
-
-
-      // }
 
 
       //  // Restore cart items if returning from payment page
@@ -1861,72 +1576,6 @@
       });
     </script>
 
-
-
-
-
-<!-- 
-    <script>
-
-      //this is trggered the first vale
-
-      document.addEventListener('DOMContentLoaded', function () {
-        const firstTab = document.querySelector('.room-tab');
-        if (firstTab) {
-          firstTab.click();
-        }
-      });
-
-
-      document.querySelectorAll('.room-tab').forEach(tab => {
-        tab.addEventListener('click', function (e) {
-          e.preventDefault();
-
-          // Get values from the clicked tab
-          let room_no = this.getAttribute('data-room-no');
-          document.getElementById('selected-room-no').innerHTML = room_no;
-
-
-          fetch(`/room_guest/${room_no}`)
-            .then(response => response.json())
-
-            .then(data => {
-
-              let count = 1;
-              data.forEach(item => {
-                if (count === 1) {
-                  document.getElementById('guestName').value = item.first_name || '';
-                  document.getElementById('guestContact').value = item.contact || '';
-
-                  document.getElementById('guest_id').value = item.guest_id || '';
-                }
-                if (count === 2) {
-
-                  document.getElementById('guestName1').value = item.first_name || '';
-
-                  document.getElementById('guestContact1').value = item.contact || '';
-                  document.getElementById('guest_id1').value = item.guest_id || '';
-                }
-
-                count++;
-              });
-
-
-
-
-            })
-            .catch(error => {
-
-              console.error(error);
-            });
-
-
-
-
-
-        });
-      });
-    </script> -->
 
     <script>
       document.addEventListener("click", function (e) {
@@ -2229,12 +1878,231 @@
     </script>
     <script>
 
-// Function to save laundry order data
+// // Function to save laundry order data
+// function saveLaundryOrder() {
+//     console.log("=== Starting saveLaundryOrder() ===");
+    
+//     // Get the selected service input using the stored reference
+//     const modalEl = document.getElementById('laundryModal');
+//     const selectedInputId = modalEl.getAttribute('data-selected-input-id');
+//     let selectedServiceInput = null;
+    
+//     if (selectedInputId) {
+//         selectedServiceInput = document.getElementById(selectedInputId);
+//     }
+    
+//     // Fallback: try to find by class
+//     if (!selectedServiceInput) {
+//         selectedServiceInput = document.querySelector('.service-input.selected-service');
+//     }
+    
+//     console.log("Selected service input:", selectedServiceInput);
+    
+//     if (!selectedServiceInput) {
+//         console.error("No service input selected - showing alert");
+//         alert('Please select a guest and service first');
+//         return;
+//     }
+    
+//     // Get the table row and extract guest/room data
+//     const tableRow = selectedServiceInput.closest('tr');
+//     console.log("Table row:", tableRow);
+    
+//     const guestId = tableRow.getAttribute('data-guest-id');
+//     const roomNo = tableRow.getAttribute('data-room-no');
+//     console.log("Extracted guestId:", guestId, "roomNo:", roomNo);
+    
+//     // Get service data from modal
+//     const serviceType = modalEl.getAttribute('data-service-name') || 'Laundry Service';
+//     const serviceTypeId = modalEl.getAttribute('data-service-id') || '';
+//     console.log("Service data - Type:", serviceType, "ID:", serviceTypeId);
+    
+//     // Get total amount
+//     const totalAmount = document.getElementById('grand-total').textContent;
+//     console.log("Total amount:", totalAmount);
+    
+//     if (totalAmount === '₹0') {
+//         console.error("Cart is empty - showing alert");
+//         alert('Cart is empty');
+//         return;
+//     }
+    
+//     // Get selected payment method
+//     const selectedPaymentCard = document.querySelector('.payment-method-card.border-success');
+//     console.log("Selected payment card:", selectedPaymentCard);
+    
+//     if (!selectedPaymentCard) {
+//         console.error("No payment method selected - showing alert");
+//         alert('Please select a payment method');
+//         return;
+//     }
+    
+//     const paymentMode = selectedPaymentCard.getAttribute('data-method');
+//     console.log("Payment mode:", paymentMode);
+    
+//     // Collect all laundry items
+//     const laundryItems = [];
+//     const itemRows = document.querySelectorAll('#laundry-table-body tr');
+//     console.log("Found", itemRows.length, "laundry items");
+    
+//     itemRows.forEach((row, index) => {
+//         const category = row.querySelector('.category-input').value;
+//         const item = row.querySelector('.item-input').value;
+//         const quantity = row.querySelector('.quantity').value;
+//         const price = row.querySelector('.price-cell').getAttribute('data-price');
+//         const total = row.querySelector('.row-total').textContent.replace('₹', '');
+        
+//         console.log(`Item ${index + 1}:`, {category, item, quantity, price, total});
+        
+//         if (category && item) {
+//             laundryItems.push({
+//                 item: category,
+//                 type: item,
+//                 qty: quantity,
+//                 price: price,
+//                 total: total
+//             });
+//         }
+//     });
+    
+//     console.log("All laundry items:", laundryItems);
+    
+//     // Create form and set attributes
+//     let form = document.createElement("form");
+//     form.method = "POST";
+//     form.action = "paymentrecd";
+//     console.log("Form created with method POST and action paymentrecd");
+    
+//     // Create input fields for basic data
+//     const basicFields = {
+//         'guest_id_data': guestId,
+//         'room_no_data': roomNo,
+//         'service_type': serviceType,
+//         'service_type_id': serviceTypeId,
+//         'amount_data': totalAmount.replace('₹', ''),
+//         'payment_mode': paymentMode
+//     };
+    
+//     console.log("Basic form fields:", basicFields);
+    
+//     // Add basic fields to form
+//     for (const [name, value] of Object.entries(basicFields)) {
+//         let input = document.createElement("input");
+//         input.type = "hidden";
+//         input.name = name;
+//         input.value = value;
+//         form.appendChild(input);
+//         console.log("Added field:", name, "=", value);
+//     }
+    
+//     // Add laundry items as JSON
+//     let serviceInfoInput = document.createElement("input");
+//     serviceInfoInput.type = "hidden";
+//     serviceInfoInput.name = "service_info";
+//     serviceInfoInput.value = JSON.stringify(laundryItems);
+//     form.appendChild(serviceInfoInput);
+//     console.log("Added service_info field with JSON data");
+    
+//     // Add payment method specific data
+//     switch(paymentMode) {
+//         case 'cash':
+//             const billNo = document.querySelector('#laundry-cash-form input[name="bill_no"]')?.value;
+//             console.log("Cash payment - billNo:", billNo);
+//             if (billNo) {
+//                 let input = document.createElement("input");
+//                 input.type = "hidden";
+//                 input.name = "bill_no";
+//                 input.value = billNo;
+//                 form.appendChild(input);
+//                 console.log("Added bill_no field:", billNo);
+//             }
+//             break;
+            
+//         case 'upi':
+//             const upiTrans = document.querySelector('#laundry-upi-form input[name="upi_trans"]')?.value;
+//             console.log("UPI payment - upiTrans:", upiTrans);
+//             if (upiTrans) {
+//                 let input = document.createElement("input");
+//                 input.type = "hidden";
+//                 input.name = "upi_trans";
+//                 input.value = upiTrans;
+//                 form.appendChild(input);
+//                 console.log("Added upi_trans field:", upiTrans);
+//             }
+//             break;
+            
+//         case 'card':
+//             const cardTrans = document.querySelector('#laundry-card-form input[name="card_trans"]')?.value;
+//             console.log("Card payment - cardTrans:", cardTrans);
+//             if (cardTrans) {
+//                 let input = document.createElement("input");
+//                 input.type = "hidden";
+//                 input.name = "card_trans";
+//                 input.value = cardTrans;
+//                 form.appendChild(input);
+//                 console.log("Added card_trans field:", cardTrans);
+//             }
+//             break;
+            
+//         case 'wallet':
+//             console.log("Wallet payment - no additional fields needed");
+//             break;
+//     }
+    
+//     // Log the complete form HTML before submission
+//     console.log("Complete form HTML:", form.outerHTML);
+
+//     clearPaymentForms();
+    
+//     // Append form to body and submit
+//     document.body.appendChild(form);
+//     console.log("Form appended to body, about to submit...");
+    
+//     form.submit();
+//     console.log("Form submitted!");
+// }
+
 function saveLaundryOrder() {
     console.log("=== Starting saveLaundryOrder() ===");
     
-    // Get the selected service input using the stored reference
+    // Get payment mode from modal attribute
     const modalEl = document.getElementById('laundryModal');
+    const paymentMode = modalEl.getAttribute('data-payment-mode') || 'cash'; // Default to cash if not set
+    
+    console.log("Payment mode:", paymentMode);
+    
+    // If payment mode is NOT "no_payment", validate payment method
+    if (paymentMode !== 'no_payment') {
+        // Get selected payment method
+        const selectedPaymentCard = document.querySelector('.payment-method-card.border-success');
+        console.log("Selected payment card:", selectedPaymentCard);
+        
+        if (!selectedPaymentCard) {
+            console.error("No payment method selected - showing alert");
+            alert('Please select a payment method');
+            return;
+        }
+        
+        const selectedPaymentMode = selectedPaymentCard.getAttribute('data-method');
+        console.log("Selected payment mode:", selectedPaymentMode);
+        
+        // Validate payment forms based on selected method
+        if (selectedPaymentMode === 'upi') {
+            const upiTrans = document.querySelector('#laundry-upi-form input[name="upi_trans"]')?.value;
+            if (!upiTrans) {
+                alert('Please enter a UPI transaction ID');
+                return;
+            }
+        } else if (selectedPaymentMode === 'card') {
+            const cardTrans = document.querySelector('#laundry-card-form input[name="card_trans"]')?.value;
+            if (!cardTrans) {
+                alert('Please enter a card transaction ID');
+                return;
+            }
+        }
+    }
+    
+    // Get the selected service input using the stored reference
     const selectedInputId = modalEl.getAttribute('data-selected-input-id');
     let selectedServiceInput = null;
     
@@ -2278,19 +2146,6 @@ function saveLaundryOrder() {
         return;
     }
     
-    // Get selected payment method
-    const selectedPaymentCard = document.querySelector('.payment-method-card.border-success');
-    console.log("Selected payment card:", selectedPaymentCard);
-    
-    if (!selectedPaymentCard) {
-        console.error("No payment method selected - showing alert");
-        alert('Please select a payment method');
-        return;
-    }
-    
-    const paymentMode = selectedPaymentCard.getAttribute('data-method');
-    console.log("Payment mode:", paymentMode);
-    
     // Collect all laundry items
     const laundryItems = [];
     const itemRows = document.querySelectorAll('#laundry-table-body tr');
@@ -2330,9 +2185,21 @@ function saveLaundryOrder() {
         'room_no_data': roomNo,
         'service_type': serviceType,
         'service_type_id': serviceTypeId,
-        'amount_data': totalAmount.replace('₹', ''),
-        'payment_mode': paymentMode
+        'amount_data': totalAmount.replace('₹', '')
     };
+    
+    // Handle payment mode and status based on selection
+    if (paymentMode === 'no_payment') {
+        // For "no payment" option - empty payment mode and pending status
+        basicFields['payment_mode'] = '';
+        basicFields['payment_status'] = 'pending';
+        console.log("No payment selected - setting payment_mode: '', payment_status: 'pending'");
+    } else {
+        // For regular payment methods
+        basicFields['payment_mode'] = paymentMode;
+        basicFields['payment_status'] = 'success'; // Or whatever your default success status is
+        console.log("Payment method selected - setting payment_mode:", paymentMode, "payment_status: 'success'");
+    }
     
     console.log("Basic form fields:", basicFields);
     
@@ -2354,50 +2221,41 @@ function saveLaundryOrder() {
     form.appendChild(serviceInfoInput);
     console.log("Added service_info field with JSON data");
     
-    // Add payment method specific data
-    switch(paymentMode) {
-        case 'cash':
-            const billNo = document.querySelector('#laundry-cash-form input[name="bill_no"]')?.value;
-            console.log("Cash payment - billNo:", billNo);
-            if (billNo) {
-                let input = document.createElement("input");
-                input.type = "hidden";
-                input.name = "bill_no";
-                input.value = billNo;
-                form.appendChild(input);
-                console.log("Added bill_no field:", billNo);
-            }
-            break;
-            
-        case 'upi':
-            const upiTrans = document.querySelector('#laundry-upi-form input[name="upi_trans"]')?.value;
-            console.log("UPI payment - upiTrans:", upiTrans);
-            if (upiTrans) {
-                let input = document.createElement("input");
-                input.type = "hidden";
-                input.name = "upi_trans";
-                input.value = upiTrans;
-                form.appendChild(input);
-                console.log("Added upi_trans field:", upiTrans);
-            }
-            break;
-            
-        case 'card':
-            const cardTrans = document.querySelector('#laundry-card-form input[name="card_trans"]')?.value;
-            console.log("Card payment - cardTrans:", cardTrans);
-            if (cardTrans) {
-                let input = document.createElement("input");
-                input.type = "hidden";
-                input.name = "card_trans";
-                input.value = cardTrans;
-                form.appendChild(input);
-                console.log("Added card_trans field:", cardTrans);
-            }
-            break;
-            
-        case 'wallet':
-            console.log("Wallet payment - no additional fields needed");
-            break;
+    // Add payment method specific data (only if not "no_payment")
+    if (paymentMode !== 'no_payment') {
+        switch(paymentMode) {
+            case 'upi':
+                const upiTrans = document.querySelector('#laundry-upi-form input[name="upi_trans"]')?.value;
+                console.log("UPI payment - upiTrans:", upiTrans);
+                if (upiTrans) {
+                    let input = document.createElement("input");
+                    input.type = "hidden";
+                    input.name = "upi_trans";
+                    input.value = upiTrans;
+                    form.appendChild(input);
+                    console.log("Added upi_trans field:", upiTrans);
+                }
+                break;
+                
+            case 'card':
+                const cardTrans = document.querySelector('#laundry-card-form input[name="card_trans"]')?.value;
+                console.log("Card payment - cardTrans:", cardTrans);
+                if (cardTrans) {
+                    let input = document.createElement("input");
+                    input.type = "hidden";
+                    input.name = "card_trans";
+                    input.value = cardTrans;
+                    form.appendChild(input);
+                    console.log("Added card_trans field:", cardTrans);
+                }
+                break;
+                
+            case 'wallet':
+                console.log("Wallet payment - no additional fields needed");
+                break;
+        }
+    } else {
+        console.log("No payment mode - skipping payment-specific fields");
     }
     
     // Log the complete form HTML before submission
@@ -2412,37 +2270,6 @@ function saveLaundryOrder() {
     form.submit();
     console.log("Form submitted!");
 }
-
-// // Modify the goLaundryStep function with better error handling
-// function goLaundryStep(step) {
-//     try {
-//         console.log("goLaundryStep called with step:", step);
-        
-//         if (step === 3) {
-//             console.log("Step 3 detected - calling saveLaundryOrder");
-//             saveLaundryOrder();
-//             return;
-//         }
-        
-//         if (step === 2) {
-//             console.log("Step 2 detected - updating summary");
-//             updateLaundrySummary(); // Use the new function
-//         }
-        
-//         // Check if tab trigger exists
-//         let tabTrigger = document.querySelector(`#laundry-step${step}-tab`);
-//         if (tabTrigger) {
-//             console.log("Tab trigger element found:", tabTrigger);
-//             let tab = new bootstrap.Tab(tabTrigger);
-//             tab.show();
-//             console.log("Tab shown for step:", step);
-//         } else {
-//             console.error(`Tab trigger #laundry-step${step}-tab not found!`);
-//         }
-//     } catch (error) {
-//         console.error("Error in goLaundryStep:", error);
-//     }
-// }
 
 // Form validation for laundry modal
 function validateLaundryStep1() {
@@ -2529,7 +2356,7 @@ function validateLaundryStep1() {
     
     return isValid;
 }
-// Update your goLaundryStep function to include validation
+// Update the goLaundryStep function to handle the new tab structure
 function goLaundryStep(step) {
     try {
         console.log("goLaundryStep called with step:", step);
@@ -2539,14 +2366,13 @@ function goLaundryStep(step) {
             if (!validateLaundryStep1()) {
                 return; // Stop if validation fails
             }
-            console.log("Step 2 detected - updating summary");
-            updateLaundrySummary();
+            console.log("Step 2 detected - updating preview");
+            updateLaundryPreview();
         }
         
         if (step === 3) {
-            console.log("Step 3 detected - calling saveLaundryOrder");
-            saveLaundryOrder();
-            return;
+            console.log("Step 3 detected - updating summary");
+            updateLaundrySummary();
         }
         
         // Check if tab trigger exists
@@ -2564,39 +2390,105 @@ function goLaundryStep(step) {
     }
 }
 
+// Function to update the preview tab
+function updateLaundryPreview() {
+    console.log("Updating laundry preview");
+    
+    const tableBody = document.getElementById("laundry-table-body");
+    const previewBody = document.getElementById("laundry-preview-body");
+    const grandTotal = document.getElementById("grand-total").textContent;
+    
+    if (!previewBody) {
+        console.error("Preview body element not found!");
+        return;
+    }
+    
+    // Clear existing preview content
+    previewBody.innerHTML = "";
+    
+    // Get all rows from the services table
+    const rows = tableBody.querySelectorAll("tr");
+    
+    if (rows.length === 0) {
+        previewBody.innerHTML = '<tr><td colspan="6" class="text-center">No items added</td></tr>';
+        return;
+    }
+    
+    // Populate preview table
+    rows.forEach((row, index) => {
+        const category = row.querySelector(".category-input").value;
+        const item = row.querySelector(".item-input").value;
+        const quantity = row.querySelector(".quantity").value;
+        const price = row.querySelector(".price-cell").getAttribute("data-price");
+        const total = row.querySelector(".row-total").textContent;
+        
+        const previewRow = document.createElement("tr");
+        previewRow.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${category}</td>
+            <td>${item}</td>
+            <td>${quantity}</td>
+            <td>₹${price}</td>
+            <td>${total}</td>
+        `;
+        previewBody.appendChild(previewRow);
+    });
+    
+    // Update grand total in preview
+    document.getElementById("preview-grand-total").textContent = grandTotal;
+}
 
 
+
+// Function to handle confirm button click
+function confirmOrder() {
+    console.log("Confirm order clicked");
+    
+    // Hide the confirm button and show payment options
+    document.querySelector('#laundry-step2 .btn-success').style.display = 'none';
+    document.getElementById('payment-options').style.display = 'block';
+    
+    // Scroll to payment options
+    document.getElementById('payment-options').scrollIntoView({ behavior: 'smooth' });
+}
+
+
+// Function to handle "Submit Without Payment"
+// function submitWithoutPayment() {
+//     console.log("Submit without payment clicked");
+    
+//     // Set payment mode to "no payment"
+//     const modalEl = document.getElementById('laundryModal');
+//     modalEl.setAttribute('data-payment-mode', 'no_payment');
+    
+//     // Call the save function
+//     saveLaundryOrder();
+// }
+
+// Function to handle "Submit Without Payment"
+function submitWithoutPayment() {
+    console.log("Submit without payment clicked");
+    
+    // Set payment mode to empty and payment status to pending
+    const modalEl = document.getElementById('laundryModal');
+    modalEl.setAttribute('data-payment-mode', 'no_payment');
+    
+    // Clear any selected payment method
+    document.querySelectorAll('#laundryModal .payment-method-card').forEach(c => {
+        c.classList.remove('border-success');
+    });
+    
+    // Hide all payment forms
+    document.querySelectorAll('#laundryModal .payment-form').forEach(f => {
+        f.style.display = 'none';
+    });
+    
+    // Call the save function
+    saveLaundryOrder();
+}
     </script>
 
-    <!-- <script>
-      // Function to go to a specific step
-      function goLaundryStep(step) {
-        if (step === 2) {
-          // Get service name and grand total
-          const modalEl = document.getElementById("laundryModal");
-          const serviceName = modalEl.getAttribute("data-service-name") || "Laundry Service";
-          const grandTotal = document.getElementById("grand-total").textContent;
-
-          // Update the summary table in step 2
-          const summaryBody = document.getElementById("laundry-summary-body");
-          summaryBody.innerHTML = `
-      <tr>
-        <td>${serviceName}</td>
-        <td class="text-end">${grandTotal}</td>
-      </tr>
-    `;
-        }
-
-        // Show the selected step
-        let tabTrigger = document.querySelector(`#laundry-step${step}-tab`);
-        let tab = new bootstrap.Tab(tabTrigger);
-        tab.show();
-      }
-
-      // Rest of your existing JavaScript code
-      // ...
-    </script> -->
-
+  
     <script>
       
 
@@ -2657,8 +2549,8 @@ function clearPaymentForms() {
     console.log("Clearing payment form values");
     
     // Clear cash form
-    const cashInput = document.querySelector('#laundry-cash-form input[name="bill_no"]');
-    if (cashInput) cashInput.value = '';
+    // const cashInput = document.querySelector('#laundry-cash-form input[name="bill_no"]');
+    // if (cashInput) cashInput.value = '';
     
     // Clear UPI form
     const upiInput = document.querySelector('#laundry-upi-form input[name="upi_trans"]');
@@ -2682,6 +2574,7 @@ function clearPaymentForms() {
 }
 
 // When modal is shown, reset to step 1
+// Update the modal event listeners to reset the new tab structure
 document.getElementById("laundryModal").addEventListener("shown.bs.modal", function () {
     console.log("Modal opened - resetting to step 1");
     goLaundryStep(1); // Force to step 1
@@ -2691,20 +2584,30 @@ document.getElementById("laundryModal").addEventListener("shown.bs.modal", funct
     tableBody.innerHTML = "";
     addRow();
     
-    // Clear payment forms
+    // Clear payment forms and reset preview
     clearPaymentForms();
+    document.getElementById("laundry-preview-body").innerHTML = "";
+    document.getElementById("preview-grand-total").textContent = "₹0";
+    
+    // Reset payment options in preview tab
+    document.querySelector('#laundry-step2 .btn-success').style.display = 'block';
+    document.getElementById('payment-options').style.display = 'none';
 });
 
-// When modal is hidden, also reset to step 1
 document.getElementById("laundryModal").addEventListener("hidden.bs.modal", function () {
     console.log("Modal closed - resetting to step 1");
     goLaundryStep(1); // Force to step 1
     
     // Clear all data
     document.querySelector('#laundry-table-body').innerHTML = "";
+    document.querySelector('#laundry-preview-body').innerHTML = "";
     document.querySelector('#laundry-summary-body').innerHTML = "";
     clearPaymentForms();
     document.getElementById("laundry-balance").textContent = "₹0";
+    
+    // Reset payment options in preview tab
+    document.querySelector('#laundry-step2 .btn-success').style.display = 'block';
+    document.getElementById('payment-options').style.display = 'none';
     
     // Remove service selection highlight
     document.querySelectorAll('.service-input').forEach(inp => {
@@ -2712,7 +2615,6 @@ document.getElementById("laundryModal").addEventListener("hidden.bs.modal", func
         inp.classList.remove('selected-service');
     });
 });
-
 
 
 // Add this code to handle tab clicks
@@ -2777,611 +2679,757 @@ function updateLaundrySummary() {
     </script>
 
 
+   
 <!-- Maintenance Stepper Modal -->
 <div class="modal fade" id="maintenanceModal" tabindex="-1" aria-labelledby="maintenanceModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered ">
-      <div class="modal-content">
-        <form method="post" id="assetForm" enctype="multipart/form-data" class="needs-validation" novalidate>
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
 
-          <!-- Stepper Navigation -->
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <!-- Stepper Navigation -->
-            <ul class="nav nav-pills flex-grow-1 justify-content-between" id="pills-tab" role="tablist">
-              <li class="nav-item flex-fill text-center">
-                <button class="nav-link active w-100" id="step1-tab" data-bs-toggle="pill" data-bs-target="#step1" type="button">
-                  Charges
-                </button>
-              </li>
-              <li class="nav-item flex-fill text-center">
-                <button class="nav-link w-100" id="step2-tab" data-bs-toggle="pill" data-bs-target="#step2" type="button">
-                  Summary & Payment
-                </button>
-              </li>
-            </ul>
+        
+            <form method="post" id="assetForm" enctype="multipart/form-data" class="needs-validation" novalidate>
 
-            <!-- Close button -->
-            <button type="button" class="btn-close m-3" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
+                <!-- Stepper Navigation -->
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <!-- Stepper Navigation -->
+                    <ul class="nav nav-pills flex-grow-1 justify-content-between" id="pills-tab" role="tablist">
+                        <li class="nav-item flex-fill text-center">
+                            <button class="nav-link active w-100" id="step1-tab" data-bs-toggle="pill" data-bs-target="#step1" type="button">
+                                Charges
+                            </button>
+                        </li>
+                        <li class="nav-item flex-fill text-center">
+                            <button class="nav-link w-100" id="step2-tab" data-bs-toggle="pill" data-bs-target="#step2" type="button">
+                                Preview
+                            </button>
+                        </li>
+                        <li class="nav-item flex-fill text-center">
+                            <button class="nav-link w-100" id="step3-tab" data-bs-toggle="pill" data-bs-target="#step3" type="button">
+                                Payment
+                            </button>
+                        </li>
+                    </ul>
 
-          <div class="tab-content">
+                    <!-- Close button -->
+                    <button type="button" class="btn-close m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    
+                </div>
 
-            <!-- STEP 1: Charges Table -->
-            <div class="tab-pane fade show active p-2" id="step1">
-              <div class="modal-body">
-                <div class="row align-items-end px-2">
-                  <div class="col-md-3">
-                    <label class="form-label fs-3">Month</label>
-                    <input type="month" class="form-control" id="month" name="month" required />
-                    <div class="invalid-feedback">
-                      Please select a month.
+                <div class="tab-content">
+
+                    <!-- STEP 1: Services Table -->
+                    <div class="tab-pane fade show active p-2" id="step1">
+                        <div class="modal-body">
+                            <div class="row align-items-end px-2">
+                                <div class="col-md-3">
+                                    <label class="form-label fs-3">Month</label>
+                                    <input type="month" class="form-control" id="month" name="month" required />
+                                    <div class="invalid-feedback">
+                                        Please select a month.
+                                    </div>
+                                </div>
+                                <!-- <div class="col-md-2">
+                                    <a class="btn btn-primary mt-4" onclick="chargeFilter();">Filter</a>
+                                </div> -->
+                            </div>
+                          
+                            <div class="table-responsive mt-3">
+                                <table class="table table-striped table-bordered w-100">
+                                    <thead>
+                                        <tr>
+                                            <th>Charges Type</th>
+                                            <th>Amount</th>
+                                            <th>Paid Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cartBody">
+                                        <tr>
+                                            <td>Maintenance</td>
+                                            <td>
+                                                <p id="main_amount">0</p>
+                                                <input type="hidden" id="main_amount_act" name="main_amount_act" value="0">
+                                            </td>
+                                            <td>
+                                                <div class="position-relative">
+                                                    <input class="form-control paid-amount-input" style="height:30px;" 
+                                                           id="main_paidamount" name="main_paidamount" type="number" 
+                                                           min="0" step="0.01" data-charge-type="main" required>
+                                                    <div class="invalid-feedback">
+                                                        Paid amount must equal the charge amount.
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Internet</td>
+                                            <td>
+                                                <p id="internet_amount">0</p>
+                                                <input type="hidden" id="internet_amount_act" name="internet_amount_act" value="0">
+                                            </td>
+                                            <td>
+                                                <div class="position-relative">
+                                                    <input class="form-control paid-amount-input" style="height:30px;" 
+                                                           id="internet_paidamount" name="internet_paidamount" type="number" 
+                                                           min="0" step="0.01" data-charge-type="internet" required>
+                                                    <div class="invalid-feedback">
+                                                        Paid amount must equal the charge amount.
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>EB Charge</td>
+                                            <td>
+                                                <p id="eb_amount">0</p>
+                                                <input type="hidden" id="eb_amount_act" name="eb_amount_act" value="0">
+                                            </td>
+                                            <td>
+                                                <div class="position-relative">
+                                                    <input class="form-control paid-amount-input" style="height:30px;" 
+                                                           id="eb_paidamount" name="eb_paidamount" type="number" 
+                                                           min="0" step="0.01" data-charge-type="eb" required>
+                                                    <div class="invalid-feedback">
+                                                        Paid amount must equal the charge amount.
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Room Service</td>
+                                            <td>
+                                                <p id="room_amount">0</p>
+                                                <input type="hidden" id="room_amount_act" name="room_amount_act" value="0">
+                                            </td>
+                                            <td>
+                                                <div class="position-relative">
+                                                    <input class="form-control paid-amount-input" style="height:30px;" 
+                                                           id="room_paidamount" name="room_paidamount" type="number" 
+                                                           min="0" step="0.01" data-charge-type="room" required>
+                                                    <div class="invalid-feedback">
+                                                        Paid amount must equal the charge amount.
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Others</td>
+                                            <td>
+                                                <p id="other_amount">0</p>
+                                                <input type="hidden" id="other_amount_act" name="other_amount_act" value="0">
+                                            </td>
+                                            <td>
+                                                <div class="position-relative">
+                                                    <input class="form-control paid-amount-input" style="height:30px;" 
+                                                           id="other_paidamount" name="other_paidamount" type="number" 
+                                                           min="0" step="0.01" data-charge-type="other" required>
+                                                    <div class="invalid-feedback">
+                                                        Paid amount must equal the charge amount.
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="modal-footer border-top justify-content-end">
+                                <button type="button" class="btn btn-primary" onclick="validateStep1()">Next →</button>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-md-2">
-                    <a class="btn btn-primary mt-4" onclick="chargeFilter();">Filter</a>
-                  </div>
-                </div>
-              
-                <div class="table-responsive mt-3">
-                  <table class="table table-striped table-bordered w-100">
-                    <thead>
-                      <tr>
-                        <th>Charges Type</th>
-                        <th>Amount</th>
-                        <th>Paid Amount</th>
-                      </tr>
-                    </thead>
-                    <tbody id="cartBody">
-                      <tr>
-                        <td>Maintenance</td>
-                        <td>
-                          <p id="main_amount">0</p>
-                          <input type="hidden" id="main_amount_act" name="main_amount_act" value="0">
-                        </td>
-                        <td>
-                          <div class="position-relative">
-                            <input class="form-control paid-amount-input" style="height:30px;" 
-                                   id="main_paidamount" name="main_paidamount" type="number" 
-                                   min="0" step="0.01" data-charge-type="main" required>
-                            <div class="invalid-feedback">
-                              Paid amount must equal the charge amount.
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Internet</td>
-                        <td>
-                          <p id="internet_amount">0</p>
-                          <input type="hidden" id="internet_amount_act" name="internet_amount_act" value="0">
-                        </td>
-                        <td>
-                          <div class="position-relative">
-                            <input class="form-control paid-amount-input" style="height:30px;" 
-                                   id="internet_paidamount" name="internet_paidamount" type="number" 
-                                   min="0" step="0.01" data-charge-type="internet" required>
-                            <div class="invalid-feedback">
-                              Paid amount must equal the charge amount.
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>EB Charge</td>
-                        <td>
-                          <p id="eb_amount">0</p>
-                          <input type="hidden" id="eb_amount_act" name="eb_amount_act" value="0">
-                        </td>
-                        <td>
-                          <div class="position-relative">
-                            <input class="form-control paid-amount-input" style="height:30px;" 
-                                   id="eb_paidamount" name="eb_paidamount" type="number" 
-                                   min="0" step="0.01" data-charge-type="eb" required>
-                            <div class="invalid-feedback">
-                              Paid amount must equal the charge amount.
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Room Service</td>
-                        <td>
-                          <p id="room_amount">0</p>
-                          <input type="hidden" id="room_amount_act" name="room_amount_act" value="0">
-                        </td>
-                        <td>
-                          <div class="position-relative">
-                            <input class="form-control paid-amount-input" style="height:30px;" 
-                                   id="room_paidamount" name="room_paidamount" type="number" 
-                                   min="0" step="0.01" data-charge-type="room" required>
-                            <div class="invalid-feedback">
-                              Paid amount must equal the charge amount.
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Others</td>
-                        <td>
-                          <p id="other_amount">0</p>
-                          <input type="hidden" id="other_amount_act" name="other_amount_act" value="0">
-                        </td>
-                        <td>
-                          <div class="position-relative">
-                            <input class="form-control paid-amount-input" style="height:30px;" 
-                                   id="other_paidamount" name="other_paidamount" type="number" 
-                                   min="0" step="0.01" data-charge-type="other" required>
-                            <div class="invalid-feedback">
-                              Paid amount must equal the charge amount.
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
 
-                <div class="modal-footer border-top justify-content-end">
-                  <button type="button" class="btn btn-primary" onclick="validateStep1()">Next →</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- STEP 2: Summary + Payment -->
-            <div class="tab-pane fade" id="step2">
-              <div class="p-2 shadow-sm">
-                <div class="modal-body">
-                  <!-- Summary Table -->
-                  <div class="table-responsive mb-4">
-                    <table class="table table-bordered align-middle" id="payment-summary-table">
-                      <thead class="table-light">
+<!-- STEP 2: Preview Tab -->
+<div class="tab-pane fade" id="step2">
+    <div class="p-2 shadow-sm">
+        <div class="modal-body">
+            <!-- Charges Summary -->
+            <div class="table-responsive mb-4">
+                <table class="table table-bordered" id="preview-summary-table">
+                    <thead class="table-light">
                         <tr>
-                          <th>Charge</th>
-                          <th class="text-end">Amount</th>
+                            <th>Description</th>
+                            <th class="text-end">Amount (₹)</th>
                         </tr>
-                      </thead>
-                      <tbody id="payment-summary-body"></tbody>
-                    </table>
-                  </div>
-
-                  <!-- Payment Methods -->
-                  <h5 class="mb-3">Select Payment Method</h5>
-                  <div class="row g-3 mb-4">
-                    <div class="col-md-6">
-                      <div class="card payment-method-cards p-3" data-method="cash">
-                        💵 Cash Payment <br><small class="text-muted">Pay at reception</small>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card payment-method-cards p-3" data-method="upi">
-                        📱 UPI Payment <br><small class="text-muted">Pay via UPI apps</small>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card payment-method-cards p-3" data-method="card">
-                        💳 Card Payment <br><small class="text-muted">Credit/Debit Card</small>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card payment-method-cards p-3" data-method="wallet">
-                        🏨 Wallet <br><small class="text-muted">Use credits</small>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Payment Forms -->
-                  <div id="payment-forms">
-                    <div id="cash-forms" class="payment-forms" style="display:none">
-                      <label class="form-label">Bill No <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control payment-field" name="bill_no" 
-                             placeholder="Enter Bill No" data-required="true" required>
-                      <div class="invalid-feedback">Please enter a bill number.</div>
-                    </div>
-
-                    <div id="upi-forms" class="payment-forms" style="display:none">
-                      <label class="form-label">Transaction ID <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control payment-field" name="upi_trans" 
-                             placeholder="yourname@upi" data-required="true" required>
-                      <div class="invalid-feedback">Please enter a UPI transaction ID.</div>
-                    </div>
-
-                    <div id="card-forms" class="payment-forms" style="display:none">
-                      <label class="form-label">Transaction ID <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control payment-field" name="card_trans" 
-                             placeholder="Enter Transaction ID" data-required="true" required>
-                      <div class="invalid-feedback">Please enter a card transaction ID.</div>
-                    </div>
-
-                    <div id="wallet-forms" class="payment-forms" style="display:none">
-                      <div class="alert alert-info">
-                        <i class="fas fa-info-circle me-2"></i>
-                        Current balance: <strong id="balance">₹0</strong>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <!-- Stepper Navigation -->
-                  <div class="d-flex justify-content-between mt-5">
-                    <button type="button" class="btn btn-secondary" onclick="goToStep(1)">
-                      <i class="fas fa-arrow-left me-2"></i> Back
-                    </button>
-                    <button type="button" class="btn btn-success" onclick="validateAndSubmit()">
-                      <i class="fas fa-check-circle me-2"></i> Submit
-                    </button>
-                  </div>
-                </div>
-              </div>
+                    </thead>
+                    <tbody id="preview-summary-body">
+                        <!-- Charges will be populated here -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th class="text-end">Total Amount:</th>
+                            <th class="text-end" id="preview-total">₹0.00</th>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
-
-            <!-- STEP 3: Payment Success -->
-            <div class="tab-pane fade text-center" id="step3">
-              <div class="p-4">
-                <i class="bi bi-check-circle text-success" style="font-size: 3rem;"></i>
-                <h4 class="mt-3">Payment Successful!</h4>
-                <p>Your maintenance charges have been submitted successfully.</p>
-              </div>
+            
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle me-2"></i>
+                Please review the charges above before proceeding.
             </div>
+            
+          <!-- Confirmation Buttons -->
+<div id="confirmation-section" class="text-center mt-4">
+    <button type="button" class="btn btn-success btn-lg" onclick="confirmCharges()">
+        <i class="fas fa-check-circle me-2"></i>Confirm Charges
+    </button>
+</div>
 
-          </div> <!-- end tab-content -->
-
-          <input type="hidden" id="charge_id" name="charge_id">
-          <input type="hidden" id="guest_id_charge" name="guest_id_charge">
-          <input type="hidden" id="testNo" name="testNo">
-          <input type="hidden" id="room_no_charge" name="room_no">
-
-        </form>
-      </div>
+<!-- Payment Options -->
+<div id="payment-options1" class="text-center mt-4" style="display:none;">
+    <!-- <h5 class="mb-3">How would you like to proceed?</h5> -->
+    <div class="d-flex justify-content-center gap-3">
+        <button type="button" class="btn btn-primary btn-lg" onclick="proceedWithPayment()">
+            <i class="fas fa-credit-card me-2"></i>Proceed with Payment
+        </button>
+        <!-- <button type="button" class="btn btn-outline-secondary btn-lg" onclick="proceedWithoutPayment()">
+            <i class="fas fa-file-invoice me-2"></i>Proceed without Payment
+        </button> -->
     </div>
-  </div>
+</div>
+
+<!-- Hidden input to track payment -->
+<input type="hidden" id="payment_required" name="payment_required" value="">
+
+            
+            <!-- Stepper Navigation -->
+            <div class="d-flex justify-content-between mt-5">
+                <button type="button" class="btn btn-secondary" onclick="goToStep(1)">
+                    <i class="fas fa-arrow-left me-2"></i> Back
+                </button>
+                <!-- <button type="button" class="btn btn-primary" id="next-to-payment" style="display: none;" onclick="goToStep(3)">
+                    Next to Payment <i class="fas fa-arrow-right ms-2"></i>
+                </button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <!-- STEP 3: Payment Tab -->
+                    <div class="tab-pane fade" id="step3">
+                        <div class="p-2 shadow-sm">
+                            <div class="modal-body">
+                                <!-- Payment Methods -->
+                                <h5 class="mb-3">Select Payment Method</h5>
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-4">
+                                        <div class="card payment-method-cards p-3" data-method="cash">
+                                            💵 Cash Payment <br><small class="text-muted">Pay at reception</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card payment-method-cards p-3" data-method="upi">
+                                            📱 UPI Payment <br><small class="text-muted">Pay via UPI apps</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card payment-method-cards p-3" data-method="wallet">
+                                            🏨 Wallet <br><small class="text-muted">Use credits</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Payment Forms -->
+                                <div id="payment-forms">
+                                    <div id="upi-forms" class="payment-forms" style="display:none">
+                                        <label class="form-label">Transaction ID <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control payment-field" name="upi_trans" 
+                                               placeholder="yourname@upi" data-required="true" required>
+                                        <div class="invalid-feedback">Please enter a UPI transaction ID.</div>
+                                    </div>
+
+                                    <div id="card-forms" class="payment-forms" style="display:none">
+                                        <label class="form-label">Transaction ID <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control payment-field" name="card_trans" 
+                                               placeholder="Enter Transaction ID" data-required="true" required>
+                                        <div class="invalid-feedback">Please enter a card transaction ID.</div>
+                                    </div>
+
+                                    <div id="wallet-forms" class="payment-forms" style="display:none">
+                                        <div class="alert alert-info">
+                                            <i class="fas fa-info-circle me-2"></i>
+                                            Current balance: <strong id="balance">₹0</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- Stepper Navigation -->
+                                <div class="d-flex justify-content-between mt-5">
+                                    <button type="button" class="btn btn-secondary" onclick="goToStep(2)">
+                                        <i class="fas fa-arrow-left me-2"></i> Back
+                                    </button>
+                                    <button type="button" class="btn btn-success" onclick="validateAndSubmit()">
+                                        <i class="fas fa-check-circle me-2"></i> Submit Payment
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- end tab-content -->
+
+                <input type="hidden" id="charge_id" name="charge_id">
+                <input type="hidden" id="guest_id_charge" name="guest_id_charge">
+                <input type="hidden" id="testNo" name="testNo">
+                <input type="hidden" id="room_no_charge" name="room_no">
+                <input type="hidden" id="payment_required" name="payment_required" value="true">
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Add this to your CSS */
+.nav-link.disabled-tab {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #f8f9fa !important;
+    color: #6c757d !important;
+    border-color: #dee2e6 !important;
+}
+</style>
 
 <script>
 // Global variables
 let currentPaymentMethod = '';
 let guestId = null;
+let paymentRequired = true;
 
 // Validation functions
 function validatePaidAmount(inputElement) {
-  const chargeType = inputElement.getAttribute('data-charge-type');
-  const paidAmount = parseFloat(inputElement.value) || 0;
-  const actualAmount = parseFloat(document.getElementById(`${chargeType}_amount_act`).value) || 0;
-  
-  // Clear previous validation
-  inputElement.classList.remove('is-invalid', 'is-valid');
-  
-  // Validate if paid amount equals actual amount
-  if (paidAmount !== actualAmount) {
-    inputElement.classList.add('is-invalid');
-    return false;
-  } else {
-    inputElement.classList.add('is-valid');
-    return true;
-  }
+    const chargeType = inputElement.getAttribute('data-charge-type');
+    const paidAmount = parseFloat(inputElement.value) || 0;
+    const actualAmount = parseFloat(document.getElementById(`${chargeType}_amount_act`).value) || 0;
+    
+    // Clear previous validation
+    inputElement.classList.remove('is-invalid', 'is-valid');
+    
+    // Validate if paid amount equals actual amount
+    if (paidAmount !== actualAmount) {
+        inputElement.classList.add('is-invalid');
+        return false;
+    } else {
+        inputElement.classList.add('is-valid');
+        return true;
+    }
 }
 
 function validateStep1() {
-  const form = document.getElementById('assetForm');
-  const monthInput = document.getElementById('month');
-  const paidAmountInputs = document.querySelectorAll('.paid-amount-input');
-  
-  let isValid = true;
-  
-  // Validate month
-  if (!monthInput.value) {
-    monthInput.classList.add('is-invalid');
-    isValid = false;
-  } else {
-    monthInput.classList.remove('is-invalid');
-  }
-  
-  // Validate each paid amount
-  paidAmountInputs.forEach(input => {
-    if (!validatePaidAmount(input)) {
-      isValid = false;
+    const form = document.getElementById('assetForm');
+    const monthInput = document.getElementById('month');
+    const paidAmountInputs = document.querySelectorAll('.paid-amount-input');
+    
+    let isValid = true;
+    let hasPaidCharges = false;
+    
+    // Validate month
+    if (!monthInput.value) {
+        monthInput.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        monthInput.classList.remove('is-invalid');
     }
-  });
-  
-  // If valid, proceed to step 2
-  if (isValid) {
-    goToStep(2);
-    renderSummary();
-  } else {
-    // Scroll to first error
-    const firstError = form.querySelector('.is-invalid');
-    if (firstError) {
-      firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    
+    // Check if any charges are already paid
+    paidAmountInputs.forEach(input => {
+        if (input.disabled) {
+            hasPaidCharges = true;
+        }
+        
+        if (!validatePaidAmount(input)) {
+            isValid = false;
+        }
+    });
+    
+    // If any charges are paid, show error and prevent proceeding
+    if (hasPaidCharges) {
+        showPaidChargesError();
+        return false;
     }
-  }
-  
-  return isValid;
+    
+    // If valid, proceed to step 2
+    if (isValid) {
+        goToStep(2);
+        renderPreview();
+    } else {
+        // Scroll to first error
+        const firstError = form.querySelector('.is-invalid');
+        if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+    
+    return isValid;
+}
+
+// Render preview with simplified structure
+function renderPreview() {
+    // Render charges summary only
+    const tbody = document.getElementById("preview-summary-body");
+    tbody.innerHTML = "";
+
+    let total = 0;
+    const charges = [
+        { label: "Maintenance", val: document.getElementById("main_paidamount").value },
+        { label: "Internet", val: document.getElementById("internet_paidamount").value },
+        { label: "EB Charge", val: document.getElementById("eb_paidamount").value },
+        { label: "Room Service", val: document.getElementById("room_paidamount").value },
+        { label: "Others", val: document.getElementById("other_paidamount").value }
+    ];
+
+    charges.forEach(c => {
+        const amount = parseFloat(c.val) || 0;
+        if (amount > 0) {
+            const row = document.createElement("tr");
+            row.innerHTML = `<td>${c.label}</td><td class="text-end">₹${amount.toFixed(2)}</td>`;
+            tbody.appendChild(row);
+            total += amount;
+        }
+    });
+
+    // Update total
+    document.getElementById('preview-total').textContent = `₹${total.toFixed(2)}`;
+    
+    // Reset confirmation state
+    document.getElementById('confirmation-section').style.display = 'block';
+    document.getElementById('payment-options1').style.display = 'none';
+}
+
+// Confirm charges and show payment options
+function confirmCharges() {
+    document.getElementById('confirmation-section').style.display = 'none';
+    document.getElementById('payment-options1').style.display = 'block';
+}
+
+// Proceed with payment
+function proceedWithPayment() {
+    paymentRequired = true;
+    document.getElementById('payment_required').value = 'true';
+    goToStep(3);
+}  
+
+// Proceed without payment
+function proceedWithoutPayment() {
+    paymentRequired = false;
+    document.getElementById('payment_required').value = 'false';
+    submitCharges();
 }
 
 // Payment method validation
 function validatePaymentMethod() {
-  const activeMethod = document.querySelector('.payment-method-cards.active');
-  if (!activeMethod) {
-    alert('Please select a payment method.');
-    return false;
-  }
-  
-  const method = activeMethod.dataset.method;
-  currentPaymentMethod = method;
-  
-  // For wallet, no additional validation needed
-  if (method === 'wallet') {
+    if (!paymentRequired) return true;
+    
+    const activeMethod = document.querySelector('.payment-method-cards.active');
+    if (!activeMethod) {
+        alert('Please select a payment method.');
+        return false;
+    }
+    
+    const method = activeMethod.dataset.method;
+    currentPaymentMethod = method;
+    
+    // For cash and wallet, no additional validation needed
+    if (method === 'cash' || method === 'wallet') {
+        return true;
+    }
+    
+    // For UPI, validate the required field
+    if (method === 'upi') {
+        const input = document.querySelector('#upi-forms .payment-field');
+        if (!input.value.trim()) {
+            input.classList.add('is-invalid');
+            input.focus();
+            return false;
+        } else {
+            input.classList.remove('is-invalid');
+            return true;
+        }
+    }
+    
     return true;
-  }
-  
-  // For other methods, validate the required field
-  const form = document.getElementById(`${method}-forms`);
-  const input = form.querySelector('.payment-field');
-  
-  if (!input.value.trim()) {
-    input.classList.add('is-invalid');
-    input.focus();
-    return false;
-  } else {
-    input.classList.remove('is-invalid');
-    return true;
-  }
 }
 
 // Combined validation function for final submission
 function validateAndSubmit() {
-  // First validate step 1 (charges)
-  if (!validateStep1()) {
-    goToStep(1);
-    return;
-  }
-  
-  // Then validate payment method
-  if (!validatePaymentMethod()) {
-    return;
-  }
-  
-  // If all validations pass, submit the form
-  submitCharges();
+    // If payment is not required, submit directly
+    if (!paymentRequired) {
+        submitCharges();
+        return;
+    }
+    
+    // For payment required, validate the current step (step 3 - payment)
+    const isStep1Valid = validateStep1Silent();
+    const isPaymentValid = validatePaymentMethod();
+    
+    if (!isStep1Valid) {
+        // Show error and go to step 1 if charges are invalid
+        alert('Please fix the charge amounts before proceeding.');
+        goToStep(1);
+        return;
+    }
+    
+    if (!isPaymentValid) {
+        // Stay on step 3 if payment validation fails
+        return;
+    }
+    
+    // If all validations pass, submit the form
+    submitCharges();
 }
 
-// Add event listeners for real-time validation
-document.addEventListener('DOMContentLoaded', function() {
-  // Charge amount validation
-  const paidAmountInputs = document.querySelectorAll('.paid-amount-input');
-  
-  paidAmountInputs.forEach(input => {
-    input.addEventListener('blur', function() {
-      validatePaidAmount(this);
+// Silent validation for step 1 (without redirecting)
+function validateStep1Silent() {
+    const monthInput = document.getElementById('month');
+    const paidAmountInputs = document.querySelectorAll('.paid-amount-input');
+    
+    let isValid = true;
+    
+    // Validate month
+    if (!monthInput.value) {
+        isValid = false;
+    }
+    
+    // Validate each paid amount
+    paidAmountInputs.forEach(input => {
+        const chargeType = input.getAttribute('data-charge-type');
+        const paidAmount = parseFloat(input.value) || 0;
+        const actualAmount = parseFloat(document.getElementById(`${chargeType}_amount_act`).value) || 0;
+        
+        if (paidAmount !== actualAmount) {
+            isValid = false;
+        }
     });
     
-    input.addEventListener('input', function() {
-      // Clear validation on input
-      this.classList.remove('is-invalid', 'is-valid');
-    });
-  });
-  
-  // Month validation
-  const monthInput = document.getElementById('month');
-  monthInput.addEventListener('change', function() {
-    if (this.value) {
-      this.classList.remove('is-invalid');
-    }
-  });
-  
-  // Payment field validation
-  const paymentFields = document.querySelectorAll('.payment-field');
-  paymentFields.forEach(field => {
-    field.addEventListener('input', function() {
-      this.classList.remove('is-invalid');
-    });
-  });
-  
-  // Payment method selection
-  document.querySelectorAll(".payment-method-cards").forEach(card => {
-    card.addEventListener("click", function() {
-      document.querySelectorAll(".payment-method-cards").forEach(c => c.classList.remove("active"));
-      this.classList.add("active");
+    return isValid;
+}
 
-      const method = this.dataset.method;
-      currentPaymentMethod = method;
-      
-      document.querySelectorAll(".payment-forms").forEach(f => f.style.display = "none");
-      document.getElementById(`${method}-forms`).style.display = "block";
-
-      // Clear validation when switching methods
-      document.querySelectorAll('.payment-field').forEach(field => {
-        field.classList.remove('is-invalid');
-      });
-
-      // Fetch wallet balance if wallet is selected
-      if (method === "wallet" && guestId) {
-        fetch(`/guest_wallet_id/${guestId}`)
-          .then(res => res.json())
-          .then(data => {
-            document.getElementById("balance").textContent = "₹" + (data[0]?.balance ?? 0);
-          })
-          .catch(err => console.error(err));
-      }
+// Add this function to block tab navigation
+function setupTabNavigationRestrictions() {
+    const tabButtons = document.querySelectorAll('#pills-tab .nav-link');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const targetTab = this.getAttribute('data-bs-target');
+            const currentTab = document.querySelector('#pills-tab .nav-link.active').getAttribute('data-bs-target');
+            
+            // If trying to navigate away from step 1 and there are paid charges, prevent it
+            if (currentTab === '#step1' && hasPaidCharges()) {
+                e.preventDefault();
+                e.stopPropagation();
+                showPaidChargesError();
+                return false;
+            }
+            
+            // Additional validation when moving to step 2
+            if (targetTab === '#step2' && !validateStep1Silent()) {
+                e.preventDefault();
+                e.stopPropagation();
+                alert('Please fix the charge amounts before proceeding.');
+                return false;
+            }
+        });
     });
-  });
+}
+
+// Helper function to check if any charges are paid
+function hasPaidCharges() {
+    const paidAmountInputs = document.querySelectorAll('.paid-amount-input');
+    let hasPaid = false;
+    
+    paidAmountInputs.forEach(input => {
+        if (input.disabled) {
+            hasPaid = true;
+        }
+    });
+    
+    return hasPaid;
+}
+
+// Function to enable/disable tab navigation
+function updateTabAccessibility(hasPaidCharges) {
+    const tabButtons = document.querySelectorAll('#pills-tab .nav-link:not(#step1-tab)');
+    
+    tabButtons.forEach(button => {
+        if (hasPaidCharges) {
+            // Disable tab navigation
+            button.classList.add('disabled-tab');
+        } else {
+            // Enable tab navigation
+            button.classList.remove('disabled-tab');
+        }
+    });
+}
+
+// Update your existing DOMContentLoaded event listener
+document.addEventListener('DOMContentLoaded', function() {
+    // Charge amount validation
+    const paidAmountInputs = document.querySelectorAll('.paid-amount-input');
+    
+    paidAmountInputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            validatePaidAmount(this);
+        });
+        
+        input.addEventListener('input', function() {
+            // Clear validation on input
+            this.classList.remove('is-invalid', 'is-valid');
+        });
+    });
+    
+    // Month validation - clear errors when month changes
+    const monthInput = document.getElementById('month');
+    monthInput.addEventListener('change', function() {
+        if (this.value) {
+            this.classList.remove('is-invalid');
+            
+            // Hide and remove any existing error message when month changes
+            const errorDiv = document.getElementById('paid-charges-error');
+            if (errorDiv) {
+                errorDiv.style.opacity = '0';
+                errorDiv.style.transform = 'translateY(-10px)';
+                setTimeout(() => {
+                    if (errorDiv.parentNode) {
+                        errorDiv.remove();
+                    }
+                }, 300);
+            }
+            
+            const guestId = document.getElementById('guest_id_charge').value;
+            if (guestId) {
+                fetchCharges(guestId, this.value);
+            }
+            chargeFilter()
+        }
+    });
+    
+    // Payment field validation
+    const paymentFields = document.querySelectorAll('.payment-field');
+    paymentFields.forEach(field => {
+        field.addEventListener('input', function() {
+            this.classList.remove('is-invalid');
+        });
+    });
+    
+    // Payment method selection
+    document.querySelectorAll(".payment-method-cards").forEach(card => {
+        card.addEventListener("click", function() {
+            document.querySelectorAll(".payment-method-cards").forEach(c => c.classList.remove("active"));
+            this.classList.add("active");
+
+            const method = this.dataset.method;
+            currentPaymentMethod = method;
+            
+            document.querySelectorAll(".payment-forms").forEach(f => f.style.display = "none");
+            document.getElementById(`${method}-forms`).style.display = "block";
+
+            // Clear validation when switching methods
+            document.querySelectorAll('.payment-field').forEach(field => {
+                field.classList.remove('is-invalid');
+            });
+
+            // Fetch wallet balance if wallet is selected
+            if (method === "wallet" && guestId) {
+                fetch(`/advaya/guest_wallet_id/${guestId}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        document.getElementById("balance").textContent = "₹" + (data[0]?.balance ?? 0);
+                    })
+                    .catch(err => console.error(err));
+            }
+        });
+    });
+    
+    // Add tab navigation restrictions
+    setupTabNavigationRestrictions();
+    
+    // Add click event to maintenance buttons
+    const maintenanceButtons = document.querySelectorAll('[data-bs-target="#maintenanceModal"]');
+    maintenanceButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            openMaintenanceModal(this);
+        });
+    });
 });
 
 // Your existing functions with validation integration
 function goToStep(step) {
-  const tabTrigger = new bootstrap.Tab(document.querySelector(`#step${step}-tab`));
-  tabTrigger.show();
-}
-
-function renderSummary() {
-  const tbody = document.getElementById("payment-summary-body");
-  tbody.innerHTML = "";
-
-  let total = 0;
-  const charges = [
-    { label: "Maintenance", val: document.getElementById("main_paidamount").value },
-    { label: "Internet", val: document.getElementById("internet_paidamount").value },
-    { label: "EB Charge", val: document.getElementById("eb_paidamount").value },
-    { label: "Room Service", val: document.getElementById("room_paidamount").value },
-    { label: "Others", val: document.getElementById("other_paidamount").value }
-  ];
-
-  charges.forEach(c => {
-    const amount = parseFloat(c.val) || 0;
-    if (amount > 0) {
-      const row = document.createElement("tr");
-      row.innerHTML = `<td>${c.label}</td><td class="text-end">₹${amount}</td>`;
-      tbody.appendChild(row);
-      total += amount;
+    const tabTrigger = new bootstrap.Tab(document.querySelector(`#step${step}-tab`));
+    tabTrigger.show();
+    
+    // Update preview when going to step 2
+    if (step === 2) {
+        renderPreview();
     }
-  });
-
-  // Add total row
-  if (total > 0) {
-    const totalRow = document.createElement("tr");
-    totalRow.innerHTML = `<th>Total</th><th class="text-end">₹${total}</th>`;
-    tbody.appendChild(totalRow);
-  }
 }
-
-// Ensure renderSummary runs when Summary & Payment tab is clicked
-document.addEventListener("DOMContentLoaded", () => {
-  const step2Tab = document.getElementById("step2-tab");
-  step2Tab.addEventListener("shown.bs.tab", function() {
-    // Only render summary if step 1 is valid
-    if (validateStep1()) {
-      renderSummary();
-    }
-  });
-});
 
 // Update your submitCharges function to include validation
 function submitCharges() {
-  const form = document.getElementById('assetForm');
-  
-  // Collect all charge data
-  const data = {
-    charge_id: document.getElementById('charge_id').value,
-    guest_id: document.getElementById('guest_id_charge').value,
-    room_no: document.getElementById('room_no_charge').value,
-    charge_monthyear: document.getElementById('month').value,
-    main_amount_act: document.getElementById('main_amount_act').value || 0,
-    main_paidamount: document.getElementById('main_paidamount').value || 0,
-    internet_amount_act: document.getElementById('internet_amount_act').value || 0,
-    internet_paidamount: document.getElementById('internet_paidamount').value || 0,
-    eb_amount_act: document.getElementById('eb_amount_act').value || 0,
-    eb_paidamount: document.getElementById('eb_paidamount').value || 0,
-    room_amount_act: document.getElementById('room_amount_act').value || 0,
-    room_paidamount: document.getElementById('room_paidamount').value || 0,
-    other_amount_act: document.getElementById('other_amount_act').value || 0,
-    other_paidamount: document.getElementById('other_paidamount').value || 0,
-    total_paidamount: calculateTotalPaid(),
-    payment_method: currentPaymentMethod,
-    bill_no: form.querySelector('[name="bill_no"]')?.value || '',
-    upi_trans: form.querySelector('[name="upi_trans"]')?.value || '',
-    card_trans: form.querySelector('[name="card_trans"]')?.value || ''
-  };
+    const form = document.getElementById('assetForm');
+    
+    // Collect all charge data
+    const data = {
+        charge_id: document.getElementById('charge_id').value,
+        guest_id: document.getElementById('guest_id_charge').value,
+        room_no: document.getElementById('room_no_charge').value,
+        charge_monthyear: document.getElementById('month').value,
+        main_amount_act: document.getElementById('main_amount_act').value || 0,
+        main_paidamount: document.getElementById('main_paidamount').value || 0,
+        internet_amount_act: document.getElementById('internet_amount_act').value || 0,
+        internet_paidamount: document.getElementById('internet_paidamount').value || 0,
+        eb_amount_act: document.getElementById('eb_amount_act').value || 0,
+        eb_paidamount: document.getElementById('eb_paidamount').value || 0,
+        room_amount_act: document.getElementById('room_amount_act').value || 0,
+        room_paidamount: document.getElementById('room_paidamount').value || 0,
+        other_amount_act: document.getElementById('other_amount_act').value || 0,
+        other_paidamount: document.getElementById('other_paidamount').value || 0,
+        total_paidamount: calculateTotalPaid(),
+        payment_required: document.getElementById('payment_required').value,
+        payment_method: currentPaymentMethod,
+        upi_trans: form.querySelector('[name="upi_trans"]')?.value || '',
+        card_trans: form.querySelector('[name="card_trans"]')?.value || ''
+    };
 
-  // Send data via POST
-  fetch('/chargepay_store', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
-  })
-  .then(res => res.json())
-  .then(response => {
-    if (response.status === 'success') {
-      // Show success message
-      //alert('Payment processed successfully!');
-      
-      // Close modal
-      const modalEl = document.getElementById('maintenanceModal');
-      const modal = bootstrap.Modal.getInstance(modalEl);
-      if (modal) {
-        modal.hide();
-                 // Redirect to charges report page - flashdata will show automatically
-    window.location.href = '/chargesrept/' + response.guest_id;
-      }
-      
-      // Reload the page to reflect the updated status
-      //location.reload();
-    } else {
-      alert('Error: ' + response.message);
-    }
-  })
-  .catch(err => {
-    console.error('Error saving payment:', err);
-    alert('Error processing payment');
-  });
+    // Send data via POST
+    fetch('/advaya/chargepay_store', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(response => {
+        if (response.status === 'success') {
+            // Close modal
+            const modalEl = document.getElementById('maintenanceModal');
+            const modal = bootstrap.Modal.getInstance(modalEl);
+            if (modal) {
+                modal.hide();
+                // Redirect to charges report page - flashdata will show automatically
+                window.location.href = '/advaya/chargesrept/' + response.guest_id;
+            }
+        } else {
+            alert('Error: ' + response.message);
+        }
+    })
+    .catch(err => {
+        console.error('Error saving payment:', err);
+        alert('Error processing payment');
+    });
 }
 
 // Helper function to calculate total paid
 function calculateTotalPaid() {
-  const amounts = [
-    document.getElementById('main_paidamount').value,
-    document.getElementById('internet_paidamount').value,
-    document.getElementById('eb_paidamount').value,
-    document.getElementById('room_paidamount').value,
-    document.getElementById('other_paidamount').value
-  ];
-  return amounts.reduce((sum, val) => sum + (parseFloat(val) || 0), 0);
+    const amounts = [
+        document.getElementById('main_paidamount').value,
+        document.getElementById('internet_paidamount').value,
+        document.getElementById('eb_paidamount').value,
+        document.getElementById('room_paidamount').value,
+        document.getElementById('other_paidamount').value
+    ];
+    return amounts.reduce((sum, val) => sum + (parseFloat(val) || 0), 0);
 }
 
 // Your existing functions for modal handling
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("maintenanceModal").addEventListener("show.bs.modal", function (event) {
-    const button = event.relatedTarget;
-    guestId = button.getAttribute("data-guest-id");
-  });
-
-  // Default select first payment method
-  document.querySelector(".payment-method-cards").click();
-});
-
-// Reset modal when closed
-document.addEventListener("DOMContentLoaded", () => {
-  const modalEl = document.getElementById("maintenanceModal");
-
-  modalEl.addEventListener("hidden.bs.modal", () => {
-    modalEl.querySelectorAll("input").forEach(input => {
-      input.value = "";
-      input.classList.remove('is-invalid', 'is-valid');
-    });
-
-    const tbody = modalEl.querySelector("#payment-summary-body");
-    if (tbody) tbody.innerHTML = "";
-
-    const firstTab = modalEl.querySelector("#step1-tab");
-    if (firstTab) {
-      const tab = new bootstrap.Tab(firstTab);
-      tab.show();
-    }
-
-    modalEl.querySelectorAll(".payment-method-cards").forEach(c => {
-      c.classList.remove("border-success", "active");
-    });
-
-    modalEl.querySelectorAll(".payment-forms").forEach(f => f.style.display = "none");
-    
-    // Reset payment method
-    currentPaymentMethod = '';
-  });
-});
-
-// Your existing charge-related functions remain the same...
-function goToStep(step) {
-  const tabTrigger = new bootstrap.Tab(document.querySelector(`#step${step}-tab`));
-  tabTrigger.show();
-
-  if (step === 2) renderSummary();
-}
-
-// ... (rest of your existing functions like openMaintenanceModal, resetChargeAmounts, fetchCharges, processChargeData, chargeFilter)
-</script>
-
-<!-- Include your existing charge-related JavaScript functions here -->
-<script>
-// Global variables to track current guest info
-let currentGuestId = '';
-let currentGuestType = '';
-let currentRoomNo = '';
-
 function openMaintenanceModal(button) {
     const row = button.closest('tr');
     currentGuestId = row.getAttribute('data-guest-id');
@@ -3427,7 +3475,7 @@ function resetChargeAmounts() {
 }
 
 function fetchCharges(guestId, month) {
-    fetch(`/guest_charge/${guestId}/${month}`)
+    fetch(`/advaya/guest_charge/${guestId}/${month}`)
         .then(response => response.json())
         .then(data => {
             if (data && data.length > 0) {
@@ -3441,11 +3489,20 @@ function fetchCharges(guestId, month) {
 
 function processChargeData(data) {
     resetChargeAmounts();
+    
+    // Clear any existing error (but don't show new ones automatically)
+    const errorDiv = document.getElementById('paid-charges-error');
+    if (errorDiv) {
+        errorDiv.style.display = 'none';
+    }
 
     if (data && data.length > 0) {
         document.getElementById('charge_id').value = data[0].charge_id || '';
     }
 
+    let paidChargesCount = 0;
+    let hasCharges = false;
+    
     data.forEach(item => {
         let chargeInputId, chargeDisplayId, chargeHiddenId;
 
@@ -3477,21 +3534,104 @@ function processChargeData(data) {
                 break;
         }
 
-        document.getElementById(chargeHiddenId).value = item.amount ?? 0;
-        document.getElementById(chargeDisplayId).innerHTML = item.amount ?? 0;
+        if (chargeDisplayId && document.getElementById(chargeDisplayId)) {
+            hasCharges = true;
+            document.getElementById(chargeHiddenId).value = item.amount ?? 0;
+            document.getElementById(chargeDisplayId).innerHTML = item.amount ?? 0;
 
-        const input = document.getElementById(chargeInputId);
-        if (item.status === 'paid') {
-            input.value = item.amount;
-            input.disabled = true;
-            input.style.display = "none";
-            input.insertAdjacentHTML("afterend", `<span class="badge bg-success">Paid</span>`);
-        } else {
-            input.value = 0;
-            input.disabled = false;
-            input.style.display = "block";
+            const input = document.getElementById(chargeInputId);
+            if (item.status === 'paid') {
+                input.value = item.amount;
+                input.disabled = true;
+                input.style.display = "none";
+                input.insertAdjacentHTML("afterend", `<span class="badge bg-success">Paid</span>`);
+                paidChargesCount++;
+            } else {
+                input.value = 0;
+                input.disabled = false;
+                input.style.display = "block";
+            }
         }
     });
+    
+    // Store paid charges count for validation
+    document.getElementById('maintenanceModal').setAttribute('data-paid-charges', paidChargesCount);
+    
+    // Update button state and tab accessibility
+    updateTabAccessibility(paidChargesCount > 0);
+    
+    // Update next button state
+    if (hasCharges) {
+        updateNextButtonState(paidChargesCount > 0);
+    }
+}
+
+function updateNextButtonState(hasPaidCharges) {
+    const nextButton = document.querySelector('#step1 .modal-footer .btn');
+    
+    if (nextButton) {
+        // Always keep the button enabled and looking normal
+        nextButton.disabled = false;
+        nextButton.innerHTML = 'Next →';
+        nextButton.classList.add('btn-primary');
+        nextButton.classList.remove('btn-danger');
+        nextButton.title = 'Proceed to next step';
+        
+        // Just store the state for validation
+        nextButton.setAttribute('data-has-paid-charges', hasPaidCharges);
+    }
+}
+
+function showPaidChargesError() {
+    // Remove any existing error message first
+    const existingError = document.getElementById('paid-charges-error');
+    if (existingError) {
+        existingError.remove();
+    }
+    
+    // Create new error message
+    const errorDiv = document.createElement('div');
+    errorDiv.id = 'paid-charges-error';
+    errorDiv.className = 'alert alert-danger mt-3';
+    errorDiv.innerHTML = `
+        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+        <strong>Cannot proceed:</strong> Some charges for this month are already paid. 
+        Please select a different month or contact administration.
+    `;
+    
+    // Add smooth animation
+    errorDiv.style.opacity = '0';
+    errorDiv.style.transform = 'translateY(-10px)';
+    errorDiv.style.transition = 'all 0.3s ease';
+    
+    // Insert after the table but inside the modal body
+    const modalBody = document.querySelector('#step1 .modal-body');
+    const table = modalBody.querySelector('.table-responsive');
+    modalBody.insertBefore(errorDiv, table.nextSibling);
+    
+    // Animate in
+    setTimeout(() => {
+        errorDiv.style.opacity = '1';
+        errorDiv.style.transform = 'translateY(0)';
+    }, 10);
+    
+    // Scroll to the error message
+    setTimeout(() => {
+        errorDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 300);
+    
+    // Auto-hide after 8 seconds
+    setTimeout(() => {
+        if (errorDiv && errorDiv.parentNode) {
+            errorDiv.style.opacity = '0';
+            errorDiv.style.transform = 'translateY(-10px)';
+            setTimeout(() => {
+                if (errorDiv.parentNode) {
+                    errorDiv.remove();
+                }
+            }, 300);
+        }
+    }, 8000);
 }
 
 function chargeFilter() {
@@ -3501,31 +3641,126 @@ function chargeFilter() {
     fetchCharges(guestId, month);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const maintenanceButtons = document.querySelectorAll('[data-bs-target="#maintenanceModal"]');
-    maintenanceButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            openMaintenanceModal(this);
+// Add this function to your script
+function closeMaintenanceModal() {
+    const modalEl = document.getElementById('maintenanceModal');
+    const modal = bootstrap.Modal.getInstance(modalEl);
+    if (modal) {
+        modal.hide();
+    }
+}
+
+// Update your existing hidden.bs.modal event listener
+document.addEventListener("DOMContentLoaded", () => {
+    const modalEl = document.getElementById("maintenanceModal");
+    
+    modalEl.addEventListener("hidden.bs.modal", () => {
+        modalEl.querySelectorAll("input").forEach(input => {
+            input.value = "";
+            input.classList.remove('is-invalid', 'is-valid');
+            input.disabled = false;
         });
+
+        // Remove paid badges
+        modalEl.querySelectorAll(".badge.bg-success").forEach(badge => {
+            badge.remove();
+        });
+
+        // Remove error message with animation
+        const errorDiv = document.getElementById('paid-charges-error');
+        if (errorDiv) {
+            errorDiv.style.opacity = '0';
+            errorDiv.style.transform = 'translateY(-10px)';
+            setTimeout(() => {
+                if (errorDiv.parentNode) {
+                    errorDiv.remove();
+                }
+            }, 300);
+        }
+
+        // Reset tab accessibility
+        const tabButtons = modalEl.querySelectorAll('#pills-tab .nav-link');
+        tabButtons.forEach(button => {
+            button.classList.remove('disabled-tab');
+            button.style.pointerEvents = 'auto';
+            button.style.opacity = '1';
+            button.style.cursor = 'pointer';
+        });
+
+        const tbody = modalEl.querySelector("#preview-summary-body");
+        if (tbody) tbody.innerHTML = "";
+
+        const firstTab = modalEl.querySelector("#step1-tab");
+        if (firstTab) {
+            const tab = new bootstrap.Tab(firstTab);
+            tab.show();
+        }
+
+        modalEl.querySelectorAll(".payment-method-cards").forEach(c => {
+            c.classList.remove("border-success", "active");
+        });
+
+        modalEl.querySelectorAll(".payment-forms").forEach(f => f.style.display = "none");
+        
+        // Reset payment method and requirement
+        currentPaymentMethod = '';
+        paymentRequired = true;
+        document.getElementById('payment_required').value = 'true';
+        
+        // Reset preview state
+        document.getElementById('confirmation-section').style.display = 'block';
+        document.getElementById('payment-options1').style.display = 'none';
+        
+        // Reset the Next button
+        const nextButton = document.querySelector('#step1 .modal-footer .btn');
+        if (nextButton) {
+            nextButton.disabled = false;
+            nextButton.innerHTML = 'Next →';
+            nextButton.classList.add('btn-primary');
+            nextButton.classList.remove('btn-danger');
+            nextButton.title = 'Proceed to next step';
+            nextButton.removeAttribute('data-has-paid-charges');
+        }
     });
+
+    // Add click event to close button
+    modalEl.addEventListener('click', function(e) {
+        if (e.target.classList.contains('btn-close') || 
+            e.target.closest('.btn-close')) {
+            closeMaintenanceModal();
+        }
+    });
+});
+
+
+// Ensure renderSummary runs when Summary & Payment tab is clicked
+document.addEventListener("DOMContentLoaded", () => {
+  const step2Tab = document.getElementById("step2-tab");
+  step2Tab.addEventListener("shown.bs.tab", function() {
+    // Only render summary if step 1 is valid
+    if (validateStep1()) {
+      renderPreview();
+    }
+    
+  });
 });
 </script>
 <script>
 (() => {
-  'use strict'
+    'use strict'
 
-  // Fetch all forms that require validation
-  const forms = document.querySelectorAll('.needs-validation')
+    // Fetch all forms that require validation
+    const forms = document.querySelectorAll('.needs-validation')
 
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
-      form.classList.add('was-validated')
-    }, false)
-  })
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+        }, false)
+    })
 })()
 </script>
 

@@ -7,6 +7,8 @@ use App\Models\MaintenanceFileModel;
 use App\Models\RoomsInfoModel;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use App\Models\RoomsInfoModel;
+
 
 class Maintenance extends BaseController
 {
@@ -75,10 +77,11 @@ class Maintenance extends BaseController
     public function index()
 {
      helper(['url']);
-    ini_set('display_errors', '1');
-    ini_set('display_startup_errors', '1');
-    error_reporting(E_ALL);
-    helper(['url', 'form']);
+        ini_set('display_errors', '1');
+        ini_set('display_startup_errors', '1');
+        error_reporting(E_ALL);
+       
+   
 
     // Get filter parameters from GET request
     $fromDate = $this->request->getGet('from_date');
@@ -116,10 +119,8 @@ class Maintenance extends BaseController
     if ($this->request->getGet('excel')) {
         return $this->generateExcel($requests);
     }
-
-    $rooms = $this->rooms->where('deleted_on', null)->findAll();
+   $rooms = $this->rooms->where('deleted_on', null)->findAll();
     $data['rooms'] = $rooms; // Adjust method name as per your setup
-
     $data['requests'] = $requests;
     $data['filter_from_date'] = $fromDate;
     $data['filter_to_date'] = $toDate;
@@ -219,28 +220,28 @@ private function generateExcel($requests)
     return $builder->get()->getResultArray();
 }
 
-public function store()
-{
-    // Set timezone to Asia/Kolkata
-    date_default_timezone_set('Asia/Kolkata');
-
-    helper(['url', 'form', 'text']);
-    ini_set('display_errors', '1');
-    ini_set('display_startup_errors', '1');
-    error_reporting(E_ALL);
-
-    $rules = [
-         'maintenance_area' => 'permit_empty|min_length[3]|max_length[255]',
-        'requested_by'     => 'required|min_length[3]|max_length[255]',
-        'type'             => 'required|in_list[Cleaning,Plumbing,Electrical,Carpentry,HVAC,Other]',
-        'request_date'     => 'required|valid_date',
-        'expected_arrest_date' => 'permit_empty|valid_date',
-        'arrest_date'      => 'permit_empty|valid_date',
-        'problem_description' => 'required',
-         'room_id'          => 'permit_empty|integer',
-    'room_no'          => 'permit_empty',
-        'status'           => 'required|in_list[Pending,In Progress,Completed,Cancelled]',
-    ];
+    public function store()
+    {
+        helper(['url', 'form', 'text']);
+        
+        $rules = [
+            'maintenance_area' => 'required|min_length[3]|max_length[255]',
+            'room_no' => 'required|max_length[12]',
+            'requested_by' => 'required|min_length[3]|max_length[255]',
+            'type' => 'required|in_list[Cleaning,Plumbing,Electrical,Carpentry,HVAC,Other]',
+            'request_date' => 'required|valid_date',
+            'expected_arrest_date' => 'permit_empty|valid_date',
+            'arrest_date' => 'permit_empty|valid_date',
+            'problem_description' => 'required',
+            'assigned_to' => 'permit_empty',
+            'approved_by' => 'permit_empty|max_length[255]',
+            'status' => 'required|in_list[Pending,In Progress,Completed,Cancelled]',
+            'amount' => 'permit_empty|decimal',
+            'resolution_notes' => 'permit_empty',
+            'problem_photos' => 'permit_empty|uploaded[problem_photos]|max_size[problem_photos,5120]|is_image[problem_photos]',
+            'clearance_photos' => 'permit_empty|uploaded[clearance_photos]|max_size[clearance_photos,5120]|is_image[clearance_photos]',
+            'payment_bill' => 'permit_empty|uploaded[payment_bill]|max_size[payment_bill,5120]|ext_in[payment_bill,pdf,jpg,jpeg,png]'
+        ];
 
     if (!$this->validate($rules)) {
         return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());

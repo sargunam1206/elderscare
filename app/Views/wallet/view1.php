@@ -9,20 +9,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="refresh" content="900;url=http://viyoma.neuralarc.com/viyoma/logout"  />
 
-<link rel="icon" type="image/png" sizes="180x180" href="<?= base_url('public/Logo-Elders_home.png'); ?>">
-    <title>Nivasan Udayana</title>
-
   <!-- Favicon icon-->
-  <!-- <link rel="shortcut icon" type="image/png" href="<?= base_url(); ?>/public/dist/assets/images/logos/favicon.png" /> -->
-  <link rel="icon" type="image/png" sizes="180x180"  href="<?= base_url('public/Logo-Elders_home.png'); ?>" >
-  <title>Nivasan Udayana</title>
+  <link rel="shortcut icon" type="image/png" href="<?= base_url(); ?>/public/dist/assets/images/logos/favicon.png" />
+
   <!-- Core Css -->
   <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/css/styles.css" />
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- <title>MatDash Bootstrap Admin</title> -->
+  <title>MatDash Bootstrap Admin</title>
   <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/ccc/wallet.css">
 
@@ -42,70 +38,6 @@
     overflow-y: auto;
   }
 </style>
-<style>   
-/* Top controls: Show entries + Search (single line, left-right) */
-#form_inputs_wrapper > .dataTables_length,
-#form_inputs_wrapper > .dataTables_filter {
-  display: inline-block;
-  vertical-align: middle;
-  margin-bottom: 10px;
-}
-
-#form_inputs_wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Push search input to the right */
-#form_inputs_wrapper .dataTables_filter {
-  margin-left: auto;
-}
-
-/* Bottom controls: Showing info + Pagination */
-#form_inputs_wrapper > .dataTables_info,
-#form_inputs_wrapper > .dataTables_paginate {
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-  #form_inputs_wrapper {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
- 
-  
-  #form_inputs_wrapper > .dataTables_info,
-  #form_inputs_wrapper > .dataTables_paginate {
-    width: 100%;
-    text-align: center;
-    margin: 5px 0;
-  }
-
-   /* Search box aligned to the right */
-  #form_inputs_wrapper > .dataTables_filter {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    margin: 5px 0;
-  }
-
-  #form_inputs_wrapper .dataTables_filter {
-    margin-left: 0;
-  }
-   #form_inputs_wrapper > .dataTables_length {
-    display: none !important;
-  }
-
-}
-
-
-
-  </style> 
 <style>
     /* ========== Global Theme Colors ========== */
     :root {
@@ -364,8 +296,6 @@
     .dropdown-input.is-invalid {
       border-color: #dc3545 !important;
     }
-
-    
   </style>
   <style>
     label.required::after {
@@ -854,594 +784,142 @@
 
                     <!-- Vertically centered modal -->
                     
-<!-- Stepper Wallet Modal -->
+
+<!-- Modal -->
 <div class="modal fade" id="vertical-center-scroll-modal" tabindex="-1" aria-labelledby="vertical-center-modal" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
     <div class="modal-content">
-      <form method="post" id="assetForm" action="<?= base_url('addfund'); ?>" enctype="multipart/form-data" class="needs-validation" novalidate>
+      <form method="post"  id="assetForm"  action="<?= base_url('addfund'); ?>" enctype="multipart/form-data">
+        <div class="modal-header d-flex align-items-center">
+          <h4 class="modal-title" id="myLargeModalLabel"><i class="bi bi-wallet"></i>
+ Add Wallet</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
         
-        <!-- Stepper Navigation -->
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <ul class="nav nav-pills flex-grow-1 justify-content-between" id="pills-tab" role="tablist">
-            <li class="nav-item flex-fill text-center">
-              <button class="nav-link active w-100" id="step1-tab" data-bs-toggle="pill" data-bs-target="#step1" type="button">
-                Wallet
-              </button>
-            </li>
-            <li class="nav-item flex-fill text-center">
-              <button class="nav-link w-100" id="step2-tab" data-bs-toggle="pill" data-bs-target="#step2" type="button">
-                Preview
-              </button>
-            </li>
-            <li class="nav-item flex-fill text-center">
-              <button class="nav-link w-100" id="step3-tab" data-bs-toggle="pill" data-bs-target="#step3" type="button">
-                Payment
-              </button>
-            </li>
-          </ul>
 
-          <!-- Close button -->
-          <button type="button" class="btn-close m-3" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-
-        <div class="tab-content">
-          <!-- STEP 1: Wallet Details -->
-          <div class="tab-pane fade show active p-2" id="step1">
-            <div class="modal-header d-flex align-items-center">
-              <h4 class="modal-title" id="myLargeModalLabel"><i class="bi bi-wallet"></i> Add Wallet</h4>
-            </div>
-
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-6" id="part_number">
-                  <div class="mb-3">
-                    <label for="relationInput" class="form-label required">Room No</label>
-                    <div class="dropdown">
-                      <input type="text" 
-                             class="form-control w-100" 
-                             id="service_type_name"
-                             name="room_no"
-                             placeholder="Select Room No"
-                             autocomplete="off"
-                             data-bs-toggle="dropdown" 
-                             aria-expanded="false" 
-                             required />
-
-                      <ul class="dropdown-menu w-100" style="max-height: 150px; overflow-y: auto;">
-                        <div id="relationLists" style="width: 100%;">
-                          <?php foreach($room as $type): ?> 
-                            <div class="dropdown-item" data-value="<?= $type['room_no'] ?>"><?= $type['room_no'] ?></div>
-                          <?php endforeach; ?>
-                        </div>
-                      </ul>
-                      <div class="invalid-feedback">
-                        Please select a room number.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-6" id="category_section">
-                  <div class="mb-3">
-                    <label class="form-label required">Guest Info</label>
-                    <div class="dropdown">
-                      <input type="text" 
-                             class="form-control w-100" 
-                             id="category_name"
-                             name="guest_name"
-                             placeholder="Select Guest"
-                             autocomplete="off"
-                             data-bs-toggle="dropdown" 
-                             aria-expanded="false"
-                             required />
-
-                      <ul class="dropdown-menu w-100" style="max-height: 150px; overflow-y: auto;">
-                        <div id="categoryList" style="width: 100%;"></div>
-                      </ul>
-                      <div class="invalid-feedback">
-                        Please select a guest.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label for="room_no" class="form-label required">Balance Amount</label>
-                    <div class="dropdown">
-                      <input type="text" class="form-control dropdown-toggle w-100" name="balance" id="balance" autocomplete="off" readonly />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label for="room_no" class="form-label required">Add Amount</label>
-                    <div class="dropdown">
-                      <input type="number" class="form-control dropdown-toggle w-100" name="add_amount" id="add_amount" autocomplete="off" min="1" required />
-                      <div class="invalid-feedback">
-                        Please enter a valid amount to add.
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="modal-body">
+          <?php 
+          $session = \Config\Services::session();
+          if (isset($session->success)): ?>
+            <!-- <div class="alert bg-primary-subtle text-info alert-dismissible fade show" role="alert">
+              <div class="d-flex align-items-center text-primary">
+                <i class="ti ti-info-circle me-2 fs-4"></i>
+                <?= $session->success; ?>
               </div>
-            </div>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div> -->
+          <?php endif; ?>
 
-            <div class="modal-footer border-top justify-content-end">
-              <!-- <button type="button" class="btn bg-danger-subtle text-danger me-2" data-bs-dismiss="modal">
-                Cancel
-              </button> -->
-              <button type="button" class="btn btn-primary" onclick="validateStep1()">
-                Next →
-              </button>
-            </div>
-          </div>
+          <div class="row">
+         
+         
 
-          <!-- STEP 2: Preview -->
-          <div class="tab-pane fade" id="step2">
-            <div class="p-2 shadow-sm">
-              <div class="modal-header d-flex align-items-center">
-                <h4 class="modal-title"><i class="bi bi-eye"></i> Preview</h4>
-              </div>
-              
-              <div class="modal-body">
-                <!-- Preview Summary -->
-                <div class="table-responsive mb-4">
-                  <table class="table table-bordered" id="preview-summary-table">
-                    <thead class="table-light">
-                      <tr>
-                        <th>Description</th>
-                        <th class="text-end">Details</th>
-                      </tr>
-                    </thead>
-                    <tbody id="preview-summary-body">
-                      <!-- Preview details will be populated here -->
-                    </tbody>
-                  </table>
-                </div>
-                
-                <div class="alert alert-info">
-                  <i class="fas fa-info-circle me-2"></i>
-                  Please review the details above before proceeding.
-                </div>
-              </div>
-              
-              <!-- Stepper Navigation -->
-              <div class="modal-footer border-top justify-content-between">
-                <button type="button" class="btn btn-secondary" onclick="goToStep(1)">
-                  <i class="fas fa-arrow-left me-2"></i> Back
-                </button>
-                <button type="button" class="btn btn-primary" onclick="goToStep(3)">
-                  Next to Payment <i class="fas fa-arrow-right ms-2"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- STEP 3: Payment -->
-          <!-- STEP 3: Payment -->
-<div class="tab-pane fade" id="step3">
-  <div class="p-2 shadow-sm">
-    <div class="modal-header d-flex align-items-center">
-      <h4 class="modal-title"><i class="bi bi-credit-card"></i> Payment</h4>
-    </div>
-    
-    <div class="modal-body">
-      <!-- Payment Methods -->
-      <h5 class="mb-3">Select Payment Method</h5>
-      <div class="row g-3 mb-4">
-        <div class="col-md-6">
-          <div class="card payment-method-cards p-3" data-method="cash">
-            💵 Cash Payment <br><small class="text-muted">Pay at reception</small>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card payment-method-cards p-3" data-method="upi">
-            📱 UPI Payment <br><small class="text-muted">Pay via UPI apps</small>
-          </div>
-        </div>
-        
-      </div>
-
-      <!-- Payment Forms -->
-      <div id="payment-forms">
-        <!-- UPI Payment Form -->
-        <div id="upi-forms" class="payment-forms" style="display:none">
-          <div class="mb-3">
-            <label class="form-label required">UPI Transaction ID</label>
-            <input type="text" class="form-control payment-field" name="upi_trans" 
-                   placeholder="Enter UPI Transaction ID" required>
-            <div class="invalid-feedback">Please enter a UPI transaction ID.</div>
-          </div>
-        </div>
-        
-        <!-- Cash Payment Form - No input required -->
-        <!-- <div id="cash-forms" class="payment-forms" style="display:none">
-          <div class="alert alert-info">
-            <i class="fas fa-info-circle me-2"></i>
-            Please collect cash payment at the reception. No receipt number required.
-          </div>
-        </div> -->
-      </div>
-      
-      <!-- Payment Summary -->
-      <div class="border-top pt-3 mt-3">
-        <div class="row">
-          <div class="col-6">
-            <strong>Amount to Add:</strong>
-          </div>
-          <div class="col-6 text-end">
-            <span id="payment-amount-display">₹0</span>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Hidden fields for form submission -->
-      <input type="hidden" name="payment_method" id="payment_method_input">
-      <input type="hidden" name="guest_id" id="guest_id_input">
-    </div>
   
-    <!-- Stepper Navigation -->
-    <div class="modal-footer border-top justify-content-between">
-      <button type="button" class="btn btn-secondary" onclick="goToStep(2)">
-        <i class="fas fa-arrow-left me-2"></i> Back
-      </button>
-      <button type="submit" name="submit" value="submit" class="btn btn-success">
-        <i class="fas fa-check-circle me-2"></i> Submit Payment
-      </button>
+
+
+       
+  
+<div class="col-6" id="part_number">
+  <div class="mb-3">
+    <label for="relationInput" class="form-label required">Room No</label>
+    <div class="dropdown">
+      <input type="text" 
+             class="form-control w-100" 
+             id="service_type_name"
+             name="room_no"
+             placeholder="Select Service Type"
+             autocomplete="off"
+             data-bs-toggle="dropdown" 
+             aria-expanded="false" />
+
+      <ul class="dropdown-menu w-100" style="max-height: 150px; overflow-y: auto;">
+        <div id="relationLists" style="width: 100%;">
+          <?php foreach($room as $type): ?> 
+            <div class="dropdown-item" data-value="<?= $type['room_no'] ?>"><?= $type['room_no'] ?></div>
+          <?php endforeach; ?>
+        </div>
+      </ul>
     </div>
   </div>
 </div>
+
+
+<div class="col-6" id="category_section" >
+  <div class="mb-3">
+    <label class="form-label required">Guest Info</label>
+    <div class="dropdown">
+      <input type="text" 
+             class="form-control w-100" 
+             id="category_name"
+             name="guest_name"
+             placeholder="Select Category"
+             autocomplete="off"
+             data-bs-toggle="dropdown" 
+             aria-expanded="false" />
+
+      <ul class="dropdown-menu w-100" style="max-height: 150px; overflow-y: auto;">
+        <div id="categoryList" style="width: 100%;"></div>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+   <div class="col-6">
+      <div class="mb-3">
+          <label for="room_no" class="form-label required">Balance Amount</label>
+        <div class="dropdown">
+                    <input type="text" class="form-control dropdown-toggle w-100" name="balance" id="balance"   autocomplete="off" readonly />
+
+         
         </div>
+      </div>
+      </div>
+
+   <div class="col-6">
+      <div class="mb-3">
+          <label for="room_no" class="form-label required">Add Amount</label>
+        <div class="dropdown">
+                    <input type="number" class="form-control dropdown-toggle w-100" name="add_amount" id="add_amount"   autocomplete="off" />
+
+         
+        </div>
+      </div>
+      </div>
+
+
+
+
+
+<div>
+</div>
+
+
+
+          
+
+
+
+     </div>
+   </div>
+   
+
+        <div class="modal-footer border-top justify-content-end">
+  <button type="button" class="btn bg-danger-subtle text-danger me-2" data-bs-dismiss="modal">
+    Cancel
+  </button>
+  <button type="submit" name="submit" value="submit" class="btn btn-primary">
+    Save
+  </button>
+</div>
+
       </form>
     </div>
   </div>
 </div>
 
-<style>
-
-    .payment-method-cards {
-  cursor: pointer;
-  transition: all 0.2s;
-  border: 2px solid #e0e0e0;
-  min-height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.payment-method-cards:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border-color: #66BB6A;
-}
-
-.payment-method-cards.active {
-  border-color: #66BB6A;
-  background-color: #f8f9ff;
-  box-shadow: 0 0 8px rgba(102, 187, 106, 0.4);
-}
-
-.payment-forms {
-  background: #f8f9fa;
-  padding: 15px;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-
-.nav-link.disabled-tab {
-  pointer-events: none;
-  opacity: 0.5;
-  cursor: not-allowed;
-  background-color: #f8f9fa !important;
-  color: #6c757d !important;
-  border-color: #dee2e6 !important;
-}
-
- 
-</style>
-
-<script>
-// Global variables
-let currentPaymentMethod = '';
-let guestId = null;
-let roomNo = null;
-let addAmount = 0;
-
-// Validation functions
-function validateStep1() {
-  const form = document.getElementById('assetForm');
-  const roomInput = document.getElementById('service_type_name');
-  const guestInput = document.getElementById('category_name');
-  const amountInput = document.getElementById('add_amount');
-  
-  let isValid = true;
-  
-  // Validate room selection
-  if (!roomInput.value) {
-    roomInput.classList.add('is-invalid');
-    isValid = false;
-  } else {
-    roomInput.classList.remove('is-invalid');
-    roomNo = roomInput.value;
-  }
-  
-  // Validate guest selection
-  if (!guestInput.value) {
-    guestInput.classList.add('is-invalid');
-    isValid = false;
-  } else {
-    guestInput.classList.remove('is-invalid');
-  }
-  
-  // Validate amount
-  if (!amountInput.value || amountInput.value < 1) {
-    amountInput.classList.add('is-invalid');
-    isValid = false;
-  } else {
-    amountInput.classList.remove('is-invalid');
-    addAmount = parseFloat(amountInput.value);
-  }
-  
-  // If valid, proceed to step 2
-  if (isValid) {
-    goToStep(2);
-    renderPreview();
-  } else {
-    // Scroll to first error
-    const firstError = form.querySelector('.is-invalid');
-    if (firstError) {
-      firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  }
-  
-  return isValid;
-}
-
-// Render preview with wallet details
-function renderPreview() {
-  const tbody = document.getElementById("preview-summary-body");
-  tbody.innerHTML = "";
-
-  const details = [
-    { label: "Room No", value: document.getElementById("service_type_name").value },
-    { label: "Guest Name", value: document.getElementById("category_name").value },
-    { label: "Current Balance", value: "₹" + (document.getElementById("balance").value || "0") },
-    { label: "Amount to Add", value: "₹" + document.getElementById("add_amount").value }
-  ];
-
-  details.forEach(item => {
-    const row = document.createElement("tr");
-    row.innerHTML = `<td><strong>${item.label}</strong></td><td class="text-end">${item.value}</td>`;
-    tbody.appendChild(row);
-  });
-  
-  // Update payment amount display
-  document.getElementById('payment-amount-display').textContent = "₹" + addAmount;
-}
-
-// Navigation functions
-function goToStep(step) {
-  const tabTrigger = new bootstrap.Tab(document.querySelector(`#step${step}-tab`));
-  tabTrigger.show();
-  
-  // Update preview when going to step 2
-  if (step === 2) {
-    renderPreview();
-  }
-}
-
-// Form submission validation
-function validateFormSubmission() {
-  // Validate payment method selection
-  if (!currentPaymentMethod) {
-    alert('Please select a payment method.');
-    return false;
-  }
-  
-  // Validate payment fields based on method
-  let isValid = true;
-  
-  if (currentPaymentMethod === 'upi') {
-    const upiField = document.querySelector('#upi-forms .payment-field');
-    if (!upiField.value.trim()) {
-      upiField.classList.add('is-invalid');
-      isValid = false;
-    } else {
-      upiField.classList.remove('is-invalid');
-    }
-  }
-  
-  // Cash payment doesn't require any additional validation
-  // No fields to validate for cash payment
-  
-  if (!isValid) {
-    alert('Please fill in all required payment details.');
-    return false;
-  }
-  
-  // Set hidden fields for form submission
-  document.getElementById('payment_method_input').value = currentPaymentMethod;
-  document.getElementById('guest_id_input').value = guestId;
-  
-  return true;
-}
-
-
-// Ensure renderSummary runs when Summary & Payment tab is clicked
-document.addEventListener("DOMContentLoaded", () => {
-  const step2Tab = document.getElementById("step2-tab");
-  step2Tab.addEventListener("shown.bs.tab", function() {
-    // Only render summary if step 1 is valid
-    if (validateStep1()) {
-      renderPreview();
-    }
-  });
-});
-// Setup event listeners when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-  // Payment method selection
-  document.querySelectorAll(".payment-method-cards").forEach(card => {
-    card.addEventListener("click", function() {
-      document.querySelectorAll(".payment-method-cards").forEach(c => c.classList.remove("active"));
-      this.classList.add("active");
-
-      const method = this.dataset.method;
-      currentPaymentMethod = method;
-      
-      document.querySelectorAll(".payment-forms").forEach(f => f.style.display = "none");
-      
-      if (method === "cash") {
-        document.getElementById('cash-forms').style.display = "block";
-      } else if (method === "upi") {
-        document.getElementById('upi-forms').style.display = "block";
-      }
-
-      // Clear validation when switching methods
-      document.querySelectorAll('.payment-field').forEach(field => {
-        field.classList.remove('is-invalid');
-      });
-    });
-  });
-  
-  // Payment field validation
-  const paymentFields = document.querySelectorAll('.payment-field');
-  paymentFields.forEach(field => {
-    field.addEventListener('input', function() {
-      this.classList.remove('is-invalid');
-    });
-  });
-  
-  // Form submission handler
-  const form = document.getElementById('assetForm');
-  form.addEventListener('submit', function(event) {
-    if (!validateFormSubmission()) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-  });
-  
-  // Setup dropdown functionality
-  setupDropdowns();
-});
-
-// Setup dropdown functionality
-function setupDropdowns() {
-  // When service type is selected
-  document.querySelectorAll("#relationLists .dropdown-item").forEach(function(item) {
-    item.addEventListener("click", function() {
-      let selectedService = this.getAttribute("data-value");
-      document.getElementById("service_type_name").value = selectedService;
-
-      // Show category section
-      document.getElementById("category_section").style.display = "block";
-
-      // Clear old categories
-      document.getElementById("categoryList").innerHTML = '<div class="p-2">Loading...</div>';
-
-      // Fetch categories from API
-      fetch(`/advaya/roomguest/${selectedService}`)
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
-          let html = "";
-          if (data.length > 0) {
-            data.forEach(function(cat) {
-              html += `<div class="dropdown-item" data-value="${cat.first_name}" data-guest-id="${cat.guest_id}">${cat.first_name}</div>`;
-            });
-          } else {
-            html = '<div class="dropdown-item disabled">No guest found</div>';
-          }
-          document.getElementById("categoryList").innerHTML = html;
-
-          // Attach click events for new items
-          document.querySelectorAll("#categoryList .dropdown-item").forEach(function(catItem) {
-            catItem.addEventListener("click", function() {
-              document.getElementById("category_name").value = this.getAttribute("data-value");
-              guestId = this.getAttribute("data-guest-id");
-            });
-          });
-        })
-        .catch(error => {
-          document.getElementById("categoryList").innerHTML = `<div class="dropdown-item disabled">Error loading</div>`;
-          console.error(error);
-        });
-    });
-  });
-
-  // Search filter for categories
-  document.getElementById("category_name").addEventListener("keyup", function() {
-    let filter = this.value.toLowerCase();
-    document.querySelectorAll("#categoryList .dropdown-item").forEach(function(item) {
-      item.style.display = item.textContent.toLowerCase().includes(filter) ? "" : "none";
-    });
-  });
-
-  function attachSearchFilter(inputId, listId) {
-    document.getElementById(inputId).addEventListener("keyup", function() {
-      let filter = this.value.toLowerCase();
-      document.querySelectorAll(`#${listId} .dropdown-item`).forEach(function(item) {
-        item.style.display = item.textContent.toLowerCase().includes(filter) ? "" : "none";
-      });
-    });
-  }
-
-  attachSearchFilter("service_type_name", "relationLists"); // Service type search
-  attachSearchFilter("category_name", "categoryList");  
-
-  // Get balance when guest is selected
-  document.getElementById("categoryList").addEventListener("click", function(e) {
-    let target = e.target.closest(".dropdown-item");
-    if (target) {
-      let selectedCategory = target.getAttribute("data-value");
-      guestId = target.getAttribute("data-guest-id");
-      document.getElementById("category_name").value = selectedCategory;
-      
-      // Fetch wallet balance
-      fetch(`/advaya/guest_wallet/${selectedCategory}`)
-        .then(response => response.json())
-        .then(data => {
-          let html = "";
-          if (data.length > 0) {
-            document.getElementById("balance").value = data[0].balance;
-          } else {
-            document.getElementById("balance").value = 0;
-          }
-        })
-        .catch(error => {
-          console.error(error);
-        });
-    }
-  });
-}
-
-// Reset modal when closed
-document.getElementById('vertical-center-scroll-modal').addEventListener('hidden.bs.modal', function() {
-  const form = document.getElementById('assetForm');
-  form.reset();
-  form.classList.remove('was-validated');
-  
-  // Reset to first step
-  const firstTab = document.querySelector("#step1-tab");
-  if (firstTab) {
-    const tab = new bootstrap.Tab(firstTab);
-    tab.show();
-  }
-  
-  // Reset payment method
-  document.querySelectorAll(".payment-method-cards").forEach(c => {
-    c.classList.remove("active");
-  });
-  
-  document.querySelectorAll(".payment-forms").forEach(f => f.style.display = "none");
-  currentPaymentMethod = '';
-  guestId = null;
-  roomNo = null;
-  addAmount = 0;
-});
-</script>
 
 
 
@@ -1486,8 +964,8 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
                   
               
  <?php if ($activeTab === '' && $successMessage): ?>
-    <div class="alert bg-success-subtle text-info alert-dismissible fade show" role="alert">
-        <div class="d-flex align-items-center text-success">
+    <div class="alert bg-primary-subtle text-info alert-dismissible fade show" role="alert">
+        <div class="d-flex align-items-center text-primary">
             <i class="ti ti-info-circle me-2 fs-4"></i>
             <?= $successMessage ?>
         </div>
@@ -1500,15 +978,11 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
  
 <div class="row mb-3">
                 <div class="col-md-6">
-                    <h4 class="" style="font-size:18px;"> <i class="bi bi-wallet2 text-success"></i>
+                    <h5 class="mb-0 fs-7"> <i class="bi bi-wallet2 text-success"></i>
 
-Wallet</h4>
+Wallet</h5>
                 </div>
-                 
                 <div class="col-md-6 text-end">
-                  <span class="badge bg-light text-success border border-success me-2 fs-1">
-                  <?= count($wallet_guest ) ?> wallets
-                </span>
                     <button type="button" 
    class="btn btn-primary" 
    data-bs-toggle="modal" 
@@ -1670,6 +1144,176 @@ Wallet</h4>
 
 
 
+ <script>
+  const roomInput = document.getElementById('room_no');
+  const roomItems = document.querySelectorAll('#roomList .dropdown-item');
+
+  roomItems.forEach(item => {
+    item.addEventListener('click', function () {
+     // const value = this.getAttribute('data-value');
+      const value = this.getAttribute('data-value'); // ID
+        //const label = this.getAttribute('data-label'); // Name
+
+        relationInput.value = value; // Store ID in hidden input
+        
+        //relationInput.textContent = label; // Update dropdown button text
+    });
+  });
+</script>
+
+
+
+
+
+<script>
+function editAsset(asset) {
+  
+ 
+  document.getElementById('myLargeModalLabel').textContent = "Edit Rooms";
+
+  // Update form action to update URL
+  const form = document.getElementById("assetForm");
+  form.action = "<?= base_url('updaterooms') ?>/" + asset.room_id ;
+  
+  // Set all input values
+  document.getElementById("room_no").value = asset.	room_no || '';
+
+  document.getElementById('roomTypeInput').value = asset.room_type || '';
+
+
+
+}
+
+// Reset modal form when closed
+document.getElementById('vertical-center-scroll-modal').addEventListener('hidden.bs.modal', function () {
+    document.getElementById('myLargeModalLabel').textContent = "Add Wallet";
+  const form = document.getElementById('assetForm');
+  form.reset();
+  document.getElementById('addaccessory-container').innerHTML = '';
+  form.action = "<?= base_url('assign'); ?>"; // Reset to "Add" mode
+ 
+}); 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // When service type is selected
+    document.querySelectorAll("#relationLists .dropdown-item").forEach(function(item) {
+        item.addEventListener("click", function() {
+            let selectedService = this.getAttribute("data-value");
+            document.getElementById("service_type_name").value = selectedService;
+
+            // Show category section
+            document.getElementById("category_section").style.display = "block";
+
+            // Clear old categories
+            document.getElementById("categoryList").innerHTML = '<div class="p-2">Loading...</div>';
+
+            // Fetch categories from API
+               fetch(`/advaya/roomguest/${selectedService}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    let html = "";
+                    if (data.length > 0) {
+                        data.forEach(function(cat) {
+                            html += `<div class="dropdown-item" data-value="${cat.first_name}">${cat.first_name}</div>`;
+                        });
+                    } else {
+                        html = '<div class="dropdown-item disabled">No guest found</div>';
+                    }
+                    document.getElementById("categoryList").innerHTML = html;
+
+                    // Attach click events for new items
+                    document.querySelectorAll("#categoryList .dropdown-item").forEach(function(catItem) {
+                        catItem.addEventListener("click", function() {
+            
+
+                        
+                        document.getElementById("category_name").value = this.getAttribute("data-value");
+
+   
+
+                        });
+                    });
+                })
+                .catch(error => {
+                    document.getElementById("categoryList").innerHTML = `<div class="dropdown-item disabled">Error loading</div>`;
+                    console.error(error);
+                });
+        });
+    });
+
+    // Search filter for categories
+    document.getElementById("category_name").addEventListener("keyup", function() {
+        let filter = this.value.toLowerCase();
+        document.querySelectorAll("#categoryList .dropdown-item").forEach(function(item) {
+            item.style.display = item.textContent.toLowerCase().includes(filter) ? "" : "none";
+        });
+    });
+
+
+    function attachSearchFilter(inputId, listId) {
+    document.getElementById(inputId).addEventListener("keyup", function() {
+        let filter = this.value.toLowerCase();
+        document.querySelectorAll(`#${listId} .dropdown-item`).forEach(function(item) {
+            item.style.display = item.textContent.toLowerCase().includes(filter) ? "" : "none";
+        });
+    });
+}
+
+    attachSearchFilter("service_type_name", "relationLists"); // Service type search
+    attachSearchFilter("category_name", "categoryList");  
+
+
+
+
+
+
+
+
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("categoryList").addEventListener("click", function(e) {
+        let target = e.target.closest(".dropdown-item");
+        if (target) {
+           
+         
+            let selectedCategory =target.getAttribute("data-value");
+            document.getElementById("category_name").value = selectedCategory;
+           
+
+        
+           
+           //console.log(selectedCategory);
+            // Fetch modes
+            fetch(`/advaya/guest_wallet/${selectedCategory}`)
+                .then(response => response.json())
+                
+                .then(data => {
+                   
+                    let html = "";
+                    if (data.length > 0) {
+                        document.getElementById("balance").value = data[0].balance;
+                    } else {
+                       document.getElementById("balance").value = 0;
+                    }
+                    document.getElementById("serviceList").innerHTML = html;
+
+                   
+                })
+                .catch(error => {
+                    document.getElementById("serviceList").innerHTML = `<div class="dropdown-item disabled">Error loading</div>`;
+                    console.error(error);
+                });
+        }
+    });
+});
+
+</script>
 </body>
 
 

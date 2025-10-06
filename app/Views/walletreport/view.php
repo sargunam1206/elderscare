@@ -9,9 +9,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="refresh" content="900;url=http://viyoma.neuralarc.com/viyoma/logout"  />
 
-<link rel="icon" type="image/png" sizes="180x180" href="<?= base_url('public/Logo-Elders_home.png'); ?>">
-    <title>Nivasan Udayana</title>
-
   <!-- Favicon icon-->
   <!-- <link rel="shortcut icon" type="image/png" href="<?= base_url(); ?>/public/dist/assets/images/logos/favicon.png" /> -->
   <link rel="icon" type="image/png" sizes="180x180"  href="<?= base_url('public/Logo-Elders_home.png'); ?>" >
@@ -42,70 +39,6 @@
     overflow-y: auto;
   }
 </style>
-<style>   
-/* Top controls: Show entries + Search (single line, left-right) */
-#form_inputs_wrapper > .dataTables_length,
-#form_inputs_wrapper > .dataTables_filter {
-  display: inline-block;
-  vertical-align: middle;
-  margin-bottom: 10px;
-}
-
-#form_inputs_wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Push search input to the right */
-#form_inputs_wrapper .dataTables_filter {
-  margin-left: auto;
-}
-
-/* Bottom controls: Showing info + Pagination */
-#form_inputs_wrapper > .dataTables_info,
-#form_inputs_wrapper > .dataTables_paginate {
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-  #form_inputs_wrapper {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
- 
-  
-  #form_inputs_wrapper > .dataTables_info,
-  #form_inputs_wrapper > .dataTables_paginate {
-    width: 100%;
-    text-align: center;
-    margin: 5px 0;
-  }
-
-   /* Search box aligned to the right */
-  #form_inputs_wrapper > .dataTables_filter {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    margin: 5px 0;
-  }
-
-  #form_inputs_wrapper .dataTables_filter {
-    margin-left: 0;
-  }
-   #form_inputs_wrapper > .dataTables_length {
-    display: none !important;
-  }
-
-}
-
-
-
-  </style> 
 <style>
     /* ========== Global Theme Colors ========== */
     :root {
@@ -1500,15 +1433,11 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
  
 <div class="row mb-3">
                 <div class="col-md-6">
-                    <h4 class="" style="font-size:18px;"> <i class="bi bi-wallet2 text-success"></i>
+                    <h5 class="mb-0 fs-7"> <i class="bi bi-wallet2 text-success"></i>
 
-Wallet</h4>
+Wallet</h5>
                 </div>
-                 
                 <div class="col-md-6 text-end">
-                  <span class="badge bg-light text-success border border-success me-2 fs-1">
-                  <?= count($wallet_guest ) ?> wallets
-                </span>
                     <button type="button" 
    class="btn btn-primary" 
    data-bs-toggle="modal" 

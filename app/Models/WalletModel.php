@@ -10,7 +10,7 @@ class WalletModel extends Model
     protected $primaryKey = 'wallet_id';  // Primary key
 
     protected $allowedFields = [
-        'guest_id', 'balance', 'updated_on','created_on'
+        'guest_id', 'balance','payment_status','payment_mode','reference_id', 'updated_on','created_on'
     ];
 
     // Enable automatic handling of created, updated, and deleted timestamps
