@@ -10,8 +10,8 @@
 <meta http-equiv="refresh" content="900;url=http://viyoma.neuralarc.com/viyoma/logout"  />
 
   <!-- Favicon icon-->
-  <link rel="shortcut icon" type="image/png" href="<?= base_url(); ?>/public/dist/assets/images/logos/favicon.png" />
-
+<link rel="icon" type="image/png" sizes="180x180"  href="<?= base_url('public/Logo-Elders_home.png'); ?>" >
+<title>Nivasan Udayana</title>
   <!-- Core Css -->
   <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/css/styles.css" />
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -971,7 +971,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("categoryList").innerHTML = '<div class="p-2">Loading...</div>';
 
             // Fetch categories from API
-               fetch(`/roomguest/${selectedService}`)
+               fetch(`<?= base_url();?>./roomguest/${selectedService}`)
                 .then(response => response.json())
                 .then(data => {
                     console.log(data);
