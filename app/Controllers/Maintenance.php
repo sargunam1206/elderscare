@@ -6,6 +6,8 @@ use App\Models\MaintenanceModel;
 use App\Models\MaintenanceFileModel;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use App\Models\RoomsInfoModel;
+
 
 class Maintenance extends BaseController
 {
@@ -18,6 +20,7 @@ class Maintenance extends BaseController
         $this->db = db_connect();
         $this->maintenanceModel = new MaintenanceModel();
         $this->fileModel = new MaintenanceFileModel();
+        $this->rooms = new RoomsInfoModel();
     }
 
     // public function index()
@@ -72,7 +75,12 @@ class Maintenance extends BaseController
 
     public function index()
 {
-    helper(['url', 'form']);
+     helper(['url']);
+        ini_set('display_errors', '1');
+        ini_set('display_startup_errors', '1');
+        error_reporting(E_ALL);
+       
+   
 
     // Get filter parameters from GET request
     $fromDate = $this->request->getGet('from_date');
@@ -110,7 +118,8 @@ class Maintenance extends BaseController
     if ($this->request->getGet('excel')) {
         return $this->generateExcel($requests);
     }
-
+   $rooms = $this->rooms->where('deleted_on', null)->findAll();
+    $data['rooms'] = $rooms; // Adjust method name as per your setup
     $data['requests'] = $requests;
     $data['filter_from_date'] = $fromDate;
     $data['filter_to_date'] = $toDate;
@@ -215,6 +224,7 @@ private function generateExcel($requests)
         
         $rules = [
             'maintenance_area' => 'required|min_length[3]|max_length[255]',
+            'room_no' => 'required|max_length[12]',
             'requested_by' => 'required|min_length[3]|max_length[255]',
             'type' => 'required|in_list[Cleaning,Plumbing,Electrical,Carpentry,HVAC,Other]',
             'request_date' => 'required|valid_date',

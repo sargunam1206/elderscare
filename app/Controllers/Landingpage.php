@@ -157,6 +157,27 @@ public function service_category1($id)
 
     }
 
+public function getServiceTypeId()
+{
+    $serviceTypeName = $this->request->getGet('service_type');
+    
+    if (!$serviceTypeName) {
+        return $this->response->setJSON(['error' => 'Service type name required']);
+    }
+    
+    $serviceType = $this->servicetype
+        ->select('service_type_id')
+        ->where('name', $serviceTypeName)
+        ->where('deleted_on', null)
+        ->first();
+    
+    if ($serviceType) {
+        return $this->response->setJSON(['service_type_id' => $serviceType['service_type_id']]);
+    } else {
+        return $this->response->setJSON(['error' => 'Service type not found']);
+    }
+}
+
  public function service_category($id)
 {
     ini_set('display_errors', '1');

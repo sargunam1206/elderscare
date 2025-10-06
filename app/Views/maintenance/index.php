@@ -799,6 +799,34 @@
                   <input type="text" class="form-control" name="maintenance_area" id="maintenance_area" placeholder="e.g., Building A, Floor 3" required>
                   <div class="invalid-feedback">Please enter maintenance area</div>
                 </div>
+
+                <!-- Room Number Dropdown -->
+            <div class="col-md-6">
+              <label class="form-label required">Room Number</label>
+              <div class="dropdown w-100" id="roomTypeDropdown">
+                <input type="text" class="form-control dropdown-toggle" 
+                      name="room_no_display" id="roomInput"
+                      placeholder="Select Room"
+                      data-bs-toggle="dropdown" aria-expanded="false" 
+                      autocomplete="off" readonly required />
+                <input type="hidden" name="room_no" id="roomNo" required>
+                <ul class="dropdown-menu p-2 w-100" aria-labelledby="roomInput" style="max-height: 200px; overflow-y: auto;">
+                  <div id="roomLists" style="width: 100%;">
+                    <?php if(isset($rooms) && !empty($rooms)): ?>
+                      <?php foreach($rooms as $room): ?>
+                        <div class="dropdown-item" data-value="<?= $room['room_no'] ?>">
+                          <?= esc($room['room_no']) ?>
+                        </div>
+                      <?php endforeach; ?>
+                    <?php else: ?>
+                      <div class="dropdown-item disabled">No rooms available</div>
+                    <?php endif; ?>
+                  </div>
+                </ul>
+              </div>
+              <div class="invalid-feedback">Please select a room</div>
+            </div>
+                
                 <div class="col-md-6">
                   <label class="form-label required">Requested By</label>
                   <input type="text" class="form-control" name="requested_by" id="requested_by" placeholder="Enter your name" required>
@@ -1018,37 +1046,74 @@
   <script src="<?= base_url(); ?>/public/dist/assets/js/datatable/datatable-api.init.js"></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Initialize DataTable
-        // $('#form_inputs').DataTable({
-        //     responsive: true,
-        //     columnDefs: [
-        //         { responsivePriority: 1, targets: 0 },
-        //         { responsivePriority: 2, targets: 1 },
-        //         { responsivePriority: 3, targets: -1 }
-        //     ]
-        // });
-        
-        // Initialize dropdown functionality
-        setupDropdown('statusFilterDisplay', 'statusFilter', 'statusLists');
-        setupDropdown('typeFilterDisplay', 'typeFilter', 'typeLists');
-         // Initialize dropdown functionality for MODAL dropdowns
+
+    // Update your existing DOMContentLoaded function
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize DataTable
+    // $('#form_inputs').DataTable({
+    //     responsive: true,
+    //     columnDefs: [
+    //         { responsivePriority: 1, targets: 0 },
+    //         { responsivePriority: 2, targets: 1 },
+    //         { responsivePriority: 3, targets: -1 }
+    //     ]
+    // });
+    
+    // Initialize dropdown functionality
+    setupDropdown('statusFilterDisplay', 'statusFilter', 'statusLists');
+    setupDropdown('typeFilterDisplay', 'typeFilter', 'typeLists');
     setupDropdown('modalStatusFilterDisplay', 'modalStatusFilter', 'modalStatusLists');
     setupDropdown('modalTypeFilterDisplay', 'modalTypeFilter', 'modalTypeLists');
-        // Form validation
-        setupFormValidation();
+    
+    // Initialize room dropdown
+    initRoomDropdown();
+    
+    // Form validation
+    setupFormValidation();
+    
+    // Set today's date as default for request date
+    const requestDate = document.getElementById('request_date');
+    if (requestDate) {
+        requestDate.valueAsDate = new Date();
+    }
+    
+    // Upload box functionality
+    setupUploadBox('problemUploadBox', 'problemFileInput', 'problemFileList');
+    setupUploadBox('billUploadBox', 'billFileInput', 'billFileList');
+    setupUploadBox('clearanceUploadBox', 'clearanceFileInput', 'clearanceFileList');
+});
+
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     // Initialize DataTable
+    //     // $('#form_inputs').DataTable({
+    //     //     responsive: true,
+    //     //     columnDefs: [
+    //     //         { responsivePriority: 1, targets: 0 },
+    //     //         { responsivePriority: 2, targets: 1 },
+    //     //         { responsivePriority: 3, targets: -1 }
+    //     //     ]
+    //     // });
         
-        // Set today's date as default for request date
-        const requestDate = document.getElementById('request_date');
-        if (requestDate) {
-            requestDate.valueAsDate = new Date();
-        }
+    //     // Initialize dropdown functionality
+    //     setupDropdown('statusFilterDisplay', 'statusFilter', 'statusLists');
+    //     setupDropdown('typeFilterDisplay', 'typeFilter', 'typeLists');
+    //      // Initialize dropdown functionality for MODAL dropdowns
+    // setupDropdown('modalStatusFilterDisplay', 'modalStatusFilter', 'modalStatusLists');
+    // setupDropdown('modalTypeFilterDisplay', 'modalTypeFilter', 'modalTypeLists');
+    //     // Form validation
+    //     setupFormValidation();
         
-        // Upload box functionality
-        setupUploadBox('problemUploadBox', 'problemFileInput', 'problemFileList');
-        setupUploadBox('billUploadBox', 'billFileInput', 'billFileList');
-        setupUploadBox('clearanceUploadBox', 'clearanceFileInput', 'clearanceFileList');
-    });
+    //     // Set today's date as default for request date
+    //     const requestDate = document.getElementById('request_date');
+    //     if (requestDate) {
+    //         requestDate.valueAsDate = new Date();
+    //     }
+        
+    //     // Upload box functionality
+    //     setupUploadBox('problemUploadBox', 'problemFileInput', 'problemFileList');
+    //     setupUploadBox('billUploadBox', 'billFileInput', 'billFileList');
+    //     setupUploadBox('clearanceUploadBox', 'clearanceFileInput', 'clearanceFileList');
+    // });
     function setupUploadBox(uploadBoxId, fileInputId, fileListId) {
         const uploadBox = document.getElementById(uploadBoxId);
         const fileInput = document.getElementById(fileInputId);
@@ -1114,7 +1179,34 @@
         document.getElementById('confirmDeleteBtn').href = `<?= base_url('maintenance/delete/') ?>${id}`;
     }
 
-  function resetForm() {
+//   function resetForm() {
+//     const form = document.getElementById('maintenanceForm');
+//     form.reset();
+//     form.classList.remove('was-validated');
+//     $('#requestId').val('');
+//     $('#maintenanceModalLabel').html('<i class="bi bi-plus-circle-fill me-2"></i>New Maintenance Request');
+//     $('#saveButton').html('<i class="bi bi-save me-1"></i> Save Request');
+//     $('#maintenanceForm').attr('action', '<?= base_url('maintenance/store') ?>');
+    
+//     // Clear file lists
+//     const fileLists = ['problemFileList', 'billFileList', 'clearanceFileList'];
+//     fileLists.forEach(id => {
+//         const fileList = document.getElementById(id);
+//         if (fileList) fileList.innerHTML = '';
+//     });
+    
+//     // Set today's date as default
+//     document.getElementById('request_date').valueAsDate = new Date();
+    
+//     // Reset dropdowns (using new modal IDs)
+//     document.getElementById('modalTypeFilterDisplay').value = '';
+//     document.getElementById('modalTypeFilter').value = '';
+//     document.getElementById('modalStatusFilterDisplay').value = '';
+//     document.getElementById('modalStatusFilter').value = '';
+// }
+
+// Update resetForm function to clear room dropdown
+function resetForm() {
     const form = document.getElementById('maintenanceForm');
     form.reset();
     form.classList.remove('was-validated');
@@ -1122,6 +1214,11 @@
     $('#maintenanceModalLabel').html('<i class="bi bi-plus-circle-fill me-2"></i>New Maintenance Request');
     $('#saveButton').html('<i class="bi bi-save me-1"></i> Save Request');
     $('#maintenanceForm').attr('action', '<?= base_url('maintenance/store') ?>');
+    
+    // Clear room dropdown
+    document.getElementById('roomInput').value = '';
+    document.getElementById('roomNo').value = '';
+    document.getElementById('roomTypeDropdown').classList.remove('is-invalid');
     
     // Clear file lists
     const fileLists = ['problemFileList', 'billFileList', 'clearanceFileList'];
@@ -1158,11 +1255,69 @@
         });
     }
 
-    function setupFormValidation() {
+//     function setupFormValidation() {
+//     const form = document.getElementById('maintenanceForm');
+    
+//     form.addEventListener('submit', function(event) {
+//         // Validate dropdowns (using new modal IDs)
+//         const typeFilter = document.getElementById('modalTypeFilter');
+//         const statusFilter = document.getElementById('modalStatusFilter');
+//         const typeDisplay = document.getElementById('modalTypeFilterDisplay');
+//         const statusDisplay = document.getElementById('modalStatusFilterDisplay');
+        
+//         if (!typeFilter.value) {
+//             typeDisplay.classList.add('is-invalid');
+//             event.preventDefault();
+//             event.stopPropagation();
+//         }
+        
+//         if (!statusFilter.value) {
+//             statusDisplay.classList.add('is-invalid');
+//             event.preventDefault();
+//             event.stopPropagation();
+//         }
+        
+//         if (!form.checkValidity()) {
+//             event.preventDefault();
+//             event.stopPropagation();
+//             form.classList.add('was-validated');
+            
+//             // Show validation messages for all invalid fields
+//             const invalidFields = form.querySelectorAll(':invalid');
+//             invalidFields.forEach(field => {
+//                 field.classList.add('is-invalid');
+//             });
+//         }
+//     }, false);
+    
+//     // Add event listeners to remove validation styling when fields are edited
+//     const formFields = form.querySelectorAll('input, select, textarea');
+//     formFields.forEach(field => {
+//         field.addEventListener('input', function() {
+//             this.classList.remove('is-invalid');
+//         });
+//     });
+// }/
+
+// Update form validation to include room dropdown
+function setupFormValidation() {
     const form = document.getElementById('maintenanceForm');
     
     form.addEventListener('submit', function(event) {
-        // Validate dropdowns (using new modal IDs)
+        // Validate room dropdown
+        const roomNo = document.getElementById('roomNo');
+        const roomDropdown = document.getElementById('roomTypeDropdown');
+        
+        if (!roomNo.value) {
+            roomDropdown.classList.add('is-invalid');
+            roomNo.setCustomValidity('Please select a room');
+            event.preventDefault();
+        } else {
+            roomDropdown.classList.remove('is-invalid');
+            roomNo.setCustomValidity('');
+        }
+        
+        // Validate other dropdowns (existing code)
         const typeFilter = document.getElementById('modalTypeFilter');
         const statusFilter = document.getElementById('modalStatusFilter');
         const typeDisplay = document.getElementById('modalTypeFilterDisplay');
@@ -1198,8 +1353,21 @@
     formFields.forEach(field => {
         field.addEventListener('input', function() {
             this.classList.remove('is-invalid');
+            
+            // Special handling for room dropdown
+            if (this.id === 'roomNo' && this.value) {
+                document.getElementById('roomTypeDropdown').classList.remove('is-invalid');
+            }
         });
     });
+    
+    // Add focus event listener to room dropdown input
+    const roomInput = document.getElementById('roomInput');
+    if (roomInput) {
+        roomInput.addEventListener('focus', function() {
+            this.closest('.dropdown').classList.remove('is-invalid');
+        });
+    }
 }
   function editRequest(id) {
     const baseUrlElement = document.getElementById('baseUrl');
@@ -1225,6 +1393,11 @@
             
             // Populate form fields with new modal IDs
     document.getElementById('requestId').value = data.id;
+    // Set room value if available
+            if (data.room_no) {
+                document.getElementById('roomInput').value = data.room_no;
+                document.getElementById('roomNo').value = data.room_no;
+            }
     document.getElementById('maintenance_area').value = data.maintenance_area;
     document.getElementById('requested_by').value = data.requested_by;
     document.getElementById('modalTypeFilterDisplay').value = data.type; // Changed
@@ -1482,6 +1655,27 @@ function setupFilterDropdown(displayId, hiddenId, listId) {
         });
     });
 }
+
+// Initialize room dropdown
+function initRoomDropdown() {
+    const roomInput = document.getElementById('roomInput');
+    const roomItems = document.querySelectorAll('#roomLists .dropdown-item');
+    const roomNo = document.getElementById('roomNo');
+    const roomDropdown = document.getElementById('roomTypeDropdown');
+
+    roomItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            roomInput.value = value;
+            if (roomNo) {
+                roomNo.value = value;
+                roomNo.setCustomValidity('');
+            }
+            roomDropdown.classList.remove('is-invalid');
+        });
+    });
+}
+
   </script>
 </body>
 </html>

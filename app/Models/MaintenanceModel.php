@@ -8,7 +8,7 @@ class MaintenanceModel extends Model
     protected $table = 'maintenance_requests';
     protected $primaryKey = 'id';
     protected $allowedFields = [
-        'maintenance_area', 
+        'maintenance_area','room_no' ,
         'requested_by', 
         'type', 
         'request_date', 

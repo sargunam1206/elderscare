@@ -19,7 +19,7 @@
   <!-- Core Css -->
   <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/css/styles.css" />
 
-  <title>MatDash Bootstrap Admin</title>
+  <!-- <title>MatDash Bootstrap Admin</title> -->
   <style>
     /* ========== Global Theme Colors ========== */
     :root {
@@ -2684,6 +2684,8 @@ function updateLaundrySummary() {
 }
     </script>
 
+
+   
 <!-- Maintenance Stepper Modal -->
 <div class="modal fade" id="maintenanceModal" tabindex="-1" aria-labelledby="maintenanceModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -2731,9 +2733,9 @@ function updateLaundrySummary() {
                                         Please select a month.
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <!-- <div class="col-md-2">
                                     <a class="btn btn-primary mt-4" onclick="chargeFilter();">Filter</a>
-                                </div>
+                                </div> -->
                             </div>
                           
                             <div class="table-responsive mt-3">
@@ -2982,6 +2984,18 @@ function updateLaundrySummary() {
     </div>
 </div>
 
+<style>
+/* Add this to your CSS */
+.nav-link.disabled-tab {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #f8f9fa !important;
+    color: #6c757d !important;
+    border-color: #dee2e6 !important;
+}
+</style>
+
 <script>
 // Global variables
 let currentPaymentMethod = '';
@@ -3006,43 +3020,6 @@ function validatePaidAmount(inputElement) {
         return true;
     }
 }
-
-// function validateStep1() {
-//     const form = document.getElementById('assetForm');
-//     const monthInput = document.getElementById('month');
-//     const paidAmountInputs = document.querySelectorAll('.paid-amount-input');
-    
-//     let isValid = true;
-    
-//     // Validate month
-//     if (!monthInput.value) {
-//         monthInput.classList.add('is-invalid');
-//         isValid = false;
-//     } else {
-//         monthInput.classList.remove('is-invalid');
-//     }
-    
-//     // Validate each paid amount
-//     paidAmountInputs.forEach(input => {
-//         if (!validatePaidAmount(input)) {
-//             isValid = false;
-//         }
-//     });
-    
-//     // If valid, proceed to step 2
-//     if (isValid) {
-//         goToStep(2);
-//         renderPreview();
-//     } else {
-//         // Scroll to first error
-//         const firstError = form.querySelector('.is-invalid');
-//         if (firstError) {
-//             firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-//         }
-//     }
-    
-//     return isValid;
-// }
 
 function validateStep1() {
     const form = document.getElementById('assetForm');
@@ -3092,7 +3069,6 @@ function validateStep1() {
     return isValid;
 }
 
-// Render preview with PDF-like structure
 // Render preview with simplified structure
 function renderPreview() {
     // Render charges summary only
@@ -3124,32 +3100,28 @@ function renderPreview() {
     // Reset confirmation state
     document.getElementById('confirmation-section').style.display = 'block';
     document.getElementById('payment-options1').style.display = 'none';
-    // document.getElementById('next-to-payment').style.display = 'none';
 }
 
-// Confirm charges and show payment options
 // Confirm charges and show payment options
 function confirmCharges() {
     document.getElementById('confirmation-section').style.display = 'none';
     document.getElementById('payment-options1').style.display = 'block';
-    // Remove the next-to-payment button here
 }
 
 // Proceed with payment
 function proceedWithPayment() {
     paymentRequired = true;
     document.getElementById('payment_required').value = 'true';
-    goToStep(3); // go directly to payment page
+    goToStep(3);
 }  
 
 // Proceed without payment
 function proceedWithoutPayment() {
     paymentRequired = false;
     document.getElementById('payment_required').value = 'false';
-    submitCharges(); // directly submit the form
+    submitCharges();
 }
 
-// Payment method validation
 // Payment method validation
 function validatePaymentMethod() {
     if (!paymentRequired) return true;
@@ -3183,6 +3155,7 @@ function validatePaymentMethod() {
     
     return true;
 }
+
 // Combined validation function for final submission
 function validateAndSubmit() {
     // If payment is not required, submit directly
@@ -3192,7 +3165,7 @@ function validateAndSubmit() {
     }
     
     // For payment required, validate the current step (step 3 - payment)
-    const isStep1Valid = validateStep1Silent(); // Validate without redirecting
+    const isStep1Valid = validateStep1Silent();
     const isPaymentValid = validatePaymentMethod();
     
     if (!isStep1Valid) {
@@ -3237,56 +3210,64 @@ function validateStep1Silent() {
     return isValid;
 }
 
+// Add this function to block tab navigation
+function setupTabNavigationRestrictions() {
+    const tabButtons = document.querySelectorAll('#pills-tab .nav-link');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const targetTab = this.getAttribute('data-bs-target');
+            const currentTab = document.querySelector('#pills-tab .nav-link.active').getAttribute('data-bs-target');
+            
+            // If trying to navigate away from step 1 and there are paid charges, prevent it
+            if (currentTab === '#step1' && hasPaidCharges()) {
+                e.preventDefault();
+                e.stopPropagation();
+                showPaidChargesError();
+                return false;
+            }
+            
+            // Additional validation when moving to step 2
+            if (targetTab === '#step2' && !validateStep1Silent()) {
+                e.preventDefault();
+                e.stopPropagation();
+                alert('Please fix the charge amounts before proceeding.');
+                return false;
+            }
+        });
+    });
+}
 
-function validateStep1() {
-    const form = document.getElementById('assetForm');
-    const monthInput = document.getElementById('month');
+// Helper function to check if any charges are paid
+function hasPaidCharges() {
     const paidAmountInputs = document.querySelectorAll('.paid-amount-input');
+    let hasPaid = false;
     
-    let isValid = true;
-    let hasPaidCharges = false;
-    
-    // Validate month
-    if (!monthInput.value) {
-        monthInput.classList.add('is-invalid');
-        isValid = false;
-    } else {
-        monthInput.classList.remove('is-invalid');
-    }
-    
-    // Check if any charges are already paid
     paidAmountInputs.forEach(input => {
         if (input.disabled) {
-            hasPaidCharges = true;
-        }
-        
-        if (!validatePaidAmount(input)) {
-            isValid = false;
+            hasPaid = true;
         }
     });
     
-    // If any charges are paid, show error and prevent proceeding
-    if (hasPaidCharges) {
-        showPaidChargesError();
-        return false; // Stop here, don't proceed to step 2
-    }
-    
-    // If valid, proceed to step 2
-    if (isValid) {
-        goToStep(2);
-        renderPreview();
-    } else {
-        // Scroll to first error
-        const firstError = form.querySelector('.is-invalid');
-        if (firstError) {
-            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-    }
-    
-    return isValid;
+    return hasPaid;
 }
 
-// Add event listeners for real-time validation
+// Function to enable/disable tab navigation
+function updateTabAccessibility(hasPaidCharges) {
+    const tabButtons = document.querySelectorAll('#pills-tab .nav-link:not(#step1-tab)');
+    
+    tabButtons.forEach(button => {
+        if (hasPaidCharges) {
+            // Disable tab navigation
+            button.classList.add('disabled-tab');
+        } else {
+            // Enable tab navigation
+            button.classList.remove('disabled-tab');
+        }
+    });
+}
+
+// Update your existing DOMContentLoaded event listener
 document.addEventListener('DOMContentLoaded', function() {
     // Charge amount validation
     const paidAmountInputs = document.querySelectorAll('.paid-amount-input');
@@ -3302,39 +3283,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Month validation
-    // const monthInput = document.getElementById('month');
-    // monthInput.addEventListener('change', function() {
-    //     if (this.value) {
-    //         this.classList.remove('is-invalid');
-    //     }
-    // });
-    
-// Month validation with paid charges check
-// Month validation - clear errors when month changes
-const monthInput = document.getElementById('month');
-monthInput.addEventListener('change', function() {
-    if (this.value) {
-        this.classList.remove('is-invalid');
-        
-        // Hide and remove any existing error message when month changes
-        const errorDiv = document.getElementById('paid-charges-error');
-        if (errorDiv) {
-            errorDiv.style.opacity = '0';
-            errorDiv.style.transform = 'translateY(-10px)';
-            setTimeout(() => {
-                if (errorDiv.parentNode) {
-                    errorDiv.remove();
-                }
-            }, 300);
+    // Month validation - clear errors when month changes
+    const monthInput = document.getElementById('month');
+    monthInput.addEventListener('change', function() {
+        if (this.value) {
+            this.classList.remove('is-invalid');
+            
+            // Hide and remove any existing error message when month changes
+            const errorDiv = document.getElementById('paid-charges-error');
+            if (errorDiv) {
+                errorDiv.style.opacity = '0';
+                errorDiv.style.transform = 'translateY(-10px)';
+                setTimeout(() => {
+                    if (errorDiv.parentNode) {
+                        errorDiv.remove();
+                    }
+                }, 300);
+            }
+            
+            const guestId = document.getElementById('guest_id_charge').value;
+            if (guestId) {
+                fetchCharges(guestId, this.value);
+            }
+            chargeFilter()
         }
-        
-        const guestId = document.getElementById('guest_id_charge').value;
-        if (guestId) {
-            fetchCharges(guestId, this.value);
-        }
-    }
-});
+    });
     
     // Payment field validation
     const paymentFields = document.querySelectorAll('.payment-field');
@@ -3370,6 +3343,17 @@ monthInput.addEventListener('change', function() {
                     })
                     .catch(err => console.error(err));
             }
+        });
+    });
+    
+    // Add tab navigation restrictions
+    setupTabNavigationRestrictions();
+    
+    // Add click event to maintenance buttons
+    const maintenanceButtons = document.querySelectorAll('[data-bs-target="#maintenanceModal"]');
+    maintenanceButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            openMaintenanceModal(this);
         });
     });
 });
@@ -3452,158 +3436,6 @@ function calculateTotalPaid() {
 }
 
 // Your existing functions for modal handling
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("maintenanceModal").addEventListener("show.bs.modal", function (event) {
-        const button = event.relatedTarget;
-        guestId = button.getAttribute("data-guest-id");
-    });
-
-    // Default select first payment method
-    document.querySelector(".payment-method-cards").click();
-});
-
-// Reset modal when closed
-document.addEventListener("DOMContentLoaded", () => {
-    const modalEl = document.getElementById("maintenanceModal");
-
-    // modalEl.addEventListener("hidden.bs.modal", () => {
-    //     modalEl.querySelectorAll("input").forEach(input => {
-    //         input.value = "";
-    //         input.classList.remove('is-invalid', 'is-valid');
-    //     });
-
-    //     const tbody = modalEl.querySelector("#preview-summary-body");
-    //     if (tbody) tbody.innerHTML = "";
-
-    //     const firstTab = modalEl.querySelector("#step1-tab");
-    //     if (firstTab) {
-    //         const tab = new bootstrap.Tab(firstTab);
-    //         tab.show();
-    //     }
-
-    //     modalEl.querySelectorAll(".payment-method-cards").forEach(c => {
-    //         c.classList.remove("border-success", "active");
-    //     });
-
-    //     modalEl.querySelectorAll(".payment-forms").forEach(f => f.style.display = "none");
-        
-    //     // Reset payment method and requirement
-    //     currentPaymentMethod = '';
-    //     paymentRequired = true;
-    //     document.getElementById('payment_required').value = 'true';
-        
-    //     // Reset preview state
-    //     document.getElementById('confirmation-section').style.display = 'block';
-    //     document.getElementById('payment-options1').style.display = 'none';
-    //     document.getElementById('next-to-payment').style.display = 'none';
-    // });
-modalEl.addEventListener("hidden.bs.modal", () => {
-    modalEl.querySelectorAll("input").forEach(input => {
-        input.value = "";
-        input.classList.remove('is-invalid', 'is-valid');
-        input.disabled = false;
-    });
-
-    // Remove paid badges
-    modalEl.querySelectorAll(".badge.bg-success").forEach(badge => {
-        badge.remove();
-    });
-
-    // Remove error message with animation
-    const errorDiv = document.getElementById('paid-charges-error');
-    if (errorDiv) {
-        errorDiv.style.opacity = '0';
-        errorDiv.style.transform = 'translateY(-10px)';
-        setTimeout(() => {
-            if (errorDiv.parentNode) {
-                errorDiv.remove();
-            }
-        }, 300);
-    }
-
-    const tbody = modalEl.querySelector("#preview-summary-body");
-    if (tbody) tbody.innerHTML = "";
-
-    const firstTab = modalEl.querySelector("#step1-tab");
-    if (firstTab) {
-        const tab = new bootstrap.Tab(firstTab);
-        tab.show();
-    }
-
-    modalEl.querySelectorAll(".payment-method-cards").forEach(c => {
-        c.classList.remove("border-success", "active");
-    });
-
-    modalEl.querySelectorAll(".payment-forms").forEach(f => f.style.display = "none");
-    
-    // Reset payment method and requirement
-    currentPaymentMethod = '';
-    paymentRequired = true;
-    document.getElementById('payment_required').value = 'true';
-    
-    // Reset preview state
-    document.getElementById('confirmation-section').style.display = 'block';
-    document.getElementById('payment-options1').style.display = 'none';
-    
-    // Reset the Next button
-    const nextButton = document.querySelector('#step1 .modal-footer .btn');
-    if (nextButton) {
-        nextButton.disabled = false;
-        nextButton.innerHTML = 'Next →';
-        nextButton.classList.add('btn-primary');
-        nextButton.classList.remove('btn-danger');
-        nextButton.title = 'Proceed to next step';
-        nextButton.removeAttribute('data-has-paid-charges');
-    }
-});
-});
-
-
-// Add this function to your script
-function closeMaintenanceModal() {
-    const modalEl = document.getElementById('maintenanceModal');
-    const modal = bootstrap.Modal.getInstance(modalEl);
-    if (modal) {
-        modal.hide();
-    }
-}
-
-// Update your existing hidden.bs.modal event listener
-document.addEventListener("DOMContentLoaded", () => {
-    const modalEl = document.getElementById("maintenanceModal");
-    
-    // Add click event to close button
-    modalEl.addEventListener('click', function(e) {
-        if (e.target.classList.contains('btn-close') || 
-            e.target.closest('.btn-close')) {
-            closeMaintenanceModal();
-        }
-    });
-
-  });
-
-  // Debug function to check modal state
-// function debugModal() {
-//     const modalEl = document.getElementById('maintenanceModal');
-//     const modal = bootstrap.Modal.getInstance(modalEl);
-    
-//     console.log('Modal Element:', modalEl);
-//     console.log('Modal Instance:', modal);
-//     console.log('Modal Classes:', modalEl.classList);
-    
-//     // Check if close button exists and has correct attributes
-//     const closeBtn = modalEl.querySelector('.btn-close');
-//     console.log('Close Button:', closeBtn);
-//     console.log('Close Button data-bs-dismiss:', closeBtn?.getAttribute('data-bs-dismiss'));
-// }
-
-// // Call this when modal opens to check everything is working
-// document.getElementById('maintenanceModal').addEventListener('show.bs.modal', function() {
-//     console.log('Modal opening...');
-//     debugModal();
-// });
-
-// Your existing charge-related functions remain the same...
 function openMaintenanceModal(button) {
     const row = button.closest('tr');
     currentGuestId = row.getAttribute('data-guest-id');
@@ -3622,32 +3454,6 @@ function openMaintenanceModal(button) {
     
     fetchCharges(currentGuestId, month);
 }
-
-// function openMaintenanceModal(button) {
-//     const row = button.closest('tr');
-//     currentGuestId = row.getAttribute('data-guest-id');
-//     currentGuestType = row.getAttribute('data-guest-type');
-//     currentRoomNo = row.getAttribute('data-room-no');
-    
-//     document.getElementById('guest_id_charge').value = currentGuestId;
-//     document.getElementById('testNo').value = currentGuestId;
-//     document.getElementById('room_no_charge').value = currentRoomNo;
-    
-//     resetChargeAmounts();
-    
-//     const today = new Date();
-//     const month = today.getFullYear() + "-" + String(today.getMonth() + 1).padStart(2, '0');
-//     document.getElementById('month').value = month;
-    
-//     // Show the modal first, then fetch charges
-//     const modal = new bootstrap.Modal(document.getElementById('maintenanceModal'));
-//     modal.show();
-    
-//     // Wait for modal to be fully shown before fetching data
-//     document.getElementById('maintenanceModal').addEventListener('shown.bs.modal', function () {
-//         fetchCharges(currentGuestId, month);
-//     }, { once: true });
-// }
 
 function resetChargeAmounts() {
     const charges = [
@@ -3686,8 +3492,6 @@ function fetchCharges(guestId, month) {
             console.error('Error fetching charges:', error);
         });
 }
-
-
 
 function processChargeData(data) {
     resetChargeAmounts();
@@ -3759,26 +3563,14 @@ function processChargeData(data) {
     // Store paid charges count for validation
     document.getElementById('maintenanceModal').setAttribute('data-paid-charges', paidChargesCount);
     
-    // Update button state but DON'T show error automatically
+    // Update button state and tab accessibility
+    updateTabAccessibility(paidChargesCount > 0);
+    
+    // Update next button state
     if (hasCharges) {
         updateNextButtonState(paidChargesCount > 0);
     }
 }
-
-// function updateNextButtonState(hasPaidCharges) {
-//     const nextButton = document.querySelector('#step1 .btn-primary');
-//     if (nextButton) {
-//         if (hasPaidCharges) {
-//             nextButton.disabled = true;
-//             nextButton.title = 'Cannot proceed - some charges are already paid';
-//             nextButton.innerHTML = 'Cannot Proceed';
-//         } else {
-//             nextButton.disabled = false;
-//             nextButton.title = 'Proceed to next step';
-//             nextButton.innerHTML = 'Next →';
-//         }
-//     }
-// }
 
 function updateNextButtonState(hasPaidCharges) {
     const nextButton = document.querySelector('#step1 .modal-footer .btn');
@@ -3855,13 +3647,108 @@ function chargeFilter() {
     fetchCharges(guestId, month);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const maintenanceButtons = document.querySelectorAll('[data-bs-target="#maintenanceModal"]');
-    maintenanceButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            openMaintenanceModal(this);
+// Add this function to your script
+function closeMaintenanceModal() {
+    const modalEl = document.getElementById('maintenanceModal');
+    const modal = bootstrap.Modal.getInstance(modalEl);
+    if (modal) {
+        modal.hide();
+    }
+}
+
+// Update your existing hidden.bs.modal event listener
+document.addEventListener("DOMContentLoaded", () => {
+    const modalEl = document.getElementById("maintenanceModal");
+    
+    modalEl.addEventListener("hidden.bs.modal", () => {
+        modalEl.querySelectorAll("input").forEach(input => {
+            input.value = "";
+            input.classList.remove('is-invalid', 'is-valid');
+            input.disabled = false;
         });
+
+        // Remove paid badges
+        modalEl.querySelectorAll(".badge.bg-success").forEach(badge => {
+            badge.remove();
+        });
+
+        // Remove error message with animation
+        const errorDiv = document.getElementById('paid-charges-error');
+        if (errorDiv) {
+            errorDiv.style.opacity = '0';
+            errorDiv.style.transform = 'translateY(-10px)';
+            setTimeout(() => {
+                if (errorDiv.parentNode) {
+                    errorDiv.remove();
+                }
+            }, 300);
+        }
+
+        // Reset tab accessibility
+        const tabButtons = modalEl.querySelectorAll('#pills-tab .nav-link');
+        tabButtons.forEach(button => {
+            button.classList.remove('disabled-tab');
+            button.style.pointerEvents = 'auto';
+            button.style.opacity = '1';
+            button.style.cursor = 'pointer';
+        });
+
+        const tbody = modalEl.querySelector("#preview-summary-body");
+        if (tbody) tbody.innerHTML = "";
+
+        const firstTab = modalEl.querySelector("#step1-tab");
+        if (firstTab) {
+            const tab = new bootstrap.Tab(firstTab);
+            tab.show();
+        }
+
+        modalEl.querySelectorAll(".payment-method-cards").forEach(c => {
+            c.classList.remove("border-success", "active");
+        });
+
+        modalEl.querySelectorAll(".payment-forms").forEach(f => f.style.display = "none");
+        
+        // Reset payment method and requirement
+        currentPaymentMethod = '';
+        paymentRequired = true;
+        document.getElementById('payment_required').value = 'true';
+        
+        // Reset preview state
+        document.getElementById('confirmation-section').style.display = 'block';
+        document.getElementById('payment-options1').style.display = 'none';
+        
+        // Reset the Next button
+        const nextButton = document.querySelector('#step1 .modal-footer .btn');
+        if (nextButton) {
+            nextButton.disabled = false;
+            nextButton.innerHTML = 'Next →';
+            nextButton.classList.add('btn-primary');
+            nextButton.classList.remove('btn-danger');
+            nextButton.title = 'Proceed to next step';
+            nextButton.removeAttribute('data-has-paid-charges');
+        }
     });
+
+    // Add click event to close button
+    modalEl.addEventListener('click', function(e) {
+        if (e.target.classList.contains('btn-close') || 
+            e.target.closest('.btn-close')) {
+            closeMaintenanceModal();
+        }
+    });
+});
+
+
+// Ensure renderSummary runs when Summary & Payment tab is clicked
+document.addEventListener("DOMContentLoaded", () => {
+  const step2Tab = document.getElementById("step2-tab");
+  step2Tab.addEventListener("shown.bs.tab", function() {
+    // Only render summary if step 1 is valid
+    if (validateStep1()) {
+      renderPreview();
+    }
+    
+  });
 });
 </script>
 <script>
