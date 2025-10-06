@@ -7,7 +7,7 @@ use App\Models\MaintenanceFileModel;
 use App\Models\RoomsInfoModel;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-use App\Models\RoomsInfoModel;
+// use App\Models\RoomsInfoModel;
 
 
 class Maintenance extends BaseController
@@ -15,6 +15,9 @@ class Maintenance extends BaseController
     protected $db;
     protected $maintenanceModel;
     protected $fileModel;
+      protected $assign;
+    protected $rooms;
+    protected $session;
 
     public function __construct()
     {
@@ -149,8 +152,11 @@ class Maintenance extends BaseController
 
 private function generateExcel($requests)
 {
-    $spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
-    $sheet = $spreadsheet->getActiveSheet();
+    // $spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
+    // $sheet = $spreadsheet->getActiveSheet();
+
+    $spreadsheet = new Spreadsheet();
+$sheet = $spreadsheet->getActiveSheet();
     
     // Headers
     $sheet->setCellValue('A1', 'S.No')
@@ -182,7 +188,9 @@ private function generateExcel($requests)
         $sheet->getColumnDimension($column)->setAutoSize(true);
     }
     
-    $writer = new \PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
+    // $writer = new \PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
+    $writer = new Xlsx($spreadsheet);
+
     $filename = 'maintenance_requests_' . date('Y-m-d') . '.xlsx';
     
     header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');

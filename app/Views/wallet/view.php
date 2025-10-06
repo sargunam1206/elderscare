@@ -743,11 +743,11 @@
       margin-top: 10px;
     }
 
-    #form_inputs_1_wrapper > .dataTables_length,
-    #form_inputs_1_wrapper > .dataTables_filter {
-      display: inline-block;
-      vertical-align: middle;
-      margin-bottom: 10px;
+    /* Section headings smaller */
+    h5,
+    h6 {
+      font-size: 13px !important;
+      margin-bottom: 6px;
     }
 
     #form_inputs_1_wrapper {
@@ -768,45 +768,38 @@
       margin-top: 10px;
     }
 
-    @media (max-width: 768px) {
-      #form_inputs_wrapper,
-      #form_inputs_1_wrapper {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      
-      #form_inputs_wrapper > .dataTables_info,
-      #form_inputs_wrapper > .dataTables_paginate,
-      #form_inputs_1_wrapper > .dataTables_info,
-      #form_inputs_1_wrapper > .dataTables_paginate {
-        width: 100%;
-        text-align: center;
-        margin: 5px 0;
-      }
+    .modal-header,
+    .modal-footer {
+      padding: 6px 10px !important;
+    }
 
-      #form_inputs_wrapper > .dataTables_filter,
-      #form_inputs_1_wrapper > .dataTables_filter {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        margin: 5px 0;
-      }
+    .modal-title {
+      font-size: 13px;
+    }
 
-      #form_inputs_wrapper .dataTables_filter,
-      #form_inputs_1_wrapper .dataTables_filter {
-        margin-left: 0;
-      }
-      
-      #form_inputs_wrapper > .dataTables_length,
-      #form_inputs_1_wrapper > .dataTables_length {
-        display: none !important;
-      }
+    /* Input groups (e.g. icons/buttons inside inputs) */
+    .input-group-text {
+      font-size: 12px;
+      padding: 2px;
+    }
+
+    .nav-pills .nav-link.active {
+      background-color: var(--bs-primary) !important;
+      color: #fff !important;
+    }
+
+    .nav-pills .nav-link.active {
+      background-color: transparent !important;
+      color: var(--primary-green-hover) !important;
+      border-bottom: 3px solid var(--primary-green-hover);
+      border-radius: 0;
+      font-weight: 600;
     }
   </style>
 </head>
 
 <body style="background-color:#EDF7EE;">
-  <?= view('layout/head-PS') ?>
+    <?= view('layout/head-Admin') ?>
 
   <!-- Preloader -->
   <div class="preloader">
@@ -1670,6 +1663,176 @@ Wallet</h4>
 
 
 
+ <script>
+  const roomInput = document.getElementById('room_no');
+  const roomItems = document.querySelectorAll('#roomList .dropdown-item');
+
+  roomItems.forEach(item => {
+    item.addEventListener('click', function () {
+     // const value = this.getAttribute('data-value');
+      const value = this.getAttribute('data-value'); // ID
+        //const label = this.getAttribute('data-label'); // Name
+
+        relationInput.value = value; // Store ID in hidden input
+        
+        //relationInput.textContent = label; // Update dropdown button text
+    });
+  });
+</script>
+
+
+
+
+
+<script>
+function editAsset(asset) {
+  
+ 
+  document.getElementById('myLargeModalLabel').textContent = "Edit Rooms";
+
+  // Update form action to update URL
+  const form = document.getElementById("assetForm");
+  form.action = "<?= base_url('updaterooms') ?>/" + asset.room_id ;
+  
+  // Set all input values
+  document.getElementById("room_no").value = asset.	room_no || '';
+
+  document.getElementById('roomTypeInput').value = asset.room_type || '';
+
+
+
+}
+
+// Reset modal form when closed
+document.getElementById('vertical-center-scroll-modal').addEventListener('hidden.bs.modal', function () {
+    document.getElementById('myLargeModalLabel').textContent = "Add Wallet";
+  const form = document.getElementById('assetForm');
+  form.reset();
+  document.getElementById('addaccessory-container').innerHTML = '';
+  form.action = "<?= base_url('assign'); ?>"; // Reset to "Add" mode
+ 
+}); 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // When service type is selected
+    document.querySelectorAll("#relationLists .dropdown-item").forEach(function(item) {
+        item.addEventListener("click", function() {
+            let selectedService = this.getAttribute("data-value");
+            document.getElementById("service_type_name").value = selectedService;
+
+            // Show category section
+            document.getElementById("category_section").style.display = "block";
+
+            // Clear old categories
+            document.getElementById("categoryList").innerHTML = '<div class="p-2">Loading...</div>';
+
+            // Fetch categories from API
+               fetch(`<?= base_url();?>./roomguest/${selectedService}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    let html = "";
+                    if (data.length > 0) {
+                        data.forEach(function(cat) {
+                            html += `<div class="dropdown-item" data-value="${cat.first_name}">${cat.first_name}</div>`;
+                        });
+                    } else {
+                        html = '<div class="dropdown-item disabled">No guest found</div>';
+                    }
+                    document.getElementById("categoryList").innerHTML = html;
+
+                    // Attach click events for new items
+                    document.querySelectorAll("#categoryList .dropdown-item").forEach(function(catItem) {
+                        catItem.addEventListener("click", function() {
+            
+
+                        
+                        document.getElementById("category_name").value = this.getAttribute("data-value");
+
+   
+
+                        });
+                    });
+                })
+                .catch(error => {
+                    document.getElementById("categoryList").innerHTML = `<div class="dropdown-item disabled">Error loading</div>`;
+                    console.error(error);
+                });
+        });
+    });
+
+    // Search filter for categories
+    document.getElementById("category_name").addEventListener("keyup", function() {
+        let filter = this.value.toLowerCase();
+        document.querySelectorAll("#categoryList .dropdown-item").forEach(function(item) {
+            item.style.display = item.textContent.toLowerCase().includes(filter) ? "" : "none";
+        });
+    });
+
+
+    function attachSearchFilter(inputId, listId) {
+    document.getElementById(inputId).addEventListener("keyup", function() {
+        let filter = this.value.toLowerCase();
+        document.querySelectorAll(`#${listId} .dropdown-item`).forEach(function(item) {
+            item.style.display = item.textContent.toLowerCase().includes(filter) ? "" : "none";
+        });
+    });
+}
+
+    attachSearchFilter("service_type_name", "relationLists"); // Service type search
+    attachSearchFilter("category_name", "categoryList");  
+
+
+
+
+
+
+
+
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("categoryList").addEventListener("click", function(e) {
+        let target = e.target.closest(".dropdown-item");
+        if (target) {
+           
+         
+            let selectedCategory =target.getAttribute("data-value");
+            document.getElementById("category_name").value = selectedCategory;
+           
+
+        
+           
+           //console.log(selectedCategory);
+            // Fetch modes
+            fetch(`/guest_wallet/${selectedCategory}`)
+                .then(response => response.json())
+                
+                .then(data => {
+                   
+                    let html = "";
+                    if (data.length > 0) {
+                        document.getElementById("balance").value = data[0].balance;
+                    } else {
+                       document.getElementById("balance").value = 0;
+                    }
+                    document.getElementById("serviceList").innerHTML = html;
+
+                   
+                })
+                .catch(error => {
+                    document.getElementById("serviceList").innerHTML = `<div class="dropdown-item disabled">Error loading</div>`;
+                    console.error(error);
+                });
+        }
+    });
+});
+
+</script>
 </body>
 
 

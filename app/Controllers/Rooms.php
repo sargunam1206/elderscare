@@ -10,6 +10,9 @@ use App\Models\AdvanceBookingModel;
 class Rooms extends BaseController
 {
     protected $assetTypeModel;
+      protected $assign;
+    protected $rooms;
+    protected $session;
 
     public function __construct()
     {

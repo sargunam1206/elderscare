@@ -12,7 +12,11 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 class Servicebook extends BaseController
 {
     protected $assetTypeModel;
-
+     
+ protected $billModel;
+  protected $servicetype;
+    protected $session;
+  protected $servicebook;
     public function __construct()
     {
         $this->session = \Config\Services::session();

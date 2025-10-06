@@ -1326,14 +1326,14 @@ function setupFormValidation() {
         const roomNo = document.getElementById('roomNo');
         const roomDropdown = document.getElementById('roomTypeDropdown');
         
-        if (!roomNo.value) {
-            roomDropdown.classList.add('is-invalid');
-            roomNo.setCustomValidity('Please select a room');
-            event.preventDefault();
-        } else {
-            roomDropdown.classList.remove('is-invalid');
-            roomNo.setCustomValidity('');
-        }
+        // if (!roomNo.value) {
+        //     roomDropdown.classList.add('is-invalid');
+        //     roomNo.setCustomValidity('Please select a room');
+        //     event.preventDefault();
+        // } else {
+        //     roomDropdown.classList.remove('is-invalid');
+        //     roomNo.setCustomValidity('');
+        // }
         
         // Validate other dropdowns (existing code)
         const typeFilter = document.getElementById('modalTypeFilter');
@@ -1416,6 +1416,11 @@ function setupFormValidation() {
                 document.getElementById('roomInput').value = data.room_no;
                 document.getElementById('roomNo').value = data.room_no;
             }
+
+if (data.room_id) {
+    document.getElementById('roomId').value = data.room_id;    // hidden room_id
+}
+
     document.getElementById('maintenance_area').value = data.maintenance_area;
     document.getElementById('requested_by').value = data.requested_by;
     document.getElementById('modalTypeFilterDisplay').value = data.type; // Changed
