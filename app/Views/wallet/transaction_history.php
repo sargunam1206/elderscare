@@ -611,7 +611,7 @@
     <img src="<?= base_url(); ?>/public/dist/assets/images/logos/favicon.png" alt="loader" class="lds-ripple img-fluid" />
   </div>
 
-  <div class="p-3">
+  <div class="px-3 py-2" style="margin-top: 80px;">
     <div class="card-body">
       <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-account" role="tabpanel" aria-labelledby="pills-account-tab" tabindex="0">
@@ -635,9 +635,13 @@
               <?php endif; ?>
 
               <div class="d-flex justify-content-between align-items-center mb-3">
-                <h5 class="fs-7"><i class="bi bi-clock-history me-2 text-success"></i>Transaction History</h5>
-                <div>
-                  <a href="<?= base_url('wallet'); ?>" class="btn btn-secondary">Back to Wallet</a>
+                <h4 class="" style="font-size: 18px;" ><i class="bi bi-clock-history me-2 text-success"></i>Transaction History</h4>
+                <div> 
+                   <span class="badge bg-light text-success border border-success me-2 fs-1">
+                  <?= count($transactions) ?> Transactions
+                </span>
+
+                  <a href="<?= base_url('wallet'); ?>" class="btn btn-primary">Back to Wallet</a>
                 </div>
               </div>
 

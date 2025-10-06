@@ -211,7 +211,7 @@ $activePage = strtolower($uri->getSegment(1));
           </li>
            <!-- Reports Dropdown -->
 <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle text-white fw-semibold <?= in_array($activePage, ['servicerept', 'chargesrept']) ? 'active' : '' ?>" 
+  <a class="nav-link dropdown-toggle text-white fw-semibold <?= in_array($activePage, ['servicerept', 'chargesrept','walletrept']) ? 'active' : '' ?>" 
      href="#" id="reportsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <i class="bi bi-file-earmark-bar-graph fs-5"></i> Reports
   </a>
@@ -226,6 +226,12 @@ $activePage = strtolower($uri->getSegment(1));
       <a class="dropdown-item <?= ($activePage == 'chargesrept') ? 'active' : '' ?>" 
          href="<?= base_url('chargesrept'); ?>">
         Charges Report
+      </a>
+    </li>
+     <li>
+      <a class="dropdown-item <?= ($activePage == 'walletrept') ? 'active' : '' ?>" 
+         href="<?= base_url('walletrept'); ?>">
+        Wallet Report
       </a>
     </li>
   </ul>

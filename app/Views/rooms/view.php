@@ -943,7 +943,7 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
 Rooms</h4>
               <div>
                  <span class="badge bg-light text-success border border-success me-2 fs-1">
-                  <?= count($rooms) ?>rooms
+                  <?= count($rooms) ?> rooms
                 </span>
                
                  <button type="button" 

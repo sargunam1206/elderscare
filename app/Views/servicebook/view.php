@@ -608,7 +608,7 @@
     <img src="<?= base_url(); ?>/public/dist/assets/images/logos/favicon.png" alt="loader" class="lds-ripple img-fluid" />
   </div>
 
-  <div class="p-3">
+  <div class="px-3 py-2" style="margin-top: 80px;">
     <!-- Service Info Modal -->
     <div class="modal fade" id="vertical-center-scroll-modal" tabindex="-1" aria-labelledby="vertical-center-modal" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
@@ -667,8 +667,11 @@
               <?php endif; ?>
 
               <div class="d-flex justify-content-between align-items-center mb-3">
-                <h5 class="fs-7"><i class="bi bi-list-check me-2 text-success"></i>Service List</h5>
+                <h4 class="" style="font-size: 18px;"><i class="bi bi-list-check me-2 text-success"></i>Service List</h4>
                 <div>
+                   <span class="badge bg-light text-success border border-success me-2 fs-1">
+                  <?= count($guests) ?> Services
+                </span>
                   <a href="<?= base_url('addproduct'); ?>" class="btn btn-primary">View Charges</a>
                 </div>
               </div>

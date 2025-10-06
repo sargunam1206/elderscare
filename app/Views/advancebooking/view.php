@@ -841,7 +841,7 @@ body {
               <h4 class=""  style="font-size:18px;"><i class="bi bi-list-check me-2 text-success"></i>Booking List</h4>
               <div>
                 <span class="badge bg-light text-success border border-success m-2 fs-1">
-                 <?= count($adv) ?> bookings
+                 <?= count($adv) ?> Bookings
                 </span>
                  <a href="<?= base_url('advancebooking'); ?>" class="btn btn-primary btn-sm"><i class="bi bi-plus-circle me-1"></i> New Booking</a>
                 

@@ -302,7 +302,7 @@
                class="btn btn-success">
                 <i class="bi bi-download me-2"></i>Download PDF
             </a>
-            <a href="<?= base_url('wallet/transaction_history') ?>" class="btn btn-secondary">
+            <a href="<?= base_url('wallet/') ?>" class="btn btn-secondary">
                 <i class="bi bi-arrow-left me-2"></i>Back to Transactions
             </a>
         </div>

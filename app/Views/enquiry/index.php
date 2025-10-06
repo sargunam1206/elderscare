@@ -638,7 +638,7 @@
               <h4 class=""  style="font-size:18px;"><i class="bi bi-question-circle me-2 text-success"></i>Enquiries</h4>
               <div>
                 <span class="badge bg-light text-success border border-success me-2 fs-1">
-                  <?= count($enquiries) ?> enquiries
+                  <?= count($enquiries) ?> Enquiries
                 </span>
                 <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" onclick="resetForm()">
                   <i class="bi bi-plus-circle me-1"></i> New Enquiry

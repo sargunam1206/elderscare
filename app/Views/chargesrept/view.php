@@ -260,8 +260,8 @@ body {
 
 /* Badge styling */
 .badge {
-  font-size: 0.9rem !important;
-  padding: 2px 10px;
+ font-size: 0.7rem !important;
+      padding: 4px 10px;
 }
 
 </style>
@@ -761,6 +761,9 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
            <div class="d-flex justify-content-between align-items-center mb-3">
               <h4 class=""  style="font-size:18px;"><i class="bi bi-list-check me-2 text-success"></i>Charges List</h4>
               <div>
+                 <span class="badge bg-light text-success border border-success me-2 fs-1">
+                  <?= count($guests) ?> Charges
+                </span>
                 
   <a href="<?= base_url('addproduct'); ?>" class="btn btn-primary">View Charges</a> 
                 

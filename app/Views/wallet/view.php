@@ -576,8 +576,8 @@
 
     /* Badge styling */
     .badge {
-      font-size: 0.9rem !important;
-      padding: 2px 10px;
+      font-size: 0.7rem !important;
+      padding: 4px 10px;
     }
 
     /* ===== Compact Global Adjustments ===== */
@@ -811,7 +811,7 @@
 <div class="">
         
 
-           <div class="p-3">
+           <div class="px-3 py-2" style="margin-top: 80px;">
            <!-- <ul class="nav nav-pills user-profile-tab" id="pills-tab" role="tablist">
               <li class="nav-item" role="presentation">
                 <button class="nav-link position-relative rounded-0 active d-flex align-items-center justify-content-center bg-transparent fs-3 py-3" id="pills-account-tab" data-bs-toggle="pill" data-bs-target="#pills-account" type="button" role="tab" aria-controls="pills-account" aria-selected="true">
@@ -1335,7 +1335,7 @@ function setupDropdowns() {
       document.getElementById("categoryList").innerHTML = '<div class="p-2">Loading...</div>';
 
       // Fetch categories from API
-      fetch(`/advaya/roomguest/${selectedService}`)
+      fetch(`/advaya/elderscare/roomguest/${selectedService}`)
         .then(response => response.json())
         .then(data => {
           console.log(data);
@@ -1393,7 +1393,7 @@ function setupDropdowns() {
       document.getElementById("category_name").value = selectedCategory;
       
       // Fetch wallet balance
-      fetch(`/advaya/guest_wallet/${selectedCategory}`)
+      fetch(`/advaya/elderscare/guest_wallet/${selectedCategory}`)
         .then(response => response.json())
         .then(data => {
           let html = "";

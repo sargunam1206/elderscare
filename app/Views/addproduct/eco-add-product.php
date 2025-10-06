@@ -3330,7 +3330,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Fetch wallet balance if wallet is selected
             if (method === "wallet" && guestId) {
-                fetch(`/advaya/guest_wallet_id/${guestId}`)
+                fetch(`/advaya/elderscare/guest_wallet_id/${guestId}`)
                     .then(res => res.json())
                     .then(data => {
                         document.getElementById("balance").textContent = "₹" + (data[0]?.balance ?? 0);
@@ -3391,7 +3391,7 @@ function submitCharges() {
     };
 
     // Send data via POST
-    fetch('/advaya/chargepay_store', {
+    fetch('/advaya/elderscare/chargepay_store', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
@@ -3405,7 +3405,7 @@ function submitCharges() {
             if (modal) {
                 modal.hide();
                 // Redirect to charges report page - flashdata will show automatically
-                window.location.href = '/advaya/chargesrept/' + response.guest_id;
+                window.location.href = '/advaya/elderscare/chargesrept/' + response.guest_id;
             }
         } else {
             alert('Error: ' + response.message);
@@ -3475,7 +3475,7 @@ function resetChargeAmounts() {
 }
 
 function fetchCharges(guestId, month) {
-    fetch(`/advaya/guest_charge/${guestId}/${month}`)
+    fetch(`/advaya/elderscare/guest_charge/${guestId}/${month}`)
         .then(response => response.json())
         .then(data => {
             if (data && data.length > 0) {

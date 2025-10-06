@@ -931,7 +931,7 @@
                                         Blocked Rooms</h4>
                                     <div>
                                          <span class="badge bg-light text-success border border-success me-2 fs-1">
-                  <?= count($rooms) ?> rooms
+                  <?= count($rooms) ?> Rooms
                 </span>
                                         <button type="button" class="btn btn-primary mb-1 px-4 fs-4"
                                             data-bs-toggle="modal" data-bs-target="#vertical-center-scroll-modal">

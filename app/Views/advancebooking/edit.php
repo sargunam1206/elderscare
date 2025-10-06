@@ -552,7 +552,7 @@ body {
                 </div>
             </div> -->
                     <div class="d-flex justify-content-between align-items-center mb-3 ">
-                    <h5 class="mb-0 fs-7"><i class="ti ti-calendar-check text-success me-1"></i>Edit Booking</h5>
+                    <h4 class="mb-0 " style="font-size: 18px;"><i class="ti ti-calendar-check text-success me-1"></i>Edit Booking</h4>
                   <div>
                 
                     <a href="<?= base_url('viewadvancebooking'); ?>" class="btn btn-primary">
