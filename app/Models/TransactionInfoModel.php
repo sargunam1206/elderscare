@@ -10,7 +10,7 @@ class TransactionInfoModel extends Model
     protected $primaryKey = 'transaction_id';  // Primary key
 
     protected $allowedFields = [
-      'wallet_id', 'type', 'amount','razorpay_token_id', 'account_info', 'status', 'description', 'created_on'
+      'wallet_id', 'type', 'amount','razorpay_token_id', 'account_info', 'payment_mode','payment_status','reference_id','status', 'description', 'created_on'
     ];
 
     // Enable automatic handling of created, updated, and deleted timestamps

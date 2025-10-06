@@ -576,6 +576,29 @@
         display: none !important;
       }
     }
+/* Add smooth transitions for error messages */
+.alert {
+    transition: all 0.3s ease;
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+    /* Add this to your CSS */
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #bb2d3b;
+    border-color: #b02a37;
+}
   </style>
 </head>
 
@@ -953,6 +976,11 @@
                   <i class="fas fa-check-circle me-2"></i> Confirm Order
                 </button>
               </div> -->
+
+                          <div class="alert alert-info">
+                <i class="fas fa-info-circle me-2"></i>
+                Please review the charges above before proceeding.
+            </div>
                 <div class="d-flex justify-content-center mt-4">
                   <button type="button" class="btn btn-success btn-lg" onclick="confirmOrder()">
                     <i class="fas fa-check-circle me-2"></i> Confirm Order
@@ -2040,13 +2068,10 @@
 //     console.log("Form submitted!");
 // }
 
-
-
-// Function to save laundry order data
 function saveLaundryOrder() {
     console.log("=== Starting saveLaundryOrder() ===");
     
-    // Get payment mode
+    // Get payment mode from modal attribute
     const modalEl = document.getElementById('laundryModal');
     const paymentMode = modalEl.getAttribute('data-payment-mode') || 'cash'; // Default to cash if not set
     
@@ -2068,14 +2093,6 @@ function saveLaundryOrder() {
         console.log("Selected payment mode:", selectedPaymentMode);
         
         // Validate payment forms based on selected method
-        // if (selectedPaymentMode === 'cash') {
-        //     const billNo = document.querySelector('#laundry-cash-form input[name="bill_no"]')?.value;
-        //     if (!billNo) {
-        //         alert('Please enter a bill number for cash payment');
-        //         return;
-        //     }
-        // } else 
-        
         if (selectedPaymentMode === 'upi') {
             const upiTrans = document.querySelector('#laundry-upi-form input[name="upi_trans"]')?.value;
             if (!upiTrans) {
@@ -2174,9 +2191,21 @@ function saveLaundryOrder() {
         'room_no_data': roomNo,
         'service_type': serviceType,
         'service_type_id': serviceTypeId,
-        'amount_data': totalAmount.replace('₹', ''),
-        'payment_mode': paymentMode  // Use the determined payment mode
+        'amount_data': totalAmount.replace('₹', '')
     };
+    
+    // Handle payment mode and status based on selection
+    if (paymentMode === 'no_payment') {
+        // For "no payment" option - empty payment mode and pending status
+        basicFields['payment_mode'] = '';
+        basicFields['payment_status'] = 'pending';
+        console.log("No payment selected - setting payment_mode: '', payment_status: 'pending'");
+    } else {
+        // For regular payment methods
+        basicFields['payment_mode'] = paymentMode;
+        basicFields['payment_status'] = 'success'; // Or whatever your default success status is
+        console.log("Payment method selected - setting payment_mode:", paymentMode, "payment_status: 'success'");
+    }
     
     console.log("Basic form fields:", basicFields);
     
@@ -2201,19 +2230,6 @@ function saveLaundryOrder() {
     // Add payment method specific data (only if not "no_payment")
     if (paymentMode !== 'no_payment') {
         switch(paymentMode) {
-            // case 'cash':
-            //     const billNo = document.querySelector('#laundry-cash-form input[name="bill_no"]')?.value;
-            //     console.log("Cash payment - billNo:", billNo);
-            //     if (billNo) {
-            //         let input = document.createElement("input");
-            //         input.type = "hidden";
-            //         input.name = "bill_no";
-            //         input.value = billNo;
-            //         form.appendChild(input);
-            //         console.log("Added bill_no field:", billNo);
-            //     }
-            //     break;
-                
             case 'upi':
                 const upiTrans = document.querySelector('#laundry-upi-form input[name="upi_trans"]')?.value;
                 console.log("UPI payment - upiTrans:", upiTrans);
@@ -2444,12 +2460,34 @@ function confirmOrder() {
 
 
 // Function to handle "Submit Without Payment"
+// function submitWithoutPayment() {
+//     console.log("Submit without payment clicked");
+    
+//     // Set payment mode to "no payment"
+//     const modalEl = document.getElementById('laundryModal');
+//     modalEl.setAttribute('data-payment-mode', 'no_payment');
+    
+//     // Call the save function
+//     saveLaundryOrder();
+// }
+
+// Function to handle "Submit Without Payment"
 function submitWithoutPayment() {
     console.log("Submit without payment clicked");
     
-    // Set payment mode to "no payment"
+    // Set payment mode to empty and payment status to pending
     const modalEl = document.getElementById('laundryModal');
     modalEl.setAttribute('data-payment-mode', 'no_payment');
+    
+    // Clear any selected payment method
+    document.querySelectorAll('#laundryModal .payment-method-card').forEach(c => {
+        c.classList.remove('border-success');
+    });
+    
+    // Hide all payment forms
+    document.querySelectorAll('#laundryModal .payment-form').forEach(f => {
+        f.style.display = 'none';
+    });
     
     // Call the save function
     saveLaundryOrder();
@@ -2646,612 +2684,927 @@ function updateLaundrySummary() {
 }
     </script>
 
-
 <!-- Maintenance Stepper Modal -->
 <div class="modal fade" id="maintenanceModal" tabindex="-1" aria-labelledby="maintenanceModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered ">
-      <div class="modal-content">
-        <form method="post" id="assetForm" enctype="multipart/form-data" class="needs-validation" novalidate>
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
 
-          <!-- Stepper Navigation -->
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <!-- Stepper Navigation -->
-            <ul class="nav nav-pills flex-grow-1 justify-content-between" id="pills-tab" role="tablist">
-              <li class="nav-item flex-fill text-center">
-                <button class="nav-link active w-100" id="step1-tab" data-bs-toggle="pill" data-bs-target="#step1" type="button">
-                  Charges
-                </button>
-              </li>
-              <li class="nav-item flex-fill text-center">
-                <button class="nav-link w-100" id="step2-tab" data-bs-toggle="pill" data-bs-target="#step2" type="button">
-                  Summary & Payment
-                </button>
-              </li>
-            </ul>
+        
+            <form method="post" id="assetForm" enctype="multipart/form-data" class="needs-validation" novalidate>
 
-            <!-- Close button -->
-            <button type="button" class="btn-close m-3" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
+                <!-- Stepper Navigation -->
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <!-- Stepper Navigation -->
+                    <ul class="nav nav-pills flex-grow-1 justify-content-between" id="pills-tab" role="tablist">
+                        <li class="nav-item flex-fill text-center">
+                            <button class="nav-link active w-100" id="step1-tab" data-bs-toggle="pill" data-bs-target="#step1" type="button">
+                                Charges
+                            </button>
+                        </li>
+                        <li class="nav-item flex-fill text-center">
+                            <button class="nav-link w-100" id="step2-tab" data-bs-toggle="pill" data-bs-target="#step2" type="button">
+                                Preview
+                            </button>
+                        </li>
+                        <li class="nav-item flex-fill text-center">
+                            <button class="nav-link w-100" id="step3-tab" data-bs-toggle="pill" data-bs-target="#step3" type="button">
+                                Payment
+                            </button>
+                        </li>
+                    </ul>
 
-          <div class="tab-content">
+                    <!-- Close button -->
+                    <button type="button" class="btn-close m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    
+                </div>
 
-            <!-- STEP 1: Charges Table -->
-            <div class="tab-pane fade show active p-2" id="step1">
-              <div class="modal-body">
-                <div class="row align-items-end px-2">
-                  <div class="col-md-3">
-                    <label class="form-label fs-3">Month</label>
-                    <input type="month" class="form-control" id="month" name="month" required />
-                    <div class="invalid-feedback">
-                      Please select a month.
+                <div class="tab-content">
+
+                    <!-- STEP 1: Services Table -->
+                    <div class="tab-pane fade show active p-2" id="step1">
+                        <div class="modal-body">
+                            <div class="row align-items-end px-2">
+                                <div class="col-md-3">
+                                    <label class="form-label fs-3">Month</label>
+                                    <input type="month" class="form-control" id="month" name="month" required />
+                                    <div class="invalid-feedback">
+                                        Please select a month.
+                                    </div>
+                                </div>
+                                <!-- <div class="col-md-2">
+                                    <a class="btn btn-primary mt-4" onclick="chargeFilter();">Filter</a>
+                                </div> -->
+                            </div>
+                          
+                            <div class="table-responsive mt-3">
+                                <table class="table table-striped table-bordered w-100">
+                                    <thead>
+                                        <tr>
+                                            <th>Charges Type</th>
+                                            <th>Amount</th>
+                                            <th>Paid Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cartBody">
+                                        <tr>
+                                            <td>Maintenance</td>
+                                            <td>
+                                                <p id="main_amount">0</p>
+                                                <input type="hidden" id="main_amount_act" name="main_amount_act" value="0">
+                                            </td>
+                                            <td>
+                                                <div class="position-relative">
+                                                    <input class="form-control paid-amount-input" style="height:30px;" 
+                                                           id="main_paidamount" name="main_paidamount" type="number" 
+                                                           min="0" step="0.01" data-charge-type="main" required>
+                                                    <div class="invalid-feedback">
+                                                        Paid amount must equal the charge amount.
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Internet</td>
+                                            <td>
+                                                <p id="internet_amount">0</p>
+                                                <input type="hidden" id="internet_amount_act" name="internet_amount_act" value="0">
+                                            </td>
+                                            <td>
+                                                <div class="position-relative">
+                                                    <input class="form-control paid-amount-input" style="height:30px;" 
+                                                           id="internet_paidamount" name="internet_paidamount" type="number" 
+                                                           min="0" step="0.01" data-charge-type="internet" required>
+                                                    <div class="invalid-feedback">
+                                                        Paid amount must equal the charge amount.
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>EB Charge</td>
+                                            <td>
+                                                <p id="eb_amount">0</p>
+                                                <input type="hidden" id="eb_amount_act" name="eb_amount_act" value="0">
+                                            </td>
+                                            <td>
+                                                <div class="position-relative">
+                                                    <input class="form-control paid-amount-input" style="height:30px;" 
+                                                           id="eb_paidamount" name="eb_paidamount" type="number" 
+                                                           min="0" step="0.01" data-charge-type="eb" required>
+                                                    <div class="invalid-feedback">
+                                                        Paid amount must equal the charge amount.
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Room Service</td>
+                                            <td>
+                                                <p id="room_amount">0</p>
+                                                <input type="hidden" id="room_amount_act" name="room_amount_act" value="0">
+                                            </td>
+                                            <td>
+                                                <div class="position-relative">
+                                                    <input class="form-control paid-amount-input" style="height:30px;" 
+                                                           id="room_paidamount" name="room_paidamount" type="number" 
+                                                           min="0" step="0.01" data-charge-type="room" required>
+                                                    <div class="invalid-feedback">
+                                                        Paid amount must equal the charge amount.
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Others</td>
+                                            <td>
+                                                <p id="other_amount">0</p>
+                                                <input type="hidden" id="other_amount_act" name="other_amount_act" value="0">
+                                            </td>
+                                            <td>
+                                                <div class="position-relative">
+                                                    <input class="form-control paid-amount-input" style="height:30px;" 
+                                                           id="other_paidamount" name="other_paidamount" type="number" 
+                                                           min="0" step="0.01" data-charge-type="other" required>
+                                                    <div class="invalid-feedback">
+                                                        Paid amount must equal the charge amount.
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="modal-footer border-top justify-content-end">
+                                <button type="button" class="btn btn-primary" onclick="validateStep1()">Next →</button>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-md-2">
-                    <a class="btn btn-primary mt-4" onclick="chargeFilter();">Filter</a>
-                  </div>
-                </div>
-              
-                <div class="table-responsive mt-3">
-                  <table class="table table-striped table-bordered w-100">
-                    <thead>
-                      <tr>
-                        <th>Charges Type</th>
-                        <th>Amount</th>
-                        <th>Paid Amount</th>
-                      </tr>
-                    </thead>
-                    <tbody id="cartBody">
-                      <tr>
-                        <td>Maintenance</td>
-                        <td>
-                          <p id="main_amount">0</p>
-                          <input type="hidden" id="main_amount_act" name="main_amount_act" value="0">
-                        </td>
-                        <td>
-                          <div class="position-relative">
-                            <input class="form-control paid-amount-input" style="height:30px;" 
-                                   id="main_paidamount" name="main_paidamount" type="number" 
-                                   min="0" step="0.01" data-charge-type="main" required>
-                            <div class="invalid-feedback">
-                              Paid amount must equal the charge amount.
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Internet</td>
-                        <td>
-                          <p id="internet_amount">0</p>
-                          <input type="hidden" id="internet_amount_act" name="internet_amount_act" value="0">
-                        </td>
-                        <td>
-                          <div class="position-relative">
-                            <input class="form-control paid-amount-input" style="height:30px;" 
-                                   id="internet_paidamount" name="internet_paidamount" type="number" 
-                                   min="0" step="0.01" data-charge-type="internet" required>
-                            <div class="invalid-feedback">
-                              Paid amount must equal the charge amount.
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>EB Charge</td>
-                        <td>
-                          <p id="eb_amount">0</p>
-                          <input type="hidden" id="eb_amount_act" name="eb_amount_act" value="0">
-                        </td>
-                        <td>
-                          <div class="position-relative">
-                            <input class="form-control paid-amount-input" style="height:30px;" 
-                                   id="eb_paidamount" name="eb_paidamount" type="number" 
-                                   min="0" step="0.01" data-charge-type="eb" required>
-                            <div class="invalid-feedback">
-                              Paid amount must equal the charge amount.
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Room Service</td>
-                        <td>
-                          <p id="room_amount">0</p>
-                          <input type="hidden" id="room_amount_act" name="room_amount_act" value="0">
-                        </td>
-                        <td>
-                          <div class="position-relative">
-                            <input class="form-control paid-amount-input" style="height:30px;" 
-                                   id="room_paidamount" name="room_paidamount" type="number" 
-                                   min="0" step="0.01" data-charge-type="room" required>
-                            <div class="invalid-feedback">
-                              Paid amount must equal the charge amount.
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Others</td>
-                        <td>
-                          <p id="other_amount">0</p>
-                          <input type="hidden" id="other_amount_act" name="other_amount_act" value="0">
-                        </td>
-                        <td>
-                          <div class="position-relative">
-                            <input class="form-control paid-amount-input" style="height:30px;" 
-                                   id="other_paidamount" name="other_paidamount" type="number" 
-                                   min="0" step="0.01" data-charge-type="other" required>
-                            <div class="invalid-feedback">
-                              Paid amount must equal the charge amount.
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
 
-                <div class="modal-footer border-top justify-content-end">
-                  <button type="button" class="btn btn-primary" onclick="validateStep1()">Next →</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- STEP 2: Summary + Payment -->
-            <div class="tab-pane fade" id="step2">
-              <div class="p-2 shadow-sm">
-                <div class="modal-body">
-                  <!-- Summary Table -->
-                  <div class="table-responsive mb-4">
-                    <table class="table table-bordered align-middle" id="payment-summary-table">
-                      <thead class="table-light">
+<!-- STEP 2: Preview Tab -->
+<div class="tab-pane fade" id="step2">
+    <div class="p-2 shadow-sm">
+        <div class="modal-body">
+            <!-- Charges Summary -->
+            <div class="table-responsive mb-4">
+                <table class="table table-bordered" id="preview-summary-table">
+                    <thead class="table-light">
                         <tr>
-                          <th>Charge</th>
-                          <th class="text-end">Amount</th>
+                            <th>Description</th>
+                            <th class="text-end">Amount (₹)</th>
                         </tr>
-                      </thead>
-                      <tbody id="payment-summary-body"></tbody>
-                    </table>
-                  </div>
-
-                  <!-- Payment Methods -->
-                  <h5 class="mb-3">Select Payment Method</h5>
-                  <div class="row g-3 mb-4">
-                    <div class="col-md-4">
-                      <div class="card payment-method-cards p-3" data-method="cash">
-                        💵 Cash Payment <br><small class="text-muted">Pay at reception</small>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card payment-method-cards p-3" data-method="upi">
-                        📱 UPI Payment <br><small class="text-muted">Pay via UPI apps</small>
-                      </div>
-                    </div>
-                    <!-- <div class="col-md-6">
-                      <div class="card payment-method-cards p-3" data-method="card">
-                        💳 Card Payment <br><small class="text-muted">Credit/Debit Card</small>
-                      </div>
-                    </div> -->
-                    <div class="col-md-4">
-                      <div class="card payment-method-cards p-3" data-method="wallet">
-                        🏨 Wallet <br><small class="text-muted">Use credits</small>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Payment Forms -->
-                  <div id="payment-forms">
-                    <!-- <div id="cash-forms" class="payment-forms" style="display:none">
-                      <label class="form-label">Bill No <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control payment-field" name="bill_no" 
-                             placeholder="Enter Bill No" data-required="true" required>
-                      <div class="invalid-feedback">Please enter a bill number.</div>
-                    </div> -->
-
-                    <div id="upi-forms" class="payment-forms" style="display:none">
-                      <label class="form-label">Transaction ID <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control payment-field" name="upi_trans" 
-                             placeholder="yourname@upi" data-required="true" required>
-                      <div class="invalid-feedback">Please enter a UPI transaction ID.</div>
-                    </div>
-
-                    <div id="card-forms" class="payment-forms" style="display:none">
-                      <label class="form-label">Transaction ID <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control payment-field" name="card_trans" 
-                             placeholder="Enter Transaction ID" data-required="true" required>
-                      <div class="invalid-feedback">Please enter a card transaction ID.</div>
-                    </div>
-
-                    <div id="wallet-forms" class="payment-forms" style="display:none">
-                      <div class="alert alert-info">
-                        <i class="fas fa-info-circle me-2"></i>
-                        Current balance: <strong id="balance">₹0</strong>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <!-- Stepper Navigation -->
-                  <div class="d-flex justify-content-between mt-5">
-                    <button type="button" class="btn btn-secondary" onclick="goToStep(1)">
-                      <i class="fas fa-arrow-left me-2"></i> Back
-                    </button>
-                    <button type="button" class="btn btn-success" onclick="validateAndSubmit()">
-                      <i class="fas fa-check-circle me-2"></i> Submit
-                    </button>
-                  </div>
-                </div>
-              </div>
+                    </thead>
+                    <tbody id="preview-summary-body">
+                        <!-- Charges will be populated here -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th class="text-end">Total Amount:</th>
+                            <th class="text-end" id="preview-total">₹0.00</th>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
-
-            <!-- STEP 3: Payment Success -->
-            <div class="tab-pane fade text-center" id="step3">
-              <div class="p-4">
-                <i class="bi bi-check-circle text-success" style="font-size: 3rem;"></i>
-                <h4 class="mt-3">Payment Successful!</h4>
-                <p>Your maintenance charges have been submitted successfully.</p>
-              </div>
+            
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle me-2"></i>
+                Please review the charges above before proceeding.
             </div>
+            
+          <!-- Confirmation Buttons -->
+<div id="confirmation-section" class="text-center mt-4">
+    <button type="button" class="btn btn-success btn-lg" onclick="confirmCharges()">
+        <i class="fas fa-check-circle me-2"></i>Confirm Charges
+    </button>
+</div>
 
-          </div> <!-- end tab-content -->
-
-          <input type="hidden" id="charge_id" name="charge_id">
-          <input type="hidden" id="guest_id_charge" name="guest_id_charge">
-          <input type="hidden" id="testNo" name="testNo">
-          <input type="hidden" id="room_no_charge" name="room_no">
-
-        </form>
-      </div>
+<!-- Payment Options -->
+<div id="payment-options1" class="text-center mt-4" style="display:none;">
+    <!-- <h5 class="mb-3">How would you like to proceed?</h5> -->
+    <div class="d-flex justify-content-center gap-3">
+        <button type="button" class="btn btn-primary btn-lg" onclick="proceedWithPayment()">
+            <i class="fas fa-credit-card me-2"></i>Proceed with Payment
+        </button>
+        <!-- <button type="button" class="btn btn-outline-secondary btn-lg" onclick="proceedWithoutPayment()">
+            <i class="fas fa-file-invoice me-2"></i>Proceed without Payment
+        </button> -->
     </div>
-  </div>
+</div>
+
+<!-- Hidden input to track payment -->
+<input type="hidden" id="payment_required" name="payment_required" value="">
+
+            
+            <!-- Stepper Navigation -->
+            <div class="d-flex justify-content-between mt-5">
+                <button type="button" class="btn btn-secondary" onclick="goToStep(1)">
+                    <i class="fas fa-arrow-left me-2"></i> Back
+                </button>
+                <!-- <button type="button" class="btn btn-primary" id="next-to-payment" style="display: none;" onclick="goToStep(3)">
+                    Next to Payment <i class="fas fa-arrow-right ms-2"></i>
+                </button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <!-- STEP 3: Payment Tab -->
+                    <div class="tab-pane fade" id="step3">
+                        <div class="p-2 shadow-sm">
+                            <div class="modal-body">
+                                <!-- Payment Methods -->
+                                <h5 class="mb-3">Select Payment Method</h5>
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-4">
+                                        <div class="card payment-method-cards p-3" data-method="cash">
+                                            💵 Cash Payment <br><small class="text-muted">Pay at reception</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card payment-method-cards p-3" data-method="upi">
+                                            📱 UPI Payment <br><small class="text-muted">Pay via UPI apps</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card payment-method-cards p-3" data-method="wallet">
+                                            🏨 Wallet <br><small class="text-muted">Use credits</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Payment Forms -->
+                                <div id="payment-forms">
+                                    <div id="upi-forms" class="payment-forms" style="display:none">
+                                        <label class="form-label">Transaction ID <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control payment-field" name="upi_trans" 
+                                               placeholder="yourname@upi" data-required="true" required>
+                                        <div class="invalid-feedback">Please enter a UPI transaction ID.</div>
+                                    </div>
+
+                                    <div id="card-forms" class="payment-forms" style="display:none">
+                                        <label class="form-label">Transaction ID <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control payment-field" name="card_trans" 
+                                               placeholder="Enter Transaction ID" data-required="true" required>
+                                        <div class="invalid-feedback">Please enter a card transaction ID.</div>
+                                    </div>
+
+                                    <div id="wallet-forms" class="payment-forms" style="display:none">
+                                        <div class="alert alert-info">
+                                            <i class="fas fa-info-circle me-2"></i>
+                                            Current balance: <strong id="balance">₹0</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- Stepper Navigation -->
+                                <div class="d-flex justify-content-between mt-5">
+                                    <button type="button" class="btn btn-secondary" onclick="goToStep(2)">
+                                        <i class="fas fa-arrow-left me-2"></i> Back
+                                    </button>
+                                    <button type="button" class="btn btn-success" onclick="validateAndSubmit()">
+                                        <i class="fas fa-check-circle me-2"></i> Submit Payment
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- end tab-content -->
+
+                <input type="hidden" id="charge_id" name="charge_id">
+                <input type="hidden" id="guest_id_charge" name="guest_id_charge">
+                <input type="hidden" id="testNo" name="testNo">
+                <input type="hidden" id="room_no_charge" name="room_no">
+                <input type="hidden" id="payment_required" name="payment_required" value="true">
+
+            </form>
+        </div>
+    </div>
+</div>
 
 <script>
 // Global variables
 let currentPaymentMethod = '';
 let guestId = null;
+let paymentRequired = true;
 
 // Validation functions
 function validatePaidAmount(inputElement) {
-  const chargeType = inputElement.getAttribute('data-charge-type');
-  const paidAmount = parseFloat(inputElement.value) || 0;
-  const actualAmount = parseFloat(document.getElementById(`${chargeType}_amount_act`).value) || 0;
-  
-  // Clear previous validation
-  inputElement.classList.remove('is-invalid', 'is-valid');
-  
-  // Validate if paid amount equals actual amount
-  if (paidAmount !== actualAmount) {
-    inputElement.classList.add('is-invalid');
-    return false;
-  } else {
-    inputElement.classList.add('is-valid');
-    return true;
-  }
+    const chargeType = inputElement.getAttribute('data-charge-type');
+    const paidAmount = parseFloat(inputElement.value) || 0;
+    const actualAmount = parseFloat(document.getElementById(`${chargeType}_amount_act`).value) || 0;
+    
+    // Clear previous validation
+    inputElement.classList.remove('is-invalid', 'is-valid');
+    
+    // Validate if paid amount equals actual amount
+    if (paidAmount !== actualAmount) {
+        inputElement.classList.add('is-invalid');
+        return false;
+    } else {
+        inputElement.classList.add('is-valid');
+        return true;
+    }
 }
 
+// function validateStep1() {
+//     const form = document.getElementById('assetForm');
+//     const monthInput = document.getElementById('month');
+//     const paidAmountInputs = document.querySelectorAll('.paid-amount-input');
+    
+//     let isValid = true;
+    
+//     // Validate month
+//     if (!monthInput.value) {
+//         monthInput.classList.add('is-invalid');
+//         isValid = false;
+//     } else {
+//         monthInput.classList.remove('is-invalid');
+//     }
+    
+//     // Validate each paid amount
+//     paidAmountInputs.forEach(input => {
+//         if (!validatePaidAmount(input)) {
+//             isValid = false;
+//         }
+//     });
+    
+//     // If valid, proceed to step 2
+//     if (isValid) {
+//         goToStep(2);
+//         renderPreview();
+//     } else {
+//         // Scroll to first error
+//         const firstError = form.querySelector('.is-invalid');
+//         if (firstError) {
+//             firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+//         }
+//     }
+    
+//     return isValid;
+// }
+
 function validateStep1() {
-  const form = document.getElementById('assetForm');
-  const monthInput = document.getElementById('month');
-  const paidAmountInputs = document.querySelectorAll('.paid-amount-input');
-  
-  let isValid = true;
-  
-  // Validate month
-  if (!monthInput.value) {
-    monthInput.classList.add('is-invalid');
-    isValid = false;
-  } else {
-    monthInput.classList.remove('is-invalid');
-  }
-  
-  // Validate each paid amount
-  paidAmountInputs.forEach(input => {
-    if (!validatePaidAmount(input)) {
-      isValid = false;
+    const form = document.getElementById('assetForm');
+    const monthInput = document.getElementById('month');
+    const paidAmountInputs = document.querySelectorAll('.paid-amount-input');
+    
+    let isValid = true;
+    let hasPaidCharges = false;
+    
+    // Validate month
+    if (!monthInput.value) {
+        monthInput.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        monthInput.classList.remove('is-invalid');
     }
-  });
-  
-  // If valid, proceed to step 2
-  if (isValid) {
-    goToStep(2);
-    renderSummary();
-  } else {
-    // Scroll to first error
-    const firstError = form.querySelector('.is-invalid');
-    if (firstError) {
-      firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    
+    // Check if any charges are already paid
+    paidAmountInputs.forEach(input => {
+        if (input.disabled) {
+            hasPaidCharges = true;
+        }
+        
+        if (!validatePaidAmount(input)) {
+            isValid = false;
+        }
+    });
+    
+    // If any charges are paid, show error and prevent proceeding
+    if (hasPaidCharges) {
+        showPaidChargesError();
+        return false;
     }
-  }
-  
-  return isValid;
+    
+    // If valid, proceed to step 2
+    if (isValid) {
+        goToStep(2);
+        renderPreview();
+    } else {
+        // Scroll to first error
+        const firstError = form.querySelector('.is-invalid');
+        if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+    
+    return isValid;
+}
+
+// Render preview with PDF-like structure
+// Render preview with simplified structure
+function renderPreview() {
+    // Render charges summary only
+    const tbody = document.getElementById("preview-summary-body");
+    tbody.innerHTML = "";
+
+    let total = 0;
+    const charges = [
+        { label: "Maintenance", val: document.getElementById("main_paidamount").value },
+        { label: "Internet", val: document.getElementById("internet_paidamount").value },
+        { label: "EB Charge", val: document.getElementById("eb_paidamount").value },
+        { label: "Room Service", val: document.getElementById("room_paidamount").value },
+        { label: "Others", val: document.getElementById("other_paidamount").value }
+    ];
+
+    charges.forEach(c => {
+        const amount = parseFloat(c.val) || 0;
+        if (amount > 0) {
+            const row = document.createElement("tr");
+            row.innerHTML = `<td>${c.label}</td><td class="text-end">₹${amount.toFixed(2)}</td>`;
+            tbody.appendChild(row);
+            total += amount;
+        }
+    });
+
+    // Update total
+    document.getElementById('preview-total').textContent = `₹${total.toFixed(2)}`;
+    
+    // Reset confirmation state
+    document.getElementById('confirmation-section').style.display = 'block';
+    document.getElementById('payment-options1').style.display = 'none';
+    // document.getElementById('next-to-payment').style.display = 'none';
+}
+
+// Confirm charges and show payment options
+// Confirm charges and show payment options
+function confirmCharges() {
+    document.getElementById('confirmation-section').style.display = 'none';
+    document.getElementById('payment-options1').style.display = 'block';
+    // Remove the next-to-payment button here
+}
+
+// Proceed with payment
+function proceedWithPayment() {
+    paymentRequired = true;
+    document.getElementById('payment_required').value = 'true';
+    goToStep(3); // go directly to payment page
+}  
+
+// Proceed without payment
+function proceedWithoutPayment() {
+    paymentRequired = false;
+    document.getElementById('payment_required').value = 'false';
+    submitCharges(); // directly submit the form
 }
 
 // Payment method validation
+// Payment method validation
 function validatePaymentMethod() {
-  const activeMethod = document.querySelector('.payment-method-cards.active');
-  if (!activeMethod) {
-    alert('Please select a payment method.');
-    return false;
-  }
-  
-  const method = activeMethod.dataset.method;
-  currentPaymentMethod = method;
-  
-  // For wallet, no additional validation needed
-  if (method === 'wallet') {
+    if (!paymentRequired) return true;
+    
+    const activeMethod = document.querySelector('.payment-method-cards.active');
+    if (!activeMethod) {
+        alert('Please select a payment method.');
+        return false;
+    }
+    
+    const method = activeMethod.dataset.method;
+    currentPaymentMethod = method;
+    
+    // For cash and wallet, no additional validation needed
+    if (method === 'cash' || method === 'wallet') {
+        return true;
+    }
+    
+    // For UPI, validate the required field
+    if (method === 'upi') {
+        const input = document.querySelector('#upi-forms .payment-field');
+        if (!input.value.trim()) {
+            input.classList.add('is-invalid');
+            input.focus();
+            return false;
+        } else {
+            input.classList.remove('is-invalid');
+            return true;
+        }
+    }
+    
     return true;
-  }
-  
-  // For other methods, validate the required field
-  const form = document.getElementById(`${method}-forms`);
-  const input = form.querySelector('.payment-field');
-  
-  if (!input.value.trim()) {
-    input.classList.add('is-invalid');
-    input.focus();
-    return false;
-  } else {
-    input.classList.remove('is-invalid');
-    return true;
-  }
 }
-
 // Combined validation function for final submission
 function validateAndSubmit() {
-  // First validate step 1 (charges)
-  if (!validateStep1()) {
-    goToStep(1);
-    return;
-  }
-  
-  // Then validate payment method
-  if (!validatePaymentMethod()) {
-    return;
-  }
-  
-  // If all validations pass, submit the form
-  submitCharges();
+    // If payment is not required, submit directly
+    if (!paymentRequired) {
+        submitCharges();
+        return;
+    }
+    
+    // For payment required, validate the current step (step 3 - payment)
+    const isStep1Valid = validateStep1Silent(); // Validate without redirecting
+    const isPaymentValid = validatePaymentMethod();
+    
+    if (!isStep1Valid) {
+        // Show error and go to step 1 if charges are invalid
+        alert('Please fix the charge amounts before proceeding.');
+        goToStep(1);
+        return;
+    }
+    
+    if (!isPaymentValid) {
+        // Stay on step 3 if payment validation fails
+        return;
+    }
+    
+    // If all validations pass, submit the form
+    submitCharges();
+}
+
+// Silent validation for step 1 (without redirecting)
+function validateStep1Silent() {
+    const monthInput = document.getElementById('month');
+    const paidAmountInputs = document.querySelectorAll('.paid-amount-input');
+    
+    let isValid = true;
+    
+    // Validate month
+    if (!monthInput.value) {
+        isValid = false;
+    }
+    
+    // Validate each paid amount
+    paidAmountInputs.forEach(input => {
+        const chargeType = input.getAttribute('data-charge-type');
+        const paidAmount = parseFloat(input.value) || 0;
+        const actualAmount = parseFloat(document.getElementById(`${chargeType}_amount_act`).value) || 0;
+        
+        if (paidAmount !== actualAmount) {
+            isValid = false;
+        }
+    });
+    
+    return isValid;
+}
+
+
+function validateStep1() {
+    const form = document.getElementById('assetForm');
+    const monthInput = document.getElementById('month');
+    const paidAmountInputs = document.querySelectorAll('.paid-amount-input');
+    
+    let isValid = true;
+    let hasPaidCharges = false;
+    
+    // Validate month
+    if (!monthInput.value) {
+        monthInput.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        monthInput.classList.remove('is-invalid');
+    }
+    
+    // Check if any charges are already paid
+    paidAmountInputs.forEach(input => {
+        if (input.disabled) {
+            hasPaidCharges = true;
+        }
+        
+        if (!validatePaidAmount(input)) {
+            isValid = false;
+        }
+    });
+    
+    // If any charges are paid, show error and prevent proceeding
+    if (hasPaidCharges) {
+        showPaidChargesError();
+        return false; // Stop here, don't proceed to step 2
+    }
+    
+    // If valid, proceed to step 2
+    if (isValid) {
+        goToStep(2);
+        renderPreview();
+    } else {
+        // Scroll to first error
+        const firstError = form.querySelector('.is-invalid');
+        if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+    
+    return isValid;
 }
 
 // Add event listeners for real-time validation
 document.addEventListener('DOMContentLoaded', function() {
-  // Charge amount validation
-  const paidAmountInputs = document.querySelectorAll('.paid-amount-input');
-  
-  paidAmountInputs.forEach(input => {
-    input.addEventListener('blur', function() {
-      validatePaidAmount(this);
+    // Charge amount validation
+    const paidAmountInputs = document.querySelectorAll('.paid-amount-input');
+    
+    paidAmountInputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            validatePaidAmount(this);
+        });
+        
+        input.addEventListener('input', function() {
+            // Clear validation on input
+            this.classList.remove('is-invalid', 'is-valid');
+        });
     });
     
-    input.addEventListener('input', function() {
-      // Clear validation on input
-      this.classList.remove('is-invalid', 'is-valid');
-    });
-  });
-  
-  // Month validation
-  const monthInput = document.getElementById('month');
-  monthInput.addEventListener('change', function() {
+    // Month validation
+    // const monthInput = document.getElementById('month');
+    // monthInput.addEventListener('change', function() {
+    //     if (this.value) {
+    //         this.classList.remove('is-invalid');
+    //     }
+    // });
+    
+// Month validation with paid charges check
+// Month validation - clear errors when month changes
+const monthInput = document.getElementById('month');
+monthInput.addEventListener('change', function() {
     if (this.value) {
-      this.classList.remove('is-invalid');
+        this.classList.remove('is-invalid');
+        
+        // Hide and remove any existing error message when month changes
+        const errorDiv = document.getElementById('paid-charges-error');
+        if (errorDiv) {
+            errorDiv.style.opacity = '0';
+            errorDiv.style.transform = 'translateY(-10px)';
+            setTimeout(() => {
+                if (errorDiv.parentNode) {
+                    errorDiv.remove();
+                }
+            }, 300);
+        }
+        
+        const guestId = document.getElementById('guest_id_charge').value;
+        if (guestId) {
+            fetchCharges(guestId, this.value);
+        }
+        chargeFilter()
     }
-  });
-  
-  // Payment field validation
-  const paymentFields = document.querySelectorAll('.payment-field');
-  paymentFields.forEach(field => {
-    field.addEventListener('input', function() {
-      this.classList.remove('is-invalid');
+});
+    
+    // Payment field validation
+    const paymentFields = document.querySelectorAll('.payment-field');
+    paymentFields.forEach(field => {
+        field.addEventListener('input', function() {
+            this.classList.remove('is-invalid');
+        });
     });
-  });
-  
-  // Payment method selection
-  document.querySelectorAll(".payment-method-cards").forEach(card => {
-    card.addEventListener("click", function() {
-      document.querySelectorAll(".payment-method-cards").forEach(c => c.classList.remove("active"));
-      this.classList.add("active");
+    
+    // Payment method selection
+    document.querySelectorAll(".payment-method-cards").forEach(card => {
+        card.addEventListener("click", function() {
+            document.querySelectorAll(".payment-method-cards").forEach(c => c.classList.remove("active"));
+            this.classList.add("active");
 
-      const method = this.dataset.method;
-      currentPaymentMethod = method;
-      
-      document.querySelectorAll(".payment-forms").forEach(f => f.style.display = "none");
-      document.getElementById(`${method}-forms`).style.display = "block";
+            const method = this.dataset.method;
+            currentPaymentMethod = method;
+            
+            document.querySelectorAll(".payment-forms").forEach(f => f.style.display = "none");
+            document.getElementById(`${method}-forms`).style.display = "block";
 
-      // Clear validation when switching methods
-      document.querySelectorAll('.payment-field').forEach(field => {
-        field.classList.remove('is-invalid');
-      });
+            // Clear validation when switching methods
+            document.querySelectorAll('.payment-field').forEach(field => {
+                field.classList.remove('is-invalid');
+            });
 
-      // Fetch wallet balance if wallet is selected
-      if (method === "wallet" && guestId) {
-        fetch(`advaya/guest_wallet_id/${guestId}`)
-          .then(res => res.json())
-          .then(data => {
-            document.getElementById("balance").textContent = "₹" + (data[0]?.balance ?? 0);
-          })
-          .catch(err => console.error(err));
-      }
+            // Fetch wallet balance if wallet is selected
+            if (method === "wallet" && guestId) {
+                fetch(`/advaya/guest_wallet_id/${guestId}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        document.getElementById("balance").textContent = "₹" + (data[0]?.balance ?? 0);
+                    })
+                    .catch(err => console.error(err));
+            }
+        });
     });
-  });
 });
 
 // Your existing functions with validation integration
 function goToStep(step) {
-  const tabTrigger = new bootstrap.Tab(document.querySelector(`#step${step}-tab`));
-  tabTrigger.show();
-}
-
-function renderSummary() {
-  const tbody = document.getElementById("payment-summary-body");
-  tbody.innerHTML = "";
-
-  let total = 0;
-  const charges = [
-    { label: "Maintenance", val: document.getElementById("main_paidamount").value },
-    { label: "Internet", val: document.getElementById("internet_paidamount").value },
-    { label: "EB Charge", val: document.getElementById("eb_paidamount").value },
-    { label: "Room Service", val: document.getElementById("room_paidamount").value },
-    { label: "Others", val: document.getElementById("other_paidamount").value }
-  ];
-
-  charges.forEach(c => {
-    const amount = parseFloat(c.val) || 0;
-    if (amount > 0) {
-      const row = document.createElement("tr");
-      row.innerHTML = `<td>${c.label}</td><td class="text-end">₹${amount}</td>`;
-      tbody.appendChild(row);
-      total += amount;
+    const tabTrigger = new bootstrap.Tab(document.querySelector(`#step${step}-tab`));
+    tabTrigger.show();
+    
+    // Update preview when going to step 2
+    if (step === 2) {
+        renderPreview();
     }
-  });
-
-  // Add total row
-  if (total > 0) {
-    const totalRow = document.createElement("tr");
-    totalRow.innerHTML = `<th>Total</th><th class="text-end">₹${total}</th>`;
-    tbody.appendChild(totalRow);
-  }
 }
-
-// Ensure renderSummary runs when Summary & Payment tab is clicked
-document.addEventListener("DOMContentLoaded", () => {
-  const step2Tab = document.getElementById("step2-tab");
-  step2Tab.addEventListener("shown.bs.tab", function() {
-    // Only render summary if step 1 is valid
-    if (validateStep1()) {
-      renderSummary();
-    }
-  });
-});
 
 // Update your submitCharges function to include validation
 function submitCharges() {
-  const form = document.getElementById('assetForm');
-  
-  // Collect all charge data
-  const data = {
-    charge_id: document.getElementById('charge_id').value,
-    guest_id: document.getElementById('guest_id_charge').value,
-    room_no: document.getElementById('room_no_charge').value,
-    charge_monthyear: document.getElementById('month').value,
-    main_amount_act: document.getElementById('main_amount_act').value || 0,
-    main_paidamount: document.getElementById('main_paidamount').value || 0,
-    internet_amount_act: document.getElementById('internet_amount_act').value || 0,
-    internet_paidamount: document.getElementById('internet_paidamount').value || 0,
-    eb_amount_act: document.getElementById('eb_amount_act').value || 0,
-    eb_paidamount: document.getElementById('eb_paidamount').value || 0,
-    room_amount_act: document.getElementById('room_amount_act').value || 0,
-    room_paidamount: document.getElementById('room_paidamount').value || 0,
-    other_amount_act: document.getElementById('other_amount_act').value || 0,
-    other_paidamount: document.getElementById('other_paidamount').value || 0,
-    total_paidamount: calculateTotalPaid(),
-    payment_method: currentPaymentMethod,
-    // bill_no: form.querySelector('[name="bill_no"]')?.value || '',
-    upi_trans: form.querySelector('[name="upi_trans"]')?.value || '',
-    card_trans: form.querySelector('[name="card_trans"]')?.value || ''
-  };
+    const form = document.getElementById('assetForm');
+    
+    // Collect all charge data
+    const data = {
+        charge_id: document.getElementById('charge_id').value,
+        guest_id: document.getElementById('guest_id_charge').value,
+        room_no: document.getElementById('room_no_charge').value,
+        charge_monthyear: document.getElementById('month').value,
+        main_amount_act: document.getElementById('main_amount_act').value || 0,
+        main_paidamount: document.getElementById('main_paidamount').value || 0,
+        internet_amount_act: document.getElementById('internet_amount_act').value || 0,
+        internet_paidamount: document.getElementById('internet_paidamount').value || 0,
+        eb_amount_act: document.getElementById('eb_amount_act').value || 0,
+        eb_paidamount: document.getElementById('eb_paidamount').value || 0,
+        room_amount_act: document.getElementById('room_amount_act').value || 0,
+        room_paidamount: document.getElementById('room_paidamount').value || 0,
+        other_amount_act: document.getElementById('other_amount_act').value || 0,
+        other_paidamount: document.getElementById('other_paidamount').value || 0,
+        total_paidamount: calculateTotalPaid(),
+        payment_required: document.getElementById('payment_required').value,
+        payment_method: currentPaymentMethod,
+        upi_trans: form.querySelector('[name="upi_trans"]')?.value || '',
+        card_trans: form.querySelector('[name="card_trans"]')?.value || ''
+    };
 
-  // Send data via POST
-  fetch('/advaya/chargepay_store', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
-  })
-  .then(res => res.json())
-  .then(response => {
-    if (response.status === 'success') {
-      // Show success message
-      //alert('Payment processed successfully!');
-      
-      // Close modal
-      const modalEl = document.getElementById('maintenanceModal');
-      const modal = bootstrap.Modal.getInstance(modalEl);
-      if (modal) {
-        modal.hide();
-                 // Redirect to charges report page - flashdata will show automatically
-    window.location.href = '/advaya/chargesrept/' + response.guest_id;
-      }
-      
-      // Reload the page to reflect the updated status
-      //location.reload();
-    } else {
-      alert('Error: ' + response.message);
-    }
-  })
-  .catch(err => {
-    console.error('Error saving payment:', err);
-    alert('Error processing payment');
-  });
+    // Send data via POST
+    fetch('/advaya/chargepay_store', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(response => {
+        if (response.status === 'success') {
+            // Close modal
+            const modalEl = document.getElementById('maintenanceModal');
+            const modal = bootstrap.Modal.getInstance(modalEl);
+            if (modal) {
+                modal.hide();
+                // Redirect to charges report page - flashdata will show automatically
+                window.location.href = '/advaya/chargesrept/' + response.guest_id;
+            }
+        } else {
+            alert('Error: ' + response.message);
+        }
+    })
+    .catch(err => {
+        console.error('Error saving payment:', err);
+        alert('Error processing payment');
+    });
 }
 
 // Helper function to calculate total paid
 function calculateTotalPaid() {
-  const amounts = [
-    document.getElementById('main_paidamount').value,
-    document.getElementById('internet_paidamount').value,
-    document.getElementById('eb_paidamount').value,
-    document.getElementById('room_paidamount').value,
-    document.getElementById('other_paidamount').value
-  ];
-  return amounts.reduce((sum, val) => sum + (parseFloat(val) || 0), 0);
+    const amounts = [
+        document.getElementById('main_paidamount').value,
+        document.getElementById('internet_paidamount').value,
+        document.getElementById('eb_paidamount').value,
+        document.getElementById('room_paidamount').value,
+        document.getElementById('other_paidamount').value
+    ];
+    return amounts.reduce((sum, val) => sum + (parseFloat(val) || 0), 0);
 }
 
 // Your existing functions for modal handling
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("maintenanceModal").addEventListener("show.bs.modal", function (event) {
-    const button = event.relatedTarget;
-    guestId = button.getAttribute("data-guest-id");
-  });
+    document.getElementById("maintenanceModal").addEventListener("show.bs.modal", function (event) {
+        const button = event.relatedTarget;
+        guestId = button.getAttribute("data-guest-id");
+    });
 
-  // Default select first payment method
-  document.querySelector(".payment-method-cards").click();
+    // Default select first payment method
+    document.querySelector(".payment-method-cards").click();
 });
 
 // Reset modal when closed
 document.addEventListener("DOMContentLoaded", () => {
-  const modalEl = document.getElementById("maintenanceModal");
+    const modalEl = document.getElementById("maintenanceModal");
 
-  modalEl.addEventListener("hidden.bs.modal", () => {
+    // modalEl.addEventListener("hidden.bs.modal", () => {
+    //     modalEl.querySelectorAll("input").forEach(input => {
+    //         input.value = "";
+    //         input.classList.remove('is-invalid', 'is-valid');
+    //     });
+
+    //     const tbody = modalEl.querySelector("#preview-summary-body");
+    //     if (tbody) tbody.innerHTML = "";
+
+    //     const firstTab = modalEl.querySelector("#step1-tab");
+    //     if (firstTab) {
+    //         const tab = new bootstrap.Tab(firstTab);
+    //         tab.show();
+    //     }
+
+    //     modalEl.querySelectorAll(".payment-method-cards").forEach(c => {
+    //         c.classList.remove("border-success", "active");
+    //     });
+
+    //     modalEl.querySelectorAll(".payment-forms").forEach(f => f.style.display = "none");
+        
+    //     // Reset payment method and requirement
+    //     currentPaymentMethod = '';
+    //     paymentRequired = true;
+    //     document.getElementById('payment_required').value = 'true';
+        
+    //     // Reset preview state
+    //     document.getElementById('confirmation-section').style.display = 'block';
+    //     document.getElementById('payment-options1').style.display = 'none';
+    //     document.getElementById('next-to-payment').style.display = 'none';
+    // });
+modalEl.addEventListener("hidden.bs.modal", () => {
     modalEl.querySelectorAll("input").forEach(input => {
-      input.value = "";
-      input.classList.remove('is-invalid', 'is-valid');
+        input.value = "";
+        input.classList.remove('is-invalid', 'is-valid');
+        input.disabled = false;
     });
 
-    const tbody = modalEl.querySelector("#payment-summary-body");
+    // Remove paid badges
+    modalEl.querySelectorAll(".badge.bg-success").forEach(badge => {
+        badge.remove();
+    });
+
+    // Remove error message with animation
+    const errorDiv = document.getElementById('paid-charges-error');
+    if (errorDiv) {
+        errorDiv.style.opacity = '0';
+        errorDiv.style.transform = 'translateY(-10px)';
+        setTimeout(() => {
+            if (errorDiv.parentNode) {
+                errorDiv.remove();
+            }
+        }, 300);
+    }
+
+    const tbody = modalEl.querySelector("#preview-summary-body");
     if (tbody) tbody.innerHTML = "";
 
     const firstTab = modalEl.querySelector("#step1-tab");
     if (firstTab) {
-      const tab = new bootstrap.Tab(firstTab);
-      tab.show();
+        const tab = new bootstrap.Tab(firstTab);
+        tab.show();
     }
 
     modalEl.querySelectorAll(".payment-method-cards").forEach(c => {
-      c.classList.remove("border-success", "active");
+        c.classList.remove("border-success", "active");
     });
 
     modalEl.querySelectorAll(".payment-forms").forEach(f => f.style.display = "none");
     
-    // Reset payment method
+    // Reset payment method and requirement
     currentPaymentMethod = '';
-  });
+    paymentRequired = true;
+    document.getElementById('payment_required').value = 'true';
+    
+    // Reset preview state
+    document.getElementById('confirmation-section').style.display = 'block';
+    document.getElementById('payment-options1').style.display = 'none';
+    
+    // Reset the Next button
+    const nextButton = document.querySelector('#step1 .modal-footer .btn');
+    if (nextButton) {
+        nextButton.disabled = false;
+        nextButton.innerHTML = 'Next →';
+        nextButton.classList.add('btn-primary');
+        nextButton.classList.remove('btn-danger');
+        nextButton.title = 'Proceed to next step';
+        nextButton.removeAttribute('data-has-paid-charges');
+    }
+});
 });
 
-// Your existing charge-related functions remain the same...
-function goToStep(step) {
-  const tabTrigger = new bootstrap.Tab(document.querySelector(`#step${step}-tab`));
-  tabTrigger.show();
 
-  if (step === 2) renderSummary();
+// Add this function to your script
+function closeMaintenanceModal() {
+    const modalEl = document.getElementById('maintenanceModal');
+    const modal = bootstrap.Modal.getInstance(modalEl);
+    if (modal) {
+        modal.hide();
+    }
 }
 
-// ... (rest of your existing functions like openMaintenanceModal, resetChargeAmounts, fetchCharges, processChargeData, chargeFilter)
-</script>
+// Update your existing hidden.bs.modal event listener
+document.addEventListener("DOMContentLoaded", () => {
+    const modalEl = document.getElementById("maintenanceModal");
+    
+    // Add click event to close button
+    modalEl.addEventListener('click', function(e) {
+        if (e.target.classList.contains('btn-close') || 
+            e.target.closest('.btn-close')) {
+            closeMaintenanceModal();
+        }
+    });
 
-<!-- Include your existing charge-related JavaScript functions here -->
-<script>
-// Global variables to track current guest info
-let currentGuestId = '';
-let currentGuestType = '';
-let currentRoomNo = '';
+  });
 
+  // Debug function to check modal state
+// function debugModal() {
+//     const modalEl = document.getElementById('maintenanceModal');
+//     const modal = bootstrap.Modal.getInstance(modalEl);
+    
+//     console.log('Modal Element:', modalEl);
+//     console.log('Modal Instance:', modal);
+//     console.log('Modal Classes:', modalEl.classList);
+    
+//     // Check if close button exists and has correct attributes
+//     const closeBtn = modalEl.querySelector('.btn-close');
+//     console.log('Close Button:', closeBtn);
+//     console.log('Close Button data-bs-dismiss:', closeBtn?.getAttribute('data-bs-dismiss'));
+// }
+
+// // Call this when modal opens to check everything is working
+// document.getElementById('maintenanceModal').addEventListener('show.bs.modal', function() {
+//     console.log('Modal opening...');
+//     debugModal();
+// });
+
+// Your existing charge-related functions remain the same...
 function openMaintenanceModal(button) {
     const row = button.closest('tr');
     currentGuestId = row.getAttribute('data-guest-id');
@@ -3270,6 +3623,32 @@ function openMaintenanceModal(button) {
     
     fetchCharges(currentGuestId, month);
 }
+
+// function openMaintenanceModal(button) {
+//     const row = button.closest('tr');
+//     currentGuestId = row.getAttribute('data-guest-id');
+//     currentGuestType = row.getAttribute('data-guest-type');
+//     currentRoomNo = row.getAttribute('data-room-no');
+    
+//     document.getElementById('guest_id_charge').value = currentGuestId;
+//     document.getElementById('testNo').value = currentGuestId;
+//     document.getElementById('room_no_charge').value = currentRoomNo;
+    
+//     resetChargeAmounts();
+    
+//     const today = new Date();
+//     const month = today.getFullYear() + "-" + String(today.getMonth() + 1).padStart(2, '0');
+//     document.getElementById('month').value = month;
+    
+//     // Show the modal first, then fetch charges
+//     const modal = new bootstrap.Modal(document.getElementById('maintenanceModal'));
+//     modal.show();
+    
+//     // Wait for modal to be fully shown before fetching data
+//     document.getElementById('maintenanceModal').addEventListener('shown.bs.modal', function () {
+//         fetchCharges(currentGuestId, month);
+//     }, { once: true });
+// }
 
 function resetChargeAmounts() {
     const charges = [
@@ -3309,13 +3688,24 @@ function fetchCharges(guestId, month) {
         });
 }
 
+
+
 function processChargeData(data) {
     resetChargeAmounts();
+    
+    // Clear any existing error (but don't show new ones automatically)
+    const errorDiv = document.getElementById('paid-charges-error');
+    if (errorDiv) {
+        errorDiv.style.display = 'none';
+    }
 
     if (data && data.length > 0) {
         document.getElementById('charge_id').value = data[0].charge_id || '';
     }
 
+    let paidChargesCount = 0;
+    let hasCharges = false;
+    
     data.forEach(item => {
         let chargeInputId, chargeDisplayId, chargeHiddenId;
 
@@ -3347,21 +3737,116 @@ function processChargeData(data) {
                 break;
         }
 
-        document.getElementById(chargeHiddenId).value = item.amount ?? 0;
-        document.getElementById(chargeDisplayId).innerHTML = item.amount ?? 0;
+        if (chargeDisplayId && document.getElementById(chargeDisplayId)) {
+            hasCharges = true;
+            document.getElementById(chargeHiddenId).value = item.amount ?? 0;
+            document.getElementById(chargeDisplayId).innerHTML = item.amount ?? 0;
 
-        const input = document.getElementById(chargeInputId);
-        if (item.status === 'paid') {
-            input.value = item.amount;
-            input.disabled = true;
-            input.style.display = "none";
-            input.insertAdjacentHTML("afterend", `<span class="badge bg-success">Paid</span>`);
-        } else {
-            input.value = 0;
-            input.disabled = false;
-            input.style.display = "block";
+            const input = document.getElementById(chargeInputId);
+            if (item.status === 'paid') {
+                input.value = item.amount;
+                input.disabled = true;
+                input.style.display = "none";
+                input.insertAdjacentHTML("afterend", `<span class="badge bg-success">Paid</span>`);
+                paidChargesCount++;
+            } else {
+                input.value = 0;
+                input.disabled = false;
+                input.style.display = "block";
+            }
         }
     });
+    
+    // Store paid charges count for validation
+    document.getElementById('maintenanceModal').setAttribute('data-paid-charges', paidChargesCount);
+    
+    // Update button state but DON'T show error automatically
+    if (hasCharges) {
+        updateNextButtonState(paidChargesCount > 0);
+    }
+}
+
+// function updateNextButtonState(hasPaidCharges) {
+//     const nextButton = document.querySelector('#step1 .btn-primary');
+//     if (nextButton) {
+//         if (hasPaidCharges) {
+//             nextButton.disabled = true;
+//             nextButton.title = 'Cannot proceed - some charges are already paid';
+//             nextButton.innerHTML = 'Cannot Proceed';
+//         } else {
+//             nextButton.disabled = false;
+//             nextButton.title = 'Proceed to next step';
+//             nextButton.innerHTML = 'Next →';
+//         }
+//     }
+// }
+
+function updateNextButtonState(hasPaidCharges) {
+    const nextButton = document.querySelector('#step1 .modal-footer .btn');
+    
+    if (nextButton) {
+        // Always keep the button enabled and looking normal
+        nextButton.disabled = false;
+        nextButton.innerHTML = 'Next →';
+        nextButton.classList.add('btn-primary');
+        nextButton.classList.remove('btn-danger');
+        nextButton.title = 'Proceed to next step';
+        
+        // Just store the state for validation
+        nextButton.setAttribute('data-has-paid-charges', hasPaidCharges);
+    }
+}
+
+function showPaidChargesError() {
+    // Remove any existing error message first
+    const existingError = document.getElementById('paid-charges-error');
+    if (existingError) {
+        existingError.remove();
+    }
+    
+    // Create new error message
+    const errorDiv = document.createElement('div');
+    errorDiv.id = 'paid-charges-error';
+    errorDiv.className = 'alert alert-danger mt-3';
+    errorDiv.innerHTML = `
+        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+        <strong>Cannot proceed:</strong> Some charges for this month are already paid. 
+        Please select a different month or contact administration.
+    `;
+    
+    // Add smooth animation
+    errorDiv.style.opacity = '0';
+    errorDiv.style.transform = 'translateY(-10px)';
+    errorDiv.style.transition = 'all 0.3s ease';
+    
+    // Insert after the table but inside the modal body
+    const modalBody = document.querySelector('#step1 .modal-body');
+    const table = modalBody.querySelector('.table-responsive');
+    modalBody.insertBefore(errorDiv, table.nextSibling);
+    
+    // Animate in
+    setTimeout(() => {
+        errorDiv.style.opacity = '1';
+        errorDiv.style.transform = 'translateY(0)';
+    }, 10);
+    
+    // Scroll to the error message
+    setTimeout(() => {
+        errorDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 300);
+    
+    // Auto-hide after 8 seconds
+    setTimeout(() => {
+        if (errorDiv && errorDiv.parentNode) {
+            errorDiv.style.opacity = '0';
+            errorDiv.style.transform = 'translateY(-10px)';
+            setTimeout(() => {
+                if (errorDiv.parentNode) {
+                    errorDiv.remove();
+                }
+            }, 300);
+        }
+    }, 8000);
 }
 
 function chargeFilter() {
@@ -3382,20 +3867,20 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <script>
 (() => {
-  'use strict'
+    'use strict'
 
-  // Fetch all forms that require validation
-  const forms = document.querySelectorAll('.needs-validation')
+    // Fetch all forms that require validation
+    const forms = document.querySelectorAll('.needs-validation')
 
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
-      form.classList.add('was-validated')
-    }, false)
-  })
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+        }, false)
+    })
 })()
 </script>
 

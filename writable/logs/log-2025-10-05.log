@@ -1,0 +1,249 @@
+ERROR - 2025-10-05 05:23:25 --> mysqli_sql_exception: Unknown table 'elders_care.ci' in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `ci`.*, ...', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ci`.*, ...')
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ci`.*, ...')
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `ci`.*, ...', Array, false)
+#4 C:\xampp\htdocs\advaya\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\advaya\app\Controllers\ChargesReport.php(67): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\ChargesReport->generateBill()
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+#9 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-10-05 05:23:25 --> Unknown table 'elders_care.ci'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `ci`.*, `gp`.`first_name`, `gp`.`last_name`
+FROM `charge_info`
+LEFT JOIN `guests_personal` `gp` ON `gp`.`guest_id` = `ci`.`guest_id`
+WHERE `ci`.`charge_id` = :ci.charge_id:
+AND `ci`.`deleted_on` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\ChargesReport.php(67): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ChargesReport->generateBill()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-05 05:24:32 --> mysqli_sql_exception: Unknown table 'elders_care.ci' in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `ci`.*, ...', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ci`.*, ...')
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ci`.*, ...')
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `ci`.*, ...', Array, false)
+#4 C:\xampp\htdocs\advaya\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\advaya\app\Controllers\ChargesReport.php(67): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\ChargesReport->generateBill()
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+#9 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-10-05 05:24:32 --> Unknown table 'elders_care.ci'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `ci`.*, `gp`.`first_name`, `gp`.`last_name`
+FROM `charge_info`
+LEFT JOIN `guests_personal` `gp` ON `gp`.`guest_id` = `ci`.`guest_id`
+WHERE `ci`.`charge_id` = :ci.charge_id:
+AND `ci`.`deleted_on` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\ChargesReport.php(67): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ChargesReport->generateBill()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-05 05:27:51 --> mysqli_sql_exception: Unknown table 'elders_care.ci' in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `ci`.*, ...', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ci`.*, ...')
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ci`.*, ...')
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `ci`.*, ...', Array, false)
+#4 C:\xampp\htdocs\advaya\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\advaya\app\Controllers\ChargesReport.php(67): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\ChargesReport->generateBill()
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+#9 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-10-05 05:27:51 --> Unknown table 'elders_care.ci'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `ci`.*, `gp`.`first_name`, `gp`.`last_name`
+FROM `charge_info`
+LEFT JOIN `guests_personal` `gp` ON `gp`.`guest_id` = `ci`.`guest_id`
+WHERE `ci`.`charge_id` = :ci.charge_id:
+AND `ci`.`deleted_on` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\ChargesReport.php(67): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ChargesReport->generateBill()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-05 05:29:56 --> mysqli_sql_exception: Unknown column 'gp.phone' in 'field list' in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `b`.*, `...', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `b`.*, `...')
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `b`.*, `...')
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `b`.*, `...', Array, false)
+#4 C:\xampp\htdocs\advaya\app\Models\BillModel.php(80): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\app\Controllers\ChargesReport.php(155): App\Models\BillModel->getBillWithDetails('1')
+#6 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\ChargesReport->viewBill()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-10-05 05:29:56 --> Unknown column 'gp.phone' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `b`.*, `ci`.`room_no`, `ci`.`guest_id`, `ci`.`charge_monthyear`, `gp`.`first_name`, `gp`.`last_name`, `gp`.`phone`, `gp`.`email`, `ci`.`charge_info`, `ci`.`payment_mode`, `ci`.`reference_id`
+FROM `bill` `b`
+JOIN `charge_info` `ci` ON `ci`.`charge_id` = `b`.`reference_id`
+LEFT JOIN `guests_personal` `gp` ON `gp`.`guest_id` = `ci`.`guest_id`
+WHERE `b`.`bill_id` = :b.bill_id:
+AND `b`.`deleted_on` IS NULL', [...], false)
+ 2 APPPATH\Models\BillModel.php(80): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ChargesReport.php(155): App\Models\BillModel->getBillWithDetails('1')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ChargesReport->viewBill()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-05 05:31:05 --> mysqli_sql_exception: Unknown column 'gp.phone' in 'field list' in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `b`.*, `...', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `b`.*, `...')
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `b`.*, `...')
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `b`.*, `...', Array, false)
+#4 C:\xampp\htdocs\advaya\app\Models\BillModel.php(80): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\app\Controllers\ChargesReport.php(155): App\Models\BillModel->getBillWithDetails('1')
+#6 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\ChargesReport->viewBill()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-10-05 05:31:05 --> Unknown column 'gp.phone' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `b`.*, `ci`.`room_no`, `ci`.`guest_id`, `ci`.`charge_monthyear`, `gp`.`first_name`, `gp`.`last_name`, `gp`.`phone`, `gp`.`email`, `ci`.`charge_info`, `ci`.`payment_mode`, `ci`.`reference_id`
+FROM `bill` `b`
+JOIN `charge_info` `ci` ON `ci`.`charge_id` = `b`.`reference_id`
+LEFT JOIN `guests_personal` `gp` ON `gp`.`guest_id` = `ci`.`guest_id`
+WHERE `b`.`bill_id` = :b.bill_id:
+AND `b`.`deleted_on` IS NULL', [...], false)
+ 2 APPPATH\Models\BillModel.php(80): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ChargesReport.php(155): App\Models\BillModel->getBillWithDetails('1')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ChargesReport->viewBill()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-05 05:31:56 --> mysqli_sql_exception: Unknown column 'gp.phone' in 'field list' in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `b`.*, `...', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `b`.*, `...')
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `b`.*, `...')
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `b`.*, `...', Array, false)
+#4 C:\xampp\htdocs\advaya\app\Models\BillModel.php(80): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\app\Controllers\ChargesReport.php(159): App\Models\BillModel->getBillWithDetails('1')
+#6 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\ChargesReport->viewBill()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-10-05 05:31:56 --> Unknown column 'gp.phone' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `b`.*, `ci`.`room_no`, `ci`.`guest_id`, `ci`.`charge_monthyear`, `gp`.`first_name`, `gp`.`last_name`, `gp`.`phone`, `gp`.`email`, `ci`.`charge_info`, `ci`.`payment_mode`, `ci`.`reference_id`
+FROM `bill` `b`
+JOIN `charge_info` `ci` ON `ci`.`charge_id` = `b`.`reference_id`
+LEFT JOIN `guests_personal` `gp` ON `gp`.`guest_id` = `ci`.`guest_id`
+WHERE `b`.`bill_id` = :b.bill_id:
+AND `b`.`deleted_on` IS NULL', [...], false)
+ 2 APPPATH\Models\BillModel.php(80): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ChargesReport.php(159): App\Models\BillModel->getBillWithDetails('1')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ChargesReport->viewBill()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-05 06:43:39 --> mysqli_sql_exception: Unknown column 'gp.room_no' in 'field list' in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `ci`.*, ...', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ci`.*, ...')
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ci`.*, ...')
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `ci`.*, ...', Array, false)
+#4 C:\xampp\htdocs\advaya\app\Models\BillModel.php(87): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\app\Controllers\ChargesReport.php(41): App\Models\BillModel->getBillWithDetails('3')
+#6 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\ChargesReport->viewBill()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-10-05 06:43:39 --> Unknown column 'gp.room_no' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `ci`.*, `gp`.`first_name`, `gp`.`last_name`, `gp`.`room_no`
+FROM `charge_info` `ci`
+LEFT JOIN `guests_personal` `gp` ON `gp`.`guest_id` = `ci`.`guest_id`
+WHERE `ci`.`charge_id` = :ci.charge_id:
+AND `ci`.`deleted_on` IS NULL', [...], false)
+ 2 APPPATH\Models\BillModel.php(87): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ChargesReport.php(41): App\Models\BillModel->getBillWithDetails('3')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ChargesReport->viewBill()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-05 07:01:14 --> Undefined property: App\Controllers\ChargesReport::$BillModel
+in APPPATH\Controllers\ChargesReport.php on line 29.
+ 1 APPPATH\Controllers\ChargesReport.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\ChargesReport::$BillModel', 'C:\\xampp\\htdocs\\advaya\\app\\Controllers\\ChargesReport.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ChargesReport->generateBill('36')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-05 07:01:21 --> Undefined property: App\Controllers\ChargesReport::$BillModel
+in APPPATH\Controllers\ChargesReport.php on line 29.
+ 1 APPPATH\Controllers\ChargesReport.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\ChargesReport::$BillModel', 'C:\\xampp\\htdocs\\advaya\\app\\Controllers\\ChargesReport.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ChargesReport->generateBill('38')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-05 07:04:49 --> Undefined property: App\Controllers\ChargesReport::$BillModel
+in APPPATH\Controllers\ChargesReport.php on line 29.
+ 1 APPPATH\Controllers\ChargesReport.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\ChargesReport::$BillModel', 'C:\\xampp\\htdocs\\advaya\\app\\Controllers\\ChargesReport.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ChargesReport->generateBill('36')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-05 07:11:10 --> Generate Bill: Empty charge ID
+CRITICAL - 2025-10-05 07:14:18 --> Call to undefined method App\Models\BillModel::getGroupedChargeItems
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\ChargesReport.php(173): CodeIgniter\Model->__call('getGroupedChargeItems', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ChargesReport->viewBill()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-05 07:14:44 --> mysqli_sql_exception: Unknown column 'gp.room_no' in 'field list' in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `gp`.`fi...', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `gp`.`fi...')
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `gp`.`fi...')
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `gp`.`fi...', Array, false)
+#4 C:\xampp\htdocs\advaya\app\Models\BillModel.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\app\Controllers\ChargesReport.php(173): App\Models\BillModel->getGroupedChargeItems('41')
+#6 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\ChargesReport->viewBill()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-10-05 07:14:44 --> Unknown column 'gp.room_no' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `gp`.`first_name`, `gp`.`last_name`, `gp`.`room_no`
+FROM `charge_info` `ci`
+LEFT JOIN `guests_personal` `gp` ON `gp`.`guest_id` = `ci`.`guest_id`
+WHERE `ci`.`charge_id` = :ci.charge_id:
+AND `ci`.`deleted_on` IS NULL', [...], false)
+ 2 APPPATH\Models\BillModel.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ChargesReport.php(173): App\Models\BillModel->getGroupedChargeItems('41')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ChargesReport->viewBill()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChargesReport))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

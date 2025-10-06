@@ -959,6 +959,7 @@ foreach ($serviceTypes as $row) {
            <th>Month of Charge</th>
            <th>Total Paid Amount</th>
            <th>Charge Info</th>
+            <th>Bill</th> 
         </tr>
   </thead>
   <tbody>
@@ -979,6 +980,14 @@ foreach ($serviceTypes as $row) {
                           Info
                   </button>
                 </td>
+                 <td>
+          <!-- Generate Bill Button -->
+          <button type="button"
+                  class="btn btn-primary btn-sm"
+                  onclick="generateBill('<?= $asset['charge_id']; ?>')">
+            <i class="bi bi-receipt"></i> Generate Bill
+          </button>
+        </td>
             </tr>
         <?php endforeach; ?>
   </tbody>
@@ -1071,6 +1080,69 @@ $(document).ready(function () {
         info: true
     });
 });
+function generateBill(chargeId) {
+    if (confirm('Are you sure you want to generate bill for this charge?')) {
+        // Show loading state
+        const btn = event.target;
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<i class="bi bi-hourglass-split"></i> Generating...';
+        btn.disabled = true;
+        
+        // Send AJAX request
+        fetch('<?= base_url("chargesreport/generateBill"); ?>', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: 'charge_id=' + encodeURIComponent(chargeId)
+        })
+        .then(response => {
+            console.log('Response status:', response.status);
+            console.log('Response ok:', response.ok);
+            
+            if (!response.ok) {
+                throw new Error('HTTP error! status: ' + response.status);
+            }
+            return response.text(); // First get as text to see what's returned
+        })
+        .then(text => {
+            console.log('Raw response:', text);
+            
+            try {
+                const data = JSON.parse(text);
+                return data;
+            } catch (e) {
+                console.error('JSON parse error:', e);
+                throw new Error('Invalid JSON response: ' + text.substring(0, 100));
+            }
+        })
+        .then(data => {
+            console.log('Parsed data:', data);
+            
+            if (data.success) {
+                // Open bill in new tab for preview/download
+                const billUrl = '<?= base_url("chargesreport/viewBill"); ?>?bill_id=' + data.bill_id;
+                console.log('Opening bill URL:', billUrl);
+                window.open(billUrl, '_blank');
+                
+                // Show success message
+                // alert('Bill generated successfully! Bill No: ' + data.bill_no);
+            } else {
+                alert('Error: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error generating bill: ' + error.message);
+        })
+        .finally(() => {
+            // Reset button state
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+        });
+    }
+}
 </script>
 
 

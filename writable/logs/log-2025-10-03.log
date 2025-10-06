@@ -1,0 +1,300 @@
+ERROR - 2025-10-03 05:32:55 --> mysqli_sql_exception: MySQL server has gone away in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\advaya\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\advaya\app\Controllers\Login.php(48): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\Login->process()
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-10-03 05:32:55 --> MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+WHERE `user_mobileno` = :user_mobileno:
+AND `user_info`.`deleted_on` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Login.php(48): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Login->process()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-03 06:41:06 --> mysqli_sql_exception: Unknown column 'created_on' in 'field list' in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `wa...', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `wa...')
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `wa...')
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `wa...', Array, false)
+#4 C:\xampp\htdocs\advaya\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\advaya\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\advaya\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\advaya\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\advaya\app\Controllers\Wallet.php(249): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\Wallet->addfund()
+#10 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#11 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2025-10-03 06:41:07 --> Unknown column 'created_on' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `wallets` (`guest_id`, `balance`, `payment_status`, `payment_mode`, `updated_on`, `created_on`) VALUES (:guest_id:, :balance:, :payment_status:, :payment_mode:, :updated_on:, :created_on:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Wallet.php(249): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Wallet->addfund()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-03 09:36:25 --> mysqli_sql_exception: Unknown column 'transactions.guest_id' in 'on clause' in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 C:\xampp\htdocs\advaya\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\advaya\app\Controllers\Wallet.php(126): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\Wallet->transaction_history()
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-10-03 09:36:25 --> Unknown column 'transactions.guest_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `transactions`.*, `guests_personal`.`first_name`, `guests_personal`.`last_name`, `guests_personal`.`contact`, `rooms`.`room_no`, `wallets`.`balance`
+FROM `transactions`
+LEFT JOIN `wallets` ON `wallets`.`wallet_id` = `transactions`.`wallet_id`
+LEFT JOIN `guests_personal` ON `guests_personal`.`guest_id` = `transactions`.`guest_id`
+LEFT JOIN `booking_guests` ON `booking_guests`.`guest_id` = `guests_personal`.`guest_id`
+LEFT JOIN `advance_bookings` ON `advance_bookings`.`id` = `booking_guests`.`booking_id`
+LEFT JOIN `rooms` ON `rooms`.`room_no` = `advance_bookings`.`room`
+WHERE `transactions`.`payment_status` = :transactions.payment_status:
+ORDER BY `transactions`.`created_at` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Wallet.php(126): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Wallet->transaction_history()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-03 09:40:13 --> mysqli_sql_exception: Unknown column 'transactions.created_at' in 'order clause' in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 C:\xampp\htdocs\advaya\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\advaya\app\Controllers\Wallet.php(126): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\Wallet->transaction_history()
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-10-03 09:40:13 --> Unknown column 'transactions.created_at' in 'order clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `transactions`.*, `guests_personal`.`first_name`, `guests_personal`.`last_name`, `guests_personal`.`contact`, `rooms`.`room_no`, `wallets`.`balance`, `wallets`.`guest_id`
+FROM `transactions`
+LEFT JOIN `wallets` ON `wallets`.`wallet_id` = `transactions`.`wallet_id`
+LEFT JOIN `guests_personal` ON `guests_personal`.`guest_id` = `wallets`.`guest_id`
+LEFT JOIN `booking_guests` ON `booking_guests`.`guest_id` = `guests_personal`.`guest_id`
+LEFT JOIN `advance_bookings` ON `advance_bookings`.`id` = `booking_guests`.`booking_id`
+LEFT JOIN `rooms` ON `rooms`.`room_no` = `advance_bookings`.`room`
+WHERE `transactions`.`payment_status` = :transactions.payment_status:
+ORDER BY `transactions`.`created_at` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Wallet.php(126): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Wallet->transaction_history()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-03 09:40:17 --> mysqli_sql_exception: Unknown column 'transactions.created_at' in 'order clause' in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 C:\xampp\htdocs\advaya\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\advaya\app\Controllers\Wallet.php(126): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\Wallet->transaction_history()
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#9 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-10-03 09:40:17 --> Unknown column 'transactions.created_at' in 'order clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `transactions`.*, `guests_personal`.`first_name`, `guests_personal`.`last_name`, `guests_personal`.`contact`, `rooms`.`room_no`, `wallets`.`balance`, `wallets`.`guest_id`
+FROM `transactions`
+LEFT JOIN `wallets` ON `wallets`.`wallet_id` = `transactions`.`wallet_id`
+LEFT JOIN `guests_personal` ON `guests_personal`.`guest_id` = `wallets`.`guest_id`
+LEFT JOIN `booking_guests` ON `booking_guests`.`guest_id` = `guests_personal`.`guest_id`
+LEFT JOIN `advance_bookings` ON `advance_bookings`.`id` = `booking_guests`.`booking_id`
+LEFT JOIN `rooms` ON `rooms`.`room_no` = `advance_bookings`.`room`
+WHERE `transactions`.`payment_status` = :transactions.payment_status:
+ORDER BY `transactions`.`created_at` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Wallet.php(126): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Wallet->transaction_history()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-03 09:40:42 --> Undefined array key "created_at"
+in APPPATH\Views\wallet\transaction_history.php on line 287.
+ 1 APPPATH\Views\wallet\transaction_history.php(287): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "created_at"', 'C:\\xampp\\htdocs\\advaya\\app\\Views\\wallet\\transaction_history.php', 287)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\advaya\\app\\Views\\wallet\\transaction_history.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('wallet/transaction_history', [], true)
+ 5 APPPATH\Controllers\Wallet.php(148): view('wallet/transaction_history', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Wallet->transaction_history()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-03 09:51:23 --> mysqli_sql_exception: Unknown column 't.created_at' in 'order clause' in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `t`.*, `...', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `t`.*, `...')
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `t`.*, `...')
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `t`.*, `...', Array, false)
+#4 C:\xampp\htdocs\advaya\app\Controllers\Wallet.php(115): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\Wallet->transaction_history()
+#6 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-10-03 09:51:23 --> Unknown column 't.created_at' in 'order clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `t`.*, `gp`.`first_name`, `gp`.`last_name`, `gp`.`contact`, `w`.`guest_id`, `w`.`balance`, `ab`.`room` as `room_no`
+FROM `transactions` `t`
+LEFT JOIN `wallets` `w` ON `w`.`wallet_id` = `t`.`wallet_id`
+LEFT JOIN `guests_personal` `gp` ON `gp`.`guest_id` = `w`.`guest_id`
+LEFT JOIN `booking_guests` `bg` ON `bg`.`guest_id` = `gp`.`guest_id`
+LEFT JOIN `advance_bookings` `ab` ON `ab`.`id` = `bg`.`booking_id` AND `ab`.`deleted_on` IS NULL
+WHERE `t`.`payment_status` = :t.payment_status:
+ORDER BY `t`.`created_at` DESC', [...], false)
+ 2 APPPATH\Controllers\Wallet.php(115): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Wallet->transaction_history()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-03 09:52:04 --> Undefined array key "room_no"
+in APPPATH\Views\wallet\transaction_history.php on line 169.
+ 1 APPPATH\Views\wallet\transaction_history.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "room_no"', 'C:\\xampp\\htdocs\\advaya\\app\\Views\\wallet\\transaction_history.php', 169)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\advaya\\app\\Views\\wallet\\transaction_history.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('wallet/transaction_history', [], true)
+ 5 APPPATH\Controllers\Wallet.php(152): view('wallet/transaction_history', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Wallet->transaction_history()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-03 09:58:57 --> Undefined variable $total_credit
+in APPPATH\Views\wallet\transaction_history.php on line 98.
+ 1 APPPATH\Views\wallet\transaction_history.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_credit', 'C:\\xampp\\htdocs\\advaya\\app\\Views\\wallet\\transaction_history.php', 98)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\advaya\\app\\Views\\wallet\\transaction_history.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('wallet/transaction_history', [], true)
+ 5 APPPATH\Controllers\Wallet.php(142): view('wallet/transaction_history', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Wallet->transaction_history()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-03 10:01:51 --> Undefined variable $total_credit
+in APPPATH\Views\wallet\transaction_history.php on line 98.
+ 1 APPPATH\Views\wallet\transaction_history.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_credit', 'C:\\xampp\\htdocs\\advaya\\app\\Views\\wallet\\transaction_history.php', 98)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\advaya\\app\\Views\\wallet\\transaction_history.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('wallet/transaction_history', [], true)
+ 5 APPPATH\Controllers\Wallet.php(142): view('wallet/transaction_history', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Wallet->transaction_history()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-03 10:03:19 --> mysqli_sql_exception: Unknown column 'bg.booking_id' in 'on clause' in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `t`.*, `...', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `t`.*, `...')
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `t`.*, `...')
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `t`.*, `...', Array, false)
+#4 C:\xampp\htdocs\advaya\app\Controllers\Wallet.php(120): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\Wallet->transaction_history()
+#6 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-10-03 10:03:19 --> Unknown column 'bg.booking_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `t`.*, `gp`.`first_name`, `gp`.`last_name`, `gp`.`contact`, `w`.`guest_id`, `w`.`balance`, `ab`.`room` as `room_no`
+FROM `transactions` `t`
+LEFT JOIN `wallets` `w` ON `w`.`wallet_id` = `t`.`wallet_id`
+LEFT JOIN `guests_personal` `gp` ON `gp`.`guest_id` = `w`.`guest_id`
+LEFT JOIN `advance_bookings` `ab` ON `ab`.`id` = `bg`.`booking_id` AND `ab`.`deleted_on` IS NULL
+WHERE `t`.`payment_status` = :t.payment_status:
+ORDER BY `t`.`created_on` DESC', [...], false)
+ 2 APPPATH\Controllers\Wallet.php(120): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Wallet->transaction_history()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-03 10:42:27 --> Invalid file: "wallet/transaction_pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('wallet/transaction_pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('wallet/transaction_pdf_template', [], true)
+ 3 APPPATH\Controllers\Wallet.php(270): view('wallet/transaction_pdf_template', [...])
+ 4 APPPATH\Controllers\Wallet.php(136): App\Controllers\Wallet->generateTransactionPdf([...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Wallet->transaction_history()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-03 10:42:41 --> Call to undefined method PhpOffice\PhpSpreadsheet\Worksheet\Worksheet::setCellValueByColumnAndColumn()
+in APPPATH\Controllers\Wallet.php on line 302.
+ 1 APPPATH\Controllers\Wallet.php(139): App\Controllers\Wallet->generateTransactionExcel([...], [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Wallet->transaction_history()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-03 11:58:21 --> Class "App\Models\RoomsModel" not found
+in APPPATH\Controllers\Maintenance.php on line 116.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Maintenance->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maintenance))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-03 11:59:14 --> Undefined variable $rooms
+in APPPATH\Controllers\Maintenance.php on line 117.
+ 1 APPPATH\Controllers\Maintenance.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rooms', 'C:\\xampp\\htdocs\\advaya\\app\\Controllers\\Maintenance.php', 117)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Maintenance->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maintenance))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-03 11:59:16 --> Undefined variable $rooms
+in APPPATH\Controllers\Maintenance.php on line 117.
+ 1 APPPATH\Controllers\Maintenance.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rooms', 'C:\\xampp\\htdocs\\advaya\\app\\Controllers\\Maintenance.php', 117)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Maintenance->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maintenance))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-03 12:00:00 --> Undefined variable $rooms
+in APPPATH\Controllers\Maintenance.php on line 122.
+ 1 APPPATH\Controllers\Maintenance.php(122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rooms', 'C:\\xampp\\htdocs\\advaya\\app\\Controllers\\Maintenance.php', 122)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Maintenance->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maintenance))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-03 12:01:46 --> Call to undefined method App\Models\RoomsInfoModel::getRooms
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Maintenance.php(121): CodeIgniter\Model->__call('getRooms', [])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Maintenance->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maintenance))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

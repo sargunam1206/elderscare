@@ -1,0 +1,262 @@
+ERROR - 2025-10-01 06:57:09 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'elders_care', 3307, '', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\advaya\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\advaya\app\Controllers\Login.php(48): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\Login->process()
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\advaya\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\advaya\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\advaya\app\Controllers\Login.php(48): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\Login->process()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-10-01 06:57:09 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+WHERE `user_mobileno` = :user_mobileno:
+AND `user_info`.`deleted_on` IS NULL
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Login.php(48): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Login->process()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-01 06:57:10 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'elders_care', 3307, '', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\advaya\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\advaya\app\Controllers\Login.php(48): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\Login->process()
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\advaya\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\advaya\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\advaya\app\Controllers\Login.php(48): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\Login->process()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-10-01 06:57:10 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_info`
+WHERE `user_mobileno` = :user_mobileno:
+AND `user_info`.`deleted_on` IS NULL
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Login.php(48): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Login->process()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-01 07:12:01 --> mysqli_sql_exception: Unknown column 'charge_info' in 'order clause' in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\advaya\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\advaya\app\Controllers\Servicebook.php(125): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\Servicebook->view()
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicebook))
+#9 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-10-01 07:12:01 --> Unknown column 'charge_info' in 'order clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `service_bookings`
+WHERE `deleted_on` IS NULL
+ORDER BY `charge_info` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Servicebook.php(125): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Servicebook->view()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicebook))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-01 07:17:42 --> mysqli_sql_exception: Unknown column 'charge_info' in 'order clause' in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\advaya\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\advaya\app\Controllers\Servicebook.php(125): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\Servicebook->view()
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicebook))
+#9 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-10-01 07:17:42 --> Unknown column 'charge_info' in 'order clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `service_bookings`
+WHERE `deleted_on` IS NULL
+ORDER BY `charge_info` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Servicebook.php(125): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Servicebook->view()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicebook))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-01 07:18:53 --> Undefined array key "first_name"
+in APPPATH\Views\servicebook\view.php on line 1022.
+ 1 APPPATH\Views\servicebook\view.php(1022): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "first_name"', 'C:\\xampp\\htdocs\\advaya\\app\\Views\\servicebook\\view.php', 1022)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\advaya\\app\\Views\\servicebook\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('servicebook/view', [], true)
+ 5 APPPATH\Controllers\Servicebook.php(143): view('servicebook/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Servicebook->view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicebook))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-01 07:20:50 --> Undefined array key "first_name"
+in APPPATH\Views\servicebook\view.php on line 1022.
+ 1 APPPATH\Views\servicebook\view.php(1022): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "first_name"', 'C:\\xampp\\htdocs\\advaya\\app\\Views\\servicebook\\view.php', 1022)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\advaya\\app\\Views\\servicebook\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('servicebook/view', [], true)
+ 5 APPPATH\Controllers\Servicebook.php(143): view('servicebook/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Servicebook->view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicebook))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-01 07:28:49 --> Undefined array key "first_name"
+in APPPATH\Views\servicebook\view.php on line 1022.
+ 1 APPPATH\Views\servicebook\view.php(1022): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "first_name"', 'C:\\xampp\\htdocs\\advaya\\app\\Views\\servicebook\\view.php', 1022)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\advaya\\app\\Views\\servicebook\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('servicebook/view', [], true)
+ 5 APPPATH\Controllers\Servicebook.php(143): view('servicebook/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Servicebook->view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicebook))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-01 07:30:49 --> Undefined variable $servicebookQuery
+in APPPATH\Controllers\Servicebook.php on line 123.
+ 1 APPPATH\Controllers\Servicebook.php(123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $servicebookQuery', 'C:\\xampp\\htdocs\\advaya\\app\\Controllers\\Servicebook.php', 123)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Servicebook->view()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicebook))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-01 07:31:11 --> syntax error, unexpected token "else", expecting "function" or "const"
+in APPPATH\Controllers\Servicebook.php on line 93.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\advaya\\app\\Controllers\\Servicebook.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Servicebook')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Servicebook')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Servicebook', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-01 07:31:16 --> syntax error, unexpected token "else", expecting "function" or "const"
+in APPPATH\Controllers\Servicebook.php on line 93.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\advaya\\app\\Controllers\\Servicebook.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Servicebook')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Servicebook')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Servicebook', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-01 07:31:24 --> Undefined array key "first_name"
+in APPPATH\Views\servicebook\view.php on line 1022.
+ 1 APPPATH\Views\servicebook\view.php(1022): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "first_name"', 'C:\\xampp\\htdocs\\advaya\\app\\Views\\servicebook\\view.php', 1022)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\advaya\\app\\Views\\servicebook\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('servicebook/view', [], true)
+ 5 APPPATH\Controllers\Servicebook.php(144): view('servicebook/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Servicebook->view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicebook))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-01 07:32:52 --> Undefined array key "first_name"
+in APPPATH\Views\servicebook\view.php on line 1022.
+ 1 APPPATH\Views\servicebook\view.php(1022): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "first_name"', 'C:\\xampp\\htdocs\\advaya\\app\\Views\\servicebook\\view.php', 1022)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\advaya\\app\\Views\\servicebook\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('servicebook/view', [], true)
+ 5 APPPATH\Controllers\Servicebook.php(144): view('servicebook/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Servicebook->view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicebook))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-01 07:35:37 --> Undefined array key "first_name"
+in APPPATH\Views\servicebook\view.php on line 1022.
+ 1 APPPATH\Views\servicebook\view.php(1022): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "first_name"', 'C:\\xampp\\htdocs\\advaya\\app\\Views\\servicebook\\view.php', 1022)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\advaya\\app\\Views\\servicebook\\view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('servicebook/view', [], true)
+ 5 APPPATH\Controllers\Servicebook.php(144): view('servicebook/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Servicebook->view('32')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicebook))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-01 09:26:14 --> mysqli_sql_exception: Unknown column 'service_bookings.service_type_id' in 'field list' in C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\advaya\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `service...', 0)
+#1 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `service...')
+#2 C:\xampp\htdocs\advaya\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `service...')
+#3 C:\xampp\htdocs\advaya\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `service...', Array, false)
+#4 C:\xampp\htdocs\advaya\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\advaya\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\advaya\app\Controllers\Servicebook.php(124): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\advaya\system\CodeIgniter.php(942): App\Controllers\Servicebook->view('64')
+#8 C:\xampp\htdocs\advaya\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicebook))
+#9 C:\xampp\htdocs\advaya\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\advaya\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-10-01 09:26:14 --> Unknown column 'service_bookings.service_type_id' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `service_bookings`.*, `guests_personal`.`first_name`, `guests_personal`.`last_name`, `service_bookings`.`service_type_id`
+FROM `service_bookings`
+LEFT JOIN `guests_personal` ON `guests_personal`.`guest_id` = `service_bookings`.`guest_id`
+WHERE `service_bookings`.`deleted_on` IS NULL
+AND `service_bookings`.`guest_id` = :service_bookings.guest_id:
+ORDER BY `id` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Servicebook.php(124): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Servicebook->view('64')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicebook))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
