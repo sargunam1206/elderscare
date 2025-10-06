@@ -911,27 +911,54 @@ document.querySelectorAll(".room-btn").forEach(btn => {
                         // Show blocked room info
                         const blockedInfo = roomBlockedMap[roomId] || {};
                         const reason = blockedInfo.reason || 'N/A';
+                        const start_date = blockedInfo.start_date || 'N/A';
                         const roomStatus = blockedInfo.status || 'N/A';
                         maintenanceHtml = `
-                            <div class="maintenance-section">
-                                <h4 class="fw-bold mb-3">Room ${roomNo} - Maintenance</h4>
-                                <div class="card shadow-sm p-3" style="background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;">
-                                    <p><strong>Reason:</strong> ${reason}</p>
-                                    <p><strong>Status:</strong> <span class="badge bg-warning text-dark">${roomStatus}</span></p>
-                                </div>
-                            </div>
+                           <div class="maintenance-section">
+    <h4 class="fw-bold mb-3">Room ${roomNo} - Maintenance</h4>
+    <div class="card shadow-sm p-3" style="background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;">
+        <div class="d-flex mb-1">
+            <span class="fw-semibold me-2" style="min-width:120px;">Reason</span>
+            <span class="text-dark">${reason}</span>
+        </div>
+        <div class="d-flex mb-1">
+            <span class="fw-semibold me-2" style="min-width:120px;">Start Date</span>
+            <span class="text-dark">${start_date}</span>
+        </div>
+        <div class="d-flex mb-0">
+            <span class="fw-semibold me-2" style="min-width:120px;">Status</span>
+            <span class="badge bg-warning text-dark">${roomStatus}</span>
+        </div>
+    </div>
+</div>
+
                         `;
                     } else if (maintenanceMap[roomId]) {
                         // Show active maintenance requests
                         const m = maintenanceMap[roomId];
                         maintenanceHtml = `
-                            <div class="maintenance-section">
-                                <h4 class="fw-bold mb-3">Room ${roomNo} - Maintenance</h4>
-                                <div class="card shadow-sm p-3" style="background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;">
-                                    <p><strong>Reason:</strong> ${m.problem_description || 'N/A'}</p>
-                                    <p><strong>Status:</strong> <span class="badge bg-warning text-dark">${m.status}</span></p>
-                                </div>
-                            </div>
+                           <div class="maintenance-section">
+    <h4 class="fw-bold mb-3">Room ${roomNo} - Maintenance</h4>
+    <div class="card shadow-sm p-3" style="background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;">
+        
+        <div class="d-flex mb-1">
+            <span class="fw-semibold me-2" style="min-width:120px;">Reason</span>
+            <span class="text-dark">${m.problem_description || 'N/A'}</span>
+        </div>
+        
+        <div class="d-flex mb-1">
+            <span class="fw-semibold me-2" style="min-width:120px;">Start Date</span>
+            <span class="text-dark">${m.request_date || 'N/A'}</span>
+        </div>
+        
+        <div class="d-flex mb-0">
+            <span class="fw-semibold me-2" style="min-width:120px;">Status</span>
+            <span class="badge bg-warning text-dark">${m.status}</span>
+        </div>
+
+    </div>
+</div>
+
                         `;
                     } else {
                         maintenanceHtml = `
