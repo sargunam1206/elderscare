@@ -416,7 +416,7 @@
 
     .dropdown-item:hover,
     .dropdown-item.active {
-      background-color: #198754;
+      background-color: #66BB6A;
       color: #fff;
     }
 

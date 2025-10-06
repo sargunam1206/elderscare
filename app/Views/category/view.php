@@ -842,6 +842,9 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
 
 Service Category</h4>
               <div>
+                <span class="badge bg-light text-success border border-success me-2 fs-1">
+                  <?= count($category ) ?> categories
+                </span>
                
                 <button type="button" 
    class="btn btn-primary" 

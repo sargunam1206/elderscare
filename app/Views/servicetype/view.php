@@ -833,6 +833,9 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
               <h4 class=""  style="font-size:18px;"><i class="bi bi-tags text-success me-1"></i>
 Service Type</h4>
               <div>
+                <span class="badge bg-light text-success border border-success me-2 fs-1">
+                  <?= count($servicetype ) ?> service types 
+                </span>
                 
                  <button type="button" 
    class="btn btn-primary" 

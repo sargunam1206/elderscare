@@ -118,3 +118,50 @@ in SYSTEMPATH\Database\BaseConnection.php on line 428.
  5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdvBooking))
  6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-06 09:45:55 --> mysqli_sql_exception: Table 'elders_care.room_blocked' doesn't exist in C:\xampp1\htdocs\advaya\elderscare\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp1\htdocs\advaya\elderscare\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `room_id...', 0)
+#1 C:\xampp1\htdocs\advaya\elderscare\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `room_id...')
+#2 C:\xampp1\htdocs\advaya\elderscare\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `room_id...')
+#3 C:\xampp1\htdocs\advaya\elderscare\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `room_id...', Array, false)
+#4 C:\xampp1\htdocs\advaya\elderscare\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp1\htdocs\advaya\elderscare\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp1\htdocs\advaya\elderscare\app\Controllers\RoomBlocked.php(269): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp1\htdocs\advaya\elderscare\system\CodeIgniter.php(942): App\Controllers\RoomBlocked->maint()
+#8 C:\xampp1\htdocs\advaya\elderscare\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RoomBlocked))
+#9 C:\xampp1\htdocs\advaya\elderscare\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp1\htdocs\advaya\elderscare\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2025-10-06 09:45:55 --> mysqli_sql_exception: Unknown column 'room_id' in 'field list' in C:\xampp1\htdocs\advaya\elderscare\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp1\htdocs\advaya\elderscare\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `room_id...', 0)
+#1 C:\xampp1\htdocs\advaya\elderscare\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `room_id...')
+#2 C:\xampp1\htdocs\advaya\elderscare\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `room_id...')
+#3 C:\xampp1\htdocs\advaya\elderscare\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `room_id...', Array, false)
+#4 C:\xampp1\htdocs\advaya\elderscare\app\Controllers\Maintenance.php(630): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp1\htdocs\advaya\elderscare\system\CodeIgniter.php(942): App\Controllers\Maintenance->getMaintenanceData()
+#6 C:\xampp1\htdocs\advaya\elderscare\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maintenance))
+#7 C:\xampp1\htdocs\advaya\elderscare\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp1\htdocs\advaya\elderscare\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-10-06 09:45:55 --> Table 'elders_care.room_blocked' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `room_id`, `reason`, `status`
+FROM `room_blocked`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\RoomBlocked.php(269): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\RoomBlocked->maint()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RoomBlocked))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-06 09:45:55 --> Unknown column 'room_id' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `room_id`, `problem_description`, `status`
+FROM `maintenance_requests`
+WHERE `deleted_on` IS NULL', [], false)
+ 2 APPPATH\Controllers\Maintenance.php(630): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Maintenance->getMaintenanceData()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maintenance))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

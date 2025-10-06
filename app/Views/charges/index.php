@@ -614,7 +614,7 @@
 
       <div class="row g-4" >
         <div class="col-md-12">
-          <div class=" px-3  h-100 d-flex flex-column">
+          <div class=" px-3 py-2  h-100 d-flex flex-column">
             <div class="d-flex justify-content-between align-items-center mb-3">
            
               <h4 class="" style="font-size:18px;"><i class="bi bi-credit-card me-2 text-success"></i>Charges Management</h4>

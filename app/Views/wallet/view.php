@@ -807,11 +807,15 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
  
 <div class="row mb-3">
                 <div class="col-md-6">
-                    <h5 class="mb-0 fs-7"> <i class="bi bi-wallet2 text-success"></i>
+                    <h4 class="" style="font-size:18px;"> <i class="bi bi-wallet2 text-success"></i>
 
-Wallet</h5>
+Wallet</h4>
                 </div>
+                 
                 <div class="col-md-6 text-end">
+                  <span class="badge bg-light text-success border border-success me-2 fs-1">
+                  <?= count($wallet_guest ) ?> wallets
+                </span>
                     <button type="button" 
    class="btn btn-primary" 
    data-bs-toggle="modal" 

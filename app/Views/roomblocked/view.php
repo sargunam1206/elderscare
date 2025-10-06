@@ -306,6 +306,11 @@
     .dropdown.is-invalid .form-control {
       border-color: #dc3545 !important;
     }
+     .dropdown-item:hover,
+    .dropdown-item.active {
+      background-color: #66BB6A;
+      color: #fff;
+    }
 
     /* ========== Responsive Adjustments ========== */
     @media (max-width: 768px) {
@@ -925,8 +930,10 @@
                                             class="bi bi-building text-success me-1"></i>
                                         Blocked Rooms</h4>
                                     <div>
-
-                                        <button type="button" class="btn btn-success mb-1 px-4 fs-4"
+                                         <span class="badge bg-light text-success border border-success me-2 fs-1">
+                  <?= count($rooms) ?> rooms
+                </span>
+                                        <button type="button" class="btn btn-primary mb-1 px-4 fs-4"
                                             data-bs-toggle="modal" data-bs-target="#vertical-center-scroll-modal">
                                             <i class="bi bi-plus-circle me-1"></i>
                                             Add Blocked Rooms

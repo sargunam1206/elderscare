@@ -176,16 +176,17 @@ body {
   transition: all 0.3s ease;
 }
 
-.btn-primary {
-  background-color: var(--primary-green);
-  border-color: var(--primary-green);
-  color: var( --table-header-text);
-}
 
-.btn-primary:hover {
-  background-color: var(--primary-green-hover);
-  border-color: var(--primary-green-hover);
-}
+ .btn-primary {
+      background-color: var(--primary-green);
+      border-color: var(--primary-green);
+      color: var( --table-header-text);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-green-hover);
+      border-color: var(--primary-green-hover);
+    }
 
 .btn-secondary {
   background-color: var(--light-green);
@@ -404,7 +405,7 @@ body {
       color: var(--primary);
       font-weight: 600;
     }
-    .btn-primary {
+    /* .btn-primary {
       background-color: var(--primary);
       border-color: var(--primary);
       border-radius: 8px;
@@ -412,7 +413,28 @@ body {
     .btn-primary:hover {
       background-color: #2E7D32;
       border-color: #2E7D32;
-    }
+    } */
+
+      .btn-primary:focus,
+.btn-primary:active,
+.btn-primary:focus:active {
+    background-color: #1B5E20 !important;
+    color: #FFFFFF !important;
+    box-shadow: none !important;
+    border-color: #1B5E20 !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+  color: var( --table-header-text);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-green-hover);
+  border-color: var(--primary-green-hover);
+}
+
     .btn-secondary {
       background-color: var(--accent);
       color: var(--primary);
@@ -920,9 +942,12 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
               <h4 class=""  style="font-size:18px;"><i class="bi bi-building text-success me-1"></i>
 Rooms</h4>
               <div>
+                 <span class="badge bg-light text-success border border-success me-2 fs-1">
+                  <?= count($rooms) ?>rooms
+                </span>
                
                  <button type="button" 
-   class="btn btn-success mb-1 px-4 fs-4" 
+   class="btn btn-primary mb-1 px-4 fs-4" 
    data-bs-toggle="modal" 
    data-bs-target="#vertical-center-scroll-modal">
    <i class="bi bi-plus-circle me-1"></i>

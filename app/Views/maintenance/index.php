@@ -298,6 +298,11 @@
       border-color: #dc3545 !important;
     }
 
+     .dropdown-item:hover,
+    .dropdown-item.active {
+      background-color: #66BB6A;
+      color: #fff;
+    }
     /* ========== Responsive Adjustments ========== */
     @media (max-width: 768px) {
       .page-title {

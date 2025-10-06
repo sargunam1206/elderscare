@@ -875,6 +875,9 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
 
 Services Mode</h4>
               <div>
+                <span class="badge bg-light text-success border border-success me-2 fs-1">
+                  <?= count($servicemodes ) ?> service modes
+                </span>
                
                  <button type="button" 
    class="btn btn-primary" 
