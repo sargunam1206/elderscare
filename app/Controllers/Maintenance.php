@@ -625,7 +625,7 @@ protected function handleFileUploads($maintenanceId, $isUpdate = false)
     ini_set('display_startup_errors', '1');
     error_reporting(E_ALL);
     $builder = $this->db->table('maintenance_requests');
-    $builder->select('room_id, problem_description, status');
+    $builder->select('room_id, problem_description,request_date,status');
     $builder->where('deleted_on', null); // Only active requests
     $query = $builder->get();
 
@@ -633,6 +633,7 @@ protected function handleFileUploads($maintenanceId, $isUpdate = false)
     foreach ($query->getResultArray() as $row) {
         $maintenanceMap[$row['room_id']] = [
             'problem_description' => $row['problem_description'],
+             'request_date' => $row['request_date'],
             'status' => $row['status']
         ];
     }
