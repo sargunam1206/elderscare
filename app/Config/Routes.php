@@ -174,6 +174,10 @@ $routes->get('getServiceTypeId/(:any)', 'Landingpage::getServiceTypeId/$1');
 $routes->get('getServiceTypeId', 'Landingpage::getServiceTypeId');
 
 
+$routes->get('getOccupiedRooms', 'Landingpage::getOccupiedRooms');
+
+
+
 
 //room guest
 $routes->get('room_guest/(:any)', 'Inhouseguest::room_guest/$1');

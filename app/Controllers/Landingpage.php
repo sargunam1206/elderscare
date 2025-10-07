@@ -245,5 +245,16 @@ public function occupiedRooms()
 
 
 
+public function getOccupiedRooms()
+{
+    $occupiedBookings = $this->AdvanceBookingModel
+        ->where('status', 'Occupied')
+        ->findAll();
+
+    return $this->response->setJSON(['occupiedBookings' => $occupiedBookings]);
+}
+
+
+
 
 }
