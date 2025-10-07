@@ -1,5 +1,12 @@
- 
-"# CodeIgniter 4 Session files" 
-"writable/session/*" 
-"writable/logs/" 
-"writable/session/" 
+# Ignore IDE and OS files
+.vscode/ 
+
+# CodeIgniter writable folders
+writable/cache/
+writable/logs/
+writable/session/
+writable/uploads/
+
+# System files
+.env
+/vendor/
