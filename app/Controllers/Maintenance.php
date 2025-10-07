@@ -14,6 +14,8 @@ class Maintenance extends BaseController
     protected $db;
     protected $maintenanceModel;
     protected $fileModel;
+    protected $rooms;
+
 
     public function __construct()
     {

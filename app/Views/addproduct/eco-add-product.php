@@ -259,6 +259,20 @@
       font-size: 0.7rem !important;
       padding: 4px 10px;
     }
+
+    .payment-method-cards.border-danger {
+    border: 2px solid #dc3545 !important;
+    background-color: rgba(220, 53, 69, 0.05);
+}
+
+.payment-method-cards.text-danger {
+    color: #dc3545 !important;
+}
+
+.payment-method-cards.border-danger:hover {
+    border-color: #dc3545 !important;
+    background-color: rgba(220, 53, 69, 0.1);
+}
   </style>
   <style>
     :root {
@@ -2524,7 +2538,7 @@ document.querySelectorAll('#laundryModal .payment-method-card').forEach(card => 
                 const guestId = tableRow.getAttribute('data-guest-id');
                 
                 if (guestId) {
-                    fetch(`/guest_wallet_id/${guestId}`)
+                    fetch(`/advaya/guest_wallet_id/${guestId}`)
                         .then(response => response.json())
                         .then(data => {
                             if (data && data[0] && data[0]['balance'] !== undefined) {
@@ -2623,6 +2637,7 @@ document.getElementById("laundryModal").addEventListener("hidden.bs.modal", func
 });
 
 
+
 // Add this code to handle tab clicks
 document.addEventListener('DOMContentLoaded', function() {
     // Listen for click on the summary tab
@@ -2630,7 +2645,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (summaryTab) {
         summaryTab.addEventListener('click', function() {
             console.log("Summary tab clicked directly - updating summary");
-            updateLaundrySummary();
+            updateLaundryPreview();
         });
     }
     
@@ -2640,7 +2655,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tabEl.addEventListener('shown.bs.tab', function(event) {
             if (event.target.id === 'laundry-step2-tab') {
                 console.log("Bootstrap tab shown event - updating summary");
-                updateLaundrySummary();
+                updateLaundryPreview();
             }
         });
     }
@@ -2951,11 +2966,19 @@ function updateLaundrySummary() {
                                     </div>
 
                                     <div id="wallet-forms" class="payment-forms" style="display:none">
-                                        <div class="alert alert-info">
-                                            <i class="fas fa-info-circle me-2"></i>
-                                            Current balance: <strong id="balance">₹0</strong>
-                                        </div>
-                                    </div>
+                                      <div class="alert alert-info">
+                                          <i class="fas fa-info-circle me-2"></i>
+                                          Current balance: <strong id="balance">₹0.00</strong>
+                                          <div class="mt-2">
+                                              <small class="text-muted">The amount will be deducted from your wallet balance.</small>
+                                          </div>
+                                      </div>
+                                      <div class="alert alert-warning mt-2" id="low-balance-warning" style="display:none;">
+                                          <i class="fas fa-exclamation-triangle me-2"></i>
+                                          <strong>Insufficient balance!</strong> 
+                                          <span id="balance-shortfall-text">Please choose another payment method.</span>
+                                      </div>
+                                  </div>
                                 </div>
                             
                                 <!-- Stepper Navigation -->
@@ -3123,6 +3146,41 @@ function proceedWithoutPayment() {
 }
 
 // Payment method validation
+// function validatePaymentMethod() {
+//     if (!paymentRequired) return true;
+    
+//     const activeMethod = document.querySelector('.payment-method-cards.active');
+//     if (!activeMethod) {
+//         alert('Please select a payment method.');
+//         return false;
+//     }
+    
+//     const method = activeMethod.dataset.method;
+//     currentPaymentMethod = method;
+    
+//     // For cash and wallet, no additional validation needed
+//     if (method === 'cash' || method === 'wallet') {
+//         return true;
+//     }
+    
+//     // For UPI, validate the required field
+//     if (method === 'upi') {
+//         const input = document.querySelector('#upi-forms .payment-field');
+//         if (!input.value.trim()) {
+//             input.classList.add('is-invalid');
+//             input.focus();
+//             return false;
+//         } else {
+//             input.classList.remove('is-invalid');
+//             return true;
+//         }
+//     }
+    
+//     return true;
+// }
+
+
+// Payment method validation
 function validatePaymentMethod() {
     if (!paymentRequired) return true;
     
@@ -3135,8 +3193,31 @@ function validatePaymentMethod() {
     const method = activeMethod.dataset.method;
     currentPaymentMethod = method;
     
-    // For cash and wallet, no additional validation needed
-    if (method === 'cash' || method === 'wallet') {
+    // For wallet, check if balance is sufficient
+    if (method === 'wallet') {
+        const balanceText = document.getElementById("balance").textContent;
+        const balance = parseFloat(balanceText.replace('₹', '').replace('(Error)', '')) || 0;
+        const totalAmount = calculateTotalPaid();
+        
+
+        // Show/hide the low balance warning in the modal
+         const lowBalanceWarning = document.getElementById('low-balance-warning');
+        if (balance < totalAmount) {
+            lowBalanceWarning.style.display = 'block';
+            // Also add visual indicator to the wallet card
+            activeMethod.classList.add('border-danger');
+            activeMethod.classList.add('text-danger');
+            return false;
+        } else {
+            lowBalanceWarning.style.display = 'none';
+            activeMethod.classList.remove('border-danger');
+            activeMethod.classList.remove('text-danger');
+            return true;
+        }
+    }
+    
+    // For cash, no additional validation needed
+    if (method === 'cash') {
         return true;
     }
     
@@ -3155,6 +3236,7 @@ function validatePaymentMethod() {
     
     return true;
 }
+
 
 // Combined validation function for final submission
 function validateAndSubmit() {
@@ -3317,10 +3399,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Payment method selection
+        // Payment method selection
     document.querySelectorAll(".payment-method-cards").forEach(card => {
         card.addEventListener("click", function() {
-            document.querySelectorAll(".payment-method-cards").forEach(c => c.classList.remove("active"));
+            document.querySelectorAll(".payment-method-cards").forEach(c => {
+                c.classList.remove("active", "border-danger", "text-danger");
+            });
             this.classList.add("active");
 
             const method = this.dataset.method;
@@ -3334,14 +3418,37 @@ document.addEventListener('DOMContentLoaded', function() {
                 field.classList.remove('is-invalid');
             });
 
+            // Hide low balance warning when switching away from wallet
+            if (method !== "wallet") {
+                document.getElementById('low-balance-warning').style.display = 'none';
+            }
+
             // Fetch wallet balance if wallet is selected
             if (method === "wallet" && guestId) {
                 fetch(`/advaya/guest_wallet_id/${guestId}`)
                     .then(res => res.json())
                     .then(data => {
-                        document.getElementById("balance").textContent = "₹" + (data[0]?.balance ?? 0);
+                        const balance = data[0]?.balance ?? 0;
+                        document.getElementById("balance").textContent = "₹" + balance;
+                        
+                        // Check balance and show warning if insufficient
+                        const totalAmount = calculateTotalPaid();
+                        const lowBalanceWarning = document.getElementById('low-balance-warning');
+                        
+                        if (balance < totalAmount) {
+                            lowBalanceWarning.style.display = 'block';
+                            this.classList.add('border-danger');
+                            this.classList.add('text-danger');
+                        } else {
+                            lowBalanceWarning.style.display = 'none';
+                            this.classList.remove('border-danger');
+                            this.classList.remove('text-danger');
+                        }
                     })
-                    .catch(err => console.error(err));
+                    .catch(err => {
+                        console.error(err);
+                        document.getElementById("balance").textContent = "₹0 (Error)";
+                    });
             }
         });
     });
@@ -3436,14 +3543,15 @@ function calculateTotalPaid() {
 }
 
 // Your existing functions for modal handling
+// Your existing functions for modal handling
 function openMaintenanceModal(button) {
     const row = button.closest('tr');
-    currentGuestId = row.getAttribute('data-guest-id');
+    guestId = row.getAttribute('data-guest-id'); // Remove 'current' prefix to use the global variable
     currentGuestType = row.getAttribute('data-guest-type');
     currentRoomNo = row.getAttribute('data-room-no');
     
-    document.getElementById('guest_id_charge').value = currentGuestId;
-    document.getElementById('testNo').value = currentGuestId;
+    document.getElementById('guest_id_charge').value = guestId;
+    document.getElementById('testNo').value = guestId;
     document.getElementById('room_no_charge').value = currentRoomNo;
     
     resetChargeAmounts();
@@ -3452,9 +3560,8 @@ function openMaintenanceModal(button) {
     const month = today.getFullYear() + "-" + String(today.getMonth() + 1).padStart(2, '0');
     document.getElementById('month').value = month;
     
-    fetchCharges(currentGuestId, month);
+    fetchCharges(guestId, month);
 }
-
 function resetChargeAmounts() {
     const charges = [
         { inputId: 'main_paidamount', displayId: 'main_amount', hiddenId: 'main_amount_act' },

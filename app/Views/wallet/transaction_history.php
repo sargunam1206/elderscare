@@ -871,11 +871,19 @@
                         <td><?= $transaction['payment_mode'] ?? 'N/A' ?></td>
                         <td><?= $transaction['reference_id'] ?? 'N/A' ?></td>
                         <!-- <td></?= $transaction['description'] ?? 'N/A' ?></td> -->
-                         <td>
+                         <!-- <td> -->
+    <!-- Generate Bill Button -->
+    <!-- <button type="button"
+            class="btn btn-primary btn-sm"
+            onclick="generateWalletBill('<?= $transaction['transaction_id']; ?>')">
+        <i class="bi bi-receipt"></i> Generate Bill
+    </button>
+</td> -->
+<td>
     <!-- Generate Bill Button -->
     <button type="button"
             class="btn btn-primary btn-sm"
-            onclick="generateWalletBill('<?= $transaction['transaction_id']; ?>')">
+            onclick="openWalletBillConfirmation('<?= $transaction['transaction_id']; ?>')">
         <i class="bi bi-receipt"></i> Generate Bill
     </button>
 </td>
@@ -891,7 +899,30 @@
       </div>
     </div>
   </div>
-
+<!-- Wallet Bill Confirmation Modal -->
+<div class="modal fade" id="walletBillConfirmationModal" tabindex="-1" aria-labelledby="walletBillConfirmationLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="walletBillConfirmationLabel">Generate Transaction Bill</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to generate bill for this transaction?</p>
+        <!-- <div class="alert alert-info mt-3">
+          <i class="bi bi-info-circle me-2"></i>
+          This will create a bill that can be downloaded or printed.
+        </div> -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" id="confirmGenerateWalletBill">
+          <i class="bi bi-receipt me-2"></i>Generate Bill
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- JavaScript Files -->
   <script src="<?= base_url(); ?>/public/dist/assets/js/vendor.min.js"></script>
   <script src="<?= base_url(); ?>/public/dist/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -934,68 +965,227 @@
       setupDropdown('guestFilterDisplay', 'guestFilter', 'guestLists');
     });
 
-    function generateWalletBill(transactionId) {
-    if (confirm('Are you sure you want to generate bill for this transaction?')) {
-        // Show loading state
-        const btn = event.target;
-        const originalText = btn.innerHTML;
-        btn.innerHTML = '<i class="bi bi-hourglass-split"></i> Generating...';
-        btn.disabled = true;
+//     function generateWalletBill(transactionId) {
+//     if (confirm('Are you sure you want to generate bill for this transaction?')) {
+//         // Show loading state
+//         const btn = event.target;
+//         const originalText = btn.innerHTML;
+//         btn.innerHTML = '<i class="bi bi-hourglass-split"></i> Generating...';
+//         btn.disabled = true;
         
-        // Send AJAX request
-        fetch('<?= base_url("wallet/generateWalletBill"); ?>', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'X-Requested-With': 'XMLHttpRequest'
-            },
-            body: 'transaction_id=' + encodeURIComponent(transactionId)
-        })
-        .then(response => {
-            console.log('Response status:', response.status);
-            console.log('Response ok:', response.ok);
+//         // Send AJAX request
+//         fetch('<?= base_url("wallet/generateWalletBill"); ?>', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/x-www-form-urlencoded',
+//                 'X-Requested-With': 'XMLHttpRequest'
+//             },
+//             body: 'transaction_id=' + encodeURIComponent(transactionId)
+//         })
+//         .then(response => {
+//             console.log('Response status:', response.status);
+//             console.log('Response ok:', response.ok);
             
-            if (!response.ok) {
-                throw new Error('HTTP error! status: ' + response.status);
-            }
-            return response.text();
-        })
-        .then(text => {
-            console.log('Raw response:', text);
+//             if (!response.ok) {
+//                 throw new Error('HTTP error! status: ' + response.status);
+//             }
+//             return response.text();
+//         })
+//         .then(text => {
+//             console.log('Raw response:', text);
             
-            try {
-                const data = JSON.parse(text);
-                return data;
-            } catch (e) {
-                console.error('JSON parse error:', e);
-                throw new Error('Invalid JSON response: ' + text.substring(0, 100));
-            }
-        })
-        .then(data => {
-            console.log('Parsed data:', data);
+//             try {
+//                 const data = JSON.parse(text);
+//                 return data;
+//             } catch (e) {
+//                 console.error('JSON parse error:', e);
+//                 throw new Error('Invalid JSON response: ' + text.substring(0, 100));
+//             }
+//         })
+//         .then(data => {
+//             console.log('Parsed data:', data);
             
-            if (data.success) {
-                // Open bill in new tab for preview/download
-                const billUrl = '<?= base_url("wallet/viewWalletBill"); ?>?bill_id=' + data.bill_id;
-                console.log('Opening bill URL:', billUrl);
-                window.open(billUrl, '_blank');
+//             if (data.success) {
+//                 // Open bill in new tab for preview/download
+//                 const billUrl = '<?= base_url("wallet/viewWalletBill"); ?>?bill_id=' + data.bill_id;
+//                 console.log('Opening bill URL:', billUrl);
+//                 window.open(billUrl, '_blank');
                 
-                // Show success message
-               // alert('Bill generated successfully! Bill No: ' + data.bill_no);
-            } else {
-                alert('Error: ' + data.message);
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Error generating bill: ' + error.message);
-        })
-        .finally(() => {
-            // Reset button state
-            btn.innerHTML = originalText;
-            btn.disabled = false;
-        });
+//                 // Show success message
+//                // alert('Bill generated successfully! Bill No: ' + data.bill_no);
+//             } else {
+//                 alert('Error: ' + data.message);
+//             }
+//         })
+//         .catch(error => {
+//             console.error('Error:', error);
+//             alert('Error generating bill: ' + error.message);
+//         })
+//         .finally(() => {
+//             // Reset button state
+//             btn.innerHTML = originalText;
+//             btn.disabled = false;
+//         });
+//     }
+// }
+
+// Global variable to store the current transaction ID
+let currentTransactionId = null;
+
+// Function to open the confirmation modal
+function openWalletBillConfirmation(transactionId) {
+    currentTransactionId = transactionId;
+    const modal = new bootstrap.Modal(document.getElementById('walletBillConfirmationModal'));
+    modal.show();
+}
+
+// Function to generate the bill (formerly generateWalletBill)
+function generateWalletBill() {
+    if (!currentTransactionId) {
+        console.error('No transaction ID found');
+        showErrorToast('No transaction selected');
+        return;
     }
+    
+    // Show loading state in the modal button
+    const confirmBtn = document.getElementById('confirmGenerateWalletBill');
+    const originalText = confirmBtn.innerHTML;
+    confirmBtn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Generating...';
+    confirmBtn.disabled = true;
+    
+    // Close the modal
+    const modal = bootstrap.Modal.getInstance(document.getElementById('walletBillConfirmationModal'));
+    modal.hide();
+    
+    // Send AJAX request
+    fetch('<?= base_url("wallet/generateWalletBill"); ?>', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'X-Requested-With': 'XMLHttpRequest'
+        },
+        body: 'transaction_id=' + encodeURIComponent(currentTransactionId)
+    })
+    .then(response => {
+        console.log('Response status:', response.status);
+        console.log('Response ok:', response.ok);
+        
+        if (!response.ok) {
+            throw new Error('HTTP error! status: ' + response.status);
+        }
+        return response.text();
+    })
+    .then(text => {
+        console.log('Raw response:', text);
+        
+        try {
+            const data = JSON.parse(text);
+            return data;
+        } catch (e) {
+            console.error('JSON parse error:', e);
+            throw new Error('Invalid JSON response: ' + text.substring(0, 100));
+        }
+    })
+    .then(data => {
+        console.log('Parsed data:', data);
+        
+        if (data.success) {
+            // Open bill in new tab for preview/download
+            const billUrl = '<?= base_url("wallet/viewWalletBill"); ?>?bill_id=' + data.bill_id;
+            console.log('Opening bill URL:', billUrl);
+            window.open(billUrl, '_blank');
+            
+            // Show success toast notification
+            showSuccessToast('Transaction bill generated successfully!');
+        } else {
+            showErrorToast('Error: ' + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        showErrorToast('Error generating bill: ' + error.message);
+    })
+    .finally(() => {
+        // Reset button state
+        confirmBtn.innerHTML = originalText;
+        confirmBtn.disabled = false;
+        currentTransactionId = null;
+    });
+}
+
+// Add event listener to the confirmation button
+document.addEventListener('DOMContentLoaded', function() {
+    const confirmBtn = document.getElementById('confirmGenerateWalletBill');
+    if (confirmBtn) {
+        confirmBtn.addEventListener('click', generateWalletBill);
+    }
+});
+
+// Update the Generate Bill buttons in the table to use the modal
+function updateWalletBillButtons() {
+    document.querySelectorAll('button[onclick^="generateWalletBill"]').forEach(button => {
+        const oldOnClick = button.getAttribute('onclick');
+        const transactionId = oldOnClick.match(/'([^']+)'/)[1];
+        button.setAttribute('onclick', `openWalletBillConfirmation('${transactionId}')`);
+    });
+}
+
+// Call this function after the page loads
+document.addEventListener('DOMContentLoaded', updateWalletBillButtons);
+
+// If you're using DataTables with dynamic content, you might need to re-run this
+// after table updates. For example:
+// $('#transaction_table').on('draw.dt', updateWalletBillButtons);
+
+// Toast notification functions
+function showSuccessToast(message) {
+    const toastHtml = `
+        <div class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="bi bi-check-circle me-2"></i>${message}
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    `;
+    
+    showToast(toastHtml, 3000);
+}
+
+function showErrorToast(message) {
+    const toastHtml = `
+        <div class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="bi bi-exclamation-triangle me-2"></i>${message}
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    `;
+    
+    showToast(toastHtml, 5000);
+}
+
+function showToast(toastHtml, delay) {
+    const toastContainer = document.querySelector('.toast-container');
+    const toastId = 'toast-' + Date.now();
+    
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = toastHtml;
+    const toastElement = tempDiv.firstElementChild;
+    toastElement.id = toastId;
+    
+    toastContainer.appendChild(toastElement);
+    
+    const toast = new bootstrap.Toast(toastElement, { delay: delay });
+    toast.show();
+    
+    // Remove the toast element after it's hidden
+    toastElement.addEventListener('hidden.bs.toast', function() {
+        toastElement.remove();
+    });
 }
   </script>
 </body>

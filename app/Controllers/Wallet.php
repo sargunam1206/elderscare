@@ -898,16 +898,16 @@ private function generateTransactionExcel11($transactions, $filterData)
         // Save transaction
         if ($this->transaction->save($transaction_data)) {
             $successMessage = 'Wallet funds added successfully!';
-            if ($payment_mode === 'UPI') {
-                $successMessage .= ' UPI Transaction ID: ' . $reference_id;
-            } elseif ($payment_mode === 'Cash') {
-                $successMessage .= ' Payment mode: Cash';
-            }
+            // if ($payment_mode === 'UPI') {
+            //     $successMessage .= ' UPI Transaction ID: ' . $reference_id;
+            // } elseif ($payment_mode === 'Cash') {
+            //     $successMessage .= ' Payment mode: Cash';
+            // }
             $session->setFlashdata('success', $successMessage);
-            return redirect()->to('wallet/' . $guest_id);
+            return redirect()->to('walletrept/' . $guest_id);
         } else {
             $session->setFlashdata('error', 'Failed to save transaction');
-            return redirect()->to('wallet');
+            return redirect()->to('walletrept');
         }
         
     } catch (\Exception $e) {

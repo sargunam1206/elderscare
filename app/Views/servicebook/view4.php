@@ -550,8 +550,6 @@
         align-items: stretch;
       }
 
-
-
       #form_inputs_wrapper>.dataTables_info,
       #form_inputs_wrapper>.dataTables_paginate {
         width: 100%;
@@ -642,6 +640,59 @@
               <!-- Footer buttons if needed -->
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Generate Service Bill Confirmation Modal -->
+    <div class="modal fade" id="generateServiceBillModal" tabindex="-1" aria-labelledby="generateServiceBillModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="generateServiceBillModalLabel">
+              <i class="bi bi-receipt me-2 text-success"></i>Generate Service Bill
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to generate a bill for this service?</p>
+            <!-- <div class="service-details mt-3 p-3 bg-light rounded">
+              <h6 class="mb-2">Service Details:</h6>
+              <div class="row">
+                <div class="col-6">
+                  <small><strong>Booking ID:</strong></small>
+                  <p id="modalBookingId" class="mb-1">-</p>
+                </div>
+                <div class="col-6">
+                  <small><strong>Date:</strong></small>
+                  <p id="modalServiceDate" class="mb-1">-</p>
+                </div>
+                <div class="col-6">
+                  <small><strong>Room No:</strong></small>
+                  <p id="modalServiceRoom" class="mb-1">-</p>
+                </div>
+                <div class="col-6">
+                  <small><strong>Guest Name:</strong></small>
+                  <p id="modalServiceGuest" class="mb-1">-</p>
+                </div>
+                <div class="col-6">
+                  <small><strong>Service Type:</strong></small>
+                  <p id="modalServiceType" class="mb-1">-</p>
+                </div>
+                <div class="col-6">
+                  <small><strong>Payment Status:</strong></small>
+                  <p id="modalServicePayment" class="mb-1">-</p>
+                </div>
+              </div>
+            </div> -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-success" id="confirmGenerateServiceBill">
+              <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+              <span class="btn-text">Generate Bill</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -856,48 +907,34 @@
                           </button>
                         </td>
                         <td><?= $asset['payment_status']; ?></td>
-                        <!-- <td>
-                          </?php if ($asset['payment_status'] === 'pending'): ?>
+                        <td>
+                          <!-- Generate Bill Button -->
+                          <?php if ($asset): ?>
+                            <button type="button"
+                                    class="btn btn-primary btn-sm mt-1 generate-service-bill-btn"
+                                    data-booking-id="<?= $asset['id']; ?>"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#generateServiceBillModal">
+                                <i class="bi bi-receipt"></i> Generate Bill
+                            </button>
+                          <?php endif; ?>
+                        </td>
+                        <td>
+                          <?php if ($asset['payment_status'] === 'pending'): ?>
                             <button type="button" 
                                     class="btn" style="color:blue" 
                                     data-bs-toggle="modal"
                                     data-bs-target="#laundryModal"
-                                    onclick='editServiceBooking(</?= json_encode($asset) ?>)'
+                                    onclick='editServiceBooking(<?= json_encode($asset) ?>)'
                                     title="Edit Service">
-                              <i class="bi bi-pencil-square"></i> 
+                                <i class="bi bi-pencil-square"></i> 
                             </button>
-                          </?php else: ?>
+                          <?php else: ?>
                             <span class="btn" style="color:green" title="Payment Completed">
-                              <i class="bi bi-check-square"></i>
+                                <i class="bi bi-check-square"></i>
                             </span>
-                          </?php endif; ?>
-                        </td> -->
-<td>
-      <!-- Generate Bill Button -->
-    <?php if ($asset): ?>
-        <button type="button"
-                class="btn btn-primary btn-sm mt-1"
-                onclick="openBillConfirmation('<?= $asset['id']; ?>')">
-            <i class="bi bi-receipt"></i> Generate Bill
-        </button>
-    <?php endif; ?>
-                          </td>
-                        <td>
-    <?php if ($asset['payment_status'] === 'pending'): ?>
-        <button type="button" 
-                class="btn" style="color:blue" 
-                data-bs-toggle="modal"
-                data-bs-target="#laundryModal"
-                onclick='editServiceBooking(<?= json_encode($asset) ?>)'
-                title="Edit Service">
-            <i class="bi bi-pencil-square"></i> 
-        </button>
-    <?php else: ?>
-        <span class="btn" style="color:green" title="Payment Completed">
-            <i class="bi bi-check-square"></i>
-        </span>
-    <?php endif; ?>
-</td>
+                          <?php endif; ?>
+                        </td>
                       </tr>
 
                       <div class="modal fade" id="deleteConfirmationModal<?= $asset['id']; ?>" tabindex="-1" aria-labelledby="deleteModalTitle<?= $asset['id']; ?>" aria-hidden="true">
@@ -1018,22 +1055,15 @@
               </div>
 
               <!-- Confirm Button -->
-               <!-- <div class="text-center mt-4">
+              <div class="alert alert-info">
+                <i class="fas fa-info-circle me-2"></i>
+                Please review the charges above before proceeding.
+              </div>
+              <div class="d-flex justify-content-center mt-4">
                 <button type="button" class="btn btn-success btn-lg" onclick="confirmOrder()">
                   <i class="fas fa-check-circle me-2"></i> Confirm Order
                 </button>
-              </div> -->
-
-                          <div class="alert alert-info">
-                <i class="fas fa-info-circle me-2"></i>
-                Please review the charges above before proceeding.
-            </div>
-                <div class="d-flex justify-content-center mt-4">
-                  <button type="button" class="btn btn-success btn-lg" onclick="confirmOrder()">
-                    <i class="fas fa-check-circle me-2"></i> Confirm Order
-                  </button>
-                </div>
-
+              </div>
 
               <!-- Payment Options (Initially Hidden) -->
               <div id="payment-options" class="mt-4" style="display: none;">
@@ -1048,13 +1078,6 @@
                 </div>
               </div>
 
-              <!-- Stepper Navigation -->
-              <!-- <div class="d-flex justify-content-between mt-5">
-                <button type="button" class="btn btn-secondary" onclick="goLaundryStep(1)">
-                  <i class="fas fa-arrow-left me-2"></i> Back
-                </button>
-              </div> -->
-
               <!-- Back Button -->
               <div class="d-flex justify-content-center mt-3">
                 <button type="button" class="btn btn-secondary" onclick="goLaundryStep(1)">
@@ -1068,19 +1091,6 @@
           <!-- STEP 3: Payment -->
           <div class="tab-pane fade p-2" id="laundry-step3">
             <div class="modal-body">
-              <!-- Summary Table -->
-              <!-- <div class="table-responsive mb-4">
-                <table class="table table-bordered align-middle" id="laundry-summary-table">
-                  <thead class="table-light">
-                    <tr>
-                      <th>Service</th>
-                      <th class="text-end">Amount</th>
-                    </tr>
-                  </thead>
-                  <tbody id="laundry-summary-body"></tbody>
-                </table>
-              </div> -->
-
               <!-- Payment Methods -->
               <h5 class="mb-3">Select Payment Method</h5>
               <div class="row g-3 mb-4">
@@ -1094,11 +1104,6 @@
                     📱 UPI Payment <br><small class="text-muted">Pay via UPI apps</small>
                   </div>
                 </div>
-                <!-- <div class="col-md-6">
-                  <div class="card payment-method-card p-3" data-method="card">
-                    💳 Card Payment <br><small class="text-muted">Credit/Debit Card</small>
-                  </div>
-                </div> -->
                 <div class="col-md-4">
                   <div class="card payment-method-card p-3" data-method="wallet">
                     🏨 Wallet <br><small class="text-muted">Use credits</small>
@@ -1108,13 +1113,6 @@
 
               <!-- Payment Forms -->
               <div id="laundry-payment-forms">
-                <!-- <div id="laundry-cash-form" class="payment-form" style="display:none">
-                  <div class="mb-3">
-                    <label class="form-label">Bill No <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" name="bill_no" placeholder="Enter Bill No" required>
-                    <div class="invalid-feedback">Please enter a bill number.</div>
-                  </div> -->
-                </div>
                 <div id="laundry-upi-form" class="payment-form" style="display:none">
                   <div class="mb-3">
                     <label class="form-label">Transaction ID <span class="text-danger">*</span></label>
@@ -1150,31 +1148,6 @@
           </div>
         </div>
       </form>
-    </div>
-  </div>
-</div>
-
-<!-- Bill Confirmation Modal -->
-<div class="modal fade" id="billConfirmationModal" tabindex="-1" aria-labelledby="billConfirmationLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="billConfirmationLabel">Generate Service Bill</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <p>Are you sure you want to generate bill for this service?</p>
-        <!-- <div class="alert alert-info mt-3">
-          <i class="bi bi-info-circle me-2"></i>
-          This will create a bill that can be downloaded or printed.
-        </div> -->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary" id="confirmGenerateServiceBill">
-          <i class="bi bi-receipt me-2"></i>Generate Bill
-        </button>
-      </div>
     </div>
   </div>
 </div>
@@ -1215,6 +1188,121 @@
       setupDropdown('serviceTypeFilterDisplay', 'serviceTypeFilter', 'serviceTypeLists');
       setupDropdown('roomNoFilterDisplay', 'roomNoFilter', 'roomNoLists');
       setupDropdown('guestFilterDisplay', 'guestFilter', 'guestLists');
+
+      // Generate Service Bill Modal Logic
+      let currentBookingId = '';
+      
+      // When generate service bill button is clicked
+      $('.generate-service-bill-btn').on('click', function() {
+        const bookingId = $(this).data('booking-id');
+        currentBookingId = bookingId;
+        
+        // Find the service row
+        const $row = $(this).closest('tr');
+        
+        // Extract service details
+        const date = $row.find('td:eq(1)').text().trim();
+        const roomNo = $row.find('td:eq(2)').text().trim();
+        const guestName = $row.find('td:eq(3)').text().trim();
+        const serviceType = $row.find('td:eq(4)').text().trim();
+        const paymentStatus = $row.find('td:eq(6)').text().trim();
+        
+        // Update modal content
+        $('#modalBookingId').text(bookingId);
+        $('#modalServiceDate').text(date);
+        $('#modalServiceRoom').text(roomNo);
+        $('#modalServiceGuest').text(guestName);
+        $('#modalServiceType').text(serviceType);
+        $('#modalServicePayment').text(paymentStatus);
+      });
+      
+      // When confirm button is clicked
+      $('#confirmGenerateServiceBill').on('click', function() {
+        const $btn = $(this);
+        const $btnText = $btn.find('.btn-text');
+        const $spinner = $btn.find('.spinner-border');
+        
+        // Show loading state
+        $btn.prop('disabled', true);
+        $btnText.text('Generating...');
+        $spinner.removeClass('d-none');
+        
+        // Send AJAX request
+        fetch('<?= base_url("servicebook/generateServiceBill"); ?>', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: 'booking_id=' + encodeURIComponent(currentBookingId)
+        })
+        .then(response => {
+            console.log('Response status:', response.status);
+            console.log('Response ok:', response.ok);
+            
+            if (!response.ok) {
+                throw new Error('HTTP error! status: ' + response.status);
+            }
+            return response.text();
+        })
+        .then(text => {
+            console.log('Raw response:', text);
+            
+            try {
+                const data = JSON.parse(text);
+                return data;
+            } catch (e) {
+                console.error('JSON parse error:', e);
+                throw new Error('Invalid JSON response: ' + text.substring(0, 100));
+            }
+        })
+        .then(data => {
+            console.log('Parsed data:', data);
+            
+            if (data.success) {
+                // Close the modal
+                const modal = bootstrap.Modal.getInstance(document.getElementById('generateServiceBillModal'));
+                modal.hide();
+                
+                // Open bill in new tab for preview/download
+                const billUrl = '<?= base_url("servicebook/viewServiceBill"); ?>?bill_id=' + data.bill_id;
+                console.log('Opening bill URL:', billUrl);
+                window.open(billUrl, '_blank');
+                
+                // Show success message (optional)
+                // You could add a toast notification here
+            } else {
+                alert('Error: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error generating bill: ' + error.message);
+        })
+        .finally(() => {
+            // Reset button state
+            $btn.prop('disabled', false);
+            $btnText.text('Generate Bill');
+            $spinner.addClass('d-none');
+        });
+      });
+      
+      // Reset modal when closed
+      $('#generateServiceBillModal').on('hidden.bs.modal', function() {
+        currentBookingId = '';
+        $('#modalBookingId').text('-');
+        $('#modalServiceDate').text('-');
+        $('#modalServiceRoom').text('-');
+        $('#modalServiceGuest').text('-');
+        $('#modalServiceType').text('-');
+        $('#modalServicePayment').text('-');
+        
+        // Reset confirm button
+        const $btn = $('#confirmGenerateServiceBill');
+        $btn.prop('disabled', false);
+        $btn.find('.btn-text').text('Generate Bill');
+        $btn.find('.spinner-border').addClass('d-none');
+      });
     });
 
     // Service Info Modal Functions
@@ -1251,414 +1339,313 @@
     // Laundry Modal Core Functions
     let rowCount = 0;
 
-// Function to load categories for a specific service
-function loadCategoriesForService(row, serviceId) {
-    if (!serviceId) {
-        console.error("No service ID provided to loadCategoriesForService");
-        const categoryList = row.querySelector('.category-list');
-        if (categoryList) {
-            categoryList.innerHTML = '<div class="dropdown-item text-muted">No service type selected</div>';
-        }
-        return;
-    }
-    
-    const categoryList = row.querySelector('.category-list');
-    if (!categoryList) return;
-    
-    categoryList.innerHTML = '<div class="dropdown-item text-muted">Loading categories...</div>';
-    
-    console.log("Loading categories for service ID:", serviceId);
-    
-    fetch("<?= base_url('service_category') ?>/" + serviceId)
-        .then(res => {
-            if (!res.ok) {
-                throw new Error('Network response was not ok');
+    // Function to load categories for a specific service
+    function loadCategoriesForService(row, serviceId) {
+        if (!serviceId) {
+            console.error("No service ID provided to loadCategoriesForService");
+            const categoryList = row.querySelector('.category-list');
+            if (categoryList) {
+                categoryList.innerHTML = '<div class="dropdown-item text-muted">No service type selected</div>';
             }
-            return res.json();
-        })
-        .then(data => {
-            console.log("Categories loaded:", data);
-            categoryList.innerHTML = "";
-            if (data.length > 0) {
-                data.forEach(cat => {
-                    const div = document.createElement("div");
-                    div.classList.add("dropdown-item");
-                    div.style.padding = "5px 4px";
-                    div.setAttribute("data-value", cat);
-                    div.setAttribute("data-service-id", serviceId);
-                    div.innerText = cat;
-                    
-                    // Add click event to load items when category is selected
-                    div.addEventListener('click', function() {
-                        const categoryInput = row.querySelector('.category-input');
-                        const serviceTypeId = this.getAttribute('data-service-id');
+            return;
+        }
+        
+        const categoryList = row.querySelector('.category-list');
+        if (!categoryList) return;
+        
+        categoryList.innerHTML = '<div class="dropdown-item text-muted">Loading categories...</div>';
+        
+        console.log("Loading categories for service ID:", serviceId);
+        
+        fetch("<?= base_url('service_category') ?>/" + serviceId)
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return res.json();
+            })
+            .then(data => {
+                console.log("Categories loaded:", data);
+                categoryList.innerHTML = "";
+                if (data.length > 0) {
+                    data.forEach(cat => {
+                        const div = document.createElement("div");
+                        div.classList.add("dropdown-item");
+                        div.style.padding = "5px 4px";
+                        div.setAttribute("data-value", cat);
+                        div.setAttribute("data-service-id", serviceId);
+                        div.innerText = cat;
                         
-                        console.log("Category selected:", cat, "Service ID:", serviceTypeId);
+                        // Add click event to load items when category is selected
+                        div.addEventListener('click', function() {
+                            const categoryInput = row.querySelector('.category-input');
+                            const serviceTypeId = this.getAttribute('data-service-id');
+                            
+                            console.log("Category selected:", cat, "Service ID:", serviceTypeId);
+                            
+                            categoryInput.value = cat;
+                            categoryInput.classList.add('is-valid');
+                            categoryInput.setAttribute('data-service-id', serviceTypeId);
+                            
+                            // Load items for this category with service type ID
+                            loadItemsForCategory(row, cat, serviceTypeId);
+                            
+                            // Close dropdown
+                            const dropdownInstance = bootstrap.Dropdown.getInstance(categoryInput);
+                            if (dropdownInstance) dropdownInstance.hide();
+                        });
                         
-                        categoryInput.value = cat;
+                        categoryList.appendChild(div);
+                    });
+                } else {
+                    categoryList.innerHTML = '<div class="dropdown-item text-muted">No categories available</div>';
+                }
+            })
+            .catch(error => {
+                console.error("Error loading categories:", error);
+                categoryList.innerHTML = '<div class="dropdown-item text-muted">Error loading categories</div>';
+            });
+    }
+
+    // Function to load items for a specific category
+    function loadItemsForCategory(row, category, serviceTypeId = null) {
+        const itemList = row.querySelector('.item-list');
+        if (!itemList) return;
+        
+        // Get service type ID from category input if not provided
+        if (!serviceTypeId) {
+            const categoryInput = row.querySelector('.category-input');
+            serviceTypeId = categoryInput.getAttribute('data-service-id');
+        }
+        
+        if (!serviceTypeId || serviceTypeId === 'undefined') {
+            console.error("No valid service type ID found for category:", category);
+            itemList.innerHTML = '<div class="dropdown-item text-muted">Please select a service type first</div>';
+            return;
+        }
+        
+        itemList.innerHTML = '<div class="dropdown-item text-muted">Loading items...</div>';
+        
+        console.log("Loading items for category:", category, "Service ID:", serviceTypeId);
+        
+        fetch(`<?= base_url('service_items') ?>/${category}/${serviceTypeId}`)
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('Network response was not ok: ' + res.status);
+                }
+                return res.json();
+            })
+            .then(data => {
+                console.log("Items loaded:", data);
+                itemList.innerHTML = "";
+                if (data && data.length > 0) {
+                    data.forEach(item => {
+                        const div = document.createElement("div");
+                        div.classList.add("dropdown-item");
+                        div.style.padding = "5px 4px";
+                        div.setAttribute("data-value", item.name);
+                        div.setAttribute("data-price", item.price);
+                        div.setAttribute("data-service-id", serviceTypeId);
+                        div.innerText = `${item.name} `;
+                        
+                        // Add click event to set item and price
+                        div.addEventListener('click', function() {
+                            const itemInput = row.querySelector('.item-input');
+                            const priceCell = row.querySelector('.price-cell');
+                            const quantityInput = row.querySelector('.quantity');
+                            
+                            itemInput.value = item.name;
+                            itemInput.classList.add('is-valid');
+                            itemInput.setAttribute('data-service-id', serviceTypeId);
+                            
+                            // Set price
+                            const price = item.price;
+                            priceCell.setAttribute('data-price', price);
+                            
+                            // Update row total
+                            updateRowTotal(quantityInput);
+                            
+                            // Close dropdown
+                            const dropdownInstance = bootstrap.Dropdown.getInstance(itemInput);
+                            if (dropdownInstance) dropdownInstance.hide();
+                        });
+                        
+                        itemList.appendChild(div);
+                    });
+                } else {
+                    itemList.innerHTML = '<div class="dropdown-item text-muted">No items available</div>';
+                }
+            })
+            .catch(error => {
+                console.error("Error loading items:", error);
+                itemList.innerHTML = '<div class="dropdown-item text-muted">Error loading items: ' + error.message + '</div>';
+            });
+    }
+
+    // Updated editServiceBooking function
+    function editServiceBooking(bookingData) {
+        console.log("Editing service booking:", bookingData);
+        
+        // Set modal title with service type
+        document.getElementById('myLargeModalLabel').textContent = "Edit Service - " + bookingData.service_type;
+        
+        // Store the booking ID and service information for update
+        const modalEl = document.getElementById('laundryModal');
+        modalEl.setAttribute('data-booking-id', bookingData.id);
+        modalEl.setAttribute('data-edit-mode', 'true');
+        
+        // Set service type information from database
+        modalEl.setAttribute('data-service-name', bookingData.service_type);
+        modalEl.setAttribute('data-service-id', bookingData.service_type_id || '');
+        
+        console.log("Modal service ID set to:", bookingData.service_type_id);
+        
+        // Parse the services info JSON
+        let servicesInfo = [];
+        try {
+            servicesInfo = JSON.parse(bookingData.services_info);
+        } catch (e) {
+            console.error("Error parsing services info:", e);
+            servicesInfo = [];
+        }
+        
+        // Clear existing rows
+        const tableBody = document.getElementById('laundry-table-body');
+        tableBody.innerHTML = '';
+        
+        // Populate the table with existing services
+        if (servicesInfo.length > 0) {
+            servicesInfo.forEach((service, index) => {
+                addRow(true, bookingData.service_type_id);
+                
+                // Get the newly added row (last row)
+                const rows = tableBody.querySelectorAll('tr');
+                const newRow = rows[rows.length - 1];
+                
+                // Fill the row with existing data
+                if (newRow) {
+                    // Set category with service type ID
+                    const categoryInput = newRow.querySelector('.category-input');
+                    if (categoryInput && service.item) {
+                        categoryInput.value = service.item;
                         categoryInput.classList.add('is-valid');
-                        categoryInput.setAttribute('data-service-id', serviceTypeId);
+                        categoryInput.setAttribute('data-service-id', bookingData.service_type_id);
                         
                         // Load items for this category with service type ID
-                        loadItemsForCategory(row, cat, serviceTypeId);
-                        
-                        // Close dropdown
-                        const dropdownInstance = bootstrap.Dropdown.getInstance(categoryInput);
-                        if (dropdownInstance) dropdownInstance.hide();
-                    });
+                        setTimeout(() => {
+                            loadItemsForCategory(newRow, service.item, bookingData.service_type_id);
+                        }, 500); // Increased timeout to ensure categories are loaded first
+                    }
                     
-                    categoryList.appendChild(div);
-                });
-            } else {
-                categoryList.innerHTML = '<div class="dropdown-item text-muted">No categories available</div>';
-            }
-        })
-        .catch(error => {
-            console.error("Error loading categories:", error);
-            categoryList.innerHTML = '<div class="dropdown-item text-muted">Error loading categories</div>';
-        });
-}
-
-// Function to load items for a specific category
-function loadItemsForCategory(row, category, serviceTypeId = null) {
-    const itemList = row.querySelector('.item-list');
-    if (!itemList) return;
-    
-    // Get service type ID from category input if not provided
-    if (!serviceTypeId) {
-        const categoryInput = row.querySelector('.category-input');
-        serviceTypeId = categoryInput.getAttribute('data-service-id');
-    }
-    
-    if (!serviceTypeId || serviceTypeId === 'undefined') {
-        console.error("No valid service type ID found for category:", category);
-        itemList.innerHTML = '<div class="dropdown-item text-muted">Please select a service type first</div>';
-        return;
-    }
-    
-    itemList.innerHTML = '<div class="dropdown-item text-muted">Loading items...</div>';
-    
-    console.log("Loading items for category:", category, "Service ID:", serviceTypeId);
-    
-    // Use the correct URL format for your backend
-    // fetch(`</?= base_url('service_items') ?>?category=${encodeURIComponent(category)}&service_id=${serviceTypeId}`)
-    fetch(`<?= base_url('service_items') ?>/${category}/${serviceTypeId}`)
-        .then(res => {
-            if (!res.ok) {
-                throw new Error('Network response was not ok: ' + res.status);
-            }
-            return res.json();
-        })
-        .then(data => {
-            console.log("Items loaded:", data);
-            itemList.innerHTML = "";
-            if (data && data.length > 0) {
-                data.forEach(item => {
-                    const div = document.createElement("div");
-                    div.classList.add("dropdown-item");
-                    div.style.padding = "5px 4px";
-                    div.setAttribute("data-value", item.name);
-                    div.setAttribute("data-price", item.price);
-                    div.setAttribute("data-service-id", serviceTypeId);
-                    div.innerText = `${item.name} `;
-                    
-                    // Add click event to set item and price
-                    div.addEventListener('click', function() {
-                        const itemInput = row.querySelector('.item-input');
-                        const priceCell = row.querySelector('.price-cell');
-                        const quantityInput = row.querySelector('.quantity');
-                        
-                        itemInput.value = item.name;
+                    // Set item
+                    const itemInput = newRow.querySelector('.item-input');
+                    if (itemInput && service.type) {
+                        itemInput.value = service.type;
                         itemInput.classList.add('is-valid');
-                        itemInput.setAttribute('data-service-id', serviceTypeId);
-                        
-                        // Set price
-                        const price = item.price;
-                        priceCell.setAttribute('data-price', price);
-                        
-                        // Update row total
-                        updateRowTotal(quantityInput);
-                        
-                        // Close dropdown
-                        const dropdownInstance = bootstrap.Dropdown.getInstance(itemInput);
-                        if (dropdownInstance) dropdownInstance.hide();
-                    });
+                        itemInput.setAttribute('data-service-id', bookingData.service_type_id);
+                    }
                     
-                    itemList.appendChild(div);
-                });
-            } else {
-                itemList.innerHTML = '<div class="dropdown-item text-muted">No items available</div>';
-            }
-        })
-        .catch(error => {
-            console.error("Error loading items:", error);
-            itemList.innerHTML = '<div class="dropdown-item text-muted">Error loading items: ' + error.message + '</div>';
-        });
-}
-
-// Updated editServiceBooking function
-// function editServiceBooking(bookingData) {
-//     console.log("Editing service booking:", bookingData);
-    
-//     // Set modal title with service type
-//     document.getElementById('myLargeModalLabel').textContent = "Edit Service - " + bookingData.service_type;
-    
-//     // Store the booking ID and service information for update
-//     const modalEl = document.getElementById('laundryModal');
-//     modalEl.setAttribute('data-booking-id', bookingData.id);
-//     modalEl.setAttribute('data-edit-mode', 'true');
-    
-//     // Set service type information from database
-//     modalEl.setAttribute('data-service-name', bookingData.service_type);
-//     modalEl.setAttribute('data-service-id', bookingData.service_type_id || '');
-    
-//     console.log("Modal service ID set to:", bookingData.service_type_id);
-    
-//     // Parse the services info JSON
-//     let servicesInfo = [];
-//     try {
-//         servicesInfo = JSON.parse(bookingData.services_info);
-//     } catch (e) {
-//         console.error("Error parsing services info:", e);
-//         servicesInfo = [];
-//     }
-    
-//     // Clear existing rows
-//     const tableBody = document.getElementById('laundry-table-body');
-//     tableBody.innerHTML = '';
-    
-//     // Populate the table with existing services
-//     if (servicesInfo.length > 0) {
-//         servicesInfo.forEach((service, index) => {
-//             addRow(true, bookingData.service_type_id);
-            
-//             // Get the newly added row (last row)
-//             const rows = tableBody.querySelectorAll('tr');
-//             const newRow = rows[rows.length - 1];
-            
-//             // Fill the row with existing data
-//             if (newRow) {
-//                 // Set category with service type ID
-//                 const categoryInput = newRow.querySelector('.category-input');
-//                 if (categoryInput && service.item) {
-//                     categoryInput.value = service.item;
-//                     categoryInput.classList.add('is-valid');
-//                     categoryInput.setAttribute('data-service-id', bookingData.service_type_id);
+                    // Set quantity
+                    const quantityInput = newRow.querySelector('.quantity');
+                    if (quantityInput && service.qty) {
+                        quantityInput.value = service.qty;
+                    }
                     
-//                     // Load items for this category with service type ID
-//                     setTimeout(() => {
-//                         loadItemsForCategory(newRow, service.item, bookingData.service_type_id);
-//                     }, 500); // Increased timeout to ensure categories are loaded first
-//                 }
-                
-//                 // Set item
-//                 const itemInput = newRow.querySelector('.item-input');
-//                 if (itemInput && service.type) {
-//                     itemInput.value = service.type;
-//                     itemInput.classList.add('is-valid');
-//                     itemInput.setAttribute('data-service-id', bookingData.service_type_id);
-//                 }
-                
-//                 // Set quantity
-//                 const quantityInput = newRow.querySelector('.quantity');
-//                 if (quantityInput && service.qty) {
-//                     quantityInput.value = service.qty;
-//                 }
-                
-//                 // Set price
-//                 const priceCell = newRow.querySelector('.price-cell');
-//                 if (priceCell && service.price) {
-//                     priceCell.setAttribute('data-price', service.price);
-//                     // Update the display
-//                     const quantity = parseInt(service.qty) || 1;
-//                     const total = service.price * quantity;
-//                     priceCell.querySelector('.row-total').textContent = '₹' + total;
-//                 }
-                
-//                 // Update the row total
-//                 updateRowTotal(quantityInput);
-//             }
-//         });
-//     } else {
-//         // If no services info, add one empty row with service type
-//         addRow(true, bookingData.service_type_id);
-//     }
-    
-//     // Update grand total
-//     updateGrandTotal();
-    
-//     // Go to first step
-//     goLaundryStep(1);
-// }
-
-// Updated editServiceBooking function to store guest information
-function editServiceBooking(bookingData) {
-    console.log("Editing service booking:", bookingData);
-    
-    // Set modal title with service type
-    document.getElementById('myLargeModalLabel').textContent = "Edit Service - " + bookingData.service_type;
-    
-    // Store the booking ID and service information for update
-    const modalEl = document.getElementById('laundryModal');
-    modalEl.setAttribute('data-booking-id', bookingData.id);
-    modalEl.setAttribute('data-edit-mode', 'true');
-    
-    // Store guest information for wallet balance
-    modalEl.setAttribute('data-guest-id', bookingData.guest_id || '');
-    
-    // Set service type information from database
-    modalEl.setAttribute('data-service-name', bookingData.service_type);
-    modalEl.setAttribute('data-service-id', bookingData.service_type_id || '');
-    
-    console.log("Modal service ID set to:", bookingData.service_type_id);
-    console.log("Modal guest ID set to:", bookingData.guest_id);
-    
-    // Parse the services info JSON
-    let servicesInfo = [];
-    try {
-        servicesInfo = JSON.parse(bookingData.services_info);
-    } catch (e) {
-        console.error("Error parsing services info:", e);
-        servicesInfo = [];
-    }
-    
-    // Clear existing rows
-    const tableBody = document.getElementById('laundry-table-body');
-    tableBody.innerHTML = '';
-    
-    // Populate the table with existing services
-    if (servicesInfo.length > 0) {
-        servicesInfo.forEach((service, index) => {
+                    // Set price
+                    const priceCell = newRow.querySelector('.price-cell');
+                    if (priceCell && service.price) {
+                        priceCell.setAttribute('data-price', service.price);
+                        // Update the display
+                        const quantity = parseInt(service.qty) || 1;
+                        const total = service.price * quantity;
+                        priceCell.querySelector('.row-total').textContent = '₹' + total;
+                    }
+                    
+                    // Update the row total
+                    updateRowTotal(quantityInput);
+                }
+            });
+        } else {
+            // If no services info, add one empty row with service type
             addRow(true, bookingData.service_type_id);
-            
-            // Get the newly added row (last row)
-            const rows = tableBody.querySelectorAll('tr');
-            const newRow = rows[rows.length - 1];
-            
-            // Fill the row with existing data
-            if (newRow) {
-                // Set category with service type ID
-                const categoryInput = newRow.querySelector('.category-input');
-                if (categoryInput && service.item) {
-                    categoryInput.value = service.item;
-                    categoryInput.classList.add('is-valid');
-                    categoryInput.setAttribute('data-service-id', bookingData.service_type_id);
-                    
-                    // Load items for this category with service type ID
-                    setTimeout(() => {
-                        loadItemsForCategory(newRow, service.item, bookingData.service_type_id);
-                    }, 500); // Increased timeout to ensure categories are loaded first
-                }
-                
-                // Set item
-                const itemInput = newRow.querySelector('.item-input');
-                if (itemInput && service.type) {
-                    itemInput.value = service.type;
-                    itemInput.classList.add('is-valid');
-                    itemInput.setAttribute('data-service-id', bookingData.service_type_id);
-                }
-                
-                // Set quantity
-                const quantityInput = newRow.querySelector('.quantity');
-                if (quantityInput && service.qty) {
-                    quantityInput.value = service.qty;
-                }
-                
-                // Set price
-                const priceCell = newRow.querySelector('.price-cell');
-                if (priceCell && service.price) {
-                    priceCell.setAttribute('data-price', service.price);
-                    // Update the display
-                    const quantity = parseInt(service.qty) || 1;
-                    const total = service.price * quantity;
-                    priceCell.querySelector('.row-total').textContent = '₹' + total;
-                }
-                
-                // Update the row total
-                updateRowTotal(quantityInput);
-            }
-        });
-    } else {
-        // If no services info, add one empty row with service type
-        addRow(true, bookingData.service_type_id);
+        }
+        
+        // Update grand total
+        updateGrandTotal();
+        
+        // Go to first step
+        goLaundryStep(1);
     }
-    
-    // Update grand total
-    updateGrandTotal();
-    
-    // Go to first step
-    goLaundryStep(1);
-}
 
-// Updated addRow function
-function addRow(isEditMode = false, serviceTypeId = null) {
-    rowCount++;
-    const tableBody = document.getElementById('laundry-table-body');
-    const modalEl = document.getElementById('laundryModal');
-    
-    // Use provided serviceTypeId or get from modal
-    const finalServiceTypeId = serviceTypeId || modalEl.getAttribute('data-service-id');
-    
-    console.log("Adding row with service ID:", finalServiceTypeId);
-    
-    const row = document.createElement('tr');
-    row.innerHTML = `
-        <td class="sno">${rowCount}</td>
-        <td>
-            <div class="dropdown">
-                <input type="text" class="form-control dropdown-toggle w-100 category-input" 
-                       placeholder="Select Category" data-bs-toggle="dropdown" aria-expanded="false" required 
-                       data-service-id="${finalServiceTypeId || ''}" />
-                <ul class="dropdown-menu w-50 category-dropdown" style="max-height: 150px; overflow-y: auto;">
-                    <div class="category-list">
-                        <div class="dropdown-item text-muted">Loading categories...</div>
-                    </div>
-                </ul>
-            </div>
-        </td>
-        <td>
-            <div class="dropdown">
-                <input type="text" class="form-control dropdown-toggle w-100 item-input" 
-                       placeholder="Select Item" data-bs-toggle="dropdown" aria-expanded="false" required 
-                       data-service-id="${finalServiceTypeId || ''}" />
-                <ul class="dropdown-menu w-50 item-dropdown" style="max-height: 150px; overflow-y: auto;">
-                    <div class="item-list">
-                        <div class="dropdown-item text-muted">Select category first</div>
-                    </div>
-                </ul>
-            </div>
-        </td>
-        <td>
-            <div class="input-group" style="width:140px; height:30px;">
-                <button type="button" class="btn btn-danger rounded-start-pill" style="width:30px;" onclick="changeQuantity(this,-1)">-</button>
-                <input type="number" class="form-control text-center quantity border-0" value="1" min="1" onchange="updateRowTotal(this)">
-                <button type="button" class="btn btn-success rounded-end-pill" style="width:30px;" onclick="changeQuantity(this,1)">+</button>
-            </div>
-        </td>
-        <td class="price-cell" data-price="0">
-            <span class="fw-bold text-success row-total">₹0</span>
-        </td>
-        <td>
-            <div class="d-flex gap-2">
-                <button type="button" class="btn btn-sm btn-danger" onclick="removeRow(this)">
-                    <i class="bi bi-trash"></i>
-                </button>
-                <button type="button" class="btn btn-sm btn-success" onclick="addRow()">
-                    <i class="bi bi-plus-circle"></i>
-                </button>
-            </div>
-        </td>
-    `;
-    
-    tableBody.appendChild(row);
-    
-    // Load categories if we have a service type ID
-    if (finalServiceTypeId) {
-        loadCategoriesForService(row, finalServiceTypeId);
+    // Updated addRow function
+    function addRow(isEditMode = false, serviceTypeId = null) {
+        rowCount++;
+        const tableBody = document.getElementById('laundry-table-body');
+        const modalEl = document.getElementById('laundryModal');
+        
+        // Use provided serviceTypeId or get from modal
+        const finalServiceTypeId = serviceTypeId || modalEl.getAttribute('data-service-id');
+        
+        console.log("Adding row with service ID:", finalServiceTypeId);
+        
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td class="sno">${rowCount}</td>
+            <td>
+                <div class="dropdown">
+                    <input type="text" class="form-control dropdown-toggle w-100 category-input" 
+                           placeholder="Select Category" data-bs-toggle="dropdown" aria-expanded="false" required 
+                           data-service-id="${finalServiceTypeId || ''}" />
+                    <ul class="dropdown-menu w-50 category-dropdown" style="max-height: 150px; overflow-y: auto;">
+                        <div class="category-list">
+                            <div class="dropdown-item text-muted">Loading categories...</div>
+                        </div>
+                    </ul>
+                </div>
+            </td>
+            <td>
+                <div class="dropdown">
+                    <input type="text" class="form-control dropdown-toggle w-100 item-input" 
+                           placeholder="Select Item" data-bs-toggle="dropdown" aria-expanded="false" required 
+                           data-service-id="${finalServiceTypeId || ''}" />
+                    <ul class="dropdown-menu w-50 item-dropdown" style="max-height: 150px; overflow-y: auto;">
+                        <div class="item-list">
+                            <div class="dropdown-item text-muted">Select category first</div>
+                        </div>
+                    </ul>
+                </div>
+            </td>
+            <td>
+                <div class="input-group" style="width:140px; height:30px;">
+                    <button type="button" class="btn btn-danger rounded-start-pill" style="width:30px;" onclick="changeQuantity(this,-1)">-</button>
+                    <input type="number" class="form-control text-center quantity border-0" value="1" min="1" onchange="updateRowTotal(this)">
+                    <button type="button" class="btn btn-success rounded-end-pill" style="width:30px;" onclick="changeQuantity(this,1)">+</button>
+                </div>
+            </td>
+            <td class="price-cell" data-price="0">
+                <span class="fw-bold text-success row-total">₹0</span>
+            </td>
+            <td>
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-sm btn-danger" onclick="removeRow(this)">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-success" onclick="addRow()">
+                        <i class="bi bi-plus-circle"></i>
+                    </button>
+                </div>
+            </td>
+        `;
+        
+        tableBody.appendChild(row);
+        
+        // Load categories if we have a service type ID
+        if (finalServiceTypeId) {
+            loadCategoriesForService(row, finalServiceTypeId);
+        }
+        
+        updateRowTotal(row.querySelector('.quantity'));
     }
-    
-    updateRowTotal(row.querySelector('.quantity'));
-}
 
     // Initialize dropdown functionality for new rows
     function initializeDropdowns() {
@@ -1755,28 +1742,28 @@ function addRow(isEditMode = false, serviceTypeId = null) {
       }
     }
     
-// Add this code to handle tab clicks
-document.addEventListener('DOMContentLoaded', function() {
-    // Listen for click on the summary tab
-    const summaryTab = document.getElementById('laundry-step2-tab');
-    if (summaryTab) {
-        summaryTab.addEventListener('click', function() {
-            console.log("Summary tab clicked directly - updating summary");
-            updateLaundryPreview();
-        });
-    }
-    
-    // Also listen for Bootstrap tab change events
-    const tabEl = document.querySelector('button[data-bs-toggle="pill"]');
-    if (tabEl) {
-        tabEl.addEventListener('shown.bs.tab', function(event) {
-            if (event.target.id === 'laundry-step2-tab') {
-                console.log("Bootstrap tab shown event - updating summary");
+    // Add this code to handle tab clicks
+    document.addEventListener('DOMContentLoaded', function() {
+        // Listen for click on the summary tab
+        const summaryTab = document.getElementById('laundry-step2-tab');
+        if (summaryTab) {
+            summaryTab.addEventListener('click', function() {
+                console.log("Summary tab clicked directly - updating summary");
                 updateLaundryPreview();
-            }
-        });
-    }
-});
+            });
+        }
+        
+        // Also listen for Bootstrap tab change events
+        const tabEl = document.querySelector('button[data-bs-toggle="pill"]');
+        if (tabEl) {
+            tabEl.addEventListener('shown.bs.tab', function(event) {
+                if (event.target.id === 'laundry-step2-tab') {
+                    console.log("Bootstrap tab shown event - updating summary");
+                    updateLaundryPreview();
+                }
+            });
+        }
+    });
 
     function validateLaundryStep1() {
       const rows = document.querySelectorAll('#laundry-table-body tr');
@@ -1888,95 +1875,25 @@ document.addEventListener('DOMContentLoaded', function() {
       saveLaundryOrder();
     }
 
+    
 
-    // Handle payment method selection - UPDATED FOR EDIT MODAL
-document.querySelectorAll('#laundryModal .payment-method-card').forEach(card => {
-    card.addEventListener('click', function() {
-        // Remove active highlight from all cards
-        document.querySelectorAll('#laundryModal .payment-method-card').forEach(c => c.classList.remove('border-success'));
-
-        // Highlight the selected one
+    // Payment Method Selection
+    document.querySelectorAll('#laundryModal .payment-method-card').forEach(card => {
+      card.addEventListener('click', function() {
+        document.querySelectorAll('#laundryModal .payment-method-card').forEach(c => {
+          c.classList.remove('border-success');
+        });
         this.classList.add('border-success');
 
-        // Hide all forms first
-        document.querySelectorAll('#laundryModal .payment-form').forEach(f => f.style.display = 'none');
+        document.querySelectorAll('#laundryModal .payment-form').forEach(f => {
+          f.style.display = 'none';
+        });
 
-        // Show only the selected form
         let method = this.getAttribute('data-method');
         let form = document.querySelector(`#laundry-${method}-form`);
         if (form) form.style.display = 'block';
-        
-        // Special handling for wallet method - UPDATED FOR EDIT MODE
-        if (method === "wallet") {
-            const modalEl = document.getElementById('laundryModal');
-            const isEditMode = modalEl.getAttribute('data-edit-mode') === 'true';
-            
-            let guestId;
-            
-            if (isEditMode) {
-                // In edit mode, get guest ID from the booking data
-                // You need to ensure the guest ID is available in editServiceBooking function
-                guestId = modalEl.getAttribute('data-guest-id');
-                
-                // If not stored in modal attributes, try to get from hidden inputs
-                if (!guestId) {
-                    const guestInput = document.querySelector('input[name="guest_id_data"]');
-                    if (guestInput) {
-                        guestId = guestInput.value;
-                    }
-                }
-            } else {
-                // In add mode, use the original logic
-                const selectedServiceInput = document.querySelector('.service-input.selected-service');
-                if (selectedServiceInput) {
-                    const tableRow = selectedServiceInput.closest('tr');
-                    guestId = tableRow.getAttribute('data-guest-id');
-                }
-            }
-            
-            console.log("Wallet payment selected - Guest ID:", guestId, "Edit mode:", isEditMode);
-            
-            if (guestId) {
-                fetch(`/advaya/guest_wallet_id/${guestId}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data && data[0] && data[0]['balance'] !== undefined) {
-                            document.getElementById('laundry-balance').innerHTML = '₹' + data[0]['balance'];
-                            console.log("Wallet balance loaded:", data[0]['balance']);
-                        } else {
-                            document.getElementById('laundry-balance').innerHTML = '₹0';
-                            console.error('Invalid wallet data format:', data);
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error fetching wallet balance:', error);
-                        document.getElementById('laundry-balance').innerHTML = '₹0';
-                    });
-            } else {
-                console.error('No guest ID found for wallet balance check');
-                document.getElementById('laundry-balance').innerHTML = '₹0';
-            }
-        }
+      });
     });
-});
-
-    // Payment Method Selection
-    // document.querySelectorAll('#laundryModal .payment-method-card').forEach(card => {
-    //   card.addEventListener('click', function() {
-    //     document.querySelectorAll('#laundryModal .payment-method-card').forEach(c => {
-    //       c.classList.remove('border-success');
-    //     });
-    //     this.classList.add('border-success');
-
-    //     document.querySelectorAll('#laundryModal .payment-form').forEach(f => {
-    //       f.style.display = 'none';
-    //     });
-
-    //     let method = this.getAttribute('data-method');
-    //     let form = document.querySelector(`#laundry-${method}-form`);
-    //     if (form) form.style.display = 'block';
-    //   });
-    // });
 
     function clearPaymentForms() {
       document.querySelectorAll('#laundryModal .payment-method-card').forEach(c => {
@@ -2217,58 +2134,33 @@ document.querySelectorAll('#laundryModal .payment-method-card').forEach(card => 
     }
 
     // Modal Event Listeners
-    // document.getElementById("laundryModal").addEventListener("shown.bs.modal", function () {
-    //   console.log("Modal opened");
-    //   goLaundryStep(1);
-      
-    //   // Only add new row if not in edit mode
-    //   const isEditMode = this.getAttribute('data-edit-mode') === 'true';
-    //   const serviceName = this.getAttribute('data-service-name');
-      
-    //   console.log("Edit mode:", isEditMode, "Service name:", serviceName);
-      
-    //   if (!isEditMode) {
-    //     const tableBody = document.getElementById("laundry-table-body");
-    //     tableBody.innerHTML = "";
-    //     addRow();
-    //   }
-      
-    //   // Initialize dropdowns for all rows
-    //   setTimeout(() => {
-    //     initializeDropdowns();
-    //   }, 100);
-      
-    //   clearPaymentForms();
-    // });
-
-    // Add debug logging to modal event
-document.getElementById("laundryModal").addEventListener("shown.bs.modal", function () {
-    console.log("=== MODAL OPENED DEBUG ===");
-    console.log("Edit mode:", this.getAttribute('data-edit-mode'));
-    console.log("Service ID:", this.getAttribute('data-service-id'));
-    console.log("Service Name:", this.getAttribute('data-service-name'));
-    console.log("========================");
-    
-    goLaundryStep(1);
-    
-    const isEditMode = this.getAttribute('data-edit-mode') === 'true';
-    const serviceName = this.getAttribute('data-service-name');
-    
-    console.log("Edit mode:", isEditMode, "Service name:", serviceName);
-    
-    if (!isEditMode) {
-        const tableBody = document.getElementById("laundry-table-body");
-        tableBody.innerHTML = "";
-        addRow();
-    }
-    
-    // Initialize dropdowns for all rows
-    setTimeout(() => {
-        initializeDropdowns();
-    }, 100);
-    
-    clearPaymentForms();
-});
+    document.getElementById("laundryModal").addEventListener("shown.bs.modal", function () {
+        console.log("=== MODAL OPENED DEBUG ===");
+        console.log("Edit mode:", this.getAttribute('data-edit-mode'));
+        console.log("Service ID:", this.getAttribute('data-service-id'));
+        console.log("Service Name:", this.getAttribute('data-service-name'));
+        console.log("========================");
+        
+        goLaundryStep(1);
+        
+        const isEditMode = this.getAttribute('data-edit-mode') === 'true';
+        const serviceName = this.getAttribute('data-service-name');
+        
+        console.log("Edit mode:", isEditMode, "Service name:", serviceName);
+        
+        if (!isEditMode) {
+            const tableBody = document.getElementById("laundry-table-body");
+            tableBody.innerHTML = "";
+            addRow();
+        }
+        
+        // Initialize dropdowns for all rows
+        setTimeout(() => {
+            initializeDropdowns();
+        }, 100);
+        
+        clearPaymentForms();
+    });
 
     document.getElementById("laundryModal").addEventListener("hidden.bs.modal", function () {
       console.log("Modal closed - resetting to step 1");
@@ -2306,240 +2198,6 @@ document.getElementById("laundryModal").addEventListener("shown.bs.modal", funct
         info: true
       });
     });
-
-
-//     function generateServiceBill(bookingId) {
-//     if (confirm('Are you sure you want to generate bill for this service?')) {
-//         // Show loading state
-//         const btn = event.target;
-//         const originalText = btn.innerHTML;
-//         btn.innerHTML = '<i class="bi bi-hourglass-split"></i> Generating...';
-//         btn.disabled = true;
-        
-//         // Send AJAX request
-//         fetch('<?= base_url("servicebook/generateServiceBill"); ?>', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/x-www-form-urlencoded',
-//                 'X-Requested-With': 'XMLHttpRequest'
-//             },
-//             body: 'booking_id=' + encodeURIComponent(bookingId)
-//         })
-//         .then(response => {
-//             console.log('Response status:', response.status);
-//             console.log('Response ok:', response.ok);
-            
-//             if (!response.ok) {
-//                 throw new Error('HTTP error! status: ' + response.status);
-//             }
-//             return response.text();
-//         })
-//         .then(text => {
-//             console.log('Raw response:', text);
-            
-//             try {
-//                 const data = JSON.parse(text);
-//                 return data;
-//             } catch (e) {
-//                 console.error('JSON parse error:', e);
-//                 throw new Error('Invalid JSON response: ' + text.substring(0, 100));
-//             }
-//         })
-//         .then(data => {
-//             console.log('Parsed data:', data);
-            
-//             if (data.success) {
-//                 // Open bill in new tab for preview/download
-//                 const billUrl = '<?= base_url("servicebook/viewServiceBill"); ?>?bill_id=' + data.bill_id;
-//                 console.log('Opening bill URL:', billUrl);
-//                 window.open(billUrl, '_blank');
-                
-//                 // Show success message
-//                 // alert('Service bill generated successfully! Bill No: ' + data.bill_no);
-//             } else {
-//                 alert('Error: ' + data.message);
-//             }
-//         })
-//         .catch(error => {
-//             console.error('Error:', error);
-//             alert('Error generating bill: ' + error.message);
-//         })
-//         .finally(() => {
-//             // Reset button state
-//             btn.innerHTML = originalText;
-//             btn.disabled = false;
-//         });
-//     }
-// }
-
-// Global variable to store the current booking ID
-let currentBookingId = null;
-
-// Function to open the confirmation modal
-function openBillConfirmation(bookingId) {
-    currentBookingId = bookingId;
-    const modal = new bootstrap.Modal(document.getElementById('billConfirmationModal'));
-    modal.show();
-}
-
-// Function to generate the bill (formerly generateServiceBill)
-function generateServiceBill() {
-    if (!currentBookingId) {
-        console.error('No booking ID found');
-        return;
-    }
-    
-    // Show loading state in the modal button
-    const confirmBtn = document.getElementById('confirmGenerateServiceBill');
-    const originalText = confirmBtn.innerHTML;
-    confirmBtn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Generating...';
-    confirmBtn.disabled = true;
-    
-    // Close the modal
-    const modal = bootstrap.Modal.getInstance(document.getElementById('billConfirmationModal'));
-    modal.hide();
-    
-    // Send AJAX request
-    fetch('<?= base_url("servicebook/generateServiceBill"); ?>', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'X-Requested-With': 'XMLHttpRequest'
-        },
-        body: 'booking_id=' + encodeURIComponent(currentBookingId)
-    })
-    .then(response => {
-        console.log('Response status:', response.status);
-        console.log('Response ok:', response.ok);
-        
-        if (!response.ok) {
-            throw new Error('HTTP error! status: ' + response.status);
-        }
-        return response.text();
-    })
-    .then(text => {
-        console.log('Raw response:', text);
-        
-        try {
-            const data = JSON.parse(text);
-            return data;
-        } catch (e) {
-            console.error('JSON parse error:', e);
-            throw new Error('Invalid JSON response: ' + text.substring(0, 100));
-        }
-    })
-    .then(data => {
-        console.log('Parsed data:', data);
-        
-        if (data.success) {
-            // Open bill in new tab for preview/download
-            const billUrl = '<?= base_url("servicebook/viewServiceBill"); ?>?bill_id=' + data.bill_id;
-            console.log('Opening bill URL:', billUrl);
-            window.open(billUrl, '_blank');
-            
-            // Show success toast notification
-            showSuccessToast('Bill generated successfully!');
-        } else {
-            showErrorToast('Error: ' + data.message);
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        showErrorToast('Error generating bill: ' + error.message);
-    })
-    .finally(() => {
-        // Reset button state
-        confirmBtn.innerHTML = originalText;
-        confirmBtn.disabled = false;
-        currentBookingId = null;
-    });
-}
-
-// Add event listener to the confirmation button
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('confirmGenerateServiceBill').addEventListener('click', generateServiceBill);
-});
-
-// Update the Generate Bill buttons in the table to use the modal
-function updateGenerateBillButtons() {
-    document.querySelectorAll('button[onclick^="generateServiceBill"]').forEach(button => {
-        const oldOnClick = button.getAttribute('onclick');
-        const bookingId = oldOnClick.match(/'([^']+)'/)[1];
-        button.setAttribute('onclick', `openBillConfirmation('${bookingId}')`);
-    });
-}
-
-// Call this function after the page loads
-document.addEventListener('DOMContentLoaded', updateGenerateBillButtons);
-
-// If you're using DataTables with dynamic content, you might need to re-run this
-// after table updates. For example:
-// $('#form_inputs').on('draw.dt', updateGenerateBillButtons);
-
-// Toast notification functions
-function showSuccessToast(message) {
-    // Create a temporary toast element
-    const toastHtml = `
-        <div class="toast-container position-fixed top-0 end-0 p-3">
-            <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="d-flex">
-                    <div class="toast-body">
-                        <i class="bi bi-check-circle me-2"></i>${message}
-                    </div>
-                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-            </div>
-        </div>
-    `;
-    
-    // Remove any existing toast containers
-    document.querySelectorAll('.toast-container').forEach(container => container.remove());
-    
-    // Add new toast to the page
-    document.body.insertAdjacentHTML('beforeend', toastHtml);
-    
-    // Show the toast
-    const toastElement = document.getElementById('successToast');
-    const toast = new bootstrap.Toast(toastElement, { delay: 3000 });
-    toast.show();
-    
-    // Remove the toast element after it's hidden
-    toastElement.addEventListener('hidden.bs.toast', function() {
-        toastElement.remove();
-    });
-}
-
-function showErrorToast(message) {
-    // Create a temporary toast element
-    const toastHtml = `
-        <div class="toast-container position-fixed top-0 end-0 p-3">
-            <div id="errorToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="d-flex">
-                    <div class="toast-body">
-                        <i class="bi bi-exclamation-triangle me-2"></i>${message}
-                    </div>
-                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-            </div>
-        </div>
-    `;
-    
-    // Remove any existing toast containers
-    document.querySelectorAll('.toast-container').forEach(container => container.remove());
-    
-    // Add new toast to the page
-    document.body.insertAdjacentHTML('beforeend', toastHtml);
-    
-    // Show the toast
-    const toastElement = document.getElementById('errorToast');
-    const toast = new bootstrap.Toast(toastElement, { delay: 5000 });
-    toast.show();
-    
-    // Remove the toast element after it's hidden
-    toastElement.addEventListener('hidden.bs.toast', function() {
-        toastElement.remove();
-    });
-}
   </script>
   
 </body>

@@ -980,14 +980,23 @@ foreach ($serviceTypes as $row) {
                           Info
                   </button>
                 </td>
-                 <td>
-          <!-- Generate Bill Button -->
+                 <!-- <td>
+          <!- Generate Bill Button ->
           <button type="button"
                   class="btn btn-primary btn-sm"
-                  onclick="generateBill('<?= $asset['charge_id']; ?>')">
+                  onclick="generateBill('</?= $asset['charge_id']; ?>')">
             <i class="bi bi-receipt"></i> Generate Bill
           </button>
-        </td>
+        </td> -->
+        <!-- With this: -->
+<td>
+  <button type="button"
+          class="btn btn-primary btn-sm"
+          onclick="openBillConfirmation('<?= $asset['charge_id']; ?>')">
+    <i class="bi bi-receipt"></i> Generate Bill
+  </button>
+</td>
+
             </tr>
         <?php endforeach; ?>
   </tbody>
@@ -1025,6 +1034,25 @@ foreach ($serviceTypes as $row) {
           </table>
         </div>
 
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add this modal right after the chargeInfoModal -->
+<div class="modal fade" id="billConfirmationModal" tabindex="-1" aria-labelledby="billConfirmationLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="billConfirmationLabel">Generate Bill</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to generate bill for this charge?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" id="confirmGenerateBill">Generate Bill</button>
       </div>
     </div>
   </div>
@@ -1080,71 +1108,173 @@ $(document).ready(function () {
         info: true
     });
 });
-function generateBill(chargeId) {
-    if (confirm('Are you sure you want to generate bill for this charge?')) {
-        // Show loading state
-        const btn = event.target;
-        const originalText = btn.innerHTML;
-        btn.innerHTML = '<i class="bi bi-hourglass-split"></i> Generating...';
-        btn.disabled = true;
+// function generateBill(chargeId) {
+//     if (confirm('Are you sure you want to generate bill for this charge?')) {
+//         // Show loading state
+//         const btn = event.target;
+//         const originalText = btn.innerHTML;
+//         btn.innerHTML = '<i class="bi bi-hourglass-split"></i> Generating...';
+//         btn.disabled = true;
         
-        // Send AJAX request
-        fetch('<?= base_url("chargesreport/generateBill"); ?>', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'X-Requested-With': 'XMLHttpRequest'
-            },
-            body: 'charge_id=' + encodeURIComponent(chargeId)
-        })
-        .then(response => {
-            console.log('Response status:', response.status);
-            console.log('Response ok:', response.ok);
+//         // Send AJAX request
+//         fetch('<?= base_url("chargesreport/generateBill"); ?>', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/x-www-form-urlencoded',
+//                 'X-Requested-With': 'XMLHttpRequest'
+//             },
+//             body: 'charge_id=' + encodeURIComponent(chargeId)
+//         })
+//         .then(response => {
+//             console.log('Response status:', response.status);
+//             console.log('Response ok:', response.ok);
             
-            if (!response.ok) {
-                throw new Error('HTTP error! status: ' + response.status);
-            }
-            return response.text(); // First get as text to see what's returned
-        })
-        .then(text => {
-            console.log('Raw response:', text);
+//             if (!response.ok) {
+//                 throw new Error('HTTP error! status: ' + response.status);
+//             }
+//             return response.text(); // First get as text to see what's returned
+//         })
+//         .then(text => {
+//             console.log('Raw response:', text);
             
-            try {
-                const data = JSON.parse(text);
-                return data;
-            } catch (e) {
-                console.error('JSON parse error:', e);
-                throw new Error('Invalid JSON response: ' + text.substring(0, 100));
-            }
-        })
-        .then(data => {
-            console.log('Parsed data:', data);
+//             try {
+//                 const data = JSON.parse(text);
+//                 return data;
+//             } catch (e) {
+//                 console.error('JSON parse error:', e);
+//                 throw new Error('Invalid JSON response: ' + text.substring(0, 100));
+//             }
+//         })
+//         .then(data => {
+//             console.log('Parsed data:', data);
             
-            if (data.success) {
-                // Open bill in new tab for preview/download
-                const billUrl = '<?= base_url("chargesreport/viewBill"); ?>?bill_id=' + data.bill_id;
-                console.log('Opening bill URL:', billUrl);
-                window.open(billUrl, '_blank');
+//             if (data.success) {
+//                 // Open bill in new tab for preview/download
+//                 const billUrl = '<?= base_url("chargesreport/viewBill"); ?>?bill_id=' + data.bill_id;
+//                 console.log('Opening bill URL:', billUrl);
+//                 window.open(billUrl, '_blank');
                 
-                // Show success message
-                // alert('Bill generated successfully! Bill No: ' + data.bill_no);
-            } else {
-                alert('Error: ' + data.message);
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Error generating bill: ' + error.message);
-        })
-        .finally(() => {
-            // Reset button state
-            btn.innerHTML = originalText;
-            btn.disabled = false;
-        });
-    }
-}
+//                 // Show success message
+//                 // alert('Bill generated successfully! Bill No: ' + data.bill_no);
+//             } else {
+//                 alert('Error: ' + data.message);
+//             }
+//         })
+//         .catch(error => {
+//             console.error('Error:', error);
+//             alert('Error generating bill: ' + error.message);
+//         })
+//         .finally(() => {
+//             // Reset button state
+//             btn.innerHTML = originalText;
+//             btn.disabled = false;
+//         });
+//     }
+// }
 </script>
+<script>
+// Global variable to store the current charge ID
+let currentChargeId = null;
 
+// Function to open the confirmation modal
+function openBillConfirmation(chargeId) {
+    currentChargeId = chargeId;
+    const modal = new bootstrap.Modal(document.getElementById('billConfirmationModal'));
+    modal.show();
+}
+
+// Function to generate the bill (formerly generateBill)
+function generateBill() {
+    if (!currentChargeId) return;
+    
+    // Show loading state in the modal button
+    const confirmBtn = document.getElementById('confirmGenerateBill');
+    const originalText = confirmBtn.innerHTML;
+    confirmBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Generating...';
+    confirmBtn.disabled = true;
+    
+    // Close the modal
+    const modal = bootstrap.Modal.getInstance(document.getElementById('billConfirmationModal'));
+    modal.hide();
+    
+    // Send AJAX request
+    fetch('<?= base_url("chargesreport/generateBill"); ?>', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'X-Requested-With': 'XMLHttpRequest'
+        },
+        body: 'charge_id=' + encodeURIComponent(currentChargeId)
+    })
+    .then(response => {
+        console.log('Response status:', response.status);
+        console.log('Response ok:', response.ok);
+        
+        if (!response.ok) {
+            throw new Error('HTTP error! status: ' + response.status);
+        }
+        return response.text();
+    })
+    .then(text => {
+        console.log('Raw response:', text);
+        
+        try {
+            const data = JSON.parse(text);
+            return data;
+        } catch (e) {
+            console.error('JSON parse error:', e);
+            throw new Error('Invalid JSON response: ' + text.substring(0, 100));
+        }
+    })
+    .then(data => {
+        console.log('Parsed data:', data);
+        
+        if (data.success) {
+            // Open bill in new tab for preview/download
+            const billUrl = '<?= base_url("chargesreport/viewBill"); ?>?bill_id=' + data.bill_id;
+            console.log('Opening bill URL:', billUrl);
+            window.open(billUrl, '_blank');
+            
+            // Show success message (optional)
+            // You could show a toast notification here instead
+            // alert('Bill generated successfully! Bill No: ' + data.bill_no);
+        } else {
+            alert('Error: ' + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error generating bill: ' + error.message);
+    })
+    .finally(() => {
+        // Reset button state
+        confirmBtn.innerHTML = originalText;
+        confirmBtn.disabled = false;
+        currentChargeId = null;
+    });
+}
+
+// Add event listener to the confirmation button
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('confirmGenerateBill').addEventListener('click', generateBill);
+});
+
+// Update the Generate Bill buttons in the table to use the modal
+function updateGenerateBillButtons() {
+    document.querySelectorAll('button[onclick^="generateBill"]').forEach(button => {
+        const oldOnClick = button.getAttribute('onclick');
+        const chargeId = oldOnClick.match(/'([^']+)'/)[1];
+        button.setAttribute('onclick', `openBillConfirmation('${chargeId}')`);
+    });
+}
+
+// Call this function after the page loads
+document.addEventListener('DOMContentLoaded', updateGenerateBillButtons);
+
+// If you're using DataTables with dynamic content, you might need to re-run this
+// after table updates. For example:
+// $('#form_inputs').on('draw.dt', updateGenerateBillButtons);
+</script>
 
  
 
