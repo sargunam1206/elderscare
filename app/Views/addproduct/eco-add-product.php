@@ -633,7 +633,7 @@
 
   <!--  Header End -->
 
-  <div class="main-wrapper p-3">
+  <div class="main-wrapper p-3" style="margin-top: 80px;">
     <div class="">
       <h5 class=" fs-7"><i class="bi bi-house-door text-success"></i>
         Inhouse Guest</h5>
