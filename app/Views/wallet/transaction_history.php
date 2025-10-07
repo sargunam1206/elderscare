@@ -116,7 +116,7 @@
     .table {
       background-color: var(--white);
       border-radius: 8px;
-      /* overflow: hidden; */
+      overflow: hidden;
       box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
     }
 
@@ -415,7 +415,7 @@
 
     .dropdown-item:hover,
     .dropdown-item.active {
-      background-color: #198754;
+      background-color: #66BB6A;
       color: #fff;
     }
 

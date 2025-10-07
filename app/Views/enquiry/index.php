@@ -476,7 +476,7 @@
     .card,
     .form-section {
       padding: 10px !important;
-      border-radius: 6px;
+      /* border-radius: 6px; */
     }
 
     /* Modal compact */

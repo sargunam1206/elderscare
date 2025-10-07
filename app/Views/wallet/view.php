@@ -463,6 +463,13 @@
     }
 
     /* ========== Tables ========== */
+    .table {
+      background-color: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    }
+    
     .table thead th {
       background-color: var(--primary-green);
       color: var(--table-header-text);

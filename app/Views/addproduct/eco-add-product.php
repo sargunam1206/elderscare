@@ -117,7 +117,7 @@
     .table {
       background-color: var(--white);
       border-radius: 8px;
-      /* overflow: hidden; */
+  overflow: visible !important;
       box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
     }
 
@@ -652,10 +652,10 @@
 
 
     <div class="container-fluid mt-2">
-      <div class="row ">
+  <div class="row align-items-stretch" style="min-height: 100vh;"> <!-- makes both sides full height -->
         <!-- Left Side (70%) -->
-        <div class="col-md-8">
-          <div class="card shadow-md rounded-3">
+        <div class="col-md-8 ">
+          <div class="card shadow-md rounded-3 h-100 ">
             <div class="">
               <!-- <form method="post" action="<?= base_url('viewuom'); ?>"> -->
 
@@ -786,7 +786,7 @@
         <div class="col-md-4">
 
 
-          <div class="card text-dark shadow-md border-0 rounded-3">
+          <div class="card text-dark shadow-md border-0 rounded-3 h-100">
             <div class="p-3 ">
               <!-- Title and Subtitle -->
               <div class="mb-4">
