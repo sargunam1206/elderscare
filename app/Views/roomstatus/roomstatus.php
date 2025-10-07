@@ -623,6 +623,104 @@ h6 { font-size: 13px; font-weight: 600; }
   
 </style>
 
+
+
+
+
+
+
+
+
+<style>
+
+.container-fluid {
+  height: 100%; 
+}
+
+.row {
+  display: flex;
+  align-items: stretch;
+}
+
+.card {
+  height: 100%;
+}
+
+.left-card,
+.right-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 550px; /* set your base height */
+}
+
+/* The scrollable room grid */
+.room-grid-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: none; /* remove fixed limit */
+}
+
+
+/* Optional — if you want responsive consistency */
+@media (min-width: 768px) {
+  .col-md-4,
+  .col-md-8 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .col-md-4 > .card,
+  .col-md-8 > .card {
+    flex: 1;
+  }
+}
+
+  /* Keep dropdowns within table but fix stacking */
+.pos-section .table-responsive {
+  overflow: visible !important;
+}
+
+.pos-section table {
+  position: relative;
+}
+
+.pos-section .dropdown {
+  position: relative !important;
+}
+
+.pos-section .dropdown-menu {
+  position: absolute !important;
+  z-index: 9999 !important;
+  top: 100% !important;
+  left: 0 !important;
+  transform: none !important;
+}
+
+/* Specifically fix first row dropdown */
+.pos-section table tbody tr:first-child {
+  position: relative;
+  z-index: auto;
+}
+
+.pos-section table tbody tr:first-child .dropdown-menu {
+  position: absolute !important;
+  z-index: 9999 !important;
+  top: 100% !important;
+  left: 0 !important;
+}
+
+/* Ensure table cells don't clip content */
+.pos-section table td {
+  position: static;
+  overflow: visible !important;
+}
+
+/* Force table to allow overflow */
+.pos-section table {
+  overflow: visible !important;
+}
+</style>
 </head>
 
 <body style="background-color:#EDF7EE;">
@@ -634,9 +732,6 @@ h6 { font-size: 13px; font-weight: 600; }
 
 
 
-  <!-- Sidebar Start -->
-
-  <!--  Sidebar End -->
 
   <!--  Header Start -->
 
@@ -664,11 +759,11 @@ h6 { font-size: 13px; font-weight: 600; }
     <?php endif; ?>
     
 
-<div class="container-fluid">
+<div class="container-fluid" >
   <div class="row">
     <div class="col-md-4">
-      <div class="card text-dark shadow-sm border-avoid h-2xl">
-        <div class="p-3">
+      <div class="card text-dark shadow-sm border-avoid h-2xl left-card">
+        <div class="p-3 d-flex flex-column h-100">
           <!-- Legend with counts - Fixed at top -->
           <div class="mb-3">
             <div class="row fw-semibold" id="legend">
@@ -717,7 +812,7 @@ h6 { font-size: 13px; font-weight: 600; }
           </div>
 
           <!-- Scrollable Rooms Grid Container -->
-          <div class="room-grid-container" style="max-height: 400px; overflow-y: auto;">
+          <div class="room-grid-container flex-grow-1">
             <!-- Rooms Grid -->
             <div class="row g-2" id="room-grid">
                 <?php 
@@ -777,7 +872,7 @@ h6 { font-size: 13px; font-weight: 600; }
 
     <!-- Left Side (Room Info) -->
     <div class="col-md-8">
-      <div class="card shadow-md rounded-3">
+      <div class="card shadow-md rounded-3 right-card">
         <div class="card-body" id="room-info">
           <h4 class="text-center text-muted">Select a Room</h4>
           <p class="text-center">Click on a room on the right to view details here.</p>
@@ -4149,6 +4244,8 @@ document.addEventListener('click', function(e) {
     }
 });
 </script>
+
+
 
 
 </html>
