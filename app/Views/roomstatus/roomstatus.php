@@ -790,7 +790,7 @@ h6 { font-size: 13px; font-weight: 600; }
           </div>
 
           <!-- Scrollable Rooms Grid Container -->
-          <div class="room-grid-container flex-grow-1">
+          <div class="room-grid-container flex-grow-1" style="overflow: visible; height: auto;">
             <!-- Rooms Grid -->
             <div class="row g-2" id="room-grid">
                 <?php 
