@@ -6,6 +6,9 @@ use App\Models\AssetTypeModel;
 use App\Models\AssignedAssetsInfoModel;
 use App\Models\RoomsInfoModel;
 use App\Models\AdvanceBookingModel;
+use App\Models\ServiceTypeInfoModel;
+use App\Models\CategoryModel;
+use App\Models\ServiceModel;
 
 class Rooms extends BaseController
 {
@@ -144,7 +147,7 @@ public function getRoomsForModal()
 }
 
 
-public function roomstatus()
+public function roomstatus1()
 {
     ini_set('display_errors', '1');
     ini_set('display_startup_errors', '1');
@@ -194,6 +197,66 @@ public function roomstatus()
 
     return view('roomstatus/roomstatus', $data);
 }
+
+
+
+
+public function roomstatus()
+{
+    ini_set('display_errors', '1');
+    ini_set('display_startup_errors', '1');
+    error_reporting(E_ALL);
+
+    // Load the models
+    $roomsModel = new RoomsInfoModel();
+    $bookingsModel = new AdvanceBookingModel();
+    $serviceTypeModel = new ServiceTypeInfoModel();
+
+    // Get all rooms data
+    $rooms = $roomsModel->where('deleted_on', null)->findAll();
+
+    // Fetch all service types
+    $servicetype = $serviceTypeModel->where('deleted_on', null)->findAll();
+
+    // Initialize counts
+    $counts = [
+        'vacant' => 0,
+        'occupied' => 0,
+        'reserved' => 0,
+        'dirty' => 0,
+        'blocked' => 0
+    ];
+
+    // Pre-fetch guest information for Occupied and Confirmed rooms
+    $guestInfoMap = [];
+    foreach ($rooms as $room) {
+        $status = strtolower($room['room_status']);
+
+        // Increment counts
+        if (isset($counts[$status])) {
+            $counts[$status]++;
+        }
+
+        // Guest info for occupied/reserved/confirmed rooms
+        if ($status === 'occupied' || $status === 'reserved' || $status === 'confirmed') {
+            $guestInfo = $bookingsModel->getGuestInfoByRoomId($room['room_id']);
+            if ($guestInfo) {
+                $guestInfoMap[$room['room_id']] = $guestInfo;
+            }
+        }
+    }
+
+    // Pass data to view
+    $data = [
+        'rooms' => $rooms,
+        'guestInfoMap' => $guestInfoMap,
+        'counts' => $counts,
+        'servicetype' => $servicetype  // ✅ Add service types
+    ];
+
+    return view('roomstatus/roomstatus', $data);
+}
+
 
 
 public function blockRoomForm()
