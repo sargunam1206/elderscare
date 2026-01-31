@@ -293,6 +293,12 @@
     .dropdown.is-invalid ~ .invalid-feedback {
       display: block;
     }
+     .dropdown-item:hover,
+    .dropdown-item.active {
+      background-color: #66BB6A;
+      color: #fff;
+    }
+
     
     .dropdown.is-invalid .form-control {
       border-color: #dc3545 !important;
@@ -315,6 +321,7 @@
       .table thead th, .table tbody td {
         padding: 8px 10px;
       }
+ 
     }
 
     /* Add to your existing CSS */
@@ -469,7 +476,7 @@
     .card,
     .form-section {
       padding: 10px !important;
-      border-radius: 6px;
+      /* border-radius: 6px; */
     }
 
     /* Modal compact */
@@ -603,11 +610,12 @@
     <img src="<?= base_url(); ?>/public/dist/assets/images/logos/favicon.png" alt="loader" class="lds-ripple img-fluid" />
   </div>
 
-  <div class="main-wrapper overflow-hidden">
+  <div class="main-wrapper overflow-hidden"  style="margin-top:80px;"
+ >
     <!-- Add baseUrl hidden input -->
     <input type="hidden" id="baseUrl" data-url="<?= base_url() ?>/">
     
-     <div class="" style="background-color:#EDF7EE;">
+     <div class=" main-wrapper" style="background-color:#EDF7EE;" >
       <!-- Display success/error messages -->
       <?php if(session()->getFlashdata('message')): ?>
         <div class="alert alert-success alert-dismissible fade show">
@@ -625,14 +633,14 @@
 
       <div class="row g-4">
         <div class="col-md-12">
-          <div class=" p-4 h-100 d-flex flex-column">
+          <div class=" px-3 py-2 h-100 d-flex flex-column">
             <div class="d-flex justify-content-between align-items-center mb-3">
-              <h5 class="fs-7"><i class="bi bi-question-circle me-2 text-success"></i>Enquiries</h5>
+              <h4 class=""  style="font-size:18px;"><i class="bi bi-question-circle me-2 text-success"></i>Enquiries</h4>
               <div>
-                <span class="badge bg-light text-success border border-success me-2">
-                  <?= count($enquiries) ?> enquiries
+                <span class="badge bg-light text-success border border-success me-2 fs-1">
+                  <?= count($enquiries) ?> Enquiries
                 </span>
-                <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" onclick="resetForm()">
+                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" onclick="resetForm()">
                   <i class="bi bi-plus-circle me-1"></i> New Enquiry
                 </button>
               </div>
@@ -742,6 +750,7 @@
                 </tbody>
               </table>
             </div>
+            
           </div>
         </div>
       </div>

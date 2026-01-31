@@ -29,9 +29,20 @@ $activePage = strtolower($uri->getSegment(1));
 }
 
 .navbar-brand img {
-    max-height: 40px; /* smaller height */
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
+.navbar-brand span {
+    font-size:20px; /* default text size */
+}
+
+
+.custom-spacing {
+    word-spacing: 5px; /* adjust value as needed */
+    color: red;
+}
 
 /* ==== General Navbar Links ==== */
 .navbar-nav .nav-link {
@@ -108,6 +119,34 @@ $activePage = strtolower($uri->getSegment(1));
     }
 }
 
+@media (max-width: 991px) {
+    .dropdown-submenu > .dropdown-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-top: 0;
+        margin-left: 1rem;
+        display: none; /* hidden by default */
+    }
+    .navbar-brand{
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+</style>
+<style>
+  /* Hide navbar title on mobile */
+@media (max-width: 991px) {
+  .navbar-brand span {
+    display: none !important; /* hide text */
+  }
+
+  .navbar-brand img {
+    height: 45px; /* keep logo visible */
+  }
+}
+
 </style>
 
 
@@ -125,7 +164,7 @@ $boardingPages = ['boarding', 'act', 'not'];
 $activePage = strtolower($uri->getSegment(1));
 ?>
 
-<header class="app-header shadow-sm" style="background-color:#419045;">
+<header class="app-header shadow-sm fixed-top" style="background-color:#419045;">
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#419045;">
     <div class="container-fluid d-flex align-items-center">
 
@@ -172,14 +211,14 @@ $activePage = strtolower($uri->getSegment(1));
           <li class="nav-item">
             <a class="nav-link text-white fw-semibold <?= ($activePage == 'rooms') ? 'active' : '' ?>" 
                href="<?= base_url('rooms'); ?>">
-              <i class="bi bi-building me-2 fs-5"></i> Room
+              <i class="bi bi-building me-1 fs-5"></i> Room
             </a>
           </li>
      <!-- Services Dropdown -->
 <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle text-white fw-semibold <?= in_array($activePage, ['servicetype','category','servicemodes']) ? 'active' : '' ?>" 
      href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    <i class="bi bi-collection fs-5 me-2"></i> Services
+    <i class="bi bi-collection fs-5 me-1"></i> Services
   </a>
   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="servicesDropdown">
     <li>
@@ -205,7 +244,7 @@ $activePage = strtolower($uri->getSegment(1));
 
 <!-- Onboarding Dropdown -->
 <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle text-white fw-semibold <?= in_array($activePage, ['act','not','charges']) ? 'active' : '' ?>" 
+  <a class="nav-link dropdown-toggle text-white fw-semibold <?= in_array($activePage, ['act','not','charges','wallet']) ? 'active' : '' ?>" 
      href="#" id="onboardingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <i class="bi bi-clipboard-check fs-5 me-1"></i> Onboarding
   </a>
@@ -223,6 +262,11 @@ $activePage = strtolower($uri->getSegment(1));
     <li>
       <a class="dropdown-item <?= ($activePage == '') ? 'active' : '' ?>" href="<?= base_url('charges'); ?>">
         Add Charges
+      </a>
+    </li>
+     <li>
+      <a class="dropdown-item <?= ($activePage == '') ? 'active' : '' ?>" href="<?= base_url('wallet'); ?>">
+        Wallet
       </a>
     </li>
   </ul>

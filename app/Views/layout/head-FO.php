@@ -28,11 +28,16 @@ $activePage = strtolower($uri->getSegment(1));
     align-items: center;
 }
 
+
 .navbar-brand img {
-    max-height: 40px; /* smaller height */
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-
+.navbar-brand span {
+    font-size: 20px; /* default text size */
+}
 /* ==== General Navbar Links ==== */
 .navbar-nav .nav-link {
     position: relative;
@@ -60,6 +65,11 @@ $activePage = strtolower($uri->getSegment(1));
 
 .navbar .dropdown-item {
     color: #FFFFFF;
+}
+
+.custom-spacing {
+    word-spacing: 5px; /* adjust value as needed */
+    color: red;
 }
 
 .navbar .dropdown-item:hover {
@@ -106,6 +116,24 @@ $activePage = strtolower($uri->getSegment(1));
         margin-left: 1rem;
         display: none; /* hidden by default */
     }
+    .navbar-brand{
+      display: flex;
+      flex-direction: column;
+    }
+   
+}
+
+</style>
+<style>
+  /* Hide navbar title on mobile */
+@media (max-width: 991px) {
+  .navbar-brand span {
+    display: none !important; /* hide text */
+  }
+
+  .navbar-brand img {
+    height: 45px; /* keep logo visible */
+  }
 }
 
 </style>
@@ -125,7 +153,7 @@ $boardingPages = ['boarding', 'act', 'not'];
 $activePage = strtolower($uri->getSegment(1));
 ?>
 
-<header class="app-header shadow-sm" style="background-color:#419045;">
+<header class="app-header shadow-sm  fixed-top " style="background-color:#419045;">
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#419045;">
     <div class="container-fluid d-flex align-items-center">
 
@@ -183,6 +211,12 @@ $activePage = strtolower($uri->getSegment(1));
               <i class="ti ti-calendar-check me-1 fs-5"></i> Booking
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold <?= ($activePage == 'roomstatus') ? 'active' : '' ?>" 
+               href="<?= base_url('roomstatus'); ?>">
+              <i class="bi bi-building me-1 fs-5"></i> Room
+            </a>
+          </li>
 
           <!-- Guest Info -->
           <!--<li class="nav-item ms-lg-3">-->
@@ -197,6 +231,15 @@ $activePage = strtolower($uri->getSegment(1));
             <a class="nav-link text-white fw-semibold <?= ($activePage == 'maintenance') ? 'active' : '' ?>" 
                href="<?= base_url('maintenance'); ?>">
               <i class="ti ti-tools me-1 fs-5"></i> Maintenance
+            </a>
+          </li>
+
+
+           <!-- Maintenance -->
+          <li class="nav-item ">
+            <a class="nav-link text-white fw-semibold <?= ($activePage == 'roomblocked') ? 'active' : '' ?>" 
+               href="<?= base_url('roomblocked'); ?>"><i class="bi bi-slash-circle me-1 fs-5"></i>
+               Blocked Rooms
             </a>
           </li>
 

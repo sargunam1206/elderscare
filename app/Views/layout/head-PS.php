@@ -28,11 +28,21 @@ $activePage = strtolower($uri->getSegment(1));
     align-items: center;
 }
 
+
 .navbar-brand img {
-    max-height: 40px; /* smaller height */
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
+.navbar-brand span {
+    font-size:20px; /* default text size */
+}
 
+.custom-spacing {
+    word-spacing: 5px; /* adjust value as needed */
+    color: red;
+}
 /* ==== General Navbar Links ==== */
 .navbar-nav .nav-link {
     position: relative;
@@ -106,6 +116,10 @@ $activePage = strtolower($uri->getSegment(1));
         margin-left: 1rem;
         display: none; /* hidden by default */
     }
+    .navbar-brand{
+      display: flex;
+      flex-direction: column;
+    }
 }
 
 .dropdown-menu .dropdown-item.active {
@@ -113,6 +127,20 @@ $activePage = strtolower($uri->getSegment(1));
   font-weight: 600;
 }
 
+
+
+</style>
+<style>
+  /* Hide navbar title on mobile */
+@media (max-width: 991px) {
+  .navbar-brand span {
+    display: none !important; /* hide text */
+  }
+
+  .navbar-brand img {
+    height: 45px; /* keep logo visible */
+  }
+}
 
 </style>
 
@@ -131,7 +159,7 @@ $boardingPages = ['boarding', 'act', 'not'];
 $activePage = strtolower($uri->getSegment(1));
 ?>
 
-<header class="app-header shadow-sm" style="background-color:#419045;">
+<header class="app-header shadow-sm  fixed-top" style="background-color:#419045;">
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#419045;">
     <div class="container-fluid d-flex align-items-center">
 
@@ -178,12 +206,12 @@ $activePage = strtolower($uri->getSegment(1));
           <li class="nav-item">
             <a class="nav-link text-white fw-semibold <?= ($activePage == 'addproduct') ? 'active' : '' ?>" 
                href="<?= base_url('addproduct'); ?>">
-              <i class="bi bi-wallet2"></i> Charges
+              <i class="bi bi-wallet2 me-1 fs-5"></i> Charges
             </a>
           </li>
            <!-- Reports Dropdown -->
 <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle text-white fw-semibold <?= in_array($activePage, ['servicerept', 'chargesrept']) ? 'active' : '' ?>" 
+  <a class="nav-link dropdown-toggle text-white fw-semibold <?= in_array($activePage, ['servicerept', 'chargesrept','walletrept']) ? 'active' : '' ?>" 
      href="#" id="reportsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <i class="bi bi-file-earmark-bar-graph fs-5"></i> Reports
   </a>
@@ -198,6 +226,12 @@ $activePage = strtolower($uri->getSegment(1));
       <a class="dropdown-item <?= ($activePage == 'chargesrept') ? 'active' : '' ?>" 
          href="<?= base_url('chargesrept'); ?>">
         Charges Report
+      </a>
+    </li>
+     <li>
+      <a class="dropdown-item <?= ($activePage == 'walletrept') ? 'active' : '' ?>" 
+         href="<?= base_url('walletrept'); ?>">
+        Wallet Report
       </a>
     </li>
   </ul>

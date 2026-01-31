@@ -14,7 +14,6 @@
   <!-- Core Css -->
   <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/css/styles.css" />
 
-  <title>MatDash Bootstrap Admin</title>
   <!-- Owl Carousel  -->
   <link rel="stylesheet"
     href="<?= base_url(); ?>/public/dist/assets/libs/owl.carousel/dist/assets/owl.carousel.min.css" />
@@ -189,7 +188,11 @@ h5 {
     box-shadow: none !important;
     border-color: #1B5E20 !important;
 }
-
+ .dropdown-item:hover,
+    .dropdown-item.active {
+      background-color: #66BB6A;
+      color: #fff;
+    }
 
 /* ========== Base Styles ========== */
 body {
@@ -368,10 +371,7 @@ body {
 }
 
 /* Badge styling */
-.badge {
-  font-size: 0.9rem !important;
-  padding: 2px 10px;
-}
+
 
 </style>
 <style>   
@@ -432,6 +432,7 @@ body {
    #form_inputs_wrapper > .dataTables_length {
     display: none !important;
   }
+
 }
 
 
@@ -792,11 +793,11 @@ body {
   <!-- Responsive Header End -->
   <!-- ------------------------------------- -->
 
-  <div class="main-wrapper">
+  <div class="main-wrapper" style="margin-top: 80px;">
 
     <!-- <div id="reservationForm"> -->
       <!-- Header -->
-       <div class="p-3" style="background-color:#EDF7EE;">
+       <div class=" main-wrapper" style="background-color:#EDF7EE;">
       <!-- <div class="header mt-3 mb-0">View Advance Booking</div> -->
 
 
@@ -812,7 +813,7 @@ body {
                     <!-- end Row selection (multiple rows) -->
                     <!-- start Form Inputs -->
                     
-                    <div class="card-body">
+                    <div class="px-3 py-2 main-wrapper">
 
                       <!-- <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-account" role="tabpanel" aria-labelledby="pills-account-tab" tabindex="0">
@@ -836,11 +837,11 @@ body {
                         </div>
                       <?php endif; ?>
 
-                      <div class="d-flex justify-content-between align-items-center mb-3">
-              <h5 class="fs-7"><i class="bi bi-list-check me-2 text-success"></i>Booking List</h5>
+                      <div class="d-flex justify-content-between align-items-center mb-3 ">
+              <h4 class=""  style="font-size:18px;"><i class="bi bi-list-check me-2 text-success"></i>Booking List</h4>
               <div>
-                <span class="badge bg-light text-success border border-success m-2 ">
-                 <?= count($adv) ?> bookings
+                <span class="badge bg-light text-success border border-success m-2 fs-1">
+                 <?= count($adv) ?> Bookings
                 </span>
                  <a href="<?= base_url('advancebooking'); ?>" class="btn btn-primary btn-sm"><i class="bi bi-plus-circle me-1"></i> New Booking</a>
                 

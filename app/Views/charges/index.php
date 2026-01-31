@@ -15,7 +15,6 @@
   <!-- Core Css -->
   <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/css/styles.css" />
 
-  <title>Charges Management</title>
   <!-- DataTables CSS -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
@@ -381,7 +380,7 @@
 }
 
 </style>
- <style>
+<style>
     /* ===== Compact Global Adjustments ===== */
     body {
       font-family: 'Poppins', 'Inter', 'Segoe UI', sans-serif;
@@ -590,10 +589,10 @@
       class="lds-ripple img-fluid" />
   </div>
 
-  <div class="main-wrapper overflow-hidden">
+  <div class="main-wrapper overflow-hidden"  >
     <!-- Add baseUrl hidden input -->
     <input type="hidden" id="baseUrl" data-url="<?= base_url() ?>/">
-      <div class="" style="background-color:#EDF7EE;">
+      <div class="" style="background-color:#EDF7EE; margin-top:80px;">
     <!-- <div class="container-fluid py-4"> -->
       <!-- Display success/error messages -->
       <div class="flash-messages mt-3">
@@ -613,14 +612,14 @@
 </div>
 
 
-      <div class="row g-4">
+      <div class="row g-4" >
         <div class="col-md-12">
-          <div class=" p-4 h-100 d-flex flex-column">
+          <div class=" px-3 py-2  h-100 d-flex flex-column">
             <div class="d-flex justify-content-between align-items-center mb-3">
            
-              <h5 class="fs-5"><i class="bi bi-credit-card me-2 text-success"></i>Charges Management</h5>
+              <h4 class="" style="font-size:18px;"><i class="bi bi-credit-card me-2 text-success"></i>Charges Management</h4>
               <div>
-                <span class="badge bg-light text-success border border-success me-2">
+                <span class="badge bg-light text-success border border-success me-2 fs-1">
                   <?= count($charges) ?> charges
                 </span>
                 <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#chargeModal" onclick="resetForm()">

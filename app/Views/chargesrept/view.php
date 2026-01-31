@@ -19,7 +19,6 @@
   <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-  <title>MatDash Bootstrap Admin</title>
   <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
 
 
@@ -261,8 +260,8 @@ body {
 
 /* Badge styling */
 .badge {
-  font-size: 0.9rem !important;
-  padding: 2px 10px;
+ font-size: 0.7rem !important;
+      padding: 4px 10px;
 }
 
 </style>
@@ -597,6 +596,7 @@ body {
    #form_inputs_1_wrapper > .dataTables_length {
     display: none !important;
   }
+
 }
 
 
@@ -618,7 +618,7 @@ body {
     <!--  Sidebar End -->
  
 
-          <div class=" p-3">
+          <div class="px-3 py-2 main-wrapper" style="margin-top: 80px;">
            <!-- <ul class="nav nav-pills user-profile-tab" id="pills-tab" role="tablist">
               <li class="nav-item" role="presentation">
                 <button class="nav-link position-relative rounded-0 active d-flex align-items-center justify-content-center bg-transparent fs-3 py-3" id="pills-account-tab" data-bs-toggle="pill" data-bs-target="#pills-account" type="button" role="tab" aria-controls="pills-account" aria-selected="true">
@@ -713,7 +713,7 @@ body {
 
             <!-- </div> -->
 
-            <div class="card-body">
+            <div class="card-body main-wrapper">
               <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-account" role="tabpanel" aria-labelledby="pills-account-tab" tabindex="0">
                   
@@ -731,7 +731,7 @@ body {
             <!-- end Row selection (multiple rows) -->
             <!-- start Form Inputs -->
             <!-- <div class="card"> -->
-              <div class="card-body">
+              <div class="">
                 
               <!-- <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-account" role="tabpanel" aria-labelledby="pills-account-tab" tabindex="0">
@@ -759,8 +759,11 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
                     
 
            <div class="d-flex justify-content-between align-items-center mb-3">
-              <h5 class="fs-7"><i class="bi bi-list-check me-2 text-success"></i>Charges List</h5>
+              <h4 class=""  style="font-size:18px;"><i class="bi bi-list-check me-2 text-success"></i>Charges List</h4>
               <div>
+                 <span class="badge bg-light text-success border border-success me-2 fs-1">
+                  <?= count($guests) ?> Charges
+                </span>
                 
   <a href="<?= base_url('addproduct'); ?>" class="btn btn-primary">View Charges</a> 
                 
@@ -900,24 +903,50 @@ $activeTab = $_GET['tab'] ?? ''; // fallback to empty
 
 
 <?php
-// Group rows by charge_id
+
+// $grouped = [];
+// foreach ($serviceTypes as $row) {
+//     $cid = $row['charge_id'];
+//     if (!isset($grouped[$cid])) {
+//         $grouped[$cid] = [
+//             'charge_id'   => $cid,
+//             'created_on'  => $row['created_on'],
+//             'charge_monthyear'  => $row['charge_monthyear'],
+//             'total_paid'  => 0,
+//             'items'       => []
+//         ];
+//     }
+//     $grouped[$cid]['total_paid'] += (float)$row['paid_amount'];
+//     $grouped[$cid]['items'][] = [
+//         'charge_info'   => $row['charge_info'],
+//         'payment_mode'  => $row['payment_mode'],
+//         'paid_amount'   => $row['paid_amount']
+//     ];
+// }
+?>
+
+<?php
+// Group rows by charge_id with safety checks
 $grouped = [];
 foreach ($serviceTypes as $row) {
     $cid = $row['charge_id'];
     if (!isset($grouped[$cid])) {
         $grouped[$cid] = [
             'charge_id'   => $cid,
-            'created_on'  => $row['created_on'],
-            'charge_monthyear'  => $row['charge_monthyear'],
+            'created_on'  => $row['created_on'] ?? '',
+            'charge_monthyear'  => $row['charge_monthyear'] ?? '',
+            'room_no'     => $row['room_no'] ?? 'N/A',
+            'first_name'  => $row['first_name'] ?? 'N/A',
+            'last_name'   => $row['last_name'] ?? 'N/A',
             'total_paid'  => 0,
             'items'       => []
         ];
     }
-    $grouped[$cid]['total_paid'] += (float)$row['paid_amount'];
+    $grouped[$cid]['total_paid'] += (float)($row['paid_amount'] ?? 0);
     $grouped[$cid]['items'][] = [
-        'charge_info'   => $row['charge_info'],
-        'payment_mode'  => $row['payment_mode'],
-        'paid_amount'   => $row['paid_amount']
+        'charge_info'   => $row['charge_info'] ?? '',
+        'payment_mode'  => $row['payment_mode'] ?? '',
+        'paid_amount'   => $row['paid_amount'] ?? 0
     ];
 }
 ?>
@@ -928,9 +957,12 @@ foreach ($serviceTypes as $row) {
         <tr>
            <th>S.No</th>
            <th>Date Time</th>
+            <th>Room No</th>
+             <th>Guest Name</th>
            <th>Month of Charge</th>
            <th>Total Paid Amount</th>
            <th>Charge Info</th>
+            <th>Bill</th> 
         </tr>
   </thead>
   <tbody>
@@ -938,6 +970,8 @@ foreach ($serviceTypes as $row) {
             <tr>
                 <td><?= $i++; ?></td>
                 <td><?= $asset['created_on']; ?></td>
+                <td><?= $asset['room_no']; ?></td>
+                <td><?= $asset['first_name'] . ' ' . $asset['last_name']; ?></td>
                   <td><?= $asset['charge_monthyear']; ?></td>
                 <td><?= $asset['total_paid']; ?></td>
                 <td>
@@ -949,64 +983,26 @@ foreach ($serviceTypes as $row) {
                           Info
                   </button>
                 </td>
+                 <td>
+          <!-- Generate Bill Button -->
+          <button type="button"
+                  class="btn btn-primary btn-sm"
+                  onclick="generateBill('<?= $asset['charge_id']; ?>')">
+            <i class="bi bi-receipt"></i> Generate Bill
+          </button>
+        </td>
             </tr>
         <?php endforeach; ?>
   </tbody>
 </table>
-
-
-
-
-
-
 </div>
-
-
-
-
-
-
-
-        </form>
-
-
-  
-     
-
-
-
-
-
-
-
-                   
+        </form>                  
                 </div>
               </div>
-                </div>
-          
-
-
-
-
-
-
-
-                   
+                </div>             
                 </div>
               </div>
-            </div>
-
-
-        
-
-
-
-
-
-             
-           
-   
-         
+            </div>       
 <!-- MODAL -->
 <div class="modal fade" id="chargeInfoModal" tabindex="-1" aria-labelledby="chargeInfoLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -1036,16 +1032,6 @@ foreach ($serviceTypes as $row) {
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
 <!-- SCRIPT -->
 <!-- <script>
   
@@ -1097,6 +1083,69 @@ $(document).ready(function () {
         info: true
     });
 });
+function generateBill(chargeId) {
+    if (confirm('Are you sure you want to generate bill for this charge?')) {
+        // Show loading state
+        const btn = event.target;
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<i class="bi bi-hourglass-split"></i> Generating...';
+        btn.disabled = true;
+        
+        // Send AJAX request
+        fetch('<?= base_url("chargesreport/generateBill"); ?>', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: 'charge_id=' + encodeURIComponent(chargeId)
+        })
+        .then(response => {
+            console.log('Response status:', response.status);
+            console.log('Response ok:', response.ok);
+            
+            if (!response.ok) {
+                throw new Error('HTTP error! status: ' + response.status);
+            }
+            return response.text(); // First get as text to see what's returned
+        })
+        .then(text => {
+            console.log('Raw response:', text);
+            
+            try {
+                const data = JSON.parse(text);
+                return data;
+            } catch (e) {
+                console.error('JSON parse error:', e);
+                throw new Error('Invalid JSON response: ' + text.substring(0, 100));
+            }
+        })
+        .then(data => {
+            console.log('Parsed data:', data);
+            
+            if (data.success) {
+                // Open bill in new tab for preview/download
+                const billUrl = '<?= base_url("chargesreport/viewBill"); ?>?bill_id=' + data.bill_id;
+                console.log('Opening bill URL:', billUrl);
+                window.open(billUrl, '_blank');
+                
+                // Show success message
+                // alert('Bill generated successfully! Bill No: ' + data.bill_no);
+            } else {
+                alert('Error: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error generating bill: ' + error.message);
+        })
+        .finally(() => {
+            // Reset button state
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+        });
+    }
+}
 </script>
 
 

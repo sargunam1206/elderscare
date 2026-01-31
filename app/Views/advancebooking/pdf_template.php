@@ -4,22 +4,64 @@
     <meta charset="UTF-8">
     <title>Advance Bookings Report</title>
     <style>
+        
         body { font-family: Arial; margin: 20px; }
-        .report-header { text-align: center; margin-bottom: 20px; }
-        .filters { background: #f5f5f5; padding: 10px; margin-bottom: 15px; border-radius: 5px; }
         table { width: 100%; border-collapse: collapse; }
-        th { background: #343a40; color: white; padding: 10px; }
+        th { background: #66BB6A; color: white; padding: 10px; text-align: left; }
         td { padding: 8px; border-bottom: 1px solid #ddd; }
         .footer { margin-top: 20px; text-align: right; font-size: 0.9em; }
     </style>
 </head>
 <body>
-    <div class="report-header">
+  
+    <!-- Header with logo + address - Fixed vertical alignment -->
+ <!-- Header with logo (left) and address (right) -->
+<table width="100%" style="margin-bottom:20px;">
+    <tr>
+        <!-- Logo -->
+        <td width="20%" style="vertical-align: middle;border-radius:20px">
+            <img src="<?= base_url('./public/logo.png'); ?>" 
+                 style="height:90px; width:200px; " alt="Logo">
+        </td>
+
+        
+        
+        <!-- Address -->
+     <td  style="padding-left: 36%; font-size: 14px; line-height: 1.5; ">
+            <div style="  max-width: 400px;">
+                <strong>ADVAYA COLIVING</strong><br>
+                Old No.1514, New No. 252,
+                
+            </div>
+              <div >
+                
+               
+                Avinashi Road,Opp Varadaraja Textiles
+               
+            </div>
+             <div>
+                
+               
+                Peelamedu, Coimbatore, Tamil Nadu 641004.
+               
+            </div>
+        </td>
+
+         
+
+
+    </tr>
+</table>
+
+
+
+
+    <!-- Report Title -->
+    <div style="text-align: center; margin-bottom: 20px;">
         <h2>Advance Bookings Report</h2>
     </div>
-    
-   
 
+    <!-- Table -->
     <table>
         <thead>
             <tr>
@@ -44,7 +86,10 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-
-   
+    
+    <!-- Footer -->
+    <div class="footer">
+        <!-- Report generated on <?= date('Y-m-d H:i:s') ?> -->
+    </div>
 </body>
 </html>

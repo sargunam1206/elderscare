@@ -1,0 +1,1605 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="refresh" content="900;url=http://viyoma.neuralarc.com/viyoma/logout"  />
+
+  <!-- Favicon icon-->
+  <!-- <link rel="shortcut icon" type="image/png" href="<?= base_url(); ?>/public/dist/assets/images/logos/favicon.png" /> -->
+  <link rel="icon" type="image/png" sizes="180x180"  href="<?= base_url('public/Logo-Elders_home.png'); ?>" >
+  <title>Nivasan Udayana</title>
+  <!-- Core Css -->
+  <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/css/styles.css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- <title>MatDash Bootstrap Admin</title> -->
+  <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/ccc/wallet.css">
+
+
+
+    <style>
+    label.required::after {
+      content: " *";
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+  <style>
+  .modal-dialog-scrollable .modal-body {
+    height: 50vh;
+
+    overflow-y: auto;
+  }
+</style>
+<style>
+    /* ========== Global Theme Colors ========== */
+    :root {
+      /* --primary-green: #1B5E20; */
+      /* --primary-green: #1B5E20; */
+      --primary-green: #66BB6A;
+      --primary-green-hover: #2E7D32;
+      --secondary-green: #66BB6A;
+      --table-header-text: #242424;
+      --light-green: #A5D6A7;
+      --light-green-hover: #81C784;
+      --destructive-red: #E53935;
+      --destructive-red-hover: #C62828;
+      --dark-gray: #333333;
+      --light-gray: #f4f6f9;
+      --border-color: #dee2e6;
+      --white: #FFFFFF;
+    }
+
+    /* Keep brand color on click/focus */
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary:focus:active {
+      background-color: #1B5E20 !important;
+      color: #FFFFFF !important;
+      box-shadow: none !important;
+      border-color: #1B5E20 !important;
+    }
+
+
+    /* ========== Form Elements ========== */
+    .form-control,
+    .form-select {
+      font-size: 14px;
+      font-weight: 400;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 8px 12px;
+      background-color: var(--white);
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      border-color: var(--secondary-green);
+      box-shadow: 0 0 0 0.25rem rgba(102, 187, 106, 0.25);
+    }
+
+    .dropdown-menu {
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+      background-color: var(--light-green);
+      color: var(--primary-green);
+    }
+
+    /* ========== Tables ========== */
+    .table {
+      background-color: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    }
+
+    .table thead th {
+      background-color: var(--primary-green);
+      color: var(--table-header-text);
+      font-weight: 600;
+      padding: 12px 15px;
+    }
+
+    .table tbody td {
+      padding: 10px 15px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+      background-color: rgba(165, 214, 167, 0.1);
+    }
+
+    .table-hover tbody tr:hover {
+      background-color: rgba(165, 214, 167, 0.3);
+    }
+
+    /* ========== Buttons ========== */
+    .btn {
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 8px;
+      padding: 8px 16px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--primary-green);
+      border-color: var(--primary-green);
+      color: var(--table-header-text);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-green-hover);
+      border-color: var(--primary-green-hover);
+    }
+
+    .btn-secondary {
+      background-color: var(--light-green);
+      border-color: var(--light-green);
+      color: var(--primary-green);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--light-green-hover);
+      border-color: var(--light-green-hover);
+    }
+
+    .btn-danger {
+      background-color: var(--destructive-red);
+      border-color: var(--destructive-red);
+      color: var(--white);
+    }
+
+    .btn-danger:hover {
+      background-color: var(--destructive-red-hover);
+      border-color: var(--destructive-red-hover);
+    }
+
+    /* ========== Modals ========== */
+    .modal-content {
+      border-radius: 8px;
+      border: none;
+    }
+
+    .modal-header {
+      background-color: var(--light-gray);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 20px;
+    }
+
+    .modal-title {
+      color: var(--primary-green);
+      font-weight: 600;
+    }
+
+    .modal-footer {
+      border-top: 1px solid var(--border-color);
+      padding: 16px 20px;
+    }
+
+    /* ========== Status Badges ========== */
+    .btn-warning {
+      background-color: #FFA000;
+      color: var(--white);
+    }
+
+    .btn-info {
+      background-color: #0288D1;
+      color: var(--white);
+    }
+
+    /* Make checkbox green when checked */
+    .form-check-input:checked {
+      background-color: var(--primary-green) !important;
+      border-color: var(--primary-green) !important;
+    }
+
+    /* Optional: remove Bootstrap focus blue shadow on click */
+    .form-check-input:focus {
+      box-shadow: 0 0 0 0.25rem rgba(102, 187, 106, 0.25) !important;
+    }
+
+    /* Validation styles */
+    .invalid-field {
+      border-color: #dc3545 !important;
+      background-color: #fff5f5 !important;
+    }
+
+    .validation-message {
+      color: #dc3545;
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+      display: none;
+    }
+
+    .border-primary {
+      border-color: var(--primary-green) !important;
+    }
+
+    .form-check-input.required:not(:checked) {
+      border-color: #dc3545 !important;
+    }
+
+    .form-control.required:invalid {
+      border-color: #dc3545 !important;
+    }
+
+    /* New validation styles */
+    .was-validated .form-control:invalid,
+    .form-control.is-invalid {
+      border-color: #dc3545;
+      padding-right: calc(1.5em + 0.75rem);
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath d='m5.8 3.6.4.4.4-.4'/%3e%3cpath d='M6 7v2'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right calc(0.375em + 0.1875rem) center;
+      background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+    }
+
+    .was-validated .form-select:invalid,
+    .form-select.is-invalid {
+      border-color: #dc3545;
+      padding-right: calc(0.75em + 2.5rem);
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath d='m5.8 3.6.4.4.4-.4'/%3e%3cpath d='M6 7v2'/%3e%3c/svg%3e");
+      background-position: right 0.75rem center, center right 2rem;
+      background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+    }
+
+    .was-validated .form-check-input:invalid,
+    .form-check-input.is-invalid {
+      border-color: #dc3545;
+    }
+
+    .was-validated .form-check-input:invalid~.form-check-label,
+    .form-check-input.is-invalid~.form-check-label {
+      color: #dc3545;
+    }
+
+    .invalid-feedback {
+      display: none;
+      width: 100%;
+      margin-top: 0.25rem;
+      font-size: 0.875em;
+      color: #dc3545;
+    }
+
+    .was-validated .form-control:invalid~.invalid-feedback,
+    .form-control.is-invalid~.invalid-feedback,
+    .was-validated .form-select:invalid~.invalid-feedback,
+    .form-select.is-invalid~.invalid-feedback,
+    .was-validated .form-check-input:invalid~.invalid-feedback,
+    .form-check-input.is-invalid~.invalid-feedback {
+      display: block;
+    }
+
+    /* Custom dropdown validation */
+    .dropdown.is-invalid .dropdown-toggle {
+      border-color: #dc3545;
+    }
+
+    .dropdown.is-invalid~.invalid-feedback {
+      display: block;
+    }
+
+    /* Custom validation for dropdown inputs */
+    .dropdown-input.is-invalid {
+      border-color: #dc3545 !important;
+    }
+
+    
+  </style>
+  <style>
+    label.required::after {
+      content: " *";
+      color: red;
+      font-weight: bold;
+    }
+
+    .modal-dialog-scrollable .modal-body {
+      height: auto !important;
+      max-height: none !important;
+      overflow-y: visible !important;
+    }
+
+    /* ========== Global Theme Colors ========== */
+    :root {
+      --primary-green: #66BB6A;
+      --primary-green-hover: #2E7D32;
+      --secondary-green: #66BB6A;
+      --table-header-text: #242424;
+      --light-green: #A5D6A7;
+      --light-green-hover: #81C784;
+      --destructive-red: #E53935;
+      --destructive-red-hover: #C62828;
+      --dark-gray: #333333;
+      --light-gray: #f4f6f9;
+      --border-color: #dee2e6;
+      --white: #FFFFFF;
+    }
+
+    /* Active navbar link underline */
+    .navbar-nav .nav-link {
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .navbar-nav .nav-link.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #FFFFFF;
+      border-radius: 2px;
+    }
+
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary:focus:active {
+      background-color: #1B5E20 !important;
+      color: #FFFFFF !important;
+      box-shadow: none !important;
+      border-color: #1B5E20 !important;
+    }
+
+    /* ========== Base Styles ========== */
+    body {
+      font-family: 'Poppins', 'Inter', 'Segoe UI', sans-serif;
+      background-color: var(--light-gray);
+      color: var(--dark-gray);
+    }
+
+    .page-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--primary-green);
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--secondary-green);
+    }
+
+    .label-text {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--dark-gray);
+    }
+
+    /* ========== Form Elements ========== */
+    .form-control, .form-select {
+      font-size: 14px;
+      font-weight: 400;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 8px 12px;
+      background-color: var(--white);
+    }
+
+    .form-control:focus, .form-select:focus {
+      border-color: var(--secondary-green);
+      box-shadow: 0 0 0 0.25rem rgba(102, 187, 106, 0.25);
+    }
+
+    /* ========== Tables ========== */
+    .table thead th {
+      background-color: var(--primary-green);
+      color: var(--table-header-text);
+      font-weight: 600;
+      padding: 12px 15px;
+    }
+
+    .table tbody td {
+      padding: 10px 15px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+      background-color: rgba(165, 214, 167, 0.1);
+    }
+
+    .table-hover tbody tr:hover {
+      background-color: rgba(165, 214, 167, 0.3);
+    }
+
+    /* ========== Buttons ========== */
+    .btn {
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 8px;
+      padding: 8px 16px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--primary-green);
+      border-color: var(--primary-green);
+      color: var(--table-header-text);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-green-hover);
+      border-color: var(--primary-green-hover);
+    }
+
+    .btn-secondary {
+      background-color: var(--light-green);
+      border-color: var(--light-green);
+      color: var(--primary-green);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--light-green-hover);
+      border-color: var(--light-green-hover);
+    }
+
+    .btn-danger {
+      background-color: var(--destructive-red);
+      border-color: var(--destructive-red);
+      color: var(--white);
+    }
+
+    .btn-danger:hover {
+      background-color: var(--destructive-red-hover);
+      border-color: var(--destructive-red-hover);
+    }
+
+    /* ========== Cards ========== */
+    .card {
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+      background-color: var(--white);
+    }
+
+    .card-header {
+      background-color: var(--light-gray);
+      border-bottom: 1px solid var(--border-color);
+      font-weight: 600;
+      color: var(--secondary-green);
+      padding: 12px 20px;
+    }
+
+    /* ========== Modals ========== */
+    .modal-content {
+      border-radius: 8px;
+      border: none;
+    }
+
+    .modal-header {
+      background-color: var(--light-gray);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 20px;
+    }
+
+    .modal-title {
+      color: var(--primary-green);
+      font-weight: 600;
+    }
+
+    .modal-footer {
+      border-top: 1px solid var(--border-color);
+      padding: 16px 20px;
+    }
+
+    /* ========== Status Badges ========== */
+    .btn-warning {
+      background-color: #FFA000;
+      color: var(--white);
+    }
+
+    .btn-info {
+      background-color: #0288D1;
+      color: var(--white);
+    }
+
+    /* Badge styling */
+    .badge {
+      font-size: 0.9rem !important;
+      padding: 2px 10px;
+    }
+
+    /* ===== Compact Global Adjustments ===== */
+    body {
+      font-family: 'Poppins', 'Inter', 'Segoe UI', sans-serif;
+      font-size: 13px;
+      background-color: var(--light-gray);
+      color: var(--dark-gray);
+      line-height: 1.4;
+    }
+
+    h5, .modal-title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    h6 {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .form-label {
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+    .form-control, .form-select {
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    .form-control-sm, .form-select-sm {
+      font-size: 12px;
+      padding: 3px 6px;
+    }
+
+    .btn {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .btn-sm {
+      font-size: 12px;
+      padding: 3px 8px;
+    }
+
+    .table {
+      background-color: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    }
+
+    .table thead th, .table tbody td {
+      padding: 6px 8px !important;
+      font-size: 12px;
+    }
+
+    .table thead th {
+      font-weight: 600;
+    }
+
+    .table {
+      margin-bottom: 0.5rem;
+    }
+
+    .card, .form-section {
+      padding: 10px !important;
+      border-radius: 6px;
+    }
+
+    .modal-header, .modal-footer {
+      padding: 8px 12px;
+    }
+
+    .modal-body {
+      padding: 8px 12px;
+    }
+
+    .modal-title {
+      font-size: 14px;
+    }
+
+    .validation-message {
+      font-size: 11px;
+    }
+
+    .nav-pills .nav-link.active {
+      background-color: transparent !important;
+      color: var(--primary-green-hover) !important;
+      border-bottom: 3px solid var(--primary-green-hover);
+      border-radius: 0;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 12px;
+      }
+      .btn, .form-control, .form-select {
+        font-size: 11px;
+        padding: 3px 6px;
+      }
+    }
+
+    .payment-method-card {
+      border: 2px solid #e0e0e0;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .payment-method-card.active {
+      border-color: #198754;
+      background: #e8f9f0;
+      box-shadow: 0 0 8px rgba(25, 135, 84, 0.4);
+    }
+
+    .payment-method-card:hover {
+      border-color: #198754;
+    }
+
+    .payment-method-cards {
+      border: 2px solid #e0e0e0;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .payment-method-cards.active {
+      border-color: #198754;
+      background: #e8f9f0;
+      box-shadow: 0 0 8px rgba(25, 135, 84, 0.4);
+    }
+
+    .payment-method-cards:hover {
+      border-color: #198754;
+    }
+
+    /* DataTables wrapper styles */
+    #form_inputs_wrapper > .dataTables_length,
+    #form_inputs_wrapper > .dataTables_filter {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 10px;
+    }
+
+    #form_inputs_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #form_inputs_wrapper .dataTables_filter {
+      margin-left: auto;
+    }
+
+    #form_inputs_wrapper > .dataTables_info,
+    #form_inputs_wrapper > .dataTables_paginate {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 10px;
+    }
+
+    #form_inputs_1_wrapper > .dataTables_length,
+    #form_inputs_1_wrapper > .dataTables_filter {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 10px;
+    }
+
+    #form_inputs_1_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #form_inputs_1_wrapper .dataTables_filter {
+      margin-left: auto;
+    }
+
+    #form_inputs_1_wrapper > .dataTables_info,
+    #form_inputs_1_wrapper > .dataTables_paginate {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      #form_inputs_wrapper,
+      #form_inputs_1_wrapper {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      
+      #form_inputs_wrapper > .dataTables_info,
+      #form_inputs_wrapper > .dataTables_paginate,
+      #form_inputs_1_wrapper > .dataTables_info,
+      #form_inputs_1_wrapper > .dataTables_paginate {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+      }
+
+      #form_inputs_wrapper > .dataTables_filter,
+      #form_inputs_1_wrapper > .dataTables_filter {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin: 5px 0;
+      }
+
+      #form_inputs_wrapper .dataTables_filter,
+      #form_inputs_1_wrapper .dataTables_filter {
+        margin-left: 0;
+      }
+      
+      #form_inputs_wrapper > .dataTables_length,
+      #form_inputs_1_wrapper > .dataTables_length {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body style="background-color:#EDF7EE;">
+  <?= view('layout/head-PS') ?>
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="<?= base_url(); ?>/public/dist/assets/images/logos/favicon.png" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+    <!-- Sidebar Start -->
+       <!-- Sidebar Start -->
+   
+<div class="">
+        
+
+           <div class="p-3">
+           <!-- <ul class="nav nav-pills user-profile-tab" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link position-relative rounded-0 active d-flex align-items-center justify-content-center bg-transparent fs-3 py-3" id="pills-account-tab" data-bs-toggle="pill" data-bs-target="#pills-account" type="button" role="tab" aria-controls="pills-account" aria-selected="true">
+                 /* <i class="ti ti-user-circle me-2 fs-6"></i>*/
+                  <span class="d-none d-md-block">Asset Type</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link position-relative rounded-0 d-flex align-items-center justify-content-center bg-transparent fs-3 py-3" id="pills-notifications-tab" data-bs-toggle="pill" data-bs-target="#pills-notifications" type="button" role="tab" aria-controls="pills-notifications" aria-selected="false">
+                  /* <i class="ti ti-bell me-2 fs-6"></i> */
+                  <span class="d-none d-md-block">Asset Make</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link position-relative rounded-0 d-flex align-items-center justify-content-center bg-transparent fs-3 py-3" id="pills-bills-tab" data-bs-toggle="pill" data-bs-target="#pills-bills" type="button" role="tab" aria-controls="pills-bills" aria-selected="false">
+                  /* <i class="ti ti-article me-2 fs-6"></i> */
+                  <span class="d-none d-md-block">Dealer Name</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link position-relative rounded-0 d-flex align-items-center justify-content-center bg-transparent fs-3 py-3" id="pills-security-tab" data-bs-toggle="pill" data-bs-target="#pills-security" type="button" role="tab" aria-controls="pills-security" aria-selected="false">
+                 /* <i class="ti ti-lock me-2 fs-6"></i> */
+                  <span class="d-none d-md-block">UOM</span>
+                </button>
+              </li>
+            </ul>  -->
+
+
+
+              <!-- <button type="button" class="btn mb-1 bg-danger-subtle text-danger px-4 fs-4 " data-bs-toggle="modal" data-bs-target="#vertical-center-scroll-modal">
+                      Vertically centered scrollable
+                    </button> -->
+
+                    <!-- Vertically centered modal -->
+                    
+<!-- Stepper Wallet Modal -->
+<div class="modal fade" id="vertical-center-scroll-modal" tabindex="-1" aria-labelledby="vertical-center-modal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <form method="post" id="assetForm" action="<?= base_url('addfund'); ?>" enctype="multipart/form-data" class="needs-validation" novalidate>
+        
+        <!-- Stepper Navigation -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <ul class="nav nav-pills flex-grow-1 justify-content-between" id="pills-tab" role="tablist">
+            <li class="nav-item flex-fill text-center">
+              <button class="nav-link active w-100" id="step1-tab" data-bs-toggle="pill" data-bs-target="#step1" type="button">
+                Wallet
+              </button>
+            </li>
+            <li class="nav-item flex-fill text-center">
+              <button class="nav-link w-100" id="step2-tab" data-bs-toggle="pill" data-bs-target="#step2" type="button">
+                Preview
+              </button>
+            </li>
+            <li class="nav-item flex-fill text-center">
+              <button class="nav-link w-100" id="step3-tab" data-bs-toggle="pill" data-bs-target="#step3" type="button">
+                Payment
+              </button>
+            </li>
+          </ul>
+
+          <!-- Close button -->
+          <button type="button" class="btn-close m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="tab-content">
+          <!-- STEP 1: Wallet Details -->
+          <div class="tab-pane fade show active p-2" id="step1">
+            <div class="modal-header d-flex align-items-center">
+              <h4 class="modal-title" id="myLargeModalLabel"><i class="bi bi-wallet"></i> Add Wallet</h4>
+            </div>
+
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-6" id="part_number">
+                  <div class="mb-3">
+                    <label for="relationInput" class="form-label required">Room No</label>
+                    <div class="dropdown">
+                      <input type="text" 
+                             class="form-control w-100" 
+                             id="service_type_name"
+                             name="room_no"
+                             placeholder="Select Room No"
+                             autocomplete="off"
+                             data-bs-toggle="dropdown" 
+                             aria-expanded="false" 
+                             required />
+
+                      <ul class="dropdown-menu w-100" style="max-height: 150px; overflow-y: auto;">
+                        <div id="relationLists" style="width: 100%;">
+                          <?php foreach($room as $type): ?> 
+                            <div class="dropdown-item" data-value="<?= $type['room_no'] ?>"><?= $type['room_no'] ?></div>
+                          <?php endforeach; ?>
+                        </div>
+                      </ul>
+                      <div class="invalid-feedback">
+                        Please select a room number.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6" id="category_section">
+                  <div class="mb-3">
+                    <label class="form-label required">Guest Info</label>
+                    <div class="dropdown">
+                      <input type="text" 
+                             class="form-control w-100" 
+                             id="category_name"
+                             name="guest_name"
+                             placeholder="Select Guest"
+                             autocomplete="off"
+                             data-bs-toggle="dropdown" 
+                             aria-expanded="false"
+                             required />
+
+                      <ul class="dropdown-menu w-100" style="max-height: 150px; overflow-y: auto;">
+                        <div id="categoryList" style="width: 100%;"></div>
+                      </ul>
+                      <div class="invalid-feedback">
+                        Please select a guest.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="room_no" class="form-label required">Balance Amount</label>
+                    <div class="dropdown">
+                      <input type="text" class="form-control dropdown-toggle w-100" name="balance" id="balance" autocomplete="off" readonly />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="room_no" class="form-label required">Add Amount</label>
+                    <div class="dropdown">
+                      <input type="number" class="form-control dropdown-toggle w-100" name="add_amount" id="add_amount" autocomplete="off" min="1" required />
+                      <div class="invalid-feedback">
+                        Please enter a valid amount to add.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer border-top justify-content-end">
+              <!-- <button type="button" class="btn bg-danger-subtle text-danger me-2" data-bs-dismiss="modal">
+                Cancel
+              </button> -->
+              <button type="button" class="btn btn-primary" onclick="validateStep1()">
+                Next →
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 2: Preview -->
+          <div class="tab-pane fade" id="step2">
+            <div class="p-2 shadow-sm">
+              <div class="modal-header d-flex align-items-center">
+                <h4 class="modal-title"><i class="bi bi-eye"></i> Preview</h4>
+              </div>
+              
+              <div class="modal-body">
+                <!-- Preview Summary -->
+                <div class="table-responsive mb-4">
+                  <table class="table table-bordered" id="preview-summary-table">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Description</th>
+                        <th class="text-end">Details</th>
+                      </tr>
+                    </thead>
+                    <tbody id="preview-summary-body">
+                      <!-- Preview details will be populated here -->
+                    </tbody>
+                  </table>
+                </div>
+                
+                <div class="alert alert-info">
+                  <i class="fas fa-info-circle me-2"></i>
+                  Please review the details above before proceeding.
+                </div>
+              </div>
+              
+              <!-- Stepper Navigation -->
+              <div class="modal-footer border-top justify-content-between">
+                <button type="button" class="btn btn-secondary" onclick="goToStep(1)">
+                  <i class="fas fa-arrow-left me-2"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary" onclick="goToStep(3)">
+                  Next to Payment <i class="fas fa-arrow-right ms-2"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: Payment -->
+          <!-- STEP 3: Payment -->
+<div class="tab-pane fade" id="step3">
+  <div class="p-2 shadow-sm">
+    <div class="modal-header d-flex align-items-center">
+      <h4 class="modal-title"><i class="bi bi-credit-card"></i> Payment</h4>
+    </div>
+    
+    <div class="modal-body">
+      <!-- Payment Methods -->
+      <h5 class="mb-3">Select Payment Method</h5>
+      <div class="row g-3 mb-4">
+        <div class="col-md-6">
+          <div class="card payment-method-cards p-3" data-method="cash">
+            💵 Cash Payment <br><small class="text-muted">Pay at reception</small>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card payment-method-cards p-3" data-method="upi">
+            📱 UPI Payment <br><small class="text-muted">Pay via UPI apps</small>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Payment Forms -->
+      <div id="payment-forms">
+        <!-- UPI Payment Form -->
+        <div id="upi-forms" class="payment-forms" style="display:none">
+          <div class="mb-3">
+            <label class="form-label required">UPI Transaction ID</label>
+            <input type="text" class="form-control payment-field" name="upi_trans" 
+                   placeholder="Enter UPI Transaction ID" required>
+            <div class="invalid-feedback">Please enter a UPI transaction ID.</div>
+          </div>
+        </div>
+        
+        <!-- Cash Payment Form - No input required -->
+        <!-- <div id="cash-forms" class="payment-forms" style="display:none">
+          <div class="alert alert-info">
+            <i class="fas fa-info-circle me-2"></i>
+            Please collect cash payment at the reception. No receipt number required.
+          </div>
+        </div> -->
+      </div>
+      
+      <!-- Payment Summary -->
+      <div class="border-top pt-3 mt-3">
+        <div class="row">
+          <div class="col-6">
+            <strong>Amount to Add:</strong>
+          </div>
+          <div class="col-6 text-end">
+            <span id="payment-amount-display">₹0</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Hidden fields for form submission -->
+      <input type="hidden" name="payment_method" id="payment_method_input">
+      <input type="hidden" name="guest_id" id="guest_id_input">
+    </div>
+  
+    <!-- Stepper Navigation -->
+    <div class="modal-footer border-top justify-content-between">
+      <button type="button" class="btn btn-secondary" onclick="goToStep(2)">
+        <i class="fas fa-arrow-left me-2"></i> Back
+      </button>
+      <button type="submit" name="submit" value="submit" class="btn btn-success">
+        <i class="fas fa-check-circle me-2"></i> Submit Payment
+      </button>
+    </div>
+  </div>
+</div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<style>
+
+    .payment-method-cards {
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 2px solid #e0e0e0;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.payment-method-cards:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-color: #66BB6A;
+}
+
+.payment-method-cards.active {
+  border-color: #66BB6A;
+  background-color: #f8f9ff;
+  box-shadow: 0 0 8px rgba(102, 187, 106, 0.4);
+}
+
+.payment-forms {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.nav-link.disabled-tab {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #f8f9fa !important;
+  color: #6c757d !important;
+  border-color: #dee2e6 !important;
+}
+
+ 
+</style>
+
+<script>
+// Global variables
+let currentPaymentMethod = '';
+let guestId = null;
+let roomNo = null;
+let addAmount = 0;
+
+// Validation functions
+function validateStep1() {
+  const form = document.getElementById('assetForm');
+  const roomInput = document.getElementById('service_type_name');
+  const guestInput = document.getElementById('category_name');
+  const amountInput = document.getElementById('add_amount');
+  
+  let isValid = true;
+  
+  // Validate room selection
+  if (!roomInput.value) {
+    roomInput.classList.add('is-invalid');
+    isValid = false;
+  } else {
+    roomInput.classList.remove('is-invalid');
+    roomNo = roomInput.value;
+  }
+  
+  // Validate guest selection
+  if (!guestInput.value) {
+    guestInput.classList.add('is-invalid');
+    isValid = false;
+  } else {
+    guestInput.classList.remove('is-invalid');
+  }
+  
+  // Validate amount
+  if (!amountInput.value || amountInput.value < 1) {
+    amountInput.classList.add('is-invalid');
+    isValid = false;
+  } else {
+    amountInput.classList.remove('is-invalid');
+    addAmount = parseFloat(amountInput.value);
+  }
+  
+  // If valid, proceed to step 2
+  if (isValid) {
+    goToStep(2);
+    renderPreview();
+  } else {
+    // Scroll to first error
+    const firstError = form.querySelector('.is-invalid');
+    if (firstError) {
+      firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+  
+  return isValid;
+}
+
+// Render preview with wallet details
+function renderPreview() {
+  const tbody = document.getElementById("preview-summary-body");
+  tbody.innerHTML = "";
+
+  const details = [
+    { label: "Room No", value: document.getElementById("service_type_name").value },
+    { label: "Guest Name", value: document.getElementById("category_name").value },
+    { label: "Current Balance", value: "₹" + (document.getElementById("balance").value || "0") },
+    { label: "Amount to Add", value: "₹" + document.getElementById("add_amount").value }
+  ];
+
+  details.forEach(item => {
+    const row = document.createElement("tr");
+    row.innerHTML = `<td><strong>${item.label}</strong></td><td class="text-end">${item.value}</td>`;
+    tbody.appendChild(row);
+  });
+  
+  // Update payment amount display
+  document.getElementById('payment-amount-display').textContent = "₹" + addAmount;
+}
+
+// Navigation functions
+function goToStep(step) {
+  const tabTrigger = new bootstrap.Tab(document.querySelector(`#step${step}-tab`));
+  tabTrigger.show();
+  
+  // Update preview when going to step 2
+  if (step === 2) {
+    renderPreview();
+  }
+}
+
+// Form submission validation
+function validateFormSubmission() {
+  // Validate payment method selection
+  if (!currentPaymentMethod) {
+    alert('Please select a payment method.');
+    return false;
+  }
+  
+  // Validate payment fields based on method
+  let isValid = true;
+  
+  if (currentPaymentMethod === 'upi') {
+    const upiField = document.querySelector('#upi-forms .payment-field');
+    if (!upiField.value.trim()) {
+      upiField.classList.add('is-invalid');
+      isValid = false;
+    } else {
+      upiField.classList.remove('is-invalid');
+    }
+  }
+  
+  // Cash payment doesn't require any additional validation
+  // No fields to validate for cash payment
+  
+  if (!isValid) {
+    alert('Please fill in all required payment details.');
+    return false;
+  }
+  
+  // Set hidden fields for form submission
+  document.getElementById('payment_method_input').value = currentPaymentMethod;
+  document.getElementById('guest_id_input').value = guestId;
+  
+  return true;
+}
+
+
+// Ensure renderSummary runs when Summary & Payment tab is clicked
+document.addEventListener("DOMContentLoaded", () => {
+  const step2Tab = document.getElementById("step2-tab");
+  step2Tab.addEventListener("shown.bs.tab", function() {
+    // Only render summary if step 1 is valid
+    if (validateStep1()) {
+      renderPreview();
+    }
+  });
+});
+// Setup event listeners when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Payment method selection
+  document.querySelectorAll(".payment-method-cards").forEach(card => {
+    card.addEventListener("click", function() {
+      document.querySelectorAll(".payment-method-cards").forEach(c => c.classList.remove("active"));
+      this.classList.add("active");
+
+      const method = this.dataset.method;
+      currentPaymentMethod = method;
+      
+      document.querySelectorAll(".payment-forms").forEach(f => f.style.display = "none");
+      
+      if (method === "cash") {
+        document.getElementById('cash-forms').style.display = "block";
+      } else if (method === "upi") {
+        document.getElementById('upi-forms').style.display = "block";
+      }
+
+      // Clear validation when switching methods
+      document.querySelectorAll('.payment-field').forEach(field => {
+        field.classList.remove('is-invalid');
+      });
+    });
+  });
+  
+  // Payment field validation
+  const paymentFields = document.querySelectorAll('.payment-field');
+  paymentFields.forEach(field => {
+    field.addEventListener('input', function() {
+      this.classList.remove('is-invalid');
+    });
+  });
+  
+  // Form submission handler
+  const form = document.getElementById('assetForm');
+  form.addEventListener('submit', function(event) {
+    if (!validateFormSubmission()) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  });
+  
+  // Setup dropdown functionality
+  setupDropdowns();
+});
+
+// Setup dropdown functionality
+function setupDropdowns() {
+  // When service type is selected
+  document.querySelectorAll("#relationLists .dropdown-item").forEach(function(item) {
+    item.addEventListener("click", function() {
+      let selectedService = this.getAttribute("data-value");
+      document.getElementById("service_type_name").value = selectedService;
+
+      // Show category section
+      document.getElementById("category_section").style.display = "block";
+
+      // Clear old categories
+      document.getElementById("categoryList").innerHTML = '<div class="p-2">Loading...</div>';
+
+      // Fetch categories from API
+      fetch(`/advaya/roomguest/${selectedService}`)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          let html = "";
+          if (data.length > 0) {
+            data.forEach(function(cat) {
+              html += `<div class="dropdown-item" data-value="${cat.first_name}" data-guest-id="${cat.guest_id}">${cat.first_name}</div>`;
+            });
+          } else {
+            html = '<div class="dropdown-item disabled">No guest found</div>';
+          }
+          document.getElementById("categoryList").innerHTML = html;
+
+          // Attach click events for new items
+          document.querySelectorAll("#categoryList .dropdown-item").forEach(function(catItem) {
+            catItem.addEventListener("click", function() {
+              document.getElementById("category_name").value = this.getAttribute("data-value");
+              guestId = this.getAttribute("data-guest-id");
+            });
+          });
+        })
+        .catch(error => {
+          document.getElementById("categoryList").innerHTML = `<div class="dropdown-item disabled">Error loading</div>`;
+          console.error(error);
+        });
+    });
+  });
+
+  // Search filter for categories
+  document.getElementById("category_name").addEventListener("keyup", function() {
+    let filter = this.value.toLowerCase();
+    document.querySelectorAll("#categoryList .dropdown-item").forEach(function(item) {
+      item.style.display = item.textContent.toLowerCase().includes(filter) ? "" : "none";
+    });
+  });
+
+  function attachSearchFilter(inputId, listId) {
+    document.getElementById(inputId).addEventListener("keyup", function() {
+      let filter = this.value.toLowerCase();
+      document.querySelectorAll(`#${listId} .dropdown-item`).forEach(function(item) {
+        item.style.display = item.textContent.toLowerCase().includes(filter) ? "" : "none";
+      });
+    });
+  }
+
+  attachSearchFilter("service_type_name", "relationLists"); // Service type search
+  attachSearchFilter("category_name", "categoryList");  
+
+  // Get balance when guest is selected
+  document.getElementById("categoryList").addEventListener("click", function(e) {
+    let target = e.target.closest(".dropdown-item");
+    if (target) {
+      let selectedCategory = target.getAttribute("data-value");
+      guestId = target.getAttribute("data-guest-id");
+      document.getElementById("category_name").value = selectedCategory;
+      
+      // Fetch wallet balance
+      fetch(`/advaya/guest_wallet/${selectedCategory}`)
+        .then(response => response.json())
+        .then(data => {
+          let html = "";
+          if (data.length > 0) {
+            document.getElementById("balance").value = data[0].balance;
+          } else {
+            document.getElementById("balance").value = 0;
+          }
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }
+  });
+}
+
+// Reset modal when closed
+document.getElementById('vertical-center-scroll-modal').addEventListener('hidden.bs.modal', function() {
+  const form = document.getElementById('assetForm');
+  form.reset();
+  form.classList.remove('was-validated');
+  
+  // Reset to first step
+  const firstTab = document.querySelector("#step1-tab");
+  if (firstTab) {
+    const tab = new bootstrap.Tab(firstTab);
+    tab.show();
+  }
+  
+  // Reset payment method
+  document.querySelectorAll(".payment-method-cards").forEach(c => {
+    c.classList.remove("active");
+  });
+  
+  document.querySelectorAll(".payment-forms").forEach(f => f.style.display = "none");
+  currentPaymentMethod = '';
+  guestId = null;
+  roomNo = null;
+  addAmount = 0;
+});
+</script>
+
+
+
+
+
+
+
+
+
+            <!-- </div> -->
+
+            <div class="">
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-account" role="tabpanel" aria-labelledby="pills-account-tab" tabindex="0">
+                  
+<!-- <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-account" role="tabpanel" aria-labelledby="pills-account-tab" tabindex="0"> -->
+                  
+          <div class="datatables">
+            <!-- start Add Row -->
+        
+
+
+
+            
+            
+            <!-- end Row selection (multiple rows) -->
+            <!-- start Form Inputs -->
+            <!-- <div class="card"> -->
+              <div class="card-body">
+                
+              <!-- <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-account" role="tabpanel" aria-labelledby="pills-account-tab" tabindex="0">
+                   -->
+             
+              <?php
+$session = \Config\Services::session();
+$successMessage = $session->getFlashdata('success');
+$activeTab = $_GET['tab'] ?? ''; // fallback to empty
+?>
+
+                  
+              
+ <?php if ($activeTab === '' && $successMessage): ?>
+    <div class="alert bg-success-subtle text-info alert-dismissible fade show" role="alert">
+        <div class="d-flex align-items-center text-success">
+            <i class="ti ti-info-circle me-2 fs-4"></i>
+            <?= $successMessage ?>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php endif; ?>                
+                    
+                  <form method="post"  action="<?= base_url('viewassettype'); ?>">
+                    
+ 
+<div class="row mb-3">
+                <div class="col-md-6">
+                    <h5 class="mb-0 fs-7"> <i class="bi bi-wallet2 text-success"></i>
+
+Wallet</h5>
+                </div>
+                <div class="col-md-6 text-end">
+                    <button type="button" 
+   class="btn btn-primary" 
+   data-bs-toggle="modal" 
+   data-bs-target="#vertical-center-scroll-modal">
+   Add wallet
+</button>
+                </div>
+            </div>
+
+
+              
+                  <!-- <td class="p-1">
+      <a href="javascript:void(0)" id="btn-delete-trigger" class="btn btn-danger "><i class="fas fa-trash-alt"></i> Delete</a>
+    </td> -->
+                   <div class="table-responsive mt-3">
+  
+  <table id="form_inputs" class="table table-striped w-100 table-bordered display text-nowrap align-middle">
+  <thead>
+        <tr>
+        <!-- <th><input type="checkbox" id="select_all"></th>  -->
+           <th>S.No</th>
+    <th>Room No</th>       
+    <th>First Name</th> <!-- Decreased width -->
+    <th >Balance</th>     <!-- Increased width -->
+    <th >Contact</th> 
+   <!--<th >Actions</th>  -->
+    <!-- Decreased width -->
+        </tr>
+    </thead>
+    <tbody>
+  
+        <?php $i = 1; foreach ($wallet_guest as $asset):
+          // $base=base64_encode(base64_encode(base64_encode($asset['id'])));
+            ?>
+            <tr>
+              
+              
+                <td><?= $i++; ?> </td>
+                <td><?= $asset['room']; ?></td>
+                <td><?= $asset['first_name']; ?></td>
+                <td><?= $asset['balance']; ?></td>
+                <td><?= $asset['contact']; ?></td>
+              
+ 
+          
+               
+              <!--  <td>
+                  <//?= var_dump($asset['id']); ?>
+
+<button type="button"
+        class="btn" style="color:blue"
+        data-bs-toggle="modal"
+        data-bs-target="#vertical-center-scroll-modal"
+        onclick='editAsset(JSON.parse(this.getAttribute("data-asset")))'
+        data-asset='<?= json_encode($asset) ?>'>
+
+       
+    <i class="bi bi-pencil-square" ></i>
+</button>
+ <a href="javascript:void(0)" 
+   class="btn " 
+   data-bs-toggle="modal" 
+   data-bs-target="#deleteConfirmationModal<?= $asset['wallet_id']; ?>">
+ <i class="bi bi-trash text-danger"></i>
+</a>
+
+
+
+
+
+
+                </td>  -->
+            </tr>
+
+            <div class="modal fade" id="deleteConfirmationModal<?= $asset['wallet_id']; ?>" tabindex="-1" aria-labelledby="deleteModalTitle<?= $asset['wallet_id']; ?>" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header d-flex align-items-center">
+        <h5 class="modal-title" id="deleteModalTitle<?= $asset['wallet_id']; ?>">Are you sure you want to delete?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-footer d-flex gap-3 justify-content-end">
+        <!-- Confirm Delete Button -->
+        <a href="<?= base_url('deleterooms/' . $asset['wallet_id']); ?>" class="btn btn-danger">Yes</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+        <?php endforeach; ?>
+    </tbody>
+  </table>
+</div>
+        </form>
+
+
+  
+     
+
+
+
+
+
+
+
+                   
+                </div>
+              </div>
+                </div>
+          
+
+
+
+
+
+
+
+                   
+                </div>
+              </div>
+            </div>
+
+
+        
+
+
+
+
+
+              </div>
+            </div>
+          
+         
+
+
+
+
+
+
+  
+
+
+  <div class="dark-transparent sidebartoggler"></div>
+  <script src="<?= base_url(); ?>/public/dist/assets/js/vendor.min.js"></script>
+  <!-- Import Js Files -->
+  <script src="<?= base_url(); ?>/public/dist/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= base_url(); ?>/public/dist/assets/libs/simplebar/dist/simplebar.min.js"></script>
+  <script src="<?= base_url(); ?>/public/dist/assets/js/theme/app.init.js"></script>
+  <script src="<?= base_url(); ?>/public/dist/assets/js/theme/theme.js"></script>
+  <script src="<?= base_url(); ?>/public/dist/assets/js/theme/app.min.js"></script>
+  <script src="<?= base_url(); ?>/public/dist/assets/js/theme/sidebarmenu.js"></script>
+
+  <!-- solar icons -->
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+  <script src="<?= base_url(); ?>/public/dist/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="<?= base_url(); ?>/public/dist/assets/js/datatable/datatable-api.init.js"></script>
+  <script src="<?= base_url(); ?>/public/js/dropdown_search.js"></script>
+
+
+
+
+</body>
+
+
+</html>

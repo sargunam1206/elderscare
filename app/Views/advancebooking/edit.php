@@ -9,8 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Favicon icon-->
-  <link rel="shortcut icon" type="image/png" href="<?= base_url(); ?>/public/dist/assets/images/logos/favicon.png" />
-
+<link rel="icon" type="image/png" sizes="180x180"  href="<?= base_url('public/Logo-Elders_home.png'); ?>" >
+<title>Nivasan Udayana</title>
   <!-- Core Css -->
   <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/assets/css/styles.css" />
 
@@ -269,6 +269,7 @@ body {
   .table thead th, .table tbody td {
     padding: 8px 10px;
   }
+ 
 }
 
 /* Make checkbox green when checked */
@@ -535,12 +536,12 @@ body {
   <!-- Mobile Menu -->
  
 
-  <div class="main-wrapper">
+  <div class="main-wrapper" style="margin-top: 80px;">
 
-    <div id="reservationForm">
+    <div id="reservationForm" class="main-wrapper">
       <form action="<?= base_url('updateadvancebooking/' . $booking['id']) ?>" method="post" enctype="multipart/form-data" id="bookingForm">
         <div class="form-section card-body p-4 mb-4">
-            <div class="row mb-3">
+            <!-- <div class="row mb-3">
                 <div class="col-md-6">
                     <h5 class="mb-0 fs-7"><i class="ti ti-calendar-check text-success me-1"></i>Edit Booking</h5>
                 </div>
@@ -549,6 +550,15 @@ body {
                         <i class="bi bi-list-ul"></i> Booking List
                     </a>
                 </div>
+            </div> -->
+                    <div class="d-flex justify-content-between align-items-center mb-3 ">
+                    <h4 class="mb-0 " style="font-size: 18px;"><i class="ti ti-calendar-check text-success me-1"></i>Edit Booking</h4>
+                  <div>
+                
+                    <a href="<?= base_url('viewadvancebooking'); ?>" class="btn btn-primary">
+                        <i class="bi bi-list-ul"></i> Booking List
+                    </a>                
+                  </div>
             </div>
             
             <!-- Reservation Info -->

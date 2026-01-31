@@ -8,7 +8,6 @@
         .report-header { 
             text-align: center; 
             margin-bottom: 20px;
-            /* border-bottom: 2px solid #343a40; */
             padding-bottom: 10px;
         }
         .filters { 
@@ -24,7 +23,7 @@
             margin-top: 15px;
         }
         th { 
-            background: #343a40; 
+            background: #66BB6A; 
             color: white; 
             padding: 10px;
             text-align: left;
@@ -38,9 +37,36 @@
     </style>
 </head>
 <body>
+    <!-- Header with logo (left) and address (right) -->
+    <table width="100%" style="margin-bottom:10px;">
+        <tr>
+            <!-- Logo -->
+            <td width="20%" style="vertical-align: middle;border-radius:20px">
+                <img src="<?= base_url('./public/logo.png'); ?>" 
+                     style="height:90px; width:200px; " alt="Logo">
+            </td>
+            
+            <!-- Address -->
+            <td style="padding-left: 36%; font-size: 14px; line-height: 1.5; ">
+                <div style="  max-width: 400px;">
+                    <strong>ADVAYA COLIVING</strong><br>
+                    Old No.1514, New No. 252,
+                </div>
+                <div>
+                    Avinashi Road,Opp Varadaraja Textiles
+                </div>
+                <div>
+                    Peelamedu, Coimbatore, Tamil Nadu 641004.
+                </div>
+            </td>
+        </tr>
+    </table>
+    
+    <!-- Line under logo and address -->
+    <div class="logo-address-line"></div>
+
     <div class="report-header">
         <h2>Scheduled Activities Report</h2>
-        
     </div>
 
     <table>
@@ -70,7 +96,5 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-
-    
 </body>
 </html>

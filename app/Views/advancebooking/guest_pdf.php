@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Guest Information - <?= $guest['first_name'] ?? '' ?> <?= $guest['last_name'] ?? '' ?></title>
     <style>
-        body { font-family: DejaVuSans, Arial, sans-serif; font-size: 12px; }
+        body { font-family: DejaVuSans, Arial, sans-serif; font-size: 12px; margin: 20px; }
         .header {
             margin-bottom: 20px;
             padding-bottom: 0;
@@ -30,10 +30,50 @@
         .text-center { text-align: center; }
         .footer { margin-top: 30px; border-top: 1px solid #333; padding-top: 10px; font-size: 10px; text-align: center; }
         .document-link { color: #0000EE; text-decoration: underline; }
+        .logo-address-line {
+            border-bottom: 2px solid #ddd;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Header with logo (left) and address (right) -->
+    <table width="100%" style="margin-bottom:10px;">
+        <tr>
+            <!-- Logo -->
+            <td width="20%" style="vertical-align: middle;border-radius:20px">
+                <img src="<?= base_url('./public/logo.png'); ?>" 
+                     style="height:90px; width:200px; " alt="Logo">
+            </td>
+            
+            <!-- Address -->
+            <td style="padding-left: 30%; font-size: 14px; line-height: 1.5; ">
+                <div style="  max-width: 400px;">
+                    <strong>ADVAYA COLIVING</strong><br>
+                    Old No.1514, New No. 252,
+                </div>
+                <div>
+                    Avinashi Road,Opp Varadaraja Textiles
+                </div>
+                <div>
+                    Peelamedu, Coimbatore, Tamil Nadu 641004.
+                </div>
+            </td>
+        </tr>
+    </table>
+    
+    <!-- Line under logo and address -->
+    <div class="logo-address-line"></div>
+
+<?php
+// Format status
+$status = $guest['status'];
+if ($status === 'checked_out') {
+    $status = 'Checked out';
+}
+?>
 <table class="header" width="100%">
     <tr>
         <td class="header-content" style="text-align: left;">
@@ -42,6 +82,22 @@
                 <?= ucfirst(strtolower($guest['first_name'] ?? '')) ?>
                 <?= ucfirst(strtolower($guest['last_name'] ?? '')) ?>
             </h2>
+          <table style="width:100%; border-collapse:collapse; margin-top: 10px;">
+    <tr>
+        <td style="width:120px;"><strong>Booking No</strong></td>
+        <td><?= esc($guest['booking_no']) ?></td>
+    </tr>
+    <tr>
+        <td><strong>Room No</strong></td>
+        <td><?= esc($guest['room']) ?></td>
+    </tr>
+    <tr>
+        <td><strong>Room Status</strong></td>
+        <td><?= ucfirst(strtolower($status)) ?></td>
+    </tr>
+</table>
+
+
         </td>
         <td class="header-photo" style="text-align: right; width: 100px;">
             <?php if (!empty($guest['photo_upload'])): ?>

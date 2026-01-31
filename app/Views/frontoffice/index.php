@@ -36,7 +36,23 @@
       height: 100vh;
       display: flex;
       flex-direction: column;
+      padding-top: 80px; /* adjust based on navbar height */
+
+
     }
+    @media (max-width: 576px) {
+  .navbar-brand {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-brand span {
+    font-size: 16px; /* slightly smaller text on mobile */
+  }
+  /* #main-wrapper{
+    margin-top:30px;
+  } */
+}
+
 
     /* Header Section */
    
@@ -105,7 +121,7 @@
     }
     
     .section-title {
-      font-size: 1.5rem;
+      font-size: 18px;
       font-weight: 600;
       color: #2c3e50;
       margin-bottom: 1.5rem;
@@ -154,8 +170,49 @@
   border-top: 1px solid rgba(255,255,255,0.3);
 }
 
+.navbar-brand img {
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navbar-brand span {
+    font-size: 20px; /* default text size */
+}
+
+.custom-spacing {
+    word-spacing: 5px; /* adjust value as needed */
+    color: red;
+}
+@media (max-width: 991px) {
+    .dropdown-submenu > .dropdown-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-top: 0;
+        margin-left: 1rem;
+        display: none; /* hidden by default */
+    }
+    .navbar-brand{
+      display: flex;
+      flex-direction: column;
+    }
+}
 
   </style>
+  <style>
+  /* Hide navbar title on mobile */
+@media (max-width: 991px) {
+  .navbar-brand span {
+    display: none !important; /* hide text */
+  }
+
+  .navbar-brand img {
+    height: 45px; /* keep logo visible */
+  }
+}
+
+</style>
  
 
 
@@ -167,8 +224,8 @@
 </head>
 
 <body style="background-color:#EDF7EE;">
-<header class=" shadow-sm" style="background-color:#419045;">
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#419045;">
+<header class="shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#419045;">
     <div class="container-fluid">
 
       <!-- Logo + Title -->
@@ -188,8 +245,6 @@
       <!-- Menu -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
         <ul class="navbar-nav align-items-lg-center fs-5">
-
-
 
           <!-- User Dropdown -->
           <li class="nav-item dropdown ms-lg-4">
@@ -212,17 +267,19 @@
     </div>
   </nav>
 </header>
+
  <!-- Preloader -->
   <div class="preloader">
     <img src="../assets/images/logos/favicon.png" alt="loader" class="lds-ripple img-fluid" />
   </div>
-  
-  <div id="main-wrapper" class="d-flex flex-column h-100">
+  <div id="main-wrapper" >
+
+  <div id="main-wrapper"  class="d-flex flex-column h-100" >
     <!-- Header Section -->
 
     <!-- Main Content -->
    <div class="p-3">
-  <h2 class="section-title mb-3" style="font-size:2.1rem;">Home Page</h2>
+  <h2 class="section-title mb-3" style="font-size:1.1rem;">Home</h2>
   
 <div class="grid-container" 
     >

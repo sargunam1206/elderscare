@@ -16,7 +16,7 @@ $routes->get('login', 'Login::index');
 $routes->post('login/process', 'Login::process');
 $routes->get('logout', 'Login::logout');
 
-$routes->group('', ['filter' => 'auth'], function($routes) {
+// $routes->group('', ['filter' => 'auth'], function($routes) {
 
 
 //advance booking
@@ -70,7 +70,17 @@ $routes->post('addrooms', 'Rooms::add');
 $routes->post('updaterooms/(:any)', 'Rooms::update/$1');
 $routes->get('deleterooms/(:any)', 'Rooms::delete/$1');
 $routes->get('getrooms', 'Rooms::getRoomsForModal');
+$routes->get('roomstatus', 'Rooms::roomstatus');
+$routes->get('blockroomform', 'Rooms::blockRoomForm');
 
+
+// room blocked
+$routes->get('roomblocked', 'RoomBlocked::view');
+$routes->post('addroomblocked', 'RoomBlocked::add');
+$routes->post('updateroomblocked/(:any)', 'RoomBlocked::update/$1');
+$routes->get('deleteroomblocked/(:any)', 'RoomBlocked::delete/$1');
+$routes->get('maint', 'RoomBlocked::maint');
+$routes->get('maintenance/data', 'Maintenance::getMaintenanceData');
 
 //noticeboard
 $routes->get('not', 'Notice::index');
@@ -115,7 +125,7 @@ $routes->get('get-guests-for-modal', 'GuestInfo::getGuestsForModal');
 
 
 // Protected Routes
-//  $routes->group('', ['filter' => 'auth'], function($routes) {
+ $routes->group('', ['filter' => 'auth'], function($routes) {
     $routes->get('users', 'User::index');
     $routes->post('users/store', 'User::store');
     $routes->get('users/edit/(:num)', 'User::edit/$1');
@@ -159,6 +169,12 @@ $routes->get('category_alpha/(:any)', 'Landingpage::category_alpha/$1');
 $routes->get('service_category/(:any)', 'Landingpage::service_category/$1');
 
 $routes->get('service_items/(:any)', 'Landingpage::service_items/$1');
+$routes->get('getServiceTypeId/(:any)', 'Landingpage::getServiceTypeId/$1');
+// Add this to your Routes.php file
+$routes->get('getServiceTypeId', 'Landingpage::getServiceTypeId');
+
+
+$routes->get('getOccupiedRooms', 'Landingpage::getOccupiedRooms');
 
 
 
@@ -180,7 +196,13 @@ $routes->get('guest_wallet_id/(:any)', 'Wallet::guest_wallet_id/$1');
 $routes->post('addfund', 'Wallet::addfund'); 
 $routes->post('verify', 'Wallet::verify');
 
-
+$routes->get('walletrept/(:num)', 'Wallet::transaction_history/$1');
+$routes->get('walletrept', 'Wallet::transaction_history');
+// Wallet Bill Routes
+$routes->post('wallet/generateWalletBill', 'Wallet::generateWalletBill');
+$routes->get('wallet/viewWalletBill/(:num)', 'Wallet::viewWalletBill/$1');
+$routes->get('wallet/viewWalletBill', 'Wallet::viewWalletBill');
+$routes->get('wallet/debugWalletBill/(:num)', 'Wallet::debugWalletBill/$1');
 //maintanence 
 
 $routes->get('maintenance', 'Maintenance::index');
@@ -206,9 +228,19 @@ $routes->post('servicepay', 'Wallet::servicepay');
 $routes->post('paymentrecd', 'Wallet::paymentrecd');
 $routes->post('payrecord', 'Wallet::payrecord');
 
+
+$routes->get('servicebook/view', 'Servicebook::view');
+$routes->get('servicebook/view/(:any)', 'Servicebook::view/$1');
 $routes->get('servicerept', 'Servicebook::view');
 $routes->get('servicerept/(:any)', 'Servicebook::view/$1');
+$routes->get('updateservicebooking', 'Servicebook::updateServiceBooking');
+$routes->post('updateservicebooking', 'Servicebook::updateServiceBooking');
 
+
+// Service Bill Routes
+$routes->post('servicebook/generateServiceBill', 'Servicebook::generateServiceBill');
+$routes->get('servicebook/viewServiceBill', 'Servicebook::viewServiceBill');
+$routes->get('servicebook/viewServiceBill/(:num)', 'Servicebook::viewServiceBill/$1');
 //charges
 $routes->get('charges', 'Charges::index');
 $routes->post('charges/store', 'Charges::store');
@@ -225,6 +257,12 @@ $routes->get('guest_charge/(:any)', 'Charges::guest_charge/$1');
 $routes->post('chargepay', 'Charges::chargepay');
 $routes->post('chargepay_store', 'Charges::chargepay_store');
 $routes->post('charge_filter', 'Charges::charge_filter');
+
+$routes->post('chargesreport/generateBill', 'ChargesReport::generateBill');
+$routes->get('chargesreport/viewBill', 'ChargesReport::viewBill');
+$routes->get('chargesreport/viewBill/(:num)', 'ChargesReport::viewBill/$1');
+// In your Routes.php
+$routes->get('chargesreport/debug', 'ChargesReport::debug');
 });
 
 

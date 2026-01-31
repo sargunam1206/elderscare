@@ -62,6 +62,7 @@
         margin-left: 0; /* remove left margin */
         margin-top: 5px; /* space below logo */
     }
+   
 }
 .custom-spacing {
     word-spacing: 5px; /* adjust value as needed */
@@ -227,6 +228,8 @@
   .d-flex.justify-content-between h5 {
     margin-bottom: 10px;
   }
+  
+
 
   /* Make table scrollable with better UX */
   .table-responsive {
@@ -260,8 +263,23 @@ h5.fs-7 {
 }
 
 
+
+
 /* end Enauiry page,Booking page,Maintanaace page */
 
+
+</style>
+<style>
+  /* Hide navbar title on mobile */
+@media (max-width: 991px) {
+  .navbar-brand span {
+    display: none !important; /* hide text */
+  }
+
+  .navbar-brand img {
+    height: 45px; /* keep logo visible */
+  }
+}
 
 </style>
 </head>
@@ -281,7 +299,6 @@ h5.fs-7 {
 
 
 
-  <div class="main-wrapper overflow-hidden">
     <!-- Stats Cards -->
    
   <!-- Navbar / Header -->
@@ -290,54 +307,14 @@ h5.fs-7 {
 
 
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-  const navbarMenu = document.getElementById("navbarMenu");
-  const togglerIcon = document.querySelector(".navbar-toggler i");
-
-  // Switch icon when menu opens/closes
-  navbarMenu.addEventListener("shown.bs.collapse", () => {
-    togglerIcon.classList.remove("bi-list");
-    togglerIcon.classList.add("bi-x-lg");
-  });
-
-  navbarMenu.addEventListener("hidden.bs.collapse", () => {
-    togglerIcon.classList.remove("bi-x-lg");
-    togglerIcon.classList.add("bi-list");
-  });
-
-  // Close navbar when clicking outside
-  document.addEventListener("click", function(event) {
-    const bsCollapse = bootstrap.Collapse.getInstance(navbarMenu);
-    if (bsCollapse && navbarMenu.classList.contains("show")) {
-      const isClickInside = navbarMenu.contains(event.target) || 
-                            event.target.closest(".navbar-toggler");
-      if (!isClickInside) {
-        bsCollapse.hide();
-      }
-    }
-  });
-
-  // Close navbar when clicking a nav-link (mobile only)
-  document.querySelectorAll("#navbarMenu .nav-link").forEach(link => {
-    link.addEventListener("click", () => {
-      const bsCollapse = bootstrap.Collapse.getInstance(navbarMenu);
-      if (bsCollapse) bsCollapse.hide();
-    });
-  });
-</script>
-
-
 
 
     <!-- Charts Section -->
-     <div class="dashboard-container">
-              <h4 class="p-2"> <i class="ti ti-building card-icons text-success"></i> Front Office
-</h4>
+  <div class="main-wrapper overflow-hidden" style="margin-top:80px;">
+              <h4 class="p-2  main-wrapper overflow-hidden"  style="font-size:18px;"> <i class="ti ti-building card-icons text-success"></i> Front Office
+              </h4>
 
-<div class="container-fluid px-4">
+<div class="container-fluid px-4  main-wrapper overflow-hidden">
   <div class="row g-4 justify-content-center">
 
   <!-- Enquiries -->
@@ -353,6 +330,7 @@ h5.fs-7 {
    </a>
     </div>
   </div>
+  
 
   <!-- Bookings -->
   <div class="col-md-3">
@@ -363,6 +341,15 @@ h5.fs-7 {
         <h6 class="text-primary">Bookings</h6>
         <h2 class="fw-bold"><?= $BookingsCount; ?></h2>
         <p class="text-muted small">Confirmed bookings this month</p>
+      </div></a> 
+    </div>
+  </div>
+    <div class="col-md-3">
+    <div class="card shadow-sm border-0 text-center h-100">
+     <a href="<?=base_url("roomstatus");?>">
+<div class="card-body">
+        <i class="bi bi-building me-2 fs-5 text-success"></i> 
+        <h6 class="text-primary">Room Status</h6>
       </div></a> 
     </div>
   </div>
@@ -466,7 +453,7 @@ h5.fs-7 {
 
         <?php endforeach; ?>
       <?php else: ?>
-        <p class="text-muted">No pending requests 🎉</p>
+        <p class="text-muted">No pending requests </p>
       <?php endif; ?>
     </div>
   </div>
@@ -476,6 +463,47 @@ h5.fs-7 {
 
 </div>
 
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const navbarMenu = document.getElementById("navbarMenu");
+  const togglerIcon = document.querySelector(".navbar-toggler i");
+
+  // Switch icon when menu opens/closes
+  navbarMenu.addEventListener("shown.bs.collapse", () => {
+    togglerIcon.classList.remove("bi-list");
+    togglerIcon.classList.add("bi-x-lg");
+  });
+
+  navbarMenu.addEventListener("hidden.bs.collapse", () => {
+    togglerIcon.classList.remove("bi-x-lg");
+    togglerIcon.classList.add("bi-list");
+  });
+
+  // Close navbar when clicking outside
+  document.addEventListener("click", function(event) {
+    const bsCollapse = bootstrap.Collapse.getInstance(navbarMenu);
+    if (bsCollapse && navbarMenu.classList.contains("show")) {
+      const isClickInside = navbarMenu.contains(event.target) || 
+                            event.target.closest(".navbar-toggler");
+      if (!isClickInside) {
+        bsCollapse.hide();
+      }
+    }
+  });
+
+  // Close navbar when clicking a nav-link (mobile only)
+  document.querySelectorAll("#navbarMenu .nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+      const bsCollapse = bootstrap.Collapse.getInstance(navbarMenu);
+      if (bsCollapse) bsCollapse.hide();
+    });
+  });
+</script>
 
 <!-- Bootstrap Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
@@ -494,7 +522,7 @@ h5.fs-7 {
 
     <!-- Notice Board -->
     
-  </div>
+        </div>
 
   <!-- Scroll Top -->
   <!-- <a href="javascript:void(0)" class="top-btn btn d-flex align-items-center justify-content-center round-54 p-0 rounded-circle"
